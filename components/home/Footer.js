@@ -10,22 +10,22 @@ export default function Footer() {
           <h3>Home</h3>
           <ul>
             <li>
-              <Link href='/'>
+              <Link href='/about'>
                 <a>About Us</a>
               </Link>
             </li>
             <li>
-              <Link href='/'>
+              <Link href='/leadership'>
                 <a>Leadership</a>
               </Link>
             </li>
             <li>
-              <Link href='/'>
+              <Link href='/beliefs'>
                 <a>Beliefs</a>
               </Link>
             </li>
             <li>
-              <Link href='/'>
+              <Link href='/ministries'>
                 <a>Family Ministries</a>
               </Link>
             </li>
@@ -40,115 +40,123 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href='/'>
+              <Link href='/grow'>
                 <a>Grow</a>
               </Link>
             </li>
           </ul>
         </div>
         <div className='support'>
-          <h3>Home</h3>
+          <h3>Support</h3>
           <ul>
             <li>
-              <Link href='/'>
-                <a>About Us</a>
+              <Link href='/connect'>
+                <a>We Care Services</a>
               </Link>
             </li>
             <li>
               <Link href='/'>
-                <a>Leadership</a>
+                <a>Foodbank</a>
               </Link>
             </li>
             <li>
               <Link href='/'>
-                <a>Beliefs</a>
+                <a>Become A Member</a>
               </Link>
             </li>
             <li>
               <Link href='/'>
-                <a>Family Ministries</a>
+                <a>Groups</a>
               </Link>
             </li>
             <li>
-              <Link href='/'>
-                <a>Toronto Campus</a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/'>
-                <a>Ottawa Campus</a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/'>
-                <a>Grow</a>
+              <Link href='/giving'>
+                <a>Give</a>
               </Link>
             </li>
           </ul>
         </div>
         <div className='resources'>
-          <h3>Home</h3>
+          <h3>Resources</h3>
           <ul>
             <li>
-              <Link href='/'>
-                <a>About Us</a>
+              <Link href='/live-stream'>
+                <a>Live Stream</a>
               </Link>
             </li>
             <li>
-              <Link href='/'>
-                <a>Leadership</a>
+              <Link href='/facility-bookings'>
+                <a>Facility Bookings</a>
               </Link>
             </li>
             <li>
-              <Link href='/'>
-                <a>Beliefs</a>
+              <Link href='/sermons'>
+                <a>Sermons</a>
               </Link>
             </li>
             <li>
-              <Link href='/'>
-                <a>Family Ministries</a>
+              <Link href='/news'>
+                <a>News</a>
               </Link>
             </li>
             <li>
-              <Link href='/'>
-                <a>Toronto Campus</a>
+              <Link href='https://rhema.ccbchurch.com/goto/login'>
+                <a>Member Login</a>
               </Link>
             </li>
             <li>
-              <Link href='/'>
-                <a>Ottawa Campus</a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/'>
-                <a>Grow</a>
+              <Link href='/legal-terms'>
+                <a>Legal Terms</a>
               </Link>
             </li>
           </ul>
         </div>
       </div>
       <div className='icons'>
-        <div className='icon'>
-          <Image src='/images/bible-icon.webp' width={30} height={30} />
-        </div>
-        <div className='icon'>
-          <Image src='/images/groups-icon.webp' width={30} height={30} />
-        </div>
-        <div className='icon'>
-          <Image src='/images/giving-icon.webp' width={35} height={35} />
-        </div>
-        <div className='icon'>
-          <Image src='/images/facebook-icon.webp' width={30} height={30} />
-        </div>
-        <div className='icon'>
-          <Image src='/images/twitter-icon.webp' width={35} height={35} />
-        </div>
-        <div className='icon'>
-          <Image src='/images/youtube-icon.webp' width={35} height={35} />
-        </div>
-        <div className='icon'>
-          <Image src='/images/office-icon.webp' width={35} height={35} />
-        </div>
+        <a href='/'>
+          <div className='icon'>
+            <Image src='/images/bible-icon.webp' width={30} height={30} />
+          </div>
+        </a>
+        <a href='https://rhema.ccbchurch.com/goto/login/' target='_blank'>
+          <div className='icon'>
+            <Image src='/images/groups-icon.webp' width={30} height={30} />
+          </div>
+        </a>
+        <a
+          href='https://tithe.ly/give_new/www/#/tithely/give-one-time/645887?kiosk=1'
+          target='_blank'
+        >
+          <div className='icon'>
+            <Image src='/images/giving-icon.webp' width={35} height={35} />
+          </div>
+        </a>
+        <a
+          href='https://www.facebook.com/Rhemachristianministries'
+          target='_blank'
+        >
+          <div className='icon'>
+            <Image src='/images/facebook-icon.webp' width={30} height={30} />
+          </div>
+        </a>
+        <a href='https://twitter.com/rhemacanada?lang=en' target='_blank'>
+          <div className='icon'>
+            <Image src='/images/twitter-icon.webp' width={35} height={35} />
+          </div>
+        </a>
+        <a
+          href='https://www.youtube.com/channel/UCNjybtMYeMfwur19Gd5GvRg'
+          target='_blank'
+        >
+          <div className='icon'>
+            <Image src='/images/youtube-icon.webp' width={35} height={35} />
+          </div>
+        </a>
+        <a href='https://login.microsoftonline.com' target='_blank'>
+          <div className='icon'>
+            <Image src='/images/office-icon.webp' width={35} height={35} />
+          </div>
+        </a>
       </div>
       <div className='copyright'>©{new Date().getFullYear()} Rhema Canada.</div>
     </FooterWrapper>
@@ -156,6 +164,7 @@ export default function Footer() {
 }
 
 export const FooterWrapper = styled.div`
+  background: var(--lightBG);
   height: 550px;
   padding: 4.5% 5% 5% 0;
 

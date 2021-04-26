@@ -21,6 +21,9 @@ const GlobalStyle = createGlobalStyle`
   a {
     color: var(--textColor);
     text-decoration: none;
+    &:hover {
+      color:var(--blue);
+    }
   }
 
   h2 {
