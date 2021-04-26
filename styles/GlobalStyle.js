@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     background: var(--white);
     color: var(--textColor);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
     width: 100vw;
   }
