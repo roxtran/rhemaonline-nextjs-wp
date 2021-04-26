@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   p {
-    line-height: 1.4;
+    line-height: 1.5;
   }
 `
 

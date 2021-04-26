@@ -177,7 +177,7 @@ export const FooterWrapper = styled.div`
     display: flex;
     justify-content: space-around;
     h3 {
-      margin-left: -15px;
+      margin-left: -20px;
       margin-bottom: 1rem;
     }
     li {
