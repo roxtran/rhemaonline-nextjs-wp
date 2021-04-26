@@ -135,19 +135,19 @@ export default function Footer() {
           <Image src='/images/groups-icon.webp' width={30} height={30} />
         </div>
         <div className='icon'>
-          <Image src='/images/giving-icon.webp' width={30} height={30} />
+          <Image src='/images/giving-icon.webp' width={35} height={35} />
         </div>
         <div className='icon'>
           <Image src='/images/facebook-icon.webp' width={30} height={30} />
         </div>
         <div className='icon'>
-          <Image src='/images/twitter-icon.webp' width={30} height={30} />
+          <Image src='/images/twitter-icon.webp' width={35} height={35} />
         </div>
         <div className='icon'>
-          <Image src='/images/youtube-icon.webp' width={30} height={30} />
+          <Image src='/images/youtube-icon.webp' width={35} height={35} />
         </div>
         <div className='icon'>
-          <Image src='/images/office-icon.webp' width={30} height={30} />
+          <Image src='/images/office-icon.webp' width={35} height={35} />
         </div>
       </div>
       <div className='copyright'>©{new Date().getFullYear()} Rhema Canada.</div>
@@ -178,7 +178,11 @@ export const FooterWrapper = styled.div`
   }
 
   .icon {
+    cursor: pointer;
     margin: 0.7rem;
+    &:hover {
+      transform: translateY(-5px);
+    }
   }
 
   .copyright {
