@@ -16,17 +16,9 @@ export default function Navbar() {
         </a>
       </Link>
       <div className='mobileIcon'>
-        <svg
-          fill='currentColor'
-          viewBox='0 0 20 20'
-          xmlns='http://www.w3.org/2000/svg'
-        >
-          <path
-            fillRule='evenodd'
-            d='M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z'
-            clipRule='evenodd'
-          ></path>
-        </svg>
+        <div className='bar1'></div>
+        <div className='bar2'></div>
+        <div className='bar3'></div>
       </div>
       <Menu>
         <Link href='/'>
@@ -54,19 +46,29 @@ export default function Navbar() {
 }
 
 export const Nav = styled.nav`
+  /* backdrop-filter: blur(5px); */
+  position: fixed;
   background: white;
   width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   padding: 20px 4%;
   box-shadow: 0 7px 10px 0 rgba(122, 207, 255, 0.3);
   align-items: center;
-  opacity: 95%;
+  opacity: 97%;
   z-index: 2;
 
   .mobileIcon {
     display: none;
+    .bar1,
+    .bar2,
+    .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: var(--textColor);
+      margin: 6px 0;
+      transition: 0.4s;
+    }
 
     @media screen and (max-width: 768px) {
       display: block;

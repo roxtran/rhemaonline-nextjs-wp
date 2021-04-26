@@ -49,7 +49,7 @@ export default function MiddleMenu() {
 export const MiddleWrapper = styled.div`
   background: white;
   position: absolute;
-  top: calc(100vh - 25vh);
+  top: calc(100vh - 35vh);
   left: calc((100vw - 1200px) / 2);
   z-index: 1;
   display: flex !important;
@@ -58,7 +58,6 @@ export const MiddleWrapper = styled.div`
   max-width: 1200px;
   border-radius: 10px;
   box-shadow: 0 7px 10px 0 rgba(122, 207, 255, 0.3);
-
   a {
     min-height: 300px;
     min-width: 200px;

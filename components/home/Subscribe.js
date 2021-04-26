@@ -17,7 +17,7 @@ export const SubscribeWrapper = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 470px;
+  height: 500px;
   position: relative;
   margin: 0 auto;
   position: relative;
