@@ -32,6 +32,7 @@ export const SubscribeWrapper = styled.div`
 
   h2 {
     margin-bottom: 3rem;
+    text-align: center;
   }
 
   a.btn {
