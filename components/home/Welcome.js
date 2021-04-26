@@ -12,7 +12,6 @@ export default function Welcome() {
           height={300}
         />
       </div>
-
       <div className='text'>
         <h2>Welcome to Rhema</h2>
         <p className='quote'>

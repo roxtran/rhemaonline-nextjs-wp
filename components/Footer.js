@@ -181,7 +181,7 @@ export const FooterWrapper = styled.div`
       margin-bottom: 1rem;
     }
     li {
-      margin: 0.2rem 0;
+      margin: 0.5rem 0;
     }
     @media screen and (max-width: 640px) {
       flex-direction: column;
