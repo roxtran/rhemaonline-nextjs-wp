@@ -86,6 +86,7 @@ export const Menu = styled.div`
     color: var(--textColor);
     text-decoration: none;
     margin: 1rem;
+    font-weight: bold;
 
     &:hover {
       border-bottom: 4px solid var(--mint);
