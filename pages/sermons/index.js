@@ -8,7 +8,7 @@ export default function Home({ notes }) {
       {notes.nodes.map((note) => (
         <ul key={note.slug}>
           <li>
-            <Link href={`/sermon/sermon-notes/${note.slug}`}>{note.title}</Link>
+            <Link href={`/sermons/sermon-notes/${note.slug}`}>{note.title}</Link>
           </li>
         </ul>
       ))}
