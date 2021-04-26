@@ -4,7 +4,7 @@ export default function Subscribe() {
   return (
     <SubscribeWrapper>
       <h2>Stay connected with us</h2>
-      <a
+      <a className='btn'
         href='https://visitor.r20.constantcontact.com/manage/optin?v=001BRl1GnvqHBSmpUgt0bWkn1MfFFgc1eWZnLBSjeq8hPkIyEhXoERcP_p-E94Tuo8i-n6WMjixEVWfoTusoH241Xry9A65AaaC8uzGvinLhOc%3D'
         target='_blank'
       >
@@ -34,7 +34,7 @@ export const SubscribeWrapper = styled.div`
     margin-bottom: 3rem;
   }
 
-  a {
+  a.btn {
     width: 200px;
     height: 50px;
     background: var(--white);
@@ -44,7 +44,7 @@ export const SubscribeWrapper = styled.div`
     border-radius: 30px;
     border: none;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-align: center;
     text-transform: capitalize;
 

@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
-
   * {
     margin: 0;
     padding: 0;
@@ -13,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     background: var(--white);
     color: var(--textColor);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     width: 100vw;
   }
@@ -29,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
   h2 {
     font-size: 2.75rem;
   }
-
+  
   p {
     line-height: 1.4;
   }

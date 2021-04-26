@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <FooterWrapper>
       <div className='links'>
-        <div className='home'>
+        <div className='list'>
           <h3>Home</h3>
           <ul>
             <li>
@@ -46,7 +46,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div className='support'>
+        <div className='list'>
           <h3>Support</h3>
           <ul>
             <li>
@@ -76,7 +76,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div className='resources'>
+        <div className='list'>
           <h3>Resources</h3>
           <ul>
             <li>
@@ -158,7 +158,9 @@ export default function Footer() {
           </div>
         </a>
       </div>
-      <div className='copyright'>©{new Date().getFullYear()} Rhema Canada.</div>
+      <div className='copyright'>
+        © {new Date().getFullYear()} Rhema Canada.
+      </div>
     </FooterWrapper>
   )
 }
@@ -167,6 +169,9 @@ export const FooterWrapper = styled.div`
   background: var(--lightBG);
   height: 550px;
   padding: 4.5% 5% 5% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   .links {
     display: flex;
@@ -178,14 +183,20 @@ export const FooterWrapper = styled.div`
     li {
       margin: 0.2rem 0;
     }
+    @media screen and (max-width: 640px) {
+      flex-direction: column;
+    }
   }
 
+  /* .list {
+    border-right: 1px solid var(--textColor);
+  } */
+
   .icons {
-    margin: 6rem 0 3rem;
+    margin: 3rem 0;
     display: flex;
     justify-content: center;
   }
-
   .icon {
     cursor: pointer;
     margin: 0.7rem;
@@ -193,8 +204,15 @@ export const FooterWrapper = styled.div`
       transform: translateY(-5px);
     }
   }
-
   .copyright {
     text-align: center;
+  }
+
+  @media screen and (max-width: 640px) {
+    height: 100%;
+    padding: 3rem;
+    ul {
+      margin-bottom: 2rem;
+    }
   }
 `
