@@ -48,6 +48,7 @@ export const SubscribeWrapper = styled.div`
     font-size: 1.1rem;
     text-align: center;
     text-transform: capitalize;
+    box-shadow: 0 7px 10px 0 rgba(122, 207, 255, 0.3);
 
     &:hover {
       background: var(--blue);

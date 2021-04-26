@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     background: var(--white);
     color: var(--textColor);
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     overflow-x: hidden;
     width: 100vw;
   }
