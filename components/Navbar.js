@@ -39,7 +39,9 @@ export default function Navbar() {
         <Link href='/events'>
           <a>Events</a>
         </Link>
-        <button href='/giving'>Giving</button>
+        <Link href='/giving'>
+          <a className='button'>Giving</a>
+        </Link>
       </Menu>
     </Nav>
   )
@@ -91,7 +93,7 @@ export const Menu = styled.div`
     }
   }
 
-  button {
+  .button {
     background: var(--orange);
     color: white;
     font-weight: bold;

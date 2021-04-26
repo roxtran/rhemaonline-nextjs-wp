@@ -1,12 +1,15 @@
-import Image from 'next/image'
-import Link from 'next/link'
 import styled from 'styled-components'
 
 export default function Subscribe() {
   return (
     <SubscribeWrapper>
       <h2>Stay connected with us</h2>
-      <button href='/giving'>Giving</button>
+      <a
+        href='https://visitor.r20.constantcontact.com/manage/optin?v=001BRl1GnvqHBSmpUgt0bWkn1MfFFgc1eWZnLBSjeq8hPkIyEhXoERcP_p-E94Tuo8i-n6WMjixEVWfoTusoH241Xry9A65AaaC8uzGvinLhOc%3D'
+        target='_blank'
+      >
+        Subscribe
+      </a>
     </SubscribeWrapper>
   )
 }
@@ -31,7 +34,7 @@ export const SubscribeWrapper = styled.div`
     margin-bottom: 3rem;
   }
 
-  button {
+  a {
     width: 200px;
     height: 50px;
     background: var(--white);
@@ -42,6 +45,8 @@ export const SubscribeWrapper = styled.div`
     border: none;
     cursor: pointer;
     font-size: 1.2rem;
+    text-align: center;
+    text-transform: capitalize;
 
     &:hover {
       background: var(--blue);
