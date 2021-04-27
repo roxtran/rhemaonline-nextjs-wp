@@ -8,8 +8,8 @@ export default function Navbar() {
       <Link href='/'>
         <a>
           <Image
-            width={250}
-            height={50}
+            width={200}
+            height={40}
             src='/images/RCM-Logo.webp'
             alt='RCM-Logo'
           />
@@ -54,7 +54,7 @@ export const Nav = styled.nav`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 20px 4%;
+  padding: 16px 4%;
   box-shadow: 0 7px 10px 0 rgba(122, 207, 255, 0.3);
   align-items: center;
   opacity: 97%;
@@ -85,7 +85,7 @@ export const Menu = styled.div`
   a {
     color: var(--textColor);
     text-decoration: none;
-    margin: 1rem;
+    margin: 0.9rem;
     font-weight: bold;
 
     &:hover {
@@ -96,7 +96,7 @@ export const Menu = styled.div`
   a.btn {
     background: var(--orange);
     color: white;
-    padding: 12px 22px;
+    padding: 10px 22px;
     border-radius: 5px;
     border: none;
     margin-left: 1rem;
