@@ -1,13 +1,11 @@
 import styled from 'styled-components'
+import paths from '../../paths'
 
 export default function Subscribe() {
   return (
     <SubscribeWrapper>
       <h2>Stay connected with us</h2>
-      <a className='btn'
-        href='https://visitor.r20.constantcontact.com/manage/optin?v=001BRl1GnvqHBSmpUgt0bWkn1MfFFgc1eWZnLBSjeq8hPkIyEhXoERcP_p-E94Tuo8i-n6WMjixEVWfoTusoH241Xry9A65AaaC8uzGvinLhOc%3D'
-        target='_blank'
-      >
+      <a className='btn' href={paths.subscribe} target='_blank'>
         Subscribe
       </a>
     </SubscribeWrapper>
@@ -47,7 +45,7 @@ export const SubscribeWrapper = styled.div`
     cursor: pointer;
     font-size: 1.1rem;
     text-align: center;
-    text-transform: capitalize;
+    text-transform: uppercase;
     box-shadow: 0 7px 10px 0 rgba(122, 207, 255, 0.3);
 
     &:hover {

@@ -84,10 +84,10 @@ export const WelcomeWrapper = styled.div`
 
     .text {
       margin-left: 0;
-      padding: 0 10%;
+      padding: 0 5%;
     }
     h2 {
-      margin-top: 4rem;
+      margin-top: 3rem;
     }
   }
 `

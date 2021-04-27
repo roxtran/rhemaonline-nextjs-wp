@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import styled from 'styled-components'
+import paths from '../../paths'
 
 export default function MiddleMenu() {
   return (
     <MiddleWrapper>
-      <Link href='/'>
+      <Link href={paths.leadership}>
         <a>
           <Image src='/images/leadership-icon.webp' width={50} height={50} />
           <p>
@@ -15,7 +16,7 @@ export default function MiddleMenu() {
           <h3>Leadership</h3>
         </a>
       </Link>
-      <Link href='/'>
+      <Link href={paths.beliefs}>
         <a>
           <Image src='/images/beliefs-icon.webp' width={50} height={50} />
           <p>
@@ -25,14 +26,14 @@ export default function MiddleMenu() {
           <h3>Beliefs</h3>
         </a>
       </Link>
-      <Link href='/'>
+      <Link href={paths.ministries}>
         <a>
           <Image src='/images/ministries-icon.webp' width={57.5} height={50} />
           <p>From our family to yours.</p>
           <h3>Ministries</h3>
         </a>
       </Link>
-      <Link href='/'>
+      <Link href={paths.grow}>
         <a>
           <Image src='/images/grow-icon.webp' width={50} height={50} />
           <p>
@@ -47,7 +48,7 @@ export default function MiddleMenu() {
 }
 
 export const MiddleWrapper = styled.div`
-  background: white;
+  background: rgba(255, 255, 255, 1);
   position: absolute;
   top: calc(100vh - 35vh);
   left: calc((100vw - 1200px) / 2);
@@ -98,7 +99,7 @@ export const MiddleWrapper = styled.div`
 
   @media screen and (max-width: 640px) {
     flex-direction: column;
-    width: 70vw;
-    left: calc((100vw - 70vw) / 2);
+    width: 80vw;
+    left: calc((100vw - 80vw) / 2);
   }
 `

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import styled from 'styled-components'
+import paths from '../paths'
 
 export default function Navbar() {
   return (
@@ -8,7 +9,7 @@ export default function Navbar() {
       <Link href='/'>
         <a>
           <Image
-            width={200}
+            width={260}
             height={40}
             src='/images/RCM-Logo.webp'
             alt='RCM-Logo'
@@ -24,23 +25,23 @@ export default function Navbar() {
         <Link href='/'>
           <a>Home</a>
         </Link>
-        <Link href='/locations'>
+        <Link href={paths.locations}>
           <a>Locations</a>
         </Link>
-        <Link href='/connect'>
+        <Link href={paths.connect}>
           <a>Connect</a>
         </Link>
-        <Link href='/sermons'>
+        <Link href={paths.sermons}>
           <a>Sermons</a>
         </Link>
-        <Link href='/live-stream'>
+        <Link href={paths.liveStream}>
           <a>Live Stream</a>
         </Link>
-        <Link href='/events'>
+        <Link href={paths.events}>
           <a>Events</a>
         </Link>
-        <Link href='/giving'>
-          <a className='btn'>Giving</a>
+        <Link href={paths.giving}>
+          <a className='btn'>Give</a>
         </Link>
       </Menu>
     </Nav>
@@ -50,23 +51,23 @@ export default function Navbar() {
 export const Nav = styled.nav`
   /* backdrop-filter: blur(5px); */
   position: fixed;
-  background: white;
+  background: rgba(255, 255, 255, 0.97);
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 16px 4%;
   box-shadow: 0 7px 10px 0 rgba(122, 207, 255, 0.3);
   align-items: center;
-  opacity: 97%;
   z-index: 2;
 
   .mobileIcon {
     display: none;
+    float: right;
     .bar1,
     .bar2,
     .bar3 {
-      width: 35px;
-      height: 5px;
+      width: 25px;
+      height: 2px;
       background-color: var(--textColor);
       margin: 6px 0;
       transition: 0.4s;
@@ -74,7 +75,7 @@ export const Nav = styled.nav`
 
     @media screen and (max-width: 768px) {
       display: block;
-      width: 50px;
+      width: 25px;
     }
   }
 `

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import styled from 'styled-components'
+import paths from '../paths'
 
 export default function Footer() {
   return (
@@ -10,37 +11,37 @@ export default function Footer() {
           <h3>Home</h3>
           <ul>
             <li>
-              <Link href='/about'>
+              <Link href={paths.about}>
                 <a>About Us</a>
               </Link>
             </li>
             <li>
-              <Link href='/leadership'>
+              <Link href={paths.leadership}>
                 <a>Leadership</a>
               </Link>
             </li>
             <li>
-              <Link href='/beliefs'>
+              <Link href={paths.beliefs}>
                 <a>Beliefs</a>
               </Link>
             </li>
             <li>
-              <Link href='/ministries'>
+              <Link href={paths.ministries}>
                 <a>Family Ministries</a>
               </Link>
             </li>
             <li>
-              <Link href='/'>
+              <Link href={paths.torontoLocation}>
                 <a>Toronto Campus</a>
               </Link>
             </li>
             <li>
-              <Link href='/'>
+              <Link href={paths.ottawaLocation}>
                 <a>Ottawa Campus</a>
               </Link>
             </li>
             <li>
-              <Link href='/grow'>
+              <Link href={paths.grow}>
                 <a>Grow</a>
               </Link>
             </li>
@@ -50,27 +51,27 @@ export default function Footer() {
           <h3>Support</h3>
           <ul>
             <li>
-              <Link href='/connect'>
+              <Link href={paths.connect}>
                 <a>We Care Services</a>
               </Link>
             </li>
             <li>
-              <Link href='/'>
+              <Link href={paths.foodbank}>
                 <a>Foodbank</a>
               </Link>
             </li>
             <li>
-              <Link href='/'>
+              <Link href={paths.connect + '//#become-a-member'}>
                 <a>Become A Member</a>
               </Link>
             </li>
             <li>
-              <Link href='/'>
+              <Link href={paths.getConnected + '//#groups'}>
                 <a>Groups</a>
               </Link>
             </li>
             <li>
-              <Link href='/giving'>
+              <Link href={paths.giving}>
                 <a>Give</a>
               </Link>
             </li>
@@ -80,32 +81,32 @@ export default function Footer() {
           <h3>Resources</h3>
           <ul>
             <li>
-              <Link href='/live-stream'>
+              <Link href={paths.liveStream}>
                 <a>Live Stream</a>
               </Link>
             </li>
             <li>
-              <Link href='/facility-bookings'>
+              <Link href={paths.facilityBookings}>
                 <a>Facility Bookings</a>
               </Link>
             </li>
             <li>
-              <Link href='/sermons'>
+              <Link href={paths.sermons}>
                 <a>Sermons</a>
               </Link>
             </li>
             <li>
-              <Link href='/news'>
+              <Link href={paths.news}>
                 <a>News</a>
               </Link>
             </li>
             <li>
-              <Link href='https://rhema.ccbchurch.com/goto/login'>
-                <a>Member Login</a>
-              </Link>
+              <a href={paths.memberLogin} target='_blank'>
+                Member Login
+              </a>
             </li>
             <li>
-              <Link href='/legal-terms'>
+              <Link href={paths.legalTerms}>
                 <a>Legal Terms</a>
               </Link>
             </li>
@@ -131,28 +132,22 @@ export default function Footer() {
             <Image src='/images/giving-icon.webp' width={35} height={35} />
           </div>
         </a>
-        <a
-          href='https://www.facebook.com/Rhemachristianministries'
-          target='_blank'
-        >
+        <a href={paths.facebookPage} target='_blank'>
           <div className='icon'>
             <Image src='/images/facebook-icon.webp' width={30} height={30} />
           </div>
         </a>
-        <a href='https://twitter.com/rhemacanada?lang=en' target='_blank'>
+        <a href={paths.twitterAccount} target='_blank'>
           <div className='icon'>
             <Image src='/images/twitter-icon.webp' width={35} height={35} />
           </div>
         </a>
-        <a
-          href='https://www.youtube.com/channel/UCNjybtMYeMfwur19Gd5GvRg'
-          target='_blank'
-        >
+        <a href={paths.youtubeChannel} target='_blank'>
           <div className='icon'>
             <Image src='/images/youtube-icon.webp' width={35} height={35} />
           </div>
         </a>
-        <a href='https://login.microsoftonline.com' target='_blank'>
+        <a href={paths.office365Site} target='_blank'>
           <div className='icon'>
             <Image src='/images/office-icon.webp' width={35} height={35} />
           </div>

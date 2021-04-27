@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
   a {
     color: var(--textColor);
     text-decoration: none;
+    /* text-transform: uppercase; */
     &:hover {
       color:var(--blue);
     }

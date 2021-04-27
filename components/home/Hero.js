@@ -20,7 +20,7 @@ export const VideoWrapper = styled.div`
 
   video {
     width: 100%;
-    height: 75vh;
+    height: 80vh;
     object-fit: cover;
   }
 `
