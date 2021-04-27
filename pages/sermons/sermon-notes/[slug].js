@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function SermonNote(data) {
   const note = data.note
-  console.log(note);
+  // console.log(note);
   return (
     <>
       <h1>{note.title}</h1>

@@ -1,12 +1,15 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import styled from 'styled-components'
+import paths from '../../paths'
+import { Button } from '../../styles/GlobalStyle'
 
 export default function Welcome() {
   return (
     <WelcomeWrapper>
       <div className='image'>
         <Image
-          src='/images/welcome-image.webp'
+          src='/img/welcome-image.webp'
           alt='welcome image'
           width={533}
           height={300}
@@ -26,6 +29,9 @@ export default function Welcome() {
           whole person with sound biblical and spiritual truths and practical
           encouragement.
         </p>
+        <Link href={paths.about}>
+          <Button>More about us</Button>
+        </Link>
       </div>
     </WelcomeWrapper>
   )
@@ -33,9 +39,9 @@ export default function Welcome() {
 
 export const WelcomeWrapper = styled.div`
   position: relative;
+  max-width: 1200px;
   margin: 420px auto 320px;
   display: flex;
-  max-width: 1200px;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -63,10 +69,14 @@ export const WelcomeWrapper = styled.div`
     span {
       font-weight: bold;
     }
+    a {
+      width: 170px;
+      margin-top: 1.5rem;
+    }
   }
   @media screen and (max-width: 1024px) {
     padding: 0 5%;
-    margin-bottom: 15rem;
+    margin: 18rem auto 12rem;
     .image {
       box-shadow: 0 0 0 0 rgba(122, 207, 255, 0.3);
     }

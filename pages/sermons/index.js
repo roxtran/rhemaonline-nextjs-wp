@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 export default function Home({ notes }) {
-  console.log(notes)
+  // console.log(notes)
   return (
     <>
       <h1>Sermon page</h1>

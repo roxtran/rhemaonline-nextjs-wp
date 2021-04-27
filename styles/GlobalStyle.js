@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -20,10 +20,13 @@ const GlobalStyle = createGlobalStyle`
   a {
     color: var(--textColor);
     text-decoration: none;
-    /* text-transform: uppercase; */
     &:hover {
       color:var(--blue);
     }
+  }
+
+  h1 {
+    font-size: 4rem;
   }
 
   h2 {
@@ -32,6 +35,37 @@ const GlobalStyle = createGlobalStyle`
   
   p {
     line-height: 1.5;
+  }
+`
+
+export const Button = styled.a`
+  margin-top: 1.5rem;
+  cursor: pointer;
+  background: var(--blue);
+  border-radius: 5px;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-transform: capitalize;
+  &:hover {
+    background: var(--lightBlue);
+    color: white;
+    box-shadow: var(--shadow);
+  }
+  &.orange {
+    background: var(--orange);
+    color: white;
+    &:hover {
+      background: var(--blue);
+    }
+  }
+  &.white {
+    background: var(--white);
+    color: var(--textColor);
+    &:hover {
+      background: var(--blue);
+      color: var(--white);
+    }
   }
 `
 

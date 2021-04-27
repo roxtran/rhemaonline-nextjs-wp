@@ -116,12 +116,12 @@ export default function Footer() {
       <div className='icons'>
         <a href='/'>
           <div className='icon'>
-            <Image src='/images/bible-icon.webp' width={30} height={30} />
+            <Image src='/img/bible-icon.webp' width={30} height={30} />
           </div>
         </a>
         {/* <a href='https://rhema.ccbchurch.com/goto/login/' target='_blank'>
           <div className='icon'>
-            <Image src='/images/groups-icon.webp' width={30} height={30} />
+            <Image src='/img/groups-icon.webp' width={30} height={30} />
           </div>
         </a> */}
         <a
@@ -129,27 +129,27 @@ export default function Footer() {
           target='_blank'
         >
           <div className='icon'>
-            <Image src='/images/giving-icon.webp' width={35} height={35} />
+            <Image src='/img/giving-icon.webp' width={35} height={35} />
           </div>
         </a>
         <a href={paths.facebookPage} target='_blank'>
           <div className='icon'>
-            <Image src='/images/facebook-icon.webp' width={30} height={30} />
+            <Image src='/img/facebook-icon.webp' width={30} height={30} />
           </div>
         </a>
         <a href={paths.twitterAccount} target='_blank'>
           <div className='icon'>
-            <Image src='/images/twitter-icon.webp' width={35} height={35} />
+            <Image src='/img/twitter-icon.webp' width={35} height={35} />
           </div>
         </a>
         <a href={paths.youtubeChannel} target='_blank'>
           <div className='icon'>
-            <Image src='/images/youtube-icon.webp' width={35} height={35} />
+            <Image src='/img/youtube-icon.webp' width={35} height={35} />
           </div>
         </a>
         <a href={paths.office365Site} target='_blank'>
           <div className='icon'>
-            <Image src='/images/office-icon.webp' width={35} height={35} />
+            <Image src='/img/office-icon.webp' width={35} height={35} />
           </div>
         </a>
       </div>
@@ -161,6 +161,7 @@ export default function Footer() {
 }
 
 export const FooterWrapper = styled.div`
+  position: relative;
   background: var(--lightBG);
   height: 550px;
   padding: 4.5% 5% 5% 0;

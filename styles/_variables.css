@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
 :root {
-  --white: #fffffe;
-  --blue: #3D85F2;
-  --mint: #C8E9FC;
-  --orange: #FF6262;
-  --textColor: #5A5A5A;
-  --lightBG: #F6F7FA;
+  --white: rgb(255, 255, 255);
+  --blue: rgb(61, 133, 242);
+  --lightBlue: rgb(87, 149, 241);
+  --mint: rgb(202, 234, 252);
+  --orange: rgb(255, 97, 97);
+  --textColor: rgb(90, 90, 90);
+  --lightBG: rgb(246, 247, 250);
+  --shadow: -7px 7px 10px 0 rgba(122, 207, 255, 0.4);
+  --textShadow: -7px 7px 10px var(--mint);
 }

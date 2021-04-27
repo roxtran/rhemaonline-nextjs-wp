@@ -8,7 +8,7 @@ export default function MiddleMenu() {
     <MiddleWrapper>
       <Link href={paths.leadership}>
         <a>
-          <Image src='/images/leadership-icon.webp' width={50} height={50} />
+          <Image src='/img/leadership-icon.webp' width={50} height={50} />
           <p>
             With a warm smile, the leaders of Rhema Christian Ministries are
             taskes with operational and ecclesiatial exellence.
@@ -18,7 +18,7 @@ export default function MiddleMenu() {
       </Link>
       <Link href={paths.beliefs}>
         <a>
-          <Image src='/images/beliefs-icon.webp' width={50} height={50} />
+          <Image src='/img/beliefs-icon.webp' width={50} height={50} />
           <p>
             At Rhema what we believe is important to us but not as much as the
             one in whom we believe.
@@ -28,14 +28,14 @@ export default function MiddleMenu() {
       </Link>
       <Link href={paths.ministries}>
         <a>
-          <Image src='/images/ministries-icon.webp' width={57.5} height={50} />
+          <Image src='/img/ministries-icon.webp' width={57.5} height={50} />
           <p>From our family to yours.</p>
           <h3>Ministries</h3>
         </a>
       </Link>
       <Link href={paths.grow}>
         <a>
-          <Image src='/images/grow-icon.webp' width={50} height={50} />
+          <Image src='/img/grow-icon.webp' width={50} height={50} />
           <p>
             We invite you to hear the voice of the Master calling you, even as
             “Deep calleth unto deep” (Psalm 42:7)

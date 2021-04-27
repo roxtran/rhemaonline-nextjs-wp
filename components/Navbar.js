@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styled from 'styled-components'
 import paths from '../paths'
+import { Button } from '../styles/GlobalStyle'
 
 export default function Navbar() {
   return (
@@ -11,7 +12,7 @@ export default function Navbar() {
           <Image
             width={230}
             height={40}
-            src='/images/RCM-Logo.webp'
+            src='/img/RCM-Logo.webp'
             alt='RCM-Logo'
           />
         </a>
@@ -41,7 +42,7 @@ export default function Navbar() {
           <a>Events</a>
         </Link>
         <Link href={paths.giving}>
-          <a className='btn'>Give</a>
+          <Button className='orange'>Give</Button>
         </Link>
       </Menu>
     </Nav>
@@ -49,7 +50,6 @@ export default function Navbar() {
 }
 
 export const Nav = styled.nav`
-  /* backdrop-filter: blur(5px); */
   position: fixed;
   background: rgba(255, 255, 255, 0.97);
   width: 100%;
@@ -85,7 +85,6 @@ export const Menu = styled.div`
 
   a {
     color: var(--textColor);
-    text-decoration: none;
     margin: 0.9rem;
     font-weight: bold;
 
@@ -94,18 +93,11 @@ export const Menu = styled.div`
     }
   }
 
-  a.btn {
-    background: var(--orange);
-    color: white;
-    padding: 10px 22px;
-    border-radius: 5px;
-    border: none;
+  .orange {
     margin-left: 1rem;
-    cursor: pointer;
     letter-spacing: 1px;
-
     &:hover {
-      background: var(--blue);
+      border-bottom: 0;
     }
   }
 
