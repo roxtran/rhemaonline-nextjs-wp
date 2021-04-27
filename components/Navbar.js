@@ -9,7 +9,7 @@ export default function Navbar() {
       <Link href='/'>
         <a>
           <Image
-            width={260}
+            width={248}
             height={40}
             src='/images/RCM-Logo.webp'
             alt='RCM-Logo'
