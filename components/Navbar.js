@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styled from 'styled-components'
 import paths from '../paths'
 import { Button } from '../styles/GlobalStyle'
+import { NavLink } from './NavLink'
 
 export default function Navbar() {
   return (
@@ -23,27 +24,27 @@ export default function Navbar() {
         <div className='bar3'></div>
       </div>
       <Menu>
-        <Link href='/'>
+        <NavLink href='/'>
           <a>Home</a>
-        </Link>
-        <Link href={paths.locations}>
+        </NavLink>
+        <NavLink href={paths.locations}>
           <a>Locations</a>
-        </Link>
-        <Link href={paths.connect}>
+        </NavLink>
+        <NavLink href={paths.connect}>
           <a>Connect</a>
-        </Link>
-        <Link href={paths.sermons}>
+        </NavLink>
+        <NavLink href={paths.sermons}>
           <a>Sermons</a>
-        </Link>
-        <Link href={paths.liveStream}>
+        </NavLink>
+        <NavLink href={paths.liveStream}>
           <a>Live Stream</a>
-        </Link>
-        <Link href={paths.events}>
+        </NavLink>
+        <NavLink href={paths.events}>
           <a>Events</a>
-        </Link>
-        <Link href={paths.giving}>
+        </NavLink>
+        <NavLink href={paths.giving}>
           <Button className='orange'>Give</Button>
-        </Link>
+        </NavLink>
       </Menu>
     </Nav>
   )
@@ -87,6 +88,10 @@ export const Menu = styled.div`
     color: var(--textColor);
     margin: 0.9rem;
     font-weight: bold;
+
+    &[aria-current] {
+      border-bottom: 4px solid var(--mint);
+    }
 
     &:hover {
       border-bottom: 4px solid var(--mint);
