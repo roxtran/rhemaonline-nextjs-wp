@@ -6,7 +6,6 @@ export default function NotesList({ notes }) {
   return (
     <ListWrapper>
       <h2>Sermon Notes</h2>
-
       {notes.nodes.map((note) => (
         <NoteDetail key={note.slug} note={note} />
       ))}
@@ -17,7 +16,7 @@ export default function NotesList({ notes }) {
 const ListWrapper = styled.div`
   padding: 2.5rem 0;
   h2 {
-    color: var(--blue);
+    /* color: var(--blue); */
     padding-bottom: 1rem;
     border-bottom: 4px dashed var(--mint);
   }

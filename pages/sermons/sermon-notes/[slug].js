@@ -15,7 +15,7 @@ export default function SermonNote(data) {
     return newDate
   }
 
-  console.log(note.categories.nodes.name)
+  // console.log(note.categories.nodes.name)
   return (
     <>
       <HeadLine

@@ -12,7 +12,10 @@ export default function NoteDetail({ note }) {
     })
     return newDate
   }
-  const summary = `${note.excerpt.substring(0, 250)}... <br><br><p>Read More >></p>`
+  const summary = `${note.excerpt.substring(
+    0,
+    250
+  )}... <br><br><p>Read More >></p>`
   return (
     <NoteWrapper>
       <Link href={`${paths.sermons}/sermon-notes/${note.slug}`}>
@@ -23,6 +26,7 @@ export default function NoteDetail({ note }) {
               src={note.featuredImage.node.sourceUrl}
               layout='fill'
               objectFit='cover'
+              // objectPosition='center'
             />
           </div>
           <div className='text'>
