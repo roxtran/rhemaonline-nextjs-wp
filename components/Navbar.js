@@ -94,7 +94,7 @@ export const Menu = styled.div`
     }
 
     &:hover {
-      border-bottom: 4px solid var(--mint);
+      color: var(--mint);
     }
   }
 
