@@ -137,6 +137,11 @@ export default function Footer() {
             <Image src='/img/facebook-icon.webp' width={30} height={30} />
           </div>
         </a>
+        <a href={paths.instagramAccount} target='_blank'>
+          <div className='icon'>
+            <Image src='/img/instagram-icon.png' width={35} height={35} />
+          </div>
+        </a>
         <a href={paths.twitterAccount} target='_blank'>
           <div className='icon'>
             <Image src='/img/twitter-icon.webp' width={35} height={35} />

@@ -25,6 +25,7 @@ export default {
   memberLogin: 'https://rhema.ccbchurch.com/goto/login',
   bibleSite: 'https://www.bible.com/',
   facebookPage: 'https://www.facebook.com/Rhemachristianministries/',
+  instagramAccount: 'https://www.instagram.com/rhemacanada/',
   twitterAccount: 'https://twitter.com/rhemacanada?lang=en',
   youtubeChannel: 'https://www.youtube.com/channel/UCNjybtMYeMfwur19Gd5GvRg',
   office365Site: 'https://login.microsoftonline.com/'
