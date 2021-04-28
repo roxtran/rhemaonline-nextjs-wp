@@ -13,7 +13,7 @@ export default function MiddleMenu() {
             With a warm smile, the leaders of Rhema Christian Ministries are
             taskes with operational and ecclesiatial exellence.
           </p>
-          <h3>Leadership</h3>
+          <h4>Leadership</h4>
         </a>
       </Link>
       <Link href={paths.beliefs}>
@@ -23,14 +23,14 @@ export default function MiddleMenu() {
             At Rhema what we believe is important to us but not as much as the
             one in whom we believe.
           </p>
-          <h3>Beliefs</h3>
+          <h4>Beliefs</h4>
         </a>
       </Link>
       <Link href={paths.ministries}>
         <a>
           <Image src='/img/ministries-icon.webp' width={57.5} height={50} />
           <p>From our family to yours.</p>
-          <h3>Ministries</h3>
+          <h4>Ministries</h4>
         </a>
       </Link>
       <Link href={paths.grow}>
@@ -40,7 +40,7 @@ export default function MiddleMenu() {
             We invite you to hear the voice of the Master calling you, even as
             “Deep calleth unto deep” (Psalm 42:7)
           </p>
-          <h3>Grow</h3>
+          <h4>Grow</h4>
         </a>
       </Link>
     </MiddleWrapper>
@@ -75,7 +75,7 @@ export const MiddleWrapper = styled.div`
       margin: 1.25rem 0;
     }
 
-    h3 {
+    h4 {
       color: var(--blue);
     }
   }
