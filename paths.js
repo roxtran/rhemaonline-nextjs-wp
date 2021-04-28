@@ -4,7 +4,7 @@ export default {
   torontoLocation: '/locations/toronto',
   ottawaLocation: '/locations/ottawa',
   connect: '/connect',
-  sermons: 'sermons',
+  sermons: '/sermons',
   liveStream: '/live-stream',
   events: '/events',
   giving: '/giving',

@@ -1,20 +1,36 @@
 import Link from 'next/link'
+import Image from 'next/image'
+import styled from 'styled-components'
+import HeadLine from '../../components/HeadLine'
+import Sidebar from '../../components/Sidebar'
+import NotesList from '../../components/sermons/NotesList'
 
 export default function Home({ notes }) {
-  // console.log(notes)
+  // console.log(notes.categories.nodes.name)
   return (
     <>
-      <h1>Sermon page</h1>
-      {notes.nodes.map((note) => (
-        <ul key={note.slug}>
-          <li>
-            <Link href={`/sermons/sermon-notes/${note.slug}`}>{note.title}</Link>
-          </li>
-        </ul>
-      ))}
+      <HeadLine imgSrc='/img/sermons-image.jpg' title='Sermons' />
+      <Container>
+        <NotesList notes={notes} />
+        <Sidebar title='Recent Notes' list={notes} />
+      </Container>
     </>
   )
 }
+
+const Container = styled.div`
+  margin: 0 auto;
+  padding: 0 2%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
+`
 
 export async function getStaticProps() {
   const res = await fetch(process.env.WP_URL, {
@@ -28,10 +44,16 @@ export async function getStaticProps() {
             title
             slug
             date
+            excerpt
+            categories {
+              nodes {
+                name
+              }
+            }
             content
             featuredImage {
               node {
-                mediaItemUrl
+                sourceUrl
               }
             }    
             docFile {

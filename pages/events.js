@@ -5,7 +5,7 @@ import styled from 'styled-components'
 export default function Events() {
   return (
     <>
-      <HeadLine />
+      <HeadLine imgSrc='/img/events-image.webp' title='Events' />
       <CalendarWrapper>
         <PCOCalendar />
       </CalendarWrapper>

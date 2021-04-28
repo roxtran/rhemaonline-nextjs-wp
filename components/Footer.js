@@ -8,7 +8,7 @@ export default function Footer() {
     <FooterWrapper>
       <div className='links'>
         <div className='list'>
-          <h3>Home</h3>
+          <h4>Home</h4>
           <ul>
             <li>
               <Link href={paths.about}>
@@ -48,7 +48,7 @@ export default function Footer() {
           </ul>
         </div>
         <div className='list'>
-          <h3>Support</h3>
+          <h4>Support</h4>
           <ul>
             <li>
               <Link href={paths.connect}>
@@ -78,7 +78,7 @@ export default function Footer() {
           </ul>
         </div>
         <div className='list'>
-          <h3>Resources</h3>
+          <h4>Resources</h4>
           <ul>
             <li>
               <Link href={paths.liveStream}>
@@ -172,9 +172,9 @@ export const FooterWrapper = styled.div`
   .links {
     display: flex;
     justify-content: space-around;
-    h3 {
+    h4 {
       margin-left: -20px;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
     li {
       margin: 0.25rem 0;
@@ -183,10 +183,6 @@ export const FooterWrapper = styled.div`
       flex-direction: column;
     }
   }
-
-  /* .list {
-    border-right: 1px solid var(--textColor);
-  } */
 
   .icons {
     margin: 3rem 0;

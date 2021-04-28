@@ -16,8 +16,8 @@ export default function PCOCalendar() {
   }
 
   return (
-    <div id='resources_calendar_widget' class='styled'>
-      <div class='loader'>Loading...</div>
+    <div id='resources_calendar_widget' className='styled'>
+      <div className='loader'>Loading...</div>
     </div>
   )
 }
