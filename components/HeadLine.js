@@ -24,6 +24,7 @@ const HeadLineWraper = styled.div`
   }
   h1 {
     position: absolute;
+    text-align: center;
     color: var(--white);
     top: calc(50% + 50px);
     left: 50%;
