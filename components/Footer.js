@@ -119,11 +119,11 @@ export default function Footer() {
             <Image src='/img/bible-icon.webp' width={30} height={30} />
           </div>
         </a>
-        {/* <a href='https://rhema.ccbchurch.com/goto/login/' target='_blank'>
+        <a href='https://rhema.ccbchurch.com/goto/login/' target='_blank'>
           <div className='icon'>
             <Image src='/img/groups-icon.webp' width={30} height={30} />
           </div>
-        </a> */}
+        </a>
         <a
           href='https://tithe.ly/give_new/www/#/tithely/give-one-time/645887?kiosk=1'
           target='_blank'
@@ -193,6 +193,7 @@ export const FooterWrapper = styled.div`
     margin: 3rem 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
   }
   .icon {
     cursor: pointer;
