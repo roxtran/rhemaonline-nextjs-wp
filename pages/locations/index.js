@@ -116,14 +116,20 @@ export default function Locations() {
         font-size: 3.5rem;
       }
     }
-    Video {
-      height: 60vh;
+  `
+  const VideoWrapper = styled.div`
+    @media screen and (max-width: 640px) {
+      Video {
+        height: 60vh;
+      }
     }
   `
   return (
     <>
-      <Container>
+      <VideoWrapper>
         <Video src='/video/Rhema-Toronto.mp4' width='100%' height='75vh' />
+      </VideoWrapper>
+      <Container>
         <h1>Toronto Campus</h1>
         <div className='line'></div>
         <div className='icon-info'>
