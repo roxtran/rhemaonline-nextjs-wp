@@ -5,7 +5,7 @@ import PCOCalendar from '../components/common/PLOCalendar'
 export default function Events() {
   return (
     <>
-      <HeadLine imgSrc='/img/events-img.webp' title='Events' />
+      <HeadLine imgUrl='/img/events-img.webp' title='Events' />
       <CalendarWrapper>
         <PCOCalendar />
       </CalendarWrapper>

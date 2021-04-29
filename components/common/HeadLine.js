@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 
-export default function HeadLine({ imgSrc, title, blur }) {
+export default function HeadLine({ imgUrl, title, blur }) {
   return (
     <HeadLineWraper>
       <Image
-        src={imgSrc}
+        src={imgUrl}
         alt='headline image'
         layout='fill'
         objectFit='cover'
