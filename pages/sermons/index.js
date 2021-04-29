@@ -7,16 +7,16 @@ export default function Home({ notes }) {
   // console.log(notes.categories.nodes.name)
   return (
     <>
-      <HeadLine imgSrc='/img/sermons-img.jpg' title='Sermons' />
-      <Container>
+      <HeadLine imgUrl='/img/sermons-img.jpg' title='Sermons' />
+      <SermonsContainer>
         <NotesList notes={notes} />
         <Sidebar title='Recent Notes' list={notes} />
-      </Container>
+      </SermonsContainer>
     </>
   )
 }
 
-const Container = styled.div`
+const SermonsContainer = styled.div`
   margin: 0 auto;
   padding: 0 2%;
   max-width: 1100px;

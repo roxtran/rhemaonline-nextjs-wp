@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
+    cursor: pointer;
     color: var(--textColor);
     text-decoration: none;
     &:hover {
@@ -40,12 +41,23 @@ const GlobalStyle = createGlobalStyle`
   h4 {
     font-size: 1.2rem;
   }
+
+  h5 {
+    font-size: 1rem;
+  }
   
   p {
     line-height: 1.5;
   }
 `
-
+export const Container = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+`
 export const Button = styled.a`
   margin-top: 1.5rem;
   cursor: pointer;

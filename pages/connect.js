@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 import HeadLine from '../components/common/HeadLine'
 import Image from 'next/image'
+import { Container } from '../styles/GlobalStyle'
 
 export default function Connect() {
   // console.log(notes.categories.nodes.name)
   return (
     <>
       <HeadLine imgUrl='/img/connect-img.jpg' title='We Care' />
-      <Container>
+      <ConnectContainer>
         <div className='desc'>
           <h2>We Care Services</h2>
           <p>
@@ -271,18 +272,11 @@ export default function Connect() {
             </a>
           </div>
         </div>
-      </Container>
+      </ConnectContainer>
     </>
   )
 }
-const Container = styled.div`
-  margin: 0 auto;
-  padding: 0 2%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 3.5rem 0;
+const ConnectContainer = styled(Container)`
   .desc {
     width: 1100px;
     max-width: 90vw;

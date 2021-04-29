@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Video from '../../components/common/Video'
 import Image from 'next/image'
+import { Container } from '../../styles/GlobalStyle'
 
 export default function Locations() {
   return (
@@ -8,92 +9,92 @@ export default function Locations() {
       <VideoWrapper>
         <Video src='/video/Rhema-Toronto.mp4' width='100%' height='75vh' />
       </VideoWrapper>
-      <Container>
-        <h1>Toronto Campus</h1>
-        <div className='line'></div>
-        <div className='icon-info'>
-          <div className='icon-group'>
-            <div className='icon'>
-              <Image
-                className='icon-img'
-                src='/img/phone-icon.png'
-                width={75}
-                height={75}
-              />
+      <LocationContainer>
+        <div className='content-wrapper'>
+          <h1>Toronto Campus</h1>
+          <div className='line'></div>
+          <div className='icon-info'>
+            <div className='icon-group'>
+              <div className='icon'>
+                <Image
+                  className='icon-img'
+                  src='/img/phone-icon.png'
+                  width={75}
+                  height={75}
+                />
+              </div>
+              <div className='text'>
+                <h4>Phone</h4>
+                <p>(416) 496-1794</p>
+              </div>
             </div>
-            <div className='text'>
-              <h4>Phone</h4>
-              <p>(416) 496-1794</p>
+            <div className='icon-group'>
+              <div className='icon'>
+                <Image src='/img/fax-icon.png' width={75} height={75} />
+              </div>
+              <div className='text'>
+                <h4>Fax</h4>
+                <p>(416) 496-1795</p>
+              </div>
+            </div>
+            <div className='icon-group'>
+              <div className='icon'>
+                <Image src='/img/email-icon.png' width={75} height={75} />
+              </div>
+              <div className='text'>
+                <h4>Email</h4>
+                <p>info@rhemaonline.ca</p>
+              </div>
+            </div>
+            <div className='icon-group'>
+              <div className='icon'>
+                <Image src='/img/hours-icon.png' width={60} height={60} />
+              </div>
+              <div className='text'>
+                <h4>Hours</h4>
+                <p>Mon - Thurs</p>
+                <p>9:00am - 3:00pm</p>
+              </div>
             </div>
           </div>
-          <div className='icon-group'>
-            <div className='icon'>
-              <Image src='/img/fax-icon.png' width={75} height={75} />
+          <div className='map-group'>
+            <div className='text-wrapper'>
+              <div className='text-border'>
+                <h2>Our Location</h2>
+                <p>
+                  <span>Worship Service:</span> Sundays – 8:30am & 11am
+                </p>
+                <p>
+                  <span>Bible Study:</span> Starting Wed. March 18th, 2020 until
+                  further notice, our weekly Bible Study will be a one hour
+                  gathering of intense prayer for community and national
+                  healing. Service time will be 7:00pm – 8:00pm
+                </p>
+                <span>49-40 Carl Hall Road, Toronto, ON, M3K 2C1</span>
+              </div>
             </div>
-            <div className='text'>
-              <h4>Fax</h4>
-              <p>(416) 496-1795</p>
-            </div>
-          </div>
-          <div className='icon-group'>
-            <div className='icon'>
-              <Image src='/img/email-icon.png' width={75} height={75} />
-            </div>
-            <div className='text'>
-              <h4>Email</h4>
-              <p>info@rhemaonline.ca</p>
-            </div>
-          </div>
-          <div className='icon-group'>
-            <div className='icon'>
-              <Image src='/img/hours-icon.png' width={60} height={60} />
-            </div>
-            <div className='text'>
-              <h4>Hours</h4>
-              <p>Mon - Thurs</p>
-              <p>9:00am - 3:00pm</p>
+            <div className='map-wrapper'>
+              <iframe
+                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.2156851747036!2d-79.48001688449921!3d43.74761767911818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b31f3db445a91%3A0xe4bdbb1f2de0ba9b!2s40%20Carl%20Hall%20Rd%20%2349%2C%20North%20York%2C%20ON%20M3K%202C1!5e0!3m2!1sen!2sca!4v1619679421572!5m2!1sen!2sca'
+                width='1000'
+                height='420'
+                style={{ border: 0 }}
+                allowFullScreen=''
+                loading='lazy'
+              ></iframe>
             </div>
           </div>
         </div>
-        <div className='map-group'>
-          <div className='text-wrapper'>
-            <div className='text-border'>
-              <h2>Our Location</h2>
-              <p>
-                <span>Worship Service:</span> Sundays – 8:30am & 11am
-              </p>
-              <p>
-                <span>Bible Study:</span> Starting Wed. March 18th, 2020 until
-                further notice, our weekly Bible Study will be a one hour
-                gathering of intense prayer for community and national healing.
-                Service time will be 7:00pm – 8:00pm
-              </p>
-              <span>49-40 Carl Hall Road, Toronto, ON, M3K 2C1</span>
-            </div>
-          </div>
-          <div className='map-wrapper'>
-            <iframe
-              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.2156851747036!2d-79.48001688449921!3d43.74761767911818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b31f3db445a91%3A0xe4bdbb1f2de0ba9b!2s40%20Carl%20Hall%20Rd%20%2349%2C%20North%20York%2C%20ON%20M3K%202C1!5e0!3m2!1sen!2sca!4v1619679421572!5m2!1sen!2sca'
-              width='1000'
-              height='420'
-              style={{ border: 0 }}
-              allowFullScreen=''
-              loading='lazy'
-            ></iframe>
-          </div>
-        </div>
-      </Container>
+      </LocationContainer>
     </>
   )
 }
-const Container = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+const LocationContainer = styled(Container)`
+  .content-wrapper {
+    width: 1100px;
+    max-width: 90vw;
+  }
   h1 {
-    margin-top: 4rem;
     text-align: center;
   }
   .line {
@@ -106,8 +107,6 @@ const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: 1100px;
-    max-width: 90vw;
     flex-wrap: wrap;
     margin: 2rem 0;
   }
@@ -131,9 +130,7 @@ const Container = styled.div`
   }
   .map-group {
     display: flex;
-    width: 1100px;
-    max-width: 90vw;
-    margin: 2rem 0 8rem 0;
+    margin: 2rem 0 4rem 0;
     justify-content: space-between;
   }
   .text-wrapper {

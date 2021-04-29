@@ -18,7 +18,7 @@ export default function SermonNote(data) {
   return (
     <>
       <HeadLine
-        imgSrc={note.featuredImage.node.sourceUrl}
+        imgUrl={note.featuredImage.node.sourceUrl}
         title={note.title}
         blur={true}
       />
