@@ -6,71 +6,6 @@ import { Button } from '../../styles/GlobalStyle'
 import { NavLink } from './NavLink'
 
 export default function Navbar() {
-  const Nav = styled.nav`
-    position: fixed;
-    background: rgba(255, 255, 255, 0.97);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 4%;
-    box-shadow: 0 7px 10px 0 rgba(122, 207, 255, 0.3);
-    align-items: center;
-    z-index: 99;
-
-    .mobileIcon {
-      display: none;
-      float: right;
-      .bar1,
-      .bar2,
-      .bar3 {
-        width: 25px;
-        height: 2px;
-        background-color: var(--textColor);
-        margin: 6px 0;
-        transition: 0.4s;
-      }
-
-      @media screen and (max-width: 768px) {
-        display: block;
-        width: 25px;
-      }
-    }
-  `
-  const Menu = styled.div`
-    display: block;
-
-    a {
-      color: var(--textColor);
-      margin: 0.9rem;
-      font-weight: bold;
-
-      &[aria-current] {
-        border-bottom: 4px solid var(--mint);
-      }
-
-      &:hover {
-        color: var(--mint);
-      }
-    }
-
-    .orange {
-      margin-left: 1rem;
-      letter-spacing: 1px;
-      &:hover {
-        border-bottom: 0;
-      }
-    }
-
-    @media screen and (max-width: 1024px) {
-      a {
-        margin: 0.6rem;
-      }
-    }
-
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
-  `
   return (
     <Nav>
       <Link href='/'>
@@ -114,3 +49,68 @@ export default function Navbar() {
     </Nav>
   )
 }
+const Nav = styled.nav`
+  position: fixed;
+  background: rgba(255, 255, 255, 0.97);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 4%;
+  box-shadow: 0 7px 10px 0 rgba(122, 207, 255, 0.3);
+  align-items: center;
+  z-index: 99;
+
+  .mobileIcon {
+    display: none;
+    float: right;
+    .bar1,
+    .bar2,
+    .bar3 {
+      width: 25px;
+      height: 2px;
+      background-color: var(--textColor);
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      width: 25px;
+    }
+  }
+`
+const Menu = styled.div`
+  display: block;
+
+  a {
+    color: var(--textColor);
+    margin: 0.9rem;
+    font-weight: bold;
+
+    &[aria-current] {
+      border-bottom: 4px solid var(--mint);
+    }
+
+    &:hover {
+      color: var(--mint);
+    }
+  }
+
+  .orange {
+    margin-left: 1rem;
+    letter-spacing: 1px;
+    &:hover {
+      border-bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    a {
+      margin: 0.6rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`

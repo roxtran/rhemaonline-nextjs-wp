@@ -3,15 +3,6 @@ import styled from 'styled-components'
 import NoteDetail from './NoteDetail'
 
 export default function NotesList({ notes }) {
-  const ListWrapper = styled.div`
-    padding: 2.5rem 0;
-    h2 {
-      /* color: var(--blue); */
-      padding-bottom: 1rem;
-      border-bottom: 4px dashed var(--mint);
-    }
-  `
-
   return (
     <ListWrapper>
       <h2>Sermon Notes</h2>
@@ -21,3 +12,11 @@ export default function NotesList({ notes }) {
     </ListWrapper>
   )
 }
+const ListWrapper = styled.div`
+  padding: 2.5rem 0;
+  h2 {
+    /* color: var(--blue); */
+    padding-bottom: 1rem;
+    border-bottom: 4px dashed var(--mint);
+  }
+`

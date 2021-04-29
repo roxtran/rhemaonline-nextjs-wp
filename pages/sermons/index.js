@@ -7,7 +7,7 @@ export default function Home({ notes }) {
   // console.log(notes.categories.nodes.name)
   return (
     <>
-      <HeadLine imgSrc='/img/sermons-image.jpg' title='Sermons' />
+      <HeadLine imgSrc='/img/sermons-img.jpg' title='Sermons' />
       <Container>
         <NotesList notes={notes} />
         <Sidebar title='Recent Notes' list={notes} />

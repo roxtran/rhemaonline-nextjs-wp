@@ -3,133 +3,6 @@ import Video from '../../components/common/Video'
 import Image from 'next/image'
 
 export default function Locations() {
-  const Container = styled.div`
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    h1 {
-      margin-top: 4rem;
-      text-align: center;
-    }
-    .line {
-      margin: 1rem auto;
-      width: 10vw;
-      height: 2px;
-      background: rgba(0, 0, 0, 0.2);
-    }
-    .icon-info {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      width: 1100px;
-      max-width: 90vw;
-      flex-wrap: wrap;
-      margin: 2rem 0;
-    }
-    .icon-group {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      margin: 1rem 2.5rem;
-    }
-    .icon {
-      width: 125px;
-      height: 125px;
-      box-shadow: 0 0 28px 10px rgba(122, 207, 255, 0.4);
-      border-radius: 90px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 2rem 0 1rem 0;
-    }
-    .map-group {
-      display: flex;
-      width: 1100px;
-      max-width: 90vw;
-      margin: 2rem 0 8rem 0;
-      justify-content: space-between;
-    }
-    .text-wrapper {
-      background: var(--blue);
-      color: var(--white);
-      padding: 3rem 3.5rem 3.5rem 3.5rem;
-      border-radius: 5px;
-      height: 100%;
-      width: 550px;
-      z-index: 1;
-      .text-border {
-        width: 370px;
-        max-width: 28vw;
-      }
-      h3 {
-        margin-bottom: 1rem;
-      }
-      span {
-        font-weight: bold;
-      }
-      p {
-        margin: 1.3rem 0;
-      }
-    }
-
-    .map-wrapper {
-      z-index: 2;
-      width: 650px;
-      height: 100%;
-      margin-left: -100px;
-      margin-top: 90px;
-      box-shadow: var(--shadow);
-      border-radius: 5px;
-      overflow: hidden;
-      flex-wrap: wrap;
-    }
-
-    @media screen and (max-width: 768px) {
-      .icon-info {
-        justify-content: center;
-      }
-      .map-group {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        .text-wrapper {
-          max-width: 80vw;
-        }
-        .text-border {
-          width: 100%;
-          max-width: 100%;
-        }
-        .map-wrapper {
-          margin-left: 0;
-          margin-top: 0;
-          max-width: 80vw;
-        }
-      }
-    }
-
-    @media screen and (max-width: 640px) {
-      .text-wrapper {
-        padding: 2.75rem;
-      }
-      h1 {
-        font-size: 3.5rem;
-      }
-      h2 {
-        font-size: 1.9rem;
-      }
-    }
-  `
-  const VideoWrapper = styled.div`
-    @media screen and (max-width: 640px) {
-      Video {
-        height: 60vh;
-      }
-    }
-  `
   return (
     <>
       <VideoWrapper>
@@ -213,3 +86,130 @@ export default function Locations() {
     </>
   )
 }
+const Container = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    margin-top: 4rem;
+    text-align: center;
+  }
+  .line {
+    margin: 1rem auto;
+    width: 10vw;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .icon-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 1100px;
+    max-width: 90vw;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+  }
+  .icon-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem 2.5rem;
+  }
+  .icon {
+    width: 125px;
+    height: 125px;
+    box-shadow: 0 0 28px 10px rgba(122, 207, 255, 0.4);
+    border-radius: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0 1rem 0;
+  }
+  .map-group {
+    display: flex;
+    width: 1100px;
+    max-width: 90vw;
+    margin: 2rem 0 8rem 0;
+    justify-content: space-between;
+  }
+  .text-wrapper {
+    background: var(--blue);
+    color: var(--white);
+    padding: 3rem 3.5rem 3.5rem 3.5rem;
+    border-radius: 5px;
+    height: 100%;
+    width: 550px;
+    z-index: 1;
+    .text-border {
+      width: 370px;
+      max-width: 28vw;
+    }
+    h3 {
+      margin-bottom: 1rem;
+    }
+    span {
+      font-weight: bold;
+    }
+    p {
+      margin: 1.3rem 0;
+    }
+  }
+
+  .map-wrapper {
+    z-index: 2;
+    width: 650px;
+    height: 100%;
+    margin-left: -100px;
+    margin-top: 90px;
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 768px) {
+    .icon-info {
+      justify-content: center;
+    }
+    .map-group {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .text-wrapper {
+        max-width: 80vw;
+      }
+      .text-border {
+        width: 100%;
+        max-width: 100%;
+      }
+      .map-wrapper {
+        margin-left: 0;
+        margin-top: 0;
+        max-width: 80vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .text-wrapper {
+      padding: 2.75rem;
+    }
+    h1 {
+      font-size: 3.5rem;
+    }
+    h2 {
+      font-size: 1.9rem;
+    }
+  }
+`
+const VideoWrapper = styled.div`
+  @media screen and (max-width: 640px) {
+    Video {
+      height: 60vh;
+    }
+  }
+`

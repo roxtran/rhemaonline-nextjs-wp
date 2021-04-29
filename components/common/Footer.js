@@ -4,55 +4,6 @@ import styled from 'styled-components'
 import paths from '../../paths'
 
 export default function Footer() {
-  const FooterWrapper = styled.div`
-    position: relative;
-    background: var(--lightBG);
-    height: 550px;
-    padding: 4.5% 5% 5% 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    .links {
-      display: flex;
-      justify-content: space-around;
-      h4 {
-        margin-left: -20px;
-        margin-bottom: 0.75rem;
-      }
-      li {
-        margin: 0.25rem 0;
-      }
-      @media screen and (max-width: 640px) {
-        flex-direction: column;
-      }
-    }
-
-    .icons {
-      margin: 3rem 0;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .icon {
-      cursor: pointer;
-      margin: 0.7rem;
-      &:hover {
-        transform: translateY(-5px);
-      }
-    }
-    .copyright {
-      text-align: center;
-    }
-
-    @media screen and (max-width: 640px) {
-      height: 100%;
-      padding: 3rem;
-      ul {
-        margin-bottom: 2rem;
-      }
-    }
-  `
   return (
     <FooterWrapper>
       <div className='links'>
@@ -213,3 +164,52 @@ export default function Footer() {
     </FooterWrapper>
   )
 }
+const FooterWrapper = styled.div`
+  position: relative;
+  background: var(--lightBG);
+  height: 550px;
+  padding: 4.5% 5% 5% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .links {
+    display: flex;
+    justify-content: space-around;
+    h4 {
+      margin-left: -20px;
+      margin-bottom: 0.75rem;
+    }
+    li {
+      margin: 0.25rem 0;
+    }
+    @media screen and (max-width: 640px) {
+      flex-direction: column;
+    }
+  }
+
+  .icons {
+    margin: 3rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .icon {
+    cursor: pointer;
+    margin: 0.7rem;
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  .copyright {
+    text-align: center;
+  }
+
+  @media screen and (max-width: 640px) {
+    height: 100%;
+    padding: 3rem;
+    ul {
+      margin-bottom: 2rem;
+    }
+  }
+`
