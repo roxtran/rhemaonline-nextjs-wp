@@ -23,10 +23,10 @@ export default function Locations() {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin-top: 4rem;
       width: 1100px;
       max-width: 90vw;
       flex-wrap: wrap;
+      margin: 2rem 0;
     }
     .icon-group {
       display: flex;
@@ -34,7 +34,7 @@ export default function Locations() {
       justify-content: center;
       align-items: center;
       text-align: center;
-      margin: 0 2.5rem;
+      margin: 1rem 2.5rem;
     }
     .icon {
       width: 125px;
@@ -50,7 +50,7 @@ export default function Locations() {
       display: flex;
       width: 1100px;
       max-width: 90vw;
-      margin: 6rem 0 8rem 0;
+      margin: 2rem 0 8rem 0;
       justify-content: space-between;
     }
     .text-wrapper {
@@ -192,7 +192,7 @@ export default function Locations() {
               width='1000'
               height='420'
               style={{ border: 0 }}
-              allowFullscreen=''
+              allowFullScreen=''
               loading='lazy'
             ></iframe>
           </div>
