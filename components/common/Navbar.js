@@ -1,8 +1,8 @@
-import Link from 'next/link'
 import Image from 'next/image'
+import Link from 'next/link'
 import styled from 'styled-components'
-import paths from '../paths'
-import { Button } from '../styles/GlobalStyle'
+import paths from '../../paths'
+import { Button } from '../../styles/GlobalStyle'
 import { NavLink } from './NavLink'
 
 export default function Navbar() {

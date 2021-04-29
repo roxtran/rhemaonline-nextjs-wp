@@ -1,7 +1,6 @@
 import Image from 'next/image'
-import HeadLine from '../../../components/HeadLine'
 import styled from 'styled-components'
-import Sidebar from '../../../components/Sidebar'
+import HeadLine from '../../../components/common/HeadLine'
 import { Button } from '../../../styles/GlobalStyle'
 
 export default function SermonNote(data) {

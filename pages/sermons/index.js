@@ -1,8 +1,6 @@
-import Link from 'next/link'
-import Image from 'next/image'
 import styled from 'styled-components'
-import HeadLine from '../../components/HeadLine'
-import Sidebar from '../../components/Sidebar'
+import HeadLine from '../../components/common/HeadLine'
+import Sidebar from '../../components/common/Sidebar'
 import NotesList from '../../components/sermons/NotesList'
 
 export default function Home({ notes }) {

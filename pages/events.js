@@ -1,6 +1,6 @@
-import HeadLine from '../components/HeadLine'
-import PCOCalendar from '../components/PLOCalendar'
 import styled from 'styled-components'
+import HeadLine from '../components/common/HeadLine'
+import PCOCalendar from '../components/common/PLOCalendar'
 
 export default function Events() {
   return (
