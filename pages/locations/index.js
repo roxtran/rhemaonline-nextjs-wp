@@ -112,8 +112,14 @@ export default function Locations() {
     }
 
     @media screen and (max-width: 640px) {
+      .text-wrapper {
+        padding: 2.75rem;
+      }
       h1 {
         font-size: 3.5rem;
+      }
+      h2 {
+        font-size: 1.9rem;
       }
     }
   `
