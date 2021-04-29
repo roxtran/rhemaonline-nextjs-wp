@@ -282,12 +282,13 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3rem 0;
+  padding: 3.5rem 0;
   .desc {
     width: 1100px;
     max-width: 90vw;
+    margin-bottom: 2rem;
     h2 {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       color: var(--blue);
     }
   }
@@ -300,6 +301,7 @@ const Container = styled.div`
   }
   .item-wrapper {
     width: 560px;
+    max-width: 90vw;
     margin: 1rem;
     position: relative;
   }
@@ -308,6 +310,10 @@ const Container = styled.div`
     height: 400px;
     border-radius: 5px;
     overflow: hidden;
+
+    @media screen and (max-width: 640px) {
+      height: 600px;
+    }
   }
   .hover {
     cursor: pointer;
