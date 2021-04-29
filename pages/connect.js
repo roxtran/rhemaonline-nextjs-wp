@@ -307,7 +307,7 @@ const Container = styled.div`
   }
   .img-wrapper {
     position: relative;
-    height: 400px;
+    height: 500px;
     border-radius: 5px;
     overflow: hidden;
 
