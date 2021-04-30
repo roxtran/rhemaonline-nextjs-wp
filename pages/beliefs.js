@@ -1,0 +1,68 @@
+import HeadLine from '../components/common/HeadLine'
+import styled from 'styled-components'
+import { Container } from '../styles/GlobalStyle'
+import beliefs from '../data/beliefs'
+
+export default function Beliefs() {
+  return (
+    <>
+      <HeadLine
+        imgUrl='/img/beliefs-img.jpg'
+        title='Beliefs'
+        blur='blur(5px)'
+      />
+      <BeliefsContainer>
+        <div className='content-wrapper'>
+          <div className='desc'>
+            <h2>Statement of faith</h2>
+            <p>
+              We put forth the following statement of faith not for theological
+              argumentation nor for denominational classification rather; our
+              beliefs simply represent those theological values that we hold
+              dearly as a Bible based church community. At Rhema what we believe
+              is important to us but not as much as the one in whom we believe.
+            </p>
+          </div>
+          <div className='beliefs'>
+            {beliefs.map((belief) => (
+              <div className='belief' key={belief.title}>
+                <h4>{belief.title}</h4>
+                <p>{belief.text}</p>
+              </div>
+            ))}
+          </div>
+          <h3>Even so, come Lord Jesus</h3>
+        </div>
+      </BeliefsContainer>
+    </>
+  )
+}
+const BeliefsContainer = styled(Container)`
+  .content-wrapper {
+    width: 1100px;
+    max-width: 90vw;
+    .desc {
+      h2 {
+        margin-bottom: 1rem;
+      }
+      p {
+        padding-bottom: 2rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      }
+    }
+    .beliefs {
+      padding: 2rem 4rem;
+    }
+    .belief {
+      margin: 1.5rem;
+      h4 {
+        margin-bottom: 0.5rem;
+      }
+    }
+    h3 {
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+      padding: 4rem 0;
+      text-align: center;
+    }
+  }
+`

@@ -1,7 +1,8 @@
-import HeadLine from '../components/common/HeadLine'
-import styled from 'styled-components'
-import { Container } from '../styles/GlobalStyle'
 import Image from 'next/image'
+import styled from 'styled-components'
+import HeadLine from '../components/common/HeadLine'
+import { Container } from '../styles/GlobalStyle'
+import leaders from '../data/leaders'
 
 export default function Leadership() {
   return (
@@ -23,66 +24,14 @@ export default function Leadership() {
             </p>
           </div>
           <div className='leaders'>
-            <div className='leader'>
-              <div className='img-wrapper'>
-                <Image
-                  src='/img/leaders/Orim-M-Meikle.jpg'
-                  width={250}
-                  height={250}
-                />
+            {leaders.map((leader) => (
+              <div className='leader' key={leader.name}>
+                <div className='img-wrapper'>
+                  <Image src={leader.imgUrl} width={250} height={250} />
+                </div>
+                <h3>{leader.name}</h3>
               </div>
-              <h3>Orim M. Meikle</h3>
-            </div>
-            <div className='leader'>
-              <div className='img-wrapper'>
-                <Image
-                  src='/img/leaders/Judith-R-Meikle.jpg'
-                  width={250}
-                  height={250}
-                />
-              </div>
-              <h3>Judith R. Meikle</h3>
-            </div>
-            <div className='leader'>
-              <div className='img-wrapper'>
-                <Image
-                  src='/img/leaders/Charles-Isiuwe.jpg'
-                  width={250}
-                  height={250}
-                />
-              </div>
-              <h3>Charles Isiuwe</h3>
-            </div>
-            <div className='leader'>
-              <div className='img-wrapper'>
-                <Image
-                  src='/img/leaders/Eriazel-Daniel.jpg'
-                  width={250}
-                  height={250}
-                />
-              </div>
-              <h3>Eriazel Daniel</h3>
-            </div>
-            <div className='leader'>
-              <div className='img-wrapper'>
-                <Image
-                  src='/img/leaders/Guy-Kayembe.jpg'
-                  width={250}
-                  height={250}
-                />
-              </div>
-              <h3>Guy Kayembe</h3>
-            </div>
-            <div className='leader'>
-              <div className='img-wrapper'>
-                <Image
-                  src='/img/leaders/Ephraim-Chiyangwa.jpg'
-                  width={250}
-                  height={250}
-                />
-              </div>
-              <h3>Ephraim Chiyangwa</h3>
-            </div>
+            ))}
           </div>
         </div>
       </LeadershipContainer>
@@ -106,6 +55,7 @@ const LeadershipContainer = styled(Container)`
       margin-top: 1rem;
       text-align: center;
       width: 720px;
+      max-width: 90vw;
     }
   }
   .leaders {
@@ -122,6 +72,7 @@ const LeadershipContainer = styled(Container)`
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 2rem;
     margin: 1rem;
+    border-radius: 5px;
 
     .img-wrapper {
       border-radius: 200px;
