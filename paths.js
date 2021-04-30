@@ -9,7 +9,7 @@ export default {
   events: '/events',
   giving: '/giving',
   about: '/about',
-  leadership: '/leadersip',
+  leadership: '/leadership',
   beliefs: '/beliefs',
   ministries: '/ministries',
   grow: '/grow',
