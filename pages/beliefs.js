@@ -61,7 +61,7 @@ const BeliefsContainer = styled(Container)`
     }
     h3 {
       border-top: 1px solid rgba(0, 0, 0, 0.2);
-      padding: 4rem 0;
+      padding-top: 3rem;
       text-align: center;
     }
     @media screen and (max-width: 640px) {
