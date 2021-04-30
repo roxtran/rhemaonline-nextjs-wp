@@ -7,7 +7,14 @@ export default function Connect() {
   // console.log(notes.categories.nodes.name)
   return (
     <>
-      <HeadLine imgUrl='/img/connect-img.jpg' title='We Care' />
+      <HeadLine
+        imgUrl='/img/connect-img.jpg'
+        title='We Care'
+        desc='We are here for you.'
+        btnText='Contact Us'
+        btnLink='https://rhema.ccbchurch.com/goto/forms/91/responses/new'
+        height='550px'
+      />
       <ConnectContainer>
         <div className='desc'>
           <h2>We Care Services</h2>
@@ -22,7 +29,7 @@ export default function Connect() {
           </p>
         </div>
         <div className='flexbox'>
-          <div className='item-wrapper'>
+          <div className='item-wrapper' id='prayer-requests'>
             <div className='img-wrapper'>
               <Image
                 src='/img/connect/prayer-request.jpg'
@@ -30,6 +37,7 @@ export default function Connect() {
                 objectFit='cover'
               />
             </div>
+            <h3>Prayer Requests</h3>
             <a
               href='https://rhema.ccbchurch.com/goto/forms/89/responses/new'
               target='_blank'
@@ -48,7 +56,7 @@ export default function Connect() {
               </div>
             </a>
           </div>
-          <div className='item-wrapper'>
+          <div className='item-wrapper' id='pastoral-care'>
             <div className='img-wrapper'>
               <Image
                 src='/img/connect/pastoral-care.jpg'
@@ -56,6 +64,7 @@ export default function Connect() {
                 objectFit='cover'
               />
             </div>
+            <h3>Pastoral Care</h3>
             <a
               href='https://rhema.ccbchurch.com/goto/forms/90/responses/new'
               target='_blank'
@@ -73,7 +82,7 @@ export default function Connect() {
               </div>
             </a>
           </div>
-          <div className='item-wrapper'>
+          <div className='item-wrapper' id='become-a-member'>
             <div className='img-wrapper'>
               <Image
                 src='/img/connect/become-a-member.jpg'
@@ -81,6 +90,7 @@ export default function Connect() {
                 objectFit='cover'
               />
             </div>
+            <h3>Become A Member</h3>
             <a
               href='https://rhema.ccbchurch.com/goto/forms/15/responses/new '
               target='_blank'
@@ -100,7 +110,7 @@ export default function Connect() {
               </div>
             </a>
           </div>
-          <div className='item-wrapper'>
+          <div className='item-wrapper' id='child-dedication'>
             <div className='img-wrapper'>
               <Image
                 src='/img/connect/child-dedication.jpg'
@@ -108,6 +118,7 @@ export default function Connect() {
                 objectFit='cover'
               />
             </div>
+            <h3>Child Dedication</h3>
             <a
               href='https://rhema.ccbchurch.com/goto/forms/14/responses/new'
               target='_blank'
@@ -128,7 +139,7 @@ export default function Connect() {
               </div>
             </a>
           </div>
-          <div className='item-wrapper'>
+          <div className='item-wrapper' id='water-baptism'>
             <div className='img-wrapper'>
               <Image
                 src='/img/connect/water-baptism.jpg'
@@ -136,6 +147,7 @@ export default function Connect() {
                 objectFit='cover'
               />
             </div>
+            <h3>Water Baptism</h3>
             <a
               href='https://rhema.ccbchurch.com/goto/forms/12/responses/new'
               target='_blank'
@@ -155,7 +167,7 @@ export default function Connect() {
               </div>
             </a>
           </div>
-          <div className='item-wrapper'>
+          <div className='item-wrapper' id='marriage-counseling'>
             <div className='img-wrapper'>
               <Image
                 src='/img/connect/marriage-counselling.jpg'
@@ -163,6 +175,7 @@ export default function Connect() {
                 objectFit='cover'
               />
             </div>
+            <h3>Pre-marital Counseling and Weddings</h3>
             <a
               href='https://rhema.ccbchurch.com/goto/forms/16/responses/new'
               target='_blank'
@@ -186,7 +199,7 @@ export default function Connect() {
               </div>
             </a>
           </div>
-          <div className='item-wrapper'>
+          <div className='item-wrapper' id='hospital-visitation-services'>
             <div className='img-wrapper'>
               <Image
                 src='/img/connect/hospital-visitation-services.jpg'
@@ -194,6 +207,7 @@ export default function Connect() {
                 objectFit='cover'
               />
             </div>
+            <h3>Hospital & Visitation Services</h3>
             <a href=' https://rhemaonline.ca/bookings/' target='_blank'>
               <div className='hover'>
                 <div className='text-wrapper'>
@@ -214,7 +228,7 @@ export default function Connect() {
               </div>
             </a>
           </div>
-          <div className='item-wrapper'>
+          <div className='item-wrapper' id='funerals'>
             <div className='img-wrapper'>
               <Image
                 src='/img/connect/funerals.jpg'
@@ -222,6 +236,7 @@ export default function Connect() {
                 objectFit='cover'
               />
             </div>
+            <h3>Funerals</h3>
             <a
               href='https://rhema.ccbchurch.com/goto/forms/40/responses/new'
               target='_blank'
@@ -246,7 +261,7 @@ export default function Connect() {
               </div>
             </a>
           </div>
-          <div className='item-wrapper'>
+          <div className='item-wrapper' id='foodbank'>
             <div className='img-wrapper'>
               <Image
                 src='/img/connect/foodbank.jpg'
@@ -254,6 +269,7 @@ export default function Connect() {
                 objectFit='cover'
               />
             </div>
+            <h3>Foodbank</h3>
             <a href=' https://rhemaonline.ca/bookings/' target='_blank'>
               <div className='hover'>
                 <div className='text-wrapper'>
@@ -298,6 +314,10 @@ const ConnectContainer = styled(Container)`
     max-width: 90vw;
     margin: 1rem;
     position: relative;
+    text-align: center;
+    h3 {
+      margin: 0.5rem auto;
+    }
   }
   .img-wrapper {
     position: relative;

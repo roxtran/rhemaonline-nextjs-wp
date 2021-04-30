@@ -1,43 +1,83 @@
 import Image from 'next/image'
 import styled from 'styled-components'
+import { Button } from '../../styles/GlobalStyle'
 
-export default function HeadLine({ imgUrl, title, blur }) {
+export default function HeadLine({
+  imgUrl,
+  title,
+  blur,
+  desc,
+  btnText,
+  btnLink,
+  height
+}) {
   return (
-    <HeadLineWraper>
+    <HeadLineWraper height={height}>
       <Image
         src={imgUrl}
         alt='headline image'
         layout='fill'
         objectFit='cover'
       />
-      {blur && <div id='blur'></div>}
-      <h1>{title}</h1>
+      {blur && <Blur blur={blur}></Blur>}
+      <div className='content-wrapper'>
+        <h1>{title}</h1>
+        {desc && <h2>{desc}</h2>}
+        {btnText && (
+          <HeadLineBtn className='white' href={btnLink} target='_blank'>
+            {btnText}
+          </HeadLineBtn>
+        )}
+      </div>
     </HeadLineWraper>
   )
 }
+
 const HeadLineWraper = styled.div`
   position: relative;
-  height: 450px;
+  height: ${(props) => (props.height ? props.height : '450px')};
   Image {
     z-index: 0;
   }
-  #blur {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100%;
-    z-index: 1;
-    backdrop-filter: blur(30px);
-  }
-  h1 {
+  .content-wrapper {
+    max-width: 90vw;
     position: absolute;
     text-align: center;
     color: var(--white);
     top: calc(50% + 50px);
     left: 50%;
     transform: translate(-50%, -50%);
-    text-shadow: var(--textShadow);
     z-index: 2;
   }
+  h1 {
+    text-shadow: var(--textShadow);
+  }
+  h2 {
+    margin-bottom: 2rem;
+  }
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    h1 {
+      font-size: 1.65rem;
+    }
+  }
+`
+const Blur = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: 1;
+  backdrop-filter: ${(props) => (props.blur ? props.blur : null)};
+`
+const HeadLineBtn = styled(Button)`
+  font-weight: bold;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  padding: 12px 44px;
 `

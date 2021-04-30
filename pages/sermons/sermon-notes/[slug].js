@@ -20,7 +20,7 @@ export default function SermonNote(data) {
       <HeadLine
         imgUrl={note.featuredImage.node.sourceUrl}
         title={note.title}
-        blur={true}
+        blur='blur(30px)'
       />
       <Container>
         <NoteWrapper>

@@ -61,12 +61,12 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href={paths.connect + '//#become-a-member'}>
+              <Link href={paths.connect + '#become-a-member'}>
                 <a>Become A Member</a>
               </Link>
             </li>
             <li>
-              <Link href={paths.getConnected + '//#groups'}>
+              <Link href={paths.getConnected + '#groups'}>
                 <a>Groups</a>
               </Link>
             </li>
