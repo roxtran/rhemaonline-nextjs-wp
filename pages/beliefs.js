@@ -46,7 +46,7 @@ const BeliefsContainer = styled(Container)`
         margin-bottom: 1rem;
       }
       p {
-        padding-bottom: 2rem;
+        padding-bottom: 3rem;
         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
       }
     }
@@ -63,6 +63,11 @@ const BeliefsContainer = styled(Container)`
       border-top: 1px solid rgba(0, 0, 0, 0.2);
       padding: 4rem 0;
       text-align: center;
+    }
+    @media screen and (max-width: 640px) {
+      .beliefs {
+        padding: 1rem 0;
+      }
     }
   }
 `
