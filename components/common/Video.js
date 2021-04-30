@@ -12,8 +12,8 @@ export default function Video({ src, width, height }) {
 }
 const VideoWrapper = styled.div`
   video {
-    width: ${(props) => props.width && props.width};
-    height: ${(props) => props.height && props.height};
+    width: ${({ width }) => width && width};
+    height: ${({ height }) => height && height};
     object-fit: cover;
   }
 `
