@@ -1,15 +1,8 @@
 import styled from 'styled-components'
 
 export default function Video({ src, width, height }) {
-  const VideoWrapper = styled.div`
-    video {
-      width: ${width};
-      height: ${height};
-      object-fit: cover;
-    }
-  `
   return (
-    <VideoWrapper>
+    <VideoWrapper width={width} height={height}>
       <video loop muted autoPlay>
         <source src={src} type='video/mp4' />
         Your browser does not support the video tag.
@@ -17,3 +10,10 @@ export default function Video({ src, width, height }) {
     </VideoWrapper>
   )
 }
+const VideoWrapper = styled.div`
+  video {
+    width: ${(props) => props.width && props.width};
+    height: ${(props) => props.height && props.height};
+    object-fit: cover;
+  }
+`

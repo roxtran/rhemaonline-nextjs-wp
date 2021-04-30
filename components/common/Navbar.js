@@ -18,10 +18,10 @@ export default function Navbar() {
           />
         </a>
       </Link>
-      <div className='mobileIcon'>
-        <div className='bar1'></div>
-        <div className='bar2'></div>
-        <div className='bar3'></div>
+      <div className='bars'>
+        <div className='bar'></div>
+        <div className='bar'></div>
+        <div className='bar'></div>
       </div>
       <Menu>
         <NavLink href='/'>
@@ -60,12 +60,10 @@ const Nav = styled.nav`
   align-items: center;
   z-index: 99;
 
-  .mobileIcon {
+  .bars {
     display: none;
     float: right;
-    .bar1,
-    .bar2,
-    .bar3 {
+    .bar {
       width: 25px;
       height: 2px;
       background-color: var(--textColor);

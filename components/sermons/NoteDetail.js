@@ -12,10 +12,10 @@ export default function NoteDetail({ note }) {
     })
     return newDate
   }
-  const summary = `${note.excerpt.substring(
+  const summary = `<p>${note.excerpt.substring(
     0,
     250
-  )}... <br><br><p>Read More >></p>`
+  )}... <br><br>Read More >></p>`
 
   return (
     <NoteWrapper>
@@ -33,11 +33,11 @@ export default function NoteDetail({ note }) {
           <div className='text'>
             <p className='date'>{formatDate(note.date)}</p>
             <h3>{note.title}</h3>
-            <p
+            <div
               dangerouslySetInnerHTML={{
                 __html: summary
               }}
-            ></p>
+            ></div>
           </div>
         </a>
       </Link>
