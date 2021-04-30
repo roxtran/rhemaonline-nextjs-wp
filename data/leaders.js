@@ -8,7 +8,7 @@ export default [
     name: 'Judith R. Meikle'
   },
   {
-    imgUrl: '/img/leaders/Charles-Isiuwe1.jpg',
+    imgUrl: '/img/leaders/Charles-Isiuwe.jpg',
     name: 'Charles Isiuwe'
   },
   {
