@@ -5,7 +5,10 @@ import { Container } from '../styles/GlobalStyle'
 export default function Giving() {
   return (
     <>
-      <HeadLine imgUrl='/img/giving-img.jpg' title='Make A Difference' />
+      <HeadLine
+        imgUrl='/img/giving-img.jpg'
+        title='Make A Difference'
+      />
       <GivingContainer>
         <div className='content-wrapper'>
           <div id='thank'>
