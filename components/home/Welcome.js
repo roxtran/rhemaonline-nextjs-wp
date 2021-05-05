@@ -7,7 +7,7 @@ import { Button } from '../../styles/GlobalStyle'
 export default function Welcome() {
   return (
     <WelcomeWrapper>
-      <div className='image'>
+      <div className='img-wrapper'>
         <Image
           src='/img/welcome-img.webp'
           alt='welcome image'
@@ -45,7 +45,7 @@ const WelcomeWrapper = styled.div`
   align-items: center;
   flex-wrap: wrap;
   padding: 0 1%;
-  .image {
+  .img-wrapper {
     box-shadow: -35px 35px 0 0 rgba(122, 207, 255, 0.3);
     &:hover {
       box-shadow: 0 0 0 0 rgba(122, 207, 255, 0.3);

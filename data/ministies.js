@@ -3,7 +3,7 @@ export default [
     name: 'Plugged In Youth Ministry',
     imgUrl: '/img/ministries/youth.jpg',
     btnText: 'Learn More',
-    btnLink: './youth.js'
+    btnLink: '/ministries/youth'
     // social: {
     //   email: {
     //     link: 'wecare@rhemaonline.ca'
@@ -17,7 +17,7 @@ export default [
     name: "Women's Ministry",
     imgUrl: '/img/ministries/women.jpg',
     btnText: 'Learn More',
-    btnLink: './women.js',
+    btnLink: '/ministries/women',
     social: {
       email: {
         link: 'wecare@rhemaonline.ca'
@@ -31,7 +31,7 @@ export default [
     name: "Men's Ministries",
     imgUrl: '/img/ministries/men.jpg',
     btnText: 'Learn More',
-    btnLink: './men.js'
+    btnLink: '/ministries/men'
     // social: {
     //   email: {
     //     link: 'wecare@rhemaonline.ca'
@@ -45,7 +45,7 @@ export default [
     name: "Single's Ministry",
     imgUrl: '/img/ministries/single.jpg',
     btnText: 'Learn More',
-    btnLink: './single.js'
+    btnLink: '/ministries/single'
     // social: {
     //   email: {
     //     link: 'wecare@rhemaonline.ca'
@@ -59,7 +59,7 @@ export default [
     name: "Kid's Ministry",
     imgUrl: '/img/ministries/kid.jpg',
     btnText: 'Learn More',
-    btnLink: './kid.js'
+    btnLink: '/ministries/kid'
     // social: {
     //   email: {
     //     link: 'wecare@rhemaonline.ca'
@@ -70,10 +70,10 @@ export default [
     // }
   },
   {
-    name: 'Marriage Ministry',
+    name: "Marriage's Ministry",
     imgUrl: '/img/ministries/marriage.jpg',
     btnText: 'Learn More',
-    btnLink: './marriage.js'
+    btnLink: '/ministries/marriage'
     // social: {
     //   email: {
     //     link: 'wecare@rhemaonline.ca'

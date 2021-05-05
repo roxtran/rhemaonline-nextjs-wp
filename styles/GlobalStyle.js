@@ -48,7 +48,7 @@ const GlobalStyle = createGlobalStyle`
   
   p {
     line-height: 1.5;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
   }
 `
 export const Container = styled.div`

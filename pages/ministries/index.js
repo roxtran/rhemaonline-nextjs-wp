@@ -8,7 +8,7 @@ const ministries = () => {
   return (
     <>
       <HeadLine
-        imgUrl='/img/connect-img.jpg'
+        imgUrl='/img/ministries-img.jpg'
         title='Ministries'
         height='550px'
       />
@@ -41,7 +41,7 @@ const ministries = () => {
               </div>
               <div className='content-wrapper'>
                 <h3>{ministry.name}</h3>
-                <Button href='#'>{ministry.btnText}</Button>
+                <Button href={ministry.btnLink}>{ministry.btnText}</Button>
               </div>
             </div>
           ))}
@@ -62,7 +62,7 @@ const MinistriesContainer = styled(Container)`
     }
   }
   .ministries {
-    margin-top: 2rem;
+    margin-top: 3.5rem;
     width: 100%;
   }
   .ministry {
@@ -81,6 +81,9 @@ const MinistriesContainer = styled(Container)`
     border-radius: 5px;
     overflow: hidden;
     flex: 1;
+    /* &:hover {
+      box-shadow: 0 0 20px 0 var(--mint);
+    } */
   }
   .content-wrapper {
     flex: 1;
@@ -88,9 +91,9 @@ const MinistriesContainer = styled(Container)`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
     min-height: 400px;
     h3 {
+      text-align: center;
       font-size: 2.5rem;
       margin-bottom: 0.5rem;
       padding: 1rem;
