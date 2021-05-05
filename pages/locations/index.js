@@ -16,12 +16,7 @@ export default function Locations() {
           <div className='icon-info'>
             <div className='icon-group'>
               <div className='icon'>
-                <Image
-                  className='icon-img'
-                  src='/img/phone-icon.png'
-                  width={75}
-                  height={75}
-                />
+                <Image src='/img/phone-icon.png' width={75} height={75} />
               </div>
               <div className='text'>
                 <h4>Phone</h4>
@@ -127,6 +122,7 @@ const LocationContainer = styled(Container)`
     justify-content: center;
     align-items: center;
     margin: 2rem 0 1rem 0;
+    /* filter: hue-rotate(-20deg); */
   }
   .map-group {
     display: flex;
