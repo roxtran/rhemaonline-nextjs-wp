@@ -92,6 +92,7 @@ const MinistriesContainer = styled(Container)`
     min-height: 400px;
     h3 {
       font-size: 2.5rem;
+      margin-bottom: 0.5rem;
       padding: 1rem;
     }
   }
