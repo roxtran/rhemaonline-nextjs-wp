@@ -90,7 +90,6 @@ const BookingsContainer = styled(Container)`
     p {
       margin-bottom: 1rem;
     }
-
     ul {
       margin-left: 2rem;
     }
@@ -101,9 +100,14 @@ const BookingsContainer = styled(Container)`
   .btn-wrapper {
     padding: 5rem 2rem;
     width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     .text-wrapper {
-      margin-top: 1.5rem;
+      margin-top: 0.5rem;
     }
+    
   }
   @media screen and (max-width: 1024px) {
     .content-wrapper {
