@@ -36,7 +36,7 @@ const FoodbankContainer = styled(Container)`
   .img-wrapper {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 600px;
     border-radius: 5px;
     overflow: hidden;
   }
