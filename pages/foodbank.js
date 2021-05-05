@@ -1,7 +1,7 @@
-import HeadLine from '../components/common/HeadLine'
-import styled from 'styled-components'
-import { Container, Button } from '../styles/GlobalStyle'
 import Image from 'next/image'
+import styled from 'styled-components'
+import HeadLine from '../components/common/HeadLine'
+import { Button, Container } from '../styles/GlobalStyle'
 
 const foodbank = () => {
   return (
