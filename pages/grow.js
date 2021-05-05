@@ -1,14 +1,14 @@
-import HeadLine from '../components/common/HeadLine'
-import styled from 'styled-components'
-import { Container, Button } from '../styles/GlobalStyle'
 import Image from 'next/image'
+import styled from 'styled-components'
+import HeadLine from '../components/common/HeadLine'
 import { default as growData } from '../data/grow'
+import { Container } from '../styles/GlobalStyle'
 
 const grow = () => {
   return (
     <>
       <HeadLine imgUrl='/img/grow-img.jpg' title='Grow' height='550px' />
-      <MinistriesContainer>
+      <GrowContainer>
         <div className='desc'>
           <h2>Go Deeper</h2>
           <p>
@@ -47,12 +47,12 @@ const grow = () => {
             </div>
           ))}
         </div>
-      </MinistriesContainer>
+      </GrowContainer>
     </>
   )
 }
 
-const MinistriesContainer = styled(Container)`
+const GrowContainer = styled(Container)`
   padding-bottom: 0;
   .desc {
     width: 1100px;

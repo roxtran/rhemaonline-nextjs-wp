@@ -22,7 +22,7 @@ export default function HeadLine({
       {blur && <Blur blur={blur}></Blur>}
       <div className='content-wrapper'>
         <h1>{title}</h1>
-        {desc && <h3>{desc}</h3>}
+        {desc && <p>{desc}</p>}
         {btnText && (
           <HeadLineBtn className='white' href={btnLink} target='_blank'>
             {btnText}
@@ -52,12 +52,18 @@ const HeadLineWraper = styled.div`
   h1 {
     text-shadow: var(--textShadow);
   }
-  h3 {
+  p {
+    font-size: 2rem;
+    font-weight: bold;
     margin-bottom: 2rem;
+    text-shadow: var(--textShadow);
   }
   @media screen and (max-width: 768px) {
     h1 {
       font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.25rem;
     }
   }
 `
