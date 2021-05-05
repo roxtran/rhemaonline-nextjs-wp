@@ -12,7 +12,7 @@ const foodbank = () => {
           <div className='img-wrapper'>
             <Image src='/img/foodbank.jpg' layout='fill' objectFit='cover' />
           </div>
-          <h2>Foodbank</h2>
+          <h2>Mission</h2>
           <p>
             The Rhema Foodbank is a food bank service assisting our community by
             supplementing the grocery needs of many families on a weekly basis.
