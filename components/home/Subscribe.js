@@ -29,8 +29,10 @@ const SubscribeWrapper = styled.div`
   align-items: center;
 
   h2 {
-    margin-bottom: 3rem;
+    font-size: 3rem;
+    margin-bottom: 2rem;
     text-align: center;
+    max-width: 90vw;
   }
 
   .white {
@@ -43,5 +45,10 @@ const SubscribeWrapper = styled.div`
     text-transform: uppercase;
     letter-spacing: 1px;
     box-shadow: var(--shadow);
+  }
+  @media screen and (max-width: 640px) {
+    h2 {
+      font-size: 2.5rem;
+    }
   }
 `

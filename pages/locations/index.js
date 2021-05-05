@@ -141,9 +141,6 @@ const LocationContainer = styled(Container)`
       width: 370px;
       max-width: 28vw;
     }
-    h3 {
-      margin-bottom: 1rem;
-    }
     span {
       font-weight: bold;
     }
