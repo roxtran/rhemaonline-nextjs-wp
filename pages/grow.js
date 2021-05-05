@@ -92,7 +92,7 @@ const MinistriesContainer = styled(Container)`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 5rem 0;
+    padding: 4rem 0;
     width: 100%;
     h3 {
       font-size: 2rem;
@@ -108,7 +108,7 @@ const MinistriesContainer = styled(Container)`
       min-width: 500px;
       p {
         max-width: 90vw;
-        /* text-align: center; */
+        text-align: center;
       }
       ul {
         max-width: 80vw;
