@@ -2,17 +2,10 @@ import Image from 'next/image'
 import styled from 'styled-components'
 import HeadLine from '../../../components/common/HeadLine'
 import { Button } from '../../../styles/GlobalStyle'
+import { formatDate } from '../../../utils/formatter'
 
 export default function SermonNote(data) {
   const note = data.note
-  const formatDate = (date) => {
-    const newDate = new Date(date).toLocaleDateString('en-US', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric'
-    })
-    return newDate
-  }
 
   // console.log(note.categories.nodes.name)
   return (

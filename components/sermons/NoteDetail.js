@@ -2,16 +2,9 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import Link from 'next/link'
 import paths from '../../paths'
+import { formatDate } from '../../utils/formatter'
 
 export default function NoteDetail({ note }) {
-  const formatDate = (date) => {
-    const newDate = new Date(date).toLocaleDateString('en-US', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric'
-    })
-    return newDate
-  }
   const summary = `<p>${note.excerpt.substring(
     0,
     250

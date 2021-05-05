@@ -4,7 +4,6 @@ import Menu from './Menu'
 
 export default function Burger() {
   const [open, setOpen] = useState(false)
-  // console.log(open)
   return (
     <>
       <StyledBurger open={open} onClick={() => setOpen(!open)}>

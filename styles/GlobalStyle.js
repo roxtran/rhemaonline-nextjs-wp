@@ -48,6 +48,7 @@ const GlobalStyle = createGlobalStyle`
   
   p {
     line-height: 1.5;
+    margin-bottom: 1rem;
   }
 `
 export const Container = styled.div`
@@ -59,7 +60,6 @@ export const Container = styled.div`
   padding: 4rem 0;
 `
 export const Button = styled.a`
-  margin-top: 1.5rem;
   cursor: pointer;
   background: var(--blue);
   border-radius: 5px;

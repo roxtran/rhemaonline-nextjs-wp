@@ -48,17 +48,11 @@ export async function getStaticProps() {
                 name
               }
             }
-            content
             featuredImage {
               node {
                 sourceUrl
               }
-            }    
-            docFile {
-              docFile {
-                mediaItemUrl
-              }
-            }
+            } 
           }
         }
       }
