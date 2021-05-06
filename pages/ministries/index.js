@@ -41,7 +41,9 @@ const ministries = () => {
               </div>
               <div className='content-wrapper'>
                 <h3>{ministry.name}</h3>
-                <Button href={ministry.btnLink}>{ministry.btnText}</Button>
+                {ministry.btnText && (
+                  <Button href={ministry.btnLink}>{ministry.btnText}</Button>
+                )}
               </div>
             </div>
           ))}

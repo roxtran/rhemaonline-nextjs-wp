@@ -59,7 +59,7 @@ export default [
     name: "Kid's Ministry",
     imgUrl: '/img/ministries/kid.jpg',
     btnText: 'Learn More',
-    btnLink: '/ministries/kid'
+    btnLink: '#'
     // social: {
     //   email: {
     //     link: 'wecare@rhemaonline.ca'
