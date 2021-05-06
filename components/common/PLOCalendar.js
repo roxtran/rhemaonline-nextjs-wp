@@ -4,7 +4,6 @@ export default function PCOCalendar() {
   useEffect(() => {
     callCalendar()
   }, [])
-
   function callCalendar() {
     var rs = document.createElement('script')
     rs.type = 'text/javascript'
@@ -14,7 +13,6 @@ export default function PCOCalendar() {
     var s = document.getElementsByTagName('script')[0]
     s.parentNode.insertBefore(rs, s)
   }
-
   return (
     <div id='resources_calendar_widget' className='styled'>
       <div className='loader'>Loading...</div>

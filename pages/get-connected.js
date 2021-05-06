@@ -92,6 +92,9 @@ const GrowContainer = styled(Container)`
       align-items: center;
       width: 800px;
       max-width: 90vw;
+      p {
+        margin-bottom: 1rem;
+      }
     }
     .btn {
       margin-top: 1rem;

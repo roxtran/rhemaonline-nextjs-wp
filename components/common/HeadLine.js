@@ -32,7 +32,6 @@ export default function HeadLine({
     </HeadLineWraper>
   )
 }
-
 const HeadLineWraper = styled.div`
   position: relative;
   height: ${(props) => (props.height ? props.height : '450px')};

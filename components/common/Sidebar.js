@@ -31,11 +31,9 @@ const SidebarWrapper = styled.div`
   margin: 5rem 0;
   border-top: 4px dashed var(--mint);
   padding: 2rem 1rem;
-
   h3 {
     margin-bottom: 0.5rem;
   }
-
   ul {
     list-style: none;
   }
@@ -43,12 +41,10 @@ const SidebarWrapper = styled.div`
     padding: 1rem 0;
     border-bottom: 1px solid var(--mint);
   }
-
   @media screen and (max-width: 1024px) {
     width: 300px;
     padding: 2rem 3%;
   }
-
   @media screen and (max-width: 768px) {
     padding: 2rem 0;
   }

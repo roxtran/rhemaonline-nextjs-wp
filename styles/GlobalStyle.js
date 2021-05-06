@@ -7,7 +7,6 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     transition: all 0.4s ease-out;
   }
-
   html,
   body {
     background: var(--white);
@@ -16,7 +15,6 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     width: 100vw;
   }
-
   a {
     cursor: pointer;
     color: var(--textColor);
@@ -25,27 +23,21 @@ const GlobalStyle = createGlobalStyle`
       color:var(--blue);
     }
   }
-
   h1 {
     font-size: 3.75rem;
   }
-
   h2 {
     font-size: 2.25rem;
   }
-
   h3 {
     font-size: 1.5rem;
   }
-
   h4 {
     font-size: 1.2rem;
   }
-
   h5 {
     font-size: 1rem;
   }
-  
   p {
     line-height: 1.5;
   }

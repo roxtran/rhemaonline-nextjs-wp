@@ -172,7 +172,6 @@ const FooterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   .links {
     display: flex;
     justify-content: space-around;
@@ -187,7 +186,6 @@ const FooterWrapper = styled.div`
       flex-direction: column;
     }
   }
-
   .icons {
     margin: 3rem 0;
     display: flex;
@@ -204,7 +202,6 @@ const FooterWrapper = styled.div`
   .copyright {
     text-align: center;
   }
-
   @media screen and (max-width: 640px) {
     height: 100%;
     padding: 3rem;
