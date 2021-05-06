@@ -48,7 +48,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 6rem 0;
+  padding: 4rem 0;
 `
 export const Button = styled.a`
   cursor: pointer;
