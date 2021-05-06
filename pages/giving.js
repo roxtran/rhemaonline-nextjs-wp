@@ -1,18 +1,14 @@
 import HeadLine from '../components/common/HeadLine'
 import styled from 'styled-components'
 import { Container } from '../styles/GlobalStyle'
-import Meta from '../components/common/seo-meta'
 
 export default function Giving() {
   return (
     <>
-      <Meta
-        title='Giving - Rhema - Changing & Affecting Lives!'
-        desc='Welcome to Rhema Christian Ministries, a vibrant Spirit-filled church community designed to connect people to Jesus and to each other through authentic relationships.'
-        ogImage='/img/og/home.jpg'
-        canonical=''
+      <HeadLine
+        imgUrl='/img/giving-img.jpg'
+        title='Make A Difference'
       />
-      <HeadLine imgUrl='/img/giving-img.jpg' title='Make A Difference' />
       <GivingContainer>
         <div className='content-wrapper'>
           <div id='thank'>

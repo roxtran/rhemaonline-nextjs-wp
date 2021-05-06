@@ -2,17 +2,10 @@ import HeadLine from '../../components/common/HeadLine'
 import styled from 'styled-components'
 import { Container } from '../../styles/GlobalStyle'
 import ReactPlayer from 'react-player'
-import Meta from '../../components/common/seo-meta'
 
 const youth = () => {
   return (
     <>
-      <Meta
-        title='Youth Ministry - Rhema - Changing & Affecting Lives!'
-        desc='Welcome to Rhema Christian Ministries, a vibrant Spirit-filled church community designed to connect people to Jesus and to each other through authentic relationships.'
-        ogImage='/img/og/home.jpg'
-        canonical=''
-      />
       <HeadLine imgUrl='/img/youth-img.jpg' title='Plugged In Youth' />
       <YouthContainer>
         <div className='wrapper'>

@@ -3,22 +3,11 @@ import styled from 'styled-components'
 import { WomenContainer } from './women'
 import Image from 'next/image'
 import { Button } from '../../styles/GlobalStyle'
-import Meta from '../../components/common/seo-meta'
 
 const marriage = () => {
   return (
     <>
-      <Meta
-        title="Marriage's Ministry - Rhema - Changing & Affecting Lives!"
-        desc='Welcome to Rhema Christian Ministries, a vibrant Spirit-filled church community designed to connect people to Jesus and to each other through authentic relationships.'
-        ogImage='/img/og/home.jpg'
-        canonical=''
-      />
-      <HeadLine
-        imgUrl='/img/marriage-img.jpg'
-        title="Marriage's Ministry"
-        blur='blur(4px)'
-      />
+      <HeadLine imgUrl='/img/marriage-img.jpg' title="Marriage's Ministry" blur='blur(4px)' />
       <MarriageContainer>
         <div className='wrapper'>
           <div className='content-wrapper'>

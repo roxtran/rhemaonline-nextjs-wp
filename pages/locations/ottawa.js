@@ -2,17 +2,10 @@ import styled from 'styled-components'
 import Video from '../../components/common/Video'
 import Image from 'next/image'
 import { Container } from '../../styles/GlobalStyle'
-import Meta from '../../components/common/seo-meta'
 
 export default function Ottawa() {
   return (
     <>
-      <Meta
-        title='Ottawa Location - Rhema - Changing & Affecting Lives!'
-        desc='Welcome to Rhema Christian Ministries, a vibrant Spirit-filled church community designed to connect people to Jesus and to each other through authentic relationships.'
-        ogImage='/img/og/home.jpg'
-        canonical=''
-      />
       <VideoWrapper>
         <Video src='/video/Rhema-Toronto.mp4' width='100%' height='75vh' />
       </VideoWrapper>
