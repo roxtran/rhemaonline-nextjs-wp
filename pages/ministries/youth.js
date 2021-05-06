@@ -22,7 +22,11 @@ const youth = () => {
               Fellowship is also tasked with developing and executing programs
               that ensure that youth are spiritually and educationally
               empowered, building healthy relationships, and engaging in
-              wholesome activities.{' '}
+              wholesome activities.
+            </p>
+            <p>
+              <b>Contact Us: </b>
+              <a href='mailto:wecare@rhemaonline.ca'>wecare@rhemaonline.ca</a>
             </p>
           </div>
           <div className='video-wrapper'>
@@ -31,7 +35,6 @@ const youth = () => {
               height='100%'
               url='https://fb.watch/5i-27tUbZC/'
             />
-            <p>Contact Us: wecare@rhemaonline.ca</p>
           </div>
         </div>
       </YouthContainer>
@@ -52,7 +55,7 @@ const YouthContainer = styled(Container)`
     width: 550px;
     span {
       color: var(--blue);
-      font-size: 2.5rem;
+      font-size: 2rem;
       text-align: center;
       font-style: italic;
     }
@@ -66,23 +69,13 @@ const YouthContainer = styled(Container)`
     align-items: center;
   }
   p {
-    margin-top: 1.5rem;
+    margin: 1.5rem 0;
   }
   @media screen and (max-width: 1024px) {
     flex-flow: column;
     .content-wrapper,
     .video-wrapper {
       width: 100%;
-    }
-    .content-wrapper {
-      margin-bottom: 2rem;
-    }
-  }
-  @media screen and (max-width: 640px) {
-    .content-wrapper {
-      span {
-        font-size: 2rem;
-      }
     }
   }
 `
