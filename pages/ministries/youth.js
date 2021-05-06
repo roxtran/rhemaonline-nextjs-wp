@@ -44,7 +44,7 @@ const youth = () => {
 
 const YouthContainer = styled(Container)`
   .wrapper {
-    width: 1100px;
+    width: 100%;
     max-width: 90vw;
     display: flex;
     flex-flow: row wrap;
@@ -52,7 +52,7 @@ const YouthContainer = styled(Container)`
     align-items: center;
   }
   .content-wrapper {
-    width: 550px;
+    width: 50%;
     span {
       color: var(--blue);
       font-size: 2rem;
@@ -61,7 +61,7 @@ const YouthContainer = styled(Container)`
     }
   }
   .video-wrapper {
-    width: 500px;
+    width: 47%;
     height: 100%;
     display: flex;
     flex-direction: column;
