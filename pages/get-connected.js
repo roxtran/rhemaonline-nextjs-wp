@@ -90,7 +90,7 @@ const GrowContainer = styled(Container)`
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 800px;
+      width: 50%;
       max-width: 90vw;
       p {
         margin-bottom: 1rem;
