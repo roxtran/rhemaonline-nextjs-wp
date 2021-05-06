@@ -32,6 +32,44 @@ const women = () => {
               authentic relationships and find rest, redemption and renewal in
               Christ.
             </p>
+            <div className='icons'>
+              <a href='mailto:wecare@rhemaonline.ca'>
+                <div className='icon'>
+                  <Image
+                    src='/img/email-icon-blue.jpg'
+                    width={50}
+                    height={50}
+                  />
+                </div>
+              </a>
+              <a href='mailto:elu@rhemaonline.ca'>
+                <div className='icon'>
+                  <Image
+                    src='/img/email-icon-blue.jpg'
+                    width={50}
+                    height={50}
+                  />
+                </div>
+              </a>
+              <a href='https://twitter.com/ELUToronto' target='_blank'>
+                <div className='icon'>
+                  <Image
+                    src='/img/twitter-icon-blue.jpg'
+                    width={50}
+                    height={50}
+                  />
+                </div>
+              </a>
+              <a href='https://twitter.com/eluottawa?lang=en' target='_blank'>
+                <div className='icon'>
+                  <Image
+                    src='/img/twitter-icon-blue.jpg'
+                    width={50}
+                    height={50}
+                  />
+                </div>
+              </a>
+            </div>
           </div>
           <div className='right-wrapper'>
             <div className='img-wrapper'>
@@ -47,25 +85,34 @@ const women = () => {
 const WomenContainer = styled(Container)`
   .wrapper {
     width: 100%;
-    /* width: 1100px; */
     max-width: 90vw;
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
   }
   .content-wrapper {
-    /* width: 550px; */
-    flex: 1;
+    width: 50%;
     span {
       color: var(--blue);
-      font-size: 2.5rem;
+      font-size: 2rem;
       text-align: center;
       font-style: italic;
     }
+    .icons {
+      display: flex;
+      margin-bottom: 2rem;
+    }
+    .icon {
+      margin: 0.5rem;
+      &:hover {
+        filter: brightness(1.3);
+        transform: scale(1.1);
+      }
+    }
   }
   .right-wrapper {
-    flex: 1;
+    width: 47%;
     margin-left: 2rem;
   }
   .img-wrapper {
@@ -77,20 +124,15 @@ const WomenContainer = styled(Container)`
     margin: 1.5rem 0;
   }
   @media screen and (max-width: 1024px) {
-    flex-flow: column;
-    .content-wrapper,
-    .video-wrapper {
+    .wrapper {
+      flex-direction: column;
+    }
+    .content-wrapper {
       width: 100%;
     }
-    .content-wrapper {
-      margin-bottom: 2rem;
-    }
-  }
-  @media screen and (max-width: 640px) {
-    .content-wrapper {
-      span {
-        font-size: 2rem;
-      }
+    .right-wrapper {
+      width: 100%;
+      margin-left: 0;
     }
   }
 `
