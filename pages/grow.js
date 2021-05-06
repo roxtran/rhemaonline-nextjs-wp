@@ -82,9 +82,6 @@ const GrowContainer = styled(Container)`
     border-radius: 5px;
     overflow: hidden;
     flex: 1;
-    /* &:hover {
-      box-shadow: 0 0 20px 0 var(--mint);
-    } */
   }
   .content-wrapper {
     flex: 1;
