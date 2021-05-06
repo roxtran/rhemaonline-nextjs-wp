@@ -82,7 +82,7 @@ const women = () => {
   )
 }
 
-const WomenContainer = styled(Container)`
+export const WomenContainer = styled(Container)`
   .wrapper {
     width: 100%;
     max-width: 90vw;
