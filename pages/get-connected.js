@@ -15,7 +15,7 @@ const getConnected = () => {
         btnLink='https://rhema.ccbchurch.com/goto/forms/15/responses/new'
         height='550px'
       />
-      <GrowContainer>
+      <ConnectedContainer>
         <div className='items'>
           {getConnectedData.map((item) => (
             <div className='item' key={item.title}>
@@ -37,12 +37,12 @@ const getConnected = () => {
             </div>
           ))}
         </div>
-      </GrowContainer>
+      </ConnectedContainer>
     </>
   )
 }
 
-const GrowContainer = styled(Container)`
+const ConnectedContainer = styled(Container)`
   padding: 0;
   .items {
     width: 100%;
