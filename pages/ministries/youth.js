@@ -67,6 +67,8 @@ const YouthContainer = styled(Container)`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
   }
   p {
     margin: 1.5rem 0;
