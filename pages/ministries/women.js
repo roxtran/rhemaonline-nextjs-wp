@@ -119,6 +119,8 @@ const WomenContainer = styled(Container)`
     position: relative;
     width: 100%;
     height: 400px;
+    border-radius: 5px;
+    overflow: hidden;
   }
   p {
     margin: 1.5rem 0;
