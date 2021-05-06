@@ -59,6 +59,7 @@ const YouthContainer = styled(Container)`
   }
   .video-wrapper {
     width: 500px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
