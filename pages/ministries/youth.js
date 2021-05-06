@@ -1,6 +1,7 @@
 import HeadLine from '../../components/common/HeadLine'
 import styled from 'styled-components'
 import { Container } from '../../styles/GlobalStyle'
+import ReactPlayer from 'react-player'
 
 const youth = () => {
   return (
@@ -24,7 +25,14 @@ const youth = () => {
               wholesome activities.{' '}
             </p>
           </div>
-          <div className='video-wrapper'></div>
+          <div className='video-wrapper'>
+            <ReactPlayer
+              width='100%'
+              height='100%'
+              url='https://fb.watch/5i-27tUbZC/'
+            />
+            <p>Contact Us: wecare@rhemaonline.ca</p>
+          </div>
         </div>
       </YouthContainer>
     </>
@@ -34,7 +42,47 @@ const youth = () => {
 const YouthContainer = styled(Container)`
   .wrapper {
     width: 1100px;
+    max-width: 90vw;
     display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .content-wrapper {
+    width: 550px;
+    span {
+      color: var(--blue);
+      font-size: 2.5rem;
+      text-align: center;
+      font-style: italic;
+    }
+  }
+  .video-wrapper {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  p {
+    margin-top: 1.5rem;
+  }
+  @media screen and (max-width: 1024px) {
+    flex-flow: column;
+    .content-wrapper,
+    .video-wrapper {
+      width: 100%;
+    }
+    .content-wrapper {
+      margin-bottom: 2rem;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    .content-wrapper {
+      span {
+        font-size: 2rem;
+      }
+    }
   }
 `
 
