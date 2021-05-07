@@ -3,10 +3,17 @@ import HeadLine from '../components/common/HeadLine'
 import Image from 'next/image'
 import { Container } from '../styles/GlobalStyle'
 import services from '../data/services'
+import Meta from '../components/common/seo-meta'
 
 export default function Connect() {
   return (
     <>
+      <Meta
+        title='Connect - Rhema - Changing & Affecting Lives!'
+        desc='Welcome to Rhema Christian Ministries, a vibrant Spirit-filled church community designed to connect people to Jesus and to each other through authentic relationships.'
+        ogImage='/img/og/home.jpg'
+        canonical=''
+      />
       <HeadLine
         imgUrl='/img/connect-img.jpg'
         title='We Care'

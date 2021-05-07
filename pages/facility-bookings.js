@@ -1,11 +1,17 @@
 import HeadLine from '../components/common/HeadLine'
 import styled from 'styled-components'
 import { Container, Button } from '../styles/GlobalStyle'
-import Image from 'next/image'
+import Meta from '../components/common/seo-meta'
 
 export default function facilityBookings() {
   return (
     <>
+      <Meta
+        title='Facility Bookings - Rhema - Changing & Affecting Lives!'
+        desc='Welcome to Rhema Christian Ministries, a vibrant Spirit-filled church community designed to connect people to Jesus and to each other through authentic relationships.'
+        ogImage='/img/og/home.jpg'
+        canonical=''
+      />
       <HeadLine
         imgUrl='/img/facility-bookings-img.jpg'
         title='Facility Bookings'
@@ -107,7 +113,6 @@ const BookingsContainer = styled(Container)`
     .text-wrapper {
       margin-top: 0.5rem;
     }
-    
   }
   @media screen and (max-width: 1024px) {
     .content-wrapper {

@@ -2,16 +2,23 @@ import styled from 'styled-components'
 import Video from '../../components/common/Video'
 import Image from 'next/image'
 import { Container } from '../../styles/GlobalStyle'
+import Meta from '../../components/common/seo-meta'
 
 export default function Ottawa() {
   return (
     <>
+      <Meta
+        title='Ottawa Location - Rhema - Changing & Affecting Lives!'
+        desc='Welcome to Rhema Christian Ministries, a vibrant Spirit-filled church community designed to connect people to Jesus and to each other through authentic relationships.'
+        ogImage='/img/og/home.jpg'
+        canonical=''
+      />
       <VideoWrapper>
         <Video src='/video/Rhema-Toronto.mp4' width='100%' height='75vh' />
       </VideoWrapper>
       <LocationContainer>
         <div className='content-wrapper'>
-          <h1>Toronto Campus</h1>
+          <h1>Ottawa Campus</h1>
           <div className='line'></div>
           <div className='icon-info'>
             <div className='icon-group'>
@@ -20,7 +27,7 @@ export default function Ottawa() {
               </div>
               <div className='text'>
                 <h4>Phone</h4>
-                <p>(416) 496-1794</p>
+                <p>(613) 321-1781</p>
               </div>
             </div>
             <div className='icon-group'>
@@ -29,7 +36,7 @@ export default function Ottawa() {
               </div>
               <div className='text'>
                 <h4>Fax</h4>
-                <p>(416) 496-1795</p>
+                <p>(613) 321-2910</p>
               </div>
             </div>
             <div className='icon-group'>
@@ -57,20 +64,19 @@ export default function Ottawa() {
               <div className='text-border'>
                 <h2>Our Location</h2>
                 <p>
-                  <span>Worship Service:</span> Sundays – 8:30am & 11am
+                  <span>Worship Service:</span> Sundays – 11:00am
                 </p>
                 <p>
-                  <span>Bible Study:</span> Starting Wed. March 18th, 2020 until
-                  further notice, our weekly Bible Study will be a one hour
-                  gathering of intense prayer for community and national
-                  healing. Service time will be 7:00pm – 8:00pm
+                  <span>Bible Study:</span> Wednesday 7pm
                 </p>
-                <span>49-40 Carl Hall Road, Toronto, ON, M3K 2C1</span>
+                <span>
+                  RA Center: <br /> 2451 Riverside Dr., Ottawa, ON K1H 7X7
+                </span>
               </div>
             </div>
             <div className='map-wrapper'>
               <iframe
-                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.2156851747036!2d-79.48001688449921!3d43.74761767911818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b31f3db445a91%3A0xe4bdbb1f2de0ba9b!2s40%20Carl%20Hall%20Rd%20%2349%2C%20North%20York%2C%20ON%20M3K%202C1!5e0!3m2!1sen!2sca!4v1619679421572!5m2!1sen!2sca'
+                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2802.3677853442805!2d-75.68654018444528!3d45.381751279100115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0609e36febf7%3A0x840991e9373515c1!2sRA%20Centre%2C%202451%20Riverside%20Dr.%2C%20Ottawa%2C%20ON%20K1H%207X7!5e0!3m2!1sen!2sca!4v1620364823544!5m2!1sen!2sca'
                 width='1000'
                 height='420'
                 style={{ border: 0 }}

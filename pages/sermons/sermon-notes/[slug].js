@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 import HeadLine from '../../../components/common/HeadLine'
+import Meta from '../../../components/common/seo-meta'
 import { Button } from '../../../styles/GlobalStyle'
 import { formatDate } from '../../../utils/formatter'
 
@@ -10,6 +11,12 @@ export default function SermonNote(data) {
   // console.log(note.categories.nodes.name)
   return (
     <>
+      <Meta
+        title={note.title + ' - Rhema - Changing & Affecting Lives!'}
+        desc='Welcome to Rhema Christian Ministries, a vibrant Spirit-filled church community designed to connect people to Jesus and to each other through authentic relationships.'
+        ogImage='/img/og/home.jpg'
+        canonical=''
+      />
       <HeadLine
         imgUrl={note.featuredImage.node.sourceUrl}
         title={note.title}

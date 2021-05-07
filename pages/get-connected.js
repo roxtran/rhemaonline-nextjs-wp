@@ -1,12 +1,19 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 import HeadLine from '../components/common/HeadLine'
+import Meta from '../components/common/seo-meta'
 import { default as getConnectedData } from '../data/get-connected'
 import { Button, Container } from '../styles/GlobalStyle'
 
 const getConnected = () => {
   return (
     <>
+      <Meta
+        title='Get Connected - Rhema - Changing & Affecting Lives!'
+        desc='Welcome to Rhema Christian Ministries, a vibrant Spirit-filled church community designed to connect people to Jesus and to each other through authentic relationships.'
+        ogImage='/img/og/home.jpg'
+        canonical=''
+      />
       <HeadLine
         imgUrl='/img/get-connected-img.jpg'
         title='Get Connected'
@@ -57,21 +64,19 @@ const ConnectedContainer = styled(Container)`
   }
   .img-wrapper {
     position: relative;
-    width: 100%;
+    width: 50%;
     min-width: 300px;
     height: 600px;
     border-radius: 5px;
     overflow: hidden;
-    flex: 1;
   }
   .content-wrapper {
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 4rem 0;
-    width: 100%;
+    width: 50%;
     h3 {
       font-size: 2.5rem;
       padding: 1rem 2rem;
@@ -83,7 +88,7 @@ const ConnectedContainer = styled(Container)`
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 50%;
+      width: 100%;
       max-width: 90vw;
       p {
         margin-bottom: 1rem;
@@ -94,16 +99,17 @@ const ConnectedContainer = styled(Container)`
     }
   }
   @media screen and (max-width: 768px) {
+    .item {
+      flex-direction: column;
+    }
     .img-wrapper {
       height: 400px;
+      width: 100%;
     }
     .content-wrapper {
+      width: 100%;
       .text {
         padding: 0;
-      }
-      h3 {
-        font-size: 1.75rem;
-        margin-bottom: 0;
       }
     }
   }
