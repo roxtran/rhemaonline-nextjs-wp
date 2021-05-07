@@ -40,21 +40,24 @@ const women = () => {
               Christ.
             </p>
             <div className='icons'>
-              <a href='mailto:wecare@rhemaonline.ca'>
+              <a
+                title='wecare@rhemaonline.ca'
+                href='mailto:wecare@rhemaonline.ca'
+              >
                 <div className='icon'>
                   <Image
                     src='/img/email-icon-blue.jpg'
-                    width={50}
-                    height={50}
+                    width={42}
+                    height={42}
                   />
                 </div>
               </a>
-              <a href='mailto:elu@rhemaonline.ca'>
+              <a title='elu@rhemaonline.ca' href='mailto:elu@rhemaonline.ca'>
                 <div className='icon'>
                   <Image
                     src='/img/email-icon-blue.jpg'
-                    width={50}
-                    height={50}
+                    width={42}
+                    height={42}
                   />
                 </div>
               </a>
@@ -66,8 +69,8 @@ const women = () => {
                 <div className='icon'>
                   <Image
                     src='/img/twitter-icon-blue.jpg'
-                    width={50}
-                    height={50}
+                    width={42}
+                    height={42}
                   />
                 </div>
               </a>
@@ -79,8 +82,8 @@ const women = () => {
                 <div className='icon'>
                   <Image
                     src='/img/twitter-icon-blue.jpg'
-                    width={50}
-                    height={50}
+                    width={42}
+                    height={42}
                   />
                 </div>
               </a>
@@ -121,8 +124,7 @@ export const WomenContainer = styled(Container)`
     .icon {
       margin: 0.5rem;
       &:hover {
-        filter: brightness(1.3);
-        transform: scale(1.1);
+        transform: translateY(-5px);
       }
     }
   }
