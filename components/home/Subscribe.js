@@ -27,7 +27,6 @@ const SubscribeWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 0;
 
   h2 {
     font-size: 3rem;
