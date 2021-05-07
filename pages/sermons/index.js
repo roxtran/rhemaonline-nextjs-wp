@@ -23,7 +23,7 @@ export default function Home({ notes }) {
   )
 }
 
-const SermonsContainer = styled.div`
+export const SermonsContainer = styled.div`
   margin: 0 auto;
   padding: 0 2%;
   max-width: 1100px;
@@ -50,11 +50,6 @@ export async function getStaticProps() {
             slug
             date
             excerpt
-            categories {
-              nodes {
-                name
-              }
-            }
             featuredImage {
               node {
                 sourceUrl

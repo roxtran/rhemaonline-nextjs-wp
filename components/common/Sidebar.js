@@ -12,21 +12,24 @@ export default function Sidebar({ title, list }) {
   }
   return (
     <SidebarWrapper>
-      <h3>{title}</h3>
-      <ul>
-        {list.nodes.map((item) => (
-          <li key={item.slug}>
-            <Link href={`/sermons/sermon-notes/${item.slug}`}>
-              <a>{item.title}</a>
-            </Link>
-            <p>{formatDate(item.date)}</p>
-          </li>
-        ))}
-      </ul>
+      <div className='wrapper'>
+        <h3>{title}</h3>
+        <ul>
+          {list.nodes.map((item) => (
+            <li key={item.slug}>
+              <Link href={`/sermons/sermon-notes/${item.slug}`}>
+                <a>{item.title}</a>
+              </Link>
+              <p>{formatDate(item.date)}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
     </SidebarWrapper>
   )
 }
 const SidebarWrapper = styled.div`
+  position: relative;
   width: 300px;
   margin: 5rem 0;
   border-top: 4px dashed var(--mint);
