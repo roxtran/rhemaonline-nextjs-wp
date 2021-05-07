@@ -1,3 +1,5 @@
+import paths from '../paths'
+
 export default [
   {
     id: 'prayer-requests',
@@ -60,7 +62,7 @@ export default [
     desc:
       'At Rhema Christian Ministries (RCM), we believe that sickness is not the portion of any believer because Jesus Christ bore our sicknesses and diseases and has paid the price for them. With that understanding, we are encouraged to approach the throne room of grace and mercy to find help in the time of need. Whether in the hospital or at home, our ministerial services team of elders and intercessors, are ready and willing to go when they are called upon.',
     imgUrl: '/img/connect/hospital-visitation-services.jpg',
-    link: 'https://rhemaonline.ca/bookings',
+    link: `${paths.facilityBookings}`,
     linkText: 'Request Hospital & Visitation Services'
   },
   {
@@ -78,7 +80,7 @@ export default [
     desc:
       'With a goal to change and affect lives by ensuring that no family goes without food, the Rhema Foodbank is a food bank service assisting our community by supplementing the grocery needs of many families on a weekly basis. As well, during the holiday seasons, we offer pre-packaged grocery bags to feed families and spread the joy of the holiday season.',
     imgUrl: '/img/connect/foodbank.jpg',
-    link: 'https://rhemaonline.ca/bookings',
+    link: `${paths.foodbank}`,
     linkText: 'Learn More'
   }
 ]
