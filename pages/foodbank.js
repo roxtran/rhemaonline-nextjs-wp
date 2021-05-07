@@ -28,7 +28,7 @@ const foodbank = () => {
             requires. We are changing and affecting lives by ensuring that no
             family is hungry. Matt 25:34-36
           </p>
-          <Button>Make A Donation</Button>
+          <Button href='/giving'>Make A Donation</Button>
         </div>
       </FoodbankContainer>
     </>
