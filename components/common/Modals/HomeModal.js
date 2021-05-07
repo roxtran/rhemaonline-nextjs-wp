@@ -220,6 +220,9 @@ export const ModalContainer = styled.div`
       top: 0.1rem;
       right: 0.25rem;
       font-size: 32px;
+      &:hover {
+        transform: scale(1.2);
+      }
     }
     h3 {
       color: var(--blue);
