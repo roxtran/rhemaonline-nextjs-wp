@@ -119,7 +119,7 @@ export default function Footer() {
           </div>
         </div>
         <div className='icons'>
-          <a
+          <a title='Bible'
             onClick={() => {
               setOpenBible(true)
             }}
@@ -128,40 +128,40 @@ export default function Footer() {
               <Image src='/img/bible-icon.webp' width={30} height={30} />
             </div>
           </a>
-          <a href='https://rhema.ccbchurch.com/goto/login/' target='_blank'>
+          <a title='Member Login' href='https://rhema.ccbchurch.com/goto/login/' target='_blank'>
             <div className='icon'>
               <Image src='/img/groups-icon.webp' width={30} height={30} />
             </div>
           </a>
-          <a
-            href='https://tithe.ly/give_new/www/#/tithely/give-one-time/645887?kiosk=1'
+          <a title='Giving'
+            href={paths.giving}
             target='_blank'
           >
             <div className='icon'>
               <Image src='/img/giving-icon.webp' width={35} height={35} />
             </div>
           </a>
-          <a href={paths.instagramAccount} target='_blank'>
+          <a title='Instagram' href={paths.instagramAccount} target='_blank'>
             <div className='icon'>
               <Image src='/img/instagram-icon.png' width={35} height={35} />
             </div>
           </a>
-          <a href={paths.facebookPage} target='_blank'>
+          <a title='Facebook' href={paths.facebookPage} target='_blank'>
             <div className='icon'>
               <Image src='/img/facebook-icon.webp' width={30} height={30} />
             </div>
           </a>
-          <a href={paths.twitterAccount} target='_blank'>
+          <a title='Twitter' href={paths.twitterAccount} target='_blank'>
             <div className='icon'>
               <Image src='/img/twitter-icon.webp' width={35} height={35} />
             </div>
           </a>
-          <a href={paths.youtubeChannel} target='_blank'>
+          <a title='YouTube' href={paths.youtubeChannel} target='_blank'>
             <div className='icon'>
               <Image src='/img/youtube-icon.webp' width={35} height={35} />
             </div>
           </a>
-          <a href={paths.office365Site} target='_blank'>
+          <a title='Office 365' href={paths.office365Site} target='_blank'>
             <div className='icon'>
               <Image src='/img/office-icon.webp' width={35} height={35} />
             </div>

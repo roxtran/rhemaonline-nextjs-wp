@@ -58,7 +58,11 @@ const women = () => {
                   />
                 </div>
               </a>
-              <a href='https://twitter.com/ELUToronto' target='_blank'>
+              <a
+                title='Toronto'
+                href='https://twitter.com/ELUToronto'
+                target='_blank'
+              >
                 <div className='icon'>
                   <Image
                     src='/img/twitter-icon-blue.jpg'
@@ -67,7 +71,11 @@ const women = () => {
                   />
                 </div>
               </a>
-              <a href='https://twitter.com/eluottawa?lang=en' target='_blank'>
+              <a
+                title='Ottawa'
+                href='https://twitter.com/eluottawa?lang=en'
+                target='_blank'
+              >
                 <div className='icon'>
                   <Image
                     src='/img/twitter-icon-blue.jpg'
