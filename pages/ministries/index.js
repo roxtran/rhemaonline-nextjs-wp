@@ -21,7 +21,7 @@ const ministries = () => {
       />
       <MinistriesContainer>
         <div className='desc'>
-          <h2>The Family Ministies</h2>
+          <h2>The Family Ministries</h2>
           <p>
             At Rhema family is the foundation upon which all of life is built.
             As a family oriented church we place great value on the individual
