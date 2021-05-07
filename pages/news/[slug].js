@@ -3,6 +3,7 @@ import { FEEDS, getFeed } from '../../lib/rss'
 import styled from 'styled-components'
 
 export default function Feed({ feed, items }) {
+  console.log()
   return (
     <>
       <HeadLine imgUrl='/img/news-img.jpg' title={feed.title} />

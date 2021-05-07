@@ -4,8 +4,9 @@ import HeadLine from '../../components/common/HeadLine'
 import { FEEDS, getFeed } from '../../lib/rss'
 import { Container } from '../../styles/GlobalStyle'
 import Meta from '../../components/common/seo-meta'
+import { formatDate } from '../../utils/formatter'
 
-const feeds = () => {
+const news = ({ biblegatewayItems, studiesforlifeItems }) => {
   return (
     <>
       <Meta
@@ -16,16 +17,89 @@ const feeds = () => {
       />
       <HeadLine imgUrl='/img/news-img.jpg' title='News' />
       <NewsContainer>
-        {FEEDS.map((feed) => (
-          <Link key={feed.slug} href={`/news/${feed.slug}`}>
-            <a>{feed.title}</a>
-          </Link>
-        ))}
+        <div className='content-wrapper'>
+          <div className='list'>
+            <h3>Bible Gateway</h3>
+            <ul>
+              {biblegatewayItems.map((item) => (
+                <li>
+                  <a
+                    key={item.link}
+                    href={item.link}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    {item.title}
+                  </a>
+                  <p>{formatDate(item.isoDate)}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className='list'>
+            <h3>Bible Studies For Life</h3>
+            <ul>
+              {studiesforlifeItems.map((item) => (
+                <li>
+                  <a
+                    key={item.link}
+                    href={item.link}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    {item.title}
+                  </a>
+                  <p>{formatDate(item.isoDate)}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </NewsContainer>
     </>
   )
 }
 
-const NewsContainer = styled(Container)``
+const NewsContainer = styled(Container)`
+  .content-wrapper {
+    display: flex;
+    width: 1100px;
+    max-width: 90vw;
+  }
+  .list {
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+  }
+  h3 {
+    margin-bottom: 1rem;
+  }
+  ul {
+    /* list-style: none; */
+  }
+  li {
+    margin: 1rem 0;
+  }
+  @media screen and (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column;
+    }
+  }
+`
 
-export default feeds
+export default news
+
+export async function getStaticProps() {
+  const biblegatewayUrl = 'https://biblegateway.com/blog/feed'
+  const studiesforlifeUrl = 'https://biblestudiesforlife.com/feed'
+
+  const biblegatewayFeed = await getFeed(biblegatewayUrl)
+  const studiesforlifeFeed = await getFeed(studiesforlifeUrl)
+
+  return {
+    props: {
+      biblegatewayItems: biblegatewayFeed.items,
+      studiesforlifeItems: studiesforlifeFeed.items
+    },
+    revalidate: 1
+  }
+}
