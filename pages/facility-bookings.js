@@ -107,6 +107,7 @@ const BookingsContainer = styled(Container)`
     .text-wrapper {
       margin-top: 0.5rem;
     }
+    
   }
   @media screen and (max-width: 1024px) {
     .content-wrapper {
@@ -117,9 +118,6 @@ const BookingsContainer = styled(Container)`
     }
   }
   @media screen and (max-width: 768px) {
-    .content-wrapper {
-      width: 100%;
-    }
     .btn-wrapper {
       padding: 2rem 0;
     }
