@@ -69,6 +69,9 @@ const MinistriesContainer = styled(Container)`
       margin-bottom: 1rem;
       color: var(--blue);
     }
+    p {
+      margin-bottom: 1rem;
+    }
   }
   .ministries {
     margin-top: 3.5rem;
