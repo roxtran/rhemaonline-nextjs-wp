@@ -57,19 +57,21 @@ const ConnectedContainer = styled(Container)`
   }
   .img-wrapper {
     position: relative;
-    width: 50%;
+    width: 100%;
     min-width: 300px;
     height: 600px;
     border-radius: 5px;
     overflow: hidden;
+    flex: 1;
   }
   .content-wrapper {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 4rem 0;
-    width: 50%;
+    width: 100%;
     h3 {
       font-size: 2.5rem;
       padding: 1rem 2rem;
@@ -81,7 +83,7 @@ const ConnectedContainer = styled(Container)`
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 100%;
+      width: 50%;
       max-width: 90vw;
       p {
         margin-bottom: 1rem;
@@ -92,15 +94,10 @@ const ConnectedContainer = styled(Container)`
     }
   }
   @media screen and (max-width: 768px) {
-    .item {
-      flex-direction: column;
-    }
     .img-wrapper {
       height: 400px;
-      width: 100%;
     }
     .content-wrapper {
-      width: 100%;
       .text {
         padding: 0;
       }
