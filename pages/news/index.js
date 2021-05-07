@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import HeadLine from '../../components/common/HeadLine'
 import { FEEDS, getFeed } from '../../lib/rss'
 import { Container } from '../../styles/GlobalStyle'
-import styled from 'styled-components'
 import Meta from '../../components/common/seo-meta'
 
 const feeds = () => {
