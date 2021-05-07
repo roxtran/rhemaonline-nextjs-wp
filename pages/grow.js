@@ -116,6 +116,7 @@ const GrowContainer = styled(Container)`
       p {
         max-width: 90vw;
         text-align: center;
+        margin-bottom: 0.5rem;
       }
       ul {
         max-width: 80vw;
