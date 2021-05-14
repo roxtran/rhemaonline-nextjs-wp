@@ -257,6 +257,9 @@ export const ModalContainer = styled.div`
     }
   }
   @media screen and (max-width: 640px) {
+    .modal-dialog {
+      height: 90vh;
+    }
     .modal-header {
       padding: 1.5rem;
     }
@@ -264,7 +267,8 @@ export const ModalContainer = styled.div`
       line-height: 1.2;
     }
     .modal-body {
-      height: 60vh;
+      padding: 1.5rem;
+      height: 75vh;
     }
     .vaccines {
       flex-direction: column;
