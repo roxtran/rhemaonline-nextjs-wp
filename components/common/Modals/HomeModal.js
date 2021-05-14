@@ -257,8 +257,7 @@ export const ModalContainer = styled.div`
     }
   }
   @media screen and (max-width: 640px) {
-    .modal-header,
-    .modal-body {
+    .modal-header {
       padding: 1.5rem;
     }
     h3 {
