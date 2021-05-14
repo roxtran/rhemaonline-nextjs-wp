@@ -10,7 +10,7 @@ export default function Menu({ open }) {
         <a onClick={() => setOpen(!open)}>Home</a>
       </NavLink>
       <div className='locations'>
-        <NavLink href='#' id='locations'>
+        <NavLink href='#'>
           <a onClick={() => setOpen(!open)}>Locations</a>
         </NavLink>
         <div className='locations-dropdown'>

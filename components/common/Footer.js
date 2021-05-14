@@ -119,7 +119,8 @@ export default function Footer() {
           </div>
         </div>
         <div className='icons'>
-          <a title='Bible'
+          <a
+            title='Bible'
             onClick={() => {
               setOpenBible(true)
             }}
@@ -128,15 +129,16 @@ export default function Footer() {
               <Image src='/img/bible-icon.webp' width={30} height={30} />
             </div>
           </a>
-          <a title='Member Login' href='https://rhema.ccbchurch.com/goto/login/' target='_blank'>
+          <a
+            title='Member Login'
+            href='https://rhema.ccbchurch.com/goto/login/'
+            target='_blank'
+          >
             <div className='icon'>
               <Image src='/img/groups-icon.webp' width={30} height={30} />
             </div>
           </a>
-          <a title='Giving'
-            href={paths.giving}
-            target='_blank'
-          >
+          <a title='Giving' href={paths.giving} target='_blank'>
             <div className='icon'>
               <Image src='/img/giving-icon.webp' width={35} height={35} />
             </div>
@@ -186,6 +188,7 @@ const FooterWrapper = styled.div`
   .links {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 3rem;
     h4 {
       margin-left: -20px;
       margin-bottom: 0.75rem;
@@ -193,12 +196,9 @@ const FooterWrapper = styled.div`
     li {
       margin: 0.25rem 0;
     }
-    @media screen and (max-width: 640px) {
-      flex-direction: column;
-    }
   }
   .icons {
-    margin: 3rem 0;
+    margin: 2rem 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -213,9 +213,14 @@ const FooterWrapper = styled.div`
   .copyright {
     text-align: center;
   }
+
   @media screen and (max-width: 640px) {
     height: 100%;
     padding: 3rem;
+    .links {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
     ul {
       margin-bottom: 2rem;
     }
