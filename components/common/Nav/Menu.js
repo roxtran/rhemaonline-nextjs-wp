@@ -68,6 +68,7 @@ const StyledMenu = styled.div`
     color: var(--textColor);
     margin: 0.9rem;
     font-weight: bold;
+    text-transform: capitalize;
     &[aria-current] {
       border-bottom: 4px solid var(--mint);
     }
@@ -77,12 +78,9 @@ const StyledMenu = styled.div`
   }
   .orange {
     cursor: pointer;
-    background: var(--blue);
     border-radius: 5px;
-    color: white;
     padding: 10px 25px;
     text-align: center;
-    text-transform: capitalize;
     margin-left: 1rem;
     letter-spacing: 1px;
     background: var(--orange);
