@@ -40,7 +40,7 @@ const StyledBurger = styled.a`
       transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     display: flex;
   }
 `

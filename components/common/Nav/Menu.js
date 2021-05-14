@@ -9,9 +9,19 @@ export default function Menu({ open }) {
       <NavLink href='/'>
         <a onClick={() => setOpen(!open)}>Home</a>
       </NavLink>
-      <NavLink href={paths.locations}>
-        <a onClick={() => setOpen(!open)}>Locations</a>
-      </NavLink>
+      <div className='locations'>
+        <NavLink href='#' id='locations'>
+          <a onClick={() => setOpen(!open)}>Locations</a>
+        </NavLink>
+        <div className='locations-dropdown'>
+          <NavLink href={paths.torontoLocation}>
+            <a onClick={() => setOpen(!open)}>Toronto</a>
+          </NavLink>
+          <NavLink href={paths.ottawaLocation}>
+            <a onClick={() => setOpen(!open)}>Ottawa</a>
+          </NavLink>
+        </div>
+      </div>
       <NavLink href={paths.connect}>
         <a onClick={() => setOpen(!open)}>Connect</a>
       </NavLink>
@@ -25,13 +35,35 @@ export default function Menu({ open }) {
         <a onClick={() => setOpen(!open)}>Events</a>
       </NavLink>
       <NavLink href={paths.giving}>
-        <Button className='orange'>Give</Button>
+        <a className='orange' onClick={() => setOpen(!open)}>
+          Give
+        </a>
       </NavLink>
     </StyledMenu>
   )
 }
 const StyledMenu = styled.div`
-  display: block;
+  .locations {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &:hover .locations-dropdown {
+      display: flex;
+    }
+    .locations-dropdown {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      background: var(--white);
+      top: 3rem;
+      left: 1rem;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+    }
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
   a {
     color: var(--textColor);
     margin: 0.9rem;
@@ -44,10 +76,20 @@ const StyledMenu = styled.div`
     }
   }
   .orange {
+    cursor: pointer;
+    background: var(--blue);
+    border-radius: 5px;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-transform: capitalize;
     margin-left: 1rem;
     letter-spacing: 1px;
+    background: var(--orange);
+    color: white;
     &:hover {
-      border-bottom: 0;
+      /* border-bottom: 0; */
+      background: var(--blue);
     }
   }
   @media screen and (max-width: 1024px) {
@@ -55,19 +97,24 @@ const StyledMenu = styled.div`
       margin: 0.6rem;
     }
   }
-  @media screen and (max-width: 768px) {
-    display: ${({ open }) => (open ? 'flex' : 'none')};
+  @media screen and (max-width: 900px) {
+    display: flex;
     flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
     position: fixed;
     top: 0;
     right: 0;
     background: var(--white);
-    width: 300px;
+    width: 250px;
     height: 100vh;
+    padding-left: 1rem;
     padding-top: 3.5rem;
     box-shadow: var(--shadow);
     transform-origin: 1px;
+    transition: all 0.3s ease-out;
     transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
+    opacity: ${({ open }) => (open ? 1 : 0)};
     a {
       padding: 1rem;
       &[aria-current] {
@@ -77,6 +124,7 @@ const StyledMenu = styled.div`
     }
     .orange {
       margin-top: 1rem;
+      width: 150px;
     }
   }
 `
