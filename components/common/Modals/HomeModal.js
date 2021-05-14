@@ -257,6 +257,13 @@ export const ModalContainer = styled.div`
     }
   }
   @media screen and (max-width: 640px) {
+    .modal-header,
+    .modal-body {
+      padding: 1.5rem;
+    }
+    h3 {
+      line-height: 1.2;
+    }
     .modal-body {
       height: 60vh;
     }
