@@ -18,7 +18,7 @@ export default function Leadership() {
         imgUrl='/img/leadership-img.jpg'
         title='Leadership'
         height='450px'
-        blur='blur(5px)'
+        // blur='blur(5px)'
       />
       <LeadershipContainer>
         <div className='content-wrapper'>

@@ -42,20 +42,20 @@ export default [
     //   }
     // }
   },
-  {
-    name: "Single's Ministry",
-    imgUrl: '/img/ministries/single.jpg',
-    btnText: 'Learn More',
-    btnLink: '/ministries/single'
-    // social: {
-    //   email: {
-    //     link: 'wecare@rhemaonline.ca'
-    //   },
-    //   twitter: {
-    //     link: 'https://twitter.com/ELUOttawa'
-    //   }
-    // }
-  },
+  // {
+  //   name: "Single's Ministry",
+  //   imgUrl: '/img/ministries/single.jpg',
+  //   btnText: 'Learn More',
+  //   btnLink: '/ministries/single'
+  //   // social: {
+  //   //   email: {
+  //   //     link: 'wecare@rhemaonline.ca'
+  //   //   },
+  //   //   twitter: {
+  //   //     link: 'https://twitter.com/ELUOttawa'
+  //   //   }
+  //   // }
+  // },
   {
     name: "Kid's Ministry",
     imgUrl: '/img/ministries/kid.jpg',
@@ -70,18 +70,18 @@ export default [
     //   }
     // }
   },
-  {
-    name: "Marriage's Ministry",
-    imgUrl: '/img/ministries/marriage.jpg',
-    btnText: 'Learn More',
-    btnLink: '/ministries/marriage'
-    // social: {
-    //   email: {
-    //     link: 'wecare@rhemaonline.ca'
-    //   },
-    //   twitter: {
-    //     link: 'https://twitter.com/ELUOttawa'
-    //   }
-    // }
-  }
+  // {
+  //   name: "Marriage's Ministry",
+  //   imgUrl: '/img/ministries/marriage.jpg',
+  //   btnText: 'Learn More',
+  //   btnLink: '/ministries/marriage'
+  //   // social: {
+  //   //   email: {
+  //   //     link: 'wecare@rhemaonline.ca'
+  //   //   },
+  //   //   twitter: {
+  //   //     link: 'https://twitter.com/ELUOttawa'
+  //   //   }
+  //   // }
+  // }
 ]

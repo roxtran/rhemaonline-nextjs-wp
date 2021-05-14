@@ -6,7 +6,7 @@ export default function NotesList({ notes }) {
   return (
     <ListWrapper>
       <h2>Sermon Notes</h2>
-      {notes.nodes.map((note) => (
+      {notes.nodes.slice(0, 2).map((note) => (
         <NoteDetail key={note.slug} note={note} />
       ))}
     </ListWrapper>

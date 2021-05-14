@@ -31,6 +31,17 @@ const men = () => {
               understanding of work-life balance, and providing opportunities
               for mentoring and nurturing the sons of the next generation.
             </p>
+            <div className='icons'>
+              <a title='men@rhemaonline.ca' href='mailto:men@rhemaonline.ca'>
+                <div className='icon'>
+                  <Image
+                    src='/img/email-icon-blue.jpg'
+                    width={42}
+                    height={42}
+                  />
+                </div>
+              </a>
+            </div>
           </div>
           <div className='right-wrapper'>
             <div className='img-wrapper'>

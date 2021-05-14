@@ -61,7 +61,7 @@ export default [
     name: 'Hospital & Visitation Services',
     desc:
       'At Rhema Christian Ministries (RCM), we believe that sickness is not the portion of any believer because Jesus Christ bore our sicknesses and diseases and has paid the price for them. With that understanding, we are encouraged to approach the throne room of grace and mercy to find help in the time of need. Whether in the hospital or at home, our ministerial services team of elders and intercessors, are ready and willing to go when they are called upon.',
-    imgUrl: '/img/connect/hospital-visitation-services.jpg',
+    imgUrl: '/img/connect/hospital.jpg',
     link: `${paths.facilityBookings}`,
     linkText: 'Request Hospital & Visitation Services'
   },

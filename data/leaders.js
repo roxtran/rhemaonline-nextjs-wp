@@ -12,8 +12,8 @@ export default [
     name: 'Charles Isiuwe'
   },
   {
-    imgUrl: '/img/leaders/Eriazel-Daniel.jpg',
-    name: 'Eriazel Daniel'
+    imgUrl: '/img/leaders/Daniel-Eriazel.jpg',
+    name: 'Daniel Eriazel'
   },
   {
     imgUrl: '/img/leaders/Guy-Kayembe.jpg',

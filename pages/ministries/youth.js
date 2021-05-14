@@ -1,4 +1,5 @@
 import HeadLine from '../../components/common/HeadLine'
+import Image from 'next/image'
 import styled from 'styled-components'
 import { Container } from '../../styles/GlobalStyle'
 import ReactPlayer from 'react-player'
@@ -31,10 +32,32 @@ const youth = () => {
               empowered, building healthy relationships, and engaging in
               wholesome activities.
             </p>
-            <p>
-              <b>Contact Us: </b>
-              <a href='mailto:wecare@rhemaonline.ca'>wecare@rhemaonline.ca</a>
-            </p>
+            <div className='icons'>
+              <a
+                title='wecare@rhemaonline.ca'
+                href='mailto:wecare@rhemaonline.ca'
+              >
+                <div className='icon'>
+                  <Image
+                    src='/img/email-icon-blue.jpg'
+                    width={42}
+                    height={42}
+                  />
+                </div>
+              </a>
+              <a
+                title='pluggedin@rhemaonline.ca'
+                href='mailto:pluggedin@rhemaonline.ca'
+              >
+                <div className='icon'>
+                  <Image
+                    src='/img/email-icon-blue.jpg'
+                    width={42}
+                    height={42}
+                  />
+                </div>
+              </a>
+            </div>
           </div>
           <div className='video-wrapper'>
             <ReactPlayer
@@ -65,6 +88,16 @@ const YouthContainer = styled(Container)`
       font-size: 2rem;
       text-align: center;
       font-style: italic;
+    }
+    .icons {
+      display: flex;
+      margin-bottom: 2rem;
+    }
+    .icon {
+      margin: 0.5rem;
+      &:hover {
+        transform: translateY(-5px);
+      }
     }
   }
   .video-wrapper {
