@@ -43,6 +43,21 @@ export default function Menu({ open }) {
   )
 }
 const StyledMenu = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    color: var(--textColor);
+    margin: 0.9rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    &[aria-current] {
+      border-bottom: 4px solid var(--mint);
+    }
+    &:hover {
+      color: var(--mint);
+    }
+  }
   .locations {
     display: flex;
     flex-direction: column;
@@ -59,21 +74,6 @@ const StyledMenu = styled.div`
       left: 1rem;
       border: 1px solid rgba(0, 0, 0, 0.2);
       border-radius: 5px;
-    }
-  }
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  a {
-    color: var(--textColor);
-    margin: 0.9rem;
-    font-weight: bold;
-    text-transform: capitalize;
-    &[aria-current] {
-      border-bottom: 4px solid var(--mint);
-    }
-    &:hover {
-      color: var(--mint);
     }
   }
   .orange {
