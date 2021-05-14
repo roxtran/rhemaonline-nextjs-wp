@@ -66,6 +66,7 @@ export async function getStaticProps() {
   return {
     props: {
       notes: json.data.sermonNotes
-    }
+    },
+    revalidate: 30
   }
 }
