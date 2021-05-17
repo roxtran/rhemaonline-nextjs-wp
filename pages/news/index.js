@@ -18,7 +18,7 @@ const news = ({ biblegatewayItems, studiesforlifeItems }) => {
       <HeadLine imgUrl='/img/news-img.jpg' title='News' />
       <NewsContainer>
         <div className='content-wrapper'>
-          <div className='list'>
+          <div className='news-list'>
             <h3>Bible Gateway</h3>
             <ul>
               {biblegatewayItems.map((item) => (
@@ -36,7 +36,7 @@ const news = ({ biblegatewayItems, studiesforlifeItems }) => {
               ))}
             </ul>
           </div>
-          <div className='list'>
+          <div className='news-list'>
             <h3>Bible Studies For Life</h3>
             <ul>
               {studiesforlifeItems.map((item) => (
@@ -66,14 +66,16 @@ const NewsContainer = styled(Container)`
     width: 1100px;
     max-width: 90vw;
   }
-  .list {
+  .news-list {
     padding: 0 2rem;
     margin-bottom: 2rem;
+    flex:1;
   }
   h3 {
     margin-bottom: 1rem;
   }
   ul {
+    margin-left: 1rem;
     /* list-style: none; */
   }
   li {
@@ -91,15 +93,18 @@ export default news
 export async function getStaticProps() {
   const biblegatewayUrl = 'https://biblegateway.com/blog/feed'
   const studiesforlifeUrl = 'https://biblestudiesforlife.com/feed'
+  const faithlifeUrl = 'http://feeds.feedburner.com/FaithlifeBlog'
 
   const biblegatewayFeed = await getFeed(biblegatewayUrl)
   const studiesforlifeFeed = await getFeed(studiesforlifeUrl)
+  const faithlifeFeed = await getFeed(faithlifeUrl)
 
   return {
     props: {
       biblegatewayItems: biblegatewayFeed.items,
-      studiesforlifeItems: studiesforlifeFeed.items
+      studiesforlifeItems: studiesforlifeFeed.items,
+      faithlifeItems: faithlifeFeed.items
     },
-    revalidate: 1
+    revalidate: 30
   }
 }

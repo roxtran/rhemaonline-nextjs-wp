@@ -25,7 +25,7 @@ const getConnected = () => {
       <ConnectedContainer>
         <div className='items'>
           {getConnectedData.map((item) => (
-            <div className='item' key={item.title}>
+            <div className='item' key={item.title} id={item.id}>
               <div className='img-wrapper'>
                 <Image src={item.imgUrl} layout='fill' objectFit='cover' />
               </div>
