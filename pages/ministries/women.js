@@ -17,10 +17,12 @@ const women = () => {
       <WomenContainer>
         <div className='wrapper'>
           <div className='content-wrapper'>
-            <span>
-              “The Empowered Ladies’ Union (ELU) exists to create opportunities
-              for women from all backgrounds to grow, pray and serve together.”
-            </span>
+            <p>
+              <q>
+                The Empowered Ladies’ Union (ELU) exists to create opportunities
+                for women from all backgrounds to grow, pray and serve together.
+              </q>
+            </p>
             <p>
               Empowered Ladies Union (ELU) is a social network of ladies
               stretching across Canada with a mandate to explore critical issues
@@ -111,10 +113,9 @@ export const WomenContainer = styled(Container)`
   }
   .content-wrapper {
     width: 50%;
-    span {
+    q {
       color: var(--blue);
       font-size: 2rem;
-      text-align: center;
       font-style: italic;
     }
     .icons {

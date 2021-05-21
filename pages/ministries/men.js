@@ -17,10 +17,12 @@ const men = () => {
       <MenContainer>
         <div className='wrapper'>
           <div className='content-wrapper'>
-            <span>
-              “Jesus is the source. All youth must be plugged into the source”.
+            <p>
+              <q>
+                Jesus is the source. All youth must be plugged into the source.
+              </q>{' '}
               ~ Plugged In Youth Adult Ministry
-            </span>
+            </p>
             <p>
               Men of Valor is a social network of men across Canada with a
               mandate to explore critical issues facing men of all ages in the

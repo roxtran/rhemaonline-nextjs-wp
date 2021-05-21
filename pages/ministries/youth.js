@@ -18,10 +18,12 @@ const youth = () => {
       <YouthContainer>
         <div className='wrapper'>
           <div className='content-wrapper'>
-            <span>
-              “Jesus is the source. All youth must be plugged into the source”.
+            <p>
+              <q>
+                Jesus is the source. All youth must be plugged into the source.
+              </q>{' '}
               ~ Plugged In Youth Adult Ministry
-            </span>
+            </p>
             <p>
               <b>Plugged In</b> is a social network of youth stretching across
               Canada with a mandate to explore critical issues facing youth and
@@ -83,7 +85,7 @@ const YouthContainer = styled(Container)`
   }
   .content-wrapper {
     width: 50%;
-    span {
+    q {
       color: var(--blue);
       font-size: 2rem;
       text-align: center;

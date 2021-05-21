@@ -60,7 +60,7 @@ const ministries = () => {
   )
 }
 
-const MinistriesContainer = styled(Container)`
+export const MinistriesContainer = styled(Container)`
   padding-bottom: 0;
   .desc {
     width: 1100px;

@@ -9,8 +9,7 @@ export default [
         link: 'pluggedin@rhemaonline.ca'
       },
       facebook: {
-        link:
-          'https://www.facebook.com/pluggedinrhema/?hc_ref=ARR9WiaK1EeVrN4C_ePFePh-K8xz0MTexZ8aouheOmofPGjIXxraO9SoxSP4lG0woy4&fref=nf&__tn__=kC-R'
+        link: 'https://www.facebook.com/pluggedinrhema/?hc_ref=ARR9WiaK1EeVrN4C_ePFePh-K8xz0MTexZ8aouheOmofPGjIXxraO9SoxSP4lG0woy4&fref=nf&__tn__=kC-R'
       }
     }
   },
@@ -29,7 +28,7 @@ export default [
     }
   },
   {
-    name: "Men's Ministries",
+    name: "Men's Ministry",
     imgUrl: '/img/ministries/men.jpg',
     btnText: 'Learn More',
     btnLink: '/ministries/men'
@@ -60,7 +59,7 @@ export default [
     name: "Kid's Ministry",
     imgUrl: '/img/ministries/kid.jpg',
     btnText: 'Learn More',
-    btnLink: '#'
+    btnLink: '/ministries/kid'
     // social: {
     //   email: {
     //     link: 'wecare@rhemaonline.ca'
@@ -69,7 +68,7 @@ export default [
     //     link: 'https://twitter.com/ELUOttawa'
     //   }
     // }
-  },
+  }
   // {
   //   name: "Marriage's Ministry",
   //   imgUrl: '/img/ministries/marriage.jpg',
