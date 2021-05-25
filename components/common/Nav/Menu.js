@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import NavLink from './NavLink'
 import paths from './../../../paths'
-import { Button } from '../../../styles/GlobalStyle'
 
 export default function Menu({ open }) {
   return (
