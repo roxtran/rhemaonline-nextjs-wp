@@ -131,9 +131,8 @@ export async function getStaticProps(context) {
 
   return {
     props: {
-      note: json.data.sermonNote || null,
-      notes: json.data.sermonNotes || null
-    }
+      note: json.data.sermonNote,
+      notes: json.data.sermonNotes
   }
 }
 
@@ -156,7 +155,7 @@ export async function getStaticPaths() {
   const json = await res.json()
   const notes = json.data.sermonNotes.nodes
 
-  const paths = notes.map((note) => ({ params: { slug: note.slug || null } }))
+  const paths = notes.map((note) => ({ params: { slug: note.slug } }))
 
   return { paths, fallback: false }
 }
