@@ -133,15 +133,15 @@ export async function getStaticProps(context) {
     props: {
       note: json.data.sermonNote,
       notes: json.data.sermonNotes
+    }
   }
-}
 
-export async function getStaticPaths() {
-  const res = await fetch(process.env.WP_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      query: `
+  export async function getStaticPaths() {
+    const res = await fetch(process.env.WP_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        query: `
       query SermonNotes {
         sermonNotes {
           nodes {
@@ -150,12 +150,13 @@ export async function getStaticPaths() {
         }
       }
       `
+      })
     })
-  })
-  const json = await res.json()
-  const notes = json.data.sermonNotes.nodes
+    const json = await res.json()
+    const notes = json.data.sermonNotes.nodes
 
-  const paths = notes.map((note) => ({ params: { slug: note.slug } }))
+    const paths = notes.map((note) => ({ params: { slug: note.slug } }))
 
-  return { paths, fallback: false }
+    return { paths, fallback: false }
+  }
 }
