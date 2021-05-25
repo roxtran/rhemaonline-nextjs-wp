@@ -17,7 +17,7 @@ export default function Sidebar({ title, list }) {
         <ul>
           {list.nodes.map((item) => (
             <li key={item.slug}>
-              <Link href={`/sermons/sermon-notes/${item.slug}`}>
+              <Link href={`/sermons/notes/${item.slug}`}>
                 <a>{item.title}</a>
               </Link>
               <p>{formatDate(item.date)}</p>

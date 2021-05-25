@@ -2,16 +2,12 @@ import Image from 'next/image'
 import styled from 'styled-components'
 import HeadLine from '../../../components/common/HeadLine'
 import Meta from '../../../components/common/seo-meta'
-import Sidebar from '../../../components/common/Sidebar'
+import Sidebar from '../../../components/sermons/Sidebar'
 import { Button } from '../../../styles/GlobalStyle'
 import { formatDate } from '../../../utils/formatter'
 import { SermonsContainer } from '../index'
 
-export default function SermonNote(data) {
-  const note = data.note
-  const notes = data.notes
-  // console.log(data)
-  // console.log(note.categories.nodes.name)
+export default function SermonNote({ note, notes }) {
   return (
     <>
       <Meta
@@ -103,11 +99,6 @@ export async function getStaticProps(context) {
         sermonNote(id: $id, idType: SLUG) {
           title
           date
-          categories {
-            nodes {
-              name
-            }
-          }
           content
           featuredImage {
             node {
@@ -140,8 +131,8 @@ export async function getStaticProps(context) {
 
   return {
     props: {
-      note: json.data.sermonNote,
-      notes: json.data.sermonNotes
+      note: json.data.sermonNote || null,
+      notes: json.data.sermonNotes || null
     }
   }
 }
@@ -165,7 +156,7 @@ export async function getStaticPaths() {
   const json = await res.json()
   const notes = json.data.sermonNotes.nodes
 
-  const paths = notes.map((note) => ({ params: { slug: note.slug } }))
+  const paths = notes.map((note) => ({ params: { slug: note.slug || null } }))
 
   return { paths, fallback: false }
 }

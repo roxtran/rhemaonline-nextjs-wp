@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import HeadLine from '../../components/common/HeadLine'
 import Meta from '../../components/common/seo-meta'
-import Sidebar from '../../components/common/Sidebar'
+import Sidebar from '../../components/sermons/Sidebar'
 import NotesList from '../../components/sermons/NotesList'
 
 export default function Home({ notes }) {
@@ -65,7 +65,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      notes: json.data.sermonNotes
+      notes: json.data.sermonNotes || null
     },
     revalidate: 30
   }

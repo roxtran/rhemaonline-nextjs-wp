@@ -12,7 +12,7 @@ export default function NoteDetail({ note }) {
 
   return (
     <NoteWrapper>
-      <Link href={`${paths.sermons}/sermon-notes/${note.slug}`}>
+      <Link href={`${paths.sermons}/notes/${note.slug}`}>
         <a>
           <div className='hover'></div>
           <div className='img-wrapper'>
