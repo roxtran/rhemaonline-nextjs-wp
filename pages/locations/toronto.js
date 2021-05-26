@@ -138,7 +138,7 @@ const LocationContainer = styled(Container)`
   }
   .text-wrapper {
     background: var(--blue);
-    color: var(--white);
+    color: #fff;
     padding: 3rem 3.5rem 3.5rem 3.5rem;
     border-radius: 5px;
     height: 100%;

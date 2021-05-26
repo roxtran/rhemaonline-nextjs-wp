@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
   }
   html,
   body {
-    background: var(--white);
+    background: #fff;
     color: var(--textColor);
     font-family: 'Noto Sans', sans-serif;
     overflow-x: hidden;
@@ -51,31 +51,32 @@ export const Container = styled.div`
   padding: 4rem 0;
 `
 export const Button = styled.a`
+  display: inline-block;
   cursor: pointer;
   background: var(--blue);
   border-radius: 5px;
-  color: white;
+  color: #fff;
   padding: 10px 25px;
   text-align: center;
   text-transform: capitalize;
   &:hover {
     background: var(--lightBlue);
-    color: white;
+    color: #fff;
     box-shadow: var(--shadow);
   }
   &.orange {
-    background: var(--orange);
-    color: white;
+    background: var(--highLight);
+    color: #fff;
     &:hover {
       background: var(--blue);
     }
   }
-  &.white {
-    background: var(--white);
+  &.#fff {
+    background: #fff;
     color: var(--textColor);
     &:hover {
       background: var(--blue);
-      color: var(--white);
+      color: #fff;
     }
   }
 `

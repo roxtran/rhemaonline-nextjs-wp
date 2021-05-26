@@ -34,7 +34,7 @@ export default function Menu({ open }) {
         <a onClick={() => setOpen(!open)}>Events</a>
       </NavLink>
       <NavLink href={paths.giving}>
-        <a className='orange' onClick={() => setOpen(!open)}>
+        <a className='high-light' onClick={() => setOpen(!open)}>
           Give
         </a>
       </NavLink>
@@ -68,22 +68,22 @@ const StyledMenu = styled.div`
       display: none;
       flex-direction: column;
       position: absolute;
-      background: var(--white);
+      background: #fff;
       top: 3rem;
       left: 1rem;
       border: 1px solid rgba(0, 0, 0, 0.2);
       border-radius: 5px;
     }
   }
-  .orange {
+  .high-light {
     cursor: pointer;
     border-radius: 5px;
     padding: 10px 25px;
     text-align: center;
     margin-left: 1rem;
     letter-spacing: 1px;
-    background: var(--orange);
-    color: white;
+    background: var(--highLight);
+    color: #fff;
     &:hover {
       /* border-bottom: 0; */
       background: var(--blue);
@@ -102,7 +102,7 @@ const StyledMenu = styled.div`
     position: fixed;
     top: 0;
     right: 0;
-    background: var(--white);
+    background: #fff;
     width: 250px;
     height: 100vh;
     padding-left: 1rem;

@@ -42,7 +42,7 @@ const HeadLineWraper = styled.div`
     max-width: 90vw;
     position: absolute;
     text-align: center;
-    color: var(--white);
+    color: #fff;
     top: calc(50% + 50px);
     left: 50%;
     transform: translate(-50%, -50%);

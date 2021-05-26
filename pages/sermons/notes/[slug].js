@@ -34,9 +34,17 @@ export default function SermonNote({ note, notes }) {
             />
           </div>
           <article dangerouslySetInnerHTML={{ __html: note.content }}></article>
-          <Button href={note.docFile.docFile.mediaItemUrl} target='_blank'>
-            Download
-          </Button>
+          <div className='btn-wrapper'>
+            <div className='btn-bg'>
+              <Button
+                className='btn'
+                href={note.docFile.docFile.mediaItemUrl}
+                target='_blank'
+              >
+                Download
+              </Button>
+            </div>
+          </div>
         </div>
         <Sidebar title='Recent Notes' list={notes} />
       </NoteContainer>
@@ -45,7 +53,6 @@ export default function SermonNote({ note, notes }) {
 }
 
 const NoteContainer = styled(SermonsContainer)`
-  padding-bottom: 3rem;
   .note-wrapper {
     position: relative;
     width: 670px;
@@ -78,6 +85,28 @@ const NoteContainer = styled(SermonsContainer)`
       }
       ul {
         padding-left: 40px;
+      }
+    }
+    .btn-wrapper {
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: -1; 
+        left: 20%;
+        right: 20%;
+        height: 15px;
+        border-radius: 100%;
+        box-shadow: 0 0 12px rgb(0 0 0 / 15%);
+      }
+      .btn-bg {
+        background: #fff;
+        display: flex;
+        padding: 2rem;
+        z-index: 0;
+      }
+      .btn {
+        margin: auto;
       }
     }
 

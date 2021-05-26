@@ -116,14 +116,14 @@ const ConnectContainer = styled(Container)`
     }
   }
   .text-wrapper {
-    color: var(--white);
+    color: #fff;
     width: 80%;
     text-align: center;
     p {
       margin: 1rem 0;
     }
     span {
-      color: var(--white);
+      color: #fff;
       text-decoration: underline;
       font-weight: bold;
     }
