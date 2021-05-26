@@ -226,6 +226,7 @@ export const ModalContainer = styled.div`
     }
     h3 {
       color: var(--blue);
+      margin-bottom: 0;
     }
   }
   .modal-body {

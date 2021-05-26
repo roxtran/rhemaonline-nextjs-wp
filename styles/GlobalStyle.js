@@ -23,6 +23,10 @@ const GlobalStyle = createGlobalStyle`
       color:var(--blue);
     }
   }
+
+  h1, h2, h3 {
+    font-weight: bold;
+  }
   h1 {
     font-size: 3.75rem;
   }
@@ -40,6 +44,15 @@ const GlobalStyle = createGlobalStyle`
   }
   p {
     line-height: 1.5;
+
+  }.accordion-button {
+    text-align: left;
+    line-height: 1.5;
+  }
+  .accordion-button:not(.collapsed) {
+    color: var(--blue);
+    background-color: rgba(181, 217, 238, 0.2);
+    font-weight: bold;
   }
 `
 export const Container = styled.div`

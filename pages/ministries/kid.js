@@ -168,59 +168,133 @@ const kid = () => {
           </div>
         </div>
         <div className='line'></div>
+
         <div className='faq'>
           <h2>FAQs</h2>
-          <h3>What to expect on your first visit to Kids World</h3>
-          <p>
-            Look for the signs that direct you to our Children’s Sanctuary. We
-            will meet your family and check your child into our database system.
-            Once your family is checked in, one of our volunteers will be happy
-            to show you the age appropriate room we have created for your child.
-          </p>
-          <p>
-            We will ask for the following personal information: family member’s
-            names, children’s names and birthdates, family address, phone
-            number, and any special instructions (allergies, special needs) for
-            your child.
-          </p>
-          <p>
-            You and your child will be given matching identification cards that
-            are exclusive to your family and your visit. Your child will need to
-            wear the label portion of your matching identification cards which
-            bears a number that is matched to your portion during checkout at
-            the end of the service. During checkout, you will return to your
-            child’s room and present your card to the teacher in order for your
-            child to be released back to you. On your way home, be sure to ask
-            your child: “Did you have fun?” and “What did you learn today?”
-          </p>
-          <h3>What Should I Expect When I arrive at Kids World?</h3>
-          <p>
-            As you enter the Children’s Sanctuary, your first stop should be at
-            one of our check in stations where a friendly volunteer will check
-            your child in for the service you are attending. Our stations open
-            15 minutes prior to the start of each service. Station volunteers
-            will need your child’s full name in order for us to locate your
-            family in our database system. You will receive a set of stickers
-            with an identification number for you and for your child. Your child
-            will wear the sticker with his or her name. Please hold on to your
-            portion of the sticker until checkout at the end of the service. You
-            will need it to check your child out of Kids World. No child is
-            released unless the card with the matching number sticker is
-            presented.
-          </p>
-          <h3>A Special Note</h3>
-          <p>
-            If for some reason your child were to need you during the service,
-            your number would appear on the screens in the main auditorium. We
-            would ask that you exit the auditorium immediately and look for a
-            staff member who will direct you to your child’s room. If for some
-            reason you were to lose your identification card, ask to see one of
-            our Kids World leaders.
-          </p>
-          <p>
-            Please be sure to ask any of our amazing volunteers or staff if you
-            have questions about our policies or procedures.
-          </p>
+          <div class='accordion accordion-flush' id='kidFAQ'>
+            <div class='accordion-item'>
+              <h3 class='accordion-header' id='headingOne'>
+                <button
+                  class='accordion-button'
+                  type='button'
+                  data-bs-toggle='collapse'
+                  data-bs-target='#collapseOne'
+                  aria-expanded='true'
+                  aria-controls='collapseOne'
+                >
+                  What to expect on your first visit to Kids World
+                </button>
+              </h3>
+              <div
+                id='collapseOne'
+                class='accordion-collapse collapse show'
+                aria-labelledBy='headingOne'
+                data-bs-parent='#kidFAQ'
+              >
+                <div class='accordion-body'>
+                  <p>
+                    Look for the signs that direct you to our Children’s
+                    Sanctuary. We will meet your family and check your child
+                    into our database system. Once your family is checked in,
+                    one of our volunteers will be happy to show you the age
+                    appropriate room we have created for your child.
+                  </p>
+                  <p>
+                    We will ask for the following personal information: family
+                    member’s names, children’s names and birth dates, family
+                    address, phone number, and any special instructions
+                    (allergies, special needs) for your child.
+                  </p>
+                  <p>
+                    You and your child will be given matching identification
+                    cards that are exclusive to your family and your visit. Your
+                    child will need to wear the label portion of your matching
+                    identification cards which bears a number that is matched to
+                    your portion during checkout at the end of the service.
+                    During checkout, you will return to your child’s room and
+                    present your card to the teacher in order for your child to
+                    be released back to you. On your way home, be sure to ask
+                    your child: “Did you have fun?” and “What did you learn
+                    today?”
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class='accordion-item'>
+              <h3 class='accordion-header' id='headingTwo'>
+                <button
+                  class='accordion-button collapsed'
+                  type='button'
+                  data-bs-toggle='collapse'
+                  data-bs-target='#collapseTwo'
+                  aria-expanded='false'
+                  aria-controls='collapseTwo'
+                >
+                  What Should I Expect When I arrive at Kids World?
+                </button>
+              </h3>
+              <div
+                id='collapseTwo'
+                class='accordion-collapse collapse'
+                aria-labelledBy='headingTwo'
+                data-bs-parent='#kidFAQ'
+              >
+                <div class='accordion-body'>
+                  <p>
+                    As you enter the Children’s Sanctuary, your first stop
+                    should be at one of our check in stations where a friendly
+                    volunteer will check your child in for the service you are
+                    attending. Our stations open 15 minutes prior to the start
+                    of each service. Station volunteers will need your child’s
+                    full name in order for us to locate your family in our
+                    database system. You will receive a set of stickers with an
+                    identification number for you and for your child. Your child
+                    will wear the sticker with his or her name. Please hold on
+                    to your portion of the sticker until checkout at the end of
+                    the service. You will need it to check your child out of
+                    Kids World. No child is released unless the card with the
+                    matching number sticker is presented.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class='accordion-item'>
+              <h3 class='accordion-header' id='headingThree'>
+                <button
+                  class='accordion-button collapsed'
+                  type='button'
+                  data-bs-toggle='collapse'
+                  data-bs-target='#collapseThree'
+                  aria-expanded='false'
+                  aria-controls='collapseThree'
+                >
+                  A Special Note
+                </button>
+              </h3>
+              <div
+                id='collapseThree'
+                class='accordion-collapse collapse'
+                aria-labelledBy='headingThree'
+                data-bs-parent='#kidFAQ'
+              >
+                <div class='accordion-body'>
+                  <p>
+                    If for some reason your child were to need you during the
+                    service, your number would appear on the screens in the main
+                    auditorium. We would ask that you exit the auditorium
+                    immediately and look for a staff member who will direct you
+                    to your child’s room. If for some reason you were to lose
+                    your identification card, ask to see one of our Kids World
+                    leaders.
+                  </p>
+                  <p>
+                    Please be sure to ask any of our amazing volunteers or staff
+                    if you have questions about our policies or procedures.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </KidContainer>
     </>
@@ -242,6 +316,9 @@ export const KidContainer = styled(Container)`
     margin: 5rem 0;
     width: 1100px;
     max-width: 90vw;
+    h2 {
+      margin-bottom: 1rem;
+    }
   }
   .items {
     margin-top: 5rem;
@@ -317,6 +394,7 @@ export const KidContainer = styled(Container)`
     .content-wrapper {
       .text-wrapper {
         width: 700px;
+        margin: 2rem 0;
       }
       h2 {
         font-size: 1.75rem;
