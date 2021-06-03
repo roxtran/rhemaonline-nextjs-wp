@@ -58,13 +58,13 @@ const NoteContainer = styled(SermonsContainer)`
     width: 670px;
     max-width: 90vw;
     margin: 0 auto;
-    padding: 3rem 0;
+    padding: 48px 0;
     height: 100%;
     .date {
       font-style: italic;
-      margin-bottom: 0.5rem;
     }
     .line {
+      margin: 16px 0;
       width: 100%;
       height: 1px;
       background: rgba(0, 0, 0, 0.2);
@@ -79,7 +79,7 @@ const NoteContainer = styled(SermonsContainer)`
       overflow: hidden;
     }
     article {
-      margin: 2rem 0;
+      margin: 32px 0 48px;
       p {
         margin: 1rem 0;
       }
@@ -89,21 +89,22 @@ const NoteContainer = styled(SermonsContainer)`
     }
     .btn-wrapper {
       position: relative;
+      z-index: 1;
       &:before {
         content: '';
         position: absolute;
-        z-index: -1; 
+        top: -1px;
         left: 20%;
         right: 20%;
         height: 15px;
-        border-radius: 100%;
+        border-radius: 50%;
         box-shadow: 0 0 12px rgb(0 0 0 / 15%);
+        z-index: -1;
       }
       .btn-bg {
         background: #fff;
         display: flex;
         padding: 2rem;
-        z-index: 0;
       }
       .btn {
         margin: auto;

@@ -24,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
     font-weight: bold;
   }
   h1 {
@@ -44,8 +44,11 @@ const GlobalStyle = createGlobalStyle`
   }
   p {
     line-height: 1.5;
-
-  }.accordion-button {
+  }
+  ol, ul {
+    padding-left: 0;
+  }
+  .accordion-button {
     text-align: left;
     line-height: 1.5;
   }
@@ -61,7 +64,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4rem 0;
+  padding: 64px 0;
 `
 export const Button = styled.a`
   display: inline-block;

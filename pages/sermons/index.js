@@ -24,6 +24,7 @@ export default function Home({ notes }) {
 }
 
 export const SermonsContainer = styled.div`
+  position: relative;
   margin: 0 auto;
   padding: 0 2%;
   max-width: 1100px;

@@ -29,11 +29,12 @@ export default function Sidebar({ title, list }) {
   )
 }
 const SidebarWrapper = styled.div`
-  position: relative;
+  position: sticky;
+  top: 0;
   width: 300px;
-  margin: 5rem 0;
+  margin: 80px 0;
   border-top: 4px dashed var(--mint);
-  padding: 2rem 1rem;
+  padding: 32px 16px;
   h3 {
     margin-bottom: 0.5rem;
   }
@@ -41,8 +42,11 @@ const SidebarWrapper = styled.div`
     list-style: none;
   }
   li {
-    padding: 1rem 0;
+    padding: 16px 0;
     border-bottom: 1px solid var(--mint);
+  }
+  p {
+    margin-bottom: 0;
   }
   @media screen and (max-width: 1024px) {
     width: 300px;

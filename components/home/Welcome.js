@@ -44,7 +44,6 @@ const WelcomeWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0 1%;
   .img-wrapper {
     box-shadow: -35px 35px 0 0 rgba(122, 207, 255, 0.3);
     &:hover {
@@ -98,5 +97,9 @@ const WelcomeWrapper = styled.div`
     h2 {
       margin-top: 3rem;
     }
+  }
+
+  @media screen and (orientation: portrait) {
+    
   }
 `

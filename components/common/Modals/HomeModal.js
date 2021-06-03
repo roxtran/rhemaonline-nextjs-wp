@@ -216,9 +216,9 @@ export const ModalContainer = styled.div`
     padding: 1.5rem 2.5rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     .closeBtn {
-      position: fixed;
-      top: 0.1rem;
-      right: 0.25rem;
+      position: absolute;
+      top: -5px;
+      right: 2px;
       font-size: 32px;
       &:hover {
         transform: scale(1.2);

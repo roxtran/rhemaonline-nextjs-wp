@@ -180,32 +180,31 @@ export default function Footer() {
 const FooterWrapper = styled.div`
   position: relative;
   background: var(--lightBG);
-  height: 550px;
-  padding: 4.5% 5% 5% 0;
+  height: 100%;
+  padding: 5%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   .links {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 3rem;
     h4 {
-      margin-left: -20px;
       margin-bottom: 0.75rem;
+      margin-left: -20px;
     }
     li {
       margin: 0.25rem 0;
     }
   }
   .icons {
-    margin: 2rem 0;
+    margin: 20px 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
   }
   .icon {
     cursor: pointer;
-    margin: 0.7rem;
+    margin: 12px;
     &:hover {
       transform: translateY(-5px);
     }

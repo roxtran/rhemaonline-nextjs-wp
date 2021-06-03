@@ -34,7 +34,12 @@ export default function Leadership() {
             {leaders.map((leader) => (
               <div className='leader' key={leader.name}>
                 <div className='img-wrapper'>
-                  <Image src={leader.imgUrl} width={250} height={250} />
+                  <Image
+                    className='img'
+                    src={leader.imgUrl}
+                    width={250}
+                    height={250}
+                  />
                 </div>
                 <h3>{leader.name}</h3>
               </div>
@@ -84,6 +89,10 @@ const LeadershipContainer = styled(Container)`
     .img-wrapper {
       border-radius: 200px;
       overflow: hidden;
+      cursor: pointer;
+    }
+    img:hover {
+      transform: scale(1.1);
     }
     h3 {
       margin-top: 1rem;
