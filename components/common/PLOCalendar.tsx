@@ -11,7 +11,7 @@ export default function PCOCalendar() {
     rs.src =
       '//calendar.planningcenteronline.com/widgets/eJxj4ajmsGLLz2RSmWvFlVqcX1BSzW7FVuypxJ-YkxOfWpaaV1LMZsXmGmLFVprJfCyN2Yq7ILEoMbe4mgEA5k8RKQ==077396d85b25afa5d2593b07cded4bd445f36ba3.js'
     var s = document.getElementsByTagName('script')[0]
-    s.parentNode.insertBefore(rs, s)
+    s.parentNode?.insertBefore(rs, s)
   }
   return (
     <div id='resources_calendar_widget' className='styled'>
