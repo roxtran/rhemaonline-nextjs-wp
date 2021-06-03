@@ -22,7 +22,7 @@ export default function HeadLine({
   height
 }: HeadLineProps) {
   return (
-    <HeadLineWrapper height={height}>
+    <HeadLineWrapper height={height || '450px'}>
       <Image
         src={imgUrl}
         alt='headline image'
@@ -44,7 +44,7 @@ export default function HeadLine({
 }
 const HeadLineWrapper = styled.div<{ height: string }>`
   position: relative;
-  height: ${(props) => (props.height ? props.height : '450px')};
+  height: ${(props) => props.height};
   Image {
     z-index: 0;
   }
