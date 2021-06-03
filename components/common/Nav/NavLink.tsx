@@ -1,8 +1,13 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import React from 'react'
+import React, { ReactNode } from 'react'
 
-export default function NavLink({ children, href }) {
+interface NavProps {
+  children: ReactNode
+  href: string
+}
+
+export default function NavLink({ children, href }: NavProps) {
   const child = React.Children.only(children)
   const router = useRouter()
 

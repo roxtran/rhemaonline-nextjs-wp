@@ -6,7 +6,7 @@ export default function Burger() {
   const [open, setOpen] = useState(false)
   return (
     <>
-      <StyledBurger open={open} onClick={() => setOpen(!open)}>
+      <StyledBurger onClick={() => setOpen(!open)}>
         <div />
         <div />
         <div />

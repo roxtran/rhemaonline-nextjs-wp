@@ -1,6 +1,12 @@
 import styled from 'styled-components'
 
-export default function Video({ src, width, height }) {
+interface VideoProps {
+  src: string
+  width: string
+  height: string
+}
+
+export default function Video({ src, width, height }: VideoProps) {
   return (
     <VideoWrapper width={width} height={height}>
       <video loop muted autoPlay>
@@ -10,7 +16,7 @@ export default function Video({ src, width, height }) {
     </VideoWrapper>
   )
 }
-const VideoWrapper = styled.div`
+const VideoWrapper = styled.div<{ width: string; height: string }>`
   video {
     width: ${({ width }) => width && width};
     height: ${({ height }) => height && height};

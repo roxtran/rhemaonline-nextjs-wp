@@ -1,8 +1,13 @@
 import styled from 'styled-components'
 import NavLink from './NavLink'
-import paths from './../../../paths'
+import paths from '../../../paths'
 
-export default function Menu({ open }) {
+interface MenuProps {
+  open: boolean
+  setOpen: Function
+}
+
+export default function Menu({ open, setOpen }: MenuProps) {
   return (
     <StyledMenu open={open}>
       <NavLink href='/'>

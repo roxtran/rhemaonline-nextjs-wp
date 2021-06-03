@@ -1,9 +1,16 @@
 import styled from 'styled-components'
 import { IoClose } from 'react-icons/io5'
 import { ModalContainer } from './HomeModal'
+import { Dispatch, SetStateAction } from 'react'
 
-const BibleModal = ({ openBible, setOpenBible }) => {
+interface BibleModalProps {
+  openBible: boolean
+  setOpenBible: Dispatch<SetStateAction<boolean>>
+}
+
+const BibleModal = ({ openBible, setOpenBible }: BibleModalProps) => {
   if (!openBible) return null
+
   return (
     <BibleContainer>
       <div className='modal-dialog'>

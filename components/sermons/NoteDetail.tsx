@@ -1,10 +1,15 @@
-import styled from 'styled-components'
 import Image from 'next/image'
 import Link from 'next/link'
+import styled from 'styled-components'
+import { Note } from '../../pages/sermons/index'
 import paths from '../../paths'
 import { formatDate } from '../../utils/formatter'
 
-export default function NoteDetail({ note }) {
+interface NoteDetailProps {
+  note: Note
+}
+
+export default function NoteDetail({ note }: NoteDetailProps) {
   const summary = `<p>${note.excerpt.substring(
     0,
     250

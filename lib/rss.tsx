@@ -13,7 +13,7 @@ export const FEEDS = [
   }
 ]
 
-export async function getFeed(feedUrl) {
+export async function getFeed(feedUrl: string) {
   let parser = new Parser()
 
   let feed = await parser.parseURL(feedUrl)

@@ -2,6 +2,16 @@ import Image from 'next/image'
 import styled from 'styled-components'
 import { Button } from '../../styles/GlobalStyle'
 
+interface HeadLineProps {
+  imgUrl: string
+  title: string
+  blur?: string
+  desc?: string
+  btnText?: string
+  btnLink?: string
+  height?: string
+}
+
 export default function HeadLine({
   imgUrl,
   title,
@@ -10,9 +20,9 @@ export default function HeadLine({
   btnText,
   btnLink,
   height
-}) {
+}: HeadLineProps) {
   return (
-    <HeadLineWraper height={height}>
+    <HeadLineWrapper height={height}>
       <Image
         src={imgUrl}
         alt='headline image'
@@ -29,10 +39,10 @@ export default function HeadLine({
           </HeadLineBtn>
         )}
       </div>
-    </HeadLineWraper>
+    </HeadLineWrapper>
   )
 }
-const HeadLineWraper = styled.div`
+const HeadLineWrapper = styled.div<{ height: string }>`
   position: relative;
   height: ${(props) => (props.height ? props.height : '450px')};
   Image {
@@ -66,7 +76,7 @@ const HeadLineWraper = styled.div`
     }
   }
 `
-const Blur = styled.div`
+const Blur = styled.div<{ blur: string }>`
   position: absolute;
   top: 0;
   left: 0;

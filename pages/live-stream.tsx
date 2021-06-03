@@ -1,7 +1,13 @@
 import IframeVideo from '../components/common/IFrameVideo'
 import Meta from '../components/common/seo-meta'
 
-export default function LiveStream({ src, width, height }) {
+interface LiveStreamProps {
+  src: string
+  width: string
+  height: string
+}
+
+export default function LiveStream({ src, width, height }: LiveStreamProps) {
   return (
     <>
       <Meta

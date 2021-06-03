@@ -171,11 +171,11 @@ const kid = () => {
 
         <div className='faq'>
           <h2>FAQs</h2>
-          <div class='accordion accordion-flush' id='kidFAQ'>
-            <div class='accordion-item'>
-              <h3 class='accordion-header' id='headingOne'>
+          <div className='accordion accordion-flush' id='kidFAQ'>
+            <div className='accordion-item'>
+              <h3 className='accordion-header' id='headingOne'>
                 <button
-                  class='accordion-button'
+                  className='accordion-button'
                   type='button'
                   data-bs-toggle='collapse'
                   data-bs-target='#collapseOne'
@@ -187,11 +187,11 @@ const kid = () => {
               </h3>
               <div
                 id='collapseOne'
-                class='accordion-collapse collapse show'
-                aria-labelledBy='headingOne'
+                className='accordion-collapse collapse show'
+                aria-labelledby='headingOne'
                 data-bs-parent='#kidFAQ'
               >
-                <div class='accordion-body'>
+                <div className='accordion-body'>
                   <p>
                     Look for the signs that direct you to our Children’s
                     Sanctuary. We will meet your family and check your child
@@ -220,10 +220,10 @@ const kid = () => {
                 </div>
               </div>
             </div>
-            <div class='accordion-item'>
-              <h3 class='accordion-header' id='headingTwo'>
+            <div className='accordion-item'>
+              <h3 className='accordion-header' id='headingTwo'>
                 <button
-                  class='accordion-button collapsed'
+                  className='accordion-button collapsed'
                   type='button'
                   data-bs-toggle='collapse'
                   data-bs-target='#collapseTwo'
@@ -235,11 +235,11 @@ const kid = () => {
               </h3>
               <div
                 id='collapseTwo'
-                class='accordion-collapse collapse'
-                aria-labelledBy='headingTwo'
+                className='accordion-collapse collapse'
+                aria-labelledby='headingTwo'
                 data-bs-parent='#kidFAQ'
               >
-                <div class='accordion-body'>
+                <div className='accordion-body'>
                   <p>
                     As you enter the Children’s Sanctuary, your first stop
                     should be at one of our check in stations where a friendly
@@ -258,10 +258,10 @@ const kid = () => {
                 </div>
               </div>
             </div>
-            <div class='accordion-item'>
-              <h3 class='accordion-header' id='headingThree'>
+            <div className='accordion-item'>
+              <h3 className='accordion-header' id='headingThree'>
                 <button
-                  class='accordion-button collapsed'
+                  className='accordion-button collapsed'
                   type='button'
                   data-bs-toggle='collapse'
                   data-bs-target='#collapseThree'
@@ -273,11 +273,11 @@ const kid = () => {
               </h3>
               <div
                 id='collapseThree'
-                class='accordion-collapse collapse'
-                aria-labelledBy='headingThree'
+                className='accordion-collapse collapse'
+                aria-labelledby='headingThree'
                 data-bs-parent='#kidFAQ'
               >
-                <div class='accordion-body'>
+                <div className='accordion-body'>
                   <p>
                     If for some reason your child were to need you during the
                     service, your number would appear on the screens in the main

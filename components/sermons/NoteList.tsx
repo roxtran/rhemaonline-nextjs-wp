@@ -1,8 +1,12 @@
-import Link from 'next/link'
 import styled from 'styled-components'
 import NoteDetail from './NoteDetail'
+import { Notes } from '../../pages/sermons/index'
 
-export default function NotesList({ notes }) {
+interface NoteListProps {
+  notes: Notes
+}
+
+export default function NoteList({ notes }: NoteListProps) {
   return (
     <ListWrapper>
       <h2>Sermon Notes</h2>

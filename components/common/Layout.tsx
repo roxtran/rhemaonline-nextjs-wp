@@ -1,7 +1,11 @@
 import Footer from './Footer'
 import Navbar from './Nav/Navbar'
 
-export default function Layout({ children }) {
+interface LayoutProps {
+  children: React.ReactNode
+}
+
+export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <Navbar />

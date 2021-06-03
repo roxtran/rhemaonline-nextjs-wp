@@ -1,7 +1,13 @@
-import styled from 'styled-components'
+import { Dispatch, SetStateAction } from 'react'
 import { IoClose } from 'react-icons/io5'
+import styled from 'styled-components'
 
-const BibleModal = ({ openModal, setOpenModal }) => {
+interface HomeModalProps {
+  openModal: boolean
+  setOpenModal: Dispatch<SetStateAction<boolean>>
+}
+
+const HomeModal = ({ openModal, setOpenModal }: HomeModalProps) => {
   if (!openModal) return null
   return (
     <ModalContainer>
@@ -277,4 +283,4 @@ export const ModalContainer = styled.div`
   }
 `
 
-export default BibleModal
+export default HomeModal

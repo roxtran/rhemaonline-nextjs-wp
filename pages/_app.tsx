@@ -3,8 +3,9 @@ import '../styles/_variables.css'
 import '../styles/GlobalStyle'
 import GlobalStyle from '../styles/GlobalStyle'
 import Layout from '../components/common/Layout'
+import { AppProps } from 'next/dist/next-server/lib/router/router'
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>

@@ -1,8 +1,21 @@
 import Link from 'next/link'
 import styled from 'styled-components'
 
-export default function Sidebar({ title, list }) {
-  const formatDate = (date) => {
+interface Nodes {
+  slug: string
+  title: string
+  date: string
+}
+
+interface SidebarProps {
+  title: string
+  list: {
+    nodes: Nodes[]
+  }
+}
+
+export default function Sidebar({ title, list }: SidebarProps) {
+  const formatDate = (date: string) => {
     const newDate = new Date(date).toLocaleDateString('en-US', {
       day: 'numeric',
       month: 'long',

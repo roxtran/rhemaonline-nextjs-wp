@@ -1,6 +1,13 @@
 import Head from 'next/head'
 
-const Meta = ({ title, desc, ogImage, canonical }) => (
+interface MetaProps {
+  title: string
+  desc: string
+  ogImage: string
+  canonical: string
+}
+
+const Meta = ({ title, desc, ogImage, canonical }: MetaProps) => (
   <Head>
     <title>{title}</title>
     <meta name='description' content={desc} />

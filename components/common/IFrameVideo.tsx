@@ -1,6 +1,12 @@
 import styled from 'styled-components'
 
-export default function IFrameVideo({ src, width, height }) {
+interface VideoProps {
+  src: string
+  width: string
+  height: string
+}
+
+export default function IFrameVideo({ src, width, height }: VideoProps) {
   return (
     <VideoWrapper width={width} height={height}>
       <iframe
@@ -15,7 +21,7 @@ export default function IFrameVideo({ src, width, height }) {
     </VideoWrapper>
   )
 }
-const VideoWrapper = styled.div`
+const VideoWrapper = styled.div<{ width: string; height: string }>`
   width: ${(props) => props.width && props.width};
   height: ${(props) => props.height && props.height};
 `

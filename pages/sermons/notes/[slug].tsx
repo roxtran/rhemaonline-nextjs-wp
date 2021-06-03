@@ -1,3 +1,4 @@
+import { GetStaticPathsContext } from 'next'
 import Image from 'next/image'
 import styled from 'styled-components'
 import HeadLine from '../../../components/common/HeadLine'
@@ -7,7 +8,28 @@ import { Button } from '../../../styles/GlobalStyle'
 import { formatDate } from '../../../utils/formatter'
 import { SermonsContainer } from '../index'
 
-export default function SermonNote({ note, notes }) {
+interface NoteProps {
+  note: {
+    title: string
+    date: string
+    content: string
+    featuredImage: {
+      node: {
+        sourceUrl: string
+      }
+    }
+    docFile: {
+      docFile: {
+        mediaItemUrl: string
+      }
+    }
+  }
+  notes: {
+    nodes: []
+  }
+}
+
+export default function SermonNote({ note, notes }: NoteProps) {
   return (
     <>
       <Meta
@@ -37,7 +59,7 @@ export default function SermonNote({ note, notes }) {
           <div className='btn-wrapper'>
             <div className='btn-bg'>
               <Button
-                className='btn'
+                id='btn-download'
                 href={note.docFile.docFile.mediaItemUrl}
                 target='_blank'
               >
@@ -119,7 +141,7 @@ const NoteContainer = styled(SermonsContainer)`
   }
 `
 
-export async function getStaticProps(context) {
+export async function getStaticProps(context: GetStaticPathsContext) {
   const res = await fetch(process.env.WP_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

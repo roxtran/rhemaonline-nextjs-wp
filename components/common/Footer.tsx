@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import styled from 'styled-components'
 import paths from '../../paths'
-import BibleModal from '../common/Modals/BibleModal'
+import BibleModal from './Modals/BibleModal'
 
 export default function Footer() {
   const [openBible, setOpenBible] = useState(false)
