@@ -4,9 +4,10 @@ import Menu from './Menu'
 
 export default function Burger() {
   const [open, setOpen] = useState(false)
+
   return (
     <>
-      <StyledBurger onClick={() => setOpen(!open)}>
+      <StyledBurger open={open} onClick={() => setOpen(!open)}>
         <div />
         <div />
         <div />
@@ -15,7 +16,7 @@ export default function Burger() {
     </>
   )
 }
-const StyledBurger = styled.a`
+const StyledBurger = styled.a<{ open: boolean }>`
   display: none;
   z-index: 20;
   width: 2rem;
