@@ -35,7 +35,7 @@ const grow = () => {
         </div>
         <div className='grows'>
           {growData.map((grow) => (
-            <div className='grow' key={grow.name}>
+            <div className='grow' key={grow.title}>
               <div className='img-wrapper'>
                 <Image src={grow.imgUrl} layout='fill' objectFit='cover' />
               </div>
