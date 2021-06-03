@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import React, { ReactNode } from 'react'
+import React, { ReactElement, ReactNode } from 'react'
 
 interface NavProps {
   children: ReactNode
@@ -13,7 +13,7 @@ export default function NavLink({ children, href }: NavProps) {
 
   return (
     <Link href={href}>
-      {React.cloneElement(child, {
+      {React.cloneElement(child as ReactElement, {
         'aria-current': router.pathname === href ? 'page' : null
       })}
     </Link>
