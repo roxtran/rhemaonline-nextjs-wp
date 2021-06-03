@@ -1,20 +1,13 @@
 import Link from 'next/link'
 import styled from 'styled-components'
+import NoteType from '../../types/notes'
 
-interface Nodes {
-  slug: string
+interface Props {
   title: string
-  date: string
+  notes: NoteType[]
 }
 
-interface SidebarProps {
-  title: string
-  list: {
-    nodes: Nodes[]
-  }
-}
-
-export default function Sidebar({ title, list }: SidebarProps) {
+export default function Sidebar({ title, notes }: Props) {
   const formatDate = (date: string) => {
     const newDate = new Date(date).toLocaleDateString('en-US', {
       day: 'numeric',
@@ -28,12 +21,12 @@ export default function Sidebar({ title, list }: SidebarProps) {
       <div className='wrapper'>
         <h3>{title}</h3>
         <ul>
-          {list.nodes.map((item) => (
-            <li key={item.slug}>
-              <Link href={`/sermons/notes/${item.slug}`}>
-                <a>{item.title}</a>
+          {notes?.map((note) => (
+            <li key={note.slug}>
+              <Link href={`/sermons/notes/${note.slug}`}>
+                <a>{note.title}</a>
               </Link>
-              <p>{formatDate(item.date)}</p>
+              <p>{formatDate(note.date)}</p>
             </li>
           ))}
         </ul>

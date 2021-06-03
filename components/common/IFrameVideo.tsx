@@ -16,7 +16,7 @@ export default function IFrameVideo({ src, width, height }: VideoProps) {
         title='iframe video player'
         frameBorder='0'
         // allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-        // allowfullscreen
+        // allowFullscreen
       ></iframe>
     </VideoWrapper>
   )

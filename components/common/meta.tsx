@@ -2,9 +2,9 @@ import Head from 'next/head'
 
 interface MetaProps {
   title: string
-  desc: string
-  ogImage: string
-  canonical: string
+  desc?: string
+  ogImage?: string
+  canonical?: string
 }
 
 const Meta = ({ title, desc, ogImage, canonical }: MetaProps) => (
@@ -18,7 +18,13 @@ const Meta = ({ title, desc, ogImage, canonical }: MetaProps) => (
     <meta property='og:url' content={canonical} />
     <meta name='twitter:card' content='summary' />
     <meta name='twitter:title' content={title} />
-    <meta name='twitter:description' content={desc} />
+    <meta
+      name='twitter:description'
+      content={
+        desc ||
+        'Welcome to Rhema Christian Ministries, a vibrant Spirit-filled church community designed to connect people to Jesus and to each other through authentic relationships.'
+      }
+    />
     <meta name='twitter:site' content='RCM' />
     <meta name='twitter:creator' content='Roxanne' />
     <link rel='icon' type='image/png' href='/favicon.ico' />
@@ -26,7 +32,7 @@ const Meta = ({ title, desc, ogImage, canonical }: MetaProps) => (
     <link rel='stylesheet' href='' />
     <meta property='og:image' content={ogImage || '/img/og/home.jpg'} />
     <meta name='twitter:image' content='' />
-    <link rel='canonical' href={canonical} />
+    <link rel='canonical' href={canonical || ''} />
     <script type='text/javascript' src=''></script>
   </Head>
 )

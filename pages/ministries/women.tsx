@@ -2,17 +2,12 @@ import HeadLine from '../../components/common/HeadLine'
 import styled from 'styled-components'
 import { Container } from '../../styles/GlobalStyle'
 import Image from 'next/image'
-import Meta from '../../components/common/seo-meta'
+import Meta from '../../components/common/meta'
 
 const women = () => {
   return (
     <>
-      <Meta
-        title="Women's Ministry - Rhema - Changing & Affecting Lives!"
-        desc='Welcome to Rhema Christian Ministries, a vibrant Spirit-filled church community designed to connect people to Jesus and to each other through authentic relationships.'
-        ogImage='/img/og/home.jpg'
-        canonical=''
-      />
+      <Meta title="Women's Ministry - Rhema - Changing & Affecting Lives!" />
       <HeadLine imgUrl='/img/women-img.jpg' title="Women's Ministry" />
       <WomenContainer>
         <div className='wrapper'>

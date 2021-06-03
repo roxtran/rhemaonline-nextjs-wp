@@ -2,17 +2,12 @@ import styled from 'styled-components'
 import Video from '../../components/common/Video'
 import Image from 'next/image'
 import { Container } from '../../styles/GlobalStyle'
-import Meta from '../../components/common/seo-meta'
+import Meta from '../../components/common/meta'
 
 export default function Locations() {
   return (
     <>
-      <Meta
-        title='Toronto Location - Rhema - Changing & Affecting Lives!'
-        desc='Welcome to Rhema Christian Ministries, a vibrant Spirit-filled church community designed to connect people to Jesus and to each other through authentic relationships.'
-        ogImage='/img/og/home.jpg'
-        canonical=''
-      />
+      <Meta title='Toronto Location - Rhema - Changing & Affecting Lives!' />
       <VideoWrapper>
         <Video src='/video/Rhema-Toronto.mp4' width='100%' height='75vh' />
       </VideoWrapper>
@@ -81,7 +76,6 @@ export default function Locations() {
                 width='1000'
                 height='420'
                 style={{ border: 0 }}
-                allowFullScreen=''
                 loading='lazy'
               ></iframe>
             </div>

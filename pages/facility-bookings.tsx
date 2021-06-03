@@ -1,17 +1,12 @@
 import HeadLine from '../components/common/HeadLine'
 import styled from 'styled-components'
 import { Container, Button } from '../styles/GlobalStyle'
-import Meta from '../components/common/seo-meta'
+import Meta from '../components/common/meta'
 
 export default function facilityBookings() {
   return (
     <>
-      <Meta
-        title='Facility Bookings - Rhema - Changing & Affecting Lives!'
-        desc='Welcome to Rhema Christian Ministries, a vibrant Spirit-filled church community designed to connect people to Jesus and to each other through authentic relationships.'
-        ogImage='/img/og/home.jpg'
-        canonical=''
-      />
+      <Meta title='Facility Bookings - Rhema - Changing & Affecting Lives!' />
       <HeadLine
         imgUrl='/img/facility-bookings-img.jpg'
         title='Facility Bookings'

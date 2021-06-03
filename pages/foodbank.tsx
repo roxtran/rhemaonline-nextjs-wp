@@ -1,18 +1,13 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 import HeadLine from '../components/common/HeadLine'
-import Meta from '../components/common/seo-meta'
+import Meta from '../components/common/meta'
 import { Button, Container } from '../styles/GlobalStyle'
 
 const foodbank = () => {
   return (
     <>
-      <Meta
-        title='Foodbank - Rhema - Changing & Affecting Lives!'
-        desc='Welcome to Rhema Christian Ministries, a vibrant Spirit-filled church community designed to connect people to Jesus and to each other through authentic relationships.'
-        ogImage='/img/og/home.jpg'
-        canonical=''
-      />
+      <Meta title='Foodbank - Rhema - Changing & Affecting Lives!' />
       <HeadLine imgUrl='/img/foodbank-img.jpg' title='Foodbank' />
       <FoodbankContainer>
         <div className='content-wrapper'>

@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import styled from 'styled-components'
-import { Note } from '../../pages/sermons/index'
 import paths from '../../paths'
+import NoteType from '../../types/notes'
 import { formatDate } from '../../utils/formatter'
 
 interface NoteDetailProps {
-  note: Note
+  note: NoteType
 }
 
 export default function NoteDetail({ note }: NoteDetailProps) {

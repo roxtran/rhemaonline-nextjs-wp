@@ -3,17 +3,12 @@ import styled from 'styled-components'
 import { Container, Button } from '../../styles/GlobalStyle'
 import Image from 'next/image'
 import { default as ministriesData } from '../../data/ministies'
-import Meta from '../../components/common/seo-meta'
+import Meta from '../../components/common/meta'
 
 const ministries = () => {
   return (
     <>
-      <Meta
-        title='Family Ministries - Rhema - Changing & Affecting Lives!'
-        desc='Welcome to Rhema Christian Ministries, a vibrant Spirit-filled church community designed to connect people to Jesus and to each other through authentic relationships.'
-        ogImage='/img/og/home.jpg'
-        canonical=''
-      />
+      <Meta title='Family Ministries - Rhema - Changing & Affecting Lives!' />
       <HeadLine
         imgUrl='/img/ministries-img.jpg'
         title='Ministries'

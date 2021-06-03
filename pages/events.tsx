@@ -1,17 +1,12 @@
 import styled from 'styled-components'
 import HeadLine from '../components/common/HeadLine'
 import PCOCalendar from '../components/common/PLOCalendar'
-import Meta from '../components/common/seo-meta'
+import Meta from '../components/common/meta'
 
 export default function Events() {
   return (
     <>
-      <Meta
-        title='Events - Rhema - Changing & Affecting Lives!'
-        desc='Welcome to Rhema Christian Ministries, a vibrant Spirit-filled church community designed to connect people to Jesus and to each other through authentic relationships.'
-        ogImage='/img/og/home.jpg'
-        canonical=''
-      />
+      <Meta title='Events - Rhema - Changing & Affecting Lives!' />
       <HeadLine imgUrl='/img/events-img.webp' title='Events' />
       <CalendarWrapper>
         <PCOCalendar />

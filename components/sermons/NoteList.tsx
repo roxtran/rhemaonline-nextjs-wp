@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 import NoteDetail from './NoteDetail'
-import { Notes } from '../../pages/sermons/index'
+import NoteType from '../../types/notes'
 
 interface NoteListProps {
-  notes: Notes
+  notes: NoteType[]
 }
 
 export default function NoteList({ notes }: NoteListProps) {
   return (
     <ListWrapper>
       <h2>Sermon Notes</h2>
-      {notes.nodes.slice(0, 2).map((note) => (
+      {notes?.slice(0, 2).map((note) => (
         <NoteDetail key={note.slug} note={note} />
       ))}
     </ListWrapper>

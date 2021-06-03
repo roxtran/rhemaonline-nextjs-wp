@@ -1,43 +1,28 @@
-import { GetStaticPathsContext } from 'next'
 import Image from 'next/image'
 import styled from 'styled-components'
 import HeadLine from '../../../components/common/HeadLine'
-import Meta from '../../../components/common/seo-meta'
+import Meta from '../../../components/common/meta'
 import Sidebar from '../../../components/sermons/Sidebar'
 import { Button } from '../../../styles/GlobalStyle'
+import NoteType from '../../../types/notes'
 import { formatDate } from '../../../utils/formatter'
 import { SermonsContainer } from '../index'
 
-interface NoteProps {
-  note: {
-    title: string
-    date: string
-    content: string
-    featuredImage: {
-      node: {
-        sourceUrl: string
-      }
-    }
-    docFile: {
-      docFile: {
-        mediaItemUrl: string
-      }
-    }
-  }
-  notes: {
-    nodes: []
+interface Props {
+  note: NoteType
+  notes: NoteType[]
+}
+
+type Params = {
+  params: {
+    slug: string
   }
 }
 
-export default function SermonNote({ note, notes }: NoteProps) {
+export default function SermonNote({ note, notes }: Props) {
   return (
     <>
-      <Meta
-        title={note.title + ' - Rhema - Changing & Affecting Lives!'}
-        desc='Welcome to Rhema Christian Ministries, a vibrant Spirit-filled church community designed to connect people to Jesus and to each other through authentic relationships.'
-        ogImage='/img/og/home.jpg'
-        canonical=''
-      />
+      <Meta title={note.title + ' - Rhema - Changing & Affecting Lives!'} />
       <HeadLine
         imgUrl={note.featuredImage.node.sourceUrl}
         title={note.title}
@@ -59,7 +44,7 @@ export default function SermonNote({ note, notes }: NoteProps) {
           <div className='btn-wrapper'>
             <div className='btn-bg'>
               <Button
-                id='btn-download'
+                className='btn'
                 href={note.docFile.docFile.mediaItemUrl}
                 target='_blank'
               >
@@ -68,7 +53,7 @@ export default function SermonNote({ note, notes }: NoteProps) {
             </div>
           </div>
         </div>
-        <Sidebar title='Recent Notes' list={notes} />
+        <Sidebar title='Recent Notes' notes={notes} />
       </NoteContainer>
     </>
   )
@@ -141,8 +126,9 @@ const NoteContainer = styled(SermonsContainer)`
   }
 `
 
-export async function getStaticProps(context: GetStaticPathsContext) {
-  const res = await fetch(process.env.WP_URL, {
+export const getStaticProps = async ({ params }: Params) => {
+  const { slug } = params
+  const res = await fetch(process.env.WP_URL as string, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -174,7 +160,7 @@ export async function getStaticProps(context: GetStaticPathsContext) {
       }
       `,
       variables: {
-        id: context.params.slug
+        id: slug
       }
     })
   })
@@ -183,14 +169,14 @@ export async function getStaticProps(context: GetStaticPathsContext) {
 
   return {
     props: {
-      note: json.data.sermonNote,
-      notes: json.data.sermonNotes
+      note: json?.data?.sermonNote,
+      notes: json?.data?.sermonNotes?.nodes
     }
   }
 }
 
-export async function getStaticPaths() {
-  const res = await fetch(process.env.WP_URL, {
+export const getStaticPaths = async () => {
+  const res = await fetch(process.env.WP_URL as string, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -208,7 +194,9 @@ export async function getStaticPaths() {
   const json = await res.json()
   const notes = json.data.sermonNotes.nodes
 
-  const paths = notes.map((note) => ({ params: { slug: note.slug } }))
+  const paths = notes.map((note: { slug: any }) => ({
+    params: { slug: note.slug }
+  }))
 
   return { paths, fallback: false }
 }

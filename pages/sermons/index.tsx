@@ -1,43 +1,23 @@
 import styled from 'styled-components'
 import HeadLine from '../../components/common/HeadLine'
-import Meta from '../../components/common/seo-meta'
+import Meta from '../../components/common/meta'
 import Sidebar from '../../components/sermons/Sidebar'
 import NotesList from '../../components/sermons/NoteList'
+import NoteType from '../../types/notes'
 
-export interface Note {
-  featuredImage: {
-    node: {
-      sourceUrl: string
-    }
-  }
-  date: string
-  title: string
-  excerpt: string
-  slug: string
+interface Props {
+  notes: NoteType[]
 }
 
-export interface Notes {
-  nodes: Note[]
-}
-
-interface SermonsProps {
-  notes: Notes
-}
-
-export default function Sermons({ notes }: SermonsProps) {
+export default function Sermons({ notes }: Props) {
   // console.log(notes.categories.nodes.name)
   return (
     <>
-      <Meta
-        title='Sermons - Rhema - Changing & Affecting Lives!'
-        desc='Welcome to Rhema Christian Ministries, a vibrant Spirit-filled church community designed to connect people to Jesus and to each other through authentic relationships.'
-        ogImage='/img/og/home.jpg'
-        canonical=''
-      />
+      <Meta title='Sermons - Rhema - Changing & Affecting Lives!' />
       <HeadLine imgUrl='/img/sermons-img.jpg' title='Sermons' />
       <SermonsContainer>
         <NotesList notes={notes} />
-        <Sidebar title='Recent Notes' list={notes} />
+        <Sidebar title='Recent Notes' notes={notes} />
       </SermonsContainer>
     </>
   )
@@ -86,7 +66,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      notes: json.data.sermonNotes || null
+      notes: json?.data?.sermonNotes?.nodes
     },
     revalidate: 30
   }

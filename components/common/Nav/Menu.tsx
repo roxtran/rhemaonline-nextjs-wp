@@ -46,7 +46,7 @@ export default function Menu({ open, setOpen }: MenuProps) {
     </StyledMenu>
   )
 }
-const StyledMenu = styled.div`
+const StyledMenu = styled.div<{ open: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;

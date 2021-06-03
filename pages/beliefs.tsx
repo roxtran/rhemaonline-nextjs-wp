@@ -2,17 +2,12 @@ import HeadLine from '../components/common/HeadLine'
 import styled from 'styled-components'
 import { Container } from '../styles/GlobalStyle'
 import beliefs from '../data/beliefs'
-import Meta from '../components/common/seo-meta'
+import Meta from '../components/common/meta'
 
 export default function Beliefs() {
   return (
     <>
-      <Meta
-        title='Beliefs - Rhema - Changing & Affecting Lives!'
-        desc='Welcome to Rhema Christian Ministries, a vibrant Spirit-filled church community designed to connect people to Jesus and to each other through authentic relationships.'
-        ogImage='/img/og/home.jpg'
-        canonical=''
-      />
+      <Meta title='Beliefs - Rhema - Changing & Affecting Lives!' />
       <HeadLine
         imgUrl='/img/beliefs-img.jpg'
         title='Beliefs'
