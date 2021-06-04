@@ -26,7 +26,7 @@ export default function Sidebar({ title, notes }: Props) {
               <Link href={`/sermons/notes/${note.slug}`}>
                 <a>{note.title}</a>
               </Link>
-              <p>{formatDate(note.date)}</p>
+              <p className='date'>{formatDate(note.date)}</p>
             </li>
           ))}
         </ul>
@@ -53,6 +53,10 @@ const SidebarWrapper = styled.div`
   }
   p {
     margin-bottom: 0;
+  }
+  .date {
+    font-style: italic;
+    margin-top: 0.25rem;
   }
   @media screen and (max-width: 1024px) {
     width: 300px;
