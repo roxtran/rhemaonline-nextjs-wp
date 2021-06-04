@@ -41,7 +41,7 @@ export default function Welcome() {
 const WelcomeWrapper = styled.div`
   position: relative;
   max-width: 1200px;
-  margin: 420px auto 320px;
+  margin: 360px auto 240px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,6 +55,12 @@ const WelcomeWrapper = styled.div`
     box-shadow: -35px 35px 0 0 rgba(122, 207, 255, 0.3);
     &:hover {
       box-shadow: 0 0 0 0 rgba(122, 207, 255, 0.3);
+    }
+    @media screen and (max-width: 768px) {
+      flex: none;
+      width: 75vw;
+      height: 300px;
+      margin-bottom: 20px;
     }
   }
   .text {
@@ -81,7 +87,7 @@ const WelcomeWrapper = styled.div`
   }
   @media screen and (max-width: 1024px) {
     padding: 0 5%;
-    margin: 18rem auto 12rem;
+    margin: 300px auto 220px;
     .image {
       box-shadow: 0 0 0 0 rgba(122, 207, 255, 0.3);
     }
@@ -93,10 +99,9 @@ const WelcomeWrapper = styled.div`
     }
   }
   @media screen and (max-width: 768px) {
-    margin-top: 12rem;
+    margin: 200px auto 100px;
     justify-content: flex-start;
     flex-direction: column;
-
     .text {
       margin-left: 0;
       padding: 0 5%;
