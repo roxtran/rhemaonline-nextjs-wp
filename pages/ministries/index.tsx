@@ -1,6 +1,6 @@
 import HeadLine from '../../components/common/HeadLine'
 import styled from 'styled-components'
-import { Container, Button } from '../../styles/GlobalStyle'
+import { Container, Button, ImgWrapper } from '../../styles/GlobalStyle'
 import Image from 'next/image'
 import { default as ministriesData } from '../../data/ministies'
 import Meta from '../../components/common/meta'
@@ -38,9 +38,9 @@ const ministries = () => {
         <div className='ministries'>
           {ministriesData.map((ministry) => (
             <div className='ministry' key={ministry.name}>
-              <div className='img-wrapper'>
+              <ImgWrapper className='img-wrapper'>
                 <Image src={ministry.imgUrl} layout='fill' objectFit='cover' />
-              </div>
+              </ImgWrapper>
               <div className='content-wrapper'>
                 <h3>{ministry.name}</h3>
                 {ministry.btnText && (
@@ -81,12 +81,9 @@ export const MinistriesContainer = styled(Container)`
     flex-direction: row-reverse;
   }
   .img-wrapper {
-    position: relative;
     width: 100%;
     min-width: 300px;
     height: 600px;
-    border-radius: 5px;
-    overflow: hidden;
     flex: 1;
     /* &:hover {
       box-shadow: 0 0 20px 0 var(--mint);

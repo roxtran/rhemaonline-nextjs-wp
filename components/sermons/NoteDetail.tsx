@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styled from 'styled-components'
 import paths from '../../paths'
+import { ImgWrapper } from '../../styles/GlobalStyle'
 import NoteType from '../../types/notes'
 import { formatDate } from '../../utils/formatter'
 
@@ -20,14 +21,14 @@ export default function NoteDetail({ note }: NoteDetailProps) {
       <Link href={`${paths.sermons}/notes/${note.slug}`}>
         <a>
           <div className='hover'></div>
-          <div className='img-wrapper'>
+          <ImgWrapper className='img-wrapper'>
             <Image
               src={note.featuredImage.node.sourceUrl}
               layout='fill'
               objectFit='cover'
               // objectPosition='center'
             />
-          </div>
+          </ImgWrapper>
           <div className='text'>
             <p className='date'>{formatDate(note.date)}</p>
             <h3>{note.title}</h3>
@@ -68,11 +69,9 @@ const NoteWrapper = styled.div`
   }
 
   .img-wrapper {
-    position: relative;
     height: 300px;
     z-index: 0;
     border-radius: 10px;
-    overflow: hidden;
   }
 
   .text {

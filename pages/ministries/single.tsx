@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { WomenContainer } from './women'
 import Image from 'next/image'
 import Meta from '../../components/common/meta'
+import { ImgWrapper } from '../../styles/GlobalStyle'
 
 const single = () => {
   return (
@@ -25,9 +26,9 @@ const single = () => {
             </p>
           </div>
           <div className='right-wrapper'>
-            <div className='img-wrapper'>
+            <ImgWrapper className='img-wrapper'>
               <Image src='/img/single.jpg' layout='fill' objectFit='cover' />
-            </div>
+            </ImgWrapper>
           </div>
         </div>
       </SingleContainer>

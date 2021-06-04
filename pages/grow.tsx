@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import HeadLine from '../components/common/HeadLine'
 import Meta from '../components/common/meta'
 import { default as growData } from '../data/grow'
-import { Container } from '../styles/GlobalStyle'
+import { Container, ImgWrapper } from '../styles/GlobalStyle'
 
 const grow = () => {
   return (
@@ -36,9 +36,9 @@ const grow = () => {
         <div className='grows'>
           {growData.map((grow) => (
             <div className='grow' key={grow.title}>
-              <div className='img-wrapper'>
+              <ImgWrapper className='img-wrapper'>
                 <Image src={grow.imgUrl} layout='fill' objectFit='cover' />
-              </div>
+              </ImgWrapper>
               <div className='content-wrapper'>
                 <h3>{grow.title}</h3>
                 <div
@@ -77,12 +77,9 @@ const GrowContainer = styled(Container)`
     flex-direction: row-reverse;
   }
   .img-wrapper {
-    position: relative;
     width: 100%;
     min-width: 300px;
     height: 600px;
-    border-radius: 5px;
-    overflow: hidden;
     flex: 1;
     /* &:hover {
       box-shadow: 0 0 20px 0 var(--mint);

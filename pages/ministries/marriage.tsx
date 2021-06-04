@@ -2,7 +2,7 @@ import HeadLine from '../../components/common/HeadLine'
 import styled from 'styled-components'
 import { WomenContainer } from './women'
 import Image from 'next/image'
-import { Button } from '../../styles/GlobalStyle'
+import { Button, ImgWrapper } from '../../styles/GlobalStyle'
 import Meta from '../../components/common/meta'
 
 const marriage = () => {
@@ -43,9 +43,9 @@ const marriage = () => {
             </Button>
           </div>
           <div className='right-wrapper'>
-            <div className='img-wrapper'>
+            <ImgWrapper className='img-wrapper'>
               <Image src='/img/marriage.jpg' layout='fill' objectFit='cover' />
-            </div>
+            </ImgWrapper>
           </div>
         </div>
       </MarriageContainer>

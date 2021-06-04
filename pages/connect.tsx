@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import HeadLine from '../components/common/HeadLine'
 import Image from 'next/image'
-import { Container } from '../styles/GlobalStyle'
+import { Container, ImgWrapper } from '../styles/GlobalStyle'
 import services from '../data/services'
 import Meta from '../components/common/meta'
 
@@ -33,9 +33,9 @@ export default function Connect() {
         <div className='services'>
           {services.map((service) => (
             <div className='service' id={service.id} key={service.id}>
-              <div className='img-wrapper'>
+              <ImgWrapper className='img-wrapper'>
                 <Image src={service.imgUrl} layout='fill' objectFit='cover' />
-              </div>
+              </ImgWrapper>
               <h3>{service.name}</h3>
               <a href={service.link} target='_blank'>
                 <div className='hover'>
@@ -81,10 +81,7 @@ const ConnectContainer = styled(Container)`
     }
   }
   .img-wrapper {
-    position: relative;
     height: 500px;
-    border-radius: 5px;
-    overflow: hidden;
     @media screen and (max-width: 640px) {
       height: 600px;
     }

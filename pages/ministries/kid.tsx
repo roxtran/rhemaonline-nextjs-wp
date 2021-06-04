@@ -1,6 +1,6 @@
 import HeadLine from '../../components/common/HeadLine'
 import styled from 'styled-components'
-import { Container, Button } from '../../styles/GlobalStyle'
+import { Container, Button, ImgWrapper } from '../../styles/GlobalStyle'
 import Image from 'next/image'
 import Meta from '../../components/common/meta'
 
@@ -20,13 +20,13 @@ const kid = () => {
         </div>
         <div className='items'>
           <div className='item'>
-            <div className='img-wrapper'>
+            <ImgWrapper className='img-wrapper'>
               <Image
                 src='/img/about-kid-world.jpg'
                 layout='fill'
                 objectFit='cover'
               />
-            </div>
+            </ImgWrapper>
             <div className='content-wrapper'>
               <div className='text-wrapper'>
                 <h2 style={{ color: '#799609' }}>About Kid's World</h2>
@@ -91,9 +91,9 @@ const kid = () => {
             </div>
           </div>
           <div className='item'>
-            <div className='img-wrapper'>
+            <ImgWrapper className='img-wrapper'>
               <Image src='/img/kid-serve.jpg' layout='fill' objectFit='cover' />
-            </div>
+            </ImgWrapper>
             <div className='content-wrapper'>
               <div className='text-wrapper'>
                 <h2 style={{ color: '#3F4CA3' }}>Serve!</h2>
@@ -119,13 +119,13 @@ const kid = () => {
             </div>
           </div>
           <div className='item'>
-            <div className='img-wrapper'>
+            <ImgWrapper className='img-wrapper'>
               <Image
                 src='/img/children-church.jpg'
                 layout='fill'
                 objectFit='cover'
               />
-            </div>
+            </ImgWrapper>
             <div className='content-wrapper'>
               <div className='text-wrapper'>
                 <h2 style={{ color: '#FA5F29' }}>Children's Church</h2>
@@ -142,9 +142,9 @@ const kid = () => {
             </div>
           </div>
           <div className='item'>
-            <div className='img-wrapper'>
+            <ImgWrapper className='img-wrapper'>
               <Image src='/img/kid.jpg' layout='fill' objectFit='cover' />
-            </div>
+            </ImgWrapper>
             <div className='content-wrapper'>
               <div className='text-wrapper'>
                 <h2 style={{ color: '#03438B' }}>Kid's World</h2>
@@ -163,7 +163,6 @@ const kid = () => {
           </div>
         </div>
         <div className='line'></div>
-
         <div className='faq'>
           <h2>FAQs</h2>
           <div className='accordion accordion-flush' id='kidFAQ'>
@@ -339,12 +338,9 @@ export const KidContainer = styled(Container)`
     flex-direction: row-reverse;
   }
   .img-wrapper {
-    position: relative;
     width: 100%;
     min-width: 400px;
     height: 600px;
-    border-radius: 5px;
-    overflow: hidden;
     flex: 1;
     /* &:hover {
       box-shadow: 0 0 20px 0 var(--mint);

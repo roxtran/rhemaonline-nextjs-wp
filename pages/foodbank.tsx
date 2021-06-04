@@ -2,7 +2,7 @@ import Image from 'next/image'
 import styled from 'styled-components'
 import HeadLine from '../components/common/HeadLine'
 import Meta from '../components/common/meta'
-import { Button, Container } from '../styles/GlobalStyle'
+import { Button, Container, ImgWrapper } from '../styles/GlobalStyle'
 
 const foodbank = () => {
   return (
@@ -11,9 +11,9 @@ const foodbank = () => {
       <HeadLine imgUrl='/img/foodbank-img.jpg' title='Foodbank' />
       <FoodbankContainer>
         <div className='content-wrapper'>
-          <div className='img-wrapper'>
+          <ImgWrapper className='img-wrapper'>
             <Image src='/img/foodbank.jpg' layout='fill' objectFit='cover' />
-          </div>
+          </ImgWrapper>
           <h2>Mission</h2>
           <p>
             The Rhema Foodbank is a food bank service assisting our community by
@@ -36,11 +36,8 @@ const FoodbankContainer = styled(Container)`
     max-width: 90vw;
   }
   .img-wrapper {
-    position: relative;
     width: 100%;
     height: 600px;
-    border-radius: 5px;
-    overflow: hidden;
   }
   h2 {
     margin-top: 2rem;

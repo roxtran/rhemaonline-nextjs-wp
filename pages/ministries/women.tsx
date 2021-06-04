@@ -1,6 +1,6 @@
 import HeadLine from '../../components/common/HeadLine'
 import styled from 'styled-components'
-import { Container } from '../../styles/GlobalStyle'
+import { Container, ImgWrapper } from '../../styles/GlobalStyle'
 import Image from 'next/image'
 import Meta from '../../components/common/meta'
 
@@ -87,9 +87,9 @@ const women = () => {
             </div>
           </div>
           <div className='right-wrapper'>
-            <div className='img-wrapper'>
+            <ImgWrapper className='img-wrapper'>
               <Image src='/img/women-bw.jpg' layout='fill' objectFit='cover' />
-            </div>
+            </ImgWrapper>
           </div>
         </div>
       </WomenContainer>
@@ -129,11 +129,8 @@ export const WomenContainer = styled(Container)`
     margin-left: 2rem;
   }
   .img-wrapper {
-    position: relative;
     width: 100%;
     height: 400px;
-    border-radius: 5px;
-    overflow: hidden;
   }
   p {
     margin: 1.5rem 0;

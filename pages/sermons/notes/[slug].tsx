@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import HeadLine from '../../../components/common/HeadLine'
 import Meta from '../../../components/common/meta'
 import Sidebar from '../../../components/sermons/Sidebar'
-import { Button } from '../../../styles/GlobalStyle'
+import { Button, ImgWrapper } from '../../../styles/GlobalStyle'
 import NoteType from '../../../types/notes'
 import { formatDate } from '../../../utils/formatter'
 import { SermonsContainer } from '../index'
@@ -33,13 +33,13 @@ export default function SermonNote({ note, notes }: Props) {
           <p className='date'>{formatDate(note.date)}</p>
           <div className='line'></div>
           <p>in Sermon Notes</p>
-          <div className='img-wrapper'>
+          <ImgWrapper className='img-wrapper'>
             <Image
               layout='fill'
               objectFit='cover'
               src={note.featuredImage.node.sourceUrl}
             />
-          </div>
+          </ImgWrapper>
           <article dangerouslySetInnerHTML={{ __html: note.content }}></article>
           <div className='btn-wrapper'>
             <div className='btn-bg'>
@@ -78,12 +78,9 @@ const NoteContainer = styled(SermonsContainer)`
     }
     .img-wrapper {
       margin-top: 1.5rem;
-      position: relative;
       width: 650px;
       max-width: 90vw;
       height: 450px;
-      border-radius: 5px;
-      overflow: hidden;
     }
     article {
       margin: 32px 0 48px;

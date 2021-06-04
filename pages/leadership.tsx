@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 import HeadLine from '../components/common/HeadLine'
-import { Container } from '../styles/GlobalStyle'
+import { Container, ImgWrapper } from '../styles/GlobalStyle'
 import leaders from '../data/leaders'
 import Meta from '../components/common/meta'
 
@@ -28,14 +28,14 @@ export default function Leadership() {
           <div className='leaders'>
             {leaders.map((leader) => (
               <div className='leader' key={leader.name}>
-                <div className='img-wrapper'>
+                <ImgWrapper className='img-wrapper'>
                   <Image
                     className='img'
                     src={leader.imgUrl}
                     width={250}
                     height={250}
                   />
-                </div>
+                </ImgWrapper>
                 <h3>{leader.name}</h3>
               </div>
             ))}
@@ -82,8 +82,7 @@ const LeadershipContainer = styled(Container)`
     border-radius: 5px;
 
     .img-wrapper {
-      border-radius: 200px;
-      overflow: hidden;
+      border-radius: 50%;
       cursor: pointer;
     }
     img:hover {

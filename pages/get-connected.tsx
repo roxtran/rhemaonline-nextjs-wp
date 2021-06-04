@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import HeadLine from '../components/common/HeadLine'
 import Meta from '../components/common/meta'
 import { default as getConnectedData } from '../data/get-connected'
-import { Button, Container } from '../styles/GlobalStyle'
+import { Button, Container, ImgWrapper } from '../styles/GlobalStyle'
 
 const getConnected = () => {
   return (
@@ -21,9 +21,9 @@ const getConnected = () => {
         <div className='items'>
           {getConnectedData.map((item) => (
             <div className='item' key={item.title} id={item.id}>
-              <div className='img-wrapper'>
+              <ImgWrapper className='img-wrapper'>
                 <Image src={item.imgUrl} layout='fill' objectFit='cover' />
-              </div>
+              </ImgWrapper>
               <div className='content-wrapper'>
                 <h3>{item.title}</h3>
                 <div
@@ -58,12 +58,9 @@ const ConnectedContainer = styled(Container)`
     flex-direction: row-reverse;
   }
   .img-wrapper {
-    position: relative;
     width: 50%;
     min-width: 300px;
     height: 600px;
-    border-radius: 5px;
-    overflow: hidden;
   }
   .content-wrapper {
     display: flex;
