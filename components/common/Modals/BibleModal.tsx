@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { IoClose } from 'react-icons/io5'
-import { ModalContainer } from './HomeModal'
+import { ModalContainer } from './HomeModal0'
 import { Dispatch, SetStateAction } from 'react'
 
 interface BibleModalProps {
@@ -33,6 +33,9 @@ const BibleModal = ({ openBible, setOpenBible }: BibleModalProps) => {
 }
 
 const BibleContainer = styled(ModalContainer)`
+  .modal-dialog {
+    margin: auto;
+  }
   .modal-body {
     padding: 0 !important;
   }

@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from 'react'
 import { IoClose } from 'react-icons/io5'
 import styled from 'styled-components'
-import { ModalContainer } from './HomeModal'
+import { ModalContainer } from './HomeModal0'
 
 interface ContactModalProps {
   openContactModal: boolean

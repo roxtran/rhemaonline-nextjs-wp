@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <>
       <Meta title='Home - Rhema - Changing & Affecting Lives!' />
-      <HomeModal openModal={openModal} setOpenModal={setOpenModal} />
+      {/* <HomeModal openModal={openModal} setOpenModal={setOpenModal} /> */}
       <Video src='/video/RCM-Homepage-Teaser2.mp4' width='100%' height='80vh' />
       <MiddleMenu />
       <Welcome />
