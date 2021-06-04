@@ -41,7 +41,7 @@ export default function Welcome() {
 const WelcomeWrapper = styled.div`
   position: relative;
   max-width: 1200px;
-  margin: 360px auto 240px;
+  margin: 320px auto 200px;
   display: flex;
   justify-content: center;
   align-items: center;
