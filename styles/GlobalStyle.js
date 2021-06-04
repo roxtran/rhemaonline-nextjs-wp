@@ -87,7 +87,7 @@ export const Button = styled.a`
       background: var(--blue);
     }
   }
-  &.#fff {
+  &.white {
     background: #fff;
     color: var(--textColor);
     &:hover {
