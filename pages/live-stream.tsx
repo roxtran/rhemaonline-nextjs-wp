@@ -12,7 +12,7 @@ export default function LiveStream({ src, width, height }: LiveStreamProps) {
     <>
       <Meta title='Live Stream - Rhema - Changing & Affecting Lives!' />
       <IframeVideo
-        src='https://www.youtube.com/embed/VyNqzqMePdE?modestbranding=1&autoplay=1&controls=0&rel=0'
+        src='https://www.youtube.com/embed/FE4p8e6JvZo?modestbranding=1&autoplay=1&controls=0&rel=0'
         width='100vw'
         height='100vh'
       />

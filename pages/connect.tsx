@@ -85,7 +85,6 @@ const ConnectContainer = styled(Container)`
     height: 500px;
     border-radius: 5px;
     overflow: hidden;
-
     @media screen and (max-width: 640px) {
       height: 600px;
     }

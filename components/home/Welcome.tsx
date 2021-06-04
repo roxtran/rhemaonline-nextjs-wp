@@ -9,10 +9,12 @@ export default function Welcome() {
     <WelcomeWrapper>
       <div className='img-wrapper'>
         <Image
-          src='/img/welcome-img.webp'
+          src='/img/welcome-img.jpg'
           alt='welcome image'
-          width={533}
-          height={300}
+          layout='fill'
+          objectFit='cover'
+          // width={625}
+          // height={360}
         />
       </div>
       <div className='text'>
@@ -45,6 +47,11 @@ const WelcomeWrapper = styled.div`
   align-items: center;
   flex-wrap: wrap;
   .img-wrapper {
+    flex: 1;
+    position: relative;
+    height: 380px;
+    border-radius: 5px;
+    overflow: hidden;
     box-shadow: -35px 35px 0 0 rgba(122, 207, 255, 0.3);
     &:hover {
       box-shadow: 0 0 0 0 rgba(122, 207, 255, 0.3);
@@ -100,6 +107,5 @@ const WelcomeWrapper = styled.div`
   }
 
   @media screen and (orientation: portrait) {
-    
   }
 `
