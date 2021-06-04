@@ -4,6 +4,7 @@ import { Container, Button, ImgWrapper } from '../../styles/GlobalStyle'
 import Image from 'next/image'
 import { default as ministriesData } from '../../data/ministies'
 import Meta from '../../components/common/meta'
+import Link from 'next/link'
 
 const ministries = () => {
   return (
@@ -44,7 +45,9 @@ const ministries = () => {
               <div className='content-wrapper'>
                 <h3>{ministry.name}</h3>
                 {ministry.btnText && (
-                  <Button href={ministry.btnLink}>{ministry.btnText}</Button>
+                  <Link href={ministry.btnLink}>
+                    <Button>{ministry.btnText}</Button>
+                  </Link>
                 )}
               </div>
             </div>
