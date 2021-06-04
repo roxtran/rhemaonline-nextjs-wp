@@ -2,12 +2,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styled from 'styled-components'
 import paths from '../../paths'
-import { Button } from '../../styles/GlobalStyle'
+import { Button, ImgWrapper } from '../../styles/GlobalStyle'
 
 export default function Welcome() {
   return (
     <WelcomeWrapper>
-      <div className='img-wrapper'>
+      <ImgWrapper className='img-wrapper'>
         <Image
           src='/img/welcome-img.jpg'
           alt='welcome image'
@@ -16,7 +16,7 @@ export default function Welcome() {
           // width={625}
           // height={360}
         />
-      </div>
+      </ImgWrapper>
       <div className='text'>
         <h2>Welcome to Rhema</h2>
         <p className='quote'>
@@ -38,9 +38,11 @@ export default function Welcome() {
     </WelcomeWrapper>
   )
 }
-const WelcomeWrapper = styled.div`
+
+export const WelcomeWrapper = styled.div`
   position: relative;
-  max-width: 1200px;
+  width: 1200px;
+  max-width: 80vw;
   margin: 320px auto 200px;
   display: flex;
   justify-content: center;
@@ -48,10 +50,7 @@ const WelcomeWrapper = styled.div`
   flex-wrap: wrap;
   .img-wrapper {
     flex: 1;
-    position: relative;
     height: 380px;
-    border-radius: 5px;
-    overflow: hidden;
     box-shadow: -35px 35px 0 0 rgba(122, 207, 255, 0.3);
     &:hover {
       box-shadow: 0 0 0 0 rgba(122, 207, 255, 0.3);
@@ -85,8 +84,8 @@ const WelcomeWrapper = styled.div`
       margin-top: 1.5rem;
     }
   }
+
   @media screen and (max-width: 1024px) {
-    padding: 0 5%;
     margin: 300px auto 220px;
     .image {
       box-shadow: 0 0 0 0 rgba(122, 207, 255, 0.3);
@@ -104,7 +103,6 @@ const WelcomeWrapper = styled.div`
     flex-direction: column;
     .text {
       margin-left: 0;
-      padding: 0 5%;
     }
     h2 {
       margin-top: 3rem;

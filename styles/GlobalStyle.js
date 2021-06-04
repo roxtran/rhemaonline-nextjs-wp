@@ -59,7 +59,6 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 export const Container = styled.div`
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,6 +94,12 @@ export const Button = styled.a`
       color: #fff;
     }
   }
+`
+
+export const ImgWrapper = styled.div`
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
 `
 
 export default GlobalStyle

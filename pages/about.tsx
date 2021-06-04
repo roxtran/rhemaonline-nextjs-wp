@@ -11,7 +11,7 @@ export default function About() {
         imgUrl='/img/about-img.jpg'
         title='About Us'
         height='500px'
-        blur='blur(15px)'
+        // blur='blur(15px)'
       />
       <AboutContainer>
         <div className='content-wrapper'>

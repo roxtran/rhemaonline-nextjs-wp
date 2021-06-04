@@ -7,6 +7,7 @@ import BibleModal from './Modals/BibleModal'
 
 export default function Footer() {
   const [openBible, setOpenBible] = useState(false)
+
   return (
     <>
       <BibleModal openBible={openBible} setOpenBible={setOpenBible} />
@@ -126,7 +127,7 @@ export default function Footer() {
             }}
           >
             <div className='icon'>
-              <Image src='/img/bible-icon.webp' width={30} height={30} />
+              <Image src='/img/social/bible-icon.svg' width={30} height={30} />
             </div>
           </a>
           <a
@@ -135,37 +136,53 @@ export default function Footer() {
             target='_blank'
           >
             <div className='icon'>
-              <Image src='/img/groups-icon.webp' width={30} height={30} />
+              <Image src='/img/social/groups-icon.svg' width={30} height={30} />
             </div>
           </a>
           <a title='Giving' href={paths.giving} target='_blank'>
             <div className='icon'>
-              <Image src='/img/giving-icon.webp' width={35} height={35} />
+              <Image src='/img/social/giving-icon.svg' width={35} height={35} />
             </div>
           </a>
           <a title='Instagram' href={paths.instagramAccount} target='_blank'>
             <div className='icon'>
-              <Image src='/img/instagram-icon.png' width={35} height={35} />
+              <Image
+                src='/img/social/instagram-icon.svg'
+                width={35}
+                height={35}
+              />
             </div>
           </a>
           <a title='Facebook' href={paths.facebookPage} target='_blank'>
             <div className='icon'>
-              <Image src='/img/facebook-icon.webp' width={30} height={30} />
+              <Image
+                src='/img/social/facebook-icon.svg'
+                width={30}
+                height={30}
+              />
             </div>
           </a>
           <a title='Twitter' href={paths.twitterAccount} target='_blank'>
             <div className='icon'>
-              <Image src='/img/twitter-icon.webp' width={35} height={35} />
+              <Image
+                src='/img/social/twitter-icon.svg'
+                width={35}
+                height={35}
+              />
             </div>
           </a>
           <a title='YouTube' href={paths.youtubeChannel} target='_blank'>
             <div className='icon'>
-              <Image src='/img/youtube-icon.webp' width={35} height={35} />
+              <Image
+                src='/img/social/youtube-icon.svg'
+                width={35}
+                height={35}
+              />
             </div>
           </a>
           <a title='Office 365' href={paths.office365Site} target='_blank'>
             <div className='icon'>
-              <Image src='/img/office-icon.webp' width={35} height={35} />
+              <Image src='/img/social/office-icon.svg' width={35} height={35} />
             </div>
           </a>
         </div>
@@ -179,7 +196,7 @@ export default function Footer() {
 
 const FooterWrapper = styled.div`
   position: relative;
-  background: var(--lightBG);
+  background: var(--lightGreyBG);
   height: 100%;
   padding: 3.5%;
   display: flex;

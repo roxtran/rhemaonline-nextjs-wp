@@ -8,7 +8,12 @@ export default function MiddleMenu() {
     <MiddleWrapper>
       <Link href={paths.leadership}>
         <a>
-          <Image src='/img/leadership-icon.png' width={50} height={50} />
+          <Image
+            src='/img/leadership-icon.png'
+            width={50}
+            height={50}
+            alt='leadership-icon'
+          />
           <p>
             With a warm smile, the leaders of Rhema Christian Ministries are
             taskes with operational and ecclesiatial exellence.
@@ -18,7 +23,12 @@ export default function MiddleMenu() {
       </Link>
       <Link href={paths.beliefs}>
         <a>
-          <Image src='/img/beliefs-icon.png' width={50} height={50} />
+          <Image
+            src='/img/beliefs-icon.png'
+            width={50}
+            height={50}
+            alt='beliefs-icon'
+          />
           <p>
             At Rhema what we believe is important to us but not as much as the
             one in whom we believe.
@@ -28,14 +38,24 @@ export default function MiddleMenu() {
       </Link>
       <Link href={paths.ministries}>
         <a>
-          <Image src='/img/ministries-icon.png' width={57.5} height={50} />
+          <Image
+            src='/img/ministries-icon.png'
+            width={57.5}
+            height={50}
+            alt='ministries-icon'
+          />
           <p>From our family to yours.</p>
           <h4>Ministries</h4>
         </a>
       </Link>
       <Link href={paths.grow}>
         <a>
-          <Image src='/img/grow-icon.png' width={50} height={50} />
+          <Image
+            src='/img/grow-icon.png'
+            width={50}
+            height={50}
+            alt='grow-icon'
+          />
           <p>
             We invite you to hear the voice of the Master calling you, even as
             “Deep calleth unto deep” (Psalm 42:7)
