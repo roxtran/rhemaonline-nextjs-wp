@@ -9,7 +9,7 @@ export default function MiddleMenu() {
       <Link href={paths.leadership}>
         <a>
           <Image
-            src='/img/leadership-icon.png'
+            src='/img/leadership-icon.svg'
             width={50}
             height={50}
             alt='leadership-icon'
@@ -24,7 +24,7 @@ export default function MiddleMenu() {
       <Link href={paths.beliefs}>
         <a>
           <Image
-            src='/img/beliefs-icon.png'
+            src='/img/beliefs-icon.svg'
             width={50}
             height={50}
             alt='beliefs-icon'
@@ -39,7 +39,7 @@ export default function MiddleMenu() {
       <Link href={paths.ministries}>
         <a>
           <Image
-            src='/img/ministries-icon.png'
+            src='/img/ministries-icon.svg'
             width={57.5}
             height={50}
             alt='ministries-icon'
@@ -51,7 +51,7 @@ export default function MiddleMenu() {
       <Link href={paths.grow}>
         <a>
           <Image
-            src='/img/grow-icon.png'
+            src='/img/grow-icon.svg'
             width={50}
             height={50}
             alt='grow-icon'

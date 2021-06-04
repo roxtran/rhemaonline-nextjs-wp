@@ -33,7 +33,7 @@ const men = () => {
               <a title='men@rhemaonline.ca' href='mailto:men@rhemaonline.ca'>
                 <div className='icon'>
                   <Image
-                    src='/img/email-icon-blue.jpg'
+                    src='/img/social/email-icon-blue.svg'
                     width={42}
                     height={42}
                   />

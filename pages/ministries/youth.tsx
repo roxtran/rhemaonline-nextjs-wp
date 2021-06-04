@@ -31,12 +31,24 @@ const youth = () => {
             </p>
             <div className='icons'>
               <a
+                title='@pluggedInRhema'
+                href='https://www.instagram.com/pluggedInRhema/'
+              >
+                <div className='icon'>
+                  <Image
+                    src='/img/social/instagram-icon-blue.svg'
+                    width={42}
+                    height={42}
+                  />
+                </div>
+              </a>
+              <a
                 title='wecare@rhemaonline.ca'
                 href='mailto:wecare@rhemaonline.ca'
               >
                 <div className='icon'>
                   <Image
-                    src='/img/email-icon-blue.jpg'
+                    src='/img/social/email-icon-blue.svg'
                     width={42}
                     height={42}
                   />
@@ -48,7 +60,7 @@ const youth = () => {
               >
                 <div className='icon'>
                   <Image
-                    src='/img/email-icon-blue.jpg'
+                    src='/img/social/email-icon-blue.svg'
                     width={42}
                     height={42}
                   />

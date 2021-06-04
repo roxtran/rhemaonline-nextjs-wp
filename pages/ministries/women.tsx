@@ -43,7 +43,7 @@ const women = () => {
               >
                 <div className='icon'>
                   <Image
-                    src='/img/email-icon-blue.jpg'
+                    src='/img/social/email-icon-blue.svg'
                     width={42}
                     height={42}
                   />
@@ -52,7 +52,7 @@ const women = () => {
               <a title='elu@rhemaonline.ca' href='mailto:elu@rhemaonline.ca'>
                 <div className='icon'>
                   <Image
-                    src='/img/email-icon-blue.jpg'
+                    src='/img/social/email-icon-blue.svg'
                     width={42}
                     height={42}
                   />
@@ -65,7 +65,7 @@ const women = () => {
               >
                 <div className='icon'>
                   <Image
-                    src='/img/twitter-icon-blue.jpg'
+                    src='/img/social/twitter-icon-blue.svg'
                     width={42}
                     height={42}
                   />
@@ -78,7 +78,7 @@ const women = () => {
               >
                 <div className='icon'>
                   <Image
-                    src='/img/twitter-icon-blue.jpg'
+                    src='/img/social/twitter-icon-blue.svg'
                     width={42}
                     height={42}
                   />

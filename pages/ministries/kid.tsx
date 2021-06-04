@@ -54,7 +54,7 @@ const kid = () => {
                   >
                     <div className='icon'>
                       <Image
-                        src='/img/email-icon-blue.jpg'
+                        src='/img/social/email-icon-blue.svg'
                         width={42}
                         height={42}
                       />
@@ -67,7 +67,7 @@ const kid = () => {
                   >
                     <div className='icon'>
                       <Image
-                        src='/img/facebook-icon-blue.jpg'
+                        src='/img/social/facebook-icon-blue.svg'
                         width={42}
                         height={42}
                       />
@@ -80,7 +80,7 @@ const kid = () => {
                   >
                     <div className='icon'>
                       <Image
-                        src='/img/twitter-icon-blue.jpg'
+                        src='/img/social/twitter-icon-blue.svg'
                         width={42}
                         height={42}
                       />
