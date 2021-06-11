@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Meta from '../components/common/meta'
-import HomeModal from '../components/common/Modals/HomeModal'
 import Video from '../components/common/Video'
 import MiddleMenu from '../components/home/MiddleMenu'
 import Newsletter from '../components/home/Newsletter'
