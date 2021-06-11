@@ -2,9 +2,9 @@ import Image from 'next/image'
 import styled from 'styled-components'
 import { Button, Container, ImgWrapper } from '../../styles/GlobalStyle'
 
-const NewsLetter = () => {
+const Newsletter = () => {
   return (
-    <NewsLetterWrapper>
+    <NewsletterWrapper>
       <div className='text'>
         <h2>Our Weekly Newsletter</h2>
         <p>
@@ -35,13 +35,13 @@ const NewsLetter = () => {
           />
         </ImgWrapper>
       </a>
-    </NewsLetterWrapper>
+    </NewsletterWrapper>
   )
 }
 
-export default NewsLetter
+export default Newsletter
 
-const NewsLetterWrapper = styled(Container)`
+const NewsletterWrapper = styled(Container)`
   flex-direction: row;
   width: 1200px;
   max-width: 80vw;
