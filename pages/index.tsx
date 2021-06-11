@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Meta from '../components/common/meta'
 import Video from '../components/common/Video'
 import MiddleMenu from '../components/home/MiddleMenu'
-import Newsletter from '../components/home/Newsletter'
+import NewsLetter from '../components/home/NewsLetter'
 import Subscribe from '../components/home/Subscribe'
 import Welcome from '../components/home/Welcome'
 
@@ -17,7 +17,7 @@ const Home = () => {
       <MiddleMenu />
       <Welcome />
       <Subscribe />
-      <Newsletter />
+      <NewsLetter />
     </>
   )
 }
