@@ -4,7 +4,7 @@ import Video from '../components/common/Video'
 import MiddleMenu from '../components/home/MiddleMenu'
 import Subscribe from '../components/home/Subscribe'
 import Welcome from '../components/home/Welcome'
-import Newsletter from '../components/home/Newsletters'
+import Newsletter from '../components/home/Newsletter'
 
 const Home = () => {
   const [openModal, setOpenModal] = useState(true)
