@@ -225,7 +225,7 @@ export const ModalContainer = styled.div`
       position: absolute;
       top: -5px;
       right: 2px;
-      font-size: 32px;
+      font-size: 2rem;
       &:hover {
         transform: scale(1.2);
       }

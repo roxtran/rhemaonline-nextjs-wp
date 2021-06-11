@@ -68,7 +68,7 @@ const LeadershipContainer = styled(Container)`
   .leaders {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     margin: 3rem 0;
   }
   .leader {
@@ -78,7 +78,7 @@ const LeadershipContainer = styled(Container)`
     align-items: center;
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 2rem;
-    margin: 1rem;
+    margin: 1.5rem;
     border-radius: 5px;
 
     .img-wrapper {

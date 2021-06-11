@@ -83,7 +83,7 @@ const StyledMenu = styled.div<{ open: boolean }>`
   .high-light {
     cursor: pointer;
     border-radius: 5px;
-    padding: 10px 25px;
+    padding: 0.5rem 1.5rem;
     text-align: center;
     margin-left: 1rem;
     letter-spacing: 1px;

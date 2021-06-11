@@ -33,6 +33,7 @@ const youth = () => {
               <a
                 title='@pluggedInRhema'
                 href='https://www.instagram.com/pluggedInRhema/'
+                target='_blank'
               >
                 <div className='icon'>
                   <Image
@@ -42,18 +43,7 @@ const youth = () => {
                   />
                 </div>
               </a>
-              <a
-                title='wecare@rhemaonline.ca'
-                href='mailto:wecare@rhemaonline.ca'
-              >
-                <div className='icon'>
-                  <Image
-                    src='/img/social/email-icon-blue.svg'
-                    width={42}
-                    height={42}
-                  />
-                </div>
-              </a>
+
               <a
                 title='pluggedin@rhemaonline.ca'
                 href='mailto:pluggedin@rhemaonline.ca'

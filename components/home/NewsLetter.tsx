@@ -7,11 +7,11 @@ const NewsLetter = () => {
   return (
     <NewsLetterWrapper>
       <div className='text'>
-        <h2>Our Weekly NewsLetter</h2>
+        <h2>Our Weekly Newsletter</h2>
         <p>
-          orem ipsum dolor sit amet consectetur adipiscing elit per, vivamus
-          potenti morbi egestas facilisis class tempus dictumst malesuada,
-          semper pulvinar auctor tristique mattis himenaeos dapibus.
+          This is our way of keeping you up to date on all our events,
+          activities, and relevant news. We invite you to check out what’s
+          happing @ Rhema this week.
         </p>
         <Button
           href='https://myemail.constantcontact.com/This-Week---Rhema.html?soid=1101184914406&aid=S98FghfAf14'

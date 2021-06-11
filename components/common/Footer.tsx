@@ -214,14 +214,14 @@ const FooterWrapper = styled.div`
     }
   }
   .icons {
-    margin: 20px 0;
+    margin: 1.25rem 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
   }
   .icon {
     cursor: pointer;
-    margin: 12px;
+    margin: 0.75rem;
     &:hover {
       transform: translateY(-5px);
     }

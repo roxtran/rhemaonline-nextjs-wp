@@ -16,10 +16,6 @@ export default [
     name: 'Daniel Eriazel'
   },
   {
-    imgUrl: '/img/leaders/Guy-Kayembe.jpg',
-    name: 'Guy Kayembe'
-  },
-  {
     imgUrl: '/img/leaders/Ephraim-Chiyangwa.jpg',
     name: 'Ephraim Chiyangwa'
   }

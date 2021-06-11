@@ -223,12 +223,12 @@ export const ModalContainer = styled.div`
     margin: auto;
   }
   .modal-header {
-    padding: 25px;
+    padding: 1.5rem;
     .closeBtn {
       position: absolute;
       top: -10px;
       right: 2px;
-      font-size: 32px;
+      font-size: 2rem;
       &:hover {
         transform: scale(1.2);
       }
@@ -242,7 +242,7 @@ export const ModalContainer = styled.div`
   .modal-body {
     height: 71vh;
     overflow-y: auto;
-    padding: 25px;
+    padding: 1.5rem;
     .line {
       width: 100%;
       height: 1px;

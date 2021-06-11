@@ -89,5 +89,5 @@ const HeadLineBtn = styled(Button)`
   font-weight: bold;
   border-radius: 50px;
   font-size: 1.1rem;
-  padding: 12px 44px;
+  padding: 0.75rem 2.75rem;
 `

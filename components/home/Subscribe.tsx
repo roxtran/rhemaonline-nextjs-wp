@@ -39,7 +39,7 @@ const SubscribeWrapper = styled.div`
   .white {
     width: 200px;
     height: 50px;
-    padding: 12px 22px;
+    padding: 0.75rem 1.375rem;
     border-radius: 30px;
     font-size: 1.1rem;
     font-weight: bold;

@@ -63,7 +63,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 64px 0;
+  padding: 4rem 0;
 `
 export const Button = styled.a`
   display: inline-block;
