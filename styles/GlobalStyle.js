@@ -62,10 +62,23 @@ const GlobalStyle = createGlobalStyle`
     margin: auto;
   }
 
-  .slick-arrow {
-    /* color: #000; */
-    /* left: 0;
-    right: 0; */
+  .slick-prev {
+    left: 20px;
+    z-index: 1;
+  }
+
+  .slick-next {
+    right: 20px;
+  }
+
+  .slick-prev, .slick-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .slick-prev:before, .slick-next:before {
+    font-size: 2rem;
+    text-shadow: 0 0 12px rgba(0 0 0 / 0.2);
   }
 `
 export const Container = styled.div`

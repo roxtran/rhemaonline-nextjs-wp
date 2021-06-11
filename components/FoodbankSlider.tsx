@@ -4,7 +4,7 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-import { Button, Container, ImgWrapper } from '../styles/GlobalStyle'
+import { ImgWrapper } from '../styles/GlobalStyle'
 import Image from 'next/image'
 
 export default function FoodbankSlider() {
@@ -13,8 +13,7 @@ export default function FoodbankSlider() {
     autoplay: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
+    fade: true
   }
   return (
     <Slider {...settings}>
