@@ -57,6 +57,16 @@ const GlobalStyle = createGlobalStyle`
     background-color: rgba(181, 217, 238, 0.2);
     font-weight: bold;
   }
+
+  .slick-slide img {
+    margin: auto;
+  }
+
+  .slick-arrow {
+    /* color: #000; */
+    /* left: 0;
+    right: 0; */
+  }
 `
 export const Container = styled.div`
   display: flex;

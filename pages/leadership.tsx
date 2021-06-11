@@ -89,7 +89,10 @@ const LeadershipContainer = styled(Container)`
       transform: scale(1.1);
     }
     h3 {
-      margin-top: 1rem;
+      padding-top: 1rem;
+      font-size: 1.25rem;
+      max-width: 280px;
+      text-align: center;
     }
   }
 `

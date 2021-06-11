@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import HeadLine from '../components/common/HeadLine'
 import Meta from '../components/common/meta'
 import { Button, Container, ImgWrapper } from '../styles/GlobalStyle'
+import FoodbankSlider from '../components/FoodbankSlider'
 
 const foodbank = () => {
   return (
@@ -11,9 +12,12 @@ const foodbank = () => {
       <HeadLine imgUrl='/img/foodbank-img.jpg' title='Foodbank' />
       <FoodbankContainer>
         <div className='content-wrapper'>
-          <ImgWrapper className='img-wrapper'>
+          {/* <ImgWrapper className='img-wrapper'>
             <Image src='/img/foodbank.jpg' layout='fill' objectFit='cover' />
-          </ImgWrapper>
+          </ImgWrapper> */}
+
+          <FoodbankSlider />
+
           <h2>Mission</h2>
           <p>
             The Rhema Foodbank is a food bank service assisting our community by

@@ -43,6 +43,14 @@ export default function Menu({ open, setOpen }: MenuProps) {
           Give
         </a>
       </NavLink>
+      <a
+        href='https://rhema.ccbchurch.com/goto/login'
+        target='_blank'
+        className='high-light member-login'
+        onClick={() => setOpen(!open)}
+      >
+        Login
+      </a>
     </StyledMenu>
   )
 }
@@ -85,7 +93,7 @@ const StyledMenu = styled.div<{ open: boolean }>`
     border-radius: 5px;
     padding: 0.5rem 1.5rem;
     text-align: center;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     letter-spacing: 1px;
     background: var(--highLight);
     color: #fff;
@@ -93,6 +101,9 @@ const StyledMenu = styled.div<{ open: boolean }>`
       /* border-bottom: 0; */
       background: var(--blue);
     }
+  }
+  .member-login {
+    background-color: var(--blue);
   }
   @media screen and (max-width: 1024px) {
     a {
