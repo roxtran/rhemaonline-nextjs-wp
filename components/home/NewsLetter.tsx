@@ -3,7 +3,7 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import { Button, Container, ImgWrapper } from '../../styles/GlobalStyle'
 
-const NewsLetter = () => {
+const Newsletter = () => {
   return (
     <NewsLetterWrapper>
       <div className='text'>
@@ -18,7 +18,7 @@ const NewsLetter = () => {
           target='_blank'
           className='btn'
         >
-          Call to Action
+          Learn More
         </Button>
       </div>
       <a
@@ -40,7 +40,7 @@ const NewsLetter = () => {
   )
 }
 
-export default NewsLetter
+export default Newsletter
 
 const NewsLetterWrapper = styled(Container)`
   flex-direction: row;
