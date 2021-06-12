@@ -47,7 +47,7 @@ export default function Menu({ open, setOpen }: Props) {
         <a
           href='https://rhema.ccbchurch.com/goto/login'
           target='_blank'
-          className='button'
+          className='button external'
           onClick={() => setOpen(!open)}
         >
           Login
@@ -93,7 +93,7 @@ const StyledMenu = styled.div<{ open: boolean }>`
     }
   }
   .btn-wrapper {
-    margin: 1.5rem 0;
+    margin: 0;
   }
   .button {
     cursor: pointer;
@@ -115,6 +115,13 @@ const StyledMenu = styled.div<{ open: boolean }>`
   .give {
     background-color: var(--high-light);
   }
+  /* .external:after {
+    content: '◥';
+    position: relative;
+    right: -3px;
+    top: -7px;
+    font-size: 0.65rem;
+  } */
   @media screen and (max-width: 1024px) {
     a {
       margin: 0.6rem;
@@ -132,7 +139,7 @@ const StyledMenu = styled.div<{ open: boolean }>`
     width: 250px;
     height: 100vh;
     padding-left: 1rem;
-    padding-top: 3.5rem;
+    padding-top: 3rem;
     box-shadow: var(--shadow);
     transform-origin: 1px;
     transition: all 0.3s ease-out;
@@ -141,9 +148,18 @@ const StyledMenu = styled.div<{ open: boolean }>`
     a {
       padding: 1rem;
       &[aria-current] {
-        border-bottom: 0 solid var(--mint);
-        color: var(--mint);
+        /* border-bottom: 0 solid var(--mint); */
+        /* color: var(--mint); */
+        background: linear-gradient(var(--mint), var(--mint)) 0 calc(100% - 3px) /
+          100% 7px no-repeat;
       }
+    }
+    .btn-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    .button {
+      margin: 1.25rem 1rem;
     }
     .orange {
       margin-top: 1rem;

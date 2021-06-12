@@ -34,6 +34,7 @@ const SubscribeWrapper = styled.div`
     margin-bottom: 2rem;
     text-align: center;
     max-width: 90vw;
+    color: #fff;
   }
 
   .white {

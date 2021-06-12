@@ -50,6 +50,8 @@ const HeadLineWrapper = styled.div<{ height: string }>`
   }
   h1 {
     color: #fff;
+    text-shadow: var(--text-shadow);
+    margin-bottom: 0.5rem;
   }
   .content-wrapper {
     max-width: 90vw;
@@ -61,13 +63,10 @@ const HeadLineWrapper = styled.div<{ height: string }>`
     transform: translate(-50%, -50%);
     z-index: 2;
   }
-  h1 {
-    text-shadow: var(--text-shadow);
-  }
   p {
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     text-shadow: var(--text-shadow);
   }
   @media screen and (max-width: 768px) {

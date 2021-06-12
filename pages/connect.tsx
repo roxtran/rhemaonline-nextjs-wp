@@ -78,7 +78,6 @@ const ConnectContainer = styled(Container)`
     text-align: center;
     h3 {
       margin: 0.5rem auto;
-      color: #fff;
     }
   }
   .img-wrapper {
@@ -102,6 +101,9 @@ const ConnectContainer = styled(Container)`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    h3 {
+      color: #fff;
+    }
     &:hover {
       opacity: 0.95;
       box-shadow: var(--shadow);
