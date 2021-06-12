@@ -10,14 +10,14 @@ const GlobalStyle = createGlobalStyle`
   html,
   body {
     background: #fff;
-    color: var(--textColor);
+    color: var(--text-color);
     font-family: 'Noto Sans', sans-serif;
     overflow-x: hidden;
     width: 100vw;
   }
   a {
     cursor: pointer;
-    color: var(--textColor);
+    color: var(--text-color);
     text-decoration: none;
     &:hover {
       color:var(--blue);
@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3, h4 {
     font-weight: bold;
+    color: var(--heading-color);
   }
   h1 {
     font-size: 3.75rem;
@@ -98,12 +99,12 @@ export const Button = styled.a`
   text-align: center;
   text-transform: capitalize;
   &:hover {
-    background: var(--lightBlue);
+    background: var(--light-blue);
     color: #fff;
     box-shadow: var(--shadow);
   }
   &.orange {
-    background: var(--highLight);
+    background: var(--high-light);
     color: #fff;
     &:hover {
       background: var(--blue);
@@ -111,7 +112,7 @@ export const Button = styled.a`
   }
   &.white {
     background: #fff;
-    color: var(--textColor);
+    color: var(--text-color);
     &:hover {
       background: var(--blue);
       color: #fff;

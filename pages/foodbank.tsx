@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import HeadLine from '../components/common/HeadLine'
 import Meta from '../components/common/meta'
 import { Button, Container, ImgWrapper } from '../styles/GlobalStyle'
-import FoodbankSlider from '../components/FoodbankSlider'
+import FoodbankSlider from '../components/common/ImageSlider'
+import slides from '../data/foodbank-slides'
 
 const foodbank = () => {
   return (
@@ -16,7 +17,7 @@ const foodbank = () => {
             <Image src='/img/foodbank.jpg' layout='fill' objectFit='cover' />
           </ImgWrapper> */}
 
-          <FoodbankSlider />
+          <FoodbankSlider slides={slides} />
           <div className='text-wrapper'>
             <h2>Mission</h2>
             <p>

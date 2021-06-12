@@ -2,12 +2,12 @@ import styled from 'styled-components'
 import NavLink from './NavLink'
 import paths from '../../../paths'
 
-interface MenuProps {
+interface Props {
   open: boolean
   setOpen: Function
 }
 
-export default function Menu({ open, setOpen }: MenuProps) {
+export default function Menu({ open, setOpen }: Props) {
   return (
     <StyledMenu open={open}>
       <NavLink href='/'>
@@ -59,12 +59,14 @@ const StyledMenu = styled.div<{ open: boolean }>`
   justify-content: center;
   align-items: center;
   a {
-    color: var(--textColor);
+    color: var(--heading-color);
     margin: 0.9rem;
     font-weight: bold;
     text-transform: capitalize;
     &[aria-current] {
-      border-bottom: 4px solid var(--mint);
+      /* border-bottom: 4px solid var(--mint); */
+      background: linear-gradient(var(--mint), var(--mint)) 0 calc(100% - 3px) /
+        100% 7px no-repeat;
     }
     &:hover {
       color: var(--mint);
@@ -95,7 +97,7 @@ const StyledMenu = styled.div<{ open: boolean }>`
     text-align: center;
     margin-left: 0.5rem;
     letter-spacing: 1px;
-    background: var(--highLight);
+    background: var(--high-light);
     color: #fff;
     &:hover {
       /* border-bottom: 0; */

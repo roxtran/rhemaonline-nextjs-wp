@@ -78,6 +78,7 @@ const ConnectContainer = styled(Container)`
     text-align: center;
     h3 {
       margin: 0.5rem auto;
+      color: #fff;
     }
   }
   .img-wrapper {

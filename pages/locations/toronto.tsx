@@ -108,6 +108,9 @@ const LocationContainer = styled(Container)`
   h1 {
     text-align: center;
   }
+  h2 {
+    color: #fff;
+  }
   .line {
     margin: 1rem auto;
     width: 10vw;
@@ -120,6 +123,9 @@ const LocationContainer = styled(Container)`
     align-items: flex-start;
     flex-wrap: wrap;
     margin: 2rem 0;
+    p {
+      margin-bottom: 0;
+    }
   }
   .icon-group {
     display: flex;

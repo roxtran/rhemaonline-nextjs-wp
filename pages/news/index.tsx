@@ -75,7 +75,7 @@ const NewsContainer = styled(Container)`
     margin-bottom: 1rem;
   }
   ul {
-    margin-left: 1rem;
+    margin-left: 1.5rem;
     /* list-style: none; */
   }
   li {

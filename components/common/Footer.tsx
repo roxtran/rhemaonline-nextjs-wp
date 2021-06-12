@@ -196,7 +196,7 @@ export default function Footer() {
 
 const FooterWrapper = styled.div`
   position: relative;
-  background: var(--lightGreyBG);
+  background: var(--light-grey-bg);
   height: 100%;
   padding: 3.5%;
   display: flex;

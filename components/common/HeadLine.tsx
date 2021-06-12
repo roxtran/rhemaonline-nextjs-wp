@@ -48,6 +48,9 @@ const HeadLineWrapper = styled.div<{ height: string }>`
   Image {
     z-index: 0;
   }
+  h1 {
+    color: #fff;
+  }
   .content-wrapper {
     max-width: 90vw;
     position: absolute;
@@ -59,13 +62,13 @@ const HeadLineWrapper = styled.div<{ height: string }>`
     z-index: 2;
   }
   h1 {
-    text-shadow: var(--textShadow);
+    text-shadow: var(--text-shadow);
   }
   p {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 2rem;
-    text-shadow: var(--textShadow);
+    text-shadow: var(--text-shadow);
   }
   @media screen and (max-width: 768px) {
     h1 {

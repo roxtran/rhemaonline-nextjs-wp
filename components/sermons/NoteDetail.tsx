@@ -3,14 +3,14 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import paths from '../../paths'
 import { ImgWrapper } from '../../styles/GlobalStyle'
-import NoteType from '../../types/notes'
+import NoteType from '../../types/note'
 import { formatDate } from '../../utils/formatter'
 
-interface NoteDetailProps {
+interface Props {
   note: NoteType
 }
 
-export default function NoteDetail({ note }: NoteDetailProps) {
+export default function NoteDetail({ note }: Props) {
   const summary = `<p>${note.excerpt.substring(
     0,
     250

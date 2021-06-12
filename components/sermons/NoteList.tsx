@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 import NoteDetail from './NoteDetail'
-import NoteType from '../../types/notes'
+import NoteType from '../../types/note'
 
-interface NoteListProps {
+interface Props {
   notes: NoteType[]
 }
 
-export default function NoteList({ notes }: NoteListProps) {
+export default function NoteList({ notes }: Props) {
   return (
     <ListWrapper>
       <h2>Sermon Notes</h2>

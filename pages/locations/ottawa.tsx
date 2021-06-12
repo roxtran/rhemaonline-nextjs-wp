@@ -107,6 +107,9 @@ const LocationContainer = styled(Container)`
   h1 {
     text-align: center;
   }
+  h2 {
+    color: #fff;
+  }
   .line {
     margin: 1rem auto;
     width: 10vw;

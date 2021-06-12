@@ -3,7 +3,7 @@ import HeadLine from '../../components/common/HeadLine'
 import Meta from '../../components/common/meta'
 import Sidebar from '../../components/sermons/Sidebar'
 import NotesList from '../../components/sermons/NoteList'
-import NoteType from '../../types/notes'
+import NoteType from '../../types/note'
 
 interface Props {
   notes: NoteType[]

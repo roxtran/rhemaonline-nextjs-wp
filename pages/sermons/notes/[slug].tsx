@@ -4,7 +4,7 @@ import HeadLine from '../../../components/common/HeadLine'
 import Meta from '../../../components/common/meta'
 import Sidebar from '../../../components/sermons/Sidebar'
 import { Button, ImgWrapper } from '../../../styles/GlobalStyle'
-import NoteType from '../../../types/notes'
+import NoteType from '../../../types/note'
 import { formatDate } from '../../../utils/formatter'
 import { SermonsContainer } from '../index'
 
@@ -71,7 +71,7 @@ const NoteContainer = styled(SermonsContainer)`
       font-style: italic;
     }
     .line {
-      margin: 16px 0;
+      margin: 0.5rem 0;
       width: 100%;
       height: 1px;
       background: rgba(0, 0, 0, 0.2);

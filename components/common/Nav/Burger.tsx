@@ -27,7 +27,7 @@ const StyledBurger = styled.a<{ open: boolean }>`
     width: 2rem;
     height: 0.25rem;
     border-radius: 1rem;
-    background: ${({ open }) => (open ? '#ccc' : 'var(--textColor)')};
+    background: ${({ open }) => (open ? '#ccc' : 'var(--text-color)')};
     transform-origin: 1px;
     transition: all 0.3s ease-out;
     &:nth-child(1) {
