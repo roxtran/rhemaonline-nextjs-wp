@@ -38,19 +38,21 @@ export default function Menu({ open, setOpen }: Props) {
       <NavLink href={paths.events}>
         <a onClick={() => setOpen(!open)}>Events</a>
       </NavLink>
-      <NavLink href={paths.giving}>
-        <a className='high-light' onClick={() => setOpen(!open)}>
-          Give
+      <div className='btn-wrapper'>
+        <NavLink href={paths.giving}>
+          <a className='button give' onClick={() => setOpen(!open)}>
+            Give
+          </a>
+        </NavLink>
+        <a
+          href='https://rhema.ccbchurch.com/goto/login'
+          target='_blank'
+          className='button'
+          onClick={() => setOpen(!open)}
+        >
+          Login
         </a>
-      </NavLink>
-      <a
-        href='https://rhema.ccbchurch.com/goto/login'
-        target='_blank'
-        className='high-light member-login'
-        onClick={() => setOpen(!open)}
-      >
-        Login
-      </a>
+      </div>
     </StyledMenu>
   )
 }
@@ -63,7 +65,7 @@ const StyledMenu = styled.div<{ open: boolean }>`
     margin: 0.9rem;
     font-weight: bold;
     text-transform: capitalize;
-    &[aria-current] {
+    &[aria-current]:not(.button) {
       /* border-bottom: 4px solid var(--mint); */
       background: linear-gradient(var(--mint), var(--mint)) 0 calc(100% - 3px) /
         100% 7px no-repeat;
@@ -90,22 +92,28 @@ const StyledMenu = styled.div<{ open: boolean }>`
       border-radius: 5px;
     }
   }
-  .high-light {
+  .btn-wrapper {
+    margin: 1.5rem 0;
+  }
+  .button {
     cursor: pointer;
     border-radius: 5px;
     padding: 0.5rem 1.5rem;
     text-align: center;
     margin-left: 0.5rem;
     letter-spacing: 1px;
-    background: var(--high-light);
+    background: var(--blue);
     color: #fff;
     &:hover {
       /* border-bottom: 0; */
       background: var(--blue);
     }
+    &[aria-current] {
+      background-color: var(--light-blue);
+    }
   }
-  .member-login {
-    background-color: var(--blue);
+  .give {
+    background-color: var(--high-light);
   }
   @media screen and (max-width: 1024px) {
     a {
