@@ -185,7 +185,7 @@ export const getStaticPaths = async () => {
     `
   })
 
-  const notes = data.sermonNotes.nodes
+  const notes = data?.sermonNotes?.nodes
 
   const paths = notes.map((note: { slug: string }) => ({
     params: { slug: note.slug }
