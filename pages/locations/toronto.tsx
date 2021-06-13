@@ -20,7 +20,7 @@ export default function Toronto() {
           <h1>Toronto Campus</h1>
           <div className='line'></div>
           <div className='icon-info'>
-            <div className='icon-group'>
+            <a href='tel:4164961794' className='icon-group'>
               <div className='icon'>
                 <Image src='/img/phone-icon.png' width={75} height={75} />
               </div>
@@ -28,7 +28,7 @@ export default function Toronto() {
                 <h4>Phone</h4>
                 <p>(416) 496-1794</p>
               </div>
-            </div>
+            </a>
             <div className='icon-group'>
               <div className='icon'>
                 <Image src='/img/fax-icon.png' width={75} height={75} />
@@ -38,7 +38,7 @@ export default function Toronto() {
                 <p>(416) 496-1795</p>
               </div>
             </div>
-            <div className='icon-group'>
+            <a href='mailto:info@rhemaonline.ca' className='icon-group'>
               <div className='icon'>
                 <Image src='/img/email-icon.png' width={75} height={75} />
               </div>
@@ -46,7 +46,7 @@ export default function Toronto() {
                 <h4>Email</h4>
                 <p>info@rhemaonline.ca</p>
               </div>
-            </div>
+            </a>
             <div className='icon-group'>
               <div className='icon'>
                 <Image src='/img/hours-icon.png' width={60} height={60} />
@@ -100,7 +100,8 @@ export default function Toronto() {
     </>
   )
 }
-const LocationContainer = styled(Container)`
+
+export const LocationContainer = styled(Container)`
   .content-wrapper {
     width: 1100px;
     max-width: 90vw;
@@ -240,7 +241,7 @@ const LocationContainer = styled(Container)`
     }
   }
 `
-const VideoWrapper = styled.div`
+export const VideoWrapper = styled.div`
   @media screen and (max-width: 640px) {
     Video {
       height: 60vh;

@@ -1,9 +1,10 @@
-import styled from 'styled-components'
-import HeadLine from '../../components/common/HeadLine'
 import Meta from '../../components/common/meta'
+import NoteType from '../../types/note'
+import HeadLine from '../../components/common/HeadLine'
 import Sidebar from '../../components/sermons/Sidebar'
 import NotesList from '../../components/sermons/NoteList'
-import NoteType from '../../types/note'
+import styled from 'styled-components'
+import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
 
 interface Props {
   notes: NoteType[]
@@ -39,11 +40,13 @@ export const SermonsContainer = styled.div`
 `
 
 export async function getStaticProps() {
-  const res = await fetch(process.env.WP_URL as string, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      query: `
+  const client = new ApolloClient({
+    uri: process.env.WP_URL as string,
+    cache: new InMemoryCache()
+  })
+
+  const { data } = await client.query({
+    query: gql`
       query SermonNotes {
         sermonNotes {
           nodes {
@@ -55,18 +58,16 @@ export async function getStaticProps() {
               node {
                 sourceUrl
               }
-            } 
+            }
           }
         }
       }
-      `
-    })
+    `
   })
-  const json = await res.json()
 
   return {
     props: {
-      notes: json?.data?.sermonNotes?.nodes
+      notes: data?.sermonNotes?.nodes
     },
     revalidate: 30
   }

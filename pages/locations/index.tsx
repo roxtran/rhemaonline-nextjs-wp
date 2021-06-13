@@ -1,12 +1,16 @@
-import styled from 'styled-components'
-import Video from '../../components/common/Video'
+import Head from 'next/head'
 import Image from 'next/image'
-import { Container } from '../../styles/GlobalStyle'
+import styled from 'styled-components'
 import Meta from '../../components/common/meta'
+import Video from '../../components/common/Video'
+import { Button, Container } from '../../styles/GlobalStyle'
 
-export default function Locations() {
+export default function Toronto() {
   return (
     <>
+      <Head>
+        <script src='https://js.churchcenter.com/modal/v1'></script>
+      </Head>
       <Meta title='Toronto Location - Rhema - Changing & Affecting Lives!' />
       <VideoWrapper>
         <Video src='/video/Rhema-Toronto.mp4' width='100%' height='75vh' />
@@ -16,7 +20,7 @@ export default function Locations() {
           <h1>Toronto Campus</h1>
           <div className='line'></div>
           <div className='icon-info'>
-            <div className='icon-group'>
+            <a href='tel:4164961794' className='icon-group'>
               <div className='icon'>
                 <Image src='/img/phone-icon.png' width={75} height={75} />
               </div>
@@ -24,7 +28,7 @@ export default function Locations() {
                 <h4>Phone</h4>
                 <p>(416) 496-1794</p>
               </div>
-            </div>
+            </a>
             <div className='icon-group'>
               <div className='icon'>
                 <Image src='/img/fax-icon.png' width={75} height={75} />
@@ -34,7 +38,7 @@ export default function Locations() {
                 <p>(416) 496-1795</p>
               </div>
             </div>
-            <div className='icon-group'>
+            <a href='mailto:info@rhemaonline.ca' className='icon-group'>
               <div className='icon'>
                 <Image src='/img/email-icon.png' width={75} height={75} />
               </div>
@@ -42,7 +46,7 @@ export default function Locations() {
                 <h4>Email</h4>
                 <p>info@rhemaonline.ca</p>
               </div>
-            </div>
+            </a>
             <div className='icon-group'>
               <div className='icon'>
                 <Image src='/img/hours-icon.png' width={60} height={60} />
@@ -80,12 +84,24 @@ export default function Locations() {
               ></iframe>
             </div>
           </div>
+          <div className='btn-wrapper'>
+            <div className='btn-bg'>
+              <Button
+                className='btn'
+                href='https://rhemachristianministries.churchcenter.com/people/forms/59260'
+                data-open-in-church-center-modal='true'
+              >
+                Contact Us
+              </Button>
+            </div>
+          </div>
         </div>
       </LocationContainer>
     </>
   )
 }
-const LocationContainer = styled(Container)`
+
+export const LocationContainer = styled(Container)`
   .content-wrapper {
     width: 1100px;
     max-width: 90vw;
@@ -108,6 +124,9 @@ const LocationContainer = styled(Container)`
     align-items: flex-start;
     flex-wrap: wrap;
     margin: 2rem 0;
+    p {
+      margin-bottom: 0;
+    }
   }
   .icon-group {
     display: flex;
@@ -135,7 +154,7 @@ const LocationContainer = styled(Container)`
   }
   .text-wrapper {
     background: var(--blue);
-    color: var(--white);
+    color: #fff;
     padding: 3rem 3.5rem 3.5rem 3.5rem;
     border-radius: 5px;
     height: 100%;
@@ -152,7 +171,6 @@ const LocationContainer = styled(Container)`
       margin: 1.3rem 0;
     }
   }
-
   .map-wrapper {
     z-index: 2;
     width: 650px;
@@ -164,7 +182,30 @@ const LocationContainer = styled(Container)`
     overflow: hidden;
     flex-wrap: wrap;
   }
-
+  .btn-wrapper {
+    margin-top: 84px;
+    position: relative;
+    z-index: 1;
+    &:before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 20%;
+      right: 20%;
+      height: 15px;
+      border-radius: 50%;
+      box-shadow: 0 0 12px rgb(0 0 0 / 15%);
+      z-index: -1;
+    }
+    .btn-bg {
+      background: #fff;
+      display: flex;
+      padding: 48px;
+    }
+    .btn {
+      margin: auto;
+    }
+  }
   @media screen and (max-width: 768px) {
     .icon-info {
       justify-content: center;
@@ -200,7 +241,7 @@ const LocationContainer = styled(Container)`
     }
   }
 `
-const VideoWrapper = styled.div`
+export const VideoWrapper = styled.div`
   @media screen and (max-width: 640px) {
     Video {
       height: 60vh;
