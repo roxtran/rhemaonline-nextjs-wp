@@ -134,7 +134,7 @@ export const getStaticProps = async ({ params }: Params) => {
 
   const { data } = await client.query({
     query: gql`
-      query ($id: ID!) {
+      query getNotes($id: ID!) {
         sermonNote(id: $id, idType: SLUG) {
           title
           date

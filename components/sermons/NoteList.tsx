@@ -10,7 +10,7 @@ export default function NoteList({ notes }: Props) {
   return (
     <ListWrapper>
       <h2>Sermon Notes</h2>
-      {notes?.slice(0, 2).map((note) => (
+      {notes?.map((note) => (
         <NoteDetail key={note.slug} note={note} />
       ))}
     </ListWrapper>

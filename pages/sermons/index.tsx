@@ -8,9 +8,10 @@ import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
 
 interface Props {
   notes: NoteType[]
+  list: NoteType[]
 }
 
-export default function Sermons({ notes }: Props) {
+export default function Sermons({ notes, list }: Props) {
   // console.log(notes.categories.nodes.name)
   return (
     <>
@@ -18,7 +19,7 @@ export default function Sermons({ notes }: Props) {
       <HeadLine imgUrl='/img/sermons-img.jpg' title='Sermons' />
       <SermonsContainer>
         <NotesList notes={notes} />
-        <Sidebar title='Recent Notes' notes={notes} />
+        <Sidebar title='Recent Notes' notes={list} />
       </SermonsContainer>
     </>
   )
@@ -47,8 +48,8 @@ export async function getStaticProps() {
 
   const { data } = await client.query({
     query: gql`
-      query SermonNotes {
-        sermonNotes {
+      query getSermonNotes($first: Int!, $after: String) {
+        sermonNotes(first: $first, after: $after) {
           nodes {
             title
             slug
@@ -61,13 +62,25 @@ export async function getStaticProps() {
             }
           }
         }
+        sermonList: sermonNotes {
+          nodes {
+            title
+            slug
+            date
+          }
+        }
       }
-    `
+    `,
+    variables: {
+      first: 2,
+      after: null
+    }
   })
 
   return {
     props: {
-      notes: data?.sermonNotes?.nodes
+      notes: data?.sermonNotes?.nodes,
+      list: data?.sermonList?.nodes
     },
     revalidate: 30
   }
