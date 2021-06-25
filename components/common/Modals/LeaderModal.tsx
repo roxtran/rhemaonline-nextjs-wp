@@ -68,10 +68,12 @@ export default function LeaderModal({
                   <h2 className='name'>{leader.name}</h2>
                   <div className='line'></div>
                 </div>
-                <div
-                  className='modal-right'
-                  dangerouslySetInnerHTML={{ __html: leader.bio }}
-                ></div>
+                <div className='modal-right'>
+                  <div
+                    className='bio'
+                    dangerouslySetInnerHTML={{ __html: leader.bio }}
+                  ></div>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -123,7 +125,6 @@ const StyledModal = styled(ModalContainer)`
     flex-direction: column;
     flex: 40%;
     margin-right: 3rem;
-    padding-bottom: 1rem;
     .line {
       background: var(--grey-line);
       height: 1px;
@@ -171,7 +172,9 @@ const StyledModal = styled(ModalContainer)`
     }
     @media screen and (max-width: 640px) {
       overflow: visible;
-      overflow-y: visible;
     }
+  }
+  .bio {
+    padding-bottom: 5%;
   }
 `
