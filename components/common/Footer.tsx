@@ -76,10 +76,18 @@ export default function Footer() {
                   <a>Groups</a>
                 </Link>
               </li>
+            </ul>
+            <ul>
+              <h4>Finance</h4>
               <li>
                 <Link href={paths.giving}>
                   <a>Give</a>
                 </Link>
+              </li>
+              <li>
+                <a href='/pdf/RCM-2020-Audited-Financial-Statements.pdf'>
+                  2020 Financial Statement
+                </a>
               </li>
             </ul>
           </div>
@@ -208,6 +216,9 @@ const FooterWrapper = styled.div`
     h4 {
       margin-bottom: 0.75rem;
       margin-left: -20px;
+    }
+    ul {
+      margin-bottom: 1.5rem;
     }
     li {
       margin: 0.25rem 0;

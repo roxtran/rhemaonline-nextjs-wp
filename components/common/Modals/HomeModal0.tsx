@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction } from 'react'
 import { IoClose } from 'react-icons/io5'
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 interface HomeModalProps {
   openModal: boolean
@@ -197,7 +198,7 @@ const HomeModal = ({ openModal, setOpenModal }: HomeModalProps) => {
   )
 }
 
-export const ModalContainer = styled.div`
+export const ModalContainer = styled(motion.div)`
   background: rgba(0, 0, 0, 0.7);
   position: fixed;
   top: 0;
@@ -205,13 +206,13 @@ export const ModalContainer = styled.div`
   width: 100vw;
   height: 100vh;
   z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* overflow-y: initial !important; */
   .modal-dialog {
     background: #fff;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     width: 1100px;
     max-width: 90vw;
     height: 80vh;

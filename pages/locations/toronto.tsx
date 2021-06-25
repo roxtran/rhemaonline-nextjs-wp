@@ -144,7 +144,7 @@ export const LocationContainer = styled(Container)`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2rem 0 1rem 0;
+    margin: 2rem 1rem;
     /* filter: hue-rotate(-20deg); */
   }
   .map-group {

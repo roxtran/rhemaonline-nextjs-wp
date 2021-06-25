@@ -1,11 +1,16 @@
+import React, { useState } from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
 import HeadLine from '../components/common/HeadLine'
+import LeaderModal from '../components/common/Modals/LeaderModal'
 import { Container, ImgWrapper } from '../styles/GlobalStyle'
 import leaders from '../data/leaders'
 import Meta from '../components/common/meta'
 
 export default function Leadership() {
+  const [openModal, setOpenModal] = useState(false)
+  const [selectedLeader, setSelectedLeader] = useState<any | null>(null)
+
   return (
     <>
       <Meta title='Leadership - Rhema - Changing & Affecting Lives!' />
@@ -14,6 +19,11 @@ export default function Leadership() {
         title='Leadership'
         height='450px'
         // blur='blur(5px)'
+      />
+      <LeaderModal
+        openModal={openModal}
+        setOpenModal={setOpenModal}
+        leader={selectedLeader}
       />
       <LeadershipContainer>
         <div className='content-wrapper'>
@@ -27,17 +37,24 @@ export default function Leadership() {
           </div>
           <div className='leaders'>
             {leaders.map((leader) => (
-              <div className='leader' key={leader.name}>
+              <a
+                className='leader'
+                key={leader.name}
+                onClick={() => {
+                  setOpenModal(true)
+                  setSelectedLeader(leader)
+                }}
+              >
                 <ImgWrapper className='img-wrapper'>
                   <Image
                     className='img'
-                    src={leader.imgUrl}
+                    src={leader.smallImg}
                     width={250}
                     height={250}
                   />
                 </ImgWrapper>
                 <h3>{leader.name}</h3>
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -80,12 +97,11 @@ const LeadershipContainer = styled(Container)`
     padding: 2rem;
     margin: 1.5rem;
     border-radius: 5px;
-
+    cursor: pointer;
     .img-wrapper {
       border-radius: 50%;
-      cursor: pointer;
     }
-    img:hover {
+    &:hover img {
       transform: scale(1.1);
     }
     h3 {

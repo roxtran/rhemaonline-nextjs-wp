@@ -1,0 +1,177 @@
+import styled from 'styled-components'
+import { IoClose } from 'react-icons/io5'
+import { ModalContainer } from './HomeModal0'
+import { Dispatch, SetStateAction } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import LeaderType from '../../../types/leader'
+import Image from 'next/image'
+import { ImgWrapper } from '../../../styles/GlobalStyle'
+
+const slideDown = {
+  hidden: { y: -200, opacity: 0 },
+  show: {
+    y: [0, -50, 0],
+    opacity: 1,
+    transition: { duration: 0.25, ease: 'easeIn' },
+  },
+  exit: {
+    opacity: 1,
+    y: 400,
+    // transition: { duration: 0.25, ease: 'easeIn' },
+  },
+}
+
+interface Props {
+  openModal: boolean
+  setOpenModal: Dispatch<SetStateAction<boolean>>
+  leader: LeaderType | null
+}
+
+export default function LeaderModal({
+  openModal,
+  setOpenModal,
+  leader,
+}: Props) {
+  return (
+    <AnimatePresence exitBeforeEnter>
+      {openModal && leader && (
+        <StyledModal
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.25 }}
+          exit={{ opacity: 0 }}
+        >
+          <motion.div
+            className='modal-dialog'
+            variants={slideDown}
+            initial='hidden'
+            animate='show'
+            exit='exit'
+          >
+            <div className='modal-content'>
+              <div className='modal-header'>
+                <a onClick={() => setOpenModal(false)} className='closeBtn'>
+                  <IoClose />
+                </a>
+              </div>
+              <div className='modal-body'>
+                <div className='modal-left'>
+                  <ImgWrapper className='img-wrapper'>
+                    <Image
+                      src={leader.largeImg}
+                      layout='fill'
+                      objectFit='cover'
+                      objectPosition='top'
+                      // placeholder='blur'
+                    />
+                  </ImgWrapper>
+                  <h2 className='name'>{leader.name}</h2>
+                  <div className='line'></div>
+                </div>
+                <div
+                  className='modal-right'
+                  dangerouslySetInnerHTML={{ __html: leader.bio }}
+                ></div>
+              </div>
+            </div>
+          </motion.div>
+        </StyledModal>
+      )}
+    </AnimatePresence>
+  )
+}
+
+const StyledModal = styled(ModalContainer)`
+  background: rgb(0 0 0 / 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .modal-dialog {
+    background: #fff;
+    position: relative;
+    width: 1100px;
+    max-width: 90vw;
+    height: 85vh;
+    border-radius: 5px;
+  }
+
+  .modal-body {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    height: 80vh;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5% 0 5% 5%;
+    @media screen and (max-width: 640px) {
+      height: 75vh;
+      padding-top: 5% !important;
+      flex-direction: column;
+      padding-top: 3rem;
+      overflow: hidden;
+      overflow-y: auto;
+    }
+  }
+  .modal-left {
+    display: flex;
+    flex-direction: column;
+    flex: 40%;
+    margin-right: 3rem;
+    padding-bottom: 1rem;
+    .line {
+      background: var(--grey-line);
+      height: 1px;
+      width: 50%;
+      margin: 0.5rem 0;
+    }
+    h2 {
+      color: var(--blue);
+      font-size: 2rem;
+    }
+    @media screen and (max-width: 640px) {
+      margin-right: 0;
+      width: 100%;
+      padding-right: 5%;
+      h2 {
+        font-size: 1.5rem;
+      }
+      h3 {
+        font-size: 1.15rem;
+      }
+      .line {
+        margin: 0.25rem 0;
+      }
+    }
+  }
+  ${ImgWrapper} {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 1.5rem;
+    box-shadow: -4px 5px 15px -10px rgb(0 0 0 / 0.5);
+    @media screen and (max-width: 640px) {
+      height: 200px;
+      width: 200px;
+      margin-bottom: 1rem;
+    }
+  }
+  .modal-right {
+    flex: 50%;
+    height: 100%;
+    padding-right: 5%;
+    overflow: hidden;
+    overflow-y: auto;
+    p {
+      margin-bottom: 0.5rem;
+    }
+    @media screen and (max-width: 640px) {
+      overflow: visible;
+      overflow-y: visible;
+    }
+  }
+`

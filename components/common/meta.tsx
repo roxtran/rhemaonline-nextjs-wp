@@ -32,7 +32,7 @@ const Meta = ({ title, desc, ogImage, canonical }: MetaProps) => (
     <link rel='stylesheet' href='' />
     <meta property='og:image' content={ogImage || '/img/og/home.jpg'} />
     <meta name='twitter:image' content='' />
-    <link rel='canonical' href={canonical || ''} />
+    <link rel='canonical' href={canonical || 'https://rhemaonline.ca'} />
     <script type='text/javascript' src=''></script>
   </Head>
 )
