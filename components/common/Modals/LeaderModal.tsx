@@ -99,7 +99,6 @@ const StyledModal = styled(ModalContainer)`
     position: relative;
     width: 1100px;
     max-width: 90vw;
-    height: 85vh;
     border-radius: 5px;
   }
 
