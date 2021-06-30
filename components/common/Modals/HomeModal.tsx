@@ -67,6 +67,9 @@ export const ModalContainer = styled(motion.div)`
     border-radius: 5px;
     overflow: hidden;
   }
+  .modal-content {
+    height: 100%;
+  }
   .modal-header {
     padding: 1.5rem 2.5rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -88,29 +91,6 @@ export const ModalContainer = styled(motion.div)`
     height: 71vh;
     overflow-y: auto;
     padding: 0;
-    .line {
-      width: 100%;
-      height: 1px;
-      margin: 2rem 0;
-      background: rgba(0, 0, 0, 0.2);
-    }
-    p {
-      margin-bottom: 1rem;
-    }
-    li {
-      margin-bottom: 0.5rem;
-    }
-    ul {
-      margin-left: 2rem;
-      margin-bottom: 2rem;
-    }
-    .vaccines {
-      display: flex;
-      flex-wrap: wrap;
-      li {
-        flex: 1;
-      }
-    }
   }
   @media screen and (max-width: 640px) {
     .modal-dialog {
@@ -123,7 +103,6 @@ export const ModalContainer = styled(motion.div)`
       line-height: 1.2;
     }
     .modal-body {
-      padding: 1.5rem;
       height: 75vh;
     }
     .vaccines {
