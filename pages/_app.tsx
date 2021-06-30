@@ -37,6 +37,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           integrity='sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW'
           crossOrigin='anonymous'
         ></script>
+        <script src='https://js.churchcenter.com/modal/v1'></script>
       </Head>
       <Layout>
         <HomeModal openModal={openModal} setOpenModal={setOpenModal} />

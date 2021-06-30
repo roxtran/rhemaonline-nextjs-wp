@@ -34,7 +34,12 @@ export default function HeadLine({
         <h1>{title}</h1>
         {desc && <p>{desc}</p>}
         {btnText && (
-          <HeadLineBtn className='white' href={btnLink} target='_blank'>
+          <HeadLineBtn
+            className='white'
+            href={btnLink}
+            target='_blank'
+            data-open-in-church-center-modal='true'
+          >
             {btnText}
           </HeadLineBtn>
         )}

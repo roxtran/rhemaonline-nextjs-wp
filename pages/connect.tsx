@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import HeadLine from '../components/common/HeadLine'
+import Link from 'next/link'
 import Image from 'next/image'
 import { Container, ImgWrapper } from '../styles/GlobalStyle'
 import services from '../data/services'
@@ -14,7 +15,7 @@ export default function Connect() {
         title='We Care'
         desc='We are here for you.'
         btnText='Contact Us'
-        btnLink='https://rhema.ccbchurch.com/goto/forms/91/responses/new'
+        btnLink='https://rhemachristianministries.churchcenter.com/people/forms/59452'
         height='550px'
       />
       <ConnectContainer>
@@ -37,15 +38,31 @@ export default function Connect() {
                 <Image src={service.imgUrl} layout='fill' objectFit='cover' />
               </ImgWrapper>
               <h3>{service.name}</h3>
-              <a href={service.link} target='_blank'>
-                <div className='hover'>
-                  <div className='text-wrapper'>
-                    <h3>{service.name}</h3>
-                    <p>{service.desc}</p>
-                    <span>{service.linkText}</span>
+              {service.link.includes(
+                'https://rhemachristianministries.churchcenter.com/people/forms/'
+              ) ? (
+                <a href={service.link} data-open-in-church-center-modal='true'>
+                  <div className='hover'>
+                    <div className='text-wrapper'>
+                      <h3>{service.name}</h3>
+                      <p>{service.desc}</p>
+                      <span>{service.linkText}</span>
+                    </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              ) : (
+                <Link href={service.link}>
+                  <a>
+                    <div className='hover'>
+                      <div className='text-wrapper'>
+                        <h3>{service.name}</h3>
+                        <p>{service.desc}</p>
+                        <span>{service.linkText}</span>
+                      </div>
+                    </div>
+                  </a>
+                </Link>
+              )}
             </div>
           ))}
         </div>
