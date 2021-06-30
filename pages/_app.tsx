@@ -4,8 +4,22 @@ import '../styles/GlobalStyle'
 import GlobalStyle from '../styles/GlobalStyle'
 import Layout from '../components/common/Layout'
 import { AppProps } from 'next/dist/next-server/lib/router/router'
+import { useState, useEffect } from 'react'
+import HomeModal from '../components/common/Modals/HomeModal'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [openModal, setOpenModal] = useState(false)
+
+  useEffect(() => {
+    const showModal = setTimeout(() => {
+      setOpenModal(true)
+    }, 30000)
+
+    return () => {
+      clearTimeout(showModal)
+    }
+  }, [])
+
   return (
     <>
       <Head>
@@ -25,6 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         ></script>
       </Head>
       <Layout>
+        <HomeModal openModal={openModal} setOpenModal={setOpenModal} />
         <GlobalStyle />
         <Component {...pageProps} />
       </Layout>

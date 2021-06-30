@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { IoClose } from 'react-icons/io5'
-import { ModalContainer } from './HomeModal0'
+import { ModalContainer } from './HomeModal'
 import { Dispatch, SetStateAction } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
