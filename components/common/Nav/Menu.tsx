@@ -145,15 +145,13 @@ const StyledMenu = styled.div<{ open: boolean }>`
     transition: all 0.3s ease-out;
     transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
     opacity: ${({ open }) => (open ? 1 : 0)};
-    a {
-      padding: 0.5rem;
+    a,
+    .button {
+      margin: 1rem;
     }
     .btn-wrapper {
       display: flex;
       flex-direction: column;
-    }
-    .button {
-      margin: 1.25rem 1rem;
     }
     .orange {
       margin-top: 1rem;
