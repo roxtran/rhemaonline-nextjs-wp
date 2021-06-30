@@ -65,7 +65,7 @@ const StyledMenu = styled.div<{ open: boolean }>`
     margin: 0.9rem;
     font-weight: bold;
     text-transform: capitalize;
-    &[aria-current]:not(.button) {
+    &:not(.button)[aria-current] {
       /* border-bottom: 4px solid var(--mint); */
       background: linear-gradient(var(--mint), var(--mint)) 0 calc(100% - 3px) /
         100% 7px no-repeat;
@@ -146,13 +146,7 @@ const StyledMenu = styled.div<{ open: boolean }>`
     transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
     opacity: ${({ open }) => (open ? 1 : 0)};
     a {
-      padding: 1rem;
-      &[aria-current] {
-        /* border-bottom: 0 solid var(--mint); */
-        /* color: var(--mint); */
-        background: linear-gradient(var(--mint), var(--mint)) 0 calc(100% - 3px) /
-          100% 7px no-repeat;
-      }
+      padding: 0.5rem;
     }
     .btn-wrapper {
       display: flex;
