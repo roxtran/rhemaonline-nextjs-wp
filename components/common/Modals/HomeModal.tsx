@@ -1,7 +1,8 @@
 import { Dispatch, SetStateAction } from 'react'
 import { IoClose } from 'react-icons/io5'
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
+import { slideDown } from './BibleModal'
 
 interface HomeModalProps {
   openModal: boolean
@@ -9,25 +10,39 @@ interface HomeModalProps {
 }
 
 const HomeModal = ({ openModal, setOpenModal }: HomeModalProps) => {
-  if (!openModal) return null
   return (
-    <ModalContainer>
-      <div className='modal-dialog'>
-        <div className='modal-content'>
-          <div className='modal-header'>
-            <a onClick={() => setOpenModal(false)} className='closeBtn'>
-              <IoClose />
-            </a>
-          </div>
-          <iframe
-            className='modal-body'
-            src='https://rhemaonline.surveysparrow.com/s/Feedback-Survey-for-Management-Stakeholders-/tt-e016f9'
-            width='100%'
-            height='100%'
-          ></iframe>
-        </div>
-      </div>
-    </ModalContainer>
+    <AnimatePresence exitBeforeEnter>
+      {openModal && (
+        <ModalContainer
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.25 }}
+          exit={{ opacity: 0 }}
+        >
+          <motion.div
+            className='modal-dialog'
+            variants={slideDown}
+            initial='hidden'
+            animate='show'
+            exit='exit'
+          >
+            <div className='modal-content'>
+              <div className='modal-header'>
+                <a onClick={() => setOpenModal(false)} className='closeBtn'>
+                  <IoClose />
+                </a>
+              </div>
+              <iframe
+                className='modal-body'
+                src='https://rhemaonline.surveysparrow.com/s/Feedback-Survey-for-Management-Stakeholders-/tt-e016f9'
+                width='100%'
+                height='100%'
+              ></iframe>
+            </div>
+          </motion.div>
+        </ModalContainer>
+      )}
+    </AnimatePresence>
   )
 }
 

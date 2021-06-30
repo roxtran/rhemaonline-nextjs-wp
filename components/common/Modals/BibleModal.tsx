@@ -4,7 +4,7 @@ import { ModalContainer } from './HomeModal'
 import { Dispatch, SetStateAction } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const slideDown = {
+export const slideDown = {
   hidden: { y: -200, opacity: 0 },
   show: {
     y: [0, -50, 0],
