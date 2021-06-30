@@ -85,7 +85,10 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href='/pdf/RCM-2020-Audited-Financial-Statements.pdf'>
+                <a
+                  href='/pdf/RCM-2020-Audited-Financial-Statements.pdf'
+                  target='_blank'
+                >
                   2020 Financial Statement
                 </a>
               </li>
