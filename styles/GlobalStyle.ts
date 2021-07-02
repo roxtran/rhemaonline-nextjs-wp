@@ -7,7 +7,6 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     transition: all 0.4s ease-out;
   }
-  html,
   body {
     background: #fff;
     color: var(--text-color);

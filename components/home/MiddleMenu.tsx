@@ -2,12 +2,43 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styled from 'styled-components'
 import paths from '../../paths'
+import { motion } from 'framer-motion'
+
+const slideRight = {
+  hidden: { x: -100, opacity: 0 },
+  show: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.25, ease: 'easeIn', delay: 0.25 },
+  },
+  exit: {
+    opacity: 1,
+    x: 200,
+  },
+}
+const slideLeft = {
+  hidden: { x: 100, opacity: 0 },
+  show: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.25, ease: 'easeIn', delay: 0.5 },
+  },
+  exit: {
+    opacity: 1,
+    x: -200,
+  },
+}
 
 export default function MiddleMenu() {
   return (
     <MiddleWrapper>
       <Link href={paths.leadership}>
-        <a>
+        <motion.a
+          variants={slideRight}
+          initial='hidden'
+          animate='show'
+          exit='exit'
+        >
           <Image
             src='/img/leadership-icon.svg'
             width={50}
@@ -19,10 +50,16 @@ export default function MiddleMenu() {
             taskes with operational and ecclesiatial exellence.
           </p>
           <h4>Leadership</h4>
-        </a>
+        </motion.a>
       </Link>
       <Link href={paths.beliefs}>
-        <a>
+        <motion.a
+          variants={slideRight}
+          initial='hidden'
+          animate='show'
+          exit='exit'
+          transition={{ type: 'spring', stiffness: 100 }}
+        >
           <Image
             src='/img/beliefs-icon.svg'
             width={50}
@@ -34,10 +71,15 @@ export default function MiddleMenu() {
             one in whom we believe.
           </p>
           <h4>Beliefs</h4>
-        </a>
+        </motion.a>
       </Link>
       <Link href={paths.ministries}>
-        <a>
+        <motion.a
+          variants={slideLeft}
+          initial='hidden'
+          animate='show'
+          exit='exit'
+        >
           <Image
             src='/img/ministries-icon.svg'
             width={57.5}
@@ -46,10 +88,15 @@ export default function MiddleMenu() {
           />
           <p>From our family to yours.</p>
           <h4>Ministries</h4>
-        </a>
+        </motion.a>
       </Link>
       <Link href={paths.grow}>
-        <a>
+        <motion.a
+          variants={slideLeft}
+          initial='hidden'
+          animate='show'
+          exit='exit'
+        >
           <Image
             src='/img/grow-icon.svg'
             width={50}
@@ -61,13 +108,12 @@ export default function MiddleMenu() {
             “Deep calleth unto deep” (Psalm 42:7)
           </p>
           <h4>Grow</h4>
-        </a>
+        </motion.a>
       </Link>
     </MiddleWrapper>
   )
 }
-const MiddleWrapper = styled.div`
-  background: rgba(255, 255, 255, 1);
+const MiddleWrapper = styled(motion.div)`
   position: relative;
   top: -150px;
   z-index: 1;
@@ -77,8 +123,10 @@ const MiddleWrapper = styled.div`
   width: 1200px;
   max-width: 90vw;
   border-radius: 10px;
+  overflow: hidden;
   box-shadow: 0 7px 10px 0 rgba(122, 207, 255, 0.3);
   a {
+    background: rgba(255, 255, 255, 1);
     min-height: 300px;
     min-width: 300px;
     display: flex;

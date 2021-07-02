@@ -2,10 +2,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styled from 'styled-components'
 import Burger from './Burger'
+import { motion } from 'framer-motion'
 
 export default function Navbar() {
   return (
-    <Nav>
+    <Nav initial={{ y: -90 }} animate={{ y: 0 }} transition={{ duration: 0.1 }}>
       <Link href='/'>
         <a>
           <Image
@@ -20,7 +21,7 @@ export default function Navbar() {
     </Nav>
   )
 }
-const Nav = styled.nav`
+const Nav = styled(motion.nav)`
   position: fixed;
   background: rgba(255, 255, 255, 0.97);
   width: 100%;
