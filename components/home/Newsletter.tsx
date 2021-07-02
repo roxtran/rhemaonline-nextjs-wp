@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 import { Button, Container, ImgWrapper } from '../../styles/GlobalStyle'
+import newsletters from '../../data/newsletters'
 
 const Newsletter = () => {
   return (
@@ -12,29 +13,27 @@ const Newsletter = () => {
           activities, and relevant news. We invite you to check out what’s
           happing @ Rhema this week.
         </p>
-        <Button
-          href='https://myemail.constantcontact.com/This-Week---Rhema.html?soid=1101184914406&aid=S98FghfAf14'
-          target='_blank'
-          className='btn'
-        >
+        <Button href={newsletters[0].link} target='_blank' className='btn'>
           Learn More
         </Button>
       </div>
-      <a
-        href='https://myemail.constantcontact.com/This-Week---Rhema.html?soid=1101184914406&aid=S98FghfAf14'
-        target='_blank'
-      >
-        <ImgWrapper className='img-wrapper'>
-          <Image
-            src='/img/newsletter/Annotation-2021-04-12 113911.png'
-            alt='welcome image'
-            layout='fill'
-            objectFit='cover'
-            // width={625}
-            // height={360}
-          />
-        </ImgWrapper>
-      </a>
+      <div className='newsletters'>
+        {newsletters.map((newsletter) => (
+          <a className='newsletter' href={newsletter.link} target='_blank'>
+            <ImgWrapper>
+              <Image
+                src={newsletter.imgUrl}
+                alt='newsletter image'
+                layout='fill'
+                objectFit='cover'
+                // placeHolder='blur'
+                // width={625}
+                // height={360}
+              />
+            </ImgWrapper>
+          </a>
+        ))}
+      </div>
     </NewsletterWrapper>
   )
 }
@@ -42,24 +41,37 @@ const Newsletter = () => {
 export default Newsletter
 
 const NewsletterWrapper = styled(Container)`
-  flex-direction: row;
   width: 1200px;
   max-width: 80vw;
   margin: auto;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
   .text {
-    flex: 2;
+    width: 740px;
     margin-right: 3rem;
     .btn {
       margin: 0.8rem 0 3.5rem;
     }
   }
-  .img-wrapper {
-    cursor: pointer;
-    flex: 1;
+  .newsletters {
     width: 400px;
-    max-width: 100vw;
-    height: 400px;
+    /* height: 400px; */
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .newsletter {
+    width: calc(100% / 3);
+    /* flex-shrink: 1; */
+    flex-grow: 1;
+  }
+  ${ImgWrapper} {
+    border-radius: 0;
+    cursor: pointer;
+    min-width: calc(400px / 3);
+    min-height: calc(400px / 3);
     box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
     &:hover {
       opacity: 0.8;
@@ -69,6 +81,10 @@ const NewsletterWrapper = styled(Container)`
     padding-bottom: 0;
     .text {
       margin-right: 0;
+    }
+    ${ImgWrapper} {
+      min-width: calc(300px / 3);
+      min-height: calc(300px / 3);
     }
   }
 `

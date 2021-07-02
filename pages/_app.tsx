@@ -40,9 +40,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <script src='https://js.churchcenter.com/modal/v1'></script>
       </Head>
       <Layout>
-        <HomeModal openModal={openModal} setOpenModal={setOpenModal} />
         <GlobalStyle />
         <Component {...pageProps} />
+        <HomeModal openModal={openModal} setOpenModal={setOpenModal} />
       </Layout>
     </>
   )
