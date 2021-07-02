@@ -58,10 +58,11 @@ const NewsletterWrapper = styled(Container)`
     flex-wrap: wrap;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 0 24px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 12px 36px 0px rgb(0 0 0 / 25%);
+    /* gap: 0.15rem; */
   }
   .newsletter {
-    width: calc(100% / 3);
+    width: calc(100% / 2);
     /* flex-shrink: 1; */
     flex-grow: 1;
     overflow: hidden;
