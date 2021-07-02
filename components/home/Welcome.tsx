@@ -4,12 +4,10 @@ import styled from 'styled-components'
 import paths from '../../paths'
 import { Button, ImgWrapper } from '../../styles/GlobalStyle'
 import { motion } from 'framer-motion'
-import { slideLeft, slideRight } from './MiddleMenu'
-
 export default function Welcome() {
   return (
     <WelcomeWrapper>
-      <ImgWrapper variants={slideRight} initial='hidden' animate='show'>
+      <ImgWrapper>
         <Image
           src='/img/welcome-img.jpg'
           alt='welcome image'
@@ -19,12 +17,7 @@ export default function Welcome() {
           // height={360}
         />
       </ImgWrapper>
-      <motion.div
-        className='text'
-        variants={slideLeft}
-        initial='hidden'
-        animate='show'
-      >
+      <motion.div className='text'>
         <h2>Welcome to Rhema</h2>
         <p className='quote'>
           “We are a church that believes in Jesus Christ; a church that loves
