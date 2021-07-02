@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components'
+import { motion } from 'framer-motion'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -81,14 +82,14 @@ const GlobalStyle = createGlobalStyle`
     text-shadow: 0 0 12px rgba(0 0 0 / 0.2);
   }
 `
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 4rem 0;
 `
-export const Button = styled.a`
+export const Button = styled(motion.a)`
   display: inline-block;
   cursor: pointer;
   background: var(--blue);
@@ -119,7 +120,7 @@ export const Button = styled.a`
   }
 `
 
-export const ImgWrapper = styled.div`
+export const ImgWrapper = styled(motion.div)`
   position: relative;
   border-radius: 5px;
   overflow: hidden;

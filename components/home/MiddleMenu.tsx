@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import paths from '../../paths'
 import { motion } from 'framer-motion'
 
-const slideRight = {
+export const slideRight = {
   hidden: { x: -100, opacity: 0 },
   show: {
     x: 0,
@@ -16,7 +16,7 @@ const slideRight = {
     x: 200,
   },
 }
-const slideLeft = {
+export const slideLeft = {
   hidden: { x: 100, opacity: 0 },
   show: {
     x: 0,

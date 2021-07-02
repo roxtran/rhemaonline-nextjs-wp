@@ -3,11 +3,13 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import paths from '../../paths'
 import { Button, ImgWrapper } from '../../styles/GlobalStyle'
+import { motion } from 'framer-motion'
+import { slideLeft, slideRight } from './MiddleMenu'
 
 export default function Welcome() {
   return (
     <WelcomeWrapper>
-      <ImgWrapper>
+      <ImgWrapper variants={slideRight} initial='hidden' animate='show'>
         <Image
           src='/img/welcome-img.jpg'
           alt='welcome image'
@@ -17,7 +19,12 @@ export default function Welcome() {
           // height={360}
         />
       </ImgWrapper>
-      <div className='text'>
+      <motion.div
+        className='text'
+        variants={slideLeft}
+        initial='hidden'
+        animate='show'
+      >
         <h2>Welcome to Rhema</h2>
         <p className='quote'>
           “We are a church that believes in Jesus Christ; a church that loves
@@ -34,12 +41,12 @@ export default function Welcome() {
         <Link href={paths.about}>
           <Button>More about us</Button>
         </Link>
-      </div>
+      </motion.div>
     </WelcomeWrapper>
   )
 }
 
-export const WelcomeWrapper = styled.div`
+export const WelcomeWrapper = styled(motion.div)`
   position: relative;
   width: 1200px;
   max-width: 80vw;
@@ -86,7 +93,7 @@ export const WelcomeWrapper = styled.div`
   }
 
   @media screen and (max-width: 1024px) {
-    margin: 300px auto 220px;
+    margin: 12.5rem auto 7.5rem;
     .image {
       box-shadow: 0 0 0 0 rgba(122, 207, 255, 0.3);
     }
