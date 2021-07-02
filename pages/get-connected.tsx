@@ -21,7 +21,7 @@ const getConnected = () => {
         <div className='items'>
           {getConnectedData.map((item) => (
             <div className='item' key={item.title} id={item.id}>
-              <ImgWrapper className='img-wrapper'>
+              <ImgWrapper>
                 <Image src={item.imgUrl} layout='fill' objectFit='cover' />
               </ImgWrapper>
               <div className='content-wrapper'>
@@ -57,7 +57,7 @@ const ConnectedContainer = styled(Container)`
   .item:nth-child(even) {
     flex-direction: row-reverse;
   }
-  .img-wrapper {
+  ${ImgWrapper} {
     width: 50%;
     min-width: 300px;
     height: 600px;
@@ -94,7 +94,7 @@ const ConnectedContainer = styled(Container)`
     .item {
       flex-direction: column;
     }
-    .img-wrapper {
+    ${ImgWrapper} {
       height: 400px;
       width: 100%;
     }

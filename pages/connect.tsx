@@ -34,7 +34,7 @@ export default function Connect() {
         <div className='services'>
           {services.map((service) => (
             <div className='service' id={service.id} key={service.id}>
-              <ImgWrapper className='img-wrapper'>
+              <ImgWrapper>
                 <Image src={service.imgUrl} layout='fill' objectFit='cover' />
               </ImgWrapper>
               <h3>{service.name}</h3>
@@ -97,7 +97,7 @@ const ConnectContainer = styled(Container)`
       margin: 0.5rem auto;
     }
   }
-  .img-wrapper {
+  ${ImgWrapper} {
     height: 500px;
     @media screen and (max-width: 640px) {
       height: 600px;

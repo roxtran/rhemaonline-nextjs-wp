@@ -43,7 +43,7 @@ const marriage = () => {
             </Button>
           </div>
           <div className='right-wrapper'>
-            <ImgWrapper className='img-wrapper'>
+            <ImgWrapper>
               <Image src='/img/marriage.jpg' layout='fill' objectFit='cover' />
             </ImgWrapper>
           </div>

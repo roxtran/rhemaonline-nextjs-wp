@@ -34,7 +34,7 @@ export default function SermonNote({ note, notes }: Props) {
           <p className='date'>{formatDate(note.date)}</p>
           <div className='line'></div>
           <p>in Sermon Notes</p>
-          <ImgWrapper className='img-wrapper'>
+          <ImgWrapper>
             <Image
               layout='fill'
               objectFit='cover'
@@ -77,7 +77,7 @@ const NoteContainer = styled(SermonsContainer)`
       height: 1px;
       background: rgba(0, 0, 0, 0.2);
     }
-    .img-wrapper {
+    ${ImgWrapper} {
       margin-top: 1.5rem;
       width: 650px;
       max-width: 90vw;
@@ -117,7 +117,7 @@ const NoteContainer = styled(SermonsContainer)`
     }
 
     @media screen and (max-width: 640px) {
-      .img-wrapper {
+      ${ImgWrapper} {
         height: 240px;
       }
     }
@@ -126,7 +126,7 @@ const NoteContainer = styled(SermonsContainer)`
 
 const client = new ApolloClient({
   uri: process.env.WP_URL as string,
-  cache: new InMemoryCache()
+  cache: new InMemoryCache(),
 })
 
 export const getStaticProps = async ({ params }: Params) => {
@@ -160,15 +160,15 @@ export const getStaticProps = async ({ params }: Params) => {
       }
     `,
     variables: {
-      id: slug
-    }
+      id: slug,
+    },
   })
 
   return {
     props: {
       note: data?.sermonNote,
-      notes: data?.sermonNotes?.nodes
-    }
+      notes: data?.sermonNotes?.nodes,
+    },
   }
 }
 
@@ -182,13 +182,13 @@ export const getStaticPaths = async () => {
           }
         }
       }
-    `
+    `,
   })
 
   const notes = data?.sermonNotes?.nodes
 
   const paths = notes.map((note: { slug: string }) => ({
-    params: { slug: note.slug }
+    params: { slug: note.slug },
   }))
 
   return { paths, fallback: false }

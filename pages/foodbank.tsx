@@ -2,7 +2,7 @@ import Image from 'next/image'
 import styled from 'styled-components'
 import HeadLine from '../components/common/HeadLine'
 import Meta from '../components/common/meta'
-import { Button, Container, ImgWrapper } from '../styles/GlobalStyle'
+import { Button, Container } from '../styles/GlobalStyle'
 import FoodbankSlider from '../components/common/ImageSlider'
 import slides from '../data/foodbank-slides'
 
@@ -13,10 +13,6 @@ const foodbank = () => {
       <HeadLine imgUrl='/img/foodbank-img.jpg' title='Foodbank' />
       <FoodbankContainer>
         <div className='content-wrapper'>
-          {/* <ImgWrapper className='img-wrapper'>
-            <Image src='/img/foodbank.jpg' layout='fill' objectFit='cover' />
-          </ImgWrapper> */}
-
           <FoodbankSlider slides={slides} />
           <div className='text-wrapper'>
             <h2>Mission</h2>

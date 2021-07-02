@@ -36,7 +36,7 @@ const grow = () => {
         <div className='grows'>
           {growData.map((grow) => (
             <div className='grow' key={grow.title}>
-              <ImgWrapper className='img-wrapper'>
+              <ImgWrapper>
                 <Image src={grow.imgUrl} layout='fill' objectFit='cover' />
               </ImgWrapper>
               <div className='content-wrapper'>
@@ -76,7 +76,7 @@ const GrowContainer = styled(Container)`
   .grow:nth-child(even) {
     flex-direction: row-reverse;
   }
-  .img-wrapper {
+  ${ImgWrapper} {
     width: 100%;
     min-width: 300px;
     height: 600px;
@@ -129,7 +129,7 @@ const GrowContainer = styled(Container)`
     }
   }
   @media screen and (max-width: 768px) {
-    .img-wrapper {
+    ${ImgWrapper} {
       height: 400px;
     }
     .content-wrapper {

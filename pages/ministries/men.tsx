@@ -42,7 +42,7 @@ const men = () => {
             </div>
           </div>
           <div className='right-wrapper'>
-            <ImgWrapper className='img-wrapper'>
+            <ImgWrapper>
               <Image src='/img/men.jpg' layout='fill' objectFit='cover' />
             </ImgWrapper>
           </div>

@@ -21,7 +21,7 @@ export default function NoteDetail({ note }: Props) {
       <Link href={`${paths.sermons}/notes/${note.slug}`}>
         <a>
           <div className='hover'></div>
-          <ImgWrapper className='img-wrapper'>
+          <ImgWrapper>
             <Image
               src={note.featuredImage.node.sourceUrl}
               layout='fill'
@@ -68,7 +68,7 @@ const NoteWrapper = styled.div`
     }
   }
 
-  .img-wrapper {
+  ${ImgWrapper} {
     height: 300px;
     z-index: 0;
     border-radius: 10px;

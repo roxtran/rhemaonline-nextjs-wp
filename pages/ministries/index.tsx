@@ -39,7 +39,7 @@ const ministries = () => {
         <div className='ministries'>
           {ministriesData.map((ministry) => (
             <div className='ministry' key={ministry.name}>
-              <ImgWrapper className='img-wrapper'>
+              <ImgWrapper>
                 <Image src={ministry.imgUrl} layout='fill' objectFit='cover' />
               </ImgWrapper>
               <div className='content-wrapper'>
@@ -83,7 +83,7 @@ export const MinistriesContainer = styled(Container)`
   .ministry:nth-child(even) {
     flex-direction: row-reverse;
   }
-  .img-wrapper {
+  ${ImgWrapper} {
     width: 100%;
     min-width: 300px;
     height: 600px;
@@ -107,7 +107,7 @@ export const MinistriesContainer = styled(Container)`
     }
   }
   @media screen and (max-width: 768px) {
-    .img-wrapper {
+    ${ImgWrapper} {
       height: 400px;
     }
     .content-wrapper {

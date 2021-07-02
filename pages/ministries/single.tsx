@@ -26,7 +26,7 @@ const single = () => {
             </p>
           </div>
           <div className='right-wrapper'>
-            <ImgWrapper className='img-wrapper'>
+            <ImgWrapper >
               <Image src='/img/single.jpg' layout='fill' objectFit='cover' />
             </ImgWrapper>
           </div>

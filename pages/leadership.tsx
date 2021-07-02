@@ -45,7 +45,7 @@ export default function Leadership() {
                   setSelectedLeader(leader)
                 }}
               >
-                <ImgWrapper className='img-wrapper'>
+                <ImgWrapper>
                   <Image
                     className='img'
                     src={leader.smallImg}
@@ -98,7 +98,7 @@ const LeadershipContainer = styled(Container)`
     margin: 1.5rem;
     border-radius: 5px;
     cursor: pointer;
-    .img-wrapper {
+    ${ImgWrapper} {
       border-radius: 50%;
     }
     &:hover img {

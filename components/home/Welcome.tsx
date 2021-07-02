@@ -7,7 +7,7 @@ import { Button, ImgWrapper } from '../../styles/GlobalStyle'
 export default function Welcome() {
   return (
     <WelcomeWrapper>
-      <ImgWrapper className='img-wrapper'>
+      <ImgWrapper>
         <Image
           src='/img/welcome-img.jpg'
           alt='welcome image'
@@ -48,7 +48,7 @@ export const WelcomeWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  .img-wrapper {
+  ${ImgWrapper} {
     flex: 1;
     height: 380px;
     box-shadow: -35px 35px 0 0 rgba(122, 207, 255, 0.3);

@@ -20,7 +20,7 @@ const kid = () => {
         </div>
         <div className='items'>
           <div className='item'>
-            <ImgWrapper className='img-wrapper'>
+            <ImgWrapper>
               <Image
                 src='/img/about-kid-world.jpg'
                 layout='fill'
@@ -91,7 +91,7 @@ const kid = () => {
             </div>
           </div>
           <div className='item'>
-            <ImgWrapper className='img-wrapper'>
+            <ImgWrapper>
               <Image src='/img/kid-serve.jpg' layout='fill' objectFit='cover' />
             </ImgWrapper>
             <div className='content-wrapper'>
@@ -119,7 +119,7 @@ const kid = () => {
             </div>
           </div>
           <div className='item'>
-            <ImgWrapper className='img-wrapper'>
+            <ImgWrapper>
               <Image
                 src='/img/children-church.jpg'
                 layout='fill'
@@ -142,7 +142,7 @@ const kid = () => {
             </div>
           </div>
           <div className='item'>
-            <ImgWrapper className='img-wrapper'>
+            <ImgWrapper>
               <Image src='/img/kid.jpg' layout='fill' objectFit='cover' />
             </ImgWrapper>
             <div className='content-wrapper'>
@@ -337,7 +337,7 @@ export const KidContainer = styled(Container)`
   .item:nth-child(even) {
     flex-direction: row-reverse;
   }
-  .img-wrapper {
+  ${ImgWrapper} {
     width: 100%;
     min-width: 400px;
     height: 600px;
@@ -379,7 +379,7 @@ export const KidContainer = styled(Container)`
     }
   }
   @media screen and (max-width: 768px) {
-    .img-wrapper {
+    ${ImgWrapper} {
       height: 400px;
     }
     .content-wrapper {

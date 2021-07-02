@@ -87,7 +87,7 @@ const women = () => {
             </div>
           </div>
           <div className='right-wrapper'>
-            <ImgWrapper className='img-wrapper'>
+            <ImgWrapper>
               <Image src='/img/women-bw.jpg' layout='fill' objectFit='cover' />
             </ImgWrapper>
           </div>
@@ -128,7 +128,7 @@ export const WomenContainer = styled(Container)`
     width: 47%;
     margin-left: 2rem;
   }
-  .img-wrapper {
+  ${ImgWrapper} {
     width: 100%;
     height: 400px;
   }

@@ -56,7 +56,7 @@ export default function LeaderModal({
               </div>
               <div className='modal-body'>
                 <div className='modal-left'>
-                  <ImgWrapper className='img-wrapper'>
+                  <ImgWrapper>
                     <Image
                       src={leader.largeImg}
                       layout='fill'
