@@ -12,7 +12,7 @@ export default function Sidebar({ title, notes }: Props) {
     const newDate = new Date(date).toLocaleDateString('en-US', {
       day: 'numeric',
       month: 'long',
-      year: 'numeric'
+      year: 'numeric',
     })
     return newDate
   }
@@ -36,9 +36,9 @@ export default function Sidebar({ title, notes }: Props) {
 }
 const SidebarWrapper = styled.div`
   position: sticky;
-  top: 0;
+  top: 5rem;
+  margin-top: 5rem;
   width: 300px;
-  margin: 80px 0;
   border-top: 4px dashed var(--mint);
   padding: 32px 16px;
   h3 {
