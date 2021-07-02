@@ -79,10 +79,16 @@ const StyledMenu = styled.div<{ open: boolean }>`
     flex-direction: column;
     position: relative;
     &:hover .locations-dropdown {
-      display: flex;
+      /* display: flex; */
+      opacity: 1;
+      height: 200%;
     }
     .locations-dropdown {
-      display: none;
+      overflow: hidden;
+      opacity: 0;
+      height: 0;
+      transition: all 0.2s ease-out;
+      display: flex;
       flex-direction: column;
       position: absolute;
       background: #fff;
