@@ -26,9 +26,6 @@ const Newsletter = () => {
                 alt='newsletter image'
                 layout='fill'
                 objectFit='cover'
-                // placeHolder='blur'
-                // width={625}
-                // height={360}
               />
             </ImgWrapper>
           </a>
@@ -61,20 +58,22 @@ const NewsletterWrapper = styled(Container)`
     flex-wrap: wrap;
     border-radius: 5px;
     overflow: hidden;
+    box-shadow: 0 0 24px 4px rgba(0, 0, 0, 0.2);
   }
   .newsletter {
     width: calc(100% / 3);
     /* flex-shrink: 1; */
     flex-grow: 1;
+    overflow: hidden;
   }
   ${ImgWrapper} {
     border-radius: 0;
     cursor: pointer;
     min-width: calc(400px / 3);
     min-height: calc(400px / 3);
-    box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
+    transition-duration: 0.2s;
     &:hover {
-      opacity: 0.8;
+      opacity: 0.65;
     }
   }
   @media screen and (max-width: 640px) {
