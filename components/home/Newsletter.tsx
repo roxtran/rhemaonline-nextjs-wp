@@ -55,7 +55,7 @@ const NewsletterWrapper = styled(Container)`
     width: 400px;
     /* height: 400px; */
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0px 12px 36px 0px rgb(0 0 0 / 25%);

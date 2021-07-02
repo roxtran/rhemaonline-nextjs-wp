@@ -43,7 +43,7 @@ export const WelcomeWrapper = styled.div`
   position: relative;
   width: 1200px;
   max-width: 80vw;
-  margin: 320px auto 200px;
+  margin: 0 auto 12.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
