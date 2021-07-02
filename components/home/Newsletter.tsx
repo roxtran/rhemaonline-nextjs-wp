@@ -51,7 +51,7 @@ const NewsletterWrapper = styled(Container)`
     width: 740px;
     margin-right: 3rem;
     .btn {
-      margin: 0.8rem 0 3.5rem;
+      margin: 0.55rem 0 3.25rem;
     }
   }
   .newsletters {
