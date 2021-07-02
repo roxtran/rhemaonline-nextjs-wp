@@ -32,13 +32,9 @@ const VideoWrapper = styled.div`
     width: 100%;
     height: 80vh;
     object-fit: cover;
-    @media screen and (max-width: 1024px) {
-      height: 52vh;
-    }
+
     @media screen and (max-width: 640px) {
       height: 70vh;
-    }
-    @media screen and (max-width: 1024px) {
     }
   }
 `
