@@ -5,6 +5,7 @@ import Meta from '../components/common/meta'
 import { Button, Container } from '../styles/GlobalStyle'
 import FoodbankSlider from '../components/common/ImageSlider'
 import slides from '../data/foodbank-slides'
+import Link from 'next/link'
 
 const foodbank = () => {
   return (
@@ -24,7 +25,9 @@ const foodbank = () => {
               a family requires. We are changing and affecting lives by ensuring
               that no family is hungry. Matt 25:34-36
             </p>
-            <Button href='/giving'>Make A Donation</Button>
+            <Link href='/giving'>
+              <Button>Make A Donation</Button>
+            </Link>
           </div>
         </div>
       </FoodbankContainer>
