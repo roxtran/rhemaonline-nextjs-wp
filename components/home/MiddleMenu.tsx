@@ -80,7 +80,7 @@ const MiddleWrapper = styled.div`
   box-shadow: 0 7px 10px 0 rgba(122, 207, 255, 0.3);
   a {
     min-height: 300px;
-    min-width: 320px;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -102,6 +102,9 @@ const MiddleWrapper = styled.div`
   @media screen and (max-width: 1024px) {
     top: -5px;
     margin-bottom: -6.25rem;
+    a {
+      min-width: 320px;
+    }
     a:nth-child(1),
     a:nth-child(2) {
       border-bottom: 1px dashed rgba(122, 207, 255, 0.3);
