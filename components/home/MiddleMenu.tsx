@@ -80,7 +80,7 @@ const MiddleWrapper = styled.div`
   box-shadow: 0 7px 10px 0 rgba(122, 207, 255, 0.3);
   a {
     min-height: 300px;
-    min-width: 280px;
+    min-width: 320px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -88,7 +88,9 @@ const MiddleWrapper = styled.div`
     text-align: center;
     padding: 2.5rem 2.5rem;
     flex: 1;
-    border: 1px dashed rgba(122, 207, 255, 0.3);
+    &:not(:last-child) {
+      border-right: 1px dashed rgba(122, 207, 255, 0.3);
+    }
     p {
       margin: 1.25rem 0;
     }
@@ -97,8 +99,24 @@ const MiddleWrapper = styled.div`
     }
   }
 
-  @media screen and (max-width: 768px) {
-    top: 0;
+  @media screen and (max-width: 1024px) {
+    top: -5px;
     margin-bottom: -6.25rem;
+    a:nth-child(1),
+    a:nth-child(2) {
+      border-bottom: 1px dashed rgba(122, 207, 255, 0.3);
+    }
+    a:nth-child(2) {
+      border-right: none;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    a:nth-child(1),
+    a:nth-child(3) {
+      border-right: none;
+    }
+    a:nth-child(3) {
+      border-bottom: 1px dashed rgba(122, 207, 255, 0.3);
+    }
   }
 `
