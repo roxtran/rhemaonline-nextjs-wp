@@ -1,25 +1,12 @@
 import styled from 'styled-components'
 import { IoClose } from 'react-icons/io5'
-import { ModalContainer } from './HomeModal'
+import { ModalContainer } from './SurveyModal'
 import { Dispatch, SetStateAction } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import LeaderType from '../../../types/leader'
 import Image from 'next/image'
 import { ImgWrapper } from '../../../styles/GlobalStyle'
-
-const slideDown = {
-  hidden: { y: -200, opacity: 0 },
-  show: {
-    y: [0, -50, 0],
-    opacity: 1,
-    transition: { duration: 0.25, ease: 'easeIn' },
-  },
-  exit: {
-    opacity: 1,
-    y: 400,
-    // transition: { duration: 0.25, ease: 'easeIn' },
-  },
-}
+import { fade, slideDown } from '../../../styles/animation'
 
 interface Props {
   openModal: boolean
@@ -36,10 +23,10 @@ export default function LeaderModal({
     <AnimatePresence exitBeforeEnter>
       {openModal && leader && (
         <StyledModal
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.25 }}
-          exit={{ opacity: 0 }}
+          variants={fade}
+          initial='hidden'
+          animate='show'
+          exit='exit'
         >
           <motion.div
             className='modal-dialog'

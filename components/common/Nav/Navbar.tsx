@@ -4,6 +4,25 @@ import styled from 'styled-components'
 import Burger from './Burger'
 import { motion } from 'framer-motion'
 
+const navbar = {
+  hidden: { opacity: 0, y: -90 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      when: 'beforeChildren', // delayChildren: 0.5,
+      staggerChildren: 0.25,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+}
+
 export default function Navbar() {
   return (
     <Nav initial={{ y: -90 }} animate={{ y: 0 }} transition={{ duration: 0.1 }}>
@@ -24,7 +43,7 @@ export default function Navbar() {
 const Nav = styled(motion.nav)`
   position: fixed;
   background: rgba(255, 255, 255, 0.97);
-  width: 100%;
+  width: 100vw;
   height: 80px;
   display: flex;
   justify-content: space-between;

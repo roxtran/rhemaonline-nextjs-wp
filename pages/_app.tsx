@@ -5,9 +5,10 @@ import GlobalStyle from '../styles/GlobalStyle'
 import Layout from '../components/common/Layout'
 import { AppProps } from 'next/dist/next-server/lib/router/router'
 import { useState, useEffect } from 'react'
-import HomeModal from '../components/common/Modals/HomeModal'
+import { motion } from 'framer-motion'
+import SurveyModal from '../components/common/Modals/SurveyModal'
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps, router }: AppProps) {
   const [openModal, setOpenModal] = useState(false)
 
   useEffect(() => {
@@ -41,8 +42,15 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <Layout>
         <GlobalStyle />
-        <Component {...pageProps} />
-        <HomeModal openModal={openModal} setOpenModal={setOpenModal} />
+        <motion.div
+          key={router.route}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.25 }}
+        >
+          <Component {...pageProps} />
+        </motion.div>
+        <SurveyModal openModal={openModal} setOpenModal={setOpenModal} />
       </Layout>
     </>
   )

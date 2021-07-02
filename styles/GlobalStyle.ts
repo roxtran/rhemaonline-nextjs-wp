@@ -87,6 +87,7 @@ export const Container = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100vw;
   padding: 4rem 0;
 `
 export const Button = styled(motion.a)`

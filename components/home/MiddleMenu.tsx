@@ -3,129 +3,127 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import paths from '../../paths'
 import { motion } from 'framer-motion'
+import { slideLeft, slideRight } from '../../styles/animation'
 
-export const slideRight = {
-  hidden: { x: -100, opacity: 0 },
+const items = {
   show: {
-    x: 0,
-    opacity: 1,
-    transition: { duration: 0.25, ease: 'easeIn', delay: 0.25 },
-  },
-  exit: {
-    opacity: 1,
-    x: 200,
-  },
-}
-export const slideLeft = {
-  hidden: { x: 100, opacity: 0 },
-  show: {
-    x: 0,
-    opacity: 1,
-    transition: { duration: 0.25, ease: 'easeIn', delay: 0.5 },
-  },
-  exit: {
-    opacity: 1,
-    x: -200,
+    boxShadow: '0px 7px 10px 0 rgba(122, 207, 255, 0.3)',
+    borderRadius: '10px',
+    overflow: 'hidden',
+    transition: { duration: 0.25, delay: 0.25, when: 'afterChildren' },
   },
 }
 
 export default function MiddleMenu() {
   return (
     <MiddleWrapper>
-      <Link href={paths.leadership}>
-        <motion.a
+      <motion.div
+        className='items'
+        variants={items}
+        initial='hidden'
+        animate='show'
+        exit='exit'
+      >
+        <motion.div
+          className='item'
           variants={slideRight}
-          initial='hidden'
-          animate='show'
-          exit='exit'
+          transition={{ duration: 0.25, ease: 'easeIn', delay: 0.5 }}
         >
-          <Image
-            src='/img/leadership-icon.svg'
-            width={50}
-            height={50}
-            alt='leadership-icon'
-          />
-          <p>
-            With a warm smile, the leaders of Rhema Christian Ministries are
-            taskes with operational and ecclesiatial exellence.
-          </p>
-          <h4>Leadership</h4>
-        </motion.a>
-      </Link>
-      <Link href={paths.beliefs}>
-        <motion.a
+          <Link href={paths.leadership}>
+            <a>
+              <Image
+                src='/img/leadership-icon.svg'
+                width={50}
+                height={50}
+                alt='leadership-icon'
+              />
+              <p>
+                With a warm smile, the leaders of Rhema Christian Ministries are
+                taskes with operational and ecclesiatial exellence.
+              </p>
+              <h4>Leadership</h4>
+            </a>
+          </Link>
+        </motion.div>
+        <motion.div
+          className='item'
           variants={slideRight}
-          initial='hidden'
-          animate='show'
-          exit='exit'
-          transition={{ type: 'spring', stiffness: 100 }}
+          transition={{ duration: 0.25, ease: 'easeIn', delay: 0.4 }}
         >
-          <Image
-            src='/img/beliefs-icon.svg'
-            width={50}
-            height={50}
-            alt='beliefs-icon'
-          />
-          <p>
-            At Rhema what we believe is important to us but not as much as the
-            one in whom we believe.
-          </p>
-          <h4>Beliefs</h4>
-        </motion.a>
-      </Link>
-      <Link href={paths.ministries}>
-        <motion.a
+          <Link href={paths.beliefs}>
+            <motion.a>
+              <Image
+                src='/img/beliefs-icon.svg'
+                width={50}
+                height={50}
+                alt='beliefs-icon'
+              />
+              <p>
+                At Rhema what we believe is important to us but not as much as
+                the one in whom we believe.
+              </p>
+              <h4>Beliefs</h4>
+            </motion.a>
+          </Link>
+        </motion.div>
+        <motion.div
+          className='item'
           variants={slideLeft}
-          initial='hidden'
-          animate='show'
-          exit='exit'
+          transition={{ duration: 0.25, ease: 'easeIn', delay: 0.4 }}
         >
-          <Image
-            src='/img/ministries-icon.svg'
-            width={57.5}
-            height={50}
-            alt='ministries-icon'
-          />
-          <p>From our family to yours.</p>
-          <h4>Ministries</h4>
-        </motion.a>
-      </Link>
-      <Link href={paths.grow}>
-        <motion.a
+          <Link href={paths.ministries}>
+            <motion.a>
+              <Image
+                src='/img/ministries-icon.svg'
+                width={57.5}
+                height={50}
+                alt='ministries-icon'
+              />
+              <p>From our family to yours.</p>
+              <h4>Ministries</h4>
+            </motion.a>
+          </Link>
+        </motion.div>
+        <motion.div
+          className='item'
           variants={slideLeft}
-          initial='hidden'
-          animate='show'
-          exit='exit'
+          transition={{ duration: 0.25, ease: 'easeIn', delay: 0.5 }}
         >
-          <Image
-            src='/img/grow-icon.svg'
-            width={50}
-            height={50}
-            alt='grow-icon'
-          />
-          <p>
-            We invite you to hear the voice of the Master calling you, even as
-            “Deep calleth unto deep” (Psalm 42:7)
-          </p>
-          <h4>Grow</h4>
-        </motion.a>
-      </Link>
+          <Link href={paths.grow}>
+            <motion.a>
+              <Image
+                src='/img/grow-icon.svg'
+                width={50}
+                height={50}
+                alt='grow-icon'
+              />
+              <p>
+                We invite you to hear the voice of the Master calling you, even
+                as “Deep calleth unto deep” (Psalm 42:7)
+              </p>
+              <h4>Grow</h4>
+            </motion.a>
+          </Link>
+        </motion.div>
+      </motion.div>
     </MiddleWrapper>
   )
 }
-const MiddleWrapper = styled(motion.div)`
+const MiddleWrapper = styled.div`
   position: relative;
-  top: -150px;
   z-index: 1;
   display: flex;
-  flex-flow: row wrap;
-  margin: auto;
-  width: 1200px;
-  max-width: 90vw;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 7px 10px 0 rgba(122, 207, 255, 0.3);
-  a {
+  top: -150px;
+
+  .items {
+    position: relative;
+    margin: auto;
+    width: 1200px;
+    max-width: 90vw;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .item {
     background: rgba(255, 255, 255, 1);
     min-height: 300px;
     min-width: 300px;
@@ -148,25 +146,26 @@ const MiddleWrapper = styled(motion.div)`
   }
 
   @media screen and (max-width: 1024px) {
-    top: -5px;
     margin-bottom: -6.25rem;
-    a {
+    top: -5px;
+
+    .item {
       min-width: 320px;
     }
-    a:nth-child(1),
-    a:nth-child(2) {
+    .item:nth-child(1),
+    .item:nth-child(2) {
       border-bottom: 1px dashed rgba(122, 207, 255, 0.3);
     }
-    a:nth-child(2) {
+    .item:nth-child(2) {
       border-right: none;
     }
   }
   @media screen and (max-width: 640px) {
-    a:nth-child(1),
-    a:nth-child(3) {
+    .item:nth-child(1),
+    .item:nth-child(3) {
       border-right: none;
     }
-    a:nth-child(3) {
+    .item:nth-child(3) {
       border-bottom: 1px dashed rgba(122, 207, 255, 0.3);
     }
   }

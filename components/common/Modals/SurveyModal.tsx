@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction } from 'react'
 import { IoClose } from 'react-icons/io5'
 import styled from 'styled-components'
 import { motion, AnimatePresence } from 'framer-motion'
-import { slideDown } from './BibleModal'
+import { fade, slideDown } from '../../../styles/animation'
 
 interface HomeModalProps {
   openModal: boolean
@@ -14,10 +14,10 @@ const HomeModal = ({ openModal, setOpenModal }: HomeModalProps) => {
     <AnimatePresence exitBeforeEnter>
       {openModal && (
         <ModalContainer
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.25 }}
-          exit={{ opacity: 0 }}
+          variants={fade}
+          initial='hidden'
+          animate='show'
+          exit='exit'
         >
           <motion.div
             className='modal-dialog'
