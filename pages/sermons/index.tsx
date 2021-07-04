@@ -43,7 +43,7 @@ export const SermonsContainer = styled.div`
 export async function getStaticProps() {
   const client = new ApolloClient({
     uri: process.env.WP_URL as string,
-    cache: new InMemoryCache()
+    cache: new InMemoryCache(),
   })
 
   const { data } = await client.query({
@@ -73,15 +73,15 @@ export async function getStaticProps() {
     `,
     variables: {
       first: 2,
-      after: null
-    }
+      after: null,
+    },
   })
 
   return {
     props: {
       notes: data?.sermonNotes?.nodes,
-      list: data?.sermonList?.nodes
+      list: data?.sermonList?.nodes,
     },
-    revalidate: 30
+    revalidate: 30,
   }
 }

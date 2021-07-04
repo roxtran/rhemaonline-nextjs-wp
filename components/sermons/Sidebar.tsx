@@ -40,7 +40,7 @@ const SidebarWrapper = styled.div`
   margin-top: 5rem;
   width: 300px;
   border-top: 4px dashed var(--mint);
-  padding: 32px 16px;
+  padding: 1rem 1rem 0;
   h3 {
     margin-bottom: 0.5rem;
   }
@@ -49,7 +49,9 @@ const SidebarWrapper = styled.div`
   }
   li {
     padding: 16px 0;
-    border-bottom: 1px solid var(--mint);
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--mint);
+    }
   }
   p {
     margin-bottom: 0;
@@ -64,5 +66,6 @@ const SidebarWrapper = styled.div`
   }
   @media screen and (max-width: 768px) {
     padding: 2rem 0;
+    margin-top: 2rem;
   }
 `

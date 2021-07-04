@@ -45,8 +45,7 @@ export default function NoteDetail({ note }: Props) {
 }
 const NoteWrapper = styled.div`
   position: relative;
-  padding: 2.5rem 0;
-  border-bottom: 1px double var(--mint);
+  padding: 2.5rem 0 2rem;
   width: 670px;
   max-width: 90vw;
 

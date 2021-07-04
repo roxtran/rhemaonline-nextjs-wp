@@ -66,7 +66,7 @@ const NoteContainer = styled(SermonsContainer)`
     width: 670px;
     max-width: 90vw;
     margin: 0 auto;
-    padding: 48px 0;
+    padding: 3rem 0;
     height: 100%;
     .date {
       font-style: italic;
@@ -113,11 +113,16 @@ const NoteContainer = styled(SermonsContainer)`
         margin: auto;
       }
     }
+  }
+  @media screen and (max-width: 768px) {
+    .note-wrapper {
+      padding: 3rem 0 0;
+    }
+  }
 
-    @media screen and (max-width: 640px) {
-      ${ImgWrapper} {
-        height: 240px;
-      }
+  @media screen and (max-width: 640px) {
+    ${ImgWrapper} {
+      height: 240px;
     }
   }
 `
