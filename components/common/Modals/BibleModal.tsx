@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { IoClose } from 'react-icons/io5'
-import { ModalContainer } from './SurveyModal'
-import { Dispatch, SetStateAction } from 'react'
+import { ModalContainer } from './HomeModal'
+import { Dispatch, SetStateAction, useRef, MouseEvent } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { fade, slideDown } from '../../../styles/animation'
 
@@ -11,10 +11,18 @@ interface BibleModalProps {
 }
 
 const BibleModal = ({ openBible, setOpenBible }: BibleModalProps) => {
+  const modalRef = useRef<HTMLDivElement>(null)
+
+  const closeModal = (e: MouseEvent<HTMLDivElement>) => {
+    if (modalRef.current === e.target) setOpenBible(false)
+  }
+
   return (
     <AnimatePresence exitBeforeEnter>
       {openBible && (
         <BibleContainer
+          ref={modalRef}
+          onClick={closeModal}
           variants={fade}
           initial='hidden'
           animate='show'
@@ -47,7 +55,7 @@ const BibleModal = ({ openBible, setOpenBible }: BibleModalProps) => {
   )
 }
 
-const BibleContainer = styled(ModalContainer)`
+export const BibleContainer = styled(ModalContainer)`
   .modal-dialog {
     margin: auto;
   }

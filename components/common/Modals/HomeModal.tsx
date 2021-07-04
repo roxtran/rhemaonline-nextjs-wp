@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from 'react'
+import { Dispatch, SetStateAction, MouseEvent, useRef } from 'react'
 import { IoClose } from 'react-icons/io5'
 import styled from 'styled-components'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -10,10 +10,18 @@ interface HomeModalProps {
 }
 
 const HomeModal = ({ openModal, setOpenModal }: HomeModalProps) => {
+  const modalRef = useRef<HTMLDivElement>(null)
+
+  const closeModal = (e: MouseEvent<HTMLDivElement>) => {
+    if (modalRef.current === e.target) setOpenModal(false)
+  }
+  
   return (
     <AnimatePresence exitBeforeEnter>
       {openModal && (
         <ModalContainer
+          ref={modalRef}
+          onClick={closeModal}
           variants={fade}
           initial='hidden'
           animate='show'
@@ -104,9 +112,6 @@ export const ModalContainer = styled(motion.div)`
     }
     .modal-body {
       height: 75vh;
-    }
-    .vaccines {
-      flex-direction: column;
     }
   }
 `

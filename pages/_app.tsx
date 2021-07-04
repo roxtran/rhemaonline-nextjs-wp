@@ -6,7 +6,7 @@ import Layout from '../components/common/Layout'
 import { AppProps } from 'next/dist/next-server/lib/router/router'
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import SurveyModal from '../components/common/Modals/SurveyModal'
+import SurveyModal from '../components/common/Modals/HomeModal'
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   const [openModal, setOpenModal] = useState(false)

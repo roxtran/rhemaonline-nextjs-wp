@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 import { IoClose } from 'react-icons/io5'
-import { ModalContainer } from './SurveyModal'
-import { Dispatch, SetStateAction } from 'react'
+import { ModalContainer } from './HomeModal'
+import React, { Dispatch, MouseEvent, SetStateAction } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import LeaderType from '../../../types/leader'
 import Image from 'next/image'
 import { ImgWrapper } from '../../../styles/GlobalStyle'
 import { fade, slideDown } from '../../../styles/animation'
+import { useRef } from 'react'
 
 interface Props {
   openModal: boolean
@@ -19,10 +20,18 @@ export default function LeaderModal({
   setOpenModal,
   leader,
 }: Props) {
+  const modalRef = useRef<HTMLDivElement>(null)
+
+  const closeModal = (e: MouseEvent<HTMLDivElement>) => {
+    if (modalRef.current === e.target) setOpenModal(false)
+  }
+
   return (
     <AnimatePresence exitBeforeEnter>
       {openModal && leader && (
         <StyledModal
+          ref={modalRef}
+          onClick={closeModal}
           variants={fade}
           initial='hidden'
           animate='show'
@@ -93,12 +102,10 @@ const StyledModal = styled(ModalContainer)`
     display: flex;
     flex-direction: row;
     text-align: left;
-    height: 80vh;
     justify-content: flex-start;
     align-items: flex-start;
     padding: 5% 0 5% 5%;
     @media screen and (max-width: 640px) {
-      height: 75vh;
       padding-top: 5% !important;
       flex-direction: column;
       padding-top: 3rem;
@@ -139,7 +146,7 @@ const StyledModal = styled(ModalContainer)`
   ${ImgWrapper} {
     width: 100%;
     height: 500px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     box-shadow: -4px 5px 15px -10px rgb(0 0 0 / 0.5);
     @media screen and (max-width: 640px) {
       height: 200px;
@@ -148,7 +155,6 @@ const StyledModal = styled(ModalContainer)`
   }
   .modal-right {
     flex: 50%;
-    height: 100%;
     padding-right: 5%;
     overflow: hidden;
     overflow-y: auto;
@@ -158,8 +164,5 @@ const StyledModal = styled(ModalContainer)`
     @media screen and (max-width: 640px) {
       overflow: visible;
     }
-  }
-  .bio {
-    padding-bottom: 5%;
   }
 `
