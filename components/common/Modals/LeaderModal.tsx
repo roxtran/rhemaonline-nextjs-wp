@@ -139,12 +139,11 @@ const StyledModal = styled(ModalContainer)`
   ${ImgWrapper} {
     width: 100%;
     height: 500px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     box-shadow: -4px 5px 15px -10px rgb(0 0 0 / 0.5);
     @media screen and (max-width: 640px) {
       height: 200px;
       width: 200px;
-      margin-bottom: 1rem;
     }
   }
   .modal-right {
@@ -154,7 +153,7 @@ const StyledModal = styled(ModalContainer)`
     overflow: hidden;
     overflow-y: auto;
     p {
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
     @media screen and (max-width: 640px) {
       overflow: visible;

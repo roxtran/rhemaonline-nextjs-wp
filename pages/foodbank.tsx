@@ -47,13 +47,6 @@ const FoodbankContainer = styled(Container)`
     width: 100%;
     height: 600px;
   }
-  h2 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-  }
-  p {
-    margin-bottom: 2rem;
-  }
 `
 
 export default foodbank

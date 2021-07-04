@@ -86,7 +86,7 @@ const NoteContainer = styled(SermonsContainer)`
     article {
       margin: 32px 0 48px;
       p {
-        margin: 1rem 0;
+        margin: 2rem 0 1rem;
       }
       ul {
         padding-left: 40px;

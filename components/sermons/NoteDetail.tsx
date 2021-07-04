@@ -34,7 +34,7 @@ export default function NoteDetail({ note }: Props) {
             <h3>{note.title}</h3>
             <div
               dangerouslySetInnerHTML={{
-                __html: summary
+                __html: summary,
               }}
             ></div>
           </div>
@@ -79,8 +79,8 @@ const NoteWrapper = styled.div`
     text-align: center;
   }
 
-  h3 {
-    margin-bottom: 0.5rem;
+  p {
+    margin: 1rem;
   }
 
   .date {

@@ -259,11 +259,6 @@ const TermsContainer = styled(Container)`
   .content-wrapper {
     width: 1100px;
     max-width: 90vw;
-    h2,
-    h3,
-    p {
-      margin-bottom: 1rem;
-    }
   }
 `
 

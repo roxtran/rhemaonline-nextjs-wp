@@ -310,9 +310,6 @@ export const KidContainer = styled(Container)`
     margin: 5rem 0;
     width: 1100px;
     max-width: 90vw;
-    h2 {
-      margin-bottom: 1rem;
-    }
   }
   .items {
     margin-top: 5rem;
@@ -361,14 +358,6 @@ export const KidContainer = styled(Container)`
     .btn-wrapper {
       margin-top: 2.5rem;
     }
-  }
-
-  h2 {
-    margin-bottom: 0.5rem;
-  }
-
-  p {
-    margin: 1rem 0;
   }
 
   @media screen and (max-width: 1024px) {

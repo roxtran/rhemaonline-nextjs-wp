@@ -80,11 +80,11 @@ export default function Giving() {
                   Or
                   <li>
                     Click on the Tithe.ly link below:
-                    <p>
+                    <span>
                       <a href='https://tithe.ly/give_new/www/#/tithely/give-one-time/645887?kiosk=1'>
                         https://tithe.ly/give_new/www/#/tithely/give-one-time/645887?kiosk=1
                       </a>
-                    </p>
+                    </span>
                     and follow the instructions to give by credit card or visa
                     debit card
                   </li>
@@ -138,14 +138,14 @@ export default function Giving() {
                   Or
                   <li>
                     Click on the Paypal link below:
-                    <p>
+                    <span>
                       <a
                         href='https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZDLQA7QHSMMEC&source=url'
                         target='_blank'
                       >
                         https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZDLQA7QHSMMEC&source=url
                       </a>
-                    </p>
+                    </span>
                     and follow the instructions to give by credit card or visa
                     debit card
                   </li>
@@ -170,9 +170,6 @@ const GivingContainer = styled(Container)`
   #thank {
     text-align: center;
     margin-bottom: 4rem;
-    p {
-      margin: 1rem 0;
-    }
   }
   .item {
     display: grid;
@@ -191,7 +188,7 @@ const GivingContainer = styled(Container)`
       word-break: break-all;
     }
     span {
-      font-weight: bold;
+      display: block;
     }
     @media screen and (max-width: 640px) {
       grid-template-columns: 1fr;

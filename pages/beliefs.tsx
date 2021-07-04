@@ -44,19 +44,15 @@ const BeliefsContainer = styled(Container)`
     width: 1100px;
     max-width: 90vw;
     .desc {
-      h2 {
-        margin-bottom: 1rem;
-      }
       p {
         padding-bottom: 3rem;
         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
       }
     }
     .beliefs {
-      padding: 2rem 4rem;
+      padding: 1rem 4rem;
     }
     .belief {
-      margin: 1.5rem;
       h4 {
         margin-bottom: 0.5rem;
       }

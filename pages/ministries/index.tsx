@@ -64,11 +64,7 @@ export const MinistriesContainer = styled(Container)`
     width: 1100px;
     max-width: 90vw;
     h2 {
-      margin-bottom: 1rem;
       color: var(--blue);
-    }
-    p {
-      margin-bottom: 1rem;
     }
   }
   .ministries {

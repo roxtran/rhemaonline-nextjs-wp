@@ -59,7 +59,7 @@ export const WelcomeWrapper = styled(motion.div)`
       flex: none;
       width: 75vw;
       height: 300px;
-      margin-bottom: 20px;
+      margin-bottom: 1rem;
     }
   }
   .text {
@@ -69,19 +69,16 @@ export const WelcomeWrapper = styled(motion.div)`
     flex-direction: column;
     h2 {
       color: var(--blue);
-      margin-bottom: 1rem;
     }
     p.quote {
       font-weight: bold;
       font-style: italic;
-      margin-bottom: 1rem;
     }
     span {
       font-weight: bold;
     }
     a {
       width: 170px;
-      margin-top: 1.5rem;
     }
   }
 

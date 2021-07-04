@@ -27,6 +27,8 @@ const GlobalStyle = createGlobalStyle`
   h1, h2, h3, h4 {
     font-weight: bold;
     color: var(--heading-color);
+    padding-top: 1rem;
+    margin-bottom: 1rem;
   }
   h1 {
     font-size: 3.75rem;
@@ -45,6 +47,7 @@ const GlobalStyle = createGlobalStyle`
   }
   p {
     line-height: 1.5;
+    margin-bottom: 1.5rem;
   }
   ol, ul {
     padding-left: 0;

@@ -65,29 +65,25 @@ const ConnectedContainer = styled(Container)`
   .content-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding: 4rem 0;
+    padding: 4rem;
     width: 50%;
     h3 {
       font-size: 2.5rem;
-      padding: 1rem 2rem;
-      text-align: center;
+    }
+    p {
+      margin-bottom: 1rem;
     }
     .text {
-      padding: 0 4rem;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
       width: 100%;
       max-width: 90vw;
-      p {
-        margin-bottom: 1rem;
-      }
+      margin-bottom: 1rem;
     }
     .btn {
-      margin-top: 1rem;
+      width: 10rem;
+      margin-bottom: 1.5rem;
     }
   }
   @media screen and (max-width: 768px) {
@@ -103,6 +99,11 @@ const ConnectedContainer = styled(Container)`
       .text {
         padding: 0;
       }
+    }
+  }
+  @media screen and (max-width: 640px) {
+    .content-wrapper {
+      padding: 2rem;
     }
   }
 `

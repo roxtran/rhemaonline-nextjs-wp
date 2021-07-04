@@ -63,7 +63,7 @@ export default function facilityBookings() {
               Facility Booking Enquiry Form
             </Button>
             <div className='text-wrapper'>
-              <p>Contact us for a tour.</p>
+              <span>Contact us for a tour.</span>
               <p>
                 <b>Call: (416) 496-1794</b>
               </p>
@@ -86,11 +86,7 @@ const BookingsContainer = styled(Container)`
   }
   .content-wrapper {
     width: 700px;
-    h2,
-    h3,
-    p {
-      margin-bottom: 1rem;
-    }
+
     ul {
       margin-left: 2rem;
     }

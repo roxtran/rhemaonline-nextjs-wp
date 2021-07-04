@@ -71,9 +71,6 @@ const NewsContainer = styled(Container)`
     margin-bottom: 2rem;
     flex: 1;
   }
-  h3 {
-    margin-bottom: 1rem;
-  }
   ul {
     margin-left: 1.5rem;
     /* list-style: none; */
@@ -103,8 +100,8 @@ export const getStaticProps = async () => {
     props: {
       biblegatewayItems: biblegatewayFeed.items,
       studiesforlifeItems: studiesforlifeFeed.items,
-      faithlifeItems: faithlifeFeed.items
+      faithlifeItems: faithlifeFeed.items,
     },
-    revalidate: 30
+    revalidate: 30,
   }
 }

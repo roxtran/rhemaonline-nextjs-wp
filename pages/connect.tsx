@@ -80,7 +80,6 @@ const ConnectContainer = styled(Container)`
     max-width: 90vw;
     margin-bottom: 2rem;
     h2 {
-      margin-bottom: 1rem;
       color: var(--blue);
     }
   }
@@ -89,12 +88,11 @@ const ConnectContainer = styled(Container)`
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    margin: 2rem 0;
   }
   .service {
     width: 560px;
     max-width: 90vw;
-    margin: 1rem;
+    margin: 1rem 1rem 2rem 1rem;
     position: relative;
     text-align: center;
     h3 {
@@ -134,9 +132,6 @@ const ConnectContainer = styled(Container)`
     color: #fff;
     width: 80%;
     text-align: center;
-    p {
-      margin: 1rem 0;
-    }
     span {
       color: #fff;
       text-decoration: underline;

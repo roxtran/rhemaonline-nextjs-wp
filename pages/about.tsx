@@ -13,10 +13,12 @@ export default function About() {
         height='500px'
         // blur='blur(15px)'
       />
-      <AboutContainer>
+      <StyledAbout>
         <div className='content-wrapper'>
           <h2>Our Story</h2>
-          <span>Changing & Affecting Lives​</span>
+          <p>
+            <span>Changing & Affecting Lives​</span>
+          </p>
           <p>
             Established in the fall of 1999 under the leadership of our Senior
             Pastor, Orim M. Meikle, Rhema Christian Ministries, Canada is a
@@ -42,24 +44,18 @@ export default function About() {
             Canada.
           </p>
         </div>
-      </AboutContainer>
+      </StyledAbout>
     </>
   )
 }
-const AboutContainer = styled(Container)`
+const StyledAbout = styled(Container)`
   .content-wrapper {
     width: 1100px;
     max-width: 90vw;
-    h2 {
-      margin-bottom: 0.5rem;
-    }
     span {
       font-weight: bold;
       font-style: italic;
       font-size: 1.2rem;
-    }
-    p {
-      margin: 1rem 0;
     }
   }
 `

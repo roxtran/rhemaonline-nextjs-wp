@@ -60,7 +60,6 @@ const GrowContainer = styled(Container)`
     width: 1100px;
     max-width: 90vw;
     h2 {
-      margin-bottom: 1rem;
       color: var(--blue);
     }
   }
@@ -95,7 +94,7 @@ const GrowContainer = styled(Container)`
     width: 100%;
     h3 {
       font-size: 2rem;
-      padding: 1rem 4rem;
+      padding: 0 4rem;
       text-align: center;
     }
     .text {
@@ -108,7 +107,6 @@ const GrowContainer = styled(Container)`
       p {
         max-width: 90vw;
         text-align: center;
-        margin-bottom: 0.5rem;
       }
       ul {
         max-width: 80vw;

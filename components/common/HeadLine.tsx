@@ -19,7 +19,7 @@ export default function HeadLine({
   desc,
   btnText,
   btnLink,
-  height
+  height,
 }: HeadLineProps) {
   return (
     <HeadLineWrapper height={height || '450px'}>
@@ -71,7 +71,6 @@ const HeadLineWrapper = styled.div<{ height: string }>`
   p {
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 1.5rem;
     text-shadow: var(--text-shadow);
   }
   @media screen and (max-width: 768px) {
