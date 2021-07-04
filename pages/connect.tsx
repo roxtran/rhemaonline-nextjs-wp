@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import styled from 'styled-components'
 import HeadLine from '../components/common/HeadLine'
 import Link from 'next/link'
@@ -10,6 +11,9 @@ export default function Connect() {
   return (
     <>
       <Meta title='Connect - Rhema - Changing & Affecting Lives!' />
+      <Head>
+        <script src='https://js.churchcenter.com/modal/v1'></script>
+      </Head>
       <HeadLine
         imgUrl='/img/connect-img.jpg'
         title='We Care'

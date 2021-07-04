@@ -9,10 +9,10 @@ import { LocationContainer, VideoWrapper } from './toronto'
 export default function Ottawa() {
   return (
     <>
+      <Meta title='Ottawa Location - Rhema - Changing & Affecting Lives!' />
       <Head>
         <script src='https://js.churchcenter.com/modal/v1'></script>
       </Head>
-      <Meta title='Ottawa Location - Rhema - Changing & Affecting Lives!' />
       <VideoWrapper>
         <Video src='/video/Rhema-Toronto.mp4' width='100%' height='75vh' />
       </VideoWrapper>

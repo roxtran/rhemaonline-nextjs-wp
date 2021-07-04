@@ -8,10 +8,10 @@ import { Button, Container } from '../../styles/GlobalStyle'
 export default function Toronto() {
   return (
     <>
+      <Meta title='Toronto Location - Rhema - Changing & Affecting Lives!' />
       <Head>
         <script src='https://js.churchcenter.com/modal/v1'></script>
       </Head>
-      <Meta title='Toronto Location - Rhema - Changing & Affecting Lives!' />
       <VideoWrapper>
         <Video src='/video/Rhema-Toronto.mp4' width='100%' height='75vh' />
       </VideoWrapper>
