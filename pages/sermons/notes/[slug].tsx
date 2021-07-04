@@ -70,6 +70,7 @@ const NoteContainer = styled(SermonsContainer)`
     height: 100%;
     .date {
       font-style: italic;
+      margin-bottom: 0;
     }
     .line {
       margin: 0.5rem 0;
@@ -78,16 +79,13 @@ const NoteContainer = styled(SermonsContainer)`
       background: rgba(0, 0, 0, 0.2);
     }
     ${ImgWrapper} {
-      margin-top: 1.5rem;
+      margin-top: 2rem;
       width: 650px;
       max-width: 90vw;
       height: 450px;
     }
     article {
-      margin: 32px 0 48px;
-      p {
-        margin: 2rem 0 1rem;
-      }
+      margin-top: 2.5rem;
       ul {
         padding-left: 40px;
       }
