@@ -54,20 +54,20 @@ export default function LeaderModal({
                 <div className='modal-left'>
                   <ImgWrapper>
                     <Image
-                      src={leader.largeImg}
+                      src={leader.featuredImage.node.sourceUrl}
                       layout='fill'
                       objectFit='cover'
                       objectPosition='top'
                       // placeholder='blur'
                     />
                   </ImgWrapper>
-                  <h2 className='name'>{leader.name}</h2>
+                  <h2 className='name'>{leader.title}</h2>
                   <div className='line'></div>
                 </div>
                 <div className='modal-right'>
                   <div
                     className='bio'
-                    dangerouslySetInnerHTML={{ __html: leader.bio }}
+                    dangerouslySetInnerHTML={{ __html: leader.content }}
                   ></div>
                 </div>
               </div>

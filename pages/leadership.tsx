@@ -4,10 +4,16 @@ import styled from 'styled-components'
 import HeadLine from '../components/common/HeadLine'
 import LeaderModal from '../components/common/Modals/LeaderModal'
 import { Container, ImgWrapper } from '../styles/GlobalStyle'
-import leaders from '../data/leaders'
+// import leaders from '../data/leaders'
 import Meta from '../components/common/meta'
+import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
+import LeaderType from '../types/leader'
 
-export default function Leadership() {
+interface Props {
+  leaders: LeaderType[]
+}
+
+export default function Leadership({ leaders }: Props) {
   const [openModal, setOpenModal] = useState(false)
   const [selectedLeader, setSelectedLeader] = useState<any | null>(null)
 
@@ -39,7 +45,7 @@ export default function Leadership() {
             {leaders.map((leader) => (
               <a
                 className='leader'
-                key={leader.name}
+                key={leader.title}
                 onClick={() => {
                   setOpenModal(true)
                   setSelectedLeader(leader)
@@ -48,12 +54,12 @@ export default function Leadership() {
                 <ImgWrapper>
                   <Image
                     className='img'
-                    src={leader.smallImg}
+                    src={leader.smallImg.smallImage.sourceUrl}
                     width={250}
                     height={250}
                   />
                 </ImgWrapper>
-                <h3>{leader.name}</h3>
+                <h3>{leader.title}</h3>
               </a>
             ))}
           </div>
@@ -112,3 +118,40 @@ const LeadershipContainer = styled(Container)`
     }
   }
 `
+
+export async function getStaticProps() {
+  const client = new ApolloClient({
+    uri: process.env.WP_URL as string,
+    cache: new InMemoryCache(),
+  })
+
+  const { data } = await client.query({
+    query: gql`
+      query getLeaders {
+        leaders(where: { orderby: { field: DATE, order: ASC } }) {
+          nodes {
+            title
+            smallImg {
+              smallImage {
+                sourceUrl
+              }
+            }
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
+            content
+          }
+        }
+      }
+    `,
+  })
+
+  return {
+    props: {
+      leaders: data?.leaders?.nodes,
+    },
+    revalidate: 30,
+  }
+}
