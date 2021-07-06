@@ -4,10 +4,17 @@ import HeadLine from '../components/common/HeadLine'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Container, ImgWrapper } from '../styles/GlobalStyle'
-import services from '../data/services'
+// import services from '../data/services'
 import Meta from '../components/common/meta'
+import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
+import ServiceType from '../types/service'
 
-export default function Connect() {
+interface Props {
+  services: ServiceType[]
+}
+
+export default function Connect({ services }: Props) {
+  console.log(services)
   return (
     <>
       <Meta title='Connect - Rhema - Changing & Affecting Lives!' />
@@ -37,31 +44,42 @@ export default function Connect() {
         </div>
         <div className='services'>
           {services.map((service) => (
-            <div className='service' id={service.id} key={service.id}>
+            <div className='service' id={service.title} key={service.title}>
               <ImgWrapper>
-                <Image src={service.imgUrl} layout='fill' objectFit='cover' />
+                <Image
+                  src={service.featuredImage.node.sourceUrl}
+                  layout='fill'
+                  objectFit='cover'
+                />
               </ImgWrapper>
-              <h3>{service.name}</h3>
-              {service.link.includes(
+              <h3>{service.title}</h3>
+              {service.formLink.formLink.includes(
                 'https://rhemachristianministries.churchcenter.com/people/forms/'
               ) ? (
-                <a href={service.link} data-open-in-church-center-modal='true'>
+                <a
+                  href={service.formLink.formLink}
+                  data-open-in-church-center-modal='true'
+                >
                   <div className='hover'>
                     <div className='text-wrapper'>
-                      <h3>{service.name}</h3>
-                      <p>{service.desc}</p>
-                      <span>{service.linkText}</span>
+                      <h3>{service.title}</h3>
+                      <div
+                        dangerouslySetInnerHTML={{ __html: service.content }}
+                      ></div>
+                      <span>{service.formLink.linkText}</span>
                     </div>
                   </div>
                 </a>
               ) : (
-                <Link href={service.link}>
+                <Link href={service.formLink.formLink}>
                   <a>
                     <div className='hover'>
                       <div className='text-wrapper'>
-                        <h3>{service.name}</h3>
-                        <p>{service.desc}</p>
-                        <span>{service.linkText}</span>
+                        <h3>{service.title}</h3>
+                        <div
+                          dangerouslySetInnerHTML={{ __html: service.content }}
+                        ></div>
+                        <span>{service.formLink.linkText}</span>
                       </div>
                     </div>
                   </a>
@@ -139,3 +157,39 @@ const ConnectContainer = styled(Container)`
     }
   }
 `
+
+export async function getStaticProps() {
+  const client = new ApolloClient({
+    uri: process.env.WP_URL as string,
+    cache: new InMemoryCache(),
+  })
+
+  const { data } = await client.query({
+    query: gql`
+      query getServices {
+        services(where: { orderby: { field: DATE, order: ASC } }) {
+          nodes {
+            title
+            content
+            formLink {
+              formLink
+              linkText
+            }
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
+          }
+        }
+      }
+    `,
+  })
+
+  return {
+    props: {
+      services: data?.services?.nodes,
+    },
+    revalidate: 30,
+  }
+}

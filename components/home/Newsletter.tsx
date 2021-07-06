@@ -19,7 +19,12 @@ const Newsletter = () => {
       </div>
       <div className='newsletters'>
         {newsletters.map((newsletter) => (
-          <a className='newsletter' href={newsletter.link} target='_blank'>
+          <a
+            key={newsletter.link}
+            className='newsletter'
+            href={newsletter.link}
+            target='_blank'
+          >
             <ImgWrapper>
               <Image
                 src={newsletter.imgUrl}

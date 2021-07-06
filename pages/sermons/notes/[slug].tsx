@@ -1,5 +1,6 @@
 import NoteType from '../../../types/note'
 import Image from 'next/image'
+import Link from 'next/link'
 import HeadLine from '../../../components/common/HeadLine'
 import Meta from '../../../components/common/meta'
 import Sidebar from '../../../components/sermons/Sidebar'
@@ -8,6 +9,7 @@ import { formatDate } from '../../../utils/formatter'
 import styled from 'styled-components'
 import { SermonsContainer } from '../index'
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
+import paths from '../../../paths'
 
 interface Props {
   note: NoteType
@@ -33,7 +35,12 @@ export default function SermonNote({ note, notes }: Props) {
         <div className='note-wrapper'>
           <p className='date'>{formatDate(note.date)}</p>
           <div className='line'></div>
-          <p>in Sermon Notes</p>
+          <p>
+            in{' '}
+            <Link href={paths.sermons}>
+              <a>Sermon Notes</a>
+            </Link>
+          </p>
           <ImgWrapper>
             <Image
               layout='fill'
