@@ -14,7 +14,6 @@ interface Props {
 }
 
 export default function Connect({ services }: Props) {
-  console.log(services)
   return (
     <>
       <Meta title='Connect - Rhema - Changing & Affecting Lives!' />

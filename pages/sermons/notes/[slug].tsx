@@ -179,6 +179,7 @@ export const getStaticProps = async ({ params }: Params) => {
       note: data?.sermonNote,
       notes: data?.sermonNotes?.nodes,
     },
+    revalidate: 30,
   }
 }
 
