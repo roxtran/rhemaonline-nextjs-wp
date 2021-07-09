@@ -10,10 +10,11 @@ import styled from 'styled-components'
 import { SermonsContainer } from '../index'
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
 import paths from '../../../paths'
+import { validate } from 'graphql'
 
 interface Props {
   note: NoteType
-  notes: NoteType[]
+  list: NoteType[]
 }
 
 type Params = {
@@ -22,7 +23,7 @@ type Params = {
   }
 }
 
-export default function SermonNote({ note, notes }: Props) {
+export default function SermonNote({ note, list }: Props) {
   return (
     <>
       <Meta title={note.title + ' - Rhema - Changing & Affecting Lives!'} />
@@ -61,7 +62,7 @@ export default function SermonNote({ note, notes }: Props) {
             </div>
           </div>
         </div>
-        <Sidebar title='Recent Notes' notes={notes} />
+        <Sidebar title='Recent Notes' notes={list} />
       </NoteContainer>
     </>
   )
@@ -136,7 +137,7 @@ const NoteContainer = styled(SermonsContainer)`
 
 const client = new ApolloClient({
   uri: process.env.WP_URL as string,
-  cache: new InMemoryCache(),
+  cache: new InMemoryCache()
 })
 
 export const getStaticProps = async ({ params }: Params) => {
@@ -170,22 +171,25 @@ export const getStaticProps = async ({ params }: Params) => {
       }
     `,
     variables: {
-      id: slug,
-    },
+      id: slug
+    }
   })
 
   return {
     props: {
       note: data?.sermonNote,
-      notes: data?.sermonNotes?.nodes,
+      list: data?.sermonNotes?.nodes
     },
-    revalidate: 30,
+    revalidate: 30
   }
 }
 
 export const getStaticPaths = async () => {
-  const { data } = await client.query({
-    query: gql`
+  const res = await fetch(process.env.WP_URL as string, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      query: `
       query SermonNotes {
         sermonNotes {
           nodes {
@@ -193,14 +197,14 @@ export const getStaticPaths = async () => {
           }
         }
       }
-    `,
+      `
+    })
   })
-
-  const notes = data?.sermonNotes?.nodes
+  const json = await res.json()
+  const notes = json.data.sermonNotes.nodes
 
   const paths = notes.map((note: { slug: string }) => ({
-    params: { slug: note.slug },
+    params: { slug: note.slug }
   }))
-
   return { paths, fallback: false }
 }
