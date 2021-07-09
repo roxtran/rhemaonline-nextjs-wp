@@ -57,6 +57,7 @@ function Chatbot() {
 export default Chatbot
 
 const StyledChat = styled.div`
+  display: block;
   position: fixed;
   bottom: 0;
   right: 0;
@@ -93,5 +94,18 @@ const StyledChat = styled.div`
   .rsc-header-title {
     color: #fff;
     padding-top: 0;
+  }
+  @media screen and (max-width: 768px) {
+    /* display: none; */
+    .wrapper {
+      bottom: 1.5rem;
+      right: 1.5rem;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    /* display: none; */
+    .bot-wrapper {
+      width: 85vw;
+    }
   }
 `
