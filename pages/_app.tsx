@@ -7,6 +7,8 @@ import { AppProps } from 'next/dist/next-server/lib/router/router'
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import SurveyModal from '../components/common/Modals/HomeModal'
+// chatbot
+import Chatbot from '../components/Chatbot'
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   const [openModal, setOpenModal] = useState(false)
@@ -48,6 +50,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           transition={{ duration: 0.25 }}
         >
           <Component {...pageProps} />
+          <Chatbot />
         </motion.div>
         <SurveyModal openModal={openModal} setOpenModal={setOpenModal} />
       </Layout>

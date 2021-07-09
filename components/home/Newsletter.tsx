@@ -63,7 +63,7 @@ const NewsletterWrapper = styled(Container)`
     flex-flow: row wrap;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0px 12px 36px 0px rgb(0 0 0 / 25%);
+    box-shadow: 0px 12px 36px 0px rgb(181 217 238 / 25%);
     /* gap: 0.15rem; */
   }
   .newsletter {
@@ -79,7 +79,7 @@ const NewsletterWrapper = styled(Container)`
     min-height: calc(400px / 3);
     transition-duration: 0.2s;
     &:hover {
-      opacity: 0.65;
+      opacity: 0.75;
     }
   }
   @media screen and (max-width: 640px) {

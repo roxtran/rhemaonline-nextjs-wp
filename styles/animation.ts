@@ -1,6 +1,6 @@
 export const fade = {
   hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { duration: 0.25 } },
+  show: { opacity: 1, transition: { duration: 0.1 } },
   exit: { opacity: 0 },
 }
 
@@ -8,6 +8,12 @@ export const slideDown = {
   hidden: { y: -200, opacity: 0 },
   show: { y: 0, opacity: 1, transition: { duration: 0.25, ease: 'easeIn' } },
   exit: { opacity: 1, y: 400 },
+}
+
+export const slideUp = {
+  hidden: { y: 200, opacity: 0 },
+  show: { y: 0, opacity: 1, transition: { duration: 0.15, ease: 'easeIn' } },
+  exit: { opacity: 1, y: -400 },
 }
 
 export const slideRight = {

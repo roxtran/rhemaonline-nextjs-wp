@@ -53,7 +53,7 @@ export const WelcomeWrapper = styled(motion.div)`
     height: 380px;
     box-shadow: -35px 35px 0 0 rgba(122, 207, 255, 0.3);
     &:hover {
-      box-shadow: 0 0 0 0 rgba(122, 207, 255, 0.3);
+      box-shadow: none;
     }
     @media screen and (max-width: 768px) {
       flex: none;

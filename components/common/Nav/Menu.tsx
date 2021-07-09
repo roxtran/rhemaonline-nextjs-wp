@@ -119,7 +119,7 @@ const StyledMenu = styled.div<{ open: boolean }>`
     }
   }
   .give {
-    background-color: var(--high-light);
+    background-color: var(--highlight);
   }
   /* .external:after {
     content: '◥';

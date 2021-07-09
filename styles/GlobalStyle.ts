@@ -85,7 +85,7 @@ const GlobalStyle = createGlobalStyle`
     text-shadow: 0 0 12px rgba(0 0 0 / 0.2);
   }
 `
-export const Container = styled(motion.div)`
+export const Container = styled(motion.section)`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -108,7 +108,7 @@ export const Button = styled(motion.a)`
     box-shadow: var(--shadow);
   }
   &.orange {
-    background: var(--high-light);
+    background: var(--highlight);
     color: #fff;
     &:hover {
       background: var(--blue);
