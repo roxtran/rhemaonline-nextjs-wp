@@ -10,7 +10,7 @@ const items = {
     boxShadow: '0px 7px 10px 0 rgba(122, 207, 255, 0.3)',
     borderRadius: '10px',
     overflow: 'hidden',
-    transition: { duration: 0.25, delay: 0.25, when: 'afterChildren' },
+    transition: { duration: 0.1, type: 'spring', when: 'afterChildren' },
   },
 }
 
@@ -27,7 +27,12 @@ export default function MiddleMenu() {
         <motion.div
           className='item'
           variants={slideRight}
-          transition={{ duration: 0.25, ease: 'easeIn', delay: 0.5 }}
+          transition={{
+            duration: 0.25,
+            type: 'spring',
+            delay: 0.25,
+            damping: 8,
+          }}
         >
           <Link href={paths.leadership}>
             <a>
@@ -48,7 +53,12 @@ export default function MiddleMenu() {
         <motion.div
           className='item'
           variants={slideRight}
-          transition={{ duration: 0.25, ease: 'easeIn', delay: 0.4 }}
+          transition={{
+            duration: 0.25,
+            type: 'spring',
+            delay: 0.15,
+            damping: 8,
+          }}
         >
           <Link href={paths.beliefs}>
             <motion.a>
@@ -69,7 +79,12 @@ export default function MiddleMenu() {
         <motion.div
           className='item'
           variants={slideLeft}
-          transition={{ duration: 0.25, ease: 'easeIn', delay: 0.4 }}
+          transition={{
+            duration: 0.25,
+            type: 'spring',
+            delay: 0.15,
+            damping: 8,
+          }}
         >
           <Link href={paths.ministries}>
             <motion.a>
@@ -87,7 +102,12 @@ export default function MiddleMenu() {
         <motion.div
           className='item'
           variants={slideLeft}
-          transition={{ duration: 0.25, ease: 'easeIn', delay: 0.5 }}
+          transition={{
+            duration: 0.25,
+            type: 'spring',
+            delay: 0.25,
+            damping: 8,
+          }}
         >
           <Link href={paths.grow}>
             <motion.a>
