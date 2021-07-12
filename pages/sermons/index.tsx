@@ -4,7 +4,7 @@ import HeadLine from '../../components/common/HeadLine'
 import Sidebar from '../../components/sermons/Sidebar'
 import NotesList from '../../components/sermons/NoteList'
 import styled from 'styled-components'
-// import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
+import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
 
 interface Props {
   notes: NoteType[]
@@ -41,47 +41,46 @@ export const SermonsContainer = styled.div`
 `
 
 export async function getStaticProps() {
-  const res = await fetch(process.env.WP_URL as string, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      query: `
-        query getSermonNotes($first: Int!, $after: String) {
-          sermonNotes(first: $first, after: $after) {
-            nodes {
-              title
-              slug
-              date
-              excerpt
-              featuredImage {
-                node {
-                  sourceUrl
-                }
+  const client = new ApolloClient({
+    uri: process.env.WP_URL as string,
+    cache: new InMemoryCache(),
+  })
+
+  const { data } = await client.query({
+    query: gql`
+      query getSermonNotes($first: Int!, $after: String) {
+        sermonNotes(first: $first, after: $after) {
+          nodes {
+            title
+            slug
+            date
+            excerpt
+            featuredImage {
+              node {
+                sourceUrl
               }
             }
           }
-          sermonList: sermonNotes {
-            nodes {
-              title
-              slug
-              date
-            }
+        }
+        sermonList: sermonNotes {
+          nodes {
+            title
+            slug
+            date
           }
         }
-      `,
-      variables: {
-        first: 2,
-        after: null,
-      },
-    }),
+      }
+    `,
+    variables: {
+      first: 2,
+      after: null,
+    },
   })
-
-  const json = await res.json()
 
   return {
     props: {
-      notes: json?.data?.sermonNotes.nodes,
-      list: json?.data?.sermonList?.nodes,
+      notes: data?.sermonNotes?.nodes,
+      list: data?.sermonList?.nodes,
     },
     revalidate: 30,
   }
