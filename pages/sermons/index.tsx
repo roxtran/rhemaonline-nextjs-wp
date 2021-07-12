@@ -4,7 +4,7 @@ import HeadLine from '../../components/common/HeadLine'
 import Sidebar from '../../components/sermons/Sidebar'
 import NotesList from '../../components/sermons/NoteList'
 import styled from 'styled-components'
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
+// import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
 
 interface Props {
   notes: NoteType[]
@@ -41,15 +41,13 @@ export const SermonsContainer = styled.div`
 `
 
 export async function getStaticProps() {
-  const client = new ApolloClient({
-    uri: process.env.WP_URL as string,
-    cache: new InMemoryCache(),
-  })
-
-  const { data } = await client.query({
-    query: gql`
-      query getSermonNotes($first: Int!, $after: String) {
-        sermonNotes(first: $first, after: $after) {
+  const res = await fetch(process.env.WP_URL as string, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      query: `
+      query SermonNotes {
+        sermonNotes {
           nodes {
             title
             slug
@@ -59,28 +57,19 @@ export async function getStaticProps() {
               node {
                 sourceUrl
               }
-            }
-          }
-        }
-        sermonList: sermonNotes {
-          nodes {
-            title
-            slug
-            date
+            } 
           }
         }
       }
-    `,
-    variables: {
-      first: 2,
-      after: null,
-    },
+      `,
+    }),
   })
+
+  const json = await res.json()
 
   return {
     props: {
-      notes: data?.sermonNotes?.nodes,
-      list: data?.sermonList?.nodes,
+      notes: json?.data?.sermonNotes?.nodes,
     },
     revalidate: 30,
   }
