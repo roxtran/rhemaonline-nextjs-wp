@@ -73,7 +73,6 @@ export async function getStaticProps() {
         first: 2,
         after: null,
       },
-      revalidate: 30,
     }),
   })
 
@@ -84,5 +83,6 @@ export async function getStaticProps() {
       notes: json?.data?.sermonNotes.nodes,
       list: json?.data?.sermonList?.nodes,
     },
+    revalidate: 30,
   }
 }

@@ -93,7 +93,7 @@ const NoteContainer = styled(SermonsContainer)`
       height: 450px;
     }
     article {
-      margin-top: 2.5rem;
+      margin: 2.5rem 0;
       ul {
         padding-left: 40px;
       }
