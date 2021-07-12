@@ -8,9 +8,9 @@ import { Button, ImgWrapper } from '../../../styles/GlobalStyle'
 import { formatDate } from '../../../utils/formatter'
 import styled from 'styled-components'
 import { SermonsContainer } from '../index'
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
+// import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
 import paths from '../../../paths'
-import { validate } from 'graphql'
+// import { validate } from 'graphql'
 
 interface Props {
   note: NoteType
@@ -135,17 +135,14 @@ const NoteContainer = styled(SermonsContainer)`
   }
 `
 
-const client = new ApolloClient({
-  uri: process.env.WP_URL as string,
-  cache: new InMemoryCache()
-})
-
 export const getStaticProps = async ({ params }: Params) => {
   const { slug } = params
-
-  const { data } = await client.query({
-    query: gql`
-      query getNotes($id: ID!) {
+  const res = await fetch(process.env.WP_URL as string, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      query: `
+      query ($id: ID!) {
         sermonNote(id: $id, idType: SLUG) {
           title
           date
@@ -154,12 +151,13 @@ export const getStaticProps = async ({ params }: Params) => {
             node {
               sourceUrl
             }
-          }
+          }    
           docFile {
             docFile {
               mediaItemUrl
             }
           }
+          
         }
         sermonNotes {
           nodes {
@@ -169,18 +167,20 @@ export const getStaticProps = async ({ params }: Params) => {
           }
         }
       }
-    `,
-    variables: {
-      id: slug
-    }
+      `,
+      variables: {
+        id: slug,
+      },
+    }),
   })
+
+  const json = await res.json()
 
   return {
     props: {
-      note: data?.sermonNote,
-      list: data?.sermonNotes?.nodes
+      note: json?.data?.sermonNote,
+      list: json?.data?.sermonNotes?.nodes,
     },
-    revalidate: 30
   }
 }
 
@@ -197,14 +197,14 @@ export const getStaticPaths = async () => {
           }
         }
       }
-      `
-    })
+      `,
+    }),
   })
   const json = await res.json()
   const notes = json.data.sermonNotes.nodes
 
   const paths = notes.map((note: { slug: string }) => ({
-    params: { slug: note.slug }
+    params: { slug: note.slug },
   }))
   return { paths, fallback: false }
 }
