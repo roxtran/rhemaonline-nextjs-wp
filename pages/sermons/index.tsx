@@ -46,22 +46,33 @@ export async function getStaticProps() {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       query: `
-      query SermonNotes {
-        sermonNotes {
-          nodes {
-            title
-            slug
-            date
-            excerpt
-            featuredImage {
-              node {
-                sourceUrl
+        query getSermonNotes($first: Int!, $after: String) {
+          sermonNotes(first: $first, after: $after) {
+            nodes {
+              title
+              slug
+              date
+              excerpt
+              featuredImage {
+                node {
+                  sourceUrl
+                }
               }
-            } 
+            }
+          }
+          sermonList: sermonNotes {
+            nodes {
+              title
+              slug
+              date
+            }
           }
         }
-      }
       `,
+      variables: {
+        first: 2,
+        after: null,
+      },
     }),
   })
 
@@ -69,8 +80,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      notes: json?.data?.sermonNotes?.nodes,
+      notes: json?.data?.sermonNotes.nodes,
+      list: json?.data?.sermonList?.nodes,
     },
-    revalidate: 30,
   }
 }
