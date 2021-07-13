@@ -1,22 +1,32 @@
 export default [
   {
-    imgUrl: '/img/newsletters/Annotation 2021-04-12 113547.png',
-    link: 'https://myemail.constantcontact.com/This-Week---Rhema.html?soid=1101184914406&aid=lhrCfJoX3UE',
+    imgUrl:
+      'https://files.constantcontact.com/6e35cb36001/0d832099-4bf3-4479-a5be-6990eeda22db.png',
+    link:
+      'https://myemail.constantcontact.com/This-Week---Rhema.html?soid=1101184914406&aid=l5Up2JFBi9o',
   },
   {
-    imgUrl: '/img/newsletters/Annotation 2021-04-12 115612.png',
-    link: 'https://myemail.constantcontact.com/This-Week---Rhema.html?soid=1101184914406&aid=RwDp_tEJYo8',
+    imgUrl:
+      'https://files.constantcontact.com/6e35cb36001/feb2014c-82fb-4edf-bf30-dc53606d5ea1.png',
+    link:
+      'https://myemail.constantcontact.com/This-Week---Rhema.html?soid=1101184914406&aid=lhrCfJoX3UE',
   },
   {
-    imgUrl: '/img/newsletters/Annotation 2021-04-12 113956.png',
-    link: 'https://myemail.constantcontact.com/This-Week---Rhema.html?soid=1101184914406&aid=YUP6qFqBXMc',
+    imgUrl:
+      'https://files.constantcontact.com/6e35cb36001/41d6ea0f-649b-4f9a-badf-f81a543c7355.png',
+    link:
+      'https://myemail.constantcontact.com/This-Week---Rhema.html?soid=1101184914406&aid=RwDp_tEJYo8',
   },
   {
-    imgUrl: '/img/newsletters/Annotation-2021-04-12 113911.png',
-    link: 'https://myemail.constantcontact.com/This-Week---Rhema.html?soid=1101184914406&aid=S98FghfAf14',
+    imgUrl:
+      'https://files.constantcontact.com/6e35cb36001/67bb4616-ab76-4cb1-9a0f-51fcca12debe.png',
+    link:
+      'https://myemail.constantcontact.com/This-Week---Rhema.html?soid=1101184914406&aid=YUP6qFqBXMc',
   },
   {
-    imgUrl: '/img/newsletters/Annotation-2021-04-12 113911.png',
-    link: 'https://myemail.constantcontact.com/This-Week---Rhema.html?soid=1101184914406&aid=S98FghfAf14',
+    imgUrl:
+      'https://files.constantcontact.com/6e35cb36001/ce8fcdad-1ac9-43f0-a266-e79cf0bdeb35.png',
+    link:
+      'https://myemail.constantcontact.com/This-Week---Rhema.html?soid=1101184914406&aid=S98FghfAf14',
   },
 ]
