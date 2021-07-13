@@ -6,6 +6,9 @@ import Welcome from '../components/home/Welcome'
 import Newsletter from '../components/home/Newsletter'
 import styled from 'styled-components'
 
+import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
+import newsletters from '../data/newsletters'
+
 const Home = () => {
   return (
     <>
@@ -20,7 +23,7 @@ const Home = () => {
       <MiddleMenu />
       <Welcome />
       <Subscribe />
-      <Newsletter />
+      <Newsletter newsletters={newsletters} />
     </>
   )
 }
@@ -38,3 +41,36 @@ const VideoWrapper = styled.div`
     }
   }
 `
+
+export async function getStaticProps() {
+  const client = new ApolloClient({
+    uri: process.env.WP_URL as string,
+    cache: new InMemoryCache(),
+  })
+
+  const { data } = await client.query({
+    query: gql`
+      query getNewsletters($first: Int!, $after: String) {
+        newsletters(first: $first, after: $after) {
+          nodes {
+            NewsletterInfo {
+              imgUrl
+              link
+            }
+          }
+        }
+      }
+    `,
+    variables: {
+      first: 5,
+      after: null,
+    },
+  })
+
+  return {
+    props: {
+      newsletters: data?.newsletters?.nodes,
+    },
+    revalidate: 30,
+  }
+}

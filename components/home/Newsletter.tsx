@@ -1,9 +1,14 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 import { Button, Container, ImgWrapper } from '../../styles/GlobalStyle'
-import newsletters from '../../data/newsletters'
+// import newsletters from '../../data/newsletters'
+import NewsletterType from '../../types/newsletter'
 
-const Newsletter = () => {
+interface Props {
+  newsletters: NewsletterType[]
+}
+
+const Newsletter = ({ newsletters }: Props) => {
   return (
     <NewsletterWrapper>
       <div className='text'>
