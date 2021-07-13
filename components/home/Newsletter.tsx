@@ -12,7 +12,7 @@ const Newsletter = ({ newsletters }: Props) => {
   return (
     <NewsletterWrapper>
       <div className='text'>
-        <h2>Our Weekly Newsletter</h2>
+        <h2>Our Weekly Newsletters</h2>
         <p>
           This is our way of keeping you up to date on all our events,
           activities, and relevant news. We invite you to check out what’s
