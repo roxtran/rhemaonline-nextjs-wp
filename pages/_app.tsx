@@ -50,7 +50,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           transition={{ duration: 0.25 }}
         >
           <Component {...pageProps} />
-          <Chatbot />
+          {/* <Chatbot /> */}
         </motion.div>
         {/* <SurveyModal openModal={openModal} setOpenModal={setOpenModal} /> */}
       </Layout>

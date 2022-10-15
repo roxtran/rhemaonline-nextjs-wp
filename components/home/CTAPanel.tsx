@@ -8,7 +8,7 @@ import { slideLeft, slideRight, slideUp } from '../../styles/animation';
 const items = {
   show: {
     // boxShadow: '0px 7px 10px 0 rgba(122, 207, 255, 0.3)',
-    border: '4px solid rgb(16, 97, 162)',
+    // border: '4px solid rgb(16, 97, 162)',
     borderRadius: '10px',
     overflow: 'hidden',
     transition: { duration: 0.01, type: 'spring', when: 'afterChildren' },
@@ -87,7 +87,7 @@ const CTAPanel = styled.div`
   position: relative;
   z-index: 1;
   display: flex;
-  margin: 3rem 0 4rem;
+  margin: 2rem 0 4rem;
 
   .items {
     position: relative;

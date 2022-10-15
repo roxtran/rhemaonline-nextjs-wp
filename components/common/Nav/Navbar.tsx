@@ -1,8 +1,8 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import styled from 'styled-components'
-import Burger from './Burger'
-import { motion } from 'framer-motion'
+import Image from 'next/image';
+import Link from 'next/link';
+import styled from 'styled-components';
+import Burger from './Burger';
+import { motion } from 'framer-motion';
 
 const navbar = {
   hidden: { opacity: 0, y: -90 },
@@ -21,7 +21,7 @@ const navbar = {
       duration: 0.25,
     },
   },
-}
+};
 
 export default function Navbar() {
   return (
@@ -38,7 +38,7 @@ export default function Navbar() {
       </Link>
       <Burger />
     </Nav>
-  )
+  );
 }
 const Nav = styled(motion.nav)`
   position: fixed;
@@ -48,7 +48,8 @@ const Nav = styled(motion.nav)`
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  box-shadow: 0 7px 10px 0 rgba(122, 207, 255, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 7px 10px 0 rgba(122, 207, 255, 0.3); */
   align-items: center;
   z-index: 3;
-`
+`;
