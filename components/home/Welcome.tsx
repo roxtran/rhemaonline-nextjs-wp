@@ -1,9 +1,9 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import styled from 'styled-components'
-import paths from '../../paths'
-import { Button, ImgWrapper } from '../../styles/GlobalStyle'
-import { motion } from 'framer-motion'
+import Image from 'next/image';
+import Link from 'next/link';
+import styled from 'styled-components';
+import paths from '../../paths';
+import { Button, ImgWrapper } from '../../styles/GlobalStyle';
+import { motion } from 'framer-motion';
 export default function Welcome() {
   return (
     <WelcomeWrapper>
@@ -36,14 +36,14 @@ export default function Welcome() {
         </Link>
       </motion.div>
     </WelcomeWrapper>
-  )
+  );
 }
 
 export const WelcomeWrapper = styled(motion.div)`
   position: relative;
   width: 1200px;
   max-width: 80vw;
-  margin: 0 auto 12.5rem;
+  margin: 0 auto 7rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,4 +108,4 @@ export const WelcomeWrapper = styled(motion.div)`
 
   @media screen and (orientation: portrait) {
   }
-`
+`;

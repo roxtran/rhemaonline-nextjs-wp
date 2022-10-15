@@ -1,9 +1,9 @@
-import Image from 'next/image'
-import styled from 'styled-components'
-import HeadLine from '../components/common/HeadLine'
-import Meta from '../components/common/meta'
-import { default as getConnectedData } from '../data/get-connected'
-import { Button, Container, ImgWrapper } from '../styles/GlobalStyle'
+import Image from 'next/image';
+import styled from 'styled-components';
+import HeadLine from '../components/common/HeadLine';
+import Meta from '../components/common/meta';
+import { default as getConnectedData } from '../data/get-connected';
+import { Button, Container, ImgWrapper } from '../styles/GlobalStyle';
 
 const getConnected = () => {
   return (
@@ -41,11 +41,13 @@ const getConnected = () => {
         </div>
       </ConnectedContainer>
     </>
-  )
-}
+  );
+};
 
 const ConnectedContainer = styled(Container)`
-  padding: 0;
+  width: 80vw;
+  margin: 0 auto;
+
   .items {
     width: 100%;
   }
@@ -106,6 +108,6 @@ const ConnectedContainer = styled(Container)`
       padding: 2rem;
     }
   }
-`
+`;
 
-export default getConnected
+export default getConnected;

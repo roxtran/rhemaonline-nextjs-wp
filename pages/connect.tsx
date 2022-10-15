@@ -1,16 +1,16 @@
-import Head from 'next/head'
-import styled from 'styled-components'
-import HeadLine from '../components/common/HeadLine'
-import Link from 'next/link'
-import Image from 'next/image'
-import { Container, ImgWrapper } from '../styles/GlobalStyle'
+import Head from 'next/head';
+import styled from 'styled-components';
+import HeadLine from '../components/common/HeadLine';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Container, ImgWrapper } from '../styles/GlobalStyle';
 // import services from '../data/services'
-import Meta from '../components/common/meta'
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
-import ServiceType from '../types/service'
+import Meta from '../components/common/meta';
+import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
+import ServiceType from '../types/service';
 
 interface Props {
-  services: ServiceType[]
+  services: ServiceType[];
 }
 
 export default function Connect({ services }: Props) {
@@ -51,37 +51,32 @@ export default function Connect({ services }: Props) {
                   objectFit='cover'
                 />
               </ImgWrapper>
-              <h3>{service.title}</h3>
               {service.formLink.formLink.includes(
                 'https://rhemachristianministries.churchcenter.com/people/forms/'
               ) ? (
-                <a
-                  href={service.formLink.formLink}
-                  data-open-in-church-center-modal='true'
-                >
-                  <div className='hover'>
-                    <div className='text-wrapper'>
-                      <h3>{service.title}</h3>
-                      <div
-                        dangerouslySetInnerHTML={{ __html: service.content }}
-                      ></div>
-                      <span>{service.formLink.linkText}</span>
-                    </div>
-                  </div>
-                </a>
+                <div className='text-wrapper'>
+                  <h3>{service.title}</h3>
+                  <div
+                    dangerouslySetInnerHTML={{ __html: service.content }}
+                  ></div>
+                  <a
+                    href={service.formLink.formLink}
+                    data-open-in-church-center-modal='true'
+                  >
+                    <span>{service.formLink.linkText}</span>
+                  </a>
+                </div>
               ) : (
                 <Link href={service.formLink.formLink}>
-                  <a>
-                    <div className='hover'>
-                      <div className='text-wrapper'>
-                        <h3>{service.title}</h3>
-                        <div
-                          dangerouslySetInnerHTML={{ __html: service.content }}
-                        ></div>
-                        <span>{service.formLink.linkText}</span>
-                      </div>
-                    </div>
-                  </a>
+                  <div className='text-wrapper'>
+                    <h3>{service.title}</h3>
+                    <div
+                      dangerouslySetInnerHTML={{ __html: service.content }}
+                    ></div>
+                    <a>
+                      <span>{service.formLink.linkText}</span>
+                    </a>
+                  </div>
                 </Link>
               )}
             </div>
@@ -89,13 +84,13 @@ export default function Connect({ services }: Props) {
         </div>
       </ConnectContainer>
     </>
-  )
+  );
 }
 const ConnectContainer = styled(Container)`
   .desc {
     width: 1100px;
     max-width: 90vw;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     h2 {
       color: var(--blue);
     }
@@ -107,61 +102,33 @@ const ConnectContainer = styled(Container)`
     flex-wrap: wrap;
   }
   .service {
-    width: 560px;
+    width: 520px;
     max-width: 90vw;
-    margin: 1rem 1rem 2rem 1rem;
+    margin: 1rem 2rem 2rem;
     position: relative;
-    text-align: center;
+    ${ImgWrapper} {
+      height: 250px;
+      @media screen and (max-width: 640px) {
+        height: 600px;
+      }
+    }
     h3 {
-      margin: 0.5rem auto;
+      margin: 1rem 0;
+    }
+    .text-wrapper {
+      span {
+        text-decoration: underline;
+        font-weight: bold;
+      }
     }
   }
-  ${ImgWrapper} {
-    height: 500px;
-    @media screen and (max-width: 640px) {
-      height: 600px;
-    }
-  }
-  .hover {
-    cursor: pointer;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 5px;
-    overflow: hidden;
-    background: var(--blue);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    h3 {
-      color: #fff;
-    }
-    &:hover {
-      opacity: 0.95;
-      box-shadow: var(--shadow);
-    }
-  }
-  .text-wrapper {
-    color: #fff;
-    width: 80%;
-    text-align: center;
-    span {
-      color: #fff;
-      text-decoration: underline;
-      font-weight: bold;
-    }
-  }
-`
+`;
 
 export async function getStaticProps() {
   const client = new ApolloClient({
     uri: process.env.WP_URL as string,
     cache: new InMemoryCache(),
-  })
+  });
 
   const { data } = await client.query({
     query: gql`
@@ -183,12 +150,12 @@ export async function getStaticProps() {
         }
       }
     `,
-  })
+  });
 
   return {
     props: {
       services: data?.services?.nodes,
     },
     revalidate: 30,
-  }
+  };
 }

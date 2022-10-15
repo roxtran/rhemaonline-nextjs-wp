@@ -1,10 +1,10 @@
-import HeadLine from '../../components/common/HeadLine'
-import styled from 'styled-components'
-import { Container, Button, ImgWrapper } from '../../styles/GlobalStyle'
-import Image from 'next/image'
-import { default as ministriesData } from '../../data/ministies'
-import Meta from '../../components/common/meta'
-import Link from 'next/link'
+import HeadLine from '../../components/common/HeadLine';
+import styled from 'styled-components';
+import { Container, Button, ImgWrapper } from '../../styles/GlobalStyle';
+import Image from 'next/image';
+import { default as ministriesData } from '../../data/ministies';
+import Meta from '../../components/common/meta';
+import Link from 'next/link';
 
 const ministries = () => {
   return (
@@ -55,11 +55,14 @@ const ministries = () => {
         </div>
       </MinistriesContainer>
     </>
-  )
-}
+  );
+};
 
 export const MinistriesContainer = styled(Container)`
   padding-bottom: 0;
+  margin: 0 auto;
+  width: 80vw;
+
   .desc {
     width: 1100px;
     max-width: 90vw;
@@ -113,6 +116,6 @@ export const MinistriesContainer = styled(Container)`
       }
     }
   }
-`
+`;
 
-export default ministries
+export default ministries;

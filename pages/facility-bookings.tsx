@@ -1,7 +1,7 @@
-import HeadLine from '../components/common/HeadLine'
-import styled from 'styled-components'
-import { Container, Button } from '../styles/GlobalStyle'
-import Meta from '../components/common/meta'
+import HeadLine from '../components/common/HeadLine';
+import styled from 'styled-components';
+import { Container, Button } from '../styles/GlobalStyle';
+import Meta from '../components/common/meta';
 
 export default function facilityBookings() {
   return (
@@ -72,7 +72,7 @@ export default function facilityBookings() {
         </div>
       </BookingsContainer>
     </>
-  )
+  );
 }
 
 const BookingsContainer = styled(Container)`
@@ -96,7 +96,6 @@ const BookingsContainer = styled(Container)`
   }
   .btn-wrapper {
     padding: 5rem 2rem;
-    width: 340px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -118,4 +117,4 @@ const BookingsContainer = styled(Container)`
       padding: 2rem 0;
     }
   }
-`
+`;

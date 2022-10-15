@@ -1,5 +1,5 @@
-import styled, { createGlobalStyle } from 'styled-components'
-import { motion } from 'framer-motion'
+import styled, { createGlobalStyle } from 'styled-components';
+import { motion } from 'framer-motion';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     background: #fff;
     color: var(--text-color);
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     width: 100vw;
   }
@@ -84,7 +84,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 2rem;
     text-shadow: 0 0 12px rgba(0 0 0 / 0.2);
   }
-`
+`;
 export const Container = styled(motion.section)`
   display: flex;
   flex-direction: column;
@@ -92,7 +92,7 @@ export const Container = styled(motion.section)`
   align-items: center;
   width: 100vw;
   padding: 4rem 0;
-`
+`;
 export const Button = styled(motion.a)`
   display: inline-block;
   cursor: pointer;
@@ -122,12 +122,12 @@ export const Button = styled(motion.a)`
       color: #fff;
     }
   }
-`
+`;
 
 export const ImgWrapper = styled(motion.div)`
   position: relative;
   border-radius: 5px;
   overflow: hidden;
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;

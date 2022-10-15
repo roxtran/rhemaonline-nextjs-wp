@@ -1,9 +1,9 @@
-import Image from 'next/image'
-import styled from 'styled-components'
-import HeadLine from '../components/common/HeadLine'
-import Meta from '../components/common/meta'
-import { default as growData } from '../data/grow'
-import { Container, ImgWrapper } from '../styles/GlobalStyle'
+import Image from 'next/image';
+import styled from 'styled-components';
+import HeadLine from '../components/common/HeadLine';
+import Meta from '../components/common/meta';
+import { default as growData } from '../data/grow';
+import { Container, ImgWrapper } from '../styles/GlobalStyle';
 
 const grow = () => {
   return (
@@ -51,11 +51,13 @@ const grow = () => {
         </div>
       </GrowContainer>
     </>
-  )
-}
+  );
+};
 
 const GrowContainer = styled(Container)`
   padding-bottom: 0;
+  width: 80vw;
+  margin: 0 auto;
   .desc {
     width: 1100px;
     max-width: 90vw;
@@ -142,6 +144,6 @@ const GrowContainer = styled(Container)`
       }
     }
   }
-`
+`;
 
-export default grow
+export default grow;
