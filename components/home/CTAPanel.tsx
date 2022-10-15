@@ -99,7 +99,6 @@ const CTAPanel = styled.div`
   }
   .item {
     background: rgba(255, 255, 255, 1);
-    min-height: 200px;
     min-width: 200px;
     display: flex;
     flex-direction: column;
@@ -109,15 +108,18 @@ const CTAPanel = styled.div`
     padding: 0.5rem;
     flex: 1;
     &:not(:last-child) {
-      border-right: 1px dashed rgba(122, 207, 255, 0.3);
+      border-right: 1px dashed var(--shadow-color);
     }
     a {
       color: var(--heading-color);
-      margin: 0.9rem;
+      margin: 2rem;
       font-weight: bold;
+      &:hover {
+        color: var(--blue);
+      }
     }
     .line {
-      background-color: rgb(16, 97, 162);
+      background-color: var(--blue);
       width: 200px;
       height: 3px;
     }
@@ -129,7 +131,7 @@ const CTAPanel = styled.div`
     }
     .item:nth-child(1),
     .item:nth-child(2) {
-      border-bottom: 1px dashed rgba(122, 207, 255, 0.3);
+      border-bottom: 1px dashed var(--shadow-color);
     }
     .item:nth-child(2) {
       border-right: none;
@@ -141,7 +143,7 @@ const CTAPanel = styled.div`
       border-right: none;
     }
     .item:nth-child(3) {
-      border-bottom: 1px dashed rgba(122, 207, 255, 0.3);
+      border-bottom: 1px dashed var(--shadow-color);
     }
   }
 `;

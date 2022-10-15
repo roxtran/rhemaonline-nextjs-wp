@@ -1,10 +1,10 @@
-import styled from 'styled-components'
-import NavLink from './NavLink'
-import paths from '../../../paths'
+import styled from 'styled-components';
+import NavLink from './NavLink';
+import paths from '../../../paths';
 
 interface Props {
-  open: boolean
-  setOpen: Function
+  open: boolean;
+  setOpen: Function;
 }
 
 export default function Menu({ open, setOpen }: Props) {
@@ -54,7 +54,7 @@ export default function Menu({ open, setOpen }: Props) {
         </a>
       </div>
     </StyledMenu>
-  )
+  );
 }
 const StyledMenu = styled.div<{ open: boolean }>`
   display: flex;
@@ -71,7 +71,7 @@ const StyledMenu = styled.div<{ open: boolean }>`
         100% 7px no-repeat;
     }
     &:hover {
-      color: var(--mint);
+      color: var(--blue);
     }
   }
   .locations {
@@ -113,6 +113,7 @@ const StyledMenu = styled.div<{ open: boolean }>`
     &:hover {
       /* border-bottom: 0; */
       background: var(--blue);
+      color: var(--mint);
     }
     &[aria-current] {
       background-color: var(--light-blue);
@@ -164,4 +165,4 @@ const StyledMenu = styled.div<{ open: boolean }>`
       width: 150px;
     }
   }
-`
+`;
