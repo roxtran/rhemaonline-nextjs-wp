@@ -1,12 +1,12 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { useState } from 'react'
-import styled from 'styled-components'
-import paths from '../../paths'
-import BibleModal from './Modals/BibleModal'
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+import styled from 'styled-components';
+import paths from '../../paths';
+import BibleModal from './Modals/BibleModal';
 
 export default function Footer() {
-  const [openBible, setOpenBible] = useState(false)
+  const [openBible, setOpenBible] = useState(false);
 
   return (
     <>
@@ -108,8 +108,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href={paths.sermons}>
-                  <a>Sermons</a>
+                <Link href={paths.lessons}>
+                  <a>Lessons</a>
                 </Link>
               </li>
               <li>
@@ -134,7 +134,7 @@ export default function Footer() {
           <a
             title='Bible'
             onClick={() => {
-              setOpenBible(true)
+              setOpenBible(true);
             }}
           >
             <div className='icon'>
@@ -202,7 +202,7 @@ export default function Footer() {
         </div>
       </FooterWrapper>
     </>
-  )
+  );
 }
 
 const FooterWrapper = styled.div`
@@ -255,4 +255,4 @@ const FooterWrapper = styled.div`
       margin-bottom: 2rem;
     }
   }
-`
+`;

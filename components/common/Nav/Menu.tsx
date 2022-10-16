@@ -29,8 +29,8 @@ export default function Menu({ open, setOpen }: Props) {
       <NavLink href={paths.connect}>
         <a onClick={() => setOpen(!open)}>Connect</a>
       </NavLink>
-      <NavLink href={paths.sermons}>
-        <a onClick={() => setOpen(!open)}>Sermons</a>
+      <NavLink href={paths.lessons}>
+        <a onClick={() => setOpen(!open)}>Lessons</a>
       </NavLink>
       <NavLink href={paths.liveStream}>
         <a onClick={() => setOpen(!open)}>Live Stream</a>

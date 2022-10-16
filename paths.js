@@ -4,7 +4,7 @@ export default {
   torontoLocation: '/locations/toronto',
   ottawaLocation: '/locations/ottawa',
   connect: '/connect',
-  sermons: '/sermons',
+  lessons: '/lessons',
   liveStream: '/live-stream',
   events: '/events',
   giving: '/giving',
@@ -28,5 +28,5 @@ export default {
   instagramAccount: 'https://www.instagram.com/rhemacanada/',
   twitterAccount: 'https://twitter.com/rhemacanada?lang=en',
   youtubeChannel: 'https://www.youtube.com/channel/UCNjybtMYeMfwur19Gd5GvRg',
-  office365Site: 'https://login.microsoftonline.com/'
-}
+  office365Site: 'https://login.microsoftonline.com/',
+};

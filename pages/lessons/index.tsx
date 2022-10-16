@@ -1,31 +1,31 @@
-import Meta from '../../components/common/meta'
-import NoteType from '../../types/note'
-import HeadLine from '../../components/common/HeadLine'
-import Sidebar from '../../components/sermons/Sidebar'
-import NotesList from '../../components/sermons/NoteList'
-import styled from 'styled-components'
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
+import Meta from '../../components/common/meta';
+import NoteType from '../../types/note';
+import HeadLine from '../../components/common/HeadLine';
+import Sidebar from '../../components/lessons/Sidebar';
+import NotesList from '../../components/lessons/NoteList';
+import styled from 'styled-components';
+import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 
 interface Props {
-  notes: NoteType[]
-  list: NoteType[]
+  notes: NoteType[];
+  list: NoteType[];
 }
 
-export default function Sermons({ notes, list }: Props) {
+export default function Lessons({ notes, list }: Props) {
   // console.log(notes.categories.nodes.name)
   return (
     <>
-      <Meta title='Sermons - Rhema - Changing & Affecting Lives!' />
-      <HeadLine imgUrl='/img/sermons-img.jpg' title='Sermons' />
-      <SermonsContainer>
+      <Meta title='Lessons - Rhema - Changing & Affecting Lives!' />
+      <HeadLine imgUrl='/img/sermons-img.jpg' title='Lessons' />
+      <LessonsContainer>
         <NotesList notes={notes} />
         <Sidebar title='Recent Notes' notes={list} />
-      </SermonsContainer>
+      </LessonsContainer>
     </>
-  )
+  );
 }
 
-export const SermonsContainer = styled.div`
+export const LessonsContainer = styled.div`
   position: relative;
   margin: 0 auto;
   padding: 0 2%;
@@ -38,13 +38,13 @@ export const SermonsContainer = styled.div`
   @media screen and (max-width: 768px) {
     justify-content: center;
   }
-`
+`;
 
 export async function getStaticProps() {
   const client = new ApolloClient({
     uri: process.env.WP_URL as string,
     cache: new InMemoryCache(),
-  })
+  });
 
   const { data } = await client.query({
     query: gql`
@@ -75,7 +75,7 @@ export async function getStaticProps() {
       first: 2,
       after: null,
     },
-  })
+  });
 
   return {
     props: {
@@ -83,5 +83,5 @@ export async function getStaticProps() {
       list: data?.sermonList?.nodes,
     },
     revalidate: 30,
-  }
+  };
 }

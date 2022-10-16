@@ -1,24 +1,24 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import styled from 'styled-components'
-import paths from '../../paths'
-import { ImgWrapper } from '../../styles/GlobalStyle'
-import NoteType from '../../types/note'
-import { formatDate } from '../../utils/formatter'
+import Image from 'next/image';
+import Link from 'next/link';
+import styled from 'styled-components';
+import paths from '../../paths';
+import { ImgWrapper } from '../../styles/GlobalStyle';
+import NoteType from '../../types/note';
+import { formatDate } from '../../utils/formatter';
 
 interface Props {
-  note: NoteType
+  note: NoteType;
 }
 
 export default function NoteDetail({ note }: Props) {
   const summary = `<p>${note.excerpt.substring(
     0,
     250
-  )}... <br><br>Read More >></p>`
+  )}... <br><br>Read More >></p>`;
 
   return (
     <NoteWrapper>
-      <Link href={`${paths.sermons}/notes/${note.slug}`}>
+      <Link href={`${paths.lessons}/notes/${note.slug}`}>
         <a>
           <div className='hover'></div>
           <ImgWrapper>
@@ -41,7 +41,7 @@ export default function NoteDetail({ note }: Props) {
         </a>
       </Link>
     </NoteWrapper>
-  )
+  );
 }
 const NoteWrapper = styled.div`
   position: relative;
@@ -85,4 +85,4 @@ const NoteWrapper = styled.div`
   .date {
     color: var(--blue);
   }
-`
+`;

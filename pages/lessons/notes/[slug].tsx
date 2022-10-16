@@ -1,27 +1,27 @@
-import NoteType from '../../../types/note'
-import Image from 'next/image'
-import Link from 'next/link'
-import HeadLine from '../../../components/common/HeadLine'
-import Meta from '../../../components/common/meta'
-import Sidebar from '../../../components/sermons/Sidebar'
-import { Button, ImgWrapper } from '../../../styles/GlobalStyle'
-import { formatDate } from '../../../utils/formatter'
-import styled from 'styled-components'
-import { SermonsContainer } from '../index'
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
-import paths from '../../../paths'
+import NoteType from '../../../types/note';
+import Image from 'next/image';
+import Link from 'next/link';
+import HeadLine from '../../../components/common/HeadLine';
+import Meta from '../../../components/common/meta';
+import Sidebar from '../../../components/lessons/Sidebar';
+import { Button, ImgWrapper } from '../../../styles/GlobalStyle';
+import { formatDate } from '../../../utils/formatter';
+import styled from 'styled-components';
+import { LessonsContainer } from '../index';
+import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
+import paths from '../../../paths';
 // import { validate } from 'graphql'
 
 interface Props {
-  note: NoteType
-  list: NoteType[]
+  note: NoteType;
+  list: NoteType[];
 }
 
 type Params = {
   params: {
-    slug: string
-  }
-}
+    slug: string;
+  };
+};
 
 export default function SermonNote({ note, list }: Props) {
   return (
@@ -38,7 +38,7 @@ export default function SermonNote({ note, list }: Props) {
           <div className='line'></div>
           <p>
             in{' '}
-            <Link href={paths.sermons}>
+            <Link href={paths.lessons}>
               <a>Sermon Notes</a>
             </Link>
           </p>
@@ -65,10 +65,10 @@ export default function SermonNote({ note, list }: Props) {
         <Sidebar title='Recent Notes' notes={list} />
       </NoteContainer>
     </>
-  )
+  );
 }
 
-const NoteContainer = styled(SermonsContainer)`
+const NoteContainer = styled(LessonsContainer)`
   .note-wrapper {
     position: relative;
     width: 670px;
@@ -133,16 +133,16 @@ const NoteContainer = styled(SermonsContainer)`
       height: 240px;
     }
   }
-`
+`;
 
 const client = new ApolloClient({
   uri: process.env.WP_URL as string,
   cache: new InMemoryCache(),
-})
+});
 
 export const getStaticProps = async ({ params }: Params) => {
-  const { slug } = params
-  console.log(slug)
+  const { slug } = params;
+  console.log(slug);
   const { data } = await client.query({
     query: gql`
       query getNotes($id: ID!) {
@@ -173,15 +173,15 @@ export const getStaticProps = async ({ params }: Params) => {
     variables: {
       id: slug,
     },
-  })
+  });
   return {
     props: {
       note: data?.sermonNote,
       list: data?.sermonNotes?.nodes,
     },
     revalidate: 30,
-  }
-}
+  };
+};
 
 export const getStaticPaths = async () => {
   const { data } = await client.query({
@@ -194,11 +194,11 @@ export const getStaticPaths = async () => {
         }
       }
     `,
-  })
-  const notes = data?.sermonNotes?.nodes
+  });
+  const notes = data?.sermonNotes?.nodes;
   const paths = notes.map((note: { slug: string }) => ({
     params: { slug: note.slug },
-  }))
-  console.log(paths)
-  return { paths, fallback: false }
-}
+  }));
+  console.log(paths);
+  return { paths, fallback: false };
+};

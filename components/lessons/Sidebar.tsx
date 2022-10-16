@@ -1,10 +1,10 @@
-import Link from 'next/link'
-import styled from 'styled-components'
-import NoteType from '../../types/note'
+import Link from 'next/link';
+import styled from 'styled-components';
+import NoteType from '../../types/note';
 
 interface Props {
-  title: string
-  notes: NoteType[]
+  title: string;
+  notes: NoteType[];
 }
 
 export default function Sidebar({ title, notes }: Props) {
@@ -13,9 +13,9 @@ export default function Sidebar({ title, notes }: Props) {
       day: 'numeric',
       month: 'long',
       year: 'numeric',
-    })
-    return newDate
-  }
+    });
+    return newDate;
+  };
   return (
     <SidebarWrapper>
       <div className='wrapper'>
@@ -23,7 +23,7 @@ export default function Sidebar({ title, notes }: Props) {
         <ul>
           {notes?.map((note) => (
             <li key={note.slug}>
-              <Link href={`/sermons/notes/${note.slug}`}>
+              <Link href={`/lessons/notes/${note.slug}`}>
                 <a>{note.title}</a>
               </Link>
               <p className='date'>{formatDate(note.date)}</p>
@@ -32,7 +32,7 @@ export default function Sidebar({ title, notes }: Props) {
         </ul>
       </div>
     </SidebarWrapper>
-  )
+  );
 }
 const SidebarWrapper = styled.div`
   position: sticky;
@@ -68,4 +68,4 @@ const SidebarWrapper = styled.div`
     padding: 2rem 0;
     margin-top: 2rem;
   }
-`
+`;
