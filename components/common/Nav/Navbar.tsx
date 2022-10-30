@@ -28,12 +28,7 @@ export default function Navbar() {
     <Nav initial={{ y: -90 }} animate={{ y: 0 }} transition={{ duration: 0.1 }}>
       <Link href='/'>
         <a>
-          <Image
-            width={230}
-            height={40}
-            src='/img/RCM-Logo.webp'
-            alt='RCM-Logo'
-          />
+          <Image width={230} height={40} src='/img/RCM-Logo.webp' alt='RCM-Logo' />
         </a>
       </Link>
       <Burger />

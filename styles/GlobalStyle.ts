@@ -85,7 +85,13 @@ const GlobalStyle = createGlobalStyle`
     text-shadow: 0 0 12px rgba(0 0 0 / 0.2);
   }
 `;
-export const Container = styled(motion.section)`
+
+const rem = (px) => {
+  const remValue = px * 0.0625 + 'rem';
+  return remValue;
+};
+
+const Container = styled(motion.section)`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -93,7 +99,7 @@ export const Container = styled(motion.section)`
   width: 100vw;
   padding: 4rem 0;
 `;
-export const Button = styled(motion.a)`
+const Button = styled(motion.a)`
   display: inline-block;
   cursor: pointer;
   background: var(--blue);
@@ -124,10 +130,11 @@ export const Button = styled(motion.a)`
   }
 `;
 
-export const ImgWrapper = styled(motion.div)`
+const ImgWrapper = styled(motion.div)`
   position: relative;
   border-radius: 5px;
   overflow: hidden;
 `;
 
 export default GlobalStyle;
+export { Container, Button, ImgWrapper, rem };
