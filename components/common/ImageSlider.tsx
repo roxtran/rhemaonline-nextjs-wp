@@ -9,11 +9,11 @@ import { ImgWrapper } from '../../styles/GlobalStyle'
 // import type
 import SlideType from '../../types/slide'
 
-interface Props {
+interface propType {
   slides: SlideType[]
 }
 
-export default function ImageSlider({ slides }: Props) {
+export default function ImageSlider({ slides }: propType) {
   var settings = {
     dots: true,
     autoplay: true,

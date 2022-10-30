@@ -7,9 +7,12 @@ export default function Events() {
   return (
     <>
       <Meta title='Events - Rhema - Changing & Affecting Lives!' />
-      <HeadLine imgUrl='/img/events-img.webp' title='Events' />
+      <HeadLine imgUrl='/img/events-img.webp' title='Events' height='300px' />
       <CalendarWrapper>
-        <PCOCalendar />
+        <iframe
+          src='https://rhema.ccbchurch.com/goto/events/public'
+          style={{ border: 0, width: '100%', height: '100%' }}
+        ></iframe>
       </CalendarWrapper>
     </>
   )
@@ -20,7 +23,7 @@ const CalendarWrapper = styled.div`
   max-width: 1100px;
   margin: auto;
   padding: 2rem 0;
-  height: 60vh;
+  height: 75vh;
 
   @media screen and (max-width: 1024px) {
     max-width: 90vw;

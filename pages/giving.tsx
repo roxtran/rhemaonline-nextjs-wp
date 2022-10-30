@@ -1,9 +1,9 @@
-import HeadLine from '../components/common/HeadLine';
-import styled from 'styled-components';
-import { Container, rem } from '../styles/GlobalStyle';
-import Meta from '../components/common/meta';
-import Image from 'next/image';
-import Link from 'next/link';
+import HeadLine from 'components/common/HeadLine'
+import styled from 'styled-components'
+import { Container, rem } from 'styles/GlobalStyle'
+import Meta from 'components/common/meta'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Giving() {
   return (
@@ -139,7 +139,7 @@ export default function Giving() {
         <h3 className='end-text'>May God remember your offerings and keep you and your family during this season.</h3>
       </GivingContainer>
     </>
-  );
+  )
 }
 const GivingContainer = styled(Container)`
   a {
@@ -153,7 +153,7 @@ const GivingContainer = styled(Container)`
     width: ${rem(1100)};
     max-width: 80vw;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
   .content-wrapper {
     background: var(--light-grey-bg);
@@ -208,7 +208,7 @@ const GivingContainer = styled(Container)`
     }
 
     .desc {
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-top: ${rem(1)} solid rgba(0, 0, 0, 0.1);
       padding: 1.5rem 1rem 1rem;
 
       li {
@@ -220,6 +220,6 @@ const GivingContainer = styled(Container)`
   .end-text {
     text-align: center;
     max-width: 90vw;
-    margin-top: 3rem;
+    margin-top: 2.5rem;
   }
-`;
+`

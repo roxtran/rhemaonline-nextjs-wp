@@ -1,4 +1,5 @@
 type ServiceType = {
+  slug: string
   title: string
   content: string
   excerpt: string

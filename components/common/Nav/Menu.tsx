@@ -29,6 +29,9 @@ export default function Menu({ open, setOpen }: Props) {
       <NavLink href={paths.connect}>
         <a onClick={() => setOpen(!open)}>Connect</a>
       </NavLink>
+      <NavLink href={paths.sermons}>
+        <a onClick={() => setOpen(!open)}>Sermons</a>
+      </NavLink>
       <NavLink href={paths.lessons}>
         <a onClick={() => setOpen(!open)}>Lessons</a>
       </NavLink>
@@ -44,12 +47,7 @@ export default function Menu({ open, setOpen }: Props) {
             Give
           </a>
         </NavLink>
-        <a
-          href='https://rhema.ccbchurch.com/goto/login'
-          target='_blank'
-          className='button external'
-          onClick={() => setOpen(!open)}
-        >
+        <a href='https://rhema.ccbchurch.com/goto/login' target='_blank' className='button external' onClick={() => setOpen(!open)}>
           Login
         </a>
       </div>
@@ -67,8 +65,7 @@ const StyledMenu = styled.div<{ open: boolean }>`
     text-transform: capitalize;
     &:not(.button)[aria-current] {
       /* border-bottom: 4px solid var(--mint); */
-      background: linear-gradient(var(--mint), var(--mint)) 0 calc(100% - 3px) /
-        100% 7px no-repeat;
+      background: linear-gradient(var(--mint), var(--mint)) 0 calc(100% - 3px) / 100% 7px no-repeat;
     }
     &:hover {
       color: var(--blue);

@@ -4,6 +4,7 @@ export default {
   torontoLocation: '/locations/toronto',
   ottawaLocation: '/locations/ottawa',
   connect: '/connect',
+  sermons: '/sermons',
   lessons: '/lessons',
   liveStream: '/live-stream',
   events: '/events',
@@ -20,8 +21,7 @@ export default {
   legalTerms: '/legal-terms',
 
   // external links
-  subscribe:
-    'https://visitor.r20.constantcontact.com/manage/optin?v=001BRl1GnvqHBSmpUgt0bWkn1MfFFgc1eWZnLBSjeq8hPkIyEhXoERcP_p-E94Tuo8i-n6WMjixEVWfoTusoH241Xry9A65AaaC8uzGvinLhOc%3D',
+  subscribe: 'https://visitor.r20.constantcontact.com/manage/optin?v=001BRl1GnvqHBSmpUgt0bWkn1MfFFgc1eWZnLBSjeq8hPkIyEhXoERcP_p-E94Tuo8i-n6WMjixEVWfoTusoH241Xry9A65AaaC8uzGvinLhOc%3D',
   memberLogin: 'https://rhema.ccbchurch.com/goto/login',
   bibleSite: 'https://www.bible.com/',
   facebookPage: 'https://www.facebook.com/Rhemachristianministries/',

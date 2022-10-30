@@ -1,5 +1,5 @@
-import styled, { createGlobalStyle } from 'styled-components';
-import { motion } from 'framer-motion';
+import styled, { createGlobalStyle } from 'styled-components'
+import { motion } from 'framer-motion'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -84,12 +84,12 @@ const GlobalStyle = createGlobalStyle`
     font-size: 2rem;
     text-shadow: 0 0 12px rgba(0 0 0 / 0.2);
   }
-`;
+`
 
 const rem = (px) => {
-  const remValue = px * 0.0625 + 'rem';
-  return remValue;
-};
+  const remValue = px * 0.0625 + 'rem'
+  return remValue
+}
 
 const Container = styled(motion.section)`
   display: flex;
@@ -97,8 +97,8 @@ const Container = styled(motion.section)`
   justify-content: center;
   align-items: center;
   width: 100vw;
-  padding: 4rem 0;
-`;
+  padding: 3rem 0;
+`
 const Button = styled(motion.a)`
   display: inline-block;
   cursor: pointer;
@@ -128,13 +128,13 @@ const Button = styled(motion.a)`
       color: #fff;
     }
   }
-`;
+`
 
 const ImgWrapper = styled(motion.div)`
   position: relative;
   border-radius: 5px;
   overflow: hidden;
-`;
+`
 
-export default GlobalStyle;
-export { Container, Button, ImgWrapper, rem };
+export default GlobalStyle
+export { rem, Container, Button, ImgWrapper }
