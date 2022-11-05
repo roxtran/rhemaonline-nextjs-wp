@@ -16,7 +16,40 @@ interface propType {
 }
 
 export default function PopularVideoSlider({ slides }: propType) {
-  const settings = { arrows: true, slidesToShow: 3, rows: 3, slidesToScroll: 3, infinite: false, speed: 500 }
+  const settings = {
+    arrows: true,
+    slidesToShow: 3,
+    rows: 3,
+    slidesToScroll: 3,
+    infinite: false,
+    speed: 500,
+    responsive: [
+      {
+        breakpoint: 920,
+        settings: {
+          slidesToShow: 2.4
+        }
+      },
+      {
+        breakpoint: 780,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 620,
+        settings: {
+          slidesToShow: 1.5
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  }
   return (
     <Slider {...settings}>
       {slides?.map((slide) => (

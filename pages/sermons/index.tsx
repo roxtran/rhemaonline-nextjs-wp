@@ -23,7 +23,13 @@ export default function Sermons() {
           <FeaturedWrapper onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>
             <Link href={`${paths.sermons}/videos/YFh_QFskIck`}>
               <a>
-                <FeatureVideo hover={hover} videoId='YFh_QFskIck' width='1140' height='650' thumbnailQuality='maxresdefault' />
+                <FeatureVideo
+                  hover={hover}
+                  videoId='YFh_QFskIck'
+                  width='1140'
+                  height='650'
+                  thumbnailQuality='maxresdefault'
+                />
               </a>
             </Link>
             <BsPlayCircleFill className='play-icon' />
@@ -61,15 +67,28 @@ const SermonsContainer = styled(Container)`
   .video-wrapper:hover {
     transform: scale(1.025);
   }
+
+  @media (max-width: ${rem(1140)}) {
+    .wrapper {
+      width: 95vw;
+    }
+  }
 `
 
 const FeaturedWrapper = styled.div`
   width: 100%;
-  height: fit-content;
+  height: 25vh;
   object-fit: cover;
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
+
+  @media (max-width: ${rem(1140)}) {
+    height: calc(95vw * 9 / 16);
+  }
+  @media (min-width: ${rem(1140)}) {
+    height: fit-content;
+  }
 
   &:hover {
     transform: scale(1.025);

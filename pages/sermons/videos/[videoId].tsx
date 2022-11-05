@@ -32,8 +32,8 @@ export default function Sermons({ video }: Props) {
           </Link>
           <VideoWrapper>
             <iframe
-              width='1140'
-              height='650'
+              width='100%'
+              height='100%'
               src={`https://www.youtube.com/embed/${video[0].videoId}?rel=0&showinfo=1&autoplay=1&loop=0`}
               title='iframe video player'
               frameBorder='0'
@@ -76,9 +76,15 @@ export default function Sermons({ video }: Props) {
 const VideoContainer = styled(Container)`
   background-color: #000;
 
+  @media (max-width: ${rem(1140)}) {
+    .wrapper {
+      max-width: 90vw;
+    }
+  }
+
   .wrapper {
-    max-width: ${rem(1140)};
-    margin-top: 4rem;
+    width: ${rem(1140)};
+    margin: 4rem auto 0;
   }
 
   .btn-back {
@@ -136,10 +142,15 @@ const VideoContainer = styled(Container)`
 
 const VideoWrapper = styled.div`
   width: 100%;
-  height: fit-content;
+  height: calc(${rem(1140)} * 9 / 16);
   object-fit: cover;
   overflow: hidden;
   position: relative;
+
+  @media (max-width: ${rem(1140)}) {
+    width: 90vw;
+    height: calc(90vw * 9 / 16);
+  }
 `
 
 const videos = popularVideos
