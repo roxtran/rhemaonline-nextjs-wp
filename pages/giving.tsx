@@ -12,7 +12,10 @@ export default function Giving() {
       <HeadLine imgUrl='/img/giving-img.jpg' title='Make A Difference' />
       <GivingContainer>
         <div id='thank'>
-          <p>Thank you everyone for your continued support in these times. We know that this too shall pass for our God is able to do more than we can ask think or imagine and he will bring us through unscathed in Jesus name.</p>
+          <p>
+            Thank you everyone for your continued support in these times. We know that this too shall pass for our God
+            is able to do more than we can ask think or imagine and he will bring us through unscathed in Jesus name.
+          </p>
           <p>Here are a few ways you can continue to support the ministry whether we gather in person or online.</p>
         </div>
         <div className='content-wrapper'>
@@ -38,7 +41,8 @@ export default function Giving() {
                     Search and select <span className='bold'>Rhema Christian Ministries (Toronto or Ottawa)</span>.
                   </li>
                   <li>
-                    Use your Rhema membership number as the account number or enter <span className='bold'>9999</span> for non-members.
+                    Use your Rhema membership number as the account number or enter <span className='bold'>9999</span>{' '}
+                    for non-members.
                   </li>
                 </ul>
               </div>
@@ -56,7 +60,9 @@ export default function Giving() {
                     Text the word <span className='bold'>'Give'</span> to <span className='bold'>1-844-542-0003</span>.
                   </li>
                   <li>You will receive a reply with a link.</li>
-                  <li>Click on the link which will allow you to provide the information required to complete the process.</li>
+                  <li>
+                    Click on the link which will allow you to provide the information required to complete the process.
+                  </li>
                   <li>To send future gifts, text the dollar amount, and the category, ex. ($100 Tithes).</li>
                 </ul>
               </div>
@@ -127,7 +133,9 @@ export default function Giving() {
                     Or click on the Paypal link below:
                     <br />
                     <Link href='https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZDLQA7QHSMMEC&source=url'>
-                      <a>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZDLQA7QHSMMEC&source=url</a>
+                      <a>
+                        https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZDLQA7QHSMMEC&source=url
+                      </a>
                     </Link>
                   </li>
                   <li>and follow the instructions to give by credit card or visa debit card.</li>
@@ -166,8 +174,8 @@ const GivingContainer = styled(Container)`
   }
   .items {
     margin: 2rem auto;
-    width: ${rem(1100)};
-    max-width: 90vw;
+    width: 100%;
+    max-width: ${rem(1140)};
 
     display: flex;
     flex-flow: row wrap;
