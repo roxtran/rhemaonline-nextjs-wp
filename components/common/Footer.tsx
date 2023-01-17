@@ -1,12 +1,12 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { useState } from 'react';
-import styled from 'styled-components';
-import paths from '../../paths';
-import BibleModal from './Modals/BibleModal';
+import Image from 'next/image'
+import Link from 'next/link'
+import { useState } from 'react'
+import styled from 'styled-components'
+import paths from '../../paths'
+import BibleModal from './Modals/BibleModal'
 
 export default function Footer() {
-  const [openBible, setOpenBible] = useState(false);
+  const [openBible, setOpenBible] = useState(false)
 
   return (
     <>
@@ -86,10 +86,18 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href='/pdf/RCM-2020-Audited-Financial-Statements.pdf'
+                  href='http://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2023/01/RCM-2020-Audited-Financial-Statements.pdf'
                   target='_blank'
                 >
                   2020 Financial Statement
+                </a>
+              </li>
+              <li>
+                <a
+                  href='http://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2023/01/Rhema-Christian-Ministries-Canada-Inc.-2021-FSs.pdf'
+                  target='_blank'
+                >
+                  2021 Financial Statement
                 </a>
               </li>
             </ul>
@@ -134,18 +142,14 @@ export default function Footer() {
           <a
             title='Bible'
             onClick={() => {
-              setOpenBible(true);
+              setOpenBible(true)
             }}
           >
             <div className='icon'>
               <Image src='/img/social/bible-icon.svg' width={30} height={30} />
             </div>
           </a>
-          <a
-            title='Member Login'
-            href='https://rhema.ccbchurch.com/goto/login/'
-            target='_blank'
-          >
+          <a title='Member Login' href='https://rhema.ccbchurch.com/goto/login/' target='_blank'>
             <div className='icon'>
               <Image src='/img/social/groups-icon.svg' width={30} height={30} />
             </div>
@@ -157,38 +161,22 @@ export default function Footer() {
           </a>
           <a title='Instagram' href={paths.instagramAccount} target='_blank'>
             <div className='icon'>
-              <Image
-                src='/img/social/instagram-icon.svg'
-                width={35}
-                height={35}
-              />
+              <Image src='/img/social/instagram-icon.svg' width={35} height={35} />
             </div>
           </a>
           <a title='Facebook' href={paths.facebookPage} target='_blank'>
             <div className='icon'>
-              <Image
-                src='/img/social/facebook-icon.svg'
-                width={30}
-                height={30}
-              />
+              <Image src='/img/social/facebook-icon.svg' width={30} height={30} />
             </div>
           </a>
           <a title='Twitter' href={paths.twitterAccount} target='_blank'>
             <div className='icon'>
-              <Image
-                src='/img/social/twitter-icon.svg'
-                width={35}
-                height={35}
-              />
+              <Image src='/img/social/twitter-icon.svg' width={35} height={35} />
             </div>
           </a>
           <a title='YouTube' href={paths.youtubeChannel} target='_blank'>
             <div className='icon'>
-              <Image
-                src='/img/social/youtube-icon.svg'
-                width={35}
-                height={35}
-              />
+              <Image src='/img/social/youtube-icon.svg' width={35} height={35} />
             </div>
           </a>
           <a title='Office 365' href={paths.office365Site} target='_blank'>
@@ -197,12 +185,10 @@ export default function Footer() {
             </div>
           </a>
         </div>
-        <div className='copyright'>
-          © {new Date().getFullYear()} Rhema Canada.
-        </div>
+        <div className='copyright'>© {new Date().getFullYear()} Rhema Canada.</div>
       </FooterWrapper>
     </>
-  );
+  )
 }
 
 const FooterWrapper = styled.div`
@@ -255,4 +241,4 @@ const FooterWrapper = styled.div`
       margin-bottom: 2rem;
     }
   }
-`;
+`
