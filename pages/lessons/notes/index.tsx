@@ -1,14 +1,14 @@
-import Meta from '../../components/common/meta';
-import NoteType from '../../types/note';
-import HeadLine from '../../components/common/HeadLine';
-import Sidebar from '../../components/lessons/Sidebar';
-import NotesList from '../../components/lessons/NoteList';
-import styled from 'styled-components';
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
+import Meta from '../../../components/common/meta'
+import NoteType from '../../../types/note'
+import HeadLine from '../../../components/common/HeadLine'
+import Sidebar from '../../../components/lessons/Sidebar'
+import LessonsList from '../../../components/lessons/LessonList'
+import styled from 'styled-components'
+import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
 
 interface Props {
-  notes: NoteType[];
-  list: NoteType[];
+  notes: NoteType[]
+  list: NoteType[]
 }
 
 export default function Lessons({ notes, list }: Props) {
@@ -18,11 +18,11 @@ export default function Lessons({ notes, list }: Props) {
       <Meta title='Lessons - Rhema - Changing & Affecting Lives!' />
       <HeadLine imgUrl='/img/sermons-img.jpg' title='Lessons' />
       <LessonsContainer>
-        <NotesList notes={notes} />
+        <LessonsList title='Sermon Notes' notes={notes} type='notes' />
         <Sidebar title='Recent Notes' notes={list} />
       </LessonsContainer>
     </>
-  );
+  )
 }
 
 export const LessonsContainer = styled.div`
@@ -38,13 +38,13 @@ export const LessonsContainer = styled.div`
   @media screen and (max-width: 768px) {
     justify-content: center;
   }
-`;
+`
 
 export async function getStaticProps() {
   const client = new ApolloClient({
     uri: process.env.WP_URL as string,
-    cache: new InMemoryCache(),
-  });
+    cache: new InMemoryCache()
+  })
 
   const { data } = await client.query({
     query: gql`
@@ -73,15 +73,15 @@ export async function getStaticProps() {
     `,
     variables: {
       first: 2,
-      after: null,
-    },
-  });
+      after: null
+    }
+  })
 
   return {
     props: {
       notes: data?.sermonNotes?.nodes,
-      list: data?.sermonList?.nodes,
+      list: data?.sermonList?.nodes
     },
-    revalidate: 30,
-  };
+    revalidate: 30
+  }
 }

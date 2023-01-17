@@ -7,7 +7,7 @@ import Sidebar from '../../../components/lessons/Sidebar'
 import { Button, ImgWrapper } from '../../../styles/GlobalStyle'
 import { formatDate } from '../../../utils/formatter'
 import styled from 'styled-components'
-import { LessonsContainer } from './index'
+import { LessonsContainer } from '../notes/index'
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
 import paths from '../../../paths'
 // import { validate } from 'graphql'
@@ -23,24 +23,30 @@ type Params = {
   }
 }
 
-export default function SermonNote({ note, list }: Props) {
+export default function BibleStudy({ note, list }: Props) {
   return (
     <>
       <Meta title={note.title + ' - Rhema - Changing & Affecting Lives!'} />
-      <HeadLine imgUrl={note.featuredImage.node.sourceUrl} title={note.title} blur='blur(30px)' />
+      <HeadLine
+        imgUrl={note.featuredImage !== null ? note.featuredImage.node.sourceUrl : '/img/beliefs-img.jpg'}
+        title={note.title}
+        blur='blur(30px)'
+      />
       <NoteContainer>
         <div className='note-wrapper'>
           <p className='date'>{formatDate(note.date)}</p>
           <div className='line'></div>
           <p>
             in{' '}
-            <Link href={paths.notes}>
-              <a>Sermon Notes</a>
+            <Link href={paths.studies}>
+              <a>Bible Studies</a>
             </Link>
           </p>
-          <ImgWrapper>
-            <Image layout='fill' objectFit='cover' src={note.featuredImage.node.sourceUrl} />
-          </ImgWrapper>
+          {note.featuredImage !== null && (
+            <ImgWrapper>
+              <Image layout='fill' objectFit='cover' src={note.featuredImage.node.sourceUrl} />
+            </ImgWrapper>
+          )}
           <article dangerouslySetInnerHTML={{ __html: note.content }}></article>
           {note.docFile.docFile !== null && (
             <div className='btn-wrapper'>
@@ -135,8 +141,8 @@ export const getStaticProps = async ({ params }: Params) => {
   console.log(slug)
   const { data } = await client.query({
     query: gql`
-      query getNotes($id: ID!) {
-        sermonNote(id: $id, idType: SLUG) {
+      query getStudies($id: ID!) {
+        bibleStudy(id: $id, idType: SLUG) {
           title
           date
           content
@@ -151,7 +157,7 @@ export const getStaticProps = async ({ params }: Params) => {
             }
           }
         }
-        sermonNotes {
+        bibleStudies {
           nodes {
             title
             slug
@@ -166,8 +172,8 @@ export const getStaticProps = async ({ params }: Params) => {
   })
   return {
     props: {
-      note: data?.sermonNote,
-      list: data?.sermonNotes?.nodes
+      note: data?.bibleStudy,
+      list: data?.bibleStudies?.nodes
     },
     revalidate: 30
   }
@@ -176,8 +182,8 @@ export const getStaticProps = async ({ params }: Params) => {
 export const getStaticPaths = async () => {
   const { data } = await client.query({
     query: gql`
-      query SermonNotes {
-        sermonNotes {
+      query BibleStudies {
+        bibleStudies {
           nodes {
             slug
           }
@@ -185,7 +191,7 @@ export const getStaticPaths = async () => {
       }
     `
   })
-  const notes = data?.sermonNotes?.nodes
+  const notes = data?.bibleStudies?.nodes
   const paths = notes.map((note: { slug: string }) => ({
     params: { slug: note.slug }
   }))

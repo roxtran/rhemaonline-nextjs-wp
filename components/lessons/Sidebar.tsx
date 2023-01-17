@@ -1,10 +1,10 @@
-import Link from 'next/link';
-import styled from 'styled-components';
-import NoteType from '../../types/note';
+import Link from 'next/link'
+import styled from 'styled-components'
+import NoteType from '../../types/note'
 
 interface Props {
-  title: string;
-  notes: NoteType[];
+  title: string
+  notes: NoteType[]
 }
 
 export default function Sidebar({ title, notes }: Props) {
@@ -12,10 +12,10 @@ export default function Sidebar({ title, notes }: Props) {
     const newDate = new Date(date).toLocaleDateString('en-US', {
       day: 'numeric',
       month: 'long',
-      year: 'numeric',
-    });
-    return newDate;
-  };
+      year: 'numeric'
+    })
+    return newDate
+  }
   return (
     <SidebarWrapper>
       <div className='wrapper'>
@@ -32,12 +32,12 @@ export default function Sidebar({ title, notes }: Props) {
         </ul>
       </div>
     </SidebarWrapper>
-  );
+  )
 }
 const SidebarWrapper = styled.div`
   position: sticky;
   top: 5rem;
-  margin-top: 5rem;
+  margin-top: 6.65rem;
   width: 300px;
   border-top: 4px dashed var(--mint);
   padding: 1rem 1rem 0;
@@ -68,4 +68,4 @@ const SidebarWrapper = styled.div`
     padding: 2rem 0;
     margin-top: 2rem;
   }
-`;
+`

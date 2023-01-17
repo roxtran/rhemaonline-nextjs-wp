@@ -1,18 +1,20 @@
 import styled from 'styled-components'
-import NoteDetail from './NoteDetail'
+import LessonDetail from './LessonDetail'
 import NoteType from '../../types/note'
 
 interface Props {
+  title: string
   notes: NoteType[]
+  type: string
 }
 
-export default function NoteList({ notes }: Props) {
+export default function LessonList({ title, notes, type }: Props) {
   return (
     <ListWrapper>
-      <h2>Sermon Notes</h2>
+      <h2>{title}</h2>
       {notes?.map((note) => (
         <div key={note.slug} className='note-detail'>
-          <NoteDetail note={note} />
+          <LessonDetail note={note} type={type} />
         </div>
       ))}
     </ListWrapper>

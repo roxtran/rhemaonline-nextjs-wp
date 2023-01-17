@@ -1,10 +1,10 @@
-import styled from 'styled-components';
-import NavLink from './NavLink';
-import paths from '../../../paths';
+import styled from 'styled-components'
+import NavLink from './NavLink'
+import paths from '../../../paths'
 
 interface Props {
-  open: boolean;
-  setOpen: Function;
+  open: boolean
+  setOpen: Function
 }
 
 export default function Menu({ open, setOpen }: Props) {
@@ -13,11 +13,11 @@ export default function Menu({ open, setOpen }: Props) {
       <NavLink href='/'>
         <a onClick={() => setOpen(!open)}>Home</a>
       </NavLink>
-      <div className='locations'>
+      <div className='dropdown'>
         <NavLink href='#'>
           <a onClick={() => setOpen(!open)}>Locations</a>
         </NavLink>
-        <div className='locations-dropdown'>
+        <div className='dropdown-content'>
           <NavLink href={paths.torontoLocation}>
             <a onClick={() => setOpen(!open)}>Toronto</a>
           </NavLink>
@@ -32,9 +32,19 @@ export default function Menu({ open, setOpen }: Props) {
       <NavLink href={paths.sermons}>
         <a onClick={() => setOpen(!open)}>Sermons</a>
       </NavLink>
-      <NavLink href={paths.lessons}>
-        <a onClick={() => setOpen(!open)}>Lessons</a>
-      </NavLink>
+      <div className='dropdown'>
+        <NavLink href='#'>
+          <a onClick={() => setOpen(!open)}>Lessons</a>
+        </NavLink>
+        <div className='dropdown-content'>
+          <NavLink href={paths.notes}>
+            <a onClick={() => setOpen(!open)}>Sermon Notes</a>
+          </NavLink>
+          <NavLink href={paths.studies}>
+            <a onClick={() => setOpen(!open)}>Bible Studies</a>
+          </NavLink>
+        </div>
+      </div>
       <NavLink href={paths.liveStream}>
         <a onClick={() => setOpen(!open)}>Live Stream</a>
       </NavLink>
@@ -47,12 +57,17 @@ export default function Menu({ open, setOpen }: Props) {
             Give
           </a>
         </NavLink>
-        <a href='https://rhema.ccbchurch.com/goto/login' target='_blank' className='button external' onClick={() => setOpen(!open)}>
+        <a
+          href='https://rhema.ccbchurch.com/goto/login'
+          target='_blank'
+          className='button external'
+          onClick={() => setOpen(!open)}
+        >
           Login
         </a>
       </div>
     </StyledMenu>
-  );
+  )
 }
 const StyledMenu = styled.div<{ open: boolean }>`
   display: flex;
@@ -63,6 +78,7 @@ const StyledMenu = styled.div<{ open: boolean }>`
     margin: 0.9rem;
     font-weight: bold;
     text-transform: capitalize;
+    white-space: nowrap;
     &:not(.button)[aria-current] {
       /* border-bottom: 4px solid var(--mint); */
       background: linear-gradient(var(--mint), var(--mint)) 0 calc(100% - 3px) / 100% 7px no-repeat;
@@ -71,16 +87,16 @@ const StyledMenu = styled.div<{ open: boolean }>`
       color: var(--blue);
     }
   }
-  .locations {
+  .dropdown {
     display: flex;
     flex-direction: column;
     position: relative;
-    &:hover .locations-dropdown {
+    &:hover .dropdown-content {
       /* display: flex; */
       opacity: 1;
-      height: 200%;
+      height: fit-content;
     }
-    .locations-dropdown {
+    .dropdown-content {
       overflow: hidden;
       opacity: 0;
       height: 0;
@@ -93,6 +109,14 @@ const StyledMenu = styled.div<{ open: boolean }>`
       left: 1rem;
       border: 1px solid rgba(0, 0, 0, 0.2);
       border-radius: 5px;
+
+      a {
+        width: fit-content;
+
+        &:not(:first-child) {
+          margin-top: 0;
+        }
+      }
     }
   }
   .btn-wrapper {
@@ -162,4 +186,4 @@ const StyledMenu = styled.div<{ open: boolean }>`
       width: 150px;
     }
   }
-`;
+`

@@ -6,6 +6,8 @@ export default {
   connect: '/connect',
   sermons: '/sermons',
   lessons: '/lessons',
+  notes: '/lessons/notes',
+  studies: '/lessons/studies',
   liveStream: '/live-stream',
   events: '/events',
   giving: '/giving',
@@ -21,12 +23,13 @@ export default {
   legalTerms: '/legal-terms',
 
   // external links
-  subscribe: 'https://visitor.r20.constantcontact.com/manage/optin?v=001BRl1GnvqHBSmpUgt0bWkn1MfFFgc1eWZnLBSjeq8hPkIyEhXoERcP_p-E94Tuo8i-n6WMjixEVWfoTusoH241Xry9A65AaaC8uzGvinLhOc%3D',
+  subscribe:
+    'https://visitor.r20.constantcontact.com/manage/optin?v=001BRl1GnvqHBSmpUgt0bWkn1MfFFgc1eWZnLBSjeq8hPkIyEhXoERcP_p-E94Tuo8i-n6WMjixEVWfoTusoH241Xry9A65AaaC8uzGvinLhOc%3D',
   memberLogin: 'https://rhema.ccbchurch.com/goto/login',
   bibleSite: 'https://www.bible.com/',
   facebookPage: 'https://www.facebook.com/Rhemachristianministries/',
   instagramAccount: 'https://www.instagram.com/rhemacanada/',
   twitterAccount: 'https://twitter.com/rhemacanada?lang=en',
   youtubeChannel: 'https://www.youtube.com/channel/UCNjybtMYeMfwur19Gd5GvRg',
-  office365Site: 'https://login.microsoftonline.com/',
-};
+  office365Site: 'https://login.microsoftonline.com/'
+}
