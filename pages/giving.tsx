@@ -84,9 +84,9 @@ export default function Giving() {
                   <li>If you don’t have a Tithe.ly account, you can create one in a few easy steps.</li>
                   <li>Complete the requested information one time, and then you can start giving by Tithe.ly.</li>
                   <li>
-                    Or click on the Tithe.ly link below: <br />
+                    Or{' '}
                     <Link href='https://tithe.ly/give_new/www/#/tithely/give-one-time/645887?kiosk=1'>
-                      <a>https://tithe.ly/give_new/www/#/tithely/give-one-time/645887?kiosk=1</a>
+                      <a>click here</a>
                     </Link>
                   </li>
                   <li>and follow the instructions to give by credit card or visa debit card.</li>
@@ -130,12 +130,9 @@ export default function Giving() {
                   </li>
                   <li>Complete the requested information one time, and then you can start giving by Paypal.</li>
                   <li>
-                    Or click on the Paypal link below:
-                    <br />
+                    Or{' '}
                     <Link href='https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZDLQA7QHSMMEC&source=url'>
-                      <a>
-                        https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZDLQA7QHSMMEC&source=url
-                      </a>
+                      <a>click here</a>
                     </Link>
                   </li>
                   <li>and follow the instructions to give by credit card or visa debit card.</li>
@@ -184,7 +181,7 @@ const GivingContainer = styled(Container)`
 
     @media screen and (min-width: ${rem(1280)}) {
       flex-flow: column wrap;
-      max-height: calc(100vh * 1.3);
+      max-height: ${rem(1000)};
     }
   }
   .item {
