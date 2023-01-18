@@ -1,28 +1,23 @@
-import HeadLine from '../components/common/HeadLine'
+import HeadLine from 'components/common/HeadLine'
 import styled from 'styled-components'
-import { Container } from '../styles/GlobalStyle'
-import beliefs from '../data/beliefs'
-import Meta from '../components/common/meta'
+import { Container, def } from 'styles/GlobalStyle'
+import beliefs from 'data/beliefs'
+import Meta from 'components/common/meta'
 
 export default function Beliefs() {
   return (
     <>
       <Meta title='Beliefs - Rhema - Changing & Affecting Lives!' />
-      <HeadLine
-        imgUrl='/img/beliefs-img.jpg'
-        title='Beliefs'
-        blur='blur(5px)'
-      />
+      <HeadLine imgUrl='/img/beliefs-img.jpg' title='Beliefs' blur='blur(5px)' />
       <BeliefsContainer>
         <div className='content-wrapper'>
           <div className='desc'>
             <h2>Statement of faith</h2>
             <p>
-              We put forth the following statement of faith not for theological
-              argumentation nor for denominational classification rather; our
-              beliefs simply represent those theological values that we hold
-              dearly as a Bible based church community. At Rhema what we believe
-              is important to us but not as much as the one in whom we believe.
+              We put forth the following statement of faith not for theological argumentation nor for denominational
+              classification rather; our beliefs simply represent those theological values that we hold dearly as a
+              Bible based church community. At Rhema what we believe is important to us but not as much as the one in
+              whom we believe.
             </p>
           </div>
           <div className='beliefs'>
@@ -41,7 +36,7 @@ export default function Beliefs() {
 }
 const BeliefsContainer = styled(Container)`
   .content-wrapper {
-    width: 1100px;
+    width: ${def.wrapper.width};
     max-width: 90vw;
     .desc {
       p {

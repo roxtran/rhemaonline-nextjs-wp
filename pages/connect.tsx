@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import styled from 'styled-components'
-import HeadLine from '../components/common/HeadLine'
+import HeadLine from 'components/common/HeadLine'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Container, ImgWrapper } from '../styles/GlobalStyle'
-// import services from '../data/services'
-import Meta from '../components/common/meta'
+import { Container, ImgWrapper, def } from 'styles/GlobalStyle'
+// import services from 'data/services'
+import Meta from 'components/common/meta'
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
-import ServiceType from '../types/service'
+import ServiceType from 'types/service'
 
 interface Props {
   services: ServiceType[]
@@ -73,7 +73,7 @@ export default function Connect({ services }: Props) {
 }
 const ConnectContainer = styled(Container)`
   .desc {
-    width: 1100px;
+    width: ${def.wrapper.width};
     max-width: 90vw;
     margin-bottom: 2.5rem;
     h2 {

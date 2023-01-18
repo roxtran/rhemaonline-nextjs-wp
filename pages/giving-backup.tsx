@@ -1,7 +1,7 @@
-import HeadLine from '../components/common/HeadLine'
+import HeadLine from 'components/common/HeadLine'
 import styled from 'styled-components'
-import { Container } from '../styles/GlobalStyle'
-import Meta from '../components/common/meta'
+import { Container, def } from 'styles/GlobalStyle'
+import Meta from 'components/common/meta'
 
 export default function Giving() {
   return (
@@ -12,15 +12,10 @@ export default function Giving() {
         <div className='content-wrapper'>
           <div id='thank'>
             <p>
-              Thank you everyone for your continued support in these times. We
-              know that this too shall pass for our God is able to do more than
-              we can ask think or imagine and he will bring us through unscathed
-              in Jesus name.
+              Thank you everyone for your continued support in these times. We know that this too shall pass for our God
+              is able to do more than we can ask think or imagine and he will bring us through unscathed in Jesus name.
             </p>
-            <p>
-              Here are a few ways you can continue to support the ministry
-              whether we gather in person or online.
-            </p>
+            <p>Here are a few ways you can continue to support the ministry whether we gather in person or online.</p>
           </div>
           <div className='items'>
             <div className='item'>
@@ -31,14 +26,8 @@ export default function Giving() {
                 <ul>
                   <li>Log into your bank account as you usually do</li>
                   <li>Select bill payment, and then choose “add new payee”</li>
-                  <li>
-                    Search and select Rhema Christian Ministries (Toronto or
-                    Ottawa)
-                  </li>
-                  <li>
-                    Use your Rhema membership number as the account number or
-                    enter 9999 for non-members.
-                  </li>
+                  <li>Search and select Rhema Christian Ministries (Toronto or Ottawa)</li>
+                  <li>Use your Rhema membership number as the account number or enter 9999 for non-members.</li>
                 </ul>
               </div>
             </div>
@@ -49,10 +38,7 @@ export default function Giving() {
               <div className='desc'>
                 <ul>
                   <li>
-                    Send an E-Transfer to:{' '}
-                    <a href='mailto:treasury@rhemaonline.ca'>
-                      treasury@rhemaonline.ca
-                    </a>
+                    Send an E-Transfer to: <a href='mailto:treasury@rhemaonline.ca'>treasury@rhemaonline.ca</a>
                   </li>
                 </ul>
               </div>
@@ -69,14 +55,8 @@ export default function Giving() {
                       https://get.tithe.ly
                     </a>
                   </li>
-                  <li>
-                    If you don’t have a Tithe.ly account, you can create one in
-                    a few easy steps.
-                  </li>
-                  <li>
-                    Complete the requested information one time, and then you
-                    can start giving by Tithe.ly.
-                  </li>
+                  <li>If you don’t have a Tithe.ly account, you can create one in a few easy steps.</li>
+                  <li>Complete the requested information one time, and then you can start giving by Tithe.ly.</li>
                   Or
                   <li>
                     Click on the Tithe.ly link below:
@@ -85,8 +65,7 @@ export default function Giving() {
                         https://tithe.ly/give_new/www/#/tithely/give-one-time/645887?kiosk=1
                       </a>
                     </span>
-                    and follow the instructions to give by credit card or visa
-                    debit card
+                    and follow the instructions to give by credit card or visa debit card
                   </li>
                 </ul>
               </div>
@@ -102,13 +81,9 @@ export default function Giving() {
                   </li>
                   <li>You will receive a reply with a link.</li>
                   <li>
-                    Click on the link which will allow you to provide the
-                    information required to complete the process.
+                    Click on the link which will allow you to provide the information required to complete the process.
                   </li>
-                  <li>
-                    To send future gifts, text the dollar amount, and the
-                    category, ex. ($100 Tithes).
-                  </li>
+                  <li>To send future gifts, text the dollar amount, and the category, ex. ($100 Tithes).</li>
                 </ul>
               </div>
             </div>
@@ -124,17 +99,9 @@ export default function Giving() {
                       https://www.paypal.com
                     </a>
                   </li>
-                  <li>
-                    If you don’t have a paypal account, you can create one in a
-                    few easy steps.
-                  </li>
-                  <li>
-                    Click on personal, then click on “get a Paypal account”.
-                  </li>
-                  <li>
-                    Complete the requested information one time, and then you
-                    can start giving by Paypal.
-                  </li>
+                  <li>If you don’t have a paypal account, you can create one in a few easy steps.</li>
+                  <li>Click on personal, then click on “get a Paypal account”.</li>
+                  <li>Complete the requested information one time, and then you can start giving by Paypal.</li>
                   Or
                   <li>
                     Click on the Paypal link below:
@@ -146,17 +113,13 @@ export default function Giving() {
                         https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZDLQA7QHSMMEC&source=url
                       </a>
                     </span>
-                    and follow the instructions to give by credit card or visa
-                    debit card
+                    and follow the instructions to give by credit card or visa debit card
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <h3>
-            May God remember your offerings and keep you and your family during
-            this season.
-          </h3>
+          <h3>May God remember your offerings and keep you and your family during this season.</h3>
         </div>
       </GivingContainer>
     </>
@@ -164,7 +127,7 @@ export default function Giving() {
 }
 const GivingContainer = styled(Container)`
   .content-wrapper {
-    width: 1100px;
+    width: ${def.wrapper.width};
     max-width: 90vw;
   }
   #thank {

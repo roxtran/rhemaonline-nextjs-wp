@@ -1,13 +1,13 @@
-import Meta from '../components/common/meta';
-import Video from '../components/common/Video';
-import CTAPanel from '../components/home/CTAPanel';
-import Subscribe from '../components/home/Subscribe';
-import Welcome from '../components/home/Welcome';
-import Newsletter from '../components/home/Newsletter';
-import styled from 'styled-components';
+import Meta from 'components/common/meta'
+import Video from 'components/common/Video'
+import CTAPanel from 'components/home/CTAPanel'
+import Subscribe from 'components/home/Subscribe'
+import Welcome from 'components/home/Welcome'
+import Newsletter from 'components/home/Newsletter'
+import styled from 'styled-components'
 
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
-import newsletters from '../data/newsletters';
+import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
+import newsletters from 'data/newsletters'
 
 const Home = () => {
   return (
@@ -25,10 +25,10 @@ const Home = () => {
       <Subscribe />
       <Newsletter newsletters={newsletters} />
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
 
 const VideoWrapper = styled.div`
   video {
@@ -40,13 +40,13 @@ const VideoWrapper = styled.div`
       height: 70vh;
     }
   }
-`;
+`
 
 export async function getStaticProps() {
   const client = new ApolloClient({
     uri: process.env.WP_URL as string,
-    cache: new InMemoryCache(),
-  });
+    cache: new InMemoryCache()
+  })
 
   const { data } = await client.query({
     query: gql`
@@ -63,14 +63,14 @@ export async function getStaticProps() {
     `,
     variables: {
       first: 5,
-      after: null,
-    },
-  });
+      after: null
+    }
+  })
 
   return {
     props: {
-      newsletters: data?.newsletters?.nodes,
+      newsletters: data?.newsletters?.nodes
     },
-    revalidate: 30,
-  };
+    revalidate: 30
+  }
 }

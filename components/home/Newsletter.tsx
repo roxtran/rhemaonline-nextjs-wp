@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import styled from 'styled-components'
-import { Button, Container, ImgWrapper } from '../../styles/GlobalStyle'
-// import newsletters from '../../data/newsletters'
-import NewsletterType from '../../types/newsletter'
+import { Button, Container, ImgWrapper } from 'styles/GlobalStyle'
+// import newsletters from 'data/newsletters'
+import NewsletterType from 'types/newsletter'
 
 interface Props {
   newsletters: NewsletterType[]
@@ -14,9 +14,8 @@ const Newsletter = ({ newsletters }: Props) => {
       <div className='text'>
         <h2>Our Weekly Newsletters</h2>
         <p>
-          This is our way of keeping you up to date on all our events,
-          activities, and relevant news. We invite you to check out what’s
-          happing @ Rhema this week.
+          This is our way of keeping you up to date on all our events, activities, and relevant news. We invite you to
+          check out what’s happing @ Rhema this week.
         </p>
         <Button href={newsletters[0].link} target='_blank' className='btn'>
           Learn More
@@ -24,19 +23,9 @@ const Newsletter = ({ newsletters }: Props) => {
       </div>
       <div className='newsletters'>
         {newsletters.map((newsletter) => (
-          <a
-            key={newsletter.link}
-            className='newsletter'
-            href={newsletter.link}
-            target='_blank'
-          >
+          <a key={newsletter.link} className='newsletter' href={newsletter.link} target='_blank'>
             <ImgWrapper>
-              <Image
-                src={newsletter.imgUrl}
-                alt='newsletter image'
-                layout='fill'
-                objectFit='cover'
-              />
+              <Image src={newsletter.imgUrl} alt='newsletter image' layout='fill' objectFit='cover' />
             </ImgWrapper>
           </a>
         ))}

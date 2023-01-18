@@ -1,6 +1,6 @@
 import HeadLine from 'components/common/HeadLine'
 import styled from 'styled-components'
-import { Container, rem } from 'styles/GlobalStyle'
+import { Container, rem, def } from 'styles/GlobalStyle'
 import Meta from 'components/common/meta'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -155,7 +155,7 @@ const GivingContainer = styled(Container)`
     font-weight: 600;
   }
   #thank {
-    width: ${rem(1100)};
+    width: ${rem(1250)};
     max-width: 80vw;
     text-align: center;
     margin-bottom: 2rem;
@@ -172,7 +172,7 @@ const GivingContainer = styled(Container)`
   .items {
     margin: 2rem auto;
     width: 100%;
-    max-width: ${rem(1140)};
+    max-width: ${def.wrapper.width};
 
     display: flex;
     flex-flow: row wrap;
@@ -186,7 +186,7 @@ const GivingContainer = styled(Container)`
   }
   .item {
     min-width: ${rem(280)};
-    max-width: ${rem(350)};
+    max-width: ${rem(400)};
     background: #fff;
     padding: 2rem 1.5rem 0;
     border-radius: ${rem(10)};

@@ -3,10 +3,10 @@ import { IoClose } from 'react-icons/io5'
 import { ModalContainer } from './HomeModal'
 import React, { Dispatch, MouseEvent, SetStateAction } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import LeaderType from '../../../types/leader'
+import LeaderType from 'types/leader'
 import Image from 'next/image'
-import { ImgWrapper } from '../../../styles/GlobalStyle'
-import { fade, slideDown } from '../../../styles/animation'
+import { ImgWrapper, def } from 'styles/GlobalStyle'
+import { fade, slideDown } from 'styles/animation'
 import { useRef } from 'react'
 
 interface Props {
@@ -15,11 +15,7 @@ interface Props {
   leader: LeaderType | null
 }
 
-export default function LeaderModal({
-  openModal,
-  setOpenModal,
-  leader,
-}: Props) {
+export default function LeaderModal({ openModal, setOpenModal, leader }: Props) {
   const modalRef = useRef<HTMLDivElement>(null)
 
   const closeModal = (e: MouseEvent<HTMLDivElement>) => {
@@ -29,21 +25,8 @@ export default function LeaderModal({
   return (
     <AnimatePresence exitBeforeEnter>
       {openModal && leader && (
-        <StyledModal
-          ref={modalRef}
-          onClick={closeModal}
-          variants={fade}
-          initial='hidden'
-          animate='show'
-          exit='exit'
-        >
-          <motion.div
-            className='modal-dialog'
-            variants={slideDown}
-            initial='hidden'
-            animate='show'
-            exit='exit'
-          >
+        <StyledModal ref={modalRef} onClick={closeModal} variants={fade} initial='hidden' animate='show' exit='exit'>
+          <motion.div className='modal-dialog' variants={slideDown} initial='hidden' animate='show' exit='exit'>
             <div className='modal-content'>
               <div className='modal-header'>
                 <a onClick={() => setOpenModal(false)} className='closeBtn'>
@@ -65,10 +48,7 @@ export default function LeaderModal({
                   <div className='line'></div>
                 </div>
                 <div className='modal-right'>
-                  <div
-                    className='bio'
-                    dangerouslySetInnerHTML={{ __html: leader.content }}
-                  ></div>
+                  <div className='bio' dangerouslySetInnerHTML={{ __html: leader.content }}></div>
                 </div>
               </div>
             </div>
@@ -93,7 +73,7 @@ const StyledModal = styled(ModalContainer)`
   .modal-dialog {
     background: #fff;
     position: relative;
-    width: 1100px;
+    width: ${def.wrapper.width};
     max-width: 90vw;
     border-radius: 5px;
   }

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styled from 'styled-components'
-import { Button } from '../../styles/GlobalStyle'
+import { Button } from 'styles/GlobalStyle'
 
 interface HeadLineProps {
   imgUrl: string
@@ -12,34 +12,16 @@ interface HeadLineProps {
   height?: string
 }
 
-export default function HeadLine({
-  imgUrl,
-  title,
-  blur,
-  desc,
-  btnText,
-  btnLink,
-  height,
-}: HeadLineProps) {
+export default function HeadLine({ imgUrl, title, blur, desc, btnText, btnLink, height }: HeadLineProps) {
   return (
     <HeadLineWrapper height={height || '450px'}>
-      <Image
-        src={imgUrl}
-        alt='headline image'
-        layout='fill'
-        objectFit='cover'
-      />
+      <Image src={imgUrl} alt='headline image' layout='fill' objectFit='cover' />
       {blur && <Blur blur={blur}></Blur>}
       <div className='content-wrapper'>
         <h1>{title}</h1>
         {desc && <p>{desc}</p>}
         {btnText && (
-          <HeadLineBtn
-            className='white'
-            href={btnLink}
-            target='_blank'
-            data-open-in-church-center-modal='true'
-          >
+          <HeadLineBtn className='white' href={btnLink} target='_blank' data-open-in-church-center-modal='true'>
             {btnText}
           </HeadLineBtn>
         )}
@@ -50,7 +32,7 @@ export default function HeadLine({
 const HeadLineWrapper = styled.div<{ height: string }>`
   position: relative;
   height: ${(props) => props.height};
-  Image {
+  image {
     z-index: 0;
   }
   h1 {

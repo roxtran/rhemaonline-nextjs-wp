@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
-import HeadLine from '../components/common/HeadLine'
-import LeaderModal from '../components/common/Modals/LeaderModal'
-import { Container, ImgWrapper } from '../styles/GlobalStyle'
-// import leaders from '../data/leaders'
-import Meta from '../components/common/meta'
+import HeadLine from 'components/common/HeadLine'
+import LeaderModal from 'components/common/Modals/LeaderModal'
+import { Container, ImgWrapper, def } from 'styles/GlobalStyle'
+// import leaders from 'data/leaders'
+import Meta from 'components/common/meta'
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
-import LeaderType from '../types/leader'
+import LeaderType from 'types/leader'
 
 interface Props {
   leaders: LeaderType[]
@@ -26,19 +26,14 @@ export default function Leadership({ leaders }: Props) {
         height='450px'
         // blur='blur(5px)'
       />
-      <LeaderModal
-        openModal={openModal}
-        setOpenModal={setOpenModal}
-        leader={selectedLeader}
-      />
+      <LeaderModal openModal={openModal} setOpenModal={setOpenModal} leader={selectedLeader} />
       <LeadershipContainer>
         <div className='content-wrapper'>
           <div className='desc'>
             <h2>Our Leadership</h2>
             <p>
-              With a warm smile, a caring touch and a shepherd’s heart the
-              leaders of Rhema Christian Ministries are tasked with operational
-              and ecclesiastical excellence.
+              With a warm smile, a caring touch and a shepherd’s heart the leaders of Rhema Christian Ministries are
+              tasked with operational and ecclesiastical excellence.
             </p>
           </div>
           <div className='leaders'>
@@ -52,12 +47,7 @@ export default function Leadership({ leaders }: Props) {
                 }}
               >
                 <ImgWrapper>
-                  <Image
-                    className='img'
-                    src={leader.smallImg.smallImage.sourceUrl}
-                    width={250}
-                    height={250}
-                  />
+                  <Image className='img' src={leader.smallImg.smallImage.sourceUrl} width={250} height={250} />
                 </ImgWrapper>
                 <h3>{leader.title}</h3>
               </a>
@@ -70,7 +60,7 @@ export default function Leadership({ leaders }: Props) {
 }
 const LeadershipContainer = styled(Container)`
   .content-wrapper {
-    width: 1100px;
+    width: ${def.wrapper.width};
     max-width: 90vw;
   }
   .desc {
@@ -122,7 +112,7 @@ const LeadershipContainer = styled(Container)`
 export async function getStaticProps() {
   const client = new ApolloClient({
     uri: process.env.WP_URL as string,
-    cache: new InMemoryCache(),
+    cache: new InMemoryCache()
   })
 
   const { data } = await client.query({
@@ -145,13 +135,13 @@ export async function getStaticProps() {
           }
         }
       }
-    `,
+    `
   })
 
   return {
     props: {
-      leaders: data?.leaders?.nodes,
+      leaders: data?.leaders?.nodes
     },
-    revalidate: 30,
+    revalidate: 30
   }
 }

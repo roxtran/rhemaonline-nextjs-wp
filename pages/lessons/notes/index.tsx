@@ -1,10 +1,11 @@
-import Meta from '../../../components/common/meta'
-import NoteType from '../../../types/note'
-import HeadLine from '../../../components/common/HeadLine'
-import Sidebar from '../../../components/lessons/Sidebar'
-import LessonsList from '../../../components/lessons/LessonList'
+import Meta from 'components/common/meta'
+import NoteType from 'types/note'
+import HeadLine from 'components/common/HeadLine'
+import Sidebar from 'components/lessons/Sidebar'
+import LessonsList from 'components/lessons/LessonList'
 import styled from 'styled-components'
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
+import { def } from 'styles/GlobalStyle'
 
 interface Props {
   notes: NoteType[]
@@ -28,8 +29,8 @@ export default function Lessons({ notes, list }: Props) {
 export const LessonsContainer = styled.div`
   position: relative;
   margin: 0 auto;
-  padding: 0 2%;
-  max-width: 1100px;
+  padding: 0 2rem;
+  max-width: ${def.wrapper.width};
   display: flex;
   justify-content: space-between;
   align-items: flex-start;

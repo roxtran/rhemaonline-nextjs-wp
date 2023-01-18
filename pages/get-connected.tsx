@@ -1,9 +1,9 @@
-import Image from 'next/image';
-import styled from 'styled-components';
-import HeadLine from '../components/common/HeadLine';
-import Meta from '../components/common/meta';
-import { default as getConnectedData } from '../data/get-connected';
-import { Button, Container, ImgWrapper } from '../styles/GlobalStyle';
+import Image from 'next/image'
+import styled from 'styled-components'
+import HeadLine from 'components/common/HeadLine'
+import Meta from 'components/common/meta'
+import { default as getConnectedData } from 'data/get-connected'
+import { Button, Container, ImgWrapper } from 'styles/GlobalStyle'
 
 const getConnected = () => {
   return (
@@ -26,10 +26,7 @@ const getConnected = () => {
               </ImgWrapper>
               <div className='content-wrapper'>
                 <h3>{item.title}</h3>
-                <div
-                  className='text'
-                  dangerouslySetInnerHTML={{ __html: `${item.text}` }}
-                ></div>
+                <div className='text' dangerouslySetInnerHTML={{ __html: `${item.text}` }}></div>
                 {item.btnText && (
                   <Button href={item.btnLink} className='btn'>
                     {item.btnText}
@@ -41,8 +38,8 @@ const getConnected = () => {
         </div>
       </ConnectedContainer>
     </>
-  );
-};
+  )
+}
 
 const ConnectedContainer = styled(Container)`
   width: 80vw;
@@ -108,6 +105,6 @@ const ConnectedContainer = styled(Container)`
       padding: 2rem;
     }
   }
-`;
+`
 
-export default getConnected;
+export default getConnected

@@ -1,27 +1,27 @@
-import Head from 'next/head';
-import '../styles/_variables.css';
-import '../styles/GlobalStyle';
-import GlobalStyle from '../styles/GlobalStyle';
-import Layout from '../components/common/Layout';
-import { AppProps } from 'next/dist/next-server/lib/router/router';
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-// import SurveyModal from '../components/common/Modals/HomeModal'
+import Head from 'next/head'
+import 'styles/_variables.css'
+import 'styles/GlobalStyle'
+import GlobalStyle from 'styles/GlobalStyle'
+import Layout from 'components/common/Layout'
+import { AppProps } from 'next/dist/next-server/lib/router/router'
+import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+// import SurveyModal from 'components/common/Modals/HomeModal'
 // chatbot
-import Chatbot from '../components/Chatbot';
+import Chatbot from 'components/Chatbot'
 
 function MyApp({ Component, pageProps, router }: AppProps) {
-  const [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState(false)
 
   useEffect(() => {
     const showModal = setTimeout(() => {
-      setOpenModal(true);
-    }, 30000);
+      setOpenModal(true)
+    }, 30000)
 
     return () => {
-      clearTimeout(showModal);
-    };
-  }, []);
+      clearTimeout(showModal)
+    }
+  }, [])
 
   return (
     <>
@@ -55,11 +55,11 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         {/* <SurveyModal openModal={openModal} setOpenModal={setOpenModal} /> */}
       </Layout>
     </>
-  );
+  )
 }
 
 // export function reportWebVitals(metric) {
 //   console.log(metric)
 // }
 
-export default MyApp;
+export default MyApp

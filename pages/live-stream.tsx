@@ -1,5 +1,5 @@
-import IframeVideo from '../components/common/IFrameVideo'
-import Meta from '../components/common/meta'
+import IframeVideo from 'components/common/IFrameVideo'
+import Meta from 'components/common/meta'
 
 interface LiveStreamProps {
   src: string

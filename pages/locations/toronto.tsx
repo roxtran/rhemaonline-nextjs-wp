@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styled from 'styled-components'
-import Meta from '../../components/common/meta'
-import Video from '../../components/common/Video'
-import { Button, Container } from '../../styles/GlobalStyle'
+import Meta from 'components/common/meta'
+import Video from 'components/common/Video'
+import { Button, Container, def } from 'styles/GlobalStyle'
 
 export default function Toronto() {
   return (
@@ -66,10 +66,9 @@ export default function Toronto() {
                   <span>Worship Service:</span> Sundays – 8:30am & 11am
                 </p>
                 <p>
-                  <span>Bible Study:</span> Starting Wed. March 18th, 2020 until
-                  further notice, our weekly Bible Study will be a one hour
-                  gathering of intense prayer for community and national
-                  healing. Service time will be 7:00pm – 8:00pm
+                  <span>Bible Study:</span> Starting Wed. March 18th, 2020 until further notice, our weekly Bible Study
+                  will be a one hour gathering of intense prayer for community and national healing. Service time will
+                  be 7:00pm – 8:00pm
                 </p>
                 <span>49-40 Carl Hall Road, Toronto, ON, M3K 2C1</span>
               </div>
@@ -103,7 +102,7 @@ export default function Toronto() {
 
 export const LocationContainer = styled(Container)`
   .content-wrapper {
-    width: 1100px;
+    width: ${def.wrapper.width};
     max-width: 90vw;
   }
   h1 {
@@ -121,7 +120,8 @@ export const LocationContainer = styled(Container)`
   .icon-info {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     margin: 2rem 0;
     p {
@@ -158,10 +158,10 @@ export const LocationContainer = styled(Container)`
     padding: 3rem 3.5rem 3.5rem 3.5rem;
     border-radius: 5px;
     height: 100%;
-    width: 550px;
+    width: 650px;
     z-index: 1;
     .text-border {
-      width: 370px;
+      width: 480px;
       max-width: 28vw;
     }
     span {
@@ -173,7 +173,7 @@ export const LocationContainer = styled(Container)`
   }
   .map-wrapper {
     z-index: 2;
-    width: 650px;
+    width: 700px;
     height: 100%;
     margin-left: -100px;
     margin-top: 90px;
@@ -243,7 +243,7 @@ export const LocationContainer = styled(Container)`
 `
 export const VideoWrapper = styled.div`
   @media screen and (max-width: 640px) {
-    Video {
+    video {
       height: 60vh;
     }
   }

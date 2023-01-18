@@ -1,8 +1,8 @@
 import HeadLine from 'components/common/HeadLine'
 import Head from 'next/head'
 import Image from 'next/image'
-import Meta from '../../components/common/meta'
-import { Button } from '../../styles/GlobalStyle'
+import Meta from 'components/common/meta'
+import { Button } from 'styles/GlobalStyle'
 import { LocationContainer, VideoWrapper } from './toronto'
 
 export default function Ottawa() {

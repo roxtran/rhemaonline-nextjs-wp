@@ -3,7 +3,7 @@ import ChatBot from 'react-simple-chatbot'
 import styled from 'styled-components'
 import { IoChatbubbleEllipses } from 'react-icons/io5'
 import { motion } from 'framer-motion'
-import { fade, slideDown, slideUp } from '../styles/animation'
+import { fade, slideDown, slideUp } from 'styles/animation'
 
 function Chatbot() {
   const [showBot, setShowBot] = useState(false)

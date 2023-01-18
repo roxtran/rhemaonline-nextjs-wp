@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import paths from '../../paths';
-import { Button } from '../../styles/GlobalStyle';
+import styled from 'styled-components'
+import paths from 'paths'
+import { Button } from 'styles/GlobalStyle'
 
 export default function Subscribe() {
   return (
@@ -10,7 +10,7 @@ export default function Subscribe() {
         Subscribe
       </Button>
     </SubscribeWrapper>
-  );
+  )
 }
 const SubscribeWrapper = styled.div`
   position: relative;
@@ -52,4 +52,4 @@ const SubscribeWrapper = styled.div`
       font-size: 2.5rem;
     }
   }
-`;
+`

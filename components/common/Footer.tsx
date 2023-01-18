@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import styled from 'styled-components'
-import paths from '../../paths'
+import paths from 'paths'
 import BibleModal from './Modals/BibleModal'
 
 export default function Footer() {
@@ -41,11 +41,11 @@ export default function Footer() {
                   <a>Toronto Campus</a>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href={paths.ottawaLocation}>
                   <a>Ottawa Campus</a>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href={paths.grow}>
                   <a>Grow</a>

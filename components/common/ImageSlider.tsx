@@ -5,9 +5,9 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 // import style
-import { ImgWrapper } from '../../styles/GlobalStyle'
+import { ImgWrapper } from 'styles/GlobalStyle'
 // import type
-import SlideType from '../../types/slide'
+import SlideType from 'types/slide'
 
 interface propType {
   slides: SlideType[]

@@ -1,10 +1,10 @@
 import styled from 'styled-components'
-import HeadLine from '../../components/common/HeadLine'
-import Meta from '../../components/common/meta'
-import { getFeed } from '../../lib/rss'
-import { Container } from '../../styles/GlobalStyle'
-import NewsType from '../../types/news'
-import { formatDate } from '../../utils/formatter'
+import HeadLine from 'components/common/HeadLine'
+import Meta from 'components/common/meta'
+import { getFeed } from 'lib/rss'
+import { Container, def } from 'styles/GlobalStyle'
+import NewsType from 'types/news'
+import { formatDate } from 'utils/formatter'
 
 interface NewsProps {
   biblegatewayItems: NewsType[]
@@ -23,12 +23,7 @@ const news = ({ biblegatewayItems, studiesforlifeItems }: NewsProps) => {
             <ul>
               {biblegatewayItems.map((news) => (
                 <li>
-                  <a
-                    key={news.link}
-                    href={news.link}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
+                  <a key={news.link} href={news.link} target='_blank' rel='noopener noreferrer'>
                     {news.title}
                   </a>
                   <p>{formatDate(news.isoDate)}</p>
@@ -41,12 +36,7 @@ const news = ({ biblegatewayItems, studiesforlifeItems }: NewsProps) => {
             <ul>
               {studiesforlifeItems.map((news) => (
                 <li>
-                  <a
-                    key={news.link}
-                    href={news.link}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
+                  <a key={news.link} href={news.link} target='_blank' rel='noopener noreferrer'>
                     {news.title}
                   </a>
                   <p>{formatDate(news.isoDate)}</p>
@@ -63,7 +53,7 @@ const news = ({ biblegatewayItems, studiesforlifeItems }: NewsProps) => {
 const NewsContainer = styled(Container)`
   .content-wrapper {
     display: flex;
-    width: 1200px;
+    width: ${def.wrapper.width};
     max-width: 90vw;
   }
   .news-list {
@@ -100,8 +90,8 @@ export const getStaticProps = async () => {
     props: {
       biblegatewayItems: biblegatewayFeed.items,
       studiesforlifeItems: studiesforlifeFeed.items,
-      faithlifeItems: faithlifeFeed.items,
+      faithlifeItems: faithlifeFeed.items
     },
-    revalidate: 30,
+    revalidate: 30
   }
 }

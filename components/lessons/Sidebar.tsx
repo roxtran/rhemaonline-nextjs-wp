@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import styled from 'styled-components'
-import NoteType from '../../types/note'
+import NoteType from 'types/note'
 
 interface Props {
   title: string

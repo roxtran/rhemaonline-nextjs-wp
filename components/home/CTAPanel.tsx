@@ -1,9 +1,9 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import styled from 'styled-components';
-import paths from '../../paths';
-import { motion } from 'framer-motion';
-import { slideLeft, slideRight, slideUp } from '../../styles/animation';
+import Image from 'next/image'
+import Link from 'next/link'
+import styled from 'styled-components'
+import paths from 'paths'
+import { motion } from 'framer-motion'
+import { slideLeft, slideRight, slideUp } from 'styles/animation'
 
 const items = {
   show: {
@@ -11,20 +11,14 @@ const items = {
     // border: '4px solid rgb(16, 97, 162)',
     borderRadius: '10px',
     overflow: 'hidden',
-    transition: { duration: 0.01, type: 'spring', when: 'afterChildren' },
-  },
-};
+    transition: { duration: 0.01, type: 'spring', when: 'afterChildren' }
+  }
+}
 
 export default function MiddleMenu() {
   return (
     <CTAPanel>
-      <motion.div
-        className='items'
-        variants={items}
-        initial='hidden'
-        animate='show'
-        exit='exit'
-      >
+      <motion.div className='items' variants={items} initial='hidden' animate='show' exit='exit'>
         <motion.div
           className='item'
           variants={slideRight}
@@ -32,7 +26,7 @@ export default function MiddleMenu() {
             duration: 0.25,
             type: 'spring',
             delay: 0.25,
-            damping: 8,
+            damping: 8
           }}
         >
           <Link href={paths.giving}>
@@ -50,7 +44,7 @@ export default function MiddleMenu() {
             duration: 0.25,
             type: 'spring',
             delay: 0.15,
-            damping: 8,
+            damping: 8
           }}
         >
           <Link href={paths.connect}>
@@ -68,7 +62,7 @@ export default function MiddleMenu() {
             duration: 0.25,
             type: 'spring',
             delay: 0.15,
-            damping: 8,
+            damping: 8
           }}
         >
           <Link href={`${paths.getConnected}#get-involved`}>
@@ -81,7 +75,7 @@ export default function MiddleMenu() {
         </motion.div>
       </motion.div>
     </CTAPanel>
-  );
+  )
 }
 const CTAPanel = styled.div`
   position: relative;
@@ -146,4 +140,4 @@ const CTAPanel = styled.div`
       border-bottom: 1px dashed var(--shadow-color);
     }
   }
-`;
+`

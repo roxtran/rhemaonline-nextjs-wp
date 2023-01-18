@@ -2,7 +2,8 @@ import { Dispatch, SetStateAction, MouseEvent, useRef } from 'react'
 import { IoClose } from 'react-icons/io5'
 import styled from 'styled-components'
 import { motion, AnimatePresence } from 'framer-motion'
-import { fade, slideDown } from '../../../styles/animation'
+import { fade, slideDown } from 'styles/animation'
+import { def } from 'styles/GlobalStyle'
 
 interface HomeModalProps {
   openModal: boolean
@@ -15,25 +16,12 @@ const HomeModal = ({ openModal, setOpenModal }: HomeModalProps) => {
   const closeModal = (e: MouseEvent<HTMLDivElement>) => {
     if (modalRef.current === e.target) setOpenModal(false)
   }
-  
+
   return (
     <AnimatePresence exitBeforeEnter>
       {openModal && (
-        <ModalContainer
-          ref={modalRef}
-          onClick={closeModal}
-          variants={fade}
-          initial='hidden'
-          animate='show'
-          exit='exit'
-        >
-          <motion.div
-            className='modal-dialog'
-            variants={slideDown}
-            initial='hidden'
-            animate='show'
-            exit='exit'
-          >
+        <ModalContainer ref={modalRef} onClick={closeModal} variants={fade} initial='hidden' animate='show' exit='exit'>
+          <motion.div className='modal-dialog' variants={slideDown} initial='hidden' animate='show' exit='exit'>
             <div className='modal-content'>
               <div className='modal-header'>
                 <a onClick={() => setOpenModal(false)} className='closeBtn'>
@@ -69,7 +57,7 @@ export const ModalContainer = styled(motion.div)`
   .modal-dialog {
     background: #fff;
     position: relative;
-    width: 1100px;
+    width: ${def.wrapper.width};
     max-width: 90vw;
     height: 80vh;
     border-radius: 5px;

@@ -1,6 +1,16 @@
 import styled, { createGlobalStyle } from 'styled-components'
 import { motion } from 'framer-motion'
 
+export const rem = (px) => {
+  const remValue = px * 0.0625 + 'rem'
+  return remValue
+}
+export const def = {
+  wrapper: {
+    width: '78rem'
+  }
+}
+
 const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
@@ -86,12 +96,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const rem = (px) => {
-  const remValue = px * 0.0625 + 'rem'
-  return remValue
-}
-
-const Container = styled(motion.section)`
+export const Container = styled(motion.section)`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -99,7 +104,7 @@ const Container = styled(motion.section)`
   width: 100vw;
   padding: 3rem 0;
 `
-const Button = styled(motion.a)`
+export const Button = styled(motion.a)`
   display: inline-block;
   cursor: pointer;
   background: var(--blue);
@@ -130,11 +135,10 @@ const Button = styled(motion.a)`
   }
 `
 
-const ImgWrapper = styled(motion.div)`
+export const ImgWrapper = styled(motion.div)`
   position: relative;
   border-radius: 5px;
   overflow: hidden;
 `
 
 export default GlobalStyle
-export { rem, Container, Button, ImgWrapper }

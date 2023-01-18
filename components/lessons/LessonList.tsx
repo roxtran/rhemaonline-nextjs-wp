@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import LessonDetail from './LessonDetail'
-import NoteType from '../../types/note'
+import NoteType from 'types/note'
 
 interface Props {
   title: string

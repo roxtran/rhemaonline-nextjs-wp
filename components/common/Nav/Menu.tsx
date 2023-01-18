@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import NavLink from './NavLink'
-import paths from '../../../paths'
+import paths from 'paths'
 
 interface Props {
   open: boolean
@@ -21,9 +21,9 @@ export default function Menu({ open, setOpen }: Props) {
           <NavLink href={paths.torontoLocation}>
             <a onClick={() => setOpen(!open)}>Toronto</a>
           </NavLink>
-          <NavLink href={paths.ottawaLocation}>
+          {/* <NavLink href={paths.ottawaLocation}>
             <a onClick={() => setOpen(!open)}>Ottawa</a>
-          </NavLink>
+          </NavLink> */}
         </div>
       </div>
       <NavLink href={paths.connect}>

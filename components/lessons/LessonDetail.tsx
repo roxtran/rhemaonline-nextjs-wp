@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import styled from 'styled-components'
-import paths from '../../paths'
-import { ImgWrapper } from '../../styles/GlobalStyle'
-import NoteType from '../../types/note'
-import { formatDate } from '../../utils/formatter'
+import paths from 'paths'
+import { ImgWrapper, rem } from 'styles/GlobalStyle'
+import NoteType from 'types/note'
+import { formatDate } from 'utils/formatter'
 
 interface Props {
   note: NoteType
@@ -48,21 +48,21 @@ export default function LessonDetail({ note, type }: Props) {
 const LessonWrapper = styled.div`
   position: relative;
   padding: 2.5rem 0 2rem;
-  width: 670px;
+  width: ${rem(822)};
   max-width: 90vw;
 
   .hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 670px;
+    width: ${rem(822)};
     max-width: 90vw;
-    height: 300px;
+    height: ${rem(300)};
     background: black;
     opacity: 0;
     z-index: 1;
     margin-top: 2.5rem;
-    border-radius: 10px;
+    border-radius: ${rem(10)};
 
     &:hover {
       opacity: 0.4;
@@ -70,9 +70,9 @@ const LessonWrapper = styled.div`
   }
 
   ${ImgWrapper} {
-    height: 300px;
+    height: ${rem(300)};
     z-index: 0;
-    border-radius: 10px;
+    border-radius: ${rem(10)};
   }
 
   .text {

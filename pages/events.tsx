@@ -1,7 +1,8 @@
 import styled from 'styled-components'
-import HeadLine from '../components/common/HeadLine'
-import PCOCalendar from '../components/common/PLOCalendar'
-import Meta from '../components/common/meta'
+import HeadLine from 'components/common/HeadLine'
+// import PCOCalendar from 'components/common/PLOCalendar'
+import Meta from 'components/common/meta'
+import { def } from 'styles/GlobalStyle'
 
 export default function Events() {
   return (
@@ -20,7 +21,7 @@ export default function Events() {
 const CalendarWrapper = styled.div`
   position: relative;
   display: block;
-  max-width: 1100px;
+  max-width: ${def.wrapper.width};
   margin: auto;
   padding: 2rem 0;
   height: 75vh;
