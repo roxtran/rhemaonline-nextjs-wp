@@ -1,8 +1,7 @@
+import HeadLine from 'components/common/HeadLine'
 import Head from 'next/head'
 import Image from 'next/image'
-import styled from 'styled-components'
 import Meta from '../../components/common/meta'
-import Video from '../../components/common/Video'
 import { Button } from '../../styles/GlobalStyle'
 import { LocationContainer, VideoWrapper } from './toronto'
 
@@ -13,9 +12,7 @@ export default function Ottawa() {
       <Head>
         <script src='https://js.churchcenter.com/modal/v1'></script>
       </Head>
-      <VideoWrapper>
-        <Video src='/video/Rhema-Toronto.mp4' width='100%' height='75vh' />
-      </VideoWrapper>
+      <HeadLine imgUrl='/img/ottawa.jpg' title='Ottawa' blur='blur(10px)' />
       <LocationContainer>
         <div className='content-wrapper'>
           <h1>Ottawa Campus</h1>
