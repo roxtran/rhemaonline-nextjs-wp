@@ -1,32 +1,32 @@
 export default [
-  {
-    name: 'Plugged In Youth Ministry',
-    imgUrl: '/img/ministries/youth.jpg',
-    btnText: 'Learn More',
-    btnLink: '/ministries/youth',
-    social: {
-      email: {
-        link: 'pluggedin@rhemaonline.ca'
-      },
-      facebook: {
-        link: 'https://www.facebook.com/pluggedinrhema/?hc_ref=ARR9WiaK1EeVrN4C_ePFePh-K8xz0MTexZ8aouheOmofPGjIXxraO9SoxSP4lG0woy4&fref=nf&__tn__=kC-R'
-      }
-    }
-  },
-  {
-    name: "Women's Ministry",
-    imgUrl: '/img/ministries/women.jpg',
-    btnText: 'Learn More',
-    btnLink: '/ministries/women',
-    social: {
-      email: {
-        link: 'elu@rhemaonline.ca'
-      },
-      twitter: {
-        link: 'https://twitter.com/ELUOttawa'
-      }
-    }
-  },
+  // {
+  //   name: 'Plugged In Youth Ministry',
+  //   imgUrl: '/img/ministries/youth.jpg',
+  //   btnText: 'Learn More',
+  //   btnLink: '/ministries/youth',
+  //   social: {
+  //     email: {
+  //       link: 'pluggedin@rhemaonline.ca'
+  //     },
+  //     facebook: {
+  //       link: 'https://www.facebook.com/pluggedinrhema/?hc_ref=ARR9WiaK1EeVrN4C_ePFePh-K8xz0MTexZ8aouheOmofPGjIXxraO9SoxSP4lG0woy4&fref=nf&__tn__=kC-R'
+  //     }
+  //   }
+  // },
+  // {
+  //   name: "Women's Ministry",
+  //   imgUrl: '/img/ministries/women.jpg',
+  //   btnText: 'Learn More',
+  //   btnLink: '/ministries/women',
+  //   social: {
+  //     email: {
+  //       link: 'elu@rhemaonline.ca'
+  //     },
+  //     twitter: {
+  //       link: 'https://twitter.com/ELUOttawa'
+  //     }
+  //   }
+  // },
   {
     name: "Men's Ministry",
     imgUrl: '/img/ministries/men.jpg',

@@ -71,11 +71,11 @@ export default function Footer() {
                   <a>Become A Member</a>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href={paths.getConnected + '#groups'}>
                   <a>Groups</a>
                 </Link>
-              </li>
+              </li> */}
             </ul>
             <ul>
               <h4>Finance</h4>
