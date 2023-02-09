@@ -23,7 +23,7 @@ export default function Sidebar({ title, notes }: Props) {
         <ul>
           {notes?.map((note) => (
             <li key={note.slug}>
-              <Link href={`/lessons/notes/${note.slug}`}>
+              <Link href={`/lessons/${title.toLowerCase().includes('notes') ? 'notes' : 'studies'}/${note.slug}`}>
                 <a>{note.title}</a>
               </Link>
               <p className='date'>{formatDate(note.date)}</p>

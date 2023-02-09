@@ -57,7 +57,7 @@ export async function getStaticProps() {
       }
     `,
     variables: {
-      first: 2,
+      first: 3,
       after: null
     }
   })

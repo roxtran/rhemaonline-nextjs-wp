@@ -10,6 +10,7 @@ import styled from 'styled-components'
 import { LessonsContainer } from '../notes/index'
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
 import paths from 'paths'
+import { NoteContainer } from '../notes/[slug]'
 // import { validate } from 'graphql'
 
 interface Props {
@@ -58,78 +59,11 @@ export default function BibleStudy({ note, list }: Props) {
             </div>
           )}
         </div>
-        <Sidebar title='Recent Notes' notes={list} />
+        <Sidebar title='Recent Studies' notes={list} />
       </NoteContainer>
     </>
   )
 }
-
-const NoteContainer = styled(LessonsContainer)`
-  .note-wrapper {
-    position: relative;
-    width: 670px;
-    max-width: 90vw;
-    margin: 0 auto;
-    padding: 3rem 0;
-    height: 100%;
-    .date {
-      font-style: italic;
-      margin-bottom: 0;
-    }
-    .line {
-      margin: 0.5rem 0;
-      width: 100%;
-      height: 1px;
-      background: rgba(0, 0, 0, 0.2);
-    }
-    ${ImgWrapper} {
-      margin-top: 2rem;
-      width: 650px;
-      max-width: 90vw;
-      height: 450px;
-    }
-    article {
-      margin: 2.5rem 0;
-      ul {
-        padding-left: 40px;
-      }
-    }
-    .btn-wrapper {
-      position: relative;
-      z-index: 1;
-      &:before {
-        content: '';
-        position: absolute;
-        top: -1px;
-        left: 20%;
-        right: 20%;
-        height: 15px;
-        border-radius: 50%;
-        box-shadow: 0 0 12px rgb(0 0 0 / 15%);
-        z-index: -1;
-      }
-      .btn-bg {
-        background: #fff;
-        display: flex;
-        padding: 2rem;
-      }
-      .btn {
-        margin: auto;
-      }
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .note-wrapper {
-      padding: 3rem 0 0;
-    }
-  }
-
-  @media screen and (max-width: 640px) {
-    ${ImgWrapper} {
-      height: 240px;
-    }
-  }
-`
 
 const client = new ApolloClient({
   uri: process.env.WP_URL as string,

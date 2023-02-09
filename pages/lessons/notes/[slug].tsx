@@ -4,7 +4,7 @@ import Link from 'next/link'
 import HeadLine from 'components/common/HeadLine'
 import Meta from 'components/common/meta'
 import Sidebar from 'components/lessons/Sidebar'
-import { Button, ImgWrapper } from 'styles/GlobalStyle'
+import { Button, ImgWrapper, rem } from 'styles/GlobalStyle'
 import { formatDate } from 'utils/formatter'
 import styled from 'styled-components'
 import { LessonsContainer } from './index'
@@ -58,12 +58,11 @@ export default function SermonNote({ note, list }: Props) {
   )
 }
 
-const NoteContainer = styled(LessonsContainer)`
+export const NoteContainer = styled(LessonsContainer)`
   .note-wrapper {
     position: relative;
-    width: 670px;
+    width: ${rem(822)};
     max-width: 90vw;
-    margin: 0 auto;
     padding: 3rem 0;
     height: 100%;
     .date {
@@ -78,12 +77,13 @@ const NoteContainer = styled(LessonsContainer)`
     }
     ${ImgWrapper} {
       margin-top: 2rem;
-      width: 650px;
+      width: ${rem(822)};
       max-width: 90vw;
-      height: 450px;
+      height: ${rem(300)};
+      border-radius: ${rem(10)};
     }
     article {
-      margin: 2.5rem 0;
+      margin: 2rem 0;
       ul {
         padding-left: 40px;
       }

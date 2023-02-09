@@ -32,7 +32,7 @@ export default function LessonDetail({ note, type }: Props) {
             </>
           )}
           <div className='text'>
-            <p className='date'>{formatDate(note.date)}</p>
+            <div className='date'>{formatDate(note.date)}</div>
             <h3>{note.title}</h3>
             <div
               dangerouslySetInnerHTML={{
@@ -47,7 +47,7 @@ export default function LessonDetail({ note, type }: Props) {
 }
 const LessonWrapper = styled.div`
   position: relative;
-  padding: 2.5rem 0 2rem;
+  padding: 2rem 0;
   width: ${rem(822)};
   max-width: 90vw;
 
@@ -61,7 +61,7 @@ const LessonWrapper = styled.div`
     background: black;
     opacity: 0;
     z-index: 1;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     border-radius: ${rem(10)};
 
     &:hover {
@@ -77,7 +77,6 @@ const LessonWrapper = styled.div`
 
   .text {
     margin-top: 1rem;
-    text-align: center;
   }
 
   p {
