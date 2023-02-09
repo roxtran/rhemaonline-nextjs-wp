@@ -8,7 +8,7 @@ export default function Events() {
   return (
     <>
       <Meta title='Events - Rhema - Changing & Affecting Lives!' />
-      <HeadLine imgUrl='/img/events-img.webp' title='Events' height='300px' />
+      <HeadLine imgUrl='/img/events-img1.webp' title='Events' height='300px' />
       <CalendarWrapper>
         <iframe
           src='https://rhema.ccbchurch.com/goto/events/public'

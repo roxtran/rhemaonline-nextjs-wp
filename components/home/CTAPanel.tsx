@@ -51,7 +51,7 @@ export default function MiddleMenu() {
             <a>We Care Services</a>
           </Link>
           <div className='line'></div>
-          <Link href='https://rhemachristianministries.churchcenter.com/people/forms/59214'>
+          <Link href={paths.formLinks.prayerRequest}>
             <a data-open-in-church-center-modal='true'>Prayer Request</a>
           </Link>
         </motion.div>
@@ -69,7 +69,7 @@ export default function MiddleMenu() {
             <a>Get Involved</a>
           </Link>
           <div className='line'></div>
-          <Link href='https://rhemachristianministries.churchcenter.com/people/forms/59130'>
+          <Link href={paths.formLinks.becomeAMember}>
             <a data-open-in-church-center-modal='true'>Become A Member</a>
           </Link>
         </motion.div>

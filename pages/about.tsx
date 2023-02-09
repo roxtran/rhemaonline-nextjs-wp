@@ -8,7 +8,7 @@ export default function About() {
     <>
       <Meta title='About Us - Rhema - Changing & Affecting Lives!' />
       <HeadLine
-        imgUrl='/img/about-img.jpg'
+        imgUrl='/img/about-img.webp'
         title='About Us'
         height='500px'
         // blur='blur(15px)'

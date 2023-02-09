@@ -16,7 +16,7 @@ const Home = () => {
       {/* <Video src='/video/RCM-Homepage-Teaser2.mp4' width='100%' height='80vh' /> */}
       <VideoWrapper>
         <video loop muted autoPlay>
-          <source src='/video/RCM-Homepage-Teaser2.mp4' type='video/mp4' />
+          <source src='/video/homepage (1080p).mp4' type='video/mp4' />
           Your browser does not support the video tag.
         </video>
       </VideoWrapper>

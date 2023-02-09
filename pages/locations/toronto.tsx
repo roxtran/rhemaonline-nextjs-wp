@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Meta from 'components/common/meta'
 import Video from 'components/common/Video'
 import { Button, Container, def } from 'styles/GlobalStyle'
+import paths from 'paths'
 
 export default function Toronto() {
   return (
@@ -13,7 +14,7 @@ export default function Toronto() {
         <script src='https://js.churchcenter.com/modal/v1'></script>
       </Head>
       <VideoWrapper>
-        <Video src='/video/Rhema-Toronto.mp4' width='100%' height='75vh' />
+        <Video src='/video/toronto_location (1080p).mp4' width='100%' height='75vh' />
       </VideoWrapper>
       <LocationContainer>
         <div className='content-wrapper'>
@@ -85,11 +86,7 @@ export default function Toronto() {
           </div>
           <div className='btn-wrapper'>
             <div className='btn-bg'>
-              <Button
-                className='btn'
-                href='https://rhemachristianministries.churchcenter.com/people/forms/59260'
-                data-open-in-church-center-modal='true'
-              >
+              <Button className='btn' href={paths.formLinks.contactUs} data-open-in-church-center-modal='true'>
                 Contact Us
               </Button>
             </div>

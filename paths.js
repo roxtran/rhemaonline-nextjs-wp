@@ -31,5 +31,19 @@ export default {
   instagramAccount: 'https://www.instagram.com/rhemacanada/',
   twitterAccount: 'https://twitter.com/rhemacanada?lang=en',
   youtubeChannel: 'https://www.youtube.com/channel/UCNjybtMYeMfwur19Gd5GvRg',
-  office365Site: 'https://login.microsoftonline.com/'
+  office365Site: 'https://login.microsoftonline.com/',
+
+  // form links
+  formLinks: {
+    getInvolved: 'https://rhema.ccbchurch.com/goto/forms/91/responses/new',
+    contactUs: 'https://rhema.ccbchurch.com/goto/forms/91/responses/new',
+    prayerRequest: 'https://rhema.ccbchurch.com/goto/forms/89/responses/new',
+    pastoralCare: 'https://rhema.ccbchurch.com/goto/forms/90/responses/new',
+    becomeAMember: 'https://rhema.ccbchurch.com/goto/forms/15/responses/new',
+    childDedication: 'https://rhema.ccbchurch.com/goto/forms/14/responses/new',
+    waterBaptism: 'https://rhema.ccbchurch.com/goto/forms/12/responses/new',
+    marriageCounseling: 'https://rhema.ccbchurch.com/goto/forms/16/responses/new',
+    funerals: 'https://rhema.ccbchurch.com/goto/forms/40/responses/new',
+    hospitalVisitation: 'https://rhema.ccbchurch.com/goto/forms/91/responses/new'
+  }
 }

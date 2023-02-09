@@ -8,6 +8,7 @@ import { Container, ImgWrapper, def } from 'styles/GlobalStyle'
 import Meta from 'components/common/meta'
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
 import ServiceType from 'types/service'
+import paths from 'paths'
 
 interface Props {
   services: ServiceType[]
@@ -26,7 +27,7 @@ export default function Connect({ services }: Props) {
         title='We Care'
         desc='We are here for you.'
         btnText='Contact Us'
-        btnLink='https://rhemachristianministries.churchcenter.com/people/forms/59452'
+        btnLink={paths.formLinks.contactUs}
         height='550px'
       />
       <ConnectContainer>

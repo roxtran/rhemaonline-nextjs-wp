@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Meta from 'components/common/meta'
 import { Button } from 'styles/GlobalStyle'
 import { LocationContainer, VideoWrapper } from './toronto'
+import paths from 'paths'
 
 export default function Ottawa() {
   return (
@@ -83,11 +84,7 @@ export default function Ottawa() {
           </div>
           <div className='btn-wrapper'>
             <div className='btn-bg'>
-              <Button
-                className='btn'
-                href='https://rhemachristianministries.churchcenter.com/people/forms/59260'
-                data-open-in-church-center-modal='true'
-              >
+              <Button className='btn' href={paths.formLinks.contactUs} data-open-in-church-center-modal='true'>
                 Contact Us
               </Button>
             </div>
