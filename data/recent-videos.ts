@@ -1,5 +1,10 @@
 export default [
   {
+    videoId: '4ONFTxN0H3c',
+    title: "Rhema Ministries - 2022 New Year's Eve Celebration",
+    speaker: ''
+  },
+  {
     videoId: 'TtiEiT7UQwE',
     title: 'The Rhema Experience Online: The Excellence Series – PART 3B',
     speaker: ''

@@ -21,7 +21,7 @@ export default function Leadership({ leaders }: Props) {
     <>
       <Meta title='Leadership - Rhema - Changing & Affecting Lives!' />
       <HeadLine
-        imgUrl='/img/leadership-img.jpg'
+        imgUrl='/img/leadership-img.webp'
         title='Leadership'
         height='450px'
         // blur='blur(5px)'

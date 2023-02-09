@@ -21,21 +21,21 @@ export default function Sermons() {
         <div className='wrapper'>
           <h2 className='title'>Sermons</h2>
           <FeaturedWrapper onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>
-            <Link href={`${paths.sermons}/videos/YFh_QFskIck`}>
+            <Link href={`${paths.sermons}/videos/${recentVideos[0].videoId}`}>
               <a>
                 <FeatureVideo
                   hover={hover}
-                  videoId='YFh_QFskIck'
+                  videoId={recentVideos[0].videoId}
                   width='1140'
                   height='650'
                   thumbnailQuality='maxresdefault'
                 />
+                <BsPlayCircleFill className='play-icon' />
               </a>
             </Link>
-            <BsPlayCircleFill className='play-icon' />
             <div className='video-text'>
               <div className='tag'>Latest Video</div>
-              <h3>The Rhema Experience Online: The Excellence Series – Part 3A</h3>
+              <h3>{recentVideos[0].title}</h3>
             </div>
           </FeaturedWrapper>
           <PopularVideoWrapper>
