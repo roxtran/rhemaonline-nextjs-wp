@@ -34,14 +34,14 @@ export default function Sermons({ video }: Props) {
             <iframe
               width='100%'
               height='100%'
-              src={`https://www.youtube.com/embed/${video[0].videoId}?rel=0&showinfo=1&autoplay=1&loop=0`}
+              src={`https://www.youtube.com/embed/${video[0].id.videoId}?rel=0&showinfo=1&autoplay=1&loop=0`}
               title='iframe video player'
               frameBorder='0'
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
             ></iframe>
           </VideoWrapper>
           <div className='text-wrapper'>
-            <h3 className='title'>{video[0].title}</h3>
+            <h3 className='title'>{video[0].snippet.title}</h3>
             <div className='subtitle'>Rhema Christian Ministries</div>
             <div className='desc'>
               Thank you for supporting Rhema Christian Ministries.
@@ -158,7 +158,7 @@ videos.push(...recentVideos)
 
 export const getStaticProps = async ({ params }: Params) => {
   const { videoId } = params
-  const video = videos.filter((video) => video.videoId === videoId)
+  const video = videos.filter((video) => video.id.videoId === videoId)
 
   return {
     props: {
@@ -168,8 +168,8 @@ export const getStaticProps = async ({ params }: Params) => {
 }
 
 export const getStaticPaths = async () => {
-  const paths = videos.map((video: { videoId: string }) => ({
-    params: { videoId: video.videoId }
+  const paths = videos.map((video) => ({
+    params: { videoId: video.id.videoId }
   }))
   // console.log('!! paths', paths)
   return { paths, fallback: false }

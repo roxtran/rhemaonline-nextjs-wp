@@ -21,22 +21,22 @@ export default function Sermons() {
         <div className='wrapper'>
           <h2 className='title'>Sermons</h2>
           <FeaturedWrapper onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>
-            <Link href={`${paths.sermons}/videos/${recentVideos[0].videoId}`}>
+            <Link href={`${paths.sermons}/videos/${recentVideos[0].id.videoId}`}>
               <a>
                 <FeatureVideo
                   hover={hover}
-                  videoId={recentVideos[0].videoId}
+                  videoId={recentVideos[0].id.videoId}
                   width='1140'
                   height='650'
                   thumbnailQuality='maxresdefault'
                 />
                 <BsPlayCircleFill className='play-icon' />
+                <div className='video-text'>
+                  <div className='tag'>Latest Video</div>
+                  <h3>{recentVideos[0].snippet.title}</h3>
+                </div>
               </a>
             </Link>
-            <div className='video-text'>
-              <div className='tag'>Latest Video</div>
-              <h3>{recentVideos[0].title}</h3>
-            </div>
           </FeaturedWrapper>
           <PopularVideoWrapper>
             <h4>Popular Sermons</h4>
@@ -119,6 +119,9 @@ const FeaturedWrapper = styled.div`
     h3 {
       color: #fff;
     }
+  }
+  .popular-video-text {
+    max-width: 85%;
   }
 `
 

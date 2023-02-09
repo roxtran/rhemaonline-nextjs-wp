@@ -53,15 +53,19 @@ export default function PopularVideoSlider({ slides }: propType) {
   return (
     <Slider {...settings}>
       {slides?.map((slide) => (
-        <Link href={`${paths.sermons}/videos/${slide.videoId}`} key={slide.videoId}>
+        <Link href={`${paths.sermons}/videos/${slide.id.videoId}`} key={slide.id.videoId}>
           <a>
             <div className='video-wrapper'>
               <ImgWrapper className='img-wrapper'>
-                <Image src={`https://i.ytimg.com/vi/${slide.videoId}/hqdefault.jpg`} layout='fill' objectFit='cover' />
+                <Image
+                  src={`https://i.ytimg.com/vi/${slide.id.videoId}/hqdefault.jpg`}
+                  layout='fill'
+                  objectFit='cover'
+                />
               </ImgWrapper>
               <div className='popular-video-text'>
-                <h4>{slide.title}</h4>
-                <div className='speaker'>{slide.speaker}</div>
+                <h4>{slide.snippet.title.substring(0, 50)}...</h4>
+                <div className='speaker'>{slide.snippet.publishedAt.substring(0, 10)}</div>
               </div>
             </div>
           </a>
