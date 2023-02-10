@@ -28,7 +28,7 @@ export default function Connect({ services }: Props) {
         desc='We are here for you.'
         btnText='Contact Us'
         btnLink={paths.formLinks.contactUs}
-        height='550px'
+        height='450px'
       />
       <ConnectContainer>
         <div className='desc'>

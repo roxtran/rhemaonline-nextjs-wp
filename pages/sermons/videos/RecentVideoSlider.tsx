@@ -21,7 +21,7 @@ export default function PopularVideoSlider({ slides }: propType) {
     arrows: true,
     slidesToShow: 3,
     rows: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     infinite: false,
     speed: 500,
     responsive: [

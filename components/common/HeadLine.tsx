@@ -41,6 +41,7 @@ const HeadLineWrapper = styled.div<{ height: string }>`
     margin-bottom: 0.5rem;
   }
   .content-wrapper {
+    min-width: 15rem;
     max-width: 90vw;
     position: absolute;
     text-align: center;

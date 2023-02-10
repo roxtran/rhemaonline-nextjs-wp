@@ -113,6 +113,7 @@ export const Button = styled(motion.a)`
   padding: 10px 25px;
   text-align: center;
   text-transform: capitalize;
+  white-space: nowrap;
   &:hover {
     background: var(--light-blue);
     color: #fff;
