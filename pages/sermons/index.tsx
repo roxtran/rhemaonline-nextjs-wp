@@ -13,6 +13,7 @@ import paths from 'paths'
 
 export default function Sermons() {
   const [hover, setHover] = useState(false)
+  const latestVideo = recentVideos[0]
 
   return (
     <>
@@ -21,11 +22,11 @@ export default function Sermons() {
         <div className='wrapper'>
           <h2 className='title'>Sermons</h2>
           <FeaturedWrapper onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>
-            <Link href={`${paths.sermons}/videos/${recentVideos[0].id.videoId}`}>
+            <Link href={`${paths.sermons}/videos/${latestVideo.id.videoId}`}>
               <a>
                 <FeatureVideo
                   hover={hover}
-                  videoId={recentVideos[0].id.videoId}
+                  videoId={latestVideo.id.videoId}
                   width='1140'
                   height='650'
                   thumbnailQuality='maxresdefault'
@@ -33,7 +34,7 @@ export default function Sermons() {
                 <BsPlayCircleFill className='play-icon' />
                 <div className='video-text'>
                   <div className='tag'>Latest Video</div>
-                  <h3>{recentVideos[0].snippet.title}</h3>
+                  <h3 dangerouslySetInnerHTML={{ __html: latestVideo.snippet.title }} />
                 </div>
               </a>
             </Link>
@@ -120,9 +121,6 @@ const FeaturedWrapper = styled.div`
       color: #fff;
     }
   }
-  .popular-video-text {
-    max-width: 85%;
-  }
 `
 
 const PopularVideoWrapper = styled.div`
@@ -135,7 +133,7 @@ const PopularVideoWrapper = styled.div`
     height: ${rem(180)};
     border-radius: 0.5rem;
   }
-  .speaker {
+  .date {
     margin-top: -0.75rem;
     font-weight: 600;
     font-size: 0.86rem;
@@ -146,6 +144,9 @@ const PopularVideoWrapper = styled.div`
   }
   .slick-arrow {
     margin-top: -2rem;
+  }
+  .popular-video-text {
+    max-width: 85%;
   }
 `
 

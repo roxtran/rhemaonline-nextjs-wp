@@ -8,6 +8,7 @@ import recentVideos from 'data/recent-videos'
 import VideoType from 'types/video'
 import { IoArrowBackOutline } from 'react-icons/io5'
 import paths from 'paths'
+import { formatDate } from 'utils/formatter'
 
 interface Props {
   video: VideoType
@@ -22,7 +23,7 @@ type Params = {
 export default function Sermons({ video }: Props) {
   return (
     <>
-      <Meta title='Sermons - Rhema - Changing & Affecting Lives!' />
+      <Meta title={video[0].snippet.title + ' - Rhema - Changing & Affecting Lives!'} />
       <VideoContainer>
         <div className='wrapper'>
           <Link href={paths.sermons}>
@@ -41,8 +42,8 @@ export default function Sermons({ video }: Props) {
             ></iframe>
           </VideoWrapper>
           <div className='text-wrapper'>
-            <h3 className='title'>{video[0].snippet.title}</h3>
-            <div className='subtitle'>Rhema Christian Ministries</div>
+            <h3 className='title' dangerouslySetInnerHTML={{ __html: video[0].snippet.title }} />
+            <div className='subtitle'>Rhema Christian Ministries • {formatDate(video[0].snippet.publishedAt)}</div>
             <div className='desc'>
               Thank you for supporting Rhema Christian Ministries.
               <br /> If you're looking for ways to give, simply click here:{' '}

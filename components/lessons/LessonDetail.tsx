@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import paths from 'paths'
 import { ImgWrapper, rem } from 'styles/GlobalStyle'
 import NoteType from 'types/note'
-import { formatDate } from 'utils/formatter'
+import { formatDate, shortenString } from 'utils/formatter'
 
 interface Props {
   note: NoteType
@@ -12,7 +12,7 @@ interface Props {
 }
 
 export default function LessonDetail({ note, type }: Props) {
-  const summary = `<p>${note.excerpt.substring(0, 250)}... <br><br>Read More >></p>`
+  const summary = `<p>${shortenString(note.excerpt, 300)}... <br><br>Read More >></p>`
 
   return (
     <LessonWrapper>

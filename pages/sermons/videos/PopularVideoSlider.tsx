@@ -10,6 +10,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import { ImgWrapper } from 'styles/GlobalStyle'
 // import type
 import VideoType from 'types/video'
+import { formatDate, shortenString } from 'utils/formatter'
 
 interface propType {
   slides: VideoType[]
@@ -64,8 +65,8 @@ export default function PopularVideoSlider({ slides }: propType) {
                 />
               </ImgWrapper>
               <div className='popular-video-text'>
-                <h4>{slide.snippet.title.substring(0, 50)}...</h4>
-                <div className='speaker'>{slide.snippet.publishedAt.substring(0, 10)}</div>
+                <h4 dangerouslySetInnerHTML={{ __html: shortenString(slide.snippet.title, 50) + '...' }} />
+                <div className='date'>{formatDate(slide.snippet.publishedAt)}</div>
               </div>
             </div>
           </a>

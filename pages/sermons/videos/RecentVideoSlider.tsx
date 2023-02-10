@@ -10,6 +10,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import { ImgWrapper } from 'styles/GlobalStyle'
 // import type
 import VideoType from 'types/video'
+import { shortenString } from 'utils/formatter'
 
 interface propType {
   slides: VideoType[]
@@ -63,7 +64,10 @@ export default function PopularVideoSlider({ slides }: propType) {
                   objectFit='cover'
                 />
               </ImgWrapper>
-              <div className='video-title'>{slide.snippet.title.substring(0, 50)}</div>
+              <div
+                className='video-title'
+                dangerouslySetInnerHTML={{ __html: shortenString(slide.snippet.title, 65) + '...' }}
+              />
             </div>
           </a>
         </Link>
