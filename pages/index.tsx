@@ -8,18 +8,20 @@ import styled from 'styled-components'
 
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
 import newsletters from 'data/newsletters'
+import Hero from 'components/home/Hero'
 
 const Home = () => {
   return (
     <>
       <Meta title='Home - Rhema - Changing & Affecting Lives!' />
       {/* <Video src='/video/RCM-Homepage-Teaser2.mp4' width='100%' height='80vh' /> */}
-      <VideoWrapper>
+      {/* <VideoWrapper>
         <video loop muted autoPlay>
           <source src='/video/homepage (1080p).mp4' type='video/mp4' />
           Your browser does not support the video tag.
         </video>
-      </VideoWrapper>
+      </VideoWrapper> */}
+      <Hero />
       <CTAPanel />
       <Welcome />
       <Subscribe />
