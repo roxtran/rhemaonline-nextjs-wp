@@ -103,8 +103,8 @@ const StyledHero = styled(motion.section).attrs(() => ({
   variants: ""
   }))`
   position: relative;
-  top: -90px;
-  margin-bottom: -90px;
+  top: -80px;
+  margin-bottom: -80px;
   z-index: 0;
   overflow: hidden;
   width: 100vw;
