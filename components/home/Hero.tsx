@@ -102,17 +102,17 @@ const StyledHero = styled(motion.section).attrs(() => ({
   initial: "hidden",
   variants: ""
   }))`
-  position: relative;
-  top: -80px;
-  margin-bottom: -80px;
+  position: relative; 
+  top: 80px;
+  margin-bottom: 80px;
   z-index: 0;
   overflow: hidden;
   width: 100vw;
-  height: 90vh;
+  height: calc(0.5625 * 100vw);
   ${ImgWrapper} {
     position: absolute;
     width: 100vw;
-    height: 90vh;
+    height: calc(0.5625 * 100vw);
   }
   .img-overlay {
     position: absolute;
@@ -172,10 +172,6 @@ const StyledHero = styled(motion.section).attrs(() => ({
     }
   }
   @media screen and (max-width: 640px) {
-    height: 85vh;
-    ${ImgWrapper} {
-      height: 85vh;
-    }
     .text-wrapper {
       left: 5%;
       bottom: -35%;
@@ -188,10 +184,6 @@ const StyledHero = styled(motion.section).attrs(() => ({
     }
   }
   @media screen and (max-width: 320px) {
-    height: 100vh;
-    ${ImgWrapper} {
-      height: 100vh;
-    }
     .text-wrapper {
       bottom: -25%;
     }
