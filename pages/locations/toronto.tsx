@@ -98,6 +98,9 @@ export default function Toronto() {
 }
 
 export const LocationContainer = styled(Container)`
+  position: relative;
+  background: #fff;
+  margin-top: -100px;
   .content-wrapper {
     width: ${def.wrapper.width};
     max-width: 90vw;
