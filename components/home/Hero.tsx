@@ -108,11 +108,11 @@ const StyledHero = styled(motion.section).attrs(() => ({
   z-index: 0;
   overflow: hidden;
   width: 100vw;
-  height: calc(0.5625 * 100vw);
+  height: calc(0.375 * 100vw);
   ${ImgWrapper} {
     position: absolute;
     width: 100vw;
-    height: calc(0.5625 * 100vw);
+    height: calc(0.375 * 100vw);
   }
   .img-overlay {
     position: absolute;
