@@ -1,7 +1,143 @@
 export default [
   {
     kind: 'youtube#searchResult',
-    etag: 'hxxIs-44mdl4mjr48sz1oPBZs9I',
+    etag: 'IqbhVK0TGgTR1BXGNoFMA0xTU4w',
+    id: {
+      kind: 'youtube#video',
+      videoId: 'GSl_EEpDS90'
+    },
+    snippet: {
+      publishedAt: '2023-02-26T18:36:43Z',
+      channelId: 'UCNjybtMYeMfwur19Gd5GvRg',
+      title: 'THE NEW BIRTH EXPERIENCE – PART 3B | Orim Meikle | The Rhema Experience Online Service',
+      description: 'https://rhemaonline.ca/the-new-birth-experience-part-4/. Join us for The Rhema Experience ...',
+      thumbnails: {
+        default: {
+          url: 'https://i.ytimg.com/vi/GSl_EEpDS90/default.jpg',
+          width: 120,
+          height: 90
+        },
+        medium: {
+          url: 'https://i.ytimg.com/vi/GSl_EEpDS90/mqdefault.jpg',
+          width: 320,
+          height: 180
+        },
+        high: {
+          url: 'https://i.ytimg.com/vi/GSl_EEpDS90/hqdefault.jpg',
+          width: 480,
+          height: 360
+        }
+      },
+      channelTitle: 'Rhema Christian Ministries',
+      liveBroadcastContent: 'none',
+      publishTime: '2023-02-26T18:36:43Z'
+    }
+  },
+  {
+    kind: 'youtube#searchResult',
+    etag: 'XGJwHMYHs3qoDbVCtilIWifS7Io',
+    id: {
+      kind: 'youtube#video',
+      videoId: '17Zj2IgtOTE'
+    },
+    snippet: {
+      publishedAt: '2023-02-19T18:38:37Z',
+      channelId: 'UCNjybtMYeMfwur19Gd5GvRg',
+      title: 'THE NEW BIRTH EXPERIENCE – PART 3A | Orim Meikle | The Rhema Experience Online Service',
+      description: 'https://rhemaonline.ca/the-new-birth-experience-part-3/. Join us for The Rhema Experience ...',
+      thumbnails: {
+        default: {
+          url: 'https://i.ytimg.com/vi/17Zj2IgtOTE/default.jpg',
+          width: 120,
+          height: 90
+        },
+        medium: {
+          url: 'https://i.ytimg.com/vi/17Zj2IgtOTE/mqdefault.jpg',
+          width: 320,
+          height: 180
+        },
+        high: {
+          url: 'https://i.ytimg.com/vi/17Zj2IgtOTE/hqdefault.jpg',
+          width: 480,
+          height: 360
+        }
+      },
+      channelTitle: 'Rhema Christian Ministries',
+      liveBroadcastContent: 'none',
+      publishTime: '2023-02-19T18:38:37Z'
+    }
+  },
+  {
+    kind: 'youtube#searchResult',
+    etag: '7XCI8NIv8j1HmaHDlMrkxAQYd4M',
+    id: {
+      kind: 'youtube#video',
+      videoId: 'x8cuBTnZLzc'
+    },
+    snippet: {
+      publishedAt: '2023-02-16T01:49:42Z',
+      channelId: 'UCNjybtMYeMfwur19Gd5GvRg',
+      title: 'Studies In The Bible with Orim Meikle: Lesson 25 Cont&#39;d',
+      description: 'https://rhemaonline.ca/studies-in-the-bible-lesson-25/. Join us for The Rhema Experience ...',
+      thumbnails: {
+        default: {
+          url: 'https://i.ytimg.com/vi/x8cuBTnZLzc/default.jpg',
+          width: 120,
+          height: 90
+        },
+        medium: {
+          url: 'https://i.ytimg.com/vi/x8cuBTnZLzc/mqdefault.jpg',
+          width: 320,
+          height: 180
+        },
+        high: {
+          url: 'https://i.ytimg.com/vi/x8cuBTnZLzc/hqdefault.jpg',
+          width: 480,
+          height: 360
+        }
+      },
+      channelTitle: 'Rhema Christian Ministries',
+      liveBroadcastContent: 'none',
+      publishTime: '2023-02-16T01:49:42Z'
+    }
+  },
+  {
+    kind: 'youtube#searchResult',
+    etag: 'Ipr6hHor8YHOW0bom-vroVLLlhM',
+    id: {
+      kind: 'youtube#video',
+      videoId: 'EoXp3I0UPWs'
+    },
+    snippet: {
+      publishedAt: '2023-02-12T21:04:10Z',
+      channelId: 'UCNjybtMYeMfwur19Gd5GvRg',
+      title: 'The New Birth Experience Part 2 Cont&#39;d | Orim Meikle | The Rhema Experience Online',
+      description: 'https://rhemaonline.ca/the-new-birth-experience-part-3/. Join us for The Rhema Experience ...',
+      thumbnails: {
+        default: {
+          url: 'https://i.ytimg.com/vi/EoXp3I0UPWs/default.jpg',
+          width: 120,
+          height: 90
+        },
+        medium: {
+          url: 'https://i.ytimg.com/vi/EoXp3I0UPWs/mqdefault.jpg',
+          width: 320,
+          height: 180
+        },
+        high: {
+          url: 'https://i.ytimg.com/vi/EoXp3I0UPWs/hqdefault.jpg',
+          width: 480,
+          height: 360
+        }
+      },
+      channelTitle: 'Rhema Christian Ministries',
+      liveBroadcastContent: 'none',
+      publishTime: '2023-02-12T21:04:10Z'
+    }
+  },
+  {
+    kind: 'youtube#searchResult',
+    etag: 'z0SeBJboQyaZXWEJrEuz8H_1wVA',
     id: {
       kind: 'youtube#video',
       videoId: 'xGvoJKxO6X8'
@@ -9,7 +145,7 @@ export default [
     snippet: {
       publishedAt: '2023-02-09T01:39:37Z',
       channelId: 'UCNjybtMYeMfwur19Gd5GvRg',
-      title: 'Studies In The Bible with Orim Meikle: Lesson Number 25',
+      title: 'Studies In The Bible with Orim Meikle: Lesson 25',
       description: 'https://rhemaonline.ca/studies-in-the-bible-lesson-24/. Join us for The Rhema Experience ...',
       thumbnails: {
         default: {
@@ -307,7 +443,7 @@ export default [
   },
   {
     kind: 'youtube#searchResult',
-    etag: 'Xo1v4_zrSvbYPjp6UXucAS6Vx6E',
+    etag: 'JAxrOXO8bSvgfBhlNj-9yJaF-gE',
     id: {
       kind: 'youtube#video',
       videoId: 'caD0kEiqHds'
@@ -371,143 +507,6 @@ export default [
       channelTitle: 'Rhema Christian Ministries',
       liveBroadcastContent: 'none',
       publishTime: '2023-01-01T05:21:21Z'
-    }
-  },
-  {
-    kind: 'youtube#searchResult',
-    etag: 'D0YLKSYG2Y4RdVszLed12gagBaU',
-    id: {
-      kind: 'youtube#video',
-      videoId: '1hRvRCtHcjs'
-    },
-    snippet: {
-      publishedAt: '2023-01-01T04:23:36Z',
-      channelId: 'UCNjybtMYeMfwur19Gd5GvRg',
-      title: '2022 New Year&#39;s Eve Service | Orim Meikle | The Rhema Experience Online',
-      description: 'Join us for The Rhema Experience Online every Sunday at 11:00AM EST!',
-      thumbnails: {
-        default: {
-          url: 'https://i.ytimg.com/vi/1hRvRCtHcjs/default.jpg',
-          width: 120,
-          height: 90
-        },
-        medium: {
-          url: 'https://i.ytimg.com/vi/1hRvRCtHcjs/mqdefault.jpg',
-          width: 320,
-          height: 180
-        },
-        high: {
-          url: 'https://i.ytimg.com/vi/1hRvRCtHcjs/hqdefault.jpg',
-          width: 480,
-          height: 360
-        }
-      },
-      channelTitle: 'Rhema Christian Ministries',
-      liveBroadcastContent: 'none',
-      publishTime: '2023-01-01T04:23:36Z'
-    }
-  },
-  {
-    kind: 'youtube#searchResult',
-    etag: 'nByqROIicTodbr_yUuNuvDCFdXM',
-    id: {
-      kind: 'youtube#video',
-      videoId: '4ONFTxN0H3c'
-    },
-    snippet: {
-      publishedAt: '2022-12-27T13:40:23Z',
-      channelId: 'UCNjybtMYeMfwur19Gd5GvRg',
-      title: 'Rhema Ministries - 2022 New Year&#39;s Eve Celebration',
-      description:
-        "Join us for a Spectacular New Year's Eve Celebration Saturday, December 31st at 10:30 PM Eastern Time (ET) In-person and ...",
-      thumbnails: {
-        default: {
-          url: 'https://i.ytimg.com/vi/4ONFTxN0H3c/default.jpg',
-          width: 120,
-          height: 90
-        },
-        medium: {
-          url: 'https://i.ytimg.com/vi/4ONFTxN0H3c/mqdefault.jpg',
-          width: 320,
-          height: 180
-        },
-        high: {
-          url: 'https://i.ytimg.com/vi/4ONFTxN0H3c/hqdefault.jpg',
-          width: 480,
-          height: 360
-        }
-      },
-      channelTitle: 'Rhema Christian Ministries',
-      liveBroadcastContent: 'none',
-      publishTime: '2022-12-27T13:40:23Z'
-    }
-  },
-  {
-    kind: 'youtube#searchResult',
-    etag: 'Y_Qg1IpCIfdxZ4gLW307VSXeXpM',
-    id: {
-      kind: 'youtube#video',
-      videoId: 'tlMP0A526iU'
-    },
-    snippet: {
-      publishedAt: '2022-12-25T18:17:09Z',
-      channelId: 'UCNjybtMYeMfwur19Gd5GvRg',
-      title: 'From the Heart - Part 3 | Orim Meikle | The Rhema Experience Online',
-      description: 'https://rhemaonline.ca/from-the-heart-part-2/. Join us for The Rhema Experience Online ...',
-      thumbnails: {
-        default: {
-          url: 'https://i.ytimg.com/vi/tlMP0A526iU/default.jpg',
-          width: 120,
-          height: 90
-        },
-        medium: {
-          url: 'https://i.ytimg.com/vi/tlMP0A526iU/mqdefault.jpg',
-          width: 320,
-          height: 180
-        },
-        high: {
-          url: 'https://i.ytimg.com/vi/tlMP0A526iU/hqdefault.jpg',
-          width: 480,
-          height: 360
-        }
-      },
-      channelTitle: 'Rhema Christian Ministries',
-      liveBroadcastContent: 'none',
-      publishTime: '2022-12-25T18:17:09Z'
-    }
-  },
-  {
-    kind: 'youtube#searchResult',
-    etag: 'haZ0UFlSMoPRK722RNGOtZbhx3k',
-    id: {
-      kind: 'youtube#video',
-      videoId: 'n7nmReIkl2M'
-    },
-    snippet: {
-      publishedAt: '2022-12-18T18:49:32Z',
-      channelId: 'UCNjybtMYeMfwur19Gd5GvRg',
-      title: 'From the Heart - Part 2 | Orim Meikle | The Rhema Experience Online',
-      description: 'Join us for The Rhema Experience Online every Sunday at 11:00AM EST!',
-      thumbnails: {
-        default: {
-          url: 'https://i.ytimg.com/vi/n7nmReIkl2M/default.jpg',
-          width: 120,
-          height: 90
-        },
-        medium: {
-          url: 'https://i.ytimg.com/vi/n7nmReIkl2M/mqdefault.jpg',
-          width: 320,
-          height: 180
-        },
-        high: {
-          url: 'https://i.ytimg.com/vi/n7nmReIkl2M/hqdefault.jpg',
-          width: 480,
-          height: 360
-        }
-      },
-      channelTitle: 'Rhema Christian Ministries',
-      liveBroadcastContent: 'none',
-      publishTime: '2022-12-18T18:49:32Z'
     }
   }
 ]
