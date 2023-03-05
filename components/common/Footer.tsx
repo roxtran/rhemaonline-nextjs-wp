@@ -120,11 +120,11 @@ export default function Footer() {
                   <a>Lessons</a>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href={paths.news}>
                   <a>News</a>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <a href={paths.memberLogin} target='_blank'>
                   Member Login
