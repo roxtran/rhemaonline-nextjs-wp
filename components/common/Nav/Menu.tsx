@@ -13,7 +13,7 @@ export default function Menu({ open, setOpen }: Props) {
       <NavLink href='/'>
         <a onClick={() => setOpen(!open)}>Home</a>
       </NavLink>
-      <div className='dropdown'>
+      {/* <div className='dropdown'>
         <NavLink href='#'>
           <a>Locations</a>
         </NavLink>
@@ -21,11 +21,14 @@ export default function Menu({ open, setOpen }: Props) {
           <NavLink href={paths.torontoLocation}>
             <a onClick={() => setOpen(!open)}>Toronto</a>
           </NavLink>
-          {/* <NavLink href={paths.ottawaLocation}>
+          <NavLink href={paths.ottawaLocation}>
             <a onClick={() => setOpen(!open)}>Ottawa</a>
-          </NavLink> */}
+          </NavLink>
         </div>
-      </div>
+      </div> */}
+      <NavLink href={paths.location}>
+        <a onClick={() => setOpen(!open)}>Location</a>
+      </NavLink>
       <NavLink href={paths.connect}>
         <a onClick={() => setOpen(!open)}>Connect</a>
       </NavLink>

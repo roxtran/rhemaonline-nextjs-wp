@@ -1,5 +1,6 @@
 export default {
   // internal links
+  location: '/location',
   locations: '/locations',
   torontoLocation: '/locations/toronto',
   ottawaLocation: '/locations/ottawa',
