@@ -1,6 +1,7 @@
 type LeaderType = {
   title: string
-  smallImg: {
+  leaderFields: {
+    subtitle: string
     smallImage: {
       sourceUrl: string
     }

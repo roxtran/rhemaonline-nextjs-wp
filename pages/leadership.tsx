@@ -21,7 +21,7 @@ export default function Leadership({ leaders }: Props) {
     <>
       <Meta title='Leadership - Rhema - Changing & Affecting Lives!' />
       <HeadLine
-        imgUrl='/img/leadership-img.webp'
+        imgUrl='/img/leadership-img.jpg'
         title='Leadership'
         height='450px'
         // blur='blur(5px)'
@@ -47,9 +47,10 @@ export default function Leadership({ leaders }: Props) {
                 }}
               >
                 <ImgWrapper>
-                  <Image className='img' src={leader.smallImg.smallImage.sourceUrl} width={250} height={250} />
+                  <Image className='img' src={leader.leaderFields.smallImage.sourceUrl} width={250} height={250} />
                 </ImgWrapper>
                 <h3>{leader.title}</h3>
+                <p>{leader.leaderFields.subtitle}</p>
               </a>
             ))}
           </div>
@@ -121,7 +122,8 @@ export async function getStaticProps() {
         leaders(where: { orderby: { field: DATE, order: ASC } }) {
           nodes {
             title
-            smallImg {
+            leaderFields {
+              subtitle
               smallImage {
                 sourceUrl
               }

@@ -116,8 +116,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href={paths.lessons}>
-                  <a>Lessons</a>
+                <Link href={paths.notes}>
+                  <a>Sermon Notes</a>
+                </Link>
+              </li>
+              <li>
+                <Link href={paths.studies}>
+                  <a>Bible Studies</a>
                 </Link>
               </li>
               {/* <li>

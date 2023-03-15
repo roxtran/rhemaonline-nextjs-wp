@@ -174,6 +174,40 @@ export default [
   },
   {
     kind: 'youtube#searchResult',
+    etag: 'p4k1peODQVQ1E6ygDTYtQpnnKy8',
+    id: {
+      kind: 'youtube#video',
+      videoId: 'd1oEd3itbtU'
+    },
+    snippet: {
+      publishedAt: '2021-04-11T14:30:26Z',
+      channelId: 'UCNjybtMYeMfwur19Gd5GvRg',
+      title: 'Orim Meikle &amp; The Rhema Experience Online: SUCCESS SECRETS – PART 1',
+      description: 'Join us for The Rhema Experience Online every Sunday at 10:00AM and ...',
+      thumbnails: {
+        default: {
+          url: 'https://i.ytimg.com/vi/d1oEd3itbtU/default.jpg',
+          width: 120,
+          height: 90
+        },
+        medium: {
+          url: 'https://i.ytimg.com/vi/d1oEd3itbtU/mqdefault.jpg',
+          width: 320,
+          height: 180
+        },
+        high: {
+          url: 'https://i.ytimg.com/vi/d1oEd3itbtU/hqdefault.jpg',
+          width: 480,
+          height: 360
+        }
+      },
+      channelTitle: 'Rhema Christian Ministries',
+      liveBroadcastContent: 'none',
+      publishTime: '2021-04-11T14:30:26Z'
+    }
+  },
+  {
+    kind: 'youtube#searchResult',
     etag: 'mONirnnRTjARgiZunB_z99ZWLSw',
     id: {
       kind: 'youtube#video',
@@ -204,40 +238,6 @@ export default [
       channelTitle: 'Rhema Christian Ministries',
       liveBroadcastContent: 'none',
       publishTime: '2021-03-29T16:00:04Z'
-    }
-  },
-  {
-    kind: 'youtube#searchResult',
-    etag: 'FJi6ejdSXwhuDnqsn9jMIAN_U48',
-    id: {
-      kind: 'youtube#video',
-      videoId: 'D48zdPgHAI8'
-    },
-    snippet: {
-      publishedAt: '2021-04-04T14:30:15Z',
-      channelId: 'UCNjybtMYeMfwur19Gd5GvRg',
-      title: 'Orim Meikle &amp; The Rhema Experience Online: RESURRECTION SUNDAY - THE COST, THE CROSS &amp; THE CROWN',
-      description: 'Join us for The Rhema Experience Online every Sunday at 10:00AM and ...',
-      thumbnails: {
-        default: {
-          url: 'https://i.ytimg.com/vi/D48zdPgHAI8/default.jpg',
-          width: 120,
-          height: 90
-        },
-        medium: {
-          url: 'https://i.ytimg.com/vi/D48zdPgHAI8/mqdefault.jpg',
-          width: 320,
-          height: 180
-        },
-        high: {
-          url: 'https://i.ytimg.com/vi/D48zdPgHAI8/hqdefault.jpg',
-          width: 480,
-          height: 360
-        }
-      },
-      channelTitle: 'Rhema Christian Ministries',
-      liveBroadcastContent: 'none',
-      publishTime: '2021-04-04T14:30:15Z'
     }
   },
   {
@@ -276,6 +276,40 @@ export default [
   },
   {
     kind: 'youtube#searchResult',
+    etag: 'r6bt6wF2RjxXf_nmyN3ROE5Clu8',
+    id: {
+      kind: 'youtube#video',
+      videoId: 'D48zdPgHAI8'
+    },
+    snippet: {
+      publishedAt: '2021-04-04T14:30:15Z',
+      channelId: 'UCNjybtMYeMfwur19Gd5GvRg',
+      title: 'Orim Meikle &amp; The Rhema Experience Online: RESURRECTION SUNDAY - THE COST, THE CROSS &amp; THE CROWN',
+      description: 'Join us for The Rhema Experience Online every Sunday at 10:00AM and ...',
+      thumbnails: {
+        default: {
+          url: 'https://i.ytimg.com/vi/D48zdPgHAI8/default.jpg',
+          width: 120,
+          height: 90
+        },
+        medium: {
+          url: 'https://i.ytimg.com/vi/D48zdPgHAI8/mqdefault.jpg',
+          width: 320,
+          height: 180
+        },
+        high: {
+          url: 'https://i.ytimg.com/vi/D48zdPgHAI8/hqdefault.jpg',
+          width: 480,
+          height: 360
+        }
+      },
+      channelTitle: 'Rhema Christian Ministries',
+      liveBroadcastContent: 'none',
+      publishTime: '2021-04-04T14:30:15Z'
+    }
+  },
+  {
+    kind: 'youtube#searchResult',
     etag: 'kBH08r11aTmeD1PPMdlnLS2MGGg',
     id: {
       kind: 'youtube#video',
@@ -307,40 +341,6 @@ export default [
       channelTitle: 'Rhema Christian Ministries',
       liveBroadcastContent: 'none',
       publishTime: '2022-04-17T17:22:43Z'
-    }
-  },
-  {
-    kind: 'youtube#searchResult',
-    etag: 'j-9s9Ph5nbYpV0TLVLfV_NzN72o',
-    id: {
-      kind: 'youtube#video',
-      videoId: 'tzGfI4pi0p8'
-    },
-    snippet: {
-      publishedAt: '2021-09-19T16:19:42Z',
-      channelId: 'UCNjybtMYeMfwur19Gd5GvRg',
-      title: 'Orim Meikle &amp; The Rhema Experience Online:  THE PARADIGM SHIFT – PART 1',
-      description: 'https://rhemaonline.ca/the-paradigm-shift-part-1/',
-      thumbnails: {
-        default: {
-          url: 'https://i.ytimg.com/vi/tzGfI4pi0p8/default.jpg',
-          width: 120,
-          height: 90
-        },
-        medium: {
-          url: 'https://i.ytimg.com/vi/tzGfI4pi0p8/mqdefault.jpg',
-          width: 320,
-          height: 180
-        },
-        high: {
-          url: 'https://i.ytimg.com/vi/tzGfI4pi0p8/hqdefault.jpg',
-          width: 480,
-          height: 360
-        }
-      },
-      channelTitle: 'Rhema Christian Ministries',
-      liveBroadcastContent: 'none',
-      publishTime: '2021-09-19T16:19:42Z'
     }
   },
   {
