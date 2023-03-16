@@ -64,12 +64,7 @@ export default function Location() {
               <div className='text-border'>
                 <h2>Our Location</h2>
                 <p>
-                  <span>Worship Service:</span> Sundays – 8:30am & 11am
-                </p>
-                <p>
-                  <span>Bible Study:</span> Starting Wed. March 18th, 2020 until further notice, our weekly Bible Study
-                  will be a one hour gathering of intense prayer for community and national healing. Service time will
-                  be 7:00pm – 8:00pm
+                  <span>Worship Service:</span> Sundays – 11am
                 </p>
                 <span>49-40 Carl Hall Road, Toronto, ON, M3K 2C1</span>
               </div>
