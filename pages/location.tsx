@@ -14,7 +14,7 @@ export default function Location() {
         <script src='https://js.churchcenter.com/modal/v1'></script>
       </Head>
       <VideoWrapper>
-        <Video src='/video/toronto_location (1080p).mp4' width='100%' height='75vh' />
+        <Video src='/video/toronto_location (1080p).mp4' width='100%' height='80vh' />
       </VideoWrapper>
       <LocationContainer>
         <div className='content-wrapper'>
