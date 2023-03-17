@@ -66,6 +66,9 @@ export default function Location() {
                 <p>
                   <span>Worship Service:</span> Sundays – 11am
                 </p>
+                <p>
+                  <span>Bible Study:</span> 1st, 2nd, & 3rd Wednesdays of every month - 7 PM
+                </p>
                 <span>49-40 Carl Hall Road, Toronto, ON, M3K 2C1</span>
               </div>
             </div>

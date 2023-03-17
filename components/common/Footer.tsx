@@ -37,8 +37,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href={paths.torontoLocation}>
-                  <a>Toronto Campus</a>
+                <Link href={paths.location}>
+                  <a>Location</a>
                 </Link>
               </li>
               {/* <li>
