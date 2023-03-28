@@ -58,7 +58,7 @@ export default function Footer() {
             <ul>
               <li>
                 <Link href={paths.connect}>
-                  <a>We Care Services</a>
+                  <a>The Care Centre Services</a>
                 </Link>
               </li>
               <li>

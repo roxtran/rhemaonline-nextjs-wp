@@ -48,7 +48,7 @@ export default function MiddleMenu() {
           }}
         >
           <Link href={paths.connect}>
-            <a>We Care Services</a>
+            <a>The Care Centre Services</a>
           </Link>
           <div className='line'></div>
           <Link href={paths.formLinks.prayerRequest}>

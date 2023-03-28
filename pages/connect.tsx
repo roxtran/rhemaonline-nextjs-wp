@@ -24,7 +24,7 @@ export default function Connect({ services }: Props) {
       </Head>
       <HeadLine
         imgUrl='/img/connect-img.jpg'
-        title='We Care'
+        title='The Care Centre'
         desc='We are here for you.'
         btnText='Contact Us'
         btnLink={paths.formLinks.contactUs}
@@ -32,12 +32,12 @@ export default function Connect({ services }: Props) {
       />
       <ConnectContainer>
         <div className='desc'>
-          <h2>We Care Services</h2>
+          <h2>The Care Centre Services</h2>
           <p>
-            The We Care team is the central hub of our ministry. They are the "one-stop destination" for all of our
+            The Care Centre team is the central hub of our ministry. They are the "one-stop destination" for all of our
             member and staff needs. From arranging a baby dedication for your child or grandchild to requesting a visit
             from our church family for a loved one that is ill, to enquiring about water baptism, and a whole lot more,
-            the We Care team is here to serve you with excellence. Be sure to let us know how we have performed.
+            the Care Centre team is here to serve you with excellence. Be sure to let us know how we have performed.
           </p>
         </div>
         <div className='services'>

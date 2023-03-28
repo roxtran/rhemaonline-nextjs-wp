@@ -17,9 +17,9 @@ export default function Lessons({ notes, list }: Props) {
   return (
     <>
       <Meta title='Lessons - Rhema - Changing & Affecting Lives!' />
-      <HeadLine imgUrl='/img/sermons-img.jpg' title='Lessons' />
+      <HeadLine imgUrl='/img/sermons-img.jpg' title='Sermon Notes' />
       <LessonsContainer>
-        <LessonsList title='Sermon Notes' notes={notes} type='notes' />
+        <LessonsList title='Lessons' notes={notes} type='notes' />
         <Sidebar title='Recent Notes' notes={list} />
       </LessonsContainer>
     </>

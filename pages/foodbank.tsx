@@ -16,7 +16,7 @@ const foodbank = () => {
         <div className='content-wrapper'>
           <FoodbankSlider slides={slides} />
           <div className='text-wrapper'>
-            <h2>Mission</h2>
+            <h2>Mandate</h2>
             <p>
               The Rhema Foodbank is a food bank service assisting our community by supplementing the grocery needs of
               many families on a weekly basis. As well, during the Easter, Thanksgiving and Christmas seasons we offer
