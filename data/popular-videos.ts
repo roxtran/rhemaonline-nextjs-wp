@@ -70,41 +70,6 @@ export default [
   },
   {
     kind: 'youtube#searchResult',
-    etag: 'OyrXBAzkFAQXD6EiVE_NnKy2sNU',
-    id: {
-      kind: 'youtube#video',
-      videoId: 'dqpZIATiq6Y'
-    },
-    snippet: {
-      publishedAt: '2021-01-13T12:00:09Z',
-      channelId: 'UCNjybtMYeMfwur19Gd5GvRg',
-      title: 'THE RHEMA EXPERIENCE ONLINE PROMO',
-      description:
-        'Pastor Orim M. Meikle www.rhemaonline.ca Join us for The Rhema Experience Online Sundays at 10:00AM and 11:00AM EST',
-      thumbnails: {
-        default: {
-          url: 'https://i.ytimg.com/vi/dqpZIATiq6Y/default.jpg',
-          width: 120,
-          height: 90
-        },
-        medium: {
-          url: 'https://i.ytimg.com/vi/dqpZIATiq6Y/mqdefault.jpg',
-          width: 320,
-          height: 180
-        },
-        high: {
-          url: 'https://i.ytimg.com/vi/dqpZIATiq6Y/hqdefault.jpg',
-          width: 480,
-          height: 360
-        }
-      },
-      channelTitle: 'Rhema Christian Ministries',
-      liveBroadcastContent: 'none',
-      publishTime: '2021-01-13T12:00:09Z'
-    }
-  },
-  {
-    kind: 'youtube#searchResult',
     etag: 'gzDc9NKHsCad96-GhlEfgEEbi7I',
     id: {
       kind: 'youtube#video',
@@ -512,6 +477,40 @@ export default [
       channelTitle: 'Rhema Christian Ministries',
       liveBroadcastContent: 'none',
       publishTime: '2022-07-31T17:14:50Z'
+    }
+  },
+  {
+    kind: 'youtube#searchResult',
+    etag: 'ylgBeF4W-IT7sCGQ1-A_6FzY_Po',
+    id: {
+      kind: 'youtube#video',
+      videoId: 'lJ74pF3HqjE'
+    },
+    snippet: {
+      publishedAt: '2021-04-18T14:30:15Z',
+      channelId: 'UCNjybtMYeMfwur19Gd5GvRg',
+      title: 'Orim Meikle &amp; The Rhema Experience Online: SUCCESS SECRETS – PART 2',
+      description: 'Join us for The Rhema Experience Online every Sunday at 11:00AM EST!',
+      thumbnails: {
+        default: {
+          url: 'https://i.ytimg.com/vi/lJ74pF3HqjE/default.jpg',
+          width: 120,
+          height: 90
+        },
+        medium: {
+          url: 'https://i.ytimg.com/vi/lJ74pF3HqjE/mqdefault.jpg',
+          width: 320,
+          height: 180
+        },
+        high: {
+          url: 'https://i.ytimg.com/vi/lJ74pF3HqjE/hqdefault.jpg',
+          width: 480,
+          height: 360
+        }
+      },
+      channelTitle: 'Rhema Christian Ministries',
+      liveBroadcastContent: 'none',
+      publishTime: '2021-04-18T14:30:15Z'
     }
   }
 ]
