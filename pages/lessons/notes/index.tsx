@@ -4,7 +4,7 @@ import HeadLine from 'components/common/HeadLine'
 import Sidebar from 'components/lessons/Sidebar'
 import LessonsList from 'components/lessons/LessonList'
 import styled from 'styled-components'
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
+import { ApolloClient, InMemoryCache, gql, DefaultOptions } from '@apollo/client'
 import { def } from 'styles/GlobalStyle'
 
 interface Props {
@@ -42,9 +42,21 @@ export const LessonsContainer = styled.div`
 `
 
 export async function getStaticProps() {
+  const defaultOptions: DefaultOptions = {
+    watchQuery: {
+      fetchPolicy: 'no-cache',
+      errorPolicy: 'ignore'
+    },
+    query: {
+      fetchPolicy: 'no-cache',
+      errorPolicy: 'all'
+    }
+  }
+
   const client = new ApolloClient({
     uri: process.env.WP_URL as string,
-    cache: new InMemoryCache()
+    cache: new InMemoryCache(),
+    defaultOptions: defaultOptions
   })
 
   const { data } = await client.query({
