@@ -1,19 +1,24 @@
-import Meta from 'components/common/meta'
-import Video from 'components/common/Video'
-import CTAPanel from 'components/home/CTAPanel'
-import Subscribe from 'components/home/Subscribe'
-import Welcome from 'components/home/Welcome'
-import Newsletter from 'components/home/Newsletter'
-import styled from 'styled-components'
+import Meta from "components/common/meta";
+import Video from "components/common/Video";
+import CTAPanel from "components/home/CTAPanel";
+import Subscribe from "components/home/Subscribe";
+import Welcome from "components/home/Welcome";
+import Newsletter from "components/home/Newsletter";
+import styled from "styled-components";
+import SlideType from "types/slide";
 
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
-import newsletters from 'data/newsletters'
-import Hero from 'components/home/Hero'
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+import newsletters from "data/newsletters";
+import Hero from "components/home/Hero";
 
-const Home = () => {
+interface Props {
+  slides: SlideType[];
+}
+
+const Home = ({ slides }: Props) => {
   return (
     <>
-      <Meta title='Home - Rhema - Changing & Affecting Lives!' />
+      <Meta title="Home - Rhema - Changing & Affecting Lives!" />
       {/* <Video src='/video/RCM-Homepage-Teaser2.mp4' width='100%' height='80vh' /> */}
       {/* <VideoWrapper>
         <video loop muted autoPlay>
@@ -21,16 +26,16 @@ const Home = () => {
           Your browser does not support the video tag.
         </video>
       </VideoWrapper> */}
-      <Hero />
+      <Hero slides={slides} />
       <CTAPanel />
       <Welcome />
       <Subscribe />
       <Newsletter newsletters={newsletters} />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
 
 const VideoWrapper = styled.div`
   video {
@@ -42,18 +47,27 @@ const VideoWrapper = styled.div`
       height: 70vh;
     }
   }
-`
+`;
 
 export async function getStaticProps() {
   const client = new ApolloClient({
     uri: process.env.WP_URL as string,
     cache: new InMemoryCache()
-  })
+  });
 
   const { data } = await client.query({
     query: gql`
-      query getNewsletters($first: Int!, $after: String) {
-        newsletters(first: $first, after: $after) {
+      query getData($numOfSlides: Int!, $numOfNewsletters: Int!, $after: String) {
+        slides(first: $numOfSlides, after: $after) {
+          nodes {
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
+          }
+        }
+        newsletters(first: $numOfNewsletters, after: $after) {
           nodes {
             NewsletterInfo {
               imgUrl
@@ -64,15 +78,14 @@ export async function getStaticProps() {
       }
     `,
     variables: {
-      first: 5,
+      numOfSlides: 5,
+      numOfNewsletters: 5,
       after: null
     }
-  })
+  });
 
   return {
-    props: {
-      newsletters: data?.newsletters?.nodes
-    },
+    props: { slides: data?.slides?.nodes, newsletters: data?.newsletters?.nodes },
     revalidate: 30
-  }
+  };
 }

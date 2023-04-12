@@ -1,7 +1,11 @@
 type SlideType = {
-  title: string
-  subTitle: string
-  imgUrl: string
-}
+  title: string;
+  content: string;
+  featuredImage: {
+    node: {
+      sourceUrl: string;
+    };
+  };
+};
 
-export default SlideType
+export default SlideType;

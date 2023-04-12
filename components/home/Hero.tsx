@@ -1,25 +1,28 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { slides } from "data/slides";
+// import { slides } from 'data/slides'
+import SlideType from "types/slide";
 import { ImgWrapper } from "styles/GlobalStyle";
 import Image from "next/image";
-import {
-  IoIosArrowDroprightCircle,
-  IoIosArrowDropleftCircle,
-} from "react-icons/io";
+import { IoIosArrowDroprightCircle, IoIosArrowDropleftCircle } from "react-icons/io";
 import { motion, AnimatePresence } from "framer-motion";
 import { useScroll } from "utils/useScroll";
 import { fade, slideUp } from "styles/animation";
 
+interface Props {
+  slides: SlideType[];
+}
+
 const staggering = {
-  show: { transition: { staggerChildren: 0.1, delayChildren: 0.25 } },
+  show: { transition: { staggerChildren: 0.1, delayChildren: 0.25 } }
 };
 
-export default function Hero() {
+export default function Hero({ slides }: Props) {
+  // console.log('!! slides', slides)
   const [element, controls] = useScroll();
 
   const [current, setCurrent] = useState(0);
-  const length = slides.length;
+  const length = slides?.length;
 
   useEffect(() => {
     const autoPlay = setTimeout(handleNextSlide, 10000);
@@ -48,14 +51,8 @@ export default function Hero() {
       animate={controls}
       ref={element}
     >
-      <IoIosArrowDropleftCircle
-        className="arrow arrow-left"
-        onClick={handlePrevSlide}
-      />
-      <IoIosArrowDroprightCircle
-        className="arrow arrow-right"
-        onClick={handleNextSlide}
-      />
+      <IoIosArrowDropleftCircle className="arrow arrow-left" onClick={handlePrevSlide} />
+      <IoIosArrowDroprightCircle className="arrow arrow-right" onClick={handleNextSlide} />
       {slides.map((slide, index) => {
         return (
           <AnimatePresence key={index}>
@@ -68,7 +65,7 @@ export default function Hero() {
                   transition={{ duration: 0.5, ease: "easeOut" }}
                 >
                   <Image
-                    src={slide.imgUrl}
+                    src={slide.featuredImage.node.sourceUrl}
                     alt="slide-item"
                     layout="fill"
                     objectFit="cover"
@@ -101,8 +98,8 @@ export default function Hero() {
 const StyledHero = styled(motion.section).attrs(() => ({
   initial: "hidden",
   variants: ""
-  }))`
-  position: relative; 
+}))`
+  position: relative;
   top: 80px;
   margin-bottom: 80px;
   z-index: 0;
@@ -118,11 +115,7 @@ const StyledHero = styled(motion.section).attrs(() => ({
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.1),
-      rgba(0, 0, 0, 0.1)
-    );
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
     width: 100%;
     height: 100%;
     z-index: 3;
