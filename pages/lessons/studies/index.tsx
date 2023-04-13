@@ -1,72 +1,37 @@
-import Meta from 'components/common/meta'
-import NoteType from 'types/note'
-import HeadLine from 'components/common/HeadLine'
-import Sidebar from 'components/lessons/Sidebar'
-import LessonList from 'components/lessons/LessonList'
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
-import { LessonsContainer } from '../notes'
+import Meta from "components/common/meta";
+import PostType from "types/post";
+import HeadLine from "components/common/HeadLine";
+import Sidebar from "components/lessons/Sidebar";
+import LessonList from "components/lessons/LessonList";
+import { LessonsContainer } from "../notes";
+import { getPosts } from "lib/wordpress";
 
 interface Props {
-  studies: NoteType[]
-  list: NoteType[]
+  posts: PostType[];
 }
 
-export default function Lessons({ studies, list }: Props) {
-  // console.log(studies.categories.nodes.name)
+export default function Lessons({ posts }: Props) {
+  // console.log(posts);
+  const studies = posts.slice(0, 3);
+  const list = posts.slice(0, 9);
   return (
     <>
-      <Meta title='Lessons - Rhema - Changing & Affecting Lives!' />
-      <HeadLine imgUrl='/img/sermons-img.jpg' title='Bible Studies' />
+      <Meta title="Bible Studies - Rhema - Changing & Affecting Lives!" />
+      <HeadLine imgUrl="/img/sermons-img.jpg" title="Bible Studies" />
       <LessonsContainer>
-        <LessonList title='Lessons' notes={studies} type='studies' />
-        <Sidebar title='Recent Studies' notes={list} />
+        <LessonList title="Lessons" posts={studies} type="studies" />
+        <Sidebar title="Recent Studies" notes={list} />
       </LessonsContainer>
     </>
-  )
+  );
 }
 
 export async function getStaticProps() {
-  const client = new ApolloClient({
-    uri: process.env.WP_URL as string,
-    cache: new InMemoryCache()
-  })
-
-  const { data } = await client.query({
-    query: gql`
-      query getBibleStudies($first: Int!, $after: String) {
-        bibleStudies(first: $first, after: $after) {
-          nodes {
-            title
-            slug
-            date
-            excerpt
-            featuredImage {
-              node {
-                sourceUrl
-              }
-            }
-          }
-        }
-        studiesList: bibleStudies {
-          nodes {
-            title
-            slug
-            date
-          }
-        }
-      }
-    `,
-    variables: {
-      first: 3,
-      after: null
-    }
-  })
-
+  const posts = await getPosts("bible_studies");
   return {
     props: {
-      studies: data?.bibleStudies?.nodes,
-      list: data?.studiesList?.nodes
+      posts
     },
-    revalidate: 30
-  }
+    revalidate: 10 // In seconds
+  };
 }

@@ -1,40 +1,43 @@
-import Link from 'next/link'
-import styled from 'styled-components'
-import NoteType from 'types/note'
-import { rem } from 'styles/GlobalStyle'
-
+import Link from "next/link";
+import styled from "styled-components";
+import NoteType from "types/post";
+import { rem } from "styles/GlobalStyle";
 
 interface Props {
-  title: string
-  notes: NoteType[]
+  title: string;
+  notes: NoteType[];
 }
 
 export default function Sidebar({ title, notes }: Props) {
   const formatDate = (date: string) => {
-    const newDate = new Date(date).toLocaleDateString('en-US', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric'
-    })
-    return newDate
-  }
+    const newDate = new Date(date).toLocaleDateString("en-US", {
+      day: "numeric",
+      month: "long",
+      year: "numeric"
+    });
+    return newDate;
+  };
   return (
     <SidebarWrapper>
-      <div className='wrapper'>
+      <div className="wrapper">
         <h3>{title}</h3>
         <ul>
           {notes?.map((note) => (
             <li key={note.slug}>
-              <Link href={`/lessons/${title.toLowerCase().includes('notes') ? 'notes' : 'studies'}/${note.slug}`}>
-                <a>{note.title}</a>
+              <Link
+                href={`/lessons/${title.toLowerCase().includes("notes") ? "notes" : "studies"}/${
+                  note.slug
+                }`}
+              >
+                <a>{note.title.rendered}</a>
               </Link>
-              <p className='date'>{formatDate(note.date)}</p>
+              <p className="date">{formatDate(note.date)}</p>
             </li>
           ))}
         </ul>
       </div>
     </SidebarWrapper>
-  )
+  );
 }
 const SidebarWrapper = styled.div`
   position: sticky;
@@ -70,4 +73,4 @@ const SidebarWrapper = styled.div`
     padding: 2rem 0;
     margin-top: 2rem;
   }
-`
+`;

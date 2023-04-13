@@ -1,29 +1,30 @@
-import Meta from 'components/common/meta'
-import NoteType from 'types/note'
-import HeadLine from 'components/common/HeadLine'
-import Sidebar from 'components/lessons/Sidebar'
-import LessonsList from 'components/lessons/LessonList'
-import styled from 'styled-components'
-import { ApolloClient, InMemoryCache, gql, DefaultOptions } from '@apollo/client'
-import { def } from 'styles/GlobalStyle'
+import Meta from "components/common/meta";
+import PostType from "types/post";
+import HeadLine from "components/common/HeadLine";
+import Sidebar from "components/lessons/Sidebar";
+import LessonsList from "components/lessons/LessonList";
+import styled from "styled-components";
+import { def } from "styles/GlobalStyle";
+import { getPosts } from "lib/wordpress";
 
 interface Props {
-  notes: NoteType[]
-  list: NoteType[]
+  posts: PostType[];
 }
 
-export default function Lessons({ notes, list }: Props) {
-  // console.log(notes.categories.nodes.name)
+export default function Lessons({ posts }: Props) {
+  // console.log(posts);
+  const notes = posts.slice(0, 3);
+  const list = posts.slice(0, 9);
   return (
     <>
-      <Meta title='Lessons - Rhema - Changing & Affecting Lives!' />
-      <HeadLine imgUrl='/img/sermons-img.jpg' title='Sermon Notes' />
+      <Meta title="Sermon Notes - Rhema - Changing & Affecting Lives!" />
+      <HeadLine imgUrl="/img/sermons-img.jpg" title="Sermon Notes" />
       <LessonsContainer>
-        <LessonsList title='Lessons' notes={notes} type='notes' />
-        <Sidebar title='Recent Notes' notes={list} />
+        <LessonsList title="Lessons" posts={notes} type="notes" />
+        <Sidebar title="Recent Notes" notes={list} />
       </LessonsContainer>
     </>
-  )
+  );
 }
 
 export const LessonsContainer = styled.div`
@@ -39,62 +40,14 @@ export const LessonsContainer = styled.div`
   @media screen and (max-width: 768px) {
     justify-content: center;
   }
-`
+`;
 
 export async function getStaticProps() {
-  const defaultOptions: DefaultOptions = {
-    watchQuery: {
-      fetchPolicy: 'no-cache',
-      errorPolicy: 'ignore'
-    },
-    query: {
-      fetchPolicy: 'no-cache',
-      errorPolicy: 'all'
-    }
-  }
-
-  const client = new ApolloClient({
-    uri: process.env.WP_URL as string,
-    cache: new InMemoryCache(),
-    defaultOptions: defaultOptions
-  })
-
-  const { data } = await client.query({
-    query: gql`
-      query getSermonNotes($first: Int!, $after: String) {
-        sermonNotes(first: $first, after: $after) {
-          nodes {
-            title
-            slug
-            date
-            excerpt
-            featuredImage {
-              node {
-                sourceUrl
-              }
-            }
-          }
-        }
-        sermonList: sermonNotes {
-          nodes {
-            title
-            slug
-            date
-          }
-        }
-      }
-    `,
-    variables: {
-      first: 3,
-      after: null
-    }
-  })
-
+  const posts = await getPosts("sermon_notes");
   return {
     props: {
-      notes: data?.sermonNotes?.nodes,
-      list: data?.sermonList?.nodes
+      posts
     },
-    revalidate: 30
-  }
+    revalidate: 10 // In seconds
+  };
 }

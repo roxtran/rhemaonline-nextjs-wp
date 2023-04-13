@@ -1,4 +1,5 @@
 import NoteType from "types/note";
+import PostType from "types/post";
 import Image from "next/image";
 import Link from "next/link";
 import HeadLine from "components/common/HeadLine";
@@ -10,11 +11,12 @@ import styled from "styled-components";
 import { LessonsContainer } from "./index";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import paths from "paths";
+import { getPost, getPaths, getPosts } from "lib/wordpress";
 // import { validate } from 'graphql'
 
 interface Props {
-  note: NoteType;
-  list: NoteType[];
+  note: PostType;
+  list: PostType[];
 }
 
 type Params = {
@@ -24,10 +26,15 @@ type Params = {
 };
 
 export default function SermonNote({ note, list }: Props) {
+  const featuredMedia = note["_embedded"]["wp:featuredmedia"][0];
   return (
     <>
-      <Meta title={note.title + " - Rhema - Changing & Affecting Lives!"} />
-      <HeadLine imgUrl={note.featuredImage.node.sourceUrl} title={note.title} blur="blur(30px)" />
+      <Meta title={note.title.rendered + " - Rhema - Changing & Affecting Lives!"} />
+      <HeadLine
+        imgUrl={featuredMedia["media_details"].sizes.large["source_url"]}
+        title={note.title.rendered}
+        blur="blur(30px)"
+      />
       <NoteContainer>
         <div className="note-wrapper">
           <p className="date">{formatDate(note.date)}</p>
@@ -39,10 +46,14 @@ export default function SermonNote({ note, list }: Props) {
             </Link>
           </p>
           <ImgWrapper>
-            <Image layout="fill" objectFit="cover" src={note.featuredImage.node.sourceUrl} />
+            <Image
+              layout="fill"
+              objectFit="cover"
+              src={featuredMedia["media_details"].sizes.large["source_url"]}
+            />
           </ImgWrapper>
-          <article dangerouslySetInnerHTML={{ __html: note.content }}></article>
-          {note.docFile.docFile !== null && (
+          <article dangerouslySetInnerHTML={{ __html: note.content.rendered }}></article>
+          {/* {note.docFile.docFile !== null && (
             <div className="btn-wrapper">
               <div className="btn-bg">
                 <Button className="btn" href={note.docFile.docFile.mediaItemUrl} target="_blank">
@@ -50,7 +61,7 @@ export default function SermonNote({ note, list }: Props) {
                 </Button>
               </div>
             </div>
-          )}
+          )} */}
         </div>
         <Sidebar title="Recent Notes" notes={list} />
       </NoteContainer>
@@ -125,68 +136,26 @@ export const NoteContainer = styled(LessonsContainer)`
   }
 `;
 
-const client = new ApolloClient({
-  uri: process.env.WP_URL as string,
-  cache: new InMemoryCache()
-});
-
 export const getStaticProps = async ({ params }: Params) => {
-  const { slug } = params;
-  const { data } = await client.query({
-    query: gql`
-      query getNotes($id: ID!) {
-        sermonNote(id: $id, idType: SLUG) {
-          title
-          date
-          content
-          featuredImage {
-            node {
-              sourceUrl
-            }
-          }
-          docFile {
-            docFile {
-              mediaItemUrl
-            }
-          }
-        }
-        sermonNotes {
-          nodes {
-            title
-            slug
-            date
-          }
-        }
-      }
-    `,
-    variables: {
-      id: slug
-    }
-  });
+  const note = await getPost("sermon_notes", params.slug);
+  const list = await getPosts("sermon_notes");
+
   return {
     props: {
-      note: data?.sermonNote,
-      list: data?.sermonNotes?.nodes
+      note,
+      list
     },
-    revalidate: 30
+    revalidate: 10 // In seconds
   };
 };
 
-export const getStaticPaths = async () => {
-  const { data } = await client.query({
-    query: gql`
-      query SermonNotes {
-        sermonNotes {
-          nodes {
-            slug
-          }
-        }
-      }
-    `
-  });
-  const notes = data?.sermonNotes?.nodes;
-  const paths = notes.map((note: { slug: string }) => ({
-    params: { slug: note.slug }
-  }));
-  return { paths, fallback: false };
-};
+export async function getStaticPaths() {
+  const paths = await getPaths("sermon_notes");
+
+  return {
+    paths,
+    //this option below renders in the server (at request time) pages that were not rendered at build time
+    //e.g when a new blogpost is added to the app
+    fallback: "blocking"
+  };
+}
