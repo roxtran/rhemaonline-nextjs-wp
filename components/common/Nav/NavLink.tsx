@@ -12,10 +12,10 @@ export default function NavLink({ children, href }: NavProps) {
   const router = useRouter()
 
   return (
-    <Link href={href}>
+    <Link href={href} legacyBehavior>
       {React.cloneElement(child as ReactElement, {
         'aria-current': router.pathname === href ? 'page' : null
       })}
     </Link>
-  )
+  );
 }

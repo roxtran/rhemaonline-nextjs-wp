@@ -21,31 +21,30 @@ export default function LessonDetail({ post, type }: Props) {
   return (
     <LessonWrapper>
       <Link href={`${paths.lessons}/${type}/${post.slug}`}>
-        <a>
-          <>
-            {featuredMedia !== null && (
-              <ImgWrapper>
-                <Image
-                  src={featuredMedia["media_details"].sizes.large["source_url"]}
-                  alt={featuredMedia["alt_text"]}
-                  layout="fill"
-                  objectFit="cover"
-                  // objectPosition='center'
-                />
-              </ImgWrapper>
-            )}
-          </>
 
-          <div className="text">
-            <div className="date">{formatDate(post.date)}</div>
-            <h3>{post.title.rendered}</h3>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: summary
-              }}
-            ></div>
-          </div>
-        </a>
+        <>
+          {featuredMedia !== null && (
+            <ImgWrapper>
+              <Image
+                src={featuredMedia["media_details"].sizes.large["source_url"]}
+                alt={featuredMedia["alt_text"]}
+                layout="fill"
+                objectFit="cover"
+                // objectPosition='center'
+              />
+            </ImgWrapper>
+          )}
+        </>
+        <div className="text">
+          <div className="date">{formatDate(post.date)}</div>
+          <h3>{post.title.rendered}</h3>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: summary
+            }}
+          ></div>
+        </div>
+
       </Link>
     </LessonWrapper>
   );

@@ -27,46 +27,45 @@ type Params = {
 
 export default function SermonNote({ note, list }: Props) {
   const featuredMedia = note["_embedded"]["wp:featuredmedia"][0];
-  return (
-    <>
-      <Meta title={note.title.rendered + " - Rhema - Changing & Affecting Lives!"} />
-      <HeadLine
-        imgUrl={featuredMedia["media_details"].sizes.large["source_url"]}
-        title={note.title.rendered}
-        blur="blur(30px)"
-      />
-      <NoteContainer>
-        <div className="note-wrapper">
-          <p className="date">{formatDate(note.date)}</p>
-          <div className="line"></div>
-          <p>
-            in{" "}
-            <Link href={paths.notes}>
-              <a>Sermon Notes</a>
-            </Link>
-          </p>
-          <ImgWrapper>
-            <Image
-              layout="fill"
-              objectFit="cover"
-              src={featuredMedia["media_details"].sizes.large["source_url"]}
-            />
-          </ImgWrapper>
-          <article dangerouslySetInnerHTML={{ __html: note.content.rendered }}></article>
-          {/* {note.docFile.docFile !== null && (
-            <div className="btn-wrapper">
-              <div className="btn-bg">
-                <Button className="btn" href={note.docFile.docFile.mediaItemUrl} target="_blank">
-                  Download
-                </Button>
-              </div>
+  return <>
+    <Meta title={note.title.rendered + " - Rhema - Changing & Affecting Lives!"} />
+    <HeadLine
+      imgUrl={featuredMedia["media_details"].sizes.large["source_url"]}
+      title={note.title.rendered}
+      blur="blur(30px)"
+    />
+    <NoteContainer>
+      <div className="note-wrapper">
+        <p className="date">{formatDate(note.date)}</p>
+        <div className="line"></div>
+        <p>
+          in{" "}
+          <Link href={paths.notes}>
+            Sermon Notes
+          </Link>
+        </p>
+        <ImgWrapper>
+          <Image
+            layout="fill"
+            objectFit="cover"
+            src={featuredMedia["media_details"].sizes.large["source_url"]}
+            alt={featuredMedia["alt_text"]}
+          />
+        </ImgWrapper>
+        <article dangerouslySetInnerHTML={{ __html: note.content.rendered }}></article>
+        {/* {note.docFile.docFile !== null && (
+          <div className="btn-wrapper">
+            <div className="btn-bg">
+              <Button className="btn" href={note.docFile.docFile.mediaItemUrl} target="_blank">
+                Download
+              </Button>
             </div>
-          )} */}
-        </div>
-        <Sidebar title="Recent Notes" notes={list} />
-      </NoteContainer>
-    </>
-  );
+          </div>
+        )} */}
+      </div>
+      <Sidebar title="Recent Notes" notes={list} />
+    </NoteContainer>
+  </>;
 }
 
 export const NoteContainer = styled(LessonsContainer)`

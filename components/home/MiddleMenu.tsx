@@ -29,14 +29,14 @@ export default function MiddleMenu() {
           }}
         >
           <Link href={paths.leadership}>
-            <a>
-              <Image src='/img/leadership-icon.svg' width={50} height={50} alt='leadership-icon' />
-              <p>
-                With a warm smile, the leaders of Rhema Christian Ministries are taskes with operational and
-                ecclesiatial exellence.
-              </p>
-              <h4>Leadership</h4>
-            </a>
+
+            <Image src='/img/leadership-icon.svg' width={50} height={50} alt='leadership-icon' />
+            <p>
+              With a warm smile, the leaders of Rhema Christian Ministries are taskes with operational and
+              ecclesiatial exellence.
+            </p>
+            <h4>Leadership</h4>
+
           </Link>
         </motion.div>
         <motion.div
@@ -49,7 +49,7 @@ export default function MiddleMenu() {
             damping: 8
           }}
         >
-          <Link href={paths.beliefs}>
+          <Link href={paths.beliefs} legacyBehavior>
             <motion.a>
               <Image src='/img/beliefs-icon.svg' width={50} height={50} alt='beliefs-icon' />
               <p>At Rhema what we believe is important to us but not as much as the one in whom we believe.</p>
@@ -67,7 +67,7 @@ export default function MiddleMenu() {
             damping: 8
           }}
         >
-          <Link href={paths.ministries}>
+          <Link href={paths.ministries} legacyBehavior>
             <motion.a>
               <Image src='/img/ministries-icon.svg' width={57.5} height={50} alt='ministries-icon' />
               <p>From our family to yours.</p>
@@ -85,7 +85,7 @@ export default function MiddleMenu() {
             damping: 8
           }}
         >
-          <Link href={paths.grow}>
+          <Link href={paths.grow} legacyBehavior>
             <motion.a>
               <Image src='/img/grow-icon.svg' width={50} height={50} alt='grow-icon' />
               <p>
@@ -97,7 +97,7 @@ export default function MiddleMenu() {
         </motion.div>
       </motion.div>
     </MiddleWrapper>
-  )
+  );
 }
 const MiddleWrapper = styled.div`
   position: relative;

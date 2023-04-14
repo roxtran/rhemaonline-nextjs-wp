@@ -21,57 +21,58 @@ type Params = {
 }
 
 export default function Sermons({ video }: Props) {
-  return (
-    <>
-      <Meta title={video[0].snippet.title + ' - Rhema - Changing & Affecting Lives!'} />
-      <VideoContainer>
-        <div className='wrapper'>
-          <Link href={paths.sermons}>
-            <a className='btn-back'>
-              <IoArrowBackOutline className='icon-back' /> Go back
-            </a>
-          </Link>
-          <VideoWrapper>
-            <iframe
-              width='100%'
-              height='100%'
-              src={`https://www.youtube.com/embed/${video[0].id.videoId}?rel=0&showinfo=1&autoplay=1&loop=0`}
-              title='iframe video player'
-              frameBorder='0'
-              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-            ></iframe>
-          </VideoWrapper>
-          <div className='text-wrapper'>
-            <h3 className='title' dangerouslySetInnerHTML={{ __html: video[0].snippet.title }} />
-            <div className='subtitle'>Rhema Christian Ministries • {formatDate(video[0].snippet.publishedAt)}</div>
-            <div className='desc'>
-              Thank you for supporting Rhema Christian Ministries.
-              <br /> If you're looking for ways to give, simply click here:{' '}
-              <Link href='https://rhemaonline.ca/giving/'>
-                <a>https://rhemaonline.ca/giving/</a>
-              </Link>
-            </div>
-          </div>
-          <div className='button-wrapper'>
-            <Link href='https://tithe.ly/give_new/www/#/tithely/give-one-time/645887?kiosk=1'>
-              <a target='__blank'>
-                <div className='icon give-icon'>
-                  <Image src='/img/icons/give.png' width={48} height={48} alt='give' objectFit='cover' />
-                </div>
-              </a>
-            </Link>
-            <Link href='https://visitor.r20.constantcontact.com/manage/optin?v=001BRl1GnvqHBSmpUgt0bWkn1MfFFgc1eWZnLBSjeq8hPkIyEhXoERcP_p-E94Tuo8i-n6WMjixEVWfoTusoH241Xry9A65AaaC8uzGvinLhOc%3D'>
-              <a target='__blank'>
-                <div className='icon subscribe-icon'>
-                  <Image src='/img/icons/subscribe.png' width={48} height={48} alt='subscribe' objectFit='cover' />
-                </div>
-              </a>
+  return <>
+    <Meta title={video[0].snippet.title + ' - Rhema - Changing & Affecting Lives!'} />
+    <VideoContainer>
+      <div className='wrapper'>
+        <Link href={paths.sermons} className='btn-back'>
+
+          <IoArrowBackOutline className='icon-back' />Go back
+        </Link>
+        <VideoWrapper>
+          <iframe
+            width='100%'
+            height='100%'
+            src={`https://www.youtube.com/embed/${video[0].id.videoId}?rel=0&showinfo=1&autoplay=1&loop=0`}
+            title='iframe video player'
+            frameBorder='0'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+          ></iframe>
+        </VideoWrapper>
+        <div className='text-wrapper'>
+          <h3 className='title' dangerouslySetInnerHTML={{ __html: video[0].snippet.title }} />
+          <div className='subtitle'>Rhema Christian Ministries • {formatDate(video[0].snippet.publishedAt)}</div>
+          <div className='desc'>
+            Thank you for supporting Rhema Christian Ministries.
+            <br /> If you're looking for ways to give, simply click here:{' '}
+            <Link href='https://rhemaonline.ca/giving/'>
+              https://rhemaonline.ca/giving/
             </Link>
           </div>
         </div>
-      </VideoContainer>
-    </>
-  )
+        <div className='button-wrapper'>
+          <Link
+            href='https://tithe.ly/give_new/www/#/tithely/give-one-time/645887?kiosk=1'
+            target='__blank'>
+
+            <div className='icon give-icon'>
+              <Image src='/img/icons/give.png' width={48} height={48} alt='give' objectFit='cover' />
+            </div>
+
+          </Link>
+          <Link
+            href='https://visitor.r20.constantcontact.com/manage/optin?v=001BRl1GnvqHBSmpUgt0bWkn1MfFFgc1eWZnLBSjeq8hPkIyEhXoERcP_p-E94Tuo8i-n6WMjixEVWfoTusoH241Xry9A65AaaC8uzGvinLhOc%3D'
+            target='__blank'>
+
+            <div className='icon subscribe-icon'>
+              <Image src='/img/icons/subscribe.png' width={48} height={48} alt='subscribe' objectFit='cover' />
+            </div>
+
+          </Link>
+        </div>
+      </div>
+    </VideoContainer>
+  </>;
 }
 
 const VideoContainer = styled(Container)`

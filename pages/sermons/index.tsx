@@ -15,42 +15,40 @@ export default function Sermons() {
   const [hover, setHover] = useState(false)
   const latestVideo = recentVideos[0]
 
-  return (
-    <>
-      <Meta title='Sermons - Rhema - Changing & Affecting Lives!' />
-      <SermonsContainer>
-        <div className='wrapper'>
-          <h2 className='title'>Sermons</h2>
-          <FeaturedWrapper onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>
-            <Link href={`${paths.sermons}/videos/${latestVideo.id.videoId}`}>
-              <a>
-                <FeatureVideo
-                  hover={hover}
-                  videoId={latestVideo.id.videoId}
-                  width='1140'
-                  height='650'
-                  thumbnailQuality='maxresdefault'
-                />
-                <BsPlayCircleFill className='play-icon' />
-                <div className='video-text'>
-                  <div className='tag'>Latest Video</div>
-                  <h3 dangerouslySetInnerHTML={{ __html: latestVideo.snippet.title }} />
-                </div>
-              </a>
-            </Link>
-          </FeaturedWrapper>
-          <PopularVideoWrapper>
-            <h4>Popular Sermons</h4>
-            <PopularVideoSlider slides={popularVideos} />
-          </PopularVideoWrapper>
-          <RecentVideoWrapper>
-            <h4>Recent Sermons</h4>
-            <RecentVideoSlider slides={recentVideos} />
-          </RecentVideoWrapper>
-        </div>
-      </SermonsContainer>
-    </>
-  )
+  return <>
+    <Meta title='Sermons - Rhema - Changing & Affecting Lives!' />
+    <SermonsContainer>
+      <div className='wrapper'>
+        <h2 className='title'>Sermons</h2>
+        <FeaturedWrapper onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>
+          <Link href={`${paths.sermons}/videos/${latestVideo.id.videoId}`}>
+
+            <FeatureVideo
+              hover={hover}
+              videoId={latestVideo.id.videoId}
+              width='1140'
+              height='650'
+              thumbnailQuality='maxresdefault'
+            />
+            <BsPlayCircleFill className='play-icon' />
+            <div className='video-text'>
+              <div className='tag'>Latest Video</div>
+              <h3 dangerouslySetInnerHTML={{ __html: latestVideo.snippet.title }} />
+            </div>
+
+          </Link>
+        </FeaturedWrapper>
+        <PopularVideoWrapper>
+          <h4>Popular Sermons</h4>
+          <PopularVideoSlider slides={popularVideos} />
+        </PopularVideoWrapper>
+        <RecentVideoWrapper>
+          <h4>Recent Sermons</h4>
+          <RecentVideoSlider slides={recentVideos} />
+        </RecentVideoWrapper>
+      </div>
+    </SermonsContainer>
+  </>;
 }
 
 const SermonsContainer = styled(Container)`

@@ -26,53 +26,51 @@ export default function BibleStudy({ study, list }: Props) {
     study["_embedded"]["wp:featuredmedia"] !== undefined
       ? study["_embedded"]["wp:featuredmedia"][0]
       : null;
-  return (
-    <>
-      <Meta title={study.title.rendered + " - Rhema - Changing & Affecting Lives!"} />
-      <HeadLine
-        imgUrl={
-          featuredMedia !== null
-            ? featuredMedia["media_details"].sizes.large["source_url"]
-            : "/img/beliefs-img.jpg"
-        }
-        title={study.title.rendered}
-        blur="blur(30px)"
-      />
-      <NoteContainer>
-        <div className="note-wrapper">
-          <p className="date">{formatDate(study.date)}</p>
-          <div className="line"></div>
-          <p>
-            in{" "}
-            <Link href={paths.studies}>
-              <a>Bible Studies</a>
-            </Link>
-          </p>
-          {featuredMedia !== null && (
-            <ImgWrapper>
-              <Image
-                layout="fill"
-                objectFit="cover"
-                src={featuredMedia["media_details"].sizes.large["source_url"]}
-                alt={featuredMedia["alt_text"]}
-              />
-            </ImgWrapper>
-          )}
-          <article dangerouslySetInnerHTML={{ __html: study.content.rendered }}></article>
-          {/* {study.docFile.docFile !== null && (
-            <div className="btn-wrapper">
-              <div className="btn-bg">
-                <Button className="btn" href={note.docFile.docFile.mediaItemUrl} target="_blank">
-                  Download
-                </Button>
-              </div>
+  return <>
+    <Meta title={study.title.rendered + " - Rhema - Changing & Affecting Lives!"} />
+    <HeadLine
+      imgUrl={
+        featuredMedia !== null
+          ? featuredMedia["media_details"].sizes.large["source_url"]
+          : "/img/beliefs-img.jpg"
+      }
+      title={study.title.rendered}
+      blur="blur(30px)"
+    />
+    <NoteContainer>
+      <div className="note-wrapper">
+        <p className="date">{formatDate(study.date)}</p>
+        <div className="line"></div>
+        <p>
+          in{" "}
+          <Link href={paths.studies}>
+            Bible Studies
+          </Link>
+        </p>
+        {featuredMedia !== null && (
+          <ImgWrapper>
+            <Image
+              layout="fill"
+              objectFit="cover"
+              src={featuredMedia["media_details"].sizes.large["source_url"]}
+              alt={featuredMedia["alt_text"]}
+            />
+          </ImgWrapper>
+        )}
+        <article dangerouslySetInnerHTML={{ __html: study.content.rendered }}></article>
+        {/* {study.docFile.docFile !== null && (
+          <div className="btn-wrapper">
+            <div className="btn-bg">
+              <Button className="btn" href={note.docFile.docFile.mediaItemUrl} target="_blank">
+                Download
+              </Button>
             </div>
-          )} */}
-        </div>
-        <Sidebar title="Recent Studies" notes={list} />
-      </NoteContainer>
-    </>
-  );
+          </div>
+        )} */}
+      </div>
+      <Sidebar title="Recent Studies" notes={list} />
+    </NoteContainer>
+  </>;
 }
 
 export const getStaticProps = async ({ params }: Params) => {

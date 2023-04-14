@@ -7,45 +7,43 @@ import Meta from 'components/common/meta'
 import Link from 'next/link'
 
 const ministries = () => {
-  return (
-    <>
-      <Meta title='Family Ministries - Rhema - Changing & Affecting Lives!' />
-      <HeadLine imgUrl='/img/ministries-img.jpg' title='Ministries' height='550px' />
-      <MinistriesContainer>
-        <div className='desc'>
-          <h2>The Family Ministries</h2>
-          <p>
-            At Rhema family is the foundation upon which all of life is built. As a family oriented church we place
-            great value on the individual family unit as well as the wider church family.
-          </p>
-          <p>
-            With the service of ministries such as Kids World, Singles and Marriage Ministries along with our ministry
-            to families with newborns we ensure that all families are receiving the best care and support possible. It
-            is our firm belief that healthy families make healthy churches and healthy churches ultimately make healthy
-            societies.
-          </p>
-          <p>So from our family to yours we invite you to enjoy and to make use of our family ministries.</p>
-        </div>
-        <div className='ministries'>
-          {ministriesData.map((ministry) => (
-            <div className='ministry' key={ministry.name}>
-              <ImgWrapper>
-                <Image src={ministry.imgUrl} layout='fill' objectFit='cover' />
-              </ImgWrapper>
-              <div className='content-wrapper'>
-                <h3>{ministry.name}</h3>
-                {ministry.btnText && (
-                  <Link href={ministry.btnLink}>
-                    <Button>{ministry.btnText}</Button>
-                  </Link>
-                )}
-              </div>
+  return <>
+    <Meta title='Family Ministries - Rhema - Changing & Affecting Lives!' />
+    <HeadLine imgUrl='/img/ministries-img.jpg' title='Ministries' height='550px' />
+    <MinistriesContainer>
+      <div className='desc'>
+        <h2>The Family Ministries</h2>
+        <p>
+          At Rhema family is the foundation upon which all of life is built. As a family oriented church we place
+          great value on the individual family unit as well as the wider church family.
+        </p>
+        <p>
+          With the service of ministries such as Kids World, Singles and Marriage Ministries along with our ministry
+          to families with newborns we ensure that all families are receiving the best care and support possible. It
+          is our firm belief that healthy families make healthy churches and healthy churches ultimately make healthy
+          societies.
+        </p>
+        <p>So from our family to yours we invite you to enjoy and to make use of our family ministries.</p>
+      </div>
+      <div className='ministries'>
+        {ministriesData.map((ministry) => (
+          <div className='ministry' key={ministry.name}>
+            <ImgWrapper>
+              <Image src={ministry.imgUrl} layout='fill' objectFit='cover' />
+            </ImgWrapper>
+            <div className='content-wrapper'>
+              <h3>{ministry.name}</h3>
+              {ministry.btnText && (
+                <Link href={ministry.btnLink} legacyBehavior>
+                  <Button>{ministry.btnText}</Button>
+                </Link>
+              )}
             </div>
-          ))}
-        </div>
-      </MinistriesContainer>
-    </>
-  )
+          </div>
+        ))}
+      </div>
+    </MinistriesContainer>
+  </>;
 }
 
 export const MinistriesContainer = styled(Container)`

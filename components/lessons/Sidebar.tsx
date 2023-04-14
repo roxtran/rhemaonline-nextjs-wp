@@ -29,7 +29,7 @@ export default function Sidebar({ title, notes }: Props) {
                   note.slug
                 }`}
               >
-                <a>{note.title.rendered}</a>
+                {note.title.rendered}
               </Link>
               <p className="date">{formatDate(note.date)}</p>
             </li>

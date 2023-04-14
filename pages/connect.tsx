@@ -15,64 +15,62 @@ interface Props {
 }
 
 export default function Connect({ services }: Props) {
-  return (
-    <>
-      <Meta title="Connect - Rhema - Changing & Affecting Lives!" />
-      <Head>
-        <script src="https://js.churchcenter.com/modal/v1"></script>
-      </Head>
-      <HeadLine
-        imgUrl="/img/connect-img.jpg"
-        title="The Care Centre"
-        desc="We are here for you."
-        btnText="Contact Us"
-        btnLink={paths.formLinks.contactUs}
-        height="450px"
-      />
-      <ConnectContainer>
-        <div className="desc">
-          <h2>The Care Centre Services</h2>
-          <p>
-            The Care Centre team is the central hub of our ministry. They are the "one-stop
-            destination" for all of our member and staff needs. From arranging a baby dedication for
-            your child or grandchild to requesting a visit from our church family for a loved one
-            that is ill, to enquiring about water baptism, and a whole lot more, the Care Centre
-            team is here to serve you with excellence. Be sure to let us know how we have performed.
-          </p>
-        </div>
-        <div className="services">
-          {services.map((service) => (
-            <div className="service" id={service.slug} key={service.title}>
-              <ImgWrapper>
-                <Image src={service.featuredImage.node.sourceUrl} layout="fill" objectFit="cover" />
-              </ImgWrapper>
-              {service.formLink.formLink.includes(
-                "https://rhemachristianministries.churchcenter.com/people/forms/"
-              ) ? (
+  return <>
+    <Meta title="Connect - Rhema - Changing & Affecting Lives!" />
+    <Head>
+      <script src="https://js.churchcenter.com/modal/v1"></script>
+    </Head>
+    <HeadLine
+      imgUrl="/img/connect-img.jpg"
+      title="The Care Centre"
+      desc="We are here for you."
+      btnText="Contact Us"
+      btnLink={paths.formLinks.contactUs}
+      height="450px"
+    />
+    <ConnectContainer>
+      <div className="desc">
+        <h2>The Care Centre Services</h2>
+        <p>
+          The Care Centre team is the central hub of our ministry. They are the "one-stop
+          destination" for all of our member and staff needs. From arranging a baby dedication for
+          your child or grandchild to requesting a visit from our church family for a loved one
+          that is ill, to enquiring about water baptism, and a whole lot more, the Care Centre
+          team is here to serve you with excellence. Be sure to let us know how we have performed.
+        </p>
+      </div>
+      <div className="services">
+        {services.map((service) => (
+          <div className="service" id={service.slug} key={service.title}>
+            <ImgWrapper>
+              <Image src={service.featuredImage.node.sourceUrl} layout="fill" objectFit="cover" />
+            </ImgWrapper>
+            {service.formLink.formLink.includes(
+              "https://rhemachristianministries.churchcenter.com/people/forms/"
+            ) ? (
+              <div className="text-wrapper">
+                <h3>{service.title}</h3>
+                <div dangerouslySetInnerHTML={{ __html: service.content }}></div>
+                <a href={service.formLink.formLink} data-open-in-church-center-modal="true">
+                  <span>{service.formLink.linkText}</span>
+                </a>
+              </div>
+            ) : (
+              <Link href={service.formLink.formLink} legacyBehavior>
                 <div className="text-wrapper">
                   <h3>{service.title}</h3>
                   <div dangerouslySetInnerHTML={{ __html: service.content }}></div>
-                  <a href={service.formLink.formLink} data-open-in-church-center-modal="true">
+                  <a>
                     <span>{service.formLink.linkText}</span>
                   </a>
                 </div>
-              ) : (
-                <Link href={service.formLink.formLink}>
-                  <div className="text-wrapper">
-                    <h3>{service.title}</h3>
-                    <div dangerouslySetInnerHTML={{ __html: service.content }}></div>
-                    <a>
-                      <span>{service.formLink.linkText}</span>
-                    </a>
-                  </div>
-                </Link>
-              )}
-            </div>
-          ))}
-        </div>
-      </ConnectContainer>
-    </>
-  );
+              </Link>
+            )}
+          </div>
+        ))}
+      </div>
+    </ConnectContainer>
+  </>;
 }
 const ConnectContainer = styled(Container)`
   .desc {

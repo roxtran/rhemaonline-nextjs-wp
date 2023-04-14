@@ -30,11 +30,11 @@ export default function MiddleMenu() {
           }}
         >
           <Link href={paths.giving}>
-            <a>Giving</a>
+            Giving
           </Link>
           <div className='line'></div>
           <Link href={paths.ministries}>
-            <a>Ministries</a>
+            Ministries
           </Link>
         </motion.div>
         <motion.div
@@ -48,11 +48,13 @@ export default function MiddleMenu() {
           }}
         >
           <Link href={paths.connect}>
-            <a>The Care Centre Services</a>
+            The Care Centre Services
           </Link>
           <div className='line'></div>
-          <Link href={paths.formLinks.prayerRequest}>
-            <a data-open-in-church-center-modal='true'>Prayer Request</a>
+          <Link
+            href={paths.formLinks.prayerRequest}
+            data-open-in-church-center-modal='true'>
+            Prayer Request
           </Link>
         </motion.div>
         <motion.div
@@ -66,16 +68,18 @@ export default function MiddleMenu() {
           }}
         >
           <Link href={`${paths.getConnected}#get-involved`}>
-            <a>Get Involved</a>
+            Get Involved
           </Link>
           <div className='line'></div>
-          <Link href={paths.formLinks.becomeAMember}>
-            <a data-open-in-church-center-modal='true'>Become A Member</a>
+          <Link
+            href={paths.formLinks.becomeAMember}
+            data-open-in-church-center-modal='true'>
+            Become A Member
           </Link>
         </motion.div>
       </motion.div>
     </CTAPanel>
-  )
+  );
 }
 const CTAPanel = styled.div`
   position: relative;
