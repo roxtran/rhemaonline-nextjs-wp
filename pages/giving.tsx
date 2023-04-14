@@ -6,145 +6,143 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Giving() {
-  return (
-    <>
-      <Meta title='Giving - Rhema - Changing & Affecting Lives!' />
-      <HeadLine imgUrl='/img/giving-img.jpg' title='Make A Difference' />
-      <GivingContainer>
-        <div id='thank'>
-          <p>
-            Thank you everyone for your continued support in these times. We know that this too shall pass for our God
-            is able to do more than we can ask think or imagine and he will bring us through unscathed in Jesus name.
-          </p>
-          <p>Here are a few ways you can continue to support the ministry whether we gather in person or online.</p>
-        </div>
-        <div className='content-wrapper'>
-          <h2 className='title'>Ways to give</h2>
-          <div className='items'>
-            <div className='item'>
-              <div className='type'>
-                <div className='icon'>
-                  <Image src='/img/give/telephone.png' width={48} height={48} alt='telephone' objectFit='cover' />
-                </div>
-                <h5 className='type-name'>
-                  TELEPHONE / <br />
-                  INTERNET BANKING
-                </h5>
+  return <>
+    <Meta title='Giving - Rhema - Changing & Affecting Lives!' />
+    <HeadLine imgUrl='/img/giving-img.jpg' title='Make A Difference' />
+    <GivingContainer>
+      <div id='thank'>
+        <p>
+          Thank you everyone for your continued support in these times. We know that this too shall pass for our God
+          is able to do more than we can ask think or imagine and he will bring us through unscathed in Jesus name.
+        </p>
+        <p>Here are a few ways you can continue to support the ministry whether we gather in person or online.</p>
+      </div>
+      <div className='content-wrapper'>
+        <h2 className='title'>Ways to give</h2>
+        <div className='items'>
+          <div className='item'>
+            <div className='type'>
+              <div className='icon'>
+                <Image src='/img/give/telephone.png' width={48} height={48} alt='telephone' objectFit='cover' />
               </div>
-              <div className='desc'>
-                <ul>
-                  <li>Log into your bank account as you usually do.</li>
-                  <li>
-                    Select bill payment, and then choose <span className='bold'>“add new payee”</span>.
-                  </li>
-                  <li>
-                    Search and select <span className='bold'>Rhema Christian Ministries (Toronto or Ottawa)</span>.
-                  </li>
-                  <li>
-                    Use your Rhema membership number as the account number or enter <span className='bold'>9999</span>{' '}
-                    for non-members.
-                  </li>
-                </ul>
+              <h5 className='type-name'>
+                TELEPHONE / <br />
+                INTERNET BANKING
+              </h5>
+            </div>
+            <div className='desc'>
+              <ul>
+                <li>Log into your bank account as you usually do.</li>
+                <li>
+                  Select bill payment, and then choose <span className='bold'>“add new payee”</span>.
+                </li>
+                <li>
+                  Search and select <span className='bold'>Rhema Christian Ministries (Toronto or Ottawa)</span>.
+                </li>
+                <li>
+                  Use your Rhema membership number as the account number or enter <span className='bold'>9999</span>{' '}
+                  for non-members.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className='item'>
+            <div className='type'>
+              <div className='icon'>
+                <Image src='/img/give/telephone.png' width={48} height={48} alt='telephone' objectFit='cover' />
+              </div>
+              <h5 className='type-name'>Text Giving</h5>
+            </div>
+            <div className='desc'>
+              <ul>
+                <li>
+                  Text the word <span className='bold'>'Give'</span> to <span className='bold'>1-844-542-0003</span>.
+                </li>
+                <li>You will receive a reply with a link.</li>
+                <li>
+                  Click on the link which will allow you to provide the information required to complete the process.
+                </li>
+                <li>To send future gifts, text the dollar amount, and the category, ex. ($100 Tithes).</li>
+              </ul>
+            </div>
+          </div>
+          <div className='item'>
+            <div className='type'>
+              <div className='icon-full'>
+                <Image src='/img/give/tithe-ly.png' width={176} height={48} alt='telephone' objectFit='cover' />
               </div>
             </div>
-            <div className='item'>
-              <div className='type'>
-                <div className='icon'>
-                  <Image src='/img/give/telephone.png' width={48} height={48} alt='telephone' objectFit='cover' />
-                </div>
-                <h5 className='type-name'>Text Giving</h5>
-              </div>
-              <div className='desc'>
-                <ul>
-                  <li>
-                    Text the word <span className='bold'>'Give'</span> to <span className='bold'>1-844-542-0003</span>.
-                  </li>
-                  <li>You will receive a reply with a link.</li>
-                  <li>
-                    Click on the link which will allow you to provide the information required to complete the process.
-                  </li>
-                  <li>To send future gifts, text the dollar amount, and the category, ex. ($100 Tithes).</li>
-                </ul>
+            <div className='desc'>
+              <ul>
+                <li>
+                  Go to{' '}
+                  <Link href='https://get.tithe.ly'>
+                    https://get.tithe.ly
+                  </Link>
+                </li>
+                <li>If you don’t have a Tithe.ly account, you can create one in a few easy steps.</li>
+                <li>Complete the requested information one time, and then you can start giving by Tithe.ly.</li>
+                <li>
+                  Or{' '}
+                  <Link href='https://tithe.ly/give_new/www/#/tithely/give-one-time/645887?kiosk=1'>
+                    click here
+                  </Link>
+                </li>
+                <li>and follow the instructions to give by credit card or visa debit card.</li>
+              </ul>
+            </div>
+          </div>
+          <div className='item'>
+            <div className='type'>
+              <div className='icon-full'>
+                <Image src='/img/give/e-transfer.png' width={112} height={48} alt='telephone' objectFit='cover' />
               </div>
             </div>
-            <div className='item'>
-              <div className='type'>
-                <div className='icon-full'>
-                  <Image src='/img/give/tithe-ly.png' width={176} height={48} alt='telephone' objectFit='cover' />
-                </div>
-              </div>
-              <div className='desc'>
-                <ul>
-                  <li>
-                    Go to{' '}
-                    <Link href='https://get.tithe.ly'>
-                      <a>https://get.tithe.ly</a>
-                    </Link>
-                  </li>
-                  <li>If you don’t have a Tithe.ly account, you can create one in a few easy steps.</li>
-                  <li>Complete the requested information one time, and then you can start giving by Tithe.ly.</li>
-                  <li>
-                    Or{' '}
-                    <Link href='https://tithe.ly/give_new/www/#/tithely/give-one-time/645887?kiosk=1'>
-                      <a>click here</a>
-                    </Link>
-                  </li>
-                  <li>and follow the instructions to give by credit card or visa debit card.</li>
-                </ul>
+            <div className='desc'>
+              <ul>
+                <li>
+                  Send an E-Transfer to:{' '}
+                  <Link href='treasury@rhemaonline.ca'>
+                    treasury@rhemaonline.ca
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className='item'>
+            <div className='type'>
+              <div className='icon-full'>
+                <Image src='/img/give/paypal.png' width={190} height={48} alt='telephone' objectFit='cover' />
               </div>
             </div>
-            <div className='item'>
-              <div className='type'>
-                <div className='icon-full'>
-                  <Image src='/img/give/e-transfer.png' width={112} height={48} alt='telephone' objectFit='cover' />
-                </div>
-              </div>
-              <div className='desc'>
-                <ul>
-                  <li>
-                    Send an E-Transfer to:{' '}
-                    <Link href='treasury@rhemaonline.ca'>
-                      <a>treasury@rhemaonline.ca</a>
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className='item'>
-              <div className='type'>
-                <div className='icon-full'>
-                  <Image src='/img/give/paypal.png' width={190} height={48} alt='telephone' objectFit='cover' />
-                </div>
-              </div>
-              <div className='desc'>
-                <ul>
-                  <li>
-                    Go to{' '}
-                    <Link href='https://www.paypal.com'>
-                      <a>https://www.paypal.com</a>
-                    </Link>
-                  </li>
-                  <li>If you don’t have a paypal account, you can create one in a few easy steps.</li>
-                  <li>
-                    Click on personal, then click on <span className='bold'>“get a Paypal account”</span>.
-                  </li>
-                  <li>Complete the requested information one time, and then you can start giving by Paypal.</li>
-                  <li>
-                    Or{' '}
-                    <Link href='https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZDLQA7QHSMMEC&source=url'>
-                      <a>click here</a>
-                    </Link>
-                  </li>
-                  <li>and follow the instructions to give by credit card or visa debit card.</li>
-                </ul>
-              </div>
+            <div className='desc'>
+              <ul>
+                <li>
+                  Go to{' '}
+                  <Link href='https://www.paypal.com'>
+                    https://www.paypal.com
+                  </Link>
+                </li>
+                <li>If you don’t have a paypal account, you can create one in a few easy steps.</li>
+                <li>
+                  Click on personal, then click on <span className='bold'>“get a Paypal account”</span>.
+                </li>
+                <li>Complete the requested information one time, and then you can start giving by Paypal.</li>
+                <li>
+                  Or{' '}
+                  <Link href='https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZDLQA7QHSMMEC&source=url'>
+                    click here
+                  </Link>
+                </li>
+                <li>and follow the instructions to give by credit card or visa debit card.</li>
+              </ul>
             </div>
           </div>
         </div>
-        <h3 className='end-text'>May God remember your offerings and keep you and your family during this season.</h3>
-      </GivingContainer>
-    </>
-  )
+      </div>
+      <h3 className='end-text'>May God remember your offerings and keep you and your family during this season.</h3>
+    </GivingContainer>
+  </>;
 }
 const GivingContainer = styled(Container)`
   a {

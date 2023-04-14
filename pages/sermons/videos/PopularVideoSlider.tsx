@@ -54,24 +54,24 @@ export default function PopularVideoSlider({ slides }: propType) {
   return (
     <Slider {...settings}>
       {slides?.map((slide) => (
-        <Link href={`${paths.sermons}/videos/${slide.id.videoId}`} key={slide.id.videoId}>
-          <a>
-            <div className='video-wrapper'>
-              <ImgWrapper className='img-wrapper'>
-                <Image
-                  src={`https://i.ytimg.com/vi/${slide.id.videoId}/hqdefault.jpg`}
-                  layout='fill'
-                  objectFit='cover'
-                />
-              </ImgWrapper>
-              <div className='popular-video-text'>
-                <h4 dangerouslySetInnerHTML={{ __html: shortenString(slide.snippet.title, 50) + '...' }} />
-                <div className='date'>{formatDate(slide.snippet.publishedAt)}</div>
-              </div>
+        (<Link href={`${paths.sermons}/videos/${slide.id.videoId}`} key={slide.id.videoId}>
+
+          <div className='video-wrapper'>
+            <ImgWrapper className='img-wrapper'>
+              <Image
+                src={`https://i.ytimg.com/vi/${slide.id.videoId}/hqdefault.jpg`}
+                layout='fill'
+                objectFit='cover'
+              />
+            </ImgWrapper>
+            <div className='popular-video-text'>
+              <h4 dangerouslySetInnerHTML={{ __html: shortenString(slide.snippet.title, 50) + '...' }} />
+              <div className='date'>{formatDate(slide.snippet.publishedAt)}</div>
             </div>
-          </a>
-        </Link>
+          </div>
+
+        </Link>)
       ))}
     </Slider>
-  )
+  );
 }

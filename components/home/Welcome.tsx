@@ -28,12 +28,12 @@ export default function Welcome() {
           we seek to Change and Affect Lives by equipping the whole person with sound biblical and spiritual truths and
           practical encouragement.
         </p>
-        <Link href={paths.about}>
+        <Link href={paths.about} legacyBehavior>
           <Button>More about us</Button>
         </Link>
       </motion.div>
     </WelcomeWrapper>
-  )
+  );
 }
 
 export const WelcomeWrapper = styled(motion.div)`
