@@ -1,98 +1,105 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import styled from 'styled-components'
-import paths from 'paths'
-import { motion } from 'framer-motion'
-import { slideLeft, slideRight } from 'styles/animation'
+import Image from "next/image";
+import Link from "next/link";
+import styled from "styled-components";
+import paths from "paths";
+import { motion } from "framer-motion";
+import { slideLeft, slideRight } from "styles/animation";
 
 const items = {
   show: {
-    boxShadow: '0px 7px 10px 0 rgba(122, 207, 255, 0.3)',
-    borderRadius: '10px',
-    overflow: 'hidden',
-    transition: { duration: 0.1, type: 'spring', when: 'afterChildren' }
+    boxShadow: "0px 7px 10px 0 rgba(122, 207, 255, 0.3)",
+    borderRadius: "10px",
+    overflow: "hidden",
+    transition: { duration: 0.1, type: "spring", when: "afterChildren" }
   }
-}
+};
 
 export default function MiddleMenu() {
   return (
     <MiddleWrapper>
-      <motion.div className='items' variants={items} initial='hidden' animate='show' exit='exit'>
+      <motion.div className="items" variants={items} initial="hidden" animate="show" exit="exit">
         <motion.div
-          className='item'
+          className="item"
           variants={slideRight}
           transition={{
             duration: 0.25,
-            type: 'spring',
+            type: "spring",
             delay: 0.25,
             damping: 8
           }}
         >
           <Link href={paths.leadership}>
-
-            <Image src='/img/leadership-icon.svg' width={50} height={50} alt='leadership-icon' />
+            <Image src="/img/leadership-icon.svg" width={50} height={50} alt="leadership-icon" />
             <p>
-              With a warm smile, the leaders of Rhema Christian Ministries are taskes with operational and
-              ecclesiatial exellence.
+              With a warm smile, the leaders of Rhema Christian Ministries are taskes with
+              operational and ecclesiatial exellence.
             </p>
             <h4>Leadership</h4>
-
           </Link>
         </motion.div>
         <motion.div
-          className='item'
+          className="item"
           variants={slideRight}
           transition={{
             duration: 0.25,
-            type: 'spring',
+            type: "spring",
             delay: 0.15,
             damping: 8
           }}
         >
-          <Link href={paths.beliefs} legacyBehavior>
-            <motion.a>
-              <Image src='/img/beliefs-icon.svg' width={50} height={50} alt='beliefs-icon' />
-              <p>At Rhema what we believe is important to us but not as much as the one in whom we believe.</p>
+          <Link href={paths.beliefs}>
+            <motion.div>
+              <Image src="/img/beliefs-icon.svg" width={50} height={50} alt="beliefs-icon" />
+              <p>
+                At Rhema what we believe is important to us but not as much as the one in whom we
+                believe.
+              </p>
               <h4>Beliefs</h4>
-            </motion.a>
+            </motion.div>
           </Link>
         </motion.div>
         <motion.div
-          className='item'
+          className="item"
           variants={slideLeft}
           transition={{
             duration: 0.25,
-            type: 'spring',
+            type: "spring",
             delay: 0.15,
             damping: 8
           }}
         >
-          <Link href={paths.ministries} legacyBehavior>
-            <motion.a>
-              <Image src='/img/ministries-icon.svg' width={57.5} height={50} alt='ministries-icon' />
+          <Link href={paths.ministries}>
+            <motion.div>
+              <Image
+                src="/img/ministries-icon.svg"
+                width={57.5}
+                height={50}
+                alt="ministries-icon"
+              />
               <p>From our family to yours.</p>
               <h4>Ministries</h4>
-            </motion.a>
+            </motion.div>
           </Link>
         </motion.div>
         <motion.div
-          className='item'
+          className="item"
           variants={slideLeft}
           transition={{
             duration: 0.25,
-            type: 'spring',
+            type: "spring",
             delay: 0.25,
             damping: 8
           }}
         >
-          <Link href={paths.grow} legacyBehavior>
-            <motion.a>
-              <Image src='/img/grow-icon.svg' width={50} height={50} alt='grow-icon' />
+          <Link href={paths.grow}>
+            <motion.div>
+              <Image src="/img/grow-icon.svg" width={50} height={50} alt="grow-icon" />
               <p>
-                We invite you to hear the voice of the Master calling you, even as “Deep calleth unto deep” (Psalm 42:7)
+                We invite you to hear the voice of the Master calling you, even as “Deep calleth
+                unto deep” (Psalm 42:7)
               </p>
               <h4>Grow</h4>
-            </motion.a>
+            </motion.div>
           </Link>
         </motion.div>
       </motion.div>
@@ -159,4 +166,4 @@ const MiddleWrapper = styled.div`
       border-bottom: 1px dashed rgba(122, 207, 255, 0.3);
     }
   }
-`
+`;

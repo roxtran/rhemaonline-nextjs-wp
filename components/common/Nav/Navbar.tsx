@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import styled from 'styled-components';
-import Burger from './Burger';
-import { motion } from 'framer-motion';
+import Image from "next/image";
+import Link from "next/link";
+import styled from "styled-components";
+import Burger from "./Burger";
+import { motion } from "framer-motion";
 
 const navbar = {
   hidden: { opacity: 0, y: -90 },
@@ -11,25 +11,23 @@ const navbar = {
     y: 0,
     transition: {
       duration: 0.25,
-      when: 'beforeChildren', // delayChildren: 0.5,
-      staggerChildren: 0.25,
-    },
+      when: "beforeChildren", // delayChildren: 0.5,
+      staggerChildren: 0.25
+    }
   },
   exit: {
     opacity: 0,
     transition: {
-      duration: 0.25,
-    },
-  },
+      duration: 0.25
+    }
+  }
 };
 
 export default function Navbar() {
   return (
     <Nav initial={{ y: -90 }} animate={{ y: 0 }} transition={{ duration: 0.1 }}>
-      <Link href='/'>
-
-        <Image width={230} height={40} src='/img/RCM-Logo.webp' alt='RCM-Logo' />
-
+      <Link href="/">
+        <Image width={230} height={40} src="/img/RCM-Logo.webp" alt="RCM-Logo" />
       </Link>
       <Burger />
     </Nav>

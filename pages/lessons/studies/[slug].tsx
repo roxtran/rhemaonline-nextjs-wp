@@ -40,10 +40,7 @@ export default function BibleStudy({ note, list }: Props) {
           <p className="date">{formatDate(note.date)}</p>
           <div className="line"></div>
           <p>
-            in{" "}
-            <Link href={paths.studies}>
-              <a>Bible Studies</a>
-            </Link>
+            in <Link href={paths.studies}>Bible Studies</Link>
           </p>
           {note.featuredImage !== null && (
             <ImgWrapper>

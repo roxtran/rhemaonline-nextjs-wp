@@ -62,7 +62,7 @@ export default function Connect({ services }: Props) {
                   </a>
                 </div>
               ) : (
-                <Link href={service.formLink.formLink} legacyBehavior>
+                <Link href={service.formLink.formLink}>
                   <div className="text-wrapper">
                     <h3>{service.title}</h3>
                     <div dangerouslySetInnerHTML={{ __html: service.content }}></div>

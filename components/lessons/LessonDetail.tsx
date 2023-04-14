@@ -17,31 +17,29 @@ export default function LessonDetail({ note, type }: Props) {
   return (
     <LessonWrapper>
       <Link href={`${paths.lessons}/${type}/${note.slug}`}>
-        <a>
-          {note.featuredImage !== null && (
-            <>
-              <div className="hover"></div>
-              <ImgWrapper>
-                <Image
-                  src={note.featuredImage.node.sourceUrl}
-                  alt={note.title}
-                  layout="fill"
-                  objectFit="cover"
-                  // objectPosition='center'
-                />
-              </ImgWrapper>
-            </>
-          )}
-          <div className="text">
-            <div className="date">{formatDate(note.date)}</div>
-            <h3>{note.title}</h3>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: summary
-              }}
-            ></div>
-          </div>
-        </a>
+        {note.featuredImage !== null && (
+          <>
+            <div className="hover"></div>
+            <ImgWrapper>
+              <Image
+                src={note.featuredImage.node.sourceUrl}
+                alt={note.title}
+                layout="fill"
+                objectFit="cover"
+                // objectPosition='center'
+              />
+            </ImgWrapper>
+          </>
+        )}
+        <div className="text">
+          <div className="date">{formatDate(note.date)}</div>
+          <h3>{note.title}</h3>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: summary
+            }}
+          ></div>
+        </div>
       </Link>
     </LessonWrapper>
   );

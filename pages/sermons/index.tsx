@@ -1,54 +1,54 @@
-import Meta from 'components/common/meta'
-import styled from 'styled-components'
-import { Container, rem } from 'styles/GlobalStyle'
-import FeatureVideo from 'components/common/FeatureVideo'
-import { useState } from 'react'
-import { BsPlayCircleFill } from 'react-icons/bs'
-import PopularVideoSlider from './videos/PopularVideoSlider'
-import RecentVideoSlider from './videos/RecentVideoSlider'
-import popularVideos from 'data/popular-videos'
-import recentVideos from 'data/recent-videos'
-import Link from 'next/link'
-import paths from 'paths'
+import Meta from "components/common/meta";
+import styled from "styled-components";
+import { Container, rem } from "styles/GlobalStyle";
+import FeatureVideo from "components/common/FeatureVideo";
+import { useState } from "react";
+import { BsPlayCircleFill } from "react-icons/bs";
+import PopularVideoSlider from "./videos/PopularVideoSlider";
+import RecentVideoSlider from "./videos/RecentVideoSlider";
+import popularVideos from "data/popular-videos";
+import recentVideos from "data/recent-videos";
+import Link from "next/link";
+import paths from "paths";
 
 export default function Sermons() {
-  const [hover, setHover] = useState(false)
-  const latestVideo = recentVideos[0]
+  const [hover, setHover] = useState(false);
+  const latestVideo = recentVideos[0];
 
-  return <>
-    <Meta title='Sermons - Rhema - Changing & Affecting Lives!' />
-    <SermonsContainer>
-      <div className='wrapper'>
-        <h2 className='title'>Sermons</h2>
-        <FeaturedWrapper onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>
-          <Link href={`${paths.sermons}/videos/${latestVideo.id.videoId}`}>
-
-            <FeatureVideo
-              hover={hover}
-              videoId={latestVideo.id.videoId}
-              width='1140'
-              height='650'
-              thumbnailQuality='maxresdefault'
-            />
-            <BsPlayCircleFill className='play-icon' />
-            <div className='video-text'>
-              <div className='tag'>Latest Video</div>
-              <h3 dangerouslySetInnerHTML={{ __html: latestVideo.snippet.title }} />
-            </div>
-
-          </Link>
-        </FeaturedWrapper>
-        <PopularVideoWrapper>
-          <h4>Popular Sermons</h4>
-          <PopularVideoSlider slides={popularVideos} />
-        </PopularVideoWrapper>
-        <RecentVideoWrapper>
-          <h4>Recent Sermons</h4>
-          <RecentVideoSlider slides={recentVideos} />
-        </RecentVideoWrapper>
-      </div>
-    </SermonsContainer>
-  </>;
+  return (
+    <>
+      <Meta title="Sermons - Rhema - Changing & Affecting Lives!" />
+      <SermonsContainer>
+        <div className="wrapper">
+          <h2 className="title">Sermons</h2>
+          <FeaturedWrapper onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>
+            <Link href={`${paths.sermons}/videos/${latestVideo.id.videoId}`}>
+              <FeatureVideo
+                hover={hover}
+                videoId={latestVideo.id.videoId}
+                width="1140"
+                height="650"
+                thumbnailQuality="maxresdefault"
+              />
+              <BsPlayCircleFill className="play-icon" />
+              <div className="video-text">
+                <div className="tag">Latest Video</div>
+                <h3 dangerouslySetInnerHTML={{ __html: latestVideo.snippet.title }} />
+              </div>
+            </Link>
+          </FeaturedWrapper>
+          <PopularVideoWrapper>
+            <h4>Popular Sermons</h4>
+            <PopularVideoSlider slides={popularVideos} />
+          </PopularVideoWrapper>
+          <RecentVideoWrapper>
+            <h4>Recent Sermons</h4>
+            <RecentVideoSlider slides={recentVideos} />
+          </RecentVideoWrapper>
+        </div>
+      </SermonsContainer>
+    </>
+  );
 }
 
 const SermonsContainer = styled(Container)`
@@ -72,7 +72,7 @@ const SermonsContainer = styled(Container)`
       width: 95vw;
     }
   }
-`
+`;
 
 const FeaturedWrapper = styled.div`
   width: 100%;
@@ -119,7 +119,7 @@ const FeaturedWrapper = styled.div`
       color: #fff;
     }
   }
-`
+`;
 
 const PopularVideoWrapper = styled.div`
   width: 100%;
@@ -146,7 +146,7 @@ const PopularVideoWrapper = styled.div`
   .popular-video-text {
     max-width: 85%;
   }
-`
+`;
 
 const RecentVideoWrapper = styled.div`
   width: 100%;
@@ -177,4 +177,4 @@ const RecentVideoWrapper = styled.div`
     padding: 1rem;
     margin: -1rem;
   }
-`
+`;

@@ -33,10 +33,7 @@ export default function SermonNote({ note, list }: Props) {
           <p className="date">{formatDate(note.date)}</p>
           <div className="line"></div>
           <p>
-            in{" "}
-            <Link href={paths.notes}>
-              <a>Sermon Notes</a>
-            </Link>
+            in <Link href={paths.notes}>Sermon Notes</Link>
           </p>
           <ImgWrapper>
             <Image

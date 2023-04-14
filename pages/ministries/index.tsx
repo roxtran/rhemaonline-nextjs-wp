@@ -39,7 +39,7 @@ const ministries = () => {
               <div className="content-wrapper">
                 <h3>{ministry.name}</h3>
                 {ministry.btnText && (
-                  <Link href={ministry.btnLink} legacyBehavior>
+                  <Link href={ministry.btnLink}>
                     <Button>{ministry.btnText}</Button>
                   </Link>
                 )}
