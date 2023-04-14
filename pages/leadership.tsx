@@ -1,53 +1,59 @@
-import React, { useState } from 'react'
-import Image from 'next/image'
-import styled from 'styled-components'
-import HeadLine from 'components/common/HeadLine'
-import LeaderModal from 'components/common/Modals/LeaderModal'
-import { Container, ImgWrapper, def } from 'styles/GlobalStyle'
+import React, { useState } from "react";
+import Image from "next/image";
+import styled from "styled-components";
+import HeadLine from "components/common/HeadLine";
+import LeaderModal from "components/common/Modals/LeaderModal";
+import { Container, ImgWrapper, def } from "styles/GlobalStyle";
 // import leaders from 'data/leaders'
-import Meta from 'components/common/meta'
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
-import LeaderType from 'types/leader'
+import Meta from "components/common/meta";
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+import LeaderType from "types/leader";
 
 interface Props {
-  leaders: LeaderType[]
+  leaders: LeaderType[];
 }
 
 export default function Leadership({ leaders }: Props) {
-  const [openModal, setOpenModal] = useState(false)
-  const [selectedLeader, setSelectedLeader] = useState<any | null>(null)
+  const [openModal, setOpenModal] = useState(false);
+  const [selectedLeader, setSelectedLeader] = useState<any | null>(null);
 
   return (
     <>
-      <Meta title='Leadership - Rhema - Changing & Affecting Lives!' />
+      <Meta title="Leadership - Rhema - Changing & Affecting Lives!" />
       <HeadLine
-        imgUrl='/img/leadership-pastor-meikle-img.webp'
-        title='Leadership'
-        height='550px'
+        imgUrl="/img/leadership-pastor-meikle-img.webp"
+        title="Leadership"
+        height="550px"
         // blur='blur(5px)'
       />
       <LeaderModal openModal={openModal} setOpenModal={setOpenModal} leader={selectedLeader} />
       <LeadershipContainer>
-        <div className='content-wrapper'>
-          <div className='desc'>
+        <div className="content-wrapper">
+          <div className="desc">
             <h2>Our Leadership</h2>
             <p>
-              With a warm smile, a caring touch and a shepherd’s heart the leaders of Rhema Christian Ministries are
-              tasked with operational and ecclesiastical excellence.
+              With a warm smile, a caring touch and a shepherd’s heart the leaders of Rhema
+              Christian Ministries are tasked with operational and ecclesiastical excellence.
             </p>
           </div>
-          <div className='leaders'>
+          <div className="leaders">
             {leaders.map((leader) => (
               <a
-                className='leader'
+                className="leader"
                 key={leader.title}
                 onClick={() => {
-                  setOpenModal(true)
-                  setSelectedLeader(leader)
+                  setOpenModal(true);
+                  setSelectedLeader(leader);
                 }}
               >
                 <ImgWrapper>
-                  <Image className='img' src={leader.leaderFields.smallImage.sourceUrl} width={250} height={250} />
+                  <Image
+                    className="img"
+                    src={leader.leaderFields.smallImage.sourceUrl}
+                    alt={leader.title}
+                    width={250}
+                    height={250}
+                  />
                 </ImgWrapper>
                 <h3>{leader.title}</h3>
                 <p>{leader.leaderFields.subtitle}</p>
@@ -57,7 +63,7 @@ export default function Leadership({ leaders }: Props) {
         </div>
       </LeadershipContainer>
     </>
-  )
+  );
 }
 const LeadershipContainer = styled(Container)`
   .content-wrapper {
@@ -108,13 +114,13 @@ const LeadershipContainer = styled(Container)`
       text-align: center;
     }
   }
-`
+`;
 
 export async function getStaticProps() {
   const client = new ApolloClient({
     uri: process.env.WP_URL as string,
     cache: new InMemoryCache()
-  })
+  });
 
   const { data } = await client.query({
     query: gql`
@@ -138,12 +144,12 @@ export async function getStaticProps() {
         }
       }
     `
-  })
+  });
 
   return {
     props: {
       leaders: data?.leaders?.nodes
     },
-    revalidate: 30
-  }
+    revalidate: 10
+  };
 }

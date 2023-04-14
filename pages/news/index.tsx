@@ -1,29 +1,29 @@
-import styled from 'styled-components'
-import HeadLine from 'components/common/HeadLine'
-import Meta from 'components/common/meta'
-import { getFeed } from 'lib/rss'
-import { Container, def } from 'styles/GlobalStyle'
-import NewsType from 'types/news'
-import { formatDate } from 'utils/formatter'
+import styled from "styled-components";
+import HeadLine from "components/common/HeadLine";
+import Meta from "components/common/meta";
+import { getFeed } from "lib/rss";
+import { Container, def } from "styles/GlobalStyle";
+import NewsType from "types/news";
+import { formatDate } from "utils/formatter";
 
 interface NewsProps {
-  biblegatewayItems: NewsType[]
-  studiesforlifeItems: NewsType[]
+  biblegatewayItems: NewsType[];
+  studiesforlifeItems: NewsType[];
 }
 
 const news = ({ biblegatewayItems, studiesforlifeItems }: NewsProps) => {
   return (
     <>
-      <Meta title='News - Rhema - Changing & Affecting Lives!' />
-      <HeadLine imgUrl='/img/news-img.jpg' title='News' />
+      <Meta title="News - Rhema - Changing & Affecting Lives!" />
+      <HeadLine imgUrl="/img/news-img.jpg" title="News" />
       <NewsContainer>
-        <div className='content-wrapper'>
-          <div className='news-list'>
+        <div className="content-wrapper">
+          <div className="news-list">
             <h3>Bible Gateway</h3>
             <ul>
               {biblegatewayItems.map((news) => (
                 <li>
-                  <a key={news.link} href={news.link} target='_blank' rel='noopener noreferrer'>
+                  <a key={news.link} href={news.link} target="_blank" rel="noopener noreferrer">
                     {news.title}
                   </a>
                   <p>{formatDate(news.isoDate)}</p>
@@ -31,12 +31,12 @@ const news = ({ biblegatewayItems, studiesforlifeItems }: NewsProps) => {
               ))}
             </ul>
           </div>
-          <div className='news-list'>
+          <div className="news-list">
             <h3>Bible Studies For Life</h3>
             <ul>
               {studiesforlifeItems.map((news) => (
                 <li>
-                  <a key={news.link} href={news.link} target='_blank' rel='noopener noreferrer'>
+                  <a key={news.link} href={news.link} target="_blank" rel="noopener noreferrer">
                     {news.title}
                   </a>
                   <p>{formatDate(news.isoDate)}</p>
@@ -47,8 +47,8 @@ const news = ({ biblegatewayItems, studiesforlifeItems }: NewsProps) => {
         </div>
       </NewsContainer>
     </>
-  )
-}
+  );
+};
 
 const NewsContainer = styled(Container)`
   .content-wrapper {
@@ -73,18 +73,18 @@ const NewsContainer = styled(Container)`
       flex-direction: column;
     }
   }
-`
+`;
 
-export default news
+export default news;
 
 export const getStaticProps = async () => {
-  const biblegatewayUrl = 'https://biblegateway.com/blog/feed'
-  const studiesforlifeUrl = 'https://biblestudiesforlife.com/feed'
-  const faithlifeUrl = 'http://feeds.feedburner.com/FaithlifeBlog'
+  const biblegatewayUrl = "https://biblegateway.com/blog/feed";
+  const studiesforlifeUrl = "https://biblestudiesforlife.com/feed";
+  const faithlifeUrl = "http://feeds.feedburner.com/FaithlifeBlog";
 
-  const biblegatewayFeed = await getFeed(biblegatewayUrl)
-  const studiesforlifeFeed = await getFeed(studiesforlifeUrl)
-  const faithlifeFeed = await getFeed(faithlifeUrl)
+  const biblegatewayFeed = await getFeed(biblegatewayUrl);
+  const studiesforlifeFeed = await getFeed(studiesforlifeUrl);
+  const faithlifeFeed = await getFeed(faithlifeUrl);
 
   return {
     props: {
@@ -92,6 +92,6 @@ export const getStaticProps = async () => {
       studiesforlifeItems: studiesforlifeFeed.items,
       faithlifeItems: faithlifeFeed.items
     },
-    revalidate: 30
-  }
-}
+    revalidate: 10
+  };
+};
