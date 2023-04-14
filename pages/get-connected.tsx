@@ -1,34 +1,34 @@
-import Image from 'next/image'
-import styled from 'styled-components'
-import HeadLine from 'components/common/HeadLine'
-import Meta from 'components/common/meta'
-import { default as getConnectedData } from 'data/get-connected'
-import { Button, Container, ImgWrapper } from 'styles/GlobalStyle'
+import Image from "next/image";
+import styled from "styled-components";
+import HeadLine from "components/common/HeadLine";
+import Meta from "components/common/meta";
+import { default as getConnectedData } from "data/get-connected";
+import { Button, Container, ImgWrapper } from "styles/GlobalStyle";
 
 const getConnected = () => {
   return (
     <>
-      <Meta title='Get Connected - Rhema - Changing & Affecting Lives!' />
+      <Meta title="Get Connected - Rhema - Changing & Affecting Lives!" />
       <HeadLine
-        imgUrl='/img/get-connected-img.jpg'
-        title='Get Connected'
+        imgUrl="/img/get-connected-img.jpg"
+        title="Get Connected"
         desc="That's changing and affecting lives."
-        btnText='Join Us'
-        btnLink='https://rhema.ccbchurch.com/goto/forms/15/responses/new'
-        height='550px'
+        btnText="Join Us"
+        btnLink="https://rhema.ccbchurch.com/goto/forms/15/responses/new"
+        height="550px"
       />
       <ConnectedContainer>
-        <div className='items'>
+        <div className="items">
           {getConnectedData.map((item) => (
-            <div className='item' key={item.title} id={item.id}>
+            <div className="item" key={item.title} id={item.id}>
               <ImgWrapper>
-                <Image src={item.imgUrl} layout='fill' objectFit='cover' />
+                <Image src={item.imgUrl} alt={item.title} layout="fill" objectFit="cover" />
               </ImgWrapper>
-              <div className='content-wrapper'>
+              <div className="content-wrapper">
                 <h3>{item.title}</h3>
-                <div className='text' dangerouslySetInnerHTML={{ __html: `${item.text}` }}></div>
+                <div className="text" dangerouslySetInnerHTML={{ __html: `${item.text}` }}></div>
                 {item.btnText && (
-                  <Button href={item.btnLink} className='btn'>
+                  <Button href={item.btnLink} className="btn">
                     {item.btnText}
                   </Button>
                 )}
@@ -38,8 +38,8 @@ const getConnected = () => {
         </div>
       </ConnectedContainer>
     </>
-  )
-}
+  );
+};
 
 const ConnectedContainer = styled(Container)`
   width: 80vw;
@@ -105,6 +105,6 @@ const ConnectedContainer = styled(Container)`
       padding: 2rem;
     }
   }
-`
+`;
 
-export default getConnected
+export default getConnected;

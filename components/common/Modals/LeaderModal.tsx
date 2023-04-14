@@ -1,54 +1,68 @@
-import styled from 'styled-components'
-import { IoClose } from 'react-icons/io5'
-import { ModalContainer } from './HomeModal'
-import React, { Dispatch, MouseEvent, SetStateAction } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import LeaderType from 'types/leader'
-import Image from 'next/image'
-import { ImgWrapper, def } from 'styles/GlobalStyle'
-import { fade, slideDown } from 'styles/animation'
-import { useRef } from 'react'
+import styled from "styled-components";
+import { IoClose } from "react-icons/io5";
+import { ModalContainer } from "./HomeModal";
+import React, { Dispatch, MouseEvent, SetStateAction } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import LeaderType from "types/leader";
+import Image from "next/image";
+import { ImgWrapper, def } from "styles/GlobalStyle";
+import { fade, slideDown } from "styles/animation";
+import { useRef } from "react";
 
 interface Props {
-  openModal: boolean
-  setOpenModal: Dispatch<SetStateAction<boolean>>
-  leader: LeaderType | null
+  openModal: boolean;
+  setOpenModal: Dispatch<SetStateAction<boolean>>;
+  leader: LeaderType | null;
 }
 
 export default function LeaderModal({ openModal, setOpenModal, leader }: Props) {
-  const modalRef = useRef<HTMLDivElement>(null)
+  const modalRef = useRef<HTMLDivElement>(null);
 
   const closeModal = (e: MouseEvent<HTMLDivElement>) => {
-    if (modalRef.current === e.target) setOpenModal(false)
-  }
+    if (modalRef.current === e.target) setOpenModal(false);
+  };
 
   return (
     <AnimatePresence exitBeforeEnter>
       {openModal && leader && (
-        <StyledModal ref={modalRef} onClick={closeModal} variants={fade} initial='hidden' animate='show' exit='exit'>
-          <motion.div className='modal-dialog' variants={slideDown} initial='hidden' animate='show' exit='exit'>
-            <div className='modal-content'>
-              <div className='modal-header'>
-                <a onClick={() => setOpenModal(false)} className='closeBtn'>
+        <StyledModal
+          ref={modalRef}
+          onClick={closeModal}
+          variants={fade}
+          initial="hidden"
+          animate="show"
+          exit="exit"
+        >
+          <motion.div
+            className="modal-dialog"
+            variants={slideDown}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+          >
+            <div className="modal-content">
+              <div className="modal-header">
+                <a onClick={() => setOpenModal(false)} className="closeBtn">
                   <IoClose />
                 </a>
               </div>
-              <div className='modal-body'>
-                <div className='modal-left'>
+              <div className="modal-body">
+                <div className="modal-left">
                   <ImgWrapper>
                     <Image
                       src={leader.featuredImage.node.sourceUrl}
-                      layout='fill'
-                      objectFit='cover'
-                      objectPosition='top'
+                      alt={leader.title}
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition="top"
                       // placeholder='blur'
                     />
                   </ImgWrapper>
-                  <h2 className='name'>{leader.title}</h2>
-                  <div className='line'></div>
+                  <h2 className="name">{leader.title}</h2>
+                  <div className="line"></div>
                 </div>
-                <div className='modal-right'>
-                  <div className='bio' dangerouslySetInnerHTML={{ __html: leader.content }}></div>
+                <div className="modal-right">
+                  <div className="bio" dangerouslySetInnerHTML={{ __html: leader.content }}></div>
                 </div>
               </div>
             </div>
@@ -56,7 +70,7 @@ export default function LeaderModal({ openModal, setOpenModal, leader }: Props) 
         </StyledModal>
       )}
     </AnimatePresence>
-  )
+  );
 }
 
 const StyledModal = styled(ModalContainer)`
@@ -145,4 +159,4 @@ const StyledModal = styled(ModalContainer)`
       overflow: visible;
     }
   }
-`
+`;
