@@ -135,5 +135,5 @@ export const getStaticPaths = async () => {
   const paths = notes.map((note: { slug: string }) => ({
     params: { slug: note.slug }
   }));
-  return { paths, fallback: false };
+  return { paths, fallback: "blocking" };
 };
