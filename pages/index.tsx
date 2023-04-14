@@ -86,6 +86,6 @@ export async function getStaticProps() {
 
   return {
     props: { slides: data?.slides?.nodes, newsletters: data?.newsletters?.nodes },
-    revalidate: 30
+    revalidate: 10
   };
 }
