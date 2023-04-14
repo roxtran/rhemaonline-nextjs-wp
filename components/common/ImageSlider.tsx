@@ -27,7 +27,12 @@ export default function ImageSlider({ slides }: propType) {
       {slides.map((slide) => (
         <div key={slide.title}>
           <ImgWrapper className="img-wrapper">
-            <Image src={slide.featuredImage.node.sourceUrl} layout="fill" objectFit="cover" />
+            <Image
+              src={slide.featuredImage.node.sourceUrl}
+              alt={slide.title}
+              layout="fill"
+              objectFit="cover"
+            />
           </ImgWrapper>
         </div>
       ))}

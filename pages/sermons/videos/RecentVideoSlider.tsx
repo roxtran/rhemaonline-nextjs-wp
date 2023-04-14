@@ -1,19 +1,19 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import paths from 'paths'
+import Link from "next/link";
+import Image from "next/image";
+import paths from "paths";
 
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 // import style
-import { ImgWrapper } from 'styles/GlobalStyle'
+import { ImgWrapper } from "styles/GlobalStyle";
 // import type
-import VideoType from 'types/video'
-import { shortenString } from 'utils/formatter'
+import VideoType from "types/video";
+import { shortenString } from "utils/formatter";
 
 interface propType {
-  slides: VideoType[]
+  slides: VideoType[];
 }
 
 export default function PopularVideoSlider({ slides }: propType) {
@@ -50,27 +50,26 @@ export default function PopularVideoSlider({ slides }: propType) {
         }
       }
     ]
-  }
+  };
   return (
     <Slider {...settings}>
       {slides?.map((slide) => (
-        (<Link href={`${paths.sermons}/videos/${slide.id.videoId}`} key={slide.id.videoId}>
-
-          <div className='video-wrapper'>
-            <ImgWrapper className='img-wrapper'>
+        <Link href={`${paths.sermons}/videos/${slide.id.videoId}`} key={slide.id.videoId}>
+          <div className="video-wrapper">
+            <ImgWrapper className="img-wrapper">
               <Image
                 src={`https://i.ytimg.com/vi/${slide.id.videoId}/hqdefault.jpg`}
-                layout='fill'
-                objectFit='cover'
+                alt={slide.snippet.title}
+                layout="fill"
+                objectFit="cover"
               />
             </ImgWrapper>
             <div
-              className='video-title'
-              dangerouslySetInnerHTML={{ __html: shortenString(slide.snippet.title, 65) + '...' }}
+              className="video-title"
+              dangerouslySetInnerHTML={{ __html: shortenString(slide.snippet.title, 65) + "..." }}
             />
           </div>
-
-        </Link>)
+        </Link>
       ))}
     </Slider>
   );
