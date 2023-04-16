@@ -58,7 +58,11 @@ export async function getStaticProps() {
   const { data } = await client.query({
     query: gql`
       query getData($numOfSlides: Int!, $numOfNewsletters: Int!, $after: String) {
-        slides(first: $numOfSlides, after: $after) {
+        slides(
+          first: $numOfSlides
+          after: $after
+          where: { orderby: { field: SLUG, order: ASC } }
+        ) {
           nodes {
             featuredImage {
               node {
@@ -78,7 +82,7 @@ export async function getStaticProps() {
       }
     `,
     variables: {
-      numOfSlides: 5,
+      numOfSlides: 9,
       numOfNewsletters: 5,
       after: null
     }
