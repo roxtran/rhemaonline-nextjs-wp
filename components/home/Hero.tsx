@@ -57,7 +57,7 @@ export default function Hero({ slides }: Props) {
         return (
           <AnimatePresence key={index}>
             {index === current && (
-              <>
+              <a href={slide.slideFields.ctaUrl} target='__blank'>
                 <ImgWrapper
                   initial={{ scale: 1.15, zIndex: 2, opacity: 0.5 }}
                   animate={{ scale: 1, zIndex: 1, opacity: 1 }}
@@ -86,7 +86,7 @@ export default function Hero({ slides }: Props) {
                   <motion.h1 variants={slideUp}>{slide.h1}</motion.h1>
                   <motion.p variants={slideUp}>{slide.p}</motion.p>
                 </motion.div> */}
-              </>
+              </a>
             )}
           </AnimatePresence>
         );

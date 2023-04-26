@@ -3,7 +3,7 @@ import styled from "styled-components";
 import HeadLine from "components/common/HeadLine";
 import Meta from "components/common/meta";
 import { Button, Container, def } from "styles/GlobalStyle";
-import FoodbankSlider from "components/common/ImageSlider";
+import ImageSlider from "components/common/ImageSlider";
 import slides from "data/foodbank-slides";
 import Link from "next/link";
 
@@ -14,7 +14,7 @@ const foodbank = () => {
       <HeadLine imgUrl="/img/foodbank-img.jpg" title="Foodbank" />
       <FoodbankContainer>
         <div className="content-wrapper">
-          <FoodbankSlider slides={slides} />
+          <ImageSlider slides={slides} />
           <div className="text-wrapper">
             <h2>Mandate</h2>
             <p>

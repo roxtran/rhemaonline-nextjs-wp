@@ -6,6 +6,9 @@ type SlideType = {
       sourceUrl: string;
     };
   };
+  slideFields: {
+    ctaUrl: string;
+  };
 };
 
 export default SlideType;

@@ -6,6 +6,9 @@ export default [
       node: {
         sourceUrl: "/img/foodbank/foodbank-slide-1.jpg"
       }
+    },
+    slideFields: {
+      ctaUrl: ""
     }
   },
   {
@@ -15,6 +18,9 @@ export default [
       node: {
         sourceUrl: "/img/foodbank/foodbank-slide-2.jpg"
       }
+    },
+    slideFields: {
+      ctaUrl: ""
     }
   },
   {
@@ -24,6 +30,9 @@ export default [
       node: {
         sourceUrl: "/img/foodbank/foodbank-slide-3.jpg"
       }
+    },
+    slideFields: {
+      ctaUrl: ""
     }
   },
   {
@@ -33,6 +42,9 @@ export default [
       node: {
         sourceUrl: "/img/foodbank/foodbank-slide-4.jpg"
       }
+    },
+    slideFields: {
+      ctaUrl: ""
     }
   },
   {
@@ -42,6 +54,9 @@ export default [
       node: {
         sourceUrl: "/img/foodbank/foodbank-slide-5.jpg"
       }
+    },
+    slideFields: {
+      ctaUrl: ""
     }
   },
   {
@@ -51,6 +66,9 @@ export default [
       node: {
         sourceUrl: "/img/foodbank/foodbank-slide-6.jpg"
       }
+    },
+    slideFields: {
+      ctaUrl: ""
     }
   },
   {
@@ -60,6 +78,9 @@ export default [
       node: {
         sourceUrl: "/img/foodbank/foodbank-slide-7.jpg"
       }
+    },
+    slideFields: {
+      ctaUrl: ""
     }
   },
   {
@@ -69,6 +90,9 @@ export default [
       node: {
         sourceUrl: "/img/foodbank/foodbank-slide-8.jpg"
       }
+    },
+    slideFields: {
+      ctaUrl: ""
     }
   }
 ];
