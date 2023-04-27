@@ -6,12 +6,24 @@ import { useState } from "react";
 import { BsPlayCircleFill } from "react-icons/bs";
 import PopularVideoSlider from "./videos/PopularVideoSlider";
 import RecentVideoSlider from "./videos/RecentVideoSlider";
-import popularVideos from "data/popular-videos";
-import recentVideos from "data/recent-videos";
+// import popularVideos from "data/popular-videos";
+// import recentVideos from "data/recent-videos";
 import Link from "next/link";
 import paths from "paths";
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
-export default function Sermons() {
+interface Props {
+  recentVideosData: {};
+  popularVideosData: {};
+}
+
+export default function Sermons({ recentVideosData, popularVideosData }: Props) {
+  const recentVideosString = recentVideosData[0].sermonVideoFields.items;
+  const recentVideos = JSON.parse(recentVideosString);
+
+  const popularVideosString = popularVideosData[0].sermonVideoFields.items;
+  const popularVideos = JSON.parse(popularVideosString);
+
   const [hover, setHover] = useState(false);
   const latestVideo = recentVideos[0];
 
@@ -178,3 +190,39 @@ const RecentVideoWrapper = styled.div`
     margin: -1rem;
   }
 `;
+
+export async function getStaticProps() {
+  const client = new ApolloClient({
+    uri: process.env.WP_URL as string,
+    cache: new InMemoryCache()
+  });
+
+  const { data } = await client.query({
+    query: gql`
+      query getData {
+        recentVideos: sermonVideos(where: { title: "Recent Videos" }) {
+          nodes {
+            sermonVideoFields {
+              items
+            }
+          }
+        }
+        popularVideos: sermonVideos(where: { title: "Popular Videos" }) {
+          nodes {
+            sermonVideoFields {
+              items
+            }
+          }
+        }
+      }
+    `
+  });
+
+  return {
+    props: {
+      recentVideosData: data?.recentVideos?.nodes,
+      popularVideosData: data?.popularVideos?.nodes
+    },
+    revalidate: 10
+  };
+}
