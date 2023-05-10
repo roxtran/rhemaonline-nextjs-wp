@@ -91,7 +91,7 @@ export default function Location() {
               <div className="text">
                 <h4>Hours</h4>
                 <p>Mon - Fri</p>
-                <p>9:00am - 3:30pm</p>
+                <p>9:00am - 4:00pm</p>
               </div>
             </div>
           </div>

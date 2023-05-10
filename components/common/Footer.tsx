@@ -19,9 +19,9 @@ export default function Footer() {
               <li>
                 <Link href={paths.about}>About Us</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href={paths.leadership}>Leadership</Link>
-              </li>
+              </li> */}
               <li>
                 <Link href={paths.beliefs}>Beliefs</Link>
               </li>
