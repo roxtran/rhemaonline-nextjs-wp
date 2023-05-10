@@ -188,6 +188,6 @@ export const getStaticPaths = async () => {
   const paths = videos.map((video) => ({
     params: { videoId: video.id.videoId }
   }));
-  // console.log('!! paths', paths)
+  // console.log("!! paths", paths);
   return { paths, fallback: "blocking" };
 };

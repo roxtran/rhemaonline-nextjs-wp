@@ -24,6 +24,9 @@ export default function Sermons({ recentVideosData, popularVideosData }: Props) 
   const popularVideosString = popularVideosData[0].sermonVideoFields.items;
   const popularVideos = JSON.parse(popularVideosString);
 
+  // console.log(recentVideos);
+  // console.log(popularVideos);
+
   const [hover, setHover] = useState(false);
   const latestVideo = recentVideos[0];
 
