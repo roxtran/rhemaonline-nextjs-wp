@@ -37,10 +37,13 @@ export default function SermonNote({ note, list }: Props) {
           </p>
           <ImgWrapper>
             <Image
-              layout="fill"
-              objectFit="cover"
               src={note.featuredImage.node.sourceUrl}
               alt={note.title}
+              fill
+              sizes="100vw"
+              style={{
+                objectFit: "cover"
+              }}
             />
           </ImgWrapper>
           <article dangerouslySetInnerHTML={{ __html: note.content }}></article>

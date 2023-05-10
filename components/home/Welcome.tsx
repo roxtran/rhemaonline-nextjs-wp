@@ -11,10 +11,11 @@ export default function Welcome() {
         <Image
           src="/img/welcome-img.jpg"
           alt="welcome image"
-          layout="fill"
-          objectFit="cover"
-          // width={625}
-          // height={360}
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "cover"
+          }}
         />
       </ImgWrapper>
       <motion.div className="text">
@@ -23,11 +24,10 @@ export default function Welcome() {
           “We are a church that believes in Jesus Christ; a church that loves God and His people."
         </p>
         <p>
-          <span>Rhema Christian Ministries</span> is a vibrant Spirit-filled church community
-          designed to connect people to Jesus and to each other through authentic relationships.
-          Through a dynamic combination of worship and word, we seek to Change and Affect Lives by
-          equipping the whole person with sound biblical and spiritual truths and practical
-          encouragement.
+          <span>Rhema Christian Ministries</span> is a vibrant Spirit-filled church community designed to connect people
+          to Jesus and to each other through authentic relationships. Through a dynamic combination of worship and word,
+          we seek to Change and Affect Lives by equipping the whole person with sound biblical and spiritual truths and
+          practical encouragement.
         </p>
         <Link href={paths.about}>
           <Button>More about us</Button>

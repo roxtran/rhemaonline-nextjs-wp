@@ -1,21 +1,21 @@
-import styled from 'styled-components'
-import NavLink from './NavLink'
-import paths from 'paths'
+import styled from "styled-components";
+import NavLink from "./NavLink";
+import paths from "paths";
 
 interface Props {
-  open: boolean
-  setOpen: Function
+  open: boolean;
+  setOpen: Function;
 }
 
 export default function Menu({ open, setOpen }: Props) {
   return (
     <StyledMenu open={open}>
-      <NavLink href='/'>
+      <NavLink href="/">
         <a onClick={() => setOpen(!open)}>Home</a>
       </NavLink>
       {/* <div className='dropdown'>
         <NavLink href='#'>
-          <a>Locations</a>
+          Locations
         </NavLink>
         <div className='dropdown-content'>
           <NavLink href={paths.torontoLocation}>
@@ -35,11 +35,11 @@ export default function Menu({ open, setOpen }: Props) {
       <NavLink href={paths.sermons}>
         <a onClick={() => setOpen(!open)}>Sermons</a>
       </NavLink>
-      <div className='dropdown'>
-        <NavLink href='#'>
+      <div className="dropdown">
+        <NavLink href="#">
           <a>Lessons</a>
         </NavLink>
-        <div className='dropdown-content'>
+        <div className="dropdown-content">
           <NavLink href={paths.notes}>
             <a onClick={() => setOpen(!open)}>Sermon Notes</a>
           </NavLink>
@@ -54,23 +54,23 @@ export default function Menu({ open, setOpen }: Props) {
       <NavLink href={paths.events}>
         <a onClick={() => setOpen(!open)}>Events</a>
       </NavLink>
-      <div className='btn-wrapper'>
+      <div className="btn-wrapper">
         <NavLink href={paths.giving}>
-          <a className='button give' onClick={() => setOpen(!open)}>
+          <a className="button give" onClick={() => setOpen(!open)}>
             Give
           </a>
         </NavLink>
         <a
-          href='https://rhema.ccbchurch.com/goto/login'
-          target='_blank'
-          className='button external'
+          href="https://rhema.ccbchurch.com/goto/login"
+          target="_blank"
+          className="button external"
           onClick={() => setOpen(!open)}
         >
           Login
         </a>
       </div>
     </StyledMenu>
-  )
+  );
 }
 const StyledMenu = styled.div<{ open: boolean }>`
   display: flex;
@@ -174,7 +174,7 @@ const StyledMenu = styled.div<{ open: boolean }>`
     box-shadow: var(--shadow);
     transform-origin: 1px;
     transition: all 0.3s ease-out;
-    transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
+    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     opacity: ${({ open }) => (open ? 1 : 0)};
     a,
     .button {
@@ -189,4 +189,4 @@ const StyledMenu = styled.div<{ open: boolean }>`
       width: 150px;
     }
   }
-`
+`;

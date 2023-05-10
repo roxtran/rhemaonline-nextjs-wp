@@ -43,21 +43,14 @@ export default function Hero({ slides }: Props) {
     return null;
   }
   return (
-    <StyledHero
-      id="hero"
-      variants={fade}
-      initial="hidden"
-      exit="exit"
-      animate={controls}
-      ref={element}
-    >
+    <StyledHero id="hero" variants={fade} initial="hidden" exit="exit" animate={controls} ref={element}>
       <IoIosArrowDropleftCircle className="arrow arrow-left" onClick={handlePrevSlide} />
       <IoIosArrowDroprightCircle className="arrow arrow-right" onClick={handleNextSlide} />
       {slides.map((slide, index) => {
         return (
           <AnimatePresence key={index}>
             {index === current && (
-              <a href={slide.slideFields.ctaUrl} target='__blank'>
+              <a href={slide.slideFields.ctaUrl} target="__blank">
                 <ImgWrapper
                   initial={{ scale: 1.15, zIndex: 2, opacity: 0.5 }}
                   animate={{ scale: 1, zIndex: 1, opacity: 1 }}
@@ -67,12 +60,12 @@ export default function Hero({ slides }: Props) {
                   <Image
                     src={slide.featuredImage.node.sourceUrl}
                     alt="slide-item"
-                    layout="fill"
-                    objectFit="cover"
-                    objectPosition="top"
-                    // placeholder="blur"
-                    // loading='eager'
-                    // priority="preload"
+                    fill
+                    sizes="100vw"
+                    style={{
+                      objectFit: "cover",
+                      objectPosition: "top"
+                    }}
                   />
                 </ImgWrapper>
                 <div className="img-overlay"></div>

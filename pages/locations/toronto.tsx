@@ -23,7 +23,16 @@ export default function Toronto() {
           <div className="icon-info">
             <a href="tel:4164961794" className="icon-group">
               <div className="icon">
-                <Image src="/img/phone-icon.png" alt="phone icon" width={75} height={75} />
+                <Image
+                  src="/img/phone-icon.png"
+                  alt="phone icon"
+                  width={75}
+                  height={75}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }}
+                />
               </div>
               <div className="text">
                 <h4>Phone</h4>
@@ -32,7 +41,16 @@ export default function Toronto() {
             </a>
             <div className="icon-group">
               <div className="icon">
-                <Image src="/img/fax-icon.png" alt="fax icon" width={75} height={75} />
+                <Image
+                  src="/img/fax-icon.png"
+                  alt="fax icon"
+                  width={75}
+                  height={75}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }}
+                />
               </div>
               <div className="text">
                 <h4>Fax</h4>
@@ -41,7 +59,16 @@ export default function Toronto() {
             </div>
             <a href="mailto:info@rhemaonline.ca" className="icon-group">
               <div className="icon">
-                <Image src="/img/email-icon.png" alt="email icon" width={75} height={75} />
+                <Image
+                  src="/img/email-icon.png"
+                  alt="email icon"
+                  width={75}
+                  height={75}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }}
+                />
               </div>
               <div className="text">
                 <h4>Email</h4>
@@ -50,7 +77,16 @@ export default function Toronto() {
             </a>
             <div className="icon-group">
               <div className="icon">
-                <Image src="/img/hours-icon.png" alt="hours icon" width={60} height={60} />
+                <Image
+                  src="/img/hours-icon.png"
+                  alt="hours icon"
+                  width={60}
+                  height={60}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }}
+                />
               </div>
               <div className="text">
                 <h4>Hours</h4>
@@ -67,9 +103,9 @@ export default function Toronto() {
                   <span>Worship Service:</span> Sundays – 8:30am & 11am
                 </p>
                 <p>
-                  <span>Bible Study:</span> Starting Wed. March 18th, 2020 until further notice, our
-                  weekly Bible Study will be a one hour gathering of intense prayer for community
-                  and national healing. Service time will be 7:00pm – 8:00pm
+                  <span>Bible Study:</span> Starting Wed. March 18th, 2020 until further notice, our weekly Bible Study
+                  will be a one hour gathering of intense prayer for community and national healing. Service time will
+                  be 7:00pm – 8:00pm
                 </p>
                 <span>49-40 Carl Hall Road, Toronto, ON, M3K 2C1</span>
               </div>
@@ -86,11 +122,7 @@ export default function Toronto() {
           </div>
           <div className="btn-wrapper">
             <div className="btn-bg">
-              <Button
-                className="btn"
-                href={paths.formLinks.contactUs}
-                data-open-in-church-center-modal="true"
-              >
+              <Button className="btn" href={paths.formLinks.contactUs} data-open-in-church-center-modal="true">
                 Contact Us
               </Button>
             </div>

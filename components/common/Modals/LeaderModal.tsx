@@ -25,21 +25,8 @@ export default function LeaderModal({ openModal, setOpenModal, leader }: Props) 
   return (
     <AnimatePresence exitBeforeEnter>
       {openModal && leader && (
-        <StyledModal
-          ref={modalRef}
-          onClick={closeModal}
-          variants={fade}
-          initial="hidden"
-          animate="show"
-          exit="exit"
-        >
-          <motion.div
-            className="modal-dialog"
-            variants={slideDown}
-            initial="hidden"
-            animate="show"
-            exit="exit"
-          >
+        <StyledModal ref={modalRef} onClick={closeModal} variants={fade} initial="hidden" animate="show" exit="exit">
+          <motion.div className="modal-dialog" variants={slideDown} initial="hidden" animate="show" exit="exit">
             <div className="modal-content">
               <div className="modal-header">
                 <a onClick={() => setOpenModal(false)} className="closeBtn">
@@ -52,10 +39,12 @@ export default function LeaderModal({ openModal, setOpenModal, leader }: Props) 
                     <Image
                       src={leader.featuredImage.node.sourceUrl}
                       alt={leader.title}
-                      layout="fill"
-                      objectFit="cover"
-                      objectPosition="top"
-                      // placeholder='blur'
+                      fill
+                      sizes="100vw"
+                      style={{
+                        objectFit: "cover",
+                        objectPosition: "top"
+                      }}
                     />
                   </ImgWrapper>
                   <h2 className="name">{leader.title}</h2>

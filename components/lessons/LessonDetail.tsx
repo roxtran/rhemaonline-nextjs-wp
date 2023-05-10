@@ -24,9 +24,11 @@ export default function LessonDetail({ note, type }: Props) {
               <Image
                 src={note.featuredImage.node.sourceUrl}
                 alt={note.title}
-                layout="fill"
-                objectFit="cover"
-                // objectPosition='center'
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover"
+                }}
               />
             </ImgWrapper>
           </>

@@ -32,8 +32,8 @@ export default function Leadership({ leaders }: Props) {
           <div className="desc">
             <h2>Our Leadership</h2>
             <p>
-              With a warm smile, a caring touch and a shepherd’s heart the leaders of Rhema
-              Christian Ministries are tasked with operational and ecclesiastical excellence.
+              With a warm smile, a caring touch and a shepherd’s heart the leaders of Rhema Christian Ministries are
+              tasked with operational and ecclesiastical excellence.
             </p>
           </div>
           <div className="leaders">
@@ -53,6 +53,10 @@ export default function Leadership({ leaders }: Props) {
                     alt={leader.title}
                     width={250}
                     height={250}
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }}
                   />
                 </ImgWrapper>
                 <h3>{leader.title}</h3>

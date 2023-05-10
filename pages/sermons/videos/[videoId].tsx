@@ -42,9 +42,7 @@ export default function Sermons({ video }: Props) {
           </VideoWrapper>
           <div className="text-wrapper">
             <h3 className="title" dangerouslySetInnerHTML={{ __html: video[0].snippet.title }} />
-            <div className="subtitle">
-              Rhema Christian Ministries • {formatDate(video[0].snippet.publishedAt)}
-            </div>
+            <div className="subtitle">Rhema Christian Ministries • {formatDate(video[0].snippet.publishedAt)}</div>
             <div className="desc">
               Thank you for supporting Rhema Christian Ministries.
               <br /> If you're looking for ways to give, simply click here:{" "}
@@ -52,17 +50,18 @@ export default function Sermons({ video }: Props) {
             </div>
           </div>
           <div className="button-wrapper">
-            <Link
-              href="https://tithe.ly/give_new/www/#/tithely/give-one-time/645887?kiosk=1"
-              target="__blank"
-            >
+            <Link href="https://tithe.ly/give_new/www/#/tithely/give-one-time/645887?kiosk=1" target="__blank">
               <div className="icon give-icon">
                 <Image
                   src="/img/icons/give.png"
                   width={48}
                   height={48}
                   alt="give"
-                  objectFit="cover"
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                    objectFit: "cover"
+                  }}
                 />
               </div>
             </Link>
@@ -76,7 +75,11 @@ export default function Sermons({ video }: Props) {
                   width={48}
                   height={48}
                   alt="subscribe"
-                  objectFit="cover"
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                    objectFit: "cover"
+                  }}
                 />
               </div>
             </Link>

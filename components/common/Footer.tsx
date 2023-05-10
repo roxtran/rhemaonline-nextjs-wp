@@ -121,19 +121,46 @@ export default function Footer() {
             }}
           >
             <div className="icon">
-              <Image src="/img/social/bible-icon.svg" alt="bible icon" width={30} height={30} />
+              <Image
+                src="/img/social/bible-icon.svg"
+                alt="bible icon"
+                width={30}
+                height={30}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }}
+              />
             </div>
           </a>
           <a title="Member Login" href="https://rhema.ccbchurch.com/goto/login/" target="_blank">
             <div className="icon">
-              <Image src="/img/social/groups-icon.svg" alt="group icon" width={30} height={30} />
+              <Image
+                src="/img/social/groups-icon.svg"
+                alt="group icon"
+                width={30}
+                height={30}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }}
+              />
             </div>
           </a>
-          <a title="Giving" href={paths.giving} target="_blank">
+          <Link title="Giving" href={paths.giving} target="_blank">
             <div className="icon">
-              <Image src="/img/social/giving-icon.svg" alt="giving icon" width={35} height={35} />
+              <Image
+                src="/img/social/giving-icon.svg"
+                alt="giving icon"
+                width={35}
+                height={35}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }}
+              />
             </div>
-          </a>
+          </Link>
           <a title="Instagram" href={paths.instagramAccount} target="_blank">
             <div className="icon">
               <Image
@@ -141,6 +168,10 @@ export default function Footer() {
                 alt="instagram icon"
                 width={35}
                 height={35}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }}
               />
             </div>
           </a>
@@ -151,22 +182,53 @@ export default function Footer() {
                 alt="facebook icon"
                 width={30}
                 height={30}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }}
               />
             </div>
           </a>
           <a title="Twitter" href={paths.twitterAccount} target="_blank">
             <div className="icon">
-              <Image src="/img/social/twitter-icon.svg" alt="twitter icon" width={35} height={35} />
+              <Image
+                src="/img/social/twitter-icon.svg"
+                alt="twitter icon"
+                width={35}
+                height={35}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }}
+              />
             </div>
           </a>
           <a title="YouTube" href={paths.youtubeChannel} target="_blank">
             <div className="icon">
-              <Image src="/img/social/youtube-icon.svg" alt="youtube icon" width={35} height={35} />
+              <Image
+                src="/img/social/youtube-icon.svg"
+                alt="youtube icon"
+                width={35}
+                height={35}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }}
+              />
             </div>
           </a>
           <a title="Office 365" href={paths.office365Site} target="_blank">
             <div className="icon">
-              <Image src="/img/social/office-icon.svg" alt="office icon" width={35} height={35} />
+              <Image
+                src="/img/social/office-icon.svg"
+                alt="office icon"
+                width={35}
+                height={35}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }}
+              />
             </div>
           </a>
         </div>

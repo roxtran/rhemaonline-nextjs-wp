@@ -29,9 +29,7 @@ export default function BibleStudy({ note, list }: Props) {
     <>
       <Meta title={note.title + " - Rhema - Changing & Affecting Lives!"} />
       <HeadLine
-        imgUrl={
-          note.featuredImage !== null ? note.featuredImage.node.sourceUrl : "/img/beliefs-img.jpg"
-        }
+        imgUrl={note.featuredImage !== null ? note.featuredImage.node.sourceUrl : "/img/beliefs-img.jpg"}
         title={note.title}
         blur="blur(30px)"
       />
@@ -45,10 +43,13 @@ export default function BibleStudy({ note, list }: Props) {
           {note.featuredImage !== null && (
             <ImgWrapper>
               <Image
-                layout="fill"
-                objectFit="cover"
                 src={note.featuredImage.node.sourceUrl}
                 alt={note.title}
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover"
+                }}
               />
             </ImgWrapper>
           )}

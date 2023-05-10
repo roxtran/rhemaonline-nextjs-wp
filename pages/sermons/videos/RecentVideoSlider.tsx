@@ -60,8 +60,11 @@ export default function PopularVideoSlider({ slides }: propType) {
               <Image
                 src={`https://i.ytimg.com/vi/${slide.id.videoId}/hqdefault.jpg`}
                 alt={slide.snippet.title}
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover"
+                }}
               />
             </ImgWrapper>
             <div

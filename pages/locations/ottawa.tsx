@@ -21,7 +21,16 @@ export default function Ottawa() {
           <div className="icon-info">
             <a href="tel:6133211781" className="icon-group">
               <div className="icon">
-                <Image src="/img/phone-icon.png" alt="phone icon" width={75} height={75} />
+                <Image
+                  src="/img/phone-icon.png"
+                  alt="phone icon"
+                  width={75}
+                  height={75}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }}
+                />
               </div>
               <div className="text">
                 <h4>Phone</h4>
@@ -30,7 +39,16 @@ export default function Ottawa() {
             </a>
             <div className="icon-group">
               <div className="icon">
-                <Image src="/img/fax-icon.png" alt="fax icon" width={75} height={75} />
+                <Image
+                  src="/img/fax-icon.png"
+                  alt="fax icon"
+                  width={75}
+                  height={75}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }}
+                />
               </div>
               <div className="text">
                 <h4>Fax</h4>
@@ -39,7 +57,16 @@ export default function Ottawa() {
             </div>
             <a href="mailto:info@rhemaonline.ca" className="icon-group">
               <div className="icon">
-                <Image src="/img/email-icon.png" alt="email icon" width={75} height={75} />
+                <Image
+                  src="/img/email-icon.png"
+                  alt="email icon"
+                  width={75}
+                  height={75}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }}
+                />
               </div>
               <div className="text">
                 <h4>Email</h4>
@@ -48,7 +75,16 @@ export default function Ottawa() {
             </a>
             <div className="icon-group">
               <div className="icon">
-                <Image src="/img/hours-icon.png" alt="hours icon" width={60} height={60} />
+                <Image
+                  src="/img/hours-icon.png"
+                  alt="hours icon"
+                  width={60}
+                  height={60}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }}
+                />
               </div>
               <div className="text">
                 <h4>Hours</h4>
@@ -84,11 +120,7 @@ export default function Ottawa() {
           </div>
           <div className="btn-wrapper">
             <div className="btn-bg">
-              <Button
-                className="btn"
-                href={paths.formLinks.contactUs}
-                data-open-in-church-center-modal="true"
-              >
+              <Button className="btn" href={paths.formLinks.contactUs} data-open-in-church-center-modal="true">
                 Contact Us
               </Button>
             </div>

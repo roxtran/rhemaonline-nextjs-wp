@@ -22,7 +22,15 @@ const getConnected = () => {
           {getConnectedData.map((item) => (
             <div className="item" key={item.title} id={item.id}>
               <ImgWrapper>
-                <Image src={item.imgUrl} alt={item.title} layout="fill" objectFit="cover" />
+                <Image
+                  src={item.imgUrl}
+                  alt={item.title}
+                  fill
+                  sizes="100vw"
+                  style={{
+                    objectFit: "cover"
+                  }}
+                />
               </ImgWrapper>
               <div className="content-wrapper">
                 <h3>{item.title}</h3>

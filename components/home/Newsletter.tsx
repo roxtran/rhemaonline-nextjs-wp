@@ -1,40 +1,48 @@
-import Image from 'next/image'
-import styled from 'styled-components'
-import { Button, Container, ImgWrapper } from 'styles/GlobalStyle'
+import Image from "next/image";
+import styled from "styled-components";
+import { Button, Container, ImgWrapper } from "styles/GlobalStyle";
 // import newsletters from 'data/newsletters'
-import NewsletterType from 'types/newsletter'
+import NewsletterType from "types/newsletter";
 
 interface Props {
-  newsletters: NewsletterType[]
+  newsletters: NewsletterType[];
 }
 
 const Newsletter = ({ newsletters }: Props) => {
   return (
     <NewsletterWrapper>
-      <div className='text'>
+      <div className="text">
         <h2>Our Weekly Newsletters</h2>
         <p>
           This is our way of keeping you up to date on all our events, activities, and relevant news. We invite you to
           check out what’s happing @ Rhema this week.
         </p>
-        <Button href={newsletters[0].link} target='_blank' className='btn'>
+        <Button href={newsletters[0].link} target="_blank" className="btn">
           Learn More
         </Button>
       </div>
-      <div className='newsletters'>
+      <div className="newsletters">
         {newsletters.map((newsletter) => (
-          <a key={newsletter.link} className='newsletter' href={newsletter.link} target='_blank'>
+          <a key={newsletter.link} className="newsletter" href={newsletter.link} target="_blank">
             <ImgWrapper>
-              <Image src={newsletter.imgUrl} alt='newsletter image' layout='fill' objectFit='cover' />
+              <Image
+                src={newsletter.imgUrl}
+                alt="newsletter image"
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover"
+                }}
+              />
             </ImgWrapper>
           </a>
         ))}
       </div>
     </NewsletterWrapper>
-  )
-}
+  );
+};
 
-export default Newsletter
+export default Newsletter;
 
 const NewsletterWrapper = styled(Container)`
   width: 1200px;
@@ -86,4 +94,4 @@ const NewsletterWrapper = styled(Container)`
       min-height: calc(300px / 3);
     }
   }
-`
+`;

@@ -60,14 +60,15 @@ export default function PopularVideoSlider({ slides }: propType) {
               <Image
                 src={`https://i.ytimg.com/vi/${slide.id.videoId}/hqdefault.jpg`}
                 alt={slide.snippet.title}
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover"
+                }}
               />
             </ImgWrapper>
             <div className="popular-video-text">
-              <h4
-                dangerouslySetInnerHTML={{ __html: shortenString(slide.snippet.title, 50) + "..." }}
-              />
+              <h4 dangerouslySetInnerHTML={{ __html: shortenString(slide.snippet.title, 50) + "..." }} />
               <div className="date">{formatDate(slide.snippet.publishedAt)}</div>
             </div>
           </div>

@@ -29,10 +29,19 @@ export default function MiddleMenu() {
           }}
         >
           <Link href={paths.leadership}>
-            <Image src="/img/leadership-icon.svg" width={50} height={50} alt="leadership-icon" />
+            <Image
+              src="/img/leadership-icon.svg"
+              width={50}
+              height={50}
+              alt="leadership-icon"
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }}
+            />
             <p>
-              With a warm smile, the leaders of Rhema Christian Ministries are taskes with
-              operational and ecclesiatial exellence.
+              With a warm smile, the leaders of Rhema Christian Ministries are tasked with operational and
+              ecclesiastical excellence.
             </p>
             <h4>Leadership</h4>
           </Link>
@@ -49,11 +58,17 @@ export default function MiddleMenu() {
         >
           <Link href={paths.beliefs}>
             <motion.div>
-              <Image src="/img/beliefs-icon.svg" width={50} height={50} alt="beliefs-icon" />
-              <p>
-                At Rhema what we believe is important to us but not as much as the one in whom we
-                believe.
-              </p>
+              <Image
+                src="/img/beliefs-icon.svg"
+                width={50}
+                height={50}
+                alt="beliefs-icon"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }}
+              />
+              <p>At Rhema what we believe is important to us but not as much as the one in whom we believe.</p>
               <h4>Beliefs</h4>
             </motion.div>
           </Link>
@@ -75,6 +90,10 @@ export default function MiddleMenu() {
                 width={57.5}
                 height={50}
                 alt="ministries-icon"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }}
               />
               <p>From our family to yours.</p>
               <h4>Ministries</h4>
@@ -93,10 +112,18 @@ export default function MiddleMenu() {
         >
           <Link href={paths.grow}>
             <motion.div>
-              <Image src="/img/grow-icon.svg" width={50} height={50} alt="grow-icon" />
+              <Image
+                src="/img/grow-icon.svg"
+                width={50}
+                height={50}
+                alt="grow-icon"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }}
+              />
               <p>
-                We invite you to hear the voice of the Master calling you, even as “Deep calleth
-                unto deep” (Psalm 42:7)
+                We invite you to hear the voice of the Master calling you, even as “Deep calleth unto deep” (Psalm 42:7)
               </p>
               <h4>Grow</h4>
             </motion.div>

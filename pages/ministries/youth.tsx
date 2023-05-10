@@ -14,29 +14,27 @@ const youth = () => {
         <div className="wrapper">
           <div className="content-wrapper">
             <p>
-              <q>Jesus is the source. All youth must be plugged into the source.</q> ~ Plugged In
-              Youth Adult Ministry
+              <q>Jesus is the source. All youth must be plugged into the source.</q> ~ Plugged In Youth Adult Ministry
             </p>
             <p>
-              <b>Plugged In</b> is a social network of youth stretching across Canada with a mandate
-              to explore critical issues facing youth and young adults between the ages of 12 – 23
-              and the role that God’s Kingdom plays in bringing solutions to these issues. The
-              Fellowship is also tasked with developing and executing programs that ensure that
-              youth are spiritually and educationally empowered, building healthy relationships, and
+              <b>Plugged In</b> is a social network of youth stretching across Canada with a mandate to explore critical
+              issues facing youth and young adults between the ages of 12 – 23 and the role that God’s Kingdom plays in
+              bringing solutions to these issues. The Fellowship is also tasked with developing and executing programs
+              that ensure that youth are spiritually and educationally empowered, building healthy relationships, and
               engaging in wholesome activities.
             </p>
             <div className="icons">
-              <a
-                title="@pluggedInRhema"
-                href="https://www.instagram.com/pluggedInRhema/"
-                target="_blank"
-              >
+              <a title="@pluggedInRhema" href="https://www.instagram.com/pluggedInRhema/" target="_blank">
                 <div className="icon">
                   <Image
                     src="/img/social/instagram-icon-blue.svg"
                     alt="instagram icon"
                     width={42}
                     height={42}
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }}
                   />
                 </div>
               </a>
@@ -48,6 +46,10 @@ const youth = () => {
                     alt="email icon"
                     width={42}
                     height={42}
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }}
                   />
                 </div>
               </a>

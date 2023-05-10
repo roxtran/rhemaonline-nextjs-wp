@@ -33,11 +33,10 @@ export default function Connect({ services }: Props) {
         <div className="desc">
           <h2>The Care Centre Services</h2>
           <p>
-            The Care Centre team is the central hub of our ministry. They are the "one-stop
-            destination" for all of our member and staff needs. From arranging a baby dedication for
-            your child or grandchild to requesting a visit from our church family for a loved one
-            that is ill, to enquiring about water baptism, and a whole lot more, the Care Centre
-            team is here to serve you with excellence. Be sure to let us know how we have performed.
+            The Care Centre team is the central hub of our ministry. They are the "one-stop destination" for all of our
+            member and staff needs. From arranging a baby dedication for your child or grandchild to requesting a visit
+            from our church family for a loved one that is ill, to enquiring about water baptism, and a whole lot more,
+            the Care Centre team is here to serve you with excellence. Be sure to let us know how we have performed.
           </p>
         </div>
         <div className="services">
@@ -47,13 +46,14 @@ export default function Connect({ services }: Props) {
                 <Image
                   src={service.featuredImage.node.sourceUrl}
                   alt={service.title}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  sizes="100vw"
+                  style={{
+                    objectFit: "cover"
+                  }}
                 />
               </ImgWrapper>
-              {service.formLink.formLink.includes(
-                "https://rhemachristianministries.churchcenter.com/people/forms/"
-              ) ? (
+              {service.formLink.formLink.includes("https://rhemachristianministries.churchcenter.com/people/forms/") ? (
                 <div className="text-wrapper">
                   <h3>{service.title}</h3>
                   <div dangerouslySetInnerHTML={{ __html: service.content }}></div>

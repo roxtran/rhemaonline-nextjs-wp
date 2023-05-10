@@ -1,79 +1,67 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import styled from 'styled-components'
-import paths from 'paths'
-import { motion } from 'framer-motion'
-import { slideLeft, slideRight, slideUp } from 'styles/animation'
+import Image from "next/image";
+import Link from "next/link";
+import styled from "styled-components";
+import paths from "paths";
+import { motion } from "framer-motion";
+import { slideLeft, slideRight, slideUp } from "styles/animation";
 
 const items = {
   show: {
     // boxShadow: '0px 7px 10px 0 rgba(122, 207, 255, 0.3)',
     // border: '4px solid rgb(16, 97, 162)',
-    borderRadius: '10px',
-    overflow: 'hidden',
-    transition: { duration: 0.01, type: 'spring', when: 'afterChildren' }
+    borderRadius: "10px",
+    overflow: "hidden",
+    transition: { duration: 0.01, type: "spring", when: "afterChildren" }
   }
-}
+};
 
 export default function MiddleMenu() {
   return (
     <CTAPanel>
-      <motion.div className='items' variants={items} initial='hidden' animate='show' exit='exit'>
+      <motion.div className="items" variants={items} initial="hidden" animate="show" exit="exit">
         <motion.div
-          className='item'
+          className="item"
           variants={slideRight}
           transition={{
             duration: 0.25,
-            type: 'spring',
+            type: "spring",
             delay: 0.25,
             damping: 8
           }}
         >
-          <Link href={paths.giving}>
-            Giving
-          </Link>
-          <div className='line'></div>
-          <Link href={paths.ministries}>
-            Ministries
-          </Link>
+          <Link href={paths.giving}>Giving</Link>
+          <div className="line"></div>
+          <Link href={paths.ministries}>Ministries</Link>
         </motion.div>
         <motion.div
-          className='item'
+          className="item"
           variants={slideUp}
           transition={{
             duration: 0.25,
-            type: 'spring',
+            type: "spring",
             delay: 0.15,
             damping: 8
           }}
         >
-          <Link href={paths.connect}>
-            The Care Centre Services
-          </Link>
-          <div className='line'></div>
-          <Link
-            href={paths.formLinks.prayerRequest}
-            data-open-in-church-center-modal='true'>
+          <Link href={paths.connect}>The Care Centre Services</Link>
+          <div className="line"></div>
+          <Link href={paths.formLinks.prayerRequest} data-open-in-church-center-modal="true">
             Prayer Request
           </Link>
         </motion.div>
         <motion.div
-          className='item'
+          className="item"
           variants={slideLeft}
           transition={{
             duration: 0.25,
-            type: 'spring',
+            type: "spring",
             delay: 0.15,
             damping: 8
           }}
         >
-          <Link href={`${paths.getConnected}#get-involved`}>
-            Get Involved
-          </Link>
-          <div className='line'></div>
-          <Link
-            href={paths.formLinks.becomeAMember}
-            data-open-in-church-center-modal='true'>
+          <Link href={`${paths.getConnected}#get-involved`}>Get Involved</Link>
+          <div className="line"></div>
+          <Link href={paths.formLinks.becomeAMember} data-open-in-church-center-modal="true">
             Become A Member
           </Link>
         </motion.div>
@@ -144,4 +132,4 @@ const CTAPanel = styled.div`
       border-bottom: 1px dashed var(--shadow-color);
     }
   }
-`
+`;
