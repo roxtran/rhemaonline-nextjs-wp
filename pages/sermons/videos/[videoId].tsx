@@ -9,6 +9,7 @@ import VideoType from "types/video";
 import { IoArrowBackOutline } from "react-icons/io5";
 import paths from "paths";
 import { formatDate } from "utils/formatter";
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
 interface Props {
   video: VideoType;
@@ -23,7 +24,7 @@ type Params = {
 export default function Sermons({ video }: Props) {
   return (
     <>
-      <Meta title={video[0].snippet.title + " - Rhema - Changing & Affecting Lives!"} />
+      <Meta title={video?.snippet?.title + " - Rhema - Changing & Affecting Lives!"} />
       <VideoContainer>
         <div className="wrapper">
           <Link href={paths.sermons} className="btn-back">
@@ -34,15 +35,15 @@ export default function Sermons({ video }: Props) {
             <iframe
               width="100%"
               height="100%"
-              src={`https://www.youtube.com/embed/${video[0].id.videoId}?rel=0&showinfo=1&autoplay=1&loop=0`}
+              src={`https://www.youtube.com/embed/${video?.id?.videoId}?rel=0&showinfo=1&autoplay=1&loop=0`}
               title="iframe video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             ></iframe>
           </VideoWrapper>
           <div className="text-wrapper">
-            <h3 className="title" dangerouslySetInnerHTML={{ __html: video[0].snippet.title }} />
-            <div className="subtitle">Rhema Christian Ministries • {formatDate(video[0].snippet.publishedAt)}</div>
+            <h3 className="title" dangerouslySetInnerHTML={{ __html: video?.snippet?.title }} />
+            <div className="subtitle">Rhema Christian Ministries • {formatDate(video?.snippet?.publishedAt)}</div>
             <div className="desc">
               Thank you for supporting Rhema Christian Ministries.
               <br /> If you're looking for ways to give, simply click here:{" "}
@@ -170,12 +171,50 @@ const VideoWrapper = styled.div`
   }
 `;
 
-const videos = popularVideos;
-videos.push(...recentVideos);
+const videos: VideoType[] = [];
 
 export const getStaticProps = async ({ params }: Params) => {
   const { videoId } = params;
-  const video = videos.filter((video) => video.id.videoId === videoId);
+
+  const client = new ApolloClient({
+    uri: process.env.WP_URL as string,
+    cache: new InMemoryCache()
+  });
+
+  const { data } = await client.query({
+    query: gql`
+      query getData {
+        recentVideos: sermonVideos(where: { title: "Recent Videos" }) {
+          nodes {
+            sermonVideoFields {
+              items
+            }
+          }
+        }
+        popularVideos: sermonVideos(where: { title: "Popular Videos" }) {
+          nodes {
+            sermonVideoFields {
+              items
+            }
+          }
+        }
+      }
+    `
+  });
+
+  const recentVideosData = data?.recentVideos?.nodes;
+  const popularVideosData = data?.popularVideos?.nodes;
+
+  const recentVideosString = recentVideosData[0].sermonVideoFields.items;
+  const recentVideos = JSON.parse(recentVideosString);
+
+  const popularVideosString = popularVideosData[0].sermonVideoFields.items;
+  const popularVideos = JSON.parse(popularVideosString);
+
+  videos.push(...recentVideos);
+  videos.push(...popularVideos);
+
+  const video = videos.find((video) => video.id.videoId === videoId);
 
   return {
     props: {
