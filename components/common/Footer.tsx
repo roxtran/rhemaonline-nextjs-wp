@@ -80,6 +80,14 @@ export default function Footer() {
                   2021 Financial Statement
                 </a>
               </li>
+              <li>
+                <a
+                  href="http://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2023/06/RCM-Final-Signed-FSs-2022.pdf"
+                  target="_blank"
+                >
+                  2022 Financial Statement
+                </a>
+              </li>
             </ul>
           </div>
           <div className="list">
@@ -242,7 +250,7 @@ const FooterWrapper = styled.div`
   position: relative;
   background: var(--light-grey-bg);
   height: 100%;
-  padding: 3.5%;
+  padding: 2% 3.5%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
