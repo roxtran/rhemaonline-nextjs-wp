@@ -1,35 +1,35 @@
-import Meta from 'components/common/meta'
-import NoteType from 'types/note'
-import HeadLine from 'components/common/HeadLine'
-import Sidebar from 'components/lessons/Sidebar'
-import LessonList from 'components/lessons/LessonList'
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
-import { LessonsContainer } from '../notes'
+import Meta from "components/common/meta";
+import NoteType from "types/note";
+import HeadLine from "components/common/HeadLine";
+import Sidebar from "components/items/Sidebar";
+import ItemList from "components/items/ItemList";
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+import { LessonsContainer } from "../notes";
 
 interface Props {
-  studies: NoteType[]
-  list: NoteType[]
+  studies: NoteType[];
+  list: NoteType[];
 }
 
 export default function Lessons({ studies, list }: Props) {
   // console.log(studies.categories.nodes.name)
   return (
     <>
-      <Meta title='Lessons - Rhema - Changing & Affecting Lives!' />
-      <HeadLine imgUrl='/img/sermons-img.jpg' title='Bible Studies' />
+      <Meta title="Lessons - Rhema - Changing & Affecting Lives!" />
+      <HeadLine imgUrl="/img/sermons-img.jpg" title="Bible Studies" />
       <LessonsContainer>
-        <LessonList title='Lessons' notes={studies} type='studies' />
-        <Sidebar title='Recent Studies' notes={list} />
+        <ItemList title="Lessons" items={studies} type="studies" />
+        <Sidebar title="Recent Studies" items={list} type="studies" />
       </LessonsContainer>
     </>
-  )
+  );
 }
 
 export async function getStaticProps() {
   const client = new ApolloClient({
     uri: process.env.WP_URL as string,
     cache: new InMemoryCache()
-  })
+  });
 
   const { data } = await client.query({
     query: gql`
@@ -60,7 +60,7 @@ export async function getStaticProps() {
       first: 3,
       after: null
     }
-  })
+  });
 
   return {
     props: {
@@ -68,5 +68,5 @@ export async function getStaticProps() {
       list: data?.studiesList?.nodes
     },
     revalidate: 30
-  }
+  };
 }

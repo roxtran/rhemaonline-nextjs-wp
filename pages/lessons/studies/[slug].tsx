@@ -3,11 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import HeadLine from "components/common/HeadLine";
 import Meta from "components/common/meta";
-import Sidebar from "components/lessons/Sidebar";
+import Sidebar from "components/items/Sidebar";
 import { Button, ImgWrapper } from "styles/GlobalStyle";
 import { formatDate } from "utils/formatter";
-import styled from "styled-components";
-import { LessonsContainer } from "../notes/index";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import paths from "paths";
 import { NoteContainer } from "../notes/[slug]";
@@ -64,7 +62,7 @@ export default function BibleStudy({ note, list }: Props) {
             </div>
           )}
         </div>
-        <Sidebar title="Recent Studies" notes={list} />
+        <Sidebar title="Recent Studies" items={list} type="studies" />
       </NoteContainer>
     </>
   );

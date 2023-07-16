@@ -5,10 +5,11 @@ import { rem } from "styles/GlobalStyle";
 
 interface Props {
   title: string;
-  notes: NoteType[];
+  items: NoteType[];
+  type: string;
 }
 
-export default function Sidebar({ title, notes }: Props) {
+export default function Sidebar({ title, items, type }: Props) {
   const formatDate = (date: string) => {
     const newDate = new Date(date).toLocaleDateString("en-US", {
       day: "numeric",
@@ -17,21 +18,16 @@ export default function Sidebar({ title, notes }: Props) {
     });
     return newDate;
   };
+  const href = type === "notes" || type === "studies" ? `lessons/${type}` : type;
   return (
     <SidebarWrapper>
       <div className="wrapper">
         <h3>{title}</h3>
         <ul>
-          {notes?.map((note) => (
-            <li key={note.slug}>
-              <Link
-                href={`/lessons/${title.toLowerCase().includes("notes") ? "notes" : "studies"}/${
-                  note.slug
-                }`}
-              >
-                {note.title}
-              </Link>
-              <p className="date">{formatDate(note.date)}</p>
+          {items?.map((item) => (
+            <li key={item.slug}>
+              <Link href={`/${href}/${item.slug}`}>{item.title}</Link>
+              <p className="date">{formatDate(item.date)}</p>
             </li>
           ))}
         </ul>

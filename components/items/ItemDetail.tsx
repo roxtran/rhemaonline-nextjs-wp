@@ -7,23 +7,23 @@ import NoteType from "types/note";
 import { formatDate, shortenString } from "utils/formatter";
 
 interface Props {
-  note: NoteType;
+  item: NoteType;
   type: string;
 }
 
-export default function LessonDetail({ note, type }: Props) {
-  const summary = `<p>${shortenString(note.excerpt, 300)}... <br><br>Read More >></p>`;
+export default function ItemDetail({ item, type }: Props) {
+  const summary = `<p>${shortenString(item.excerpt, 300)}... <br><br>Read More >></p>`;
 
   return (
-    <LessonWrapper>
-      <Link href={`${paths.lessons}/${type}/${note.slug}`}>
-        {note.featuredImage !== null && (
+    <ItemWrapper>
+      <Link href={`${type}/${item.slug}`}>
+        {item.featuredImage !== null && (
           <>
             <div className="hover"></div>
             <ImgWrapper>
               <Image
-                src={note.featuredImage.node.sourceUrl}
-                alt={note.title}
+                src={item.featuredImage.node.sourceUrl}
+                alt={item.title}
                 fill
                 sizes="100vw"
                 style={{
@@ -34,8 +34,8 @@ export default function LessonDetail({ note, type }: Props) {
           </>
         )}
         <div className="text">
-          <div className="date">{formatDate(note.date)}</div>
-          <h3>{note.title}</h3>
+          <div className="date">{formatDate(item.date)}</div>
+          <h3>{item.title}</h3>
           <div
             dangerouslySetInnerHTML={{
               __html: summary
@@ -43,10 +43,10 @@ export default function LessonDetail({ note, type }: Props) {
           ></div>
         </div>
       </Link>
-    </LessonWrapper>
+    </ItemWrapper>
   );
 }
-const LessonWrapper = styled.div`
+const ItemWrapper = styled.div`
   position: relative;
   padding: 2rem 0;
   width: ${rem(822)};

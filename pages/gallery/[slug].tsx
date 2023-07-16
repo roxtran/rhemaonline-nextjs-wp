@@ -7,13 +7,13 @@ import Sidebar from "components/items/Sidebar";
 import { Button, ImgWrapper, rem } from "styles/GlobalStyle";
 import { formatDate } from "utils/formatter";
 import styled from "styled-components";
-import { LessonsContainer } from "./index";
+import { EventsContainer } from "./index";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import paths from "paths";
 // import { validate } from 'graphql'
 
 interface Props {
-  note: NoteType;
+  event: NoteType;
   list: NoteType[];
 }
 
@@ -23,47 +23,27 @@ type Params = {
   };
 };
 
-export default function SermonNote({ note, list }: Props) {
+export default function Event({ event, list }: Props) {
   return (
     <>
-      <Meta title={note.title + " - Rhema - Changing & Affecting Lives!"} />
-      <HeadLine imgUrl={note.featuredImage.node.sourceUrl} title={note.title} blur="blur(30px)" />
-      <NoteContainer>
+      <Meta title={event.title + " - Rhema - Changing & Affecting Lives!"} />
+      <HeadLine imgUrl="/img/events-img1.webp" title={event.title} blur="none" />
+      <EventContainer>
         <div className="note-wrapper">
-          <p className="date">{formatDate(note.date)}</p>
+          <p className="date">{formatDate(event.date)}</p>
           <div className="line"></div>
           <p>
-            in <Link href={paths.notes}>Sermon Notes</Link>
+            in <Link href={paths.gallery}>Gallery</Link>
           </p>
-          <ImgWrapper>
-            <Image
-              src={note.featuredImage.node.sourceUrl}
-              alt={note.title}
-              fill
-              sizes="100vw"
-              style={{
-                objectFit: "cover"
-              }}
-            />
-          </ImgWrapper>
-          <article dangerouslySetInnerHTML={{ __html: note.content }}></article>
-          {note.docFile.docFile !== null && (
-            <div className="btn-wrapper">
-              <div className="btn-bg">
-                <Button className="btn" href={note.docFile.docFile.mediaItemUrl} target="_blank">
-                  Download
-                </Button>
-              </div>
-            </div>
-          )}
+          <article dangerouslySetInnerHTML={{ __html: event.content }}></article>
         </div>
-        <Sidebar title="Recent Notes" items={list} type="notes" />
-      </NoteContainer>
+        <Sidebar title="Recent Events" items={list} type="gallery" />
+      </EventContainer>
     </>
   );
 }
 
-export const NoteContainer = styled(LessonsContainer)`
+export const EventContainer = styled(EventsContainer)`
   .note-wrapper {
     position: relative;
     width: ${rem(822)};
@@ -89,6 +69,7 @@ export const NoteContainer = styled(LessonsContainer)`
     }
     article {
       margin: 2rem 0;
+      overflow: hidden;
       ul {
         padding-left: 40px;
       }
@@ -139,8 +120,8 @@ export const getStaticProps = async ({ params }: Params) => {
   const { slug } = params;
   const { data } = await client.query({
     query: gql`
-      query getNotes($id: ID!) {
-        sermonNote(id: $id, idType: SLUG) {
+      query getEvents($id: ID!) {
+        event(id: $id, idType: SLUG) {
           title
           date
           content
@@ -149,13 +130,8 @@ export const getStaticProps = async ({ params }: Params) => {
               sourceUrl
             }
           }
-          docFile {
-            docFile {
-              mediaItemUrl
-            }
-          }
         }
-        sermonNotes {
+        events {
           nodes {
             title
             slug
@@ -170,8 +146,8 @@ export const getStaticProps = async ({ params }: Params) => {
   });
   return {
     props: {
-      note: data?.sermonNote,
-      list: data?.sermonNotes?.nodes
+      event: data?.event,
+      list: data?.events?.nodes
     },
     revalidate: 30
   };
@@ -180,8 +156,8 @@ export const getStaticProps = async ({ params }: Params) => {
 export const getStaticPaths = async () => {
   const { data } = await client.query({
     query: gql`
-      query SermonNotes {
-        sermonNotes {
+      query getEvents {
+        events {
           nodes {
             slug
           }
@@ -189,9 +165,9 @@ export const getStaticPaths = async () => {
       }
     `
   });
-  const notes = data?.sermonNotes?.nodes;
-  const paths = notes.map((note: { slug: string }) => ({
-    params: { slug: note.slug }
+  const events = data?.events?.nodes;
+  const paths = events.map((event: { slug: string }) => ({
+    params: { slug: event.slug }
   }));
   return { paths, fallback: "blocking" };
 };

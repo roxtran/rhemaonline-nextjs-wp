@@ -8,25 +8,25 @@ import { ApolloClient, InMemoryCache, gql, DefaultOptions } from "@apollo/client
 import { def } from "styles/GlobalStyle";
 
 interface Props {
-  notes: NoteType[];
+  events: NoteType[];
   list: NoteType[];
 }
 
-export default function Lessons({ notes, list }: Props) {
+export default function Gallery({ events, list }: Props) {
   // console.log(notes.categories.nodes.name)
   return (
     <>
-      <Meta title="Lessons - Rhema - Changing & Affecting Lives!" />
-      <HeadLine imgUrl="/img/sermons-img.jpg" title="Sermon Notes" />
-      <LessonsContainer>
-        <ItemList title="Lessons" items={notes} type="notes" />
-        <Sidebar title="Recent Notes" items={list} type="notes" />
-      </LessonsContainer>
+      <Meta title="Event Gallery - Rhema - Changing & Affecting Lives!" />
+      <HeadLine imgUrl="/img/events-img1.webp" title="Event Gallery" />
+      <EventsContainer>
+        <ItemList title="Events" items={events} type="gallery" />
+        <Sidebar title="Recent Events" items={list} type="gallery" />
+      </EventsContainer>
     </>
   );
 }
 
-export const LessonsContainer = styled.div`
+export const EventsContainer = styled.div`
   position: relative;
   margin: 0 auto;
   padding: 0 2rem;
@@ -61,8 +61,8 @@ export async function getStaticProps() {
 
   const { data } = await client.query({
     query: gql`
-      query getSermonNotes($first: Int!, $after: String) {
-        sermonNotes(first: $first, after: $after) {
+      query getEvents($first: Int!, $after: String) {
+        events(first: $first, after: $after) {
           nodes {
             title
             slug
@@ -75,7 +75,7 @@ export async function getStaticProps() {
             }
           }
         }
-        sermonList: sermonNotes {
+        eventList: events {
           nodes {
             title
             slug
@@ -92,8 +92,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      notes: data?.sermonNotes?.nodes,
-      list: data?.sermonList?.nodes
+      events: data?.events?.nodes,
+      list: data?.eventList?.nodes
     },
     revalidate: 30
   };
