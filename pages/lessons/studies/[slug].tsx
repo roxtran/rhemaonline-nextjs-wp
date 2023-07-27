@@ -8,7 +8,7 @@ import { Button, ImgWrapper } from "styles/GlobalStyle";
 import { formatDate } from "utils/formatter";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import paths from "paths";
-import { NoteContainer } from "../notes/[slug]";
+import { NoteContainer } from "../../sermons/notes/[slug]";
 // import { validate } from 'graphql'
 
 interface Props {

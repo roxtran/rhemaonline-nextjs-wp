@@ -27,8 +27,8 @@ const Home = ({ slides }: Props) => {
         </video>
       </VideoWrapper> */}
       <Hero slides={slides} />
-      <CTAPanel />
       <Welcome />
+      <CTAPanel />
       <Subscribe />
       <Newsletter newsletters={newsletters} />
     </>
@@ -58,9 +58,7 @@ export async function getStaticProps() {
   const { data } = await client.query({
     query: gql`
       query getData($numOfNewsletters: Int!, $after: String) {
-        slides(
-          where: { orderby: { field: SLUG, order: ASC } }
-        ) {
+        slides(where: { orderby: { field: SLUG, order: ASC } }) {
           nodes {
             featuredImage {
               node {

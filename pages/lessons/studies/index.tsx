@@ -4,7 +4,7 @@ import HeadLine from "components/common/HeadLine";
 import Sidebar from "components/items/Sidebar";
 import ItemList from "components/items/ItemList";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
-import { LessonsContainer } from "../notes";
+import { LessonsContainer } from "../../sermons/notes";
 
 interface Props {
   studies: NoteType[];

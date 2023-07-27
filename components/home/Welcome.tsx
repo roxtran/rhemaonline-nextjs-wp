@@ -19,7 +19,7 @@ export default function Welcome() {
         />
       </ImgWrapper>
       <motion.div className="text">
-        <h2>Welcome to Rhema</h2>
+        <h2>Rhema Christian Ministries</h2>
         <p className="quote">
           “We are a church that believes in Jesus Christ; a church that loves God and His people."
         </p>
@@ -41,7 +41,8 @@ export const WelcomeWrapper = styled(motion.div)`
   position: relative;
   width: 1200px;
   max-width: 80vw;
-  margin: 0 auto 7rem;
+  margin: 0 auto 5rem;
+  padding-top: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;

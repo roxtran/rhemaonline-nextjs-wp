@@ -35,7 +35,7 @@ export default function Sermons({ recentVideosData, popularVideosData }: Props) 
       <Meta title="Sermons - Rhema - Changing & Affecting Lives!" />
       <SermonsContainer>
         <div className="wrapper">
-          <h2 className="title">Sermons</h2>
+          <h2 className="title">Recent Sermon</h2>
           <FeaturedWrapper onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>
             <Link href={`${paths.sermons}/videos/${latestVideo.id.videoId}`}>
               <FeatureVideo
@@ -53,11 +53,11 @@ export default function Sermons({ recentVideosData, popularVideosData }: Props) 
             </Link>
           </FeaturedWrapper>
           <PopularVideoWrapper>
-            <h4>Popular Sermons</h4>
+            <h4>Most Viewed Sermons</h4>
             <PopularVideoSlider slides={popularVideos} />
           </PopularVideoWrapper>
           <RecentVideoWrapper>
-            <h4>Recent Sermons</h4>
+            <h4>Streamed Sermons</h4>
             <RecentVideoSlider slides={recentVideos} />
           </RecentVideoWrapper>
         </div>

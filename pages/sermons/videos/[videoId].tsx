@@ -45,9 +45,12 @@ export default function Sermons({ video }: Props) {
             <h3 className="title" dangerouslySetInnerHTML={{ __html: video?.snippet?.title }} />
             <div className="subtitle">Rhema Christian Ministries • {formatDate(video?.snippet?.publishedAt)}</div>
             <div className="desc">
-              Thank you for supporting Rhema Christian Ministries.
-              <br /> If you're looking for ways to give, simply click here:{" "}
-              <Link href="https://rhemaonline.ca/giving/">https://rhemaonline.ca/giving/</Link>
+              <p>
+                Thank you for supporting Rhema Christian Ministries.
+                <br /> If you're looking for ways to give, simply click here:{" "}
+                <Link href="https://rhemaonline.ca/giving/">https://rhemaonline.ca/giving/</Link>
+              </p>
+              <p dangerouslySetInnerHTML={{ __html: video?.snippet?.description }}></p>
             </div>
           </div>
           <div className="button-wrapper">

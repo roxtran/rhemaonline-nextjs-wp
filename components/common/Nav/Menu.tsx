@@ -27,27 +27,27 @@ export default function Menu({ open, setOpen }: Props) {
         </div>
       </div> */}
       <NavLink href={paths.location}>
-        <a onClick={() => setOpen(!open)}>Location</a>
+        <a onClick={() => setOpen(!open)}>Visit Us</a>
       </NavLink>
       <NavLink href={paths.connect}>
         <a onClick={() => setOpen(!open)}>Connect</a>
       </NavLink>
-      <NavLink href={paths.sermons}>
-        <a onClick={() => setOpen(!open)}>Sermons</a>
-      </NavLink>
       <div className="dropdown">
         <NavLink href="#">
-          <a>Lessons</a>
+          <a>Sermons</a>
         </NavLink>
         <div className="dropdown-content">
-          <NavLink href={paths.notes}>
-            <a onClick={() => setOpen(!open)}>Sermon Notes</a>
+          <NavLink href={paths.sermons}>
+            <a onClick={() => setOpen(!open)}>Videos</a>
           </NavLink>
-          <NavLink href={paths.studies}>
-            <a onClick={() => setOpen(!open)}>Bible Studies</a>
+          <NavLink href={paths.notes}>
+            <a onClick={() => setOpen(!open)}>Notes</a>
           </NavLink>
         </div>
       </div>
+      <NavLink href={paths.studies}>
+        <a onClick={() => setOpen(!open)}>Bible Studies</a>
+      </NavLink>
       <NavLink href={paths.liveStream}>
         <a onClick={() => setOpen(!open)}>Live Stream</a>
       </NavLink>
