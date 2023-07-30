@@ -4,7 +4,7 @@ export default [
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/foodbank/foodbank-slide-1.jpg"
+        sourceUrl: "/img/foodbank/new/1.jpg"
       }
     },
     slideFields: {
@@ -16,7 +16,7 @@ export default [
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/foodbank/foodbank-slide-2.jpg"
+        sourceUrl: "/img/foodbank/new/2.jpg"
       }
     },
     slideFields: {
@@ -28,7 +28,7 @@ export default [
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/foodbank/foodbank-slide-3.jpg"
+        sourceUrl: "/img/foodbank/new/3.jpg"
       }
     },
     slideFields: {
@@ -40,7 +40,7 @@ export default [
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/foodbank/foodbank-slide-4.jpg"
+        sourceUrl: "/img/foodbank/new/4.jpg"
       }
     },
     slideFields: {
@@ -52,7 +52,7 @@ export default [
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/foodbank/foodbank-slide-5.jpg"
+        sourceUrl: "/img/foodbank/new/5.jpg"
       }
     },
     slideFields: {
@@ -64,19 +64,7 @@ export default [
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/foodbank/foodbank-slide-6.jpg"
-      }
-    },
-    slideFields: {
-      ctaUrl: ""
-    }
-  },
-  {
-    title: "slide 7",
-    content: "",
-    featuredImage: {
-      node: {
-        sourceUrl: "/img/foodbank/foodbank-slide-7.jpg"
+        sourceUrl: "/img/foodbank/new/6.jpg"
       }
     },
     slideFields: {
@@ -88,7 +76,31 @@ export default [
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/foodbank/foodbank-slide-8.jpg"
+        sourceUrl: "/img/foodbank/new/8.jpg"
+      }
+    },
+    slideFields: {
+      ctaUrl: ""
+    }
+  },
+  {
+    title: "slide 9",
+    content: "",
+    featuredImage: {
+      node: {
+        sourceUrl: "/img/foodbank/new/9.jpg"
+      }
+    },
+    slideFields: {
+      ctaUrl: ""
+    }
+  },
+  {
+    title: "slide 9",
+    content: "",
+    featuredImage: {
+      node: {
+        sourceUrl: "/img/foodbank/new/10.jpg"
       }
     },
     slideFields: {
