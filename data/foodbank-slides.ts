@@ -70,41 +70,5 @@ export default [
     slideFields: {
       ctaUrl: ""
     }
-  },
-  {
-    title: "slide 8",
-    content: "",
-    featuredImage: {
-      node: {
-        sourceUrl: "/img/foodbank/new/8.jpg"
-      }
-    },
-    slideFields: {
-      ctaUrl: ""
-    }
-  },
-  {
-    title: "slide 9",
-    content: "",
-    featuredImage: {
-      node: {
-        sourceUrl: "/img/foodbank/new/9.jpg"
-      }
-    },
-    slideFields: {
-      ctaUrl: ""
-    }
-  },
-  {
-    title: "slide 9",
-    content: "",
-    featuredImage: {
-      node: {
-        sourceUrl: "/img/foodbank/new/10.jpg"
-      }
-    },
-    slideFields: {
-      ctaUrl: ""
-    }
   }
 ];
