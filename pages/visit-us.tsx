@@ -9,7 +9,7 @@ import paths from "paths";
 export default function Location() {
   return (
     <>
-      <Meta title="Toronto Location - Rhema - Changing & Affecting Lives!" />
+      <Meta title="Visit Us - Rhema - Changing & Affecting Lives!" />
       <Head>
         <script src="https://js.churchcenter.com/modal/v1"></script>
       </Head>

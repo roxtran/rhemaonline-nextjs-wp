@@ -10,11 +10,12 @@ interface HeadLineProps {
   btnText?: string;
   btnLink?: string;
   height?: string;
+  top?: string;
 }
 
-export default function HeadLine({ imgUrl, title, blur, desc, btnText, btnLink, height }: HeadLineProps) {
+export default function HeadLine({ imgUrl, title, blur, desc, btnText, btnLink, height, top }: HeadLineProps) {
   return (
-    <HeadLineWrapper height={height || "450px"}>
+    <HeadLineWrapper height={height || "450px"} top={top || "0px"}>
       <Image
         src={imgUrl}
         alt="headline image"
@@ -37,7 +38,7 @@ export default function HeadLine({ imgUrl, title, blur, desc, btnText, btnLink, 
     </HeadLineWrapper>
   );
 }
-const HeadLineWrapper = styled.div<{ height: string }>`
+const HeadLineWrapper = styled.div<{ height: string; top: string }>`
   position: relative;
   height: ${(props) => props.height};
   image {
@@ -54,7 +55,7 @@ const HeadLineWrapper = styled.div<{ height: string }>`
     position: absolute;
     text-align: center;
     color: #fff;
-    top: calc(50% + 50px);
+    top: calc(50% + 50px - ${(props) => props.top});
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;

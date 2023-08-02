@@ -32,6 +32,8 @@ export default {
   instagramAccount: "https://www.instagram.com/rhemacanada/",
   twitterAccount: "https://twitter.com/rhemacanada?lang=en",
   youtubeChannel: "https://www.youtube.com/channel/UCNjybtMYeMfwur19Gd5GvRg",
+  spotify: "https://open.spotify.com/show/5hPhbj8qFlOeYWnmHxijxa",
+  applePodcast: "https://podcasts.apple.com/ca/podcast/the-rhema-experience-online/id1540404429",
   office365Site: "https://login.microsoftonline.com/",
 
   // form links

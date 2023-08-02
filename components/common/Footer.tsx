@@ -121,7 +121,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="icons">
+        <SocialIcons>
           <a
             title="Bible"
             onClick={() => {
@@ -239,7 +239,7 @@ export default function Footer() {
               />
             </div>
           </a>
-        </div>
+        </SocialIcons>
         <div className="copyright">© {new Date().getFullYear()} Rhema Canada.</div>
       </FooterWrapper>
     </>
@@ -268,19 +268,7 @@ const FooterWrapper = styled.div`
       margin: 0.25rem 0;
     }
   }
-  .icons {
-    margin: 1.25rem 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .icon {
-    cursor: pointer;
-    margin: 0.75rem;
-    &:hover {
-      transform: translateY(-5px);
-    }
-  }
+
   .copyright {
     text-align: center;
   }
@@ -294,6 +282,20 @@ const FooterWrapper = styled.div`
     }
     ul {
       margin-bottom: 2rem;
+    }
+  }
+`;
+
+export const SocialIcons = styled.div`
+  margin: 1.25rem 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .icon {
+    cursor: pointer;
+    margin: 0.75rem;
+    &:hover {
+      transform: translateY(-5px);
     }
   }
 `;
