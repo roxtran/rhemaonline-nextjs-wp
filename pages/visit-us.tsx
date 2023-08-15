@@ -5,8 +5,11 @@ import Meta from "components/common/meta";
 import Video from "components/common/Video";
 import { Button, Container, def } from "styles/GlobalStyle";
 import paths from "paths";
+import { useState } from "react";
 
 export default function Location() {
+  const [displayServiceTime, setDisplayServiceTime] = useState(false);
+
   return (
     <>
       <Meta title="Visit Us - Rhema - Changing & Affecting Lives!" />
@@ -23,14 +26,38 @@ export default function Location() {
           <h2>Two Ways To Join Us</h2>
           <div className="two-ways-wrapper">
             <div className="in-person-wrapper">
-              <img src="" alt="" />
+              <Image
+                width={550}
+                height={300}
+                src="/img/in-person.jpg"
+                alt="In person photo"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }}
+              />
               <h3>In Person</h3>
               <div className="buttons-wrapper">
-                <Button>Service Times & Location</Button>
+                <Button
+                  onClick={() => {
+                    setDisplayServiceTime(!displayServiceTime);
+                  }}
+                >
+                  Service Times & Location
+                </Button>
               </div>
             </div>
             <div className="online-wrapper">
-              <img src="" alt="" />
+              <Image
+                width={550}
+                height={300}
+                src="/img/live-stream1.jpg"
+                alt="In person photo"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }}
+              />
               <h3>Online</h3>
               <div className="buttons-wrapper">
                 <Button className="btn" href={paths.liveStream}>
@@ -40,37 +67,32 @@ export default function Location() {
             </div>
           </div>
 
-          <div className="map-group">
-            <div className="text-wrapper">
-              <div className="text-border">
-                <h3>Our Service Times</h3>
-                <p>
-                  <span>Worship Service:</span> Sundays – 11am
-                </p>
-                <p>
-                  <span>Bible Study:</span> 1st, 2nd, & 3rd Wednesdays of every month - 7 PM
-                </p>
-                <span>49-40 Carl Hall Road, Toronto, ON, M3K 2C1</span>
+          {displayServiceTime && (
+            <div className="map-group">
+              <div className="text-wrapper">
+                <div className="text-border">
+                  <h3>Our Service Times</h3>
+                  <p>
+                    <span>Worship Service:</span> Sundays – 11am
+                  </p>
+                  <p>
+                    <span>Bible Study:</span> 1st, 2nd, & 3rd Wednesdays of every month - 7 PM
+                  </p>
+                  <span>49-40 Carl Hall Road, Toronto, ON, M3K 2C1</span>
+                </div>
+              </div>
+              <div className="map-wrapper">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.2156851747036!2d-79.48001688449921!3d43.74761767911818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b31f3db445a91%3A0xe4bdbb1f2de0ba9b!2s40%20Carl%20Hall%20Rd%20%2349%2C%20North%20York%2C%20ON%20M3K%202C1!5e0!3m2!1sen!2sca!4v1619679421572!5m2!1sen!2sca"
+                  width="520"
+                  height="300"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                ></iframe>
               </div>
             </div>
-            <div className="map-wrapper">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.2156851747036!2d-79.48001688449921!3d43.74761767911818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b31f3db445a91%3A0xe4bdbb1f2de0ba9b!2s40%20Carl%20Hall%20Rd%20%2349%2C%20North%20York%2C%20ON%20M3K%202C1!5e0!3m2!1sen!2sca!4v1619679421572!5m2!1sen!2sca"
-                width="520"
-                height="300"
-                style={{ border: 0 }}
-                loading="lazy"
-              ></iframe>
-            </div>
-          </div>
-          <div className="btn-wrapper">
-            <h2>Contact Us</h2>
-            {/* <div className="btn-bg">
-              <Button className="btn" href={paths.formLinks.contactUs} data-open-in-church-center-modal="true">
-                Contact Us
-              </Button>
-            </div> */}
-          </div>
+          )}
+          <h2>Contact Us</h2>
           <div className="icon-info">
             <div className="icon-group">
               <div className="icon">
@@ -174,6 +196,8 @@ export const LocationContainer = styled(Container)`
   position: relative;
   background: #fff;
   margin-top: -100px;
+  padding-top: 2rem;
+
   .content-wrapper {
     width: ${def.wrapper.width};
     max-width: 90vw;
@@ -181,6 +205,9 @@ export const LocationContainer = styled(Container)`
   h1,
   h2 {
     text-align: center;
+  }
+  h2 {
+    margin-bottom: 2rem;
   }
   .line {
     margin: 1rem auto;
@@ -193,12 +220,14 @@ export const LocationContainer = styled(Container)`
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
   }
   .in-person-wrapper,
   .online-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 1.5rem;
   }
   .icon-info {
     display: flex;
@@ -232,7 +261,7 @@ export const LocationContainer = styled(Container)`
   }
   .map-group {
     display: flex;
-    margin: 2rem 0 4rem 0;
+    margin: 0 0 4rem;
     justify-content: space-between;
     max-width: 1000px;
   }
@@ -269,30 +298,6 @@ export const LocationContainer = styled(Container)`
     border-radius: 5px;
     overflow: hidden;
     flex-wrap: wrap;
-  }
-  .btn-wrapper {
-    margin-top: 84px;
-    position: relative;
-    z-index: 1;
-    /* &:before {
-      content: "";
-      position: absolute;
-      top: -1px;
-      left: 20%;
-      right: 20%;
-      height: 15px;
-      border-radius: 50%;
-      box-shadow: 0 0 12px rgb(0 0 0 / 15%);
-      z-index: -1;
-    } */
-    .btn-bg {
-      background: #fff;
-      display: flex;
-      padding: 48px;
-    }
-    .btn {
-      margin: auto;
-    }
   }
   @media screen and (max-width: 768px) {
     .icon-info {
