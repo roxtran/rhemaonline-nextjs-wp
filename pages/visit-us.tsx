@@ -26,44 +26,44 @@ export default function Location() {
           <h2>Two Ways To Join Us</h2>
           <div className="two-ways-wrapper">
             <div className="in-person-wrapper">
-              <Image
-                width={550}
-                height={300}
-                src="/img/in-person.jpg"
-                alt="In person photo"
-                style={{
-                  maxWidth: "100%",
-                  height: "auto"
+              <Button
+                onClick={() => {
+                  setDisplayServiceTime(!displayServiceTime);
                 }}
-              />
-              <h3>In Person</h3>
-              <div className="buttons-wrapper">
-                <Button
-                  onClick={() => {
-                    setDisplayServiceTime(!displayServiceTime);
+              >
+                <Image
+                  width={550}
+                  height={300}
+                  src="/img/in-person.jpg"
+                  alt="In person photo"
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
                   }}
-                >
+                />
+                <div className="text-wrapper">
+                  <h3>In Person</h3>
                   Service Times & Location
-                </Button>
-              </div>
+                </div>
+              </Button>
             </div>
             <div className="online-wrapper">
-              <Image
-                width={550}
-                height={300}
-                src="/img/live-stream1.jpg"
-                alt="In person photo"
-                style={{
-                  maxWidth: "100%",
-                  height: "auto"
-                }}
-              />
-              <h3>Online</h3>
-              <div className="buttons-wrapper">
-                <Button className="btn" href={paths.liveStream}>
+              <Button href={paths.liveStream}>
+                <Image
+                  width={550}
+                  height={300}
+                  src="/img/live-stream-1.jpg"
+                  alt="In person photo"
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }}
+                />
+                <div className="text-wrapper">
+                  <h3>Online</h3>
                   Live Stream
-                </Button>
-              </div>
+                </div>
+              </Button>
             </div>
           </div>
 
@@ -205,8 +205,6 @@ export const LocationContainer = styled(Container)`
   h1,
   h2 {
     text-align: center;
-  }
-  h2 {
     margin-bottom: 2rem;
   }
   .line {
@@ -215,24 +213,52 @@ export const LocationContainer = styled(Container)`
     height: 2px;
     background: rgba(0, 0, 0, 0.2);
   }
-  .two-ways-wrapper,
-  .buttons-wrapper {
+  .two-ways-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-bottom: 1rem;
+
+    a {
+      position: relative;
+      padding: 0;
+
+      img {
+        filter: brightness(30%);
+      }
+      .text-wrapper {
+        position: absolute;
+        color: #fff;
+        top: 50%;
+        width: 100%;
+        transform: translate(0, -50%);
+        opacity: 100%;
+
+        h3 {
+          color: #fff;
+        }
+      }
+
+      &:hover img {
+        filter: brightness(100%);
+      }
+      &:hover .text-wrapper {
+        opacity: 0%;
+      }
+    }
   }
   .in-person-wrapper,
   .online-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
   .icon-info {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 0 2rem;
@@ -246,7 +272,7 @@ export const LocationContainer = styled(Container)`
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 1rem 2.5rem;
+    margin: 0 2.5rem;
   }
   .icon {
     width: 125px;
@@ -264,40 +290,42 @@ export const LocationContainer = styled(Container)`
     margin: 0 0 4rem;
     justify-content: space-between;
     max-width: 1000px;
-  }
-  .text-wrapper {
-    background: var(--blue);
-    color: #fff;
-    padding: 3rem 3.5rem 3.5rem 3.5rem;
-    border-radius: 5px;
-    height: 100%;
-    width: 600px;
-    z-index: 1;
-    .text-border {
-      width: 420px;
-      max-width: 28vw;
-    }
-    h2,
-    h3 {
+
+    .text-wrapper {
+      background: var(--blue);
       color: #fff;
+      padding: 3rem 3.5rem 3.5rem 3.5rem;
+      border-radius: 5px;
+      height: 100%;
+      width: 600px;
+      z-index: 1;
+
+      .text-border {
+        width: 420px;
+        /* max-width: 28vw; */
+      }
+      h2,
+      h3 {
+        color: #fff;
+      }
+      span {
+        font-weight: bold;
+      }
+      p {
+        margin: 1.3rem 0;
+      }
     }
-    span {
-      font-weight: bold;
+    .map-wrapper {
+      z-index: 2;
+      width: 500px;
+      height: 100%;
+      margin-left: -100px;
+      margin-top: 90px;
+      box-shadow: var(--shadow);
+      border-radius: 5px;
+      overflow: hidden;
+      flex-wrap: wrap;
     }
-    p {
-      margin: 1.3rem 0;
-    }
-  }
-  .map-wrapper {
-    z-index: 2;
-    width: 500px;
-    height: 100%;
-    margin-left: -100px;
-    margin-top: 90px;
-    box-shadow: var(--shadow);
-    border-radius: 5px;
-    overflow: hidden;
-    flex-wrap: wrap;
   }
   @media screen and (max-width: 768px) {
     .icon-info {
