@@ -5,14 +5,11 @@ import Meta from "components/common/meta";
 import styled from "styled-components";
 import Image from "next/image";
 import paths from "paths";
+import useWindowDimensions from "utils/useWindowDimension";
 
-interface LiveStreamProps {
-  src: string;
-  width: string;
-  height: string;
-}
+export default function LiveStream() {
+  const { width } = useWindowDimensions();
 
-export default function LiveStream({ src, width, height }: LiveStreamProps) {
   return (
     <>
       <Meta title="Live Stream - Rhema - Changing & Affecting Lives!" />{" "}
@@ -25,11 +22,13 @@ export default function LiveStream({ src, width, height }: LiveStreamProps) {
         blur="blur(4px)"
       />
       <LiveStreamWrapper>
-        <IframeVideo
-          src="https://www.youtube.com/embed/FE4p8e6JvZo?modestbranding=1&autoplay=1&controls=0&rel=0"
-          width="80vw"
-          height="720px"
-        />
+        {width && (
+          <IframeVideo
+            src="https://www.youtube.com/embed/FE4p8e6JvZo?modestbranding=1&autoplay=1&controls=0&rel=0"
+            width={width >= 1024 ? "50vw" : "80vw"}
+            height={width >= 768 ? "520px" : "320px"}
+          />
+        )}
       </LiveStreamWrapper>
       <ExperienceWrapper>
         <h2>Experience the live stream</h2>
