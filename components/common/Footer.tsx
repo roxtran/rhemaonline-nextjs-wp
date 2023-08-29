@@ -121,7 +121,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <SocialIcons>
+        <SocialIconsWrapper>
           <a
             title="Bible"
             onClick={() => {
@@ -239,7 +239,7 @@ export default function Footer() {
               />
             </div>
           </a>
-        </SocialIcons>
+        </SocialIconsWrapper>
         <div className="copyright">© {new Date().getFullYear()} Rhema Canada.</div>
       </FooterWrapper>
     </>
@@ -286,7 +286,7 @@ const FooterWrapper = styled.div`
   }
 `;
 
-export const SocialIcons = styled.div`
+const SocialIconsWrapper = styled.div`
   margin: 1.25rem 0;
   display: flex;
   justify-content: center;

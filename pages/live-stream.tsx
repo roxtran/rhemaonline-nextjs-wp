@@ -1,11 +1,9 @@
-import { SocialIcons } from "components/common/Footer";
 import HeadLine from "components/common/HeadLine";
 import IframeVideo from "components/common/IFrameVideo";
 import Meta from "components/common/meta";
 import styled from "styled-components";
-import Image from "next/image";
-import paths from "paths";
 import useWindowDimensions from "utils/useWindowDimension";
+import SocialShare from "components/common/SocialShare";
 
 export default function LiveStream() {
   const { width } = useWindowDimensions();
@@ -36,64 +34,7 @@ export default function LiveStream() {
           Share with your friends all the places we'll be streaming
           <div className="sub-text">View or listen on all platforms listed below:</div>
         </div>
-        <SocialIcons>
-          <a title="YouTube" href={paths.youtubeChannel} target="_blank">
-            <div className="icon">
-              <Image
-                src="/img/social/youtube-icon.svg"
-                alt="youtube icon"
-                width={50}
-                height={50}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto"
-                }}
-              />
-            </div>
-          </a>
-          <a title="YouTube" href={paths.facebookPage} target="_blank">
-            <div className="icon">
-              <Image
-                src="/img/social/facebook-icon.svg"
-                alt="youtube icon"
-                width={50}
-                height={50}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto"
-                }}
-              />
-            </div>
-          </a>
-          <a title="YouTube" href={paths.spotify} target="_blank">
-            <div className="icon">
-              <Image
-                src="/img/social/spotify.svg"
-                alt="youtube icon"
-                width={60}
-                height={60}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto"
-                }}
-              />
-            </div>
-          </a>
-          <a title="YouTube" href={paths.applePodcast} target="_blank">
-            <div className="icon">
-              <Image
-                src="/img/social/apple.svg"
-                alt="youtube icon"
-                width={60}
-                height={60}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto"
-                }}
-              />
-            </div>
-          </a>
-        </SocialIcons>
+        <SocialShare />
       </ExperienceWrapper>
     </>
   );

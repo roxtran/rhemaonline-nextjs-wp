@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import paths from "paths";
 import { Button } from "styles/GlobalStyle";
-import { SocialIcons } from "components/common/Footer";
-import Image from "next/image";
+import SocialShare from "components/common/SocialShare";
 
 export default function Subscribe() {
   return (
@@ -11,64 +10,7 @@ export default function Subscribe() {
       <Button className="white" href={paths.subscribe} target="_blank">
         Subscribe
       </Button>
-      <SocialIcons>
-        <a title="YouTube" href={paths.youtubeChannel} target="_blank">
-          <div className="icon">
-            <Image
-              src="/img/social/youtube-icon.svg"
-              alt="youtube icon"
-              width={50}
-              height={50}
-              style={{
-                maxWidth: "100%",
-                height: "auto"
-              }}
-            />
-          </div>
-        </a>
-        <a title="YouTube" href={paths.facebookPage} target="_blank">
-          <div className="icon">
-            <Image
-              src="/img/social/facebook-icon.svg"
-              alt="youtube icon"
-              width={50}
-              height={50}
-              style={{
-                maxWidth: "100%",
-                height: "auto"
-              }}
-            />
-          </div>
-        </a>
-        <a title="YouTube" href={paths.spotify} target="_blank">
-          <div className="icon">
-            <Image
-              src="/img/social/spotify.svg"
-              alt="youtube icon"
-              width={60}
-              height={60}
-              style={{
-                maxWidth: "100%",
-                height: "auto"
-              }}
-            />
-          </div>
-        </a>
-        <a title="YouTube" href={paths.applePodcast} target="_blank">
-          <div className="icon">
-            <Image
-              src="/img/social/apple.svg"
-              alt="youtube icon"
-              width={60}
-              height={60}
-              style={{
-                maxWidth: "100%",
-                height: "auto"
-              }}
-            />
-          </div>
-        </a>
-      </SocialIcons>
+      <SocialShare />
     </SubscribeWrapper>
   );
 }
