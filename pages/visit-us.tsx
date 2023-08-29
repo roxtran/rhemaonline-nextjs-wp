@@ -34,7 +34,7 @@ export default function Location() {
                 <Image
                   width={550}
                   height={300}
-                  src="/img/in-person.jpg"
+                  src="/img/in-person1.jpg"
                   alt="In person photo"
                   style={{
                     maxWidth: "100%",

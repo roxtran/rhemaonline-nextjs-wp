@@ -8,6 +8,8 @@ export default {
   sermons: "/sermons",
   notes: "/sermons/notes",
   studies: "/lessons/studies",
+  bibleStudies: "/bible-studies",
+  studies: "/bible-studies/studies",
   gallery: "/gallery",
   liveStream: "/live-stream",
   events: "/events",

@@ -1,24 +1,25 @@
 type VideoType = {
   id: {
-    videoId: string
-  }
+    videoId: string;
+  };
   snippet: {
-    publishedAt: string
-    title: string
-    description: string
+    publishedAt: string;
+    title: string;
+    description: string;
     thumbnails: {
       default: {
-        url: string
-      }
+        url: string;
+      };
       medium: {
-        url: string
-      }
+        url: string;
+      };
       high: {
-        url: string
-      }
-    }
-    channelTitle: string
-  }
-}
+        url: string;
+      };
+    };
+    resourceId: { videoId: string };
+    channelTitle: string;
+  };
+};
 
-export default VideoType
+export default VideoType;
