@@ -10,7 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { ImgWrapper } from "styles/GlobalStyle";
 // import type
 import VideoType from "types/video";
-import { shortenString } from "utils/formatter";
+import { formatDate, shortenString } from "utils/formatter";
 
 interface propType {
   slides: VideoType[];
@@ -20,31 +20,31 @@ export default function PopularVideoSlider({ slides }: propType) {
   const settings = {
     arrows: true,
     slidesToShow: 3,
-    rows: 3,
     slidesToScroll: 1,
+    rows: 1,
     infinite: false,
     speed: 500,
     responsive: [
       {
-        breakpoint: 920,
+        breakpoint: 1024,
         settings: {
-          slidesToShow: 2.4
+          slidesToShow: 2.5
         }
       },
       {
-        breakpoint: 780,
+        breakpoint: 900,
         settings: {
           slidesToShow: 2
         }
       },
       {
-        breakpoint: 620,
+        breakpoint: 700,
         settings: {
           slidesToShow: 1.5
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 520,
         settings: {
           slidesToShow: 1
         }
@@ -54,7 +54,7 @@ export default function PopularVideoSlider({ slides }: propType) {
   return (
     <Slider {...settings}>
       {slides?.map((slide) => (
-        <Link href={`${paths.sermons}/videos/${slide.id.videoId}`} key={slide.id.videoId}>
+        <Link href={`${paths.sermons}/videos/popular/${slide.id.videoId}`} key={slide.id.videoId}>
           <div className="video-wrapper">
             <ImgWrapper className="img-wrapper">
               <Image
@@ -67,10 +67,10 @@ export default function PopularVideoSlider({ slides }: propType) {
                 }}
               />
             </ImgWrapper>
-            <div
-              className="video-title"
-              dangerouslySetInnerHTML={{ __html: shortenString(slide.snippet.title, 65) + "..." }}
-            />
+            <div className="popular-video-text">
+              <h4 dangerouslySetInnerHTML={{ __html: shortenString(slide.snippet.title, 50) + "..." }} />
+              <div className="date">{formatDate(slide.snippet.publishedAt)}</div>
+            </div>
           </div>
         </Link>
       ))}

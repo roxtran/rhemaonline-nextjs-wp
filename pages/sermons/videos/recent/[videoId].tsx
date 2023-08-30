@@ -3,8 +3,6 @@ import styled from "styled-components";
 import { Container, rem } from "styles/GlobalStyle";
 import Link from "next/link";
 import Image from "next/image";
-import popularVideos from "data/popular-videos";
-import recentVideos from "data/recent-videos";
 import VideoType from "types/video";
 import { IoArrowBackOutline } from "react-icons/io5";
 import paths from "paths";
@@ -35,7 +33,7 @@ export default function Sermons({ video }: Props) {
             <iframe
               width="100%"
               height="100%"
-              src={`https://www.youtube.com/embed/${video?.id?.videoId}?rel=0&showinfo=1&autoplay=1&loop=0`}
+              src={`https://www.youtube.com/embed/${video?.snippet.resourceId.videoId}?rel=0&showinfo=1&autoplay=1&loop=0`}
               title="iframe video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -187,14 +185,7 @@ export const getStaticProps = async ({ params }: Params) => {
   const { data } = await client.query({
     query: gql`
       query getData {
-        recentVideos: sermonVideos(where: { title: "Recent Videos" }) {
-          nodes {
-            sermonVideoFields {
-              items
-            }
-          }
-        }
-        popularVideos: sermonVideos(where: { title: "Popular Videos" }) {
+        recentVideos: sermonVideos(where: { title: "Recent Sermon Videos" }) {
           nodes {
             sermonVideoFields {
               items
@@ -206,18 +197,13 @@ export const getStaticProps = async ({ params }: Params) => {
   });
 
   const recentVideosData = data?.recentVideos?.nodes;
-  const popularVideosData = data?.popularVideos?.nodes;
 
   const recentVideosString = recentVideosData[0].sermonVideoFields.items;
   const recentVideos = JSON.parse(recentVideosString);
 
-  const popularVideosString = popularVideosData[0].sermonVideoFields.items;
-  const popularVideos = JSON.parse(popularVideosString);
-
   videos.push(...recentVideos);
-  videos.push(...popularVideos);
 
-  const video = videos.find((video) => video.id.videoId === videoId);
+  const video = videos.find((video) => video.snippet.resourceId.videoId === videoId);
 
   return {
     props: {
@@ -228,7 +214,7 @@ export const getStaticProps = async ({ params }: Params) => {
 
 export const getStaticPaths = async () => {
   const paths = videos.map((video) => ({
-    params: { videoId: video.id.videoId }
+    params: { videoId: video.snippet.resourceId.videoId }
   }));
   // console.log("!! paths", paths);
   return { paths, fallback: "blocking" };

@@ -4,8 +4,8 @@ import { Container, rem } from "styles/GlobalStyle";
 import FeatureVideo from "components/common/FeatureVideo";
 import { useState } from "react";
 import { BsPlayCircleFill } from "react-icons/bs";
-import PopularVideoSlider from "./videos/PopularVideoSlider";
-import RecentVideoSlider from "./videos/RecentVideoSlider";
+import PopularVideoSlider from "./videos/popular/PopularVideoSlider";
+import RecentVideoSlider from "./videos/recent/RecentVideoSlider";
 // import popularVideos from "data/popular-videos";
 // import recentVideos from "data/recent-videos";
 import Link from "next/link";
@@ -37,10 +37,10 @@ export default function Sermons({ recentVideosData, popularVideosData }: Props) 
         <div className="wrapper">
           <h2 className="title">Recent Sermon</h2>
           <FeaturedWrapper onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>
-            <Link href={`${paths.sermons}/videos/${latestVideo.id.videoId}`}>
+            <Link href={`${paths.sermons}/videos/recent/${latestVideo.snippet.resourceId.videoId}`}>
               <FeatureVideo
                 hover={hover}
-                videoId={latestVideo.id.videoId}
+                videoId={latestVideo.snippet.resourceId.videoId}
                 width="1140"
                 height="650"
                 thumbnailQuality="maxresdefault"
@@ -203,7 +203,7 @@ export async function getStaticProps() {
   const { data } = await client.query({
     query: gql`
       query getData {
-        recentVideos: sermonVideos(where: { title: "Recent Videos" }) {
+        recentVideos: sermonVideos(where: { title: "Recent Sermon Videos" }) {
           nodes {
             sermonVideoFields {
               items
