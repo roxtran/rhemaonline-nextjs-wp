@@ -21,7 +21,7 @@ export default {
   foodbank: "/foodbank",
   getConnected: "/get-connected",
   facilityBookings: "/facility-bookings",
-  news: "/news",
+  // news: "/news",
   legalTerms: "/legal-terms",
 
   // external links
