@@ -84,8 +84,8 @@ export default function Location() {
               <div className="map-wrapper">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.2156851747036!2d-79.48001688449921!3d43.74761767911818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b31f3db445a91%3A0xe4bdbb1f2de0ba9b!2s40%20Carl%20Hall%20Rd%20%2349%2C%20North%20York%2C%20ON%20M3K%202C1!5e0!3m2!1sen!2sca!4v1619679421572!5m2!1sen!2sca"
-                  width="520"
-                  height="300"
+                  width="1000"
+                  height="360"
                   style={{ border: 0 }}
                   loading="lazy"
                 ></iframe>
@@ -216,9 +216,17 @@ export const LocationContainer = styled(Container)`
   .two-ways-wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 3rem;
     flex-wrap: wrap;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
+
+    .in-person-wrapper,
+    .online-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
     a {
       position: relative;
@@ -248,12 +256,21 @@ export const LocationContainer = styled(Container)`
       }
     }
   }
-  .in-person-wrapper,
-  .online-wrapper {
+  .map-group {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2rem;
+    margin: 0 auto 4rem;
+    justify-content: space-between;
+    max-width: 72rem;
+
+    .text-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 1.25rem;
+    }
+    .map-wrapper {
+      overflow: hidden;
+    }
   }
   .icon-info {
     display: flex;
@@ -265,67 +282,30 @@ export const LocationContainer = styled(Container)`
     p {
       margin-bottom: 0;
     }
-  }
-  .icon-group {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 0 2.5rem;
-  }
-  .icon {
-    width: 125px;
-    height: 125px;
-    box-shadow: 0 0 28px 10px rgba(122, 207, 255, 0.4);
-    border-radius: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem 1rem;
-    /* filter: hue-rotate(-20deg); */
-  }
-  .map-group {
-    display: flex;
-    margin: 0 0 4rem;
-    justify-content: space-between;
-    max-width: 1000px;
-
-    .text-wrapper {
-      background: var(--blue);
-      color: #fff;
-      padding: 3rem 3.5rem 3.5rem 3.5rem;
-      border-radius: 5px;
-      height: 100%;
-      width: 600px;
-      z-index: 1;
-
-      .text-border {
-        width: 420px;
-        /* max-width: 28vw; */
-      }
-      h2,
-      h3 {
-        color: #fff;
-      }
-      span {
-        font-weight: bold;
-      }
-      p {
-        margin: 1.3rem 0;
+    .icon-group {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 0 2.5rem;
+      .icon {
+        width: 125px;
+        height: 125px;
+        box-shadow: 0 0 28px 10px rgba(122, 207, 255, 0.4);
+        border-radius: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 1rem;
+        /* filter: hue-rotate(-20deg); */
       }
     }
-    .map-wrapper {
-      z-index: 2;
-      width: 500px;
-      height: 100%;
-      margin-left: -100px;
-      margin-top: 90px;
-      box-shadow: var(--shadow);
-      border-radius: 5px;
-      overflow: hidden;
-      flex-wrap: wrap;
-    }
+  }
+  @media screen and (max-width: 1280px) {
+    /* .two-ways-wrapper {
+      gap: 1rem;
+    } */
   }
   @media screen and (max-width: 768px) {
     .icon-info {
@@ -343,8 +323,6 @@ export const LocationContainer = styled(Container)`
         max-width: 100%;
       }
       .map-wrapper {
-        margin-left: 0;
-        margin-top: 0;
         max-width: 80vw;
       }
     }
