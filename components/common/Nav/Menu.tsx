@@ -45,9 +45,22 @@ export default function Menu({ open, setOpen }: Props) {
           </NavLink>
         </div>
       </div>
-      <NavLink href={paths.studies}>
+      <div className="dropdown">
+        <NavLink href="#">
+          <a>Bible Studies</a>
+        </NavLink>
+        <div className="dropdown-content">
+          <NavLink href={paths.bibleStudies}>
+            <a onClick={() => setOpen(!open)}>Videos</a>
+          </NavLink>
+          <NavLink href={paths.studies}>
+            <a onClick={() => setOpen(!open)}>Lessons</a>
+          </NavLink>
+        </div>
+      </div>
+      {/* <NavLink href={paths.studies}>
         <a onClick={() => setOpen(!open)}>Bible Studies</a>
-      </NavLink>
+      </NavLink> */}
       <NavLink href={paths.liveStream}>
         <a onClick={() => setOpen(!open)}>Live Stream</a>
       </NavLink>
