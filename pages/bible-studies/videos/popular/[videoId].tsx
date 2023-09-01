@@ -25,7 +25,7 @@ export default function Sermons({ video }: Props) {
       <Meta title={video?.snippet?.title + " - Rhema - Changing & Affecting Lives!"} />
       <VideoContainer>
         <div className="wrapper">
-          <Link href={paths.sermons} className="btn-back">
+          <Link href={paths.bibleStudies} className="btn-back">
             <IoArrowBackOutline className="icon-back" />
             Go back
           </Link>
@@ -67,10 +67,7 @@ export default function Sermons({ video }: Props) {
                 />
               </div>
             </Link>
-            <Link
-              href="https://visitor.r20.constantcontact.com/manage/optin?v=001BRl1GnvqHBSmpUgt0bWkn1MfFFgc1eWZnLBSjeq8hPkIyEhXoERcP_p-E94Tuo8i-n6WMjixEVWfoTusoH241Xry9A65AaaC8uzGvinLhOc%3D"
-              target="__blank"
-            >
+            <Link href={paths.youtubeChannel} target="__blank">
               <div className="icon subscribe-icon">
                 <Image
                   src="/img/icons/subscribe.png"

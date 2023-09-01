@@ -32,12 +32,12 @@ export default function BibleStudies({ recentVideosData, popularVideosData }: Pr
 
   return (
     <>
-      <Meta title="Sermons - Rhema - Changing & Affecting Lives!" />
+      <Meta title="Bible Studies - Rhema - Changing & Affecting Lives!" />
       <SermonsContainer>
         <div className="wrapper">
           <h2 className="title">Recent Sermon</h2>
           <FeaturedWrapper onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>
-            <Link href={`${paths.sermons}/videos/recent/${latestVideo.snippet.resourceId.videoId}`}>
+            <Link href={`${paths.bibleStudies}/videos/recent/${latestVideo.snippet.resourceId.videoId}`}>
               <FeatureVideo
                 hover={hover}
                 videoId={latestVideo.snippet.resourceId.videoId}
