@@ -54,7 +54,7 @@ export default function PopularVideoSlider({ slides }: propType) {
   return (
     <Slider {...settings}>
       {slides?.map((slide) => (
-        <Link href={`${paths.sermons}/videos/popular/${slide.id.videoId}`} key={slide.id.videoId}>
+        <Link href={`${paths.bibleStudies}/videos/popular/${slide.id.videoId}`} key={slide.id.videoId}>
           <div className="video-wrapper">
             <ImgWrapper className="img-wrapper">
               <Image

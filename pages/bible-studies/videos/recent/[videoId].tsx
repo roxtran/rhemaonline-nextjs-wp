@@ -19,7 +19,7 @@ type Params = {
   };
 };
 
-export default function Sermons({ video }: Props) {
+export default function Video({ video }: Props) {
   return (
     <>
       <Meta title={video?.snippet?.title + " - Rhema - Changing & Affecting Lives!"} />
