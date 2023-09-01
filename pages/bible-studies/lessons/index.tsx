@@ -5,6 +5,7 @@ import Sidebar from "components/items/Sidebar";
 import ItemList from "components/items/ItemList";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import { LessonsContainer } from "../../sermons/notes";
+import paths from "paths";
 
 interface Props {
   studies: NoteType[];
@@ -18,8 +19,8 @@ export default function Lessons({ studies, list }: Props) {
       <Meta title="Lessons - Rhema - Changing & Affecting Lives!" />
       <HeadLine imgUrl="/img/sermons-img.jpg" title="Bible Studies" />
       <LessonsContainer>
-        <ItemList title="Lessons" items={studies} type="studies" />
-        <Sidebar title="Recent Studies" items={list} type="studies" />
+        <ItemList title="Lessons" items={studies} url={paths.studies} />
+        <Sidebar title="Recent Studies" items={list} url={paths.studies} />
       </LessonsContainer>
     </>
   );

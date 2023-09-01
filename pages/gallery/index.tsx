@@ -6,6 +6,7 @@ import ItemList from "components/items/ItemList";
 import styled from "styled-components";
 import { ApolloClient, InMemoryCache, gql, DefaultOptions } from "@apollo/client";
 import { def } from "styles/GlobalStyle";
+import paths from "paths";
 
 interface Props {
   events: NoteType[];
@@ -19,8 +20,8 @@ export default function Gallery({ events, list }: Props) {
       <Meta title="Event Gallery - Rhema - Changing & Affecting Lives!" />
       <HeadLine imgUrl="/img/events-img1.webp" title="Event Gallery" />
       <EventsContainer>
-        <ItemList title="Events" items={events} type="gallery" />
-        <Sidebar title="Recent Events" items={list} type="gallery" />
+        <ItemList title="Events" items={events} url={paths.gallery} />
+        <Sidebar title="Recent Events" items={list} url={paths.gallery} />
       </EventsContainer>
     </>
   );

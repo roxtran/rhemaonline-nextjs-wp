@@ -8,15 +8,15 @@ import { formatDate, shortenString } from "utils/formatter";
 
 interface Props {
   item: NoteType;
-  type: string;
+  url: string;
 }
 
-export default function ItemDetail({ item, type }: Props) {
+export default function ItemDetail({ item, url }: Props) {
   const summary = `<p>${shortenString(item.excerpt, 300)}... <br><br>Read More >></p>`;
 
   return (
     <ItemWrapper>
-      <Link href={`${type}/${item.slug}`}>
+      <Link href={`${url}/${item.slug}`}>
         {item.featuredImage !== null && (
           <>
             <div className="hover"></div>

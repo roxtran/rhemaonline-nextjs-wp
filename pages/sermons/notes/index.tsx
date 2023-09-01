@@ -6,6 +6,7 @@ import ItemList from "components/items/ItemList";
 import styled from "styled-components";
 import { ApolloClient, InMemoryCache, gql, DefaultOptions } from "@apollo/client";
 import { def } from "styles/GlobalStyle";
+import paths from "paths";
 
 interface Props {
   notes: NoteType[];
@@ -19,8 +20,8 @@ export default function Lessons({ notes, list }: Props) {
       <Meta title="Lessons - Rhema - Changing & Affecting Lives!" />
       <HeadLine imgUrl="/img/sermons-img.jpg" title="Sermon Notes" />
       <LessonsContainer>
-        <ItemList title="Recent Sermons" items={notes} type="notes" />
-        <Sidebar title="Sermon Notes" items={list} type="notes" />
+        <ItemList title="Recent Sermons" items={notes} url={paths.notes} />
+        <Sidebar title="Sermon Notes" items={list} url={paths.notes} />
       </LessonsContainer>
     </>
   );

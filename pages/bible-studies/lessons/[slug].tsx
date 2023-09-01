@@ -62,7 +62,7 @@ export default function BibleStudy({ note, list }: Props) {
             </div>
           )}
         </div>
-        <Sidebar title="Recent Studies" items={list} type="studies" />
+        <Sidebar title="Recent Studies" items={list} url={paths.studies} />
       </NoteContainer>
     </>
   );

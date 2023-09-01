@@ -6,10 +6,10 @@ import { rem } from "styles/GlobalStyle";
 interface Props {
   title: string;
   items: NoteType[];
-  type: string;
+  url: string;
 }
 
-export default function Sidebar({ title, items, type }: Props) {
+export default function Sidebar({ title, items, url }: Props) {
   const formatDate = (date: string) => {
     const newDate = new Date(date).toLocaleDateString("en-US", {
       day: "numeric",
@@ -18,7 +18,6 @@ export default function Sidebar({ title, items, type }: Props) {
     });
     return newDate;
   };
-  const href = type === "notes" || type === "studies" ? `lessons/${type}` : type;
   return (
     <SidebarWrapper>
       <div className="wrapper">
@@ -26,7 +25,7 @@ export default function Sidebar({ title, items, type }: Props) {
         <ul>
           {items?.map((item) => (
             <li key={item.slug}>
-              <Link href={`/${href}/${item.slug}`}>{item.title}</Link>
+              <Link href={`/${url}/${item.slug}`}>{item.title}</Link>
               <p className="date">{formatDate(item.date)}</p>
             </li>
           ))}

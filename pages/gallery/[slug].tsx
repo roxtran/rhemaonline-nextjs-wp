@@ -37,7 +37,7 @@ export default function Event({ event, list }: Props) {
           </p>
           <article dangerouslySetInnerHTML={{ __html: event.content }}></article>
         </div>
-        <Sidebar title="Recent Events" items={list} type="gallery" />
+        <Sidebar title="Recent Events" items={list} url={paths.gallery} />
       </EventContainer>
     </>
   );

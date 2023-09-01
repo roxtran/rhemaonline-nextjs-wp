@@ -57,7 +57,7 @@ export default function SermonNote({ note, list }: Props) {
             </div>
           )}
         </div>
-        <Sidebar title="Recent Notes" items={list} type="notes" />
+        <Sidebar title="Recent Notes" items={list} url={paths.notes} />
       </NoteContainer>
     </>
   );
