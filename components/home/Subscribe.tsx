@@ -7,23 +7,9 @@ import Image from "next/image";
 export default function Subscribe() {
   return (
     <SubscribeWrapper>
-      <Image
-        className="letter"
-        src="/img/subscribe-icon.png"
-        width={90}
-        height={90}
-        alt="give"
-        style={{
-          maxWidth: "100%",
-          height: "auto",
-          objectFit: "cover"
-        }}
-      />
       <h2>Stay connected with us</h2>
-      <Button className="white" href={paths.subscribe} target="_blank">
-        Subscribe
-      </Button>
-      <SocialShare />
+      <h2>Subscribe</h2>
+      <SocialShare isSubSection={true} />
     </SubscribeWrapper>
   );
 }
@@ -43,10 +29,6 @@ const SubscribeWrapper = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 0;
-
-  img.letter {
-    filter: brightness(0) invert(1);
-  }
 
   h2 {
     font-size: 3rem;

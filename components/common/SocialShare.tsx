@@ -2,9 +2,29 @@ import paths from "paths";
 import Image from "next/image";
 import styled from "styled-components";
 
-export default function SocialShare() {
+interface Props {
+  isSubSection?: boolean;
+}
+
+export default function SocialShare({ isSubSection = false }: Props) {
   return (
     <SocialIconsWrapper>
+      {isSubSection && (
+        <a title="YouTube" href={paths.subscribe} target="_blank">
+          <div className="icon">
+            <Image
+              src="/img/subscribe-icon.png"
+              alt="youtube icon"
+              width={50}
+              height={50}
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }}
+            />
+          </div>
+        </a>
+      )}
       <a title="YouTube" href={paths.youtubeChannel} target="_blank">
         <div className="icon">
           <Image
