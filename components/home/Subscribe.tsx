@@ -74,6 +74,6 @@ const SubscribeWrapper = styled.div`
   }
 
   .icon img {
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(65deg) brightness(108%) contrast(101%);
+    filter: brightness(0) invert(1);
   }
 `;
