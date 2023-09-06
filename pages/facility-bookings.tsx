@@ -1,16 +1,16 @@
-import HeadLine from 'components/common/HeadLine'
-import styled from 'styled-components'
-import { Container, Button, def } from 'styles/GlobalStyle'
-import Meta from 'components/common/meta'
+import HeadLine from "components/common/HeadLine";
+import styled from "styled-components";
+import { Container, Button, def } from "styles/GlobalStyle";
+import Meta from "components/common/meta";
 
 export default function facilityBookings() {
   return (
     <>
-      <Meta title='Facility Bookings - Rhema - Changing & Affecting Lives!' />
-      <HeadLine imgUrl='/img/facility-bookings-img.jpg' title='Facility Bookings' blur='blur(4px)' />
+      <Meta title="Facility Bookings - Rhema - Changing & Affecting Lives!" />
+      <HeadLine imgUrl="/img/facility-bookings-img.jpg" title="Facility Bookings" blur="blur(4px)" />
       <BookingsContainer>
-        <div className='wrapper'>
-          <div className='content-wrapper'>
+        <div className="wrapper">
+          <div className="content-wrapper">
             <h2>Facility Bookings</h2>
             <p>
               Welcome To Rhema Canada’s Meeting and Conference Services Venue in Downsview Park in the beautiful
@@ -42,11 +42,11 @@ export default function facilityBookings() {
               <li>Security Services</li>
             </ul>
           </div>
-          <div className='btn-wrapper'>
-            <Button href='https://rhema.ccbchurch.com/goto/forms/42/responses/new'>
+          <div className="btn-wrapper">
+            <Button href="https://rhema.ccbchurch.com/goto/forms/42/responses/new">
               Facility Booking Enquiry Form
             </Button>
-            <div className='text-wrapper'>
+            <div className="text-wrapper">
               <span>Contact us for a tour.</span>
               <p>
                 <b>Call: (416) 496-1794</b>
@@ -56,7 +56,7 @@ export default function facilityBookings() {
         </div>
       </BookingsContainer>
     </>
-  )
+  );
 }
 
 const BookingsContainer = styled(Container)`
@@ -73,6 +73,7 @@ const BookingsContainer = styled(Container)`
 
     ul {
       margin-left: 2rem;
+      padding-left: 0;
     }
     li {
       margin: 0.25rem 0;
@@ -101,4 +102,4 @@ const BookingsContainer = styled(Container)`
       padding: 2rem 0;
     }
   }
-`
+`;

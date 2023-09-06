@@ -263,6 +263,7 @@ const FooterWrapper = styled.div`
     }
     ul {
       margin-bottom: 1.5rem;
+      padding-left: 0;
     }
     li {
       margin: 0.25rem 0;

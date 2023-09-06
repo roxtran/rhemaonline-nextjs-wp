@@ -45,6 +45,7 @@ const SidebarWrapper = styled.div`
     margin-bottom: 0.5rem;
   }
   ul {
+    padding-left: 0;
     list-style: none;
   }
   li {

@@ -1,15 +1,15 @@
-import styled, { createGlobalStyle } from 'styled-components'
-import { motion } from 'framer-motion'
+import styled, { createGlobalStyle } from "styled-components";
+import { motion } from "framer-motion";
 
 export const rem = (px) => {
-  const remValue = px * 0.0625 + 'rem'
-  return remValue
-}
+  const remValue = px * 0.0625 + "rem";
+  return remValue;
+};
 export const def = {
   wrapper: {
-    width: '78rem'
+    width: "78rem"
   }
-}
+};
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -59,9 +59,6 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
     margin-bottom: 1.5rem;
   }
-  ol, ul {
-    padding-left: 0;
-  }
   .accordion-button {
     text-align: left;
     line-height: 1.5;
@@ -94,7 +91,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 2rem;
     text-shadow: 0 0 12px rgba(0 0 0 / 0.2);
   }
-`
+`;
 
 export const Container = styled(motion.section)`
   display: flex;
@@ -103,7 +100,7 @@ export const Container = styled(motion.section)`
   align-items: center;
   width: 100vw;
   padding: 3rem 0;
-`
+`;
 export const Button = styled(motion.a)`
   display: inline-block;
   cursor: pointer;
@@ -134,12 +131,12 @@ export const Button = styled(motion.a)`
       color: #fff;
     }
   }
-`
+`;
 
 export const ImgWrapper = styled(motion.div)`
   position: relative;
   border-radius: 5px;
   overflow: hidden;
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;
