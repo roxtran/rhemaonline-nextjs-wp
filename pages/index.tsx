@@ -8,14 +8,15 @@ import styled from "styled-components";
 import SlideType from "types/slide";
 
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
-import newsletters from "data/newsletters";
 import Hero from "components/home/Hero";
+import NewsletterType from "types/newsletter";
 
 interface Props {
   slides: SlideType[];
+  newsletters: NewsletterType[];
 }
 
-const Home = ({ slides }: Props) => {
+const Home = ({ slides, newsletters }: Props) => {
   return (
     <>
       <Meta title="Home - Rhema - Changing & Affecting Lives!" />

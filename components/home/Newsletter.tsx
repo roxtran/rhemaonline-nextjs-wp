@@ -17,16 +17,21 @@ const Newsletter = ({ newsletters }: Props) => {
           This is our way of keeping you up to date on all our events, activities, and relevant news. We invite you to
           check out what’s happing @ Rhema this week.
         </p>
-        <Button href={newsletters[0].link} target="_blank" className="btn">
+        <Button href={newsletters[0]?.NewsletterInfo?.link} target="_blank" className="btn">
           Learn More
         </Button>
       </div>
       <div className="newsletters">
         {newsletters.map((newsletter) => (
-          <a key={newsletter.link} className="newsletter" href={newsletter.link} target="_blank">
+          <a
+            key={newsletter?.NewsletterInfo?.link}
+            className="newsletter"
+            href={newsletter?.NewsletterInfo?.link}
+            target="_blank"
+          >
             <ImgWrapper>
               <Image
-                src={newsletter.imgUrl}
+                src={newsletter?.NewsletterInfo?.imgUrl}
                 alt="newsletter image"
                 fill
                 sizes="100vw"

@@ -1,6 +1,8 @@
 type NewsletterType = {
-  imgUrl: string
-  link: string
-}
+  NewsletterInfo: {
+    imgUrl: string;
+    link: string;
+  };
+};
 
-export default NewsletterType
+export default NewsletterType;
