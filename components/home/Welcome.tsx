@@ -82,7 +82,6 @@ export const WelcomeWrapper = styled(motion.div)`
   }
 
   @media screen and (max-width: 1024px) {
-    margin: 12.5rem auto 7.5rem;
     .image {
       box-shadow: 0 0 0 0 rgba(122, 207, 255, 0.3);
     }
@@ -94,7 +93,6 @@ export const WelcomeWrapper = styled(motion.div)`
     }
   }
   @media screen and (max-width: 768px) {
-    margin: 200px auto 100px;
     justify-content: flex-start;
     flex-direction: column;
     .text {
