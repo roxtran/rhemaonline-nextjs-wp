@@ -78,12 +78,12 @@ export default function Location() {
                   <p>
                     <span>Bible Study:</span> 1st, 2nd, & 3rd Wednesdays of every month - 7 PM
                   </p>
-                  <span>49-40 Carl Hall Road, Toronto, ON, M3K 2C1</span>
+                  <span>Bellevue Manor (The Library Hall) 8083 Jane Street, Concord ON L4K 2M7</span>
                 </div>
               </div>
               <div className="map-wrapper">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.2156851747036!2d-79.48001688449921!3d43.74761767911818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b31f3db445a91%3A0xe4bdbb1f2de0ba9b!2s40%20Carl%20Hall%20Rd%20%2349%2C%20North%20York%2C%20ON%20M3K%202C1!5e0!3m2!1sen!2sca!4v1619679421572!5m2!1sen!2sca"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11518.215823818044!2d-79.525299!3d43.8028678!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2fa87c0454df%3A0x9c682da6c43b9a8d!2sBellvue%20Manor!5e0!3m2!1sen!2sca!4v1698716086699!5m2!1sen!2sca"
                   width="1000"
                   height="360"
                   style={{ border: 0 }}
