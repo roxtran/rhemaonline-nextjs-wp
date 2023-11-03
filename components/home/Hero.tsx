@@ -18,11 +18,17 @@ const staggering = {
 };
 
 export default function Hero({ slides }: Props) {
-  // console.log('!! slides', slides)
   const [element, controls] = useScroll();
-
   const [current, setCurrent] = useState(0);
   const length = slides?.length;
+
+  const handlePrevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
+
+  const handleNextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  };
 
   useEffect(() => {
     const autoPlay = setTimeout(handleNextSlide, 10000);
@@ -30,46 +36,39 @@ export default function Hero({ slides }: Props) {
     return () => {
       clearTimeout(autoPlay);
     };
-  });
-
-  const handlePrevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
-  };
-  const handleNextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  };
+  }, [current, length]);
 
   if (!Array.isArray(slides) || slides.length <= 0) {
     return null;
   }
+
   return (
     <StyledHero id="hero" variants={fade} initial="hidden" exit="exit" animate={controls} ref={element}>
       <IoIosArrowDropleftCircle className="arrow arrow-left" onClick={handlePrevSlide} />
       <IoIosArrowDroprightCircle className="arrow arrow-right" onClick={handleNextSlide} />
-      {slides.map((slide, index) => {
-        return (
-          <AnimatePresence key={index}>
-            {index === current && (
-              <a href={slide.slideFields.ctaUrl} target="__blank">
-                <ImgWrapper
-                  initial={{ scale: 1.15, zIndex: 2, opacity: 0.5 }}
-                  animate={{ scale: 1, zIndex: 1, opacity: 1 }}
-                  exit={{ scale: 0.8, zIndex: 0, opacity: 0.5 }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                >
-                  <Image
-                    src={slide.featuredImage.node.sourceUrl}
-                    alt="slide-item"
-                    fill
-                    sizes="100vw"
-                    style={{
-                      objectFit: "cover",
-                      objectPosition: "top"
-                    }}
-                  />
-                </ImgWrapper>
-                <div className="img-overlay"></div>
-                {/* <motion.div
+      {slides.map((slide, index) => (
+        <AnimatePresence key={index}>
+          {index === current && (
+            <a href={slide.slideFields.ctaUrl} target="__blank">
+              <ImgWrapper
+                initial={{ scale: 1.15, zIndex: 2, opacity: 0.5 }}
+                animate={{ scale: 1, zIndex: 1, opacity: 1 }}
+                exit={{ scale: 0.8, zIndex: 0, opacity: 0.5 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+              >
+                <Image
+                  src={slide.featuredImage.node.sourceUrl}
+                  alt="slide-item"
+                  fill
+                  sizes="100vw"
+                  style={{
+                    objectFit: "cover",
+                    objectPosition: "top"
+                  }}
+                />
+              </ImgWrapper>
+              <div className="img-overlay"></div>
+              {/* <motion.div
                   className="text-wrapper"
                   variants={staggering}
                   initial="hidden"
@@ -79,11 +78,10 @@ export default function Hero({ slides }: Props) {
                   <motion.h1 variants={slideUp}>{slide.h1}</motion.h1>
                   <motion.p variants={slideUp}>{slide.p}</motion.p>
                 </motion.div> */}
-              </a>
-            )}
-          </AnimatePresence>
-        );
-      })}
+            </a>
+          )}
+        </AnimatePresence>
+      ))}
     </StyledHero>
   );
 }

@@ -78,7 +78,7 @@ export default function Location() {
                   <p>
                     <span>Bible Study:</span> 1st, 2nd, & 3rd Wednesdays of every month - 7 PM
                   </p>
-                  <span>Bellevue Manor (The Library Hall) 8083 Jane Street, Concord ON L4K 2M7</span>
+                  <span>Bellvue Manor (The Library Hall) 8083 Jane Street, Concord ON L4K 2M7</span>
                 </div>
               </div>
               <div className="map-wrapper">

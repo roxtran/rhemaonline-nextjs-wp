@@ -4,6 +4,7 @@ import styled from "styled-components";
 import paths from "paths";
 import { Button, ImgWrapper } from "styles/GlobalStyle";
 import { motion } from "framer-motion";
+
 export default function Welcome() {
   return (
     <WelcomeWrapper>
