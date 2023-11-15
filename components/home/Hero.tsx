@@ -38,20 +38,22 @@ export default function Hero({ slides }: Props) {
     };
   }, [current, length]);
 
-  if (!Array.isArray(slides) || slides.length <= 0) {
+  if (!Array.isArray(slides) || length <= 0) {
     return null;
   }
 
   return (
     <StyledHero id="hero" variants={fade} initial="hidden" exit="exit" animate={controls} ref={element}>
-      {slides.length > 1 && (
-        <>
-          <IoIosArrowDropleftCircle className="arrow arrow-left" onClick={handlePrevSlide} />
-          <IoIosArrowDroprightCircle className="arrow arrow-right" onClick={handleNextSlide} />
-        </>
-      )}
       {slides.map((slide, index) => (
         <AnimatePresence key={index}>
+          {length > 1 && (
+            <>
+              {index === 0 ? null : <IoIosArrowDropleftCircle className="arrow arrow-left" onClick={handlePrevSlide} />}
+              {index === length - 1 ? null : (
+                <IoIosArrowDroprightCircle className="arrow arrow-right" onClick={handleNextSlide} />
+              )}
+            </>
+          )}
           {index === current && (
             <a href={slide.slideFields.ctaUrl} target="__blank">
               <ImgWrapper
