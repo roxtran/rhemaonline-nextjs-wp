@@ -44,8 +44,12 @@ export default function Hero({ slides }: Props) {
 
   return (
     <StyledHero id="hero" variants={fade} initial="hidden" exit="exit" animate={controls} ref={element}>
-      <IoIosArrowDropleftCircle className="arrow arrow-left" onClick={handlePrevSlide} />
-      <IoIosArrowDroprightCircle className="arrow arrow-right" onClick={handleNextSlide} />
+      {slides.length > 1 && (
+        <>
+          <IoIosArrowDropleftCircle className="arrow arrow-left" onClick={handlePrevSlide} />
+          <IoIosArrowDroprightCircle className="arrow arrow-right" onClick={handleNextSlide} />
+        </>
+      )}
       {slides.map((slide, index) => (
         <AnimatePresence key={index}>
           {index === current && (
