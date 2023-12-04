@@ -111,6 +111,7 @@ const StyledMenu = styled.div<{ open: boolean }>`
       /* display: flex; */
       opacity: 1;
       height: fit-content;
+      z-index: 1;
     }
     .dropdown-content {
       overflow: hidden;
