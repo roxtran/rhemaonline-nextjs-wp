@@ -10,12 +10,23 @@ interface HeadLineProps {
   btnText?: string;
   btnLink?: string;
   height?: string;
+  mbHeight?: string;
   top?: string;
 }
 
-export default function HeadLine({ imgUrl, title, blur, desc, btnText, btnLink, height, top }: HeadLineProps) {
+export default function HeadLine({
+  imgUrl,
+  title,
+  blur,
+  desc,
+  btnText,
+  btnLink,
+  height,
+  mbHeight,
+  top
+}: HeadLineProps) {
   return (
-    <HeadLineWrapper height={height || "450px"} top={top || "0px"}>
+    <HeadLineWrapper height={height || "450px"} mbHeight={mbHeight || `${height}`} top={top || "0px"}>
       <Image
         src={imgUrl}
         alt="headline image"
@@ -38,7 +49,7 @@ export default function HeadLine({ imgUrl, title, blur, desc, btnText, btnLink, 
     </HeadLineWrapper>
   );
 }
-const HeadLineWrapper = styled.div<{ height: string; top: string }>`
+const HeadLineWrapper = styled.div<{ height: string; mbHeight: string; top: string }>`
   position: relative;
   height: ${(props) => props.height};
   image {
@@ -66,6 +77,7 @@ const HeadLineWrapper = styled.div<{ height: string; top: string }>`
     text-shadow: var(--text-shadow);
   }
   @media screen and (max-width: 768px) {
+    height: ${(props) => props.mbHeight};
     h1 {
       font-size: 2.5rem;
     }

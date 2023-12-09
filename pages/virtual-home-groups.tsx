@@ -14,7 +14,8 @@ export default function About() {
       <HeadLine
         imgUrl="/img/VirtualHomeGroups.png"
         title=""
-        height="800px"
+        height="600px"
+        mbHeight="240px"
         // blur='blur(15px)'
       />
       <StyledAbout>
