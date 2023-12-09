@@ -41,8 +41,8 @@ export default function About() {
             The study materials will be provided by the senior pastor and will either be a topic from the previous
             Sunday’s sermon, or a different topic that he wants the congregation to study.
           </p>
+          <h4>Summary:</h4>
           <p>
-            Summary:
             <ul>
               <li>What: 12 Families grouped together virtually to study, pray and fellowship</li>
               <li>Why: Need to stay connected as a Rhema Family, to study, pray and fellowship</li>
