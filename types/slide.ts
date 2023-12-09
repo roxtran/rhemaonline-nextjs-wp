@@ -7,7 +7,9 @@ type SlideType = {
     };
   };
   slideFields: {
-    ctaUrl: string;
+    ctaUrl?: string;
+    openLinkNewTab?: boolean;
+    churchCenterModal?: boolean;
   };
 };
 

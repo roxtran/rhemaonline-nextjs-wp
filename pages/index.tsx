@@ -10,6 +10,7 @@ import SlideType from "types/slide";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import Hero from "components/home/Hero";
 import NewsletterType from "types/newsletter";
+import Head from "next/head";
 
 interface Props {
   slides: SlideType[];
@@ -20,6 +21,9 @@ const Home = ({ slides, newsletters }: Props) => {
   return (
     <>
       <Meta title="Home - Rhema - Changing & Affecting Lives!" />
+      <Head>
+        <script src="https://js.churchcenter.com/modal/v1"></script>
+      </Head>
       {/* <Video src='/video/RCM-Homepage-Teaser2.mp4' width='100%' height='80vh' /> */}
       {/* <VideoWrapper>
         <video loop muted autoPlay>
@@ -68,6 +72,8 @@ export async function getStaticProps() {
             }
             slideFields {
               ctaUrl
+              openLinkNewTab
+              churchCenterModal
             }
           }
         }

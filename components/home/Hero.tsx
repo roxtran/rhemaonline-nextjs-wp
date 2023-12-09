@@ -55,7 +55,11 @@ export default function Hero({ slides }: Props) {
             </>
           )}
           {index === current && (
-            <a href={slide.slideFields.ctaUrl} target="__blank">
+            <a
+              href={slide.slideFields.ctaUrl}
+              target={slide.slideFields.openLinkNewTab ? "_blank" : "_self"}
+              data-open-in-church-center-modal={slide.slideFields.churchCenterModal ? "true" : "false"}
+            >
               <ImgWrapper
                 initial={{ scale: 1.15, zIndex: 2, opacity: 0.5 }}
                 animate={{ scale: 1, zIndex: 1, opacity: 1 }}
