@@ -23,6 +23,7 @@ export default {
   facilityBookings: "/facility-bookings",
   // news: "/news",
   legalTerms: "/legal-terms",
+  virtualHomeGroups: "/virtual-home-groups",
 
   // external links
   subscribe:

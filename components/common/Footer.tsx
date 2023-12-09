@@ -39,6 +39,9 @@ export default function Footer() {
               <li>
                 <Link href={paths.grow}>Grow</Link>
               </li>
+              <li>
+                <Link href={paths.virtualHomeGroups}>Virtual Home Groups</Link>
+              </li>
             </ul>
           </div>
           <div className="list">
