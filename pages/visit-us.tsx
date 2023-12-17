@@ -200,7 +200,6 @@ export const LocationContainer = styled(Container)`
   position: relative;
   background: #fff;
   margin-top: -100px;
-  padding-top: 2rem;
 
   .content-wrapper {
     width: ${def.wrapper.width};

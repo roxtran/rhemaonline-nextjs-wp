@@ -4,7 +4,7 @@ import Meta from "components/common/meta";
 import { Button, Container, def } from "styles/GlobalStyle";
 import Head from "next/head";
 
-export default function About() {
+export default function VHG() {
   return (
     <>
       <Meta title="Virtual Home Groups - Rhema - Changing & Affecting Lives!" />
@@ -18,7 +18,7 @@ export default function About() {
         mbHeight="240px"
         // blur='blur(15px)'
       />
-      <StyledAbout>
+      <VHGContainer>
         <div className="content-wrapper">
           <h2>Virtual Home Groups</h2>
           <p>
@@ -59,11 +59,11 @@ export default function About() {
             Register
           </Button>
         </div>
-      </StyledAbout>
+      </VHGContainer>
     </>
   );
 }
-const StyledAbout = styled(Container)`
+const VHGContainer = styled(Container)`
   .content-wrapper {
     width: ${def.wrapper.width};
     max-width: 90vw;
