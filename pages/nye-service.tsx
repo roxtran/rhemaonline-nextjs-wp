@@ -33,7 +33,7 @@ export default function NYEService() {
           </p>
           <p className="info">
             at both
-            <p className="em">11 am & 10pm</p>
+            <p className="em">11am & 10pm</p>
           </p>
           <p>
             *Both services <b>(morning and New Year's Eve Services)</b> will be held at this venue on that day.
