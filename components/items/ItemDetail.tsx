@@ -34,7 +34,7 @@ export default function ItemDetail({ item, url }: Props) {
           </>
         )}
         <div className="text">
-          <div className="date">{formatDate(item.date)}</div>
+          {/* <div className="date">{formatDate(item.date)}</div> */}
           <h3>{item.title}</h3>
           <div
             dangerouslySetInnerHTML={{
@@ -48,7 +48,7 @@ export default function ItemDetail({ item, url }: Props) {
 }
 const ItemWrapper = styled.div`
   position: relative;
-  padding: 2rem 0;
+  padding: 1rem 0;
   width: ${rem(822)};
   max-width: 90vw;
 

@@ -26,7 +26,7 @@ export default function Sidebar({ title, items, url }: Props) {
           {items?.map((item) => (
             <li key={item.slug}>
               <Link href={`/${url}/${item.slug}`}>{item.title}</Link>
-              <p className="date">{formatDate(item.date)}</p>
+              {/* <p className="date">{formatDate(item.date)}</p> */}
             </li>
           ))}
         </ul>

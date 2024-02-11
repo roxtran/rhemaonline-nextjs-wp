@@ -33,7 +33,7 @@ export default function BibleStudy({ note, list }: Props) {
       />
       <NoteContainer>
         <div className="note-wrapper">
-          <p className="date">{formatDate(note.date)}</p>
+          {/* <p className="date">{formatDate(note.date)}</p> */}
           <div className="line"></div>
           <p>
             in <Link href={paths.studies}>Bible Studies</Link>
