@@ -5,13 +5,11 @@ import HeadLine from "components/common/HeadLine";
 import Meta from "components/common/meta";
 import Sidebar from "components/items/Sidebar";
 import { Button, ImgWrapper, rem } from "styles/GlobalStyle";
-import { formatDate } from "utils/formatter";
 import styled from "styled-components";
-import { LessonsContainer } from "./index";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import paths from "paths";
 import { imgProperties, imgWidth } from "components/items/ItemDetail";
-// import { validate } from 'graphql'
+import { LessonsContainer } from "pages/sermons/notes";
 
 interface Props {
   note: NoteType;
@@ -25,6 +23,7 @@ type Params = {
 };
 
 export default function SermonNote({ note, list }: Props) {
+  // console.log(list);
   return (
     <>
       <Meta title={note.title + " - Rhema - Changing & Affecting Lives!"} />
@@ -34,7 +33,7 @@ export default function SermonNote({ note, list }: Props) {
           {/* <p className="date">{formatDate(note.date)}</p> */}
           <p>
             <i>
-              in <Link href={paths.sermonNotes}>Sermon Notes</Link>
+              in <Link href={paths.virtualHomeGroupsDiscussions}>Virtual Home Group Discussions</Link>
             </i>
           </p>
           <div className="line" />
@@ -60,7 +59,7 @@ export default function SermonNote({ note, list }: Props) {
             </div>
           )}
         </div>
-        <Sidebar title="Recent Notes" items={list} url={paths.sermonNotes} />
+        <Sidebar title="Recent Discussions" items={list} url={paths.virtualHomeGroupsDiscussions} />
       </NoteContainer>
     </>
   );
@@ -154,7 +153,7 @@ export const getStaticProps = async ({ params }: Params) => {
             }
           }
         }
-        sermonNotes(where: { categoryName: "Sermon Notes" }) {
+        sermonNotes(where: { categoryName: "Virtual Home Group Discussion" }) {
           nodes {
             title
             slug

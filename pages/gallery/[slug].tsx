@@ -10,6 +10,7 @@ import styled from "styled-components";
 import { EventsContainer } from "./index";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import paths from "paths";
+import { imgProperties, imgWidth } from "components/items/ItemDetail";
 // import { validate } from 'graphql'
 
 interface Props {
@@ -46,8 +47,7 @@ export default function Event({ event, list }: Props) {
 export const EventContainer = styled(EventsContainer)`
   .note-wrapper {
     position: relative;
-    width: ${rem(822)};
-    max-width: 90vw;
+    ${imgWidth}
     padding: 3rem 0;
     height: 100%;
     .date {
@@ -62,10 +62,7 @@ export const EventContainer = styled(EventsContainer)`
     }
     ${ImgWrapper} {
       margin-top: 2rem;
-      width: ${rem(822)};
-      max-width: 90vw;
-      height: ${rem(300)};
-      border-radius: ${rem(10)};
+      ${imgProperties}
     }
     article {
       margin: 2rem 0;

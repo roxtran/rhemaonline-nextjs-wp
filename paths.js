@@ -6,9 +6,11 @@ export default {
   ottawaLocation: "/locations/ottawa",
   connect: "/connect",
   sermons: "/sermons",
-  notes: "/sermons/notes",
+  sermonNotes: "/sermons/notes",
   bibleStudies: "/bible-studies",
-  studies: "/bible-studies/lessons",
+  bibleStudyLessons: "/bible-studies/lessons",
+  virtualHomeGroups: "/virtual-home-groups",
+  virtualHomeGroupsDiscussions: "/virtual-home-groups/discussions",
   gallery: "/gallery",
   liveStream: "/live-stream",
   events: "/events",
@@ -23,7 +25,6 @@ export default {
   facilityBookings: "/facility-bookings",
   // news: "/news",
   legalTerms: "/legal-terms",
-  virtualHomeGroups: "/virtual-home-groups",
 
   // external links
   subscribe:

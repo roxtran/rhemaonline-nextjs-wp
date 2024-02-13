@@ -18,7 +18,7 @@ export default function ItemDetail({ item, url }: Props) {
     <ItemWrapper>
       <Link href={`${url}/${item.slug}`}>
         {item.featuredImage !== null && (
-          <>
+          <div className="img-container">
             <div className="hover"></div>
             <ImgWrapper>
               <Image
@@ -31,7 +31,7 @@ export default function ItemDetail({ item, url }: Props) {
                 }}
               />
             </ImgWrapper>
-          </>
+          </div>
         )}
         <div className="text">
           {/* <div className="date">{formatDate(item.date)}</div> */}
@@ -46,34 +46,44 @@ export default function ItemDetail({ item, url }: Props) {
     </ItemWrapper>
   );
 }
+
+export const imgWidth = `
+  width: 51.375rem;
+  max-width: 90vw;
+`;
+
+export const imgProperties = `
+  ${imgWidth}
+  height: 18.75rem;
+  border-radius: 0.625rem;
+`;
+
 const ItemWrapper = styled.div`
   position: relative;
-  padding: 1rem 0;
-  width: ${rem(822)};
-  max-width: 90vw;
+  padding: 2rem 0 1rem;
+  ${imgWidth}
 
-  .hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: ${rem(822)};
-    max-width: 90vw;
-    height: ${rem(300)};
-    background: black;
-    opacity: 0;
-    z-index: 1;
-    margin-top: 2rem;
-    border-radius: ${rem(10)};
+  .img-container {
+    position: relative;
 
-    &:hover {
-      opacity: 0.4;
+    ${ImgWrapper} {
+      ${imgProperties}
+      z-index: 0;
     }
-  }
 
-  ${ImgWrapper} {
-    height: ${rem(300)};
-    z-index: 0;
-    border-radius: ${rem(10)};
+    .hover {
+      ${imgProperties}
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: black;
+      opacity: 0;
+      z-index: 1;
+
+      &:hover {
+        opacity: 0.4;
+      }
+    }
   }
 
   .text {

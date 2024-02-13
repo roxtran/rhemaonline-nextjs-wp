@@ -21,11 +21,11 @@ export default function ItemList({ title, items, url }: Props) {
   );
 }
 const ListWrapper = styled.div`
-  padding: 2rem 0;
+  padding: 1rem 0;
   h2 {
-    /* color: var(--blue); */
     padding-bottom: 1rem;
     border-bottom: 4px dashed var(--mint);
+    margin-bottom: 0;
   }
   .item-detail:not(:last-child) {
     border-bottom: 1px double var(--mint);

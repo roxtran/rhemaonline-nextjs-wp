@@ -33,34 +33,31 @@ export default function Menu({ open, setOpen }: Props) {
         <a onClick={() => setOpen(!open)}>Connect</a>
       </NavLink>
       <div className="dropdown">
-        <NavLink href="#">
+        <NavLink href={paths.sermons}>
           <a>Sermons</a>
         </NavLink>
         <div className="dropdown-content">
           <NavLink href={paths.sermons}>
             <a onClick={() => setOpen(!open)}>Videos</a>
           </NavLink>
-          <NavLink href={paths.notes}>
+          <NavLink href={paths.sermonNotes}>
             <a onClick={() => setOpen(!open)}>Notes</a>
           </NavLink>
         </div>
       </div>
       <div className="dropdown">
-        <NavLink href="#">
-          <a>Bible Studies</a>
+        <NavLink href={paths.virtualHomeGroups}>
+          <a>Virtual Home Groups</a>
         </NavLink>
         <div className="dropdown-content">
-          <NavLink href={paths.bibleStudies}>
-            <a onClick={() => setOpen(!open)}>Videos</a>
+          <NavLink href={paths.virtualHomeGroups}>
+            <a onClick={() => setOpen(!open)}>Register</a>
           </NavLink>
-          <NavLink href={paths.studies}>
-            <a onClick={() => setOpen(!open)}>Lessons</a>
+          <NavLink href={paths.virtualHomeGroupsDiscussions}>
+            <a onClick={() => setOpen(!open)}>Discussions</a>
           </NavLink>
         </div>
       </div>
-      {/* <NavLink href={paths.studies}>
-        <a onClick={() => setOpen(!open)}>Bible Studies</a>
-      </NavLink> */}
       <NavLink href={paths.liveStream}>
         <a onClick={() => setOpen(!open)}>Live Stream</a>
       </NavLink>

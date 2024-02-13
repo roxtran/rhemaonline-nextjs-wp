@@ -10,14 +10,6 @@ interface Props {
 }
 
 export default function Sidebar({ title, items, url }: Props) {
-  const formatDate = (date: string) => {
-    const newDate = new Date(date).toLocaleDateString("en-US", {
-      day: "numeric",
-      month: "long",
-      year: "numeric"
-    });
-    return newDate;
-  };
   return (
     <SidebarWrapper>
       <div className="wrapper">
@@ -25,7 +17,7 @@ export default function Sidebar({ title, items, url }: Props) {
         <ul>
           {items?.map((item) => (
             <li key={item.slug}>
-              <Link href={`/${url}/${item.slug}`}>{item.title}</Link>
+              <Link href={`${url}/${item.slug}`}>{item.title}</Link>
               {/* <p className="date">{formatDate(item.date)}</p> */}
             </li>
           ))}
@@ -37,12 +29,13 @@ export default function Sidebar({ title, items, url }: Props) {
 const SidebarWrapper = styled.div`
   position: sticky;
   top: 5rem;
-  margin-top: 6.65rem;
+  /* margin-top: 6.65rem; */
   width: ${rem(325)};
-  border-top: ${rem(4)} dashed var(--mint);
-  padding: 1rem 1rem 0;
+  padding: 2rem 1rem 0;
   h3 {
-    margin-bottom: 0.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 4px dashed var(--mint);
+    margin-bottom: 0;
   }
   ul {
     padding-left: 0;

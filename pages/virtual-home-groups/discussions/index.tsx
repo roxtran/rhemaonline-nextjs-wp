@@ -3,10 +3,9 @@ import NoteType from "types/note";
 import HeadLine from "components/common/HeadLine";
 import Sidebar from "components/items/Sidebar";
 import ItemList from "components/items/ItemList";
-import styled from "styled-components";
 import { ApolloClient, InMemoryCache, gql, DefaultOptions } from "@apollo/client";
-import { def } from "styles/GlobalStyle";
 import paths from "paths";
+import { LessonsContainer } from "pages/sermons/notes";
 
 interface Props {
   notes: NoteType[];
@@ -14,33 +13,24 @@ interface Props {
 }
 
 export default function Lessons({ notes, list }: Props) {
-  // console.log(notes.categories.nodes.name)
+  // console.log(notes);
   return (
     <>
-      <Meta title="Lessons - Rhema - Changing & Affecting Lives!" />
-      <HeadLine imgUrl="/img/sermons-img.jpg" title="Sermon Notes" />
+      <Meta title="Virtual Home Group Discussions - Rhema - Changing & Affecting Lives!" />
+      <HeadLine
+        imgUrl="/img/VirtualHomeGroups.png"
+        title=""
+        height="600px"
+        mbHeight="240px"
+        // blur='blur(15px)'
+      />
       <LessonsContainer>
-        <ItemList title="Recent Sermons" items={notes} url={paths.sermonNotes} />
-        <Sidebar title="Sermon Notes" items={list} url={paths.sermonNotes} />
+        <ItemList title="Recent Discussions" items={notes} url={paths.virtualHomeGroupsDiscussions} />
+        <Sidebar title="VHG Discussions" items={list} url={paths.virtualHomeGroupsDiscussions} />
       </LessonsContainer>
     </>
   );
 }
-
-export const LessonsContainer = styled.div`
-  position: relative;
-  margin: 0 auto;
-  padding: 0 2rem;
-  max-width: ${def.wrapper.width};
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-
-  @media screen and (max-width: 768px) {
-    justify-content: center;
-  }
-`;
 
 export async function getStaticProps() {
   const defaultOptions: DefaultOptions = {
@@ -63,7 +53,7 @@ export async function getStaticProps() {
   const { data } = await client.query({
     query: gql`
       query getSermonNotes($first: Int!, $after: String) {
-        sermonNotes(first: $first, after: $after, where: { categoryName: "Sermon Notes" }) {
+        sermonNotes(first: $first, after: $after, where: { categoryName: "Virtual Home Group Discussion" }) {
           nodes {
             title
             slug
@@ -76,7 +66,7 @@ export async function getStaticProps() {
             }
           }
         }
-        sermonList: sermonNotes(where: { categoryName: "Sermon Notes" }) {
+        sermonList: sermonNotes(where: { categoryName: "Virtual Home Group Discussion" }) {
           nodes {
             title
             slug

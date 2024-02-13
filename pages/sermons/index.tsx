@@ -66,7 +66,7 @@ export default function Sermons({ recentVideosData, popularVideosData }: Props) 
   );
 }
 
-const SermonsContainer = styled(Container)`
+export const SermonsContainer = styled(Container)`
   .wrapper {
     max-width: ${rem(1140)};
     padding: 0 1rem;
@@ -89,7 +89,7 @@ const SermonsContainer = styled(Container)`
   }
 `;
 
-const FeaturedWrapper = styled.div`
+export const FeaturedWrapper = styled.div`
   width: 100%;
   height: 25vh;
   object-fit: cover;
@@ -136,7 +136,7 @@ const FeaturedWrapper = styled.div`
   }
 `;
 
-const PopularVideoWrapper = styled.div`
+export const PopularVideoWrapper = styled.div`
   width: 100%;
   height: fit-content;
   margin: 2rem 0;
@@ -163,7 +163,7 @@ const PopularVideoWrapper = styled.div`
   }
 `;
 
-const RecentVideoWrapper = styled.div`
+export const RecentVideoWrapper = styled.div`
   width: 100%;
   height: fit-content;
   margin: 2rem 0;

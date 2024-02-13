@@ -34,10 +34,12 @@ export default function BibleStudy({ note, list }: Props) {
       <NoteContainer>
         <div className="note-wrapper">
           {/* <p className="date">{formatDate(note.date)}</p> */}
-          <div className="line"></div>
           <p>
-            in <Link href={paths.studies}>Bible Studies</Link>
+            <i>
+              in <Link href={paths.bibleStudyLessons}>Bible Studies</Link>
+            </i>
           </p>
+          <div className="line" />
           {note.featuredImage !== null && (
             <ImgWrapper>
               <Image
@@ -62,7 +64,7 @@ export default function BibleStudy({ note, list }: Props) {
             </div>
           )}
         </div>
-        <Sidebar title="Recent Studies" items={list} url={paths.studies} />
+        <Sidebar title="Recent Studies" items={list} url={paths.bibleStudyLessons} />
       </NoteContainer>
     </>
   );

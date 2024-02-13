@@ -103,10 +103,13 @@ export default function Footer() {
                 <Link href={paths.facilityBookings}>Facility Bookings</Link>
               </li>
               <li>
-                <Link href={paths.notes}>Sermon Notes</Link>
+                <Link href={paths.sermonNotes}>Sermon Notes</Link>
               </li>
               <li>
-                <Link href={paths.studies}>Bible Studies</Link>
+                <Link href={paths.bibleStudies}>Bible Study Videos</Link>
+              </li>
+              <li>
+                <Link href={paths.bibleStudyLessons}>Bible Studies</Link>
               </li>
               {/* <li>
               <Link href={paths.news}>
