@@ -99,9 +99,9 @@ export default function Footer() {
               <li>
                 <Link href={paths.liveStream}>Live Stream</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href={paths.facilityBookings}>Facility Bookings</Link>
-              </li>
+              </li> */}
               <li>
                 <Link href={paths.sermonNotes}>Sermon Notes</Link>
               </li>
