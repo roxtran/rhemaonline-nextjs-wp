@@ -14,7 +14,7 @@ export default function LiveStream() {
       <HeadLine
         imgUrl="/img/live-stream.jpg"
         title="Live Stream"
-        desc="Sundays - 11am & Wednesdays - 7pm"
+        desc="Sundays - 11am"
         height="480px"
         top="50px"
         blur="blur(4px)"
