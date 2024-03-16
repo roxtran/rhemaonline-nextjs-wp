@@ -15,7 +15,7 @@ const Newsletter = ({ newsletters }: Props) => {
         <h2>Our Weekly Newsletters</h2>
         <p>
           This is our way of keeping you up to date on all our events, activities, and relevant news. We invite you to
-          check out what’s happing @ Rhema this week.
+          check out what’s happening @ Rhema this week.
         </p>
         <Button href={newsletters[0]?.NewsletterInfo?.link} target="_blank" className="btn">
           Learn More
