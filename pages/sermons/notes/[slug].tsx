@@ -91,6 +91,9 @@ export const NoteContainer = styled(LessonsContainer)`
       ul {
         padding-left: 40px;
       }
+      ol li {
+        margin-bottom: 1rem;
+      }
     }
     .btn-wrapper {
       position: relative;
