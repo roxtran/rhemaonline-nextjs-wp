@@ -1,16 +1,15 @@
 import NoteType from "types/note";
-import Image from "next/image";
 import Link from "next/link";
-import HeadLine from "components/common/HeadLine";
 import Meta from "components/common/meta";
-import Sidebar from "components/items/Sidebar";
-import { Button, ImgWrapper, rem } from "styles/GlobalStyle";
-import { formatDate } from "utils/formatter";
-import styled from "styled-components";
+import HeadLine from "components/common/HeadLine";
 import { EventsContainer } from "./index";
+import { imgProperties, imgWidth } from "styles/note";
+import { ImgWrapper } from "styles/GlobalStyle";
+import Sidebar from "components/items/Sidebar";
+import { formatDate } from "utils/formatter";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+import styled from "styled-components";
 import paths from "paths";
-import { imgProperties, imgWidth } from "components/items/ItemDetail";
 // import { validate } from 'graphql'
 
 interface Props {

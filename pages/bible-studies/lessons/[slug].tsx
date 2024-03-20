@@ -1,14 +1,13 @@
 import NoteType from "types/note";
 import Image from "next/image";
 import Link from "next/link";
-import HeadLine from "components/common/HeadLine";
 import Meta from "components/common/meta";
+import HeadLine from "components/common/HeadLine";
+import { NoteContainer } from "styles/note";
 import Sidebar from "components/items/Sidebar";
 import { Button, ImgWrapper } from "styles/GlobalStyle";
-import { formatDate } from "utils/formatter";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import paths from "paths";
-import { NoteContainer } from "../../sermons/notes/[slug]";
 // import { validate } from 'graphql'
 
 interface Props {

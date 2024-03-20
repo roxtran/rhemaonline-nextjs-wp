@@ -1,15 +1,13 @@
 import NoteType from "types/note";
 import Image from "next/image";
 import Link from "next/link";
-import HeadLine from "components/common/HeadLine";
 import Meta from "components/common/meta";
+import HeadLine from "components/common/HeadLine";
+import { NoteContainer } from "styles/note";
 import Sidebar from "components/items/Sidebar";
-import { Button, ImgWrapper, rem } from "styles/GlobalStyle";
-import styled from "styled-components";
+import { Button, ImgWrapper } from "styles/GlobalStyle";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import paths from "paths";
-import { imgProperties, imgWidth } from "components/items/ItemDetail";
-import { LessonsContainer } from "pages/sermons/notes";
 
 interface Props {
   note: NoteType;
@@ -64,72 +62,6 @@ export default function SermonNote({ note, list }: Props) {
     </>
   );
 }
-
-export const NoteContainer = styled(LessonsContainer)`
-  .note-wrapper {
-    position: relative;
-    ${imgWidth}
-    padding: 3rem 0;
-    height: 100%;
-    .date {
-      font-style: italic;
-      margin-bottom: 0;
-    }
-    .line {
-      margin: 0.5rem 0;
-      width: 100%;
-      height: 1px;
-      background: rgba(0, 0, 0, 0.2);
-    }
-    ${ImgWrapper} {
-      margin-top: 2rem;
-      ${imgProperties}
-    }
-    article {
-      margin: 2rem 0;
-      ul {
-        padding-left: 40px;
-      }
-      ol li {
-        margin-bottom: 1rem;
-      }
-    }
-    .btn-wrapper {
-      position: relative;
-      z-index: 1;
-      &:before {
-        content: "";
-        position: absolute;
-        top: -1px;
-        left: 20%;
-        right: 20%;
-        height: 15px;
-        border-radius: 50%;
-        box-shadow: 0 0 12px rgb(0 0 0 / 15%);
-        z-index: -1;
-      }
-      .btn-bg {
-        background: #fff;
-        display: flex;
-        padding: 2rem;
-      }
-      .btn {
-        margin: auto;
-      }
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .note-wrapper {
-      padding: 3rem 0 0;
-    }
-  }
-
-  @media screen and (max-width: 640px) {
-    ${ImgWrapper} {
-      height: 240px;
-    }
-  }
-`;
 
 const client = new ApolloClient({
   uri: process.env.WP_URL as string,

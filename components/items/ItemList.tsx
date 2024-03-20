@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { ListWrapper } from "styles/note";
 import ItemDetail from "./ItemDetail";
 import NoteType from "types/note";
 
@@ -20,17 +20,3 @@ export default function ItemList({ title, items, url }: Props) {
     </ListWrapper>
   );
 }
-const ListWrapper = styled.div`
-  padding: 1rem 0;
-  h2 {
-    padding-bottom: 1rem;
-    border-bottom: 4px dashed var(--mint);
-    margin-bottom: 0;
-  }
-  .item-detail:not(:last-child) {
-    border-bottom: 1px double var(--mint);
-  }
-  @media screen and (max-width: 768px) {
-    padding-bottom: 0;
-  }
-`;

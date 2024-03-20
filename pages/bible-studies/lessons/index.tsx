@@ -1,10 +1,10 @@
 import Meta from "components/common/meta";
 import NoteType from "types/note";
 import HeadLine from "components/common/HeadLine";
-import Sidebar from "components/items/Sidebar";
+import { NotesContainer } from "styles/note";
 import ItemList from "components/items/ItemList";
+import Sidebar from "components/items/Sidebar";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
-import { LessonsContainer } from "../../sermons/notes";
 import paths from "paths";
 
 interface Props {
@@ -18,10 +18,10 @@ export default function Lessons({ studies, list }: Props) {
     <>
       <Meta title="Lessons - Rhema - Changing & Affecting Lives!" />
       <HeadLine imgUrl="/img/sermons-img.jpg" title="Bible Studies" />
-      <LessonsContainer>
+      <NotesContainer>
         <ItemList title="Lessons" items={studies} url={paths.bibleStudyLessons} />
         <Sidebar title="Recent Studies" items={list} url={paths.bibleStudyLessons} />
-      </LessonsContainer>
+      </NotesContainer>
     </>
   );
 }
