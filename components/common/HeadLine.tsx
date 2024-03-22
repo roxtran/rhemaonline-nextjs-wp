@@ -26,7 +26,7 @@ export default function HeadLine({
   top
 }: HeadLineProps) {
   return (
-    <HeadLineWrapper height={height || "28.125rem"} mbHeight={mbHeight || `${height}`} top={top || "0"}>
+    <HeadLineWrapper height={height || "28.125rem"} mbHeight={mbHeight || `${height}`} top={top || "0rem"}>
       <Image
         src={imgUrl}
         alt="headline image"
