@@ -43,7 +43,7 @@ const FoodbankContainer = styled(Container)`
   }
   .img-wrapper {
     width: 100%;
-    height: 600px;
+    height: 37.5rem;
   }
 `;
 

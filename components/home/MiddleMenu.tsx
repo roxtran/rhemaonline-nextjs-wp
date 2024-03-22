@@ -7,8 +7,8 @@ import { slideLeft, slideRight } from "styles/animation";
 
 const items = {
   show: {
-    boxShadow: "0px 7px 10px 0 rgba(122, 207, 255, 0.3)",
-    borderRadius: "10px",
+    boxShadow: "0 0.4375rem 0.625rem 0 rgba(122, 207, 255, 0.3)",
+    borderRadius: "0.625rem",
     overflow: "hidden",
     transition: { duration: 0.1, type: "spring", when: "afterChildren" }
   }
@@ -137,20 +137,20 @@ const MiddleWrapper = styled.div`
   position: relative;
   z-index: 1;
   display: flex;
-  top: -150px;
+  top: -10rem;
 
   .items {
     position: relative;
     margin: auto;
-    width: 1200px;
+    width: 75rem;
     max-width: 90vw;
     display: flex;
     flex-flow: row wrap;
   }
   .item {
     background: rgba(255, 255, 255, 1);
-    min-height: 300px;
-    min-width: 300px;
+    min-height: 18.75rem;
+    min-width: 18.75rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -159,7 +159,7 @@ const MiddleWrapper = styled.div`
     padding: 2.5rem 2.5rem;
     flex: 1;
     &:not(:last-child) {
-      border-right: 1px dashed rgba(122, 207, 255, 0.3);
+      border-right: 0.0625rem dashed rgba(122, 207, 255, 0.3);
     }
     p {
       margin: 1.25rem 0;
@@ -169,28 +169,28 @@ const MiddleWrapper = styled.div`
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 64rem) {
     margin-bottom: -6.25rem;
-    top: -5px;
+    top: -0.25rem;
 
     .item {
-      min-width: 320px;
+      min-width: 20rem;
     }
     .item:nth-child(1),
     .item:nth-child(2) {
-      border-bottom: 1px dashed rgba(122, 207, 255, 0.3);
+      border-bottom: 0.0625rem dashed rgba(122, 207, 255, 0.3);
     }
     .item:nth-child(2) {
       border-right: none;
     }
   }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 40rem) {
     .item:nth-child(1),
     .item:nth-child(3) {
       border-right: none;
     }
     .item:nth-child(3) {
-      border-bottom: 1px dashed rgba(122, 207, 255, 0.3);
+      border-bottom: 0.0625rem dashed rgba(122, 207, 255, 0.3);
     }
   }
 `;

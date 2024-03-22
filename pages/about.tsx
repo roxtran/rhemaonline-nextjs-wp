@@ -10,8 +10,8 @@ export default function About() {
       <HeadLine
         imgUrl="/img/about-img.webp"
         title="About Us"
-        height="500px"
-        // blur='blur(15px)'
+        height="31.25rem"
+        // blur='blur(0.9375rem)'
       />
       <StyledAbout>
         <div className="content-wrapper">

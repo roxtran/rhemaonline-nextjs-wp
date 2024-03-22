@@ -93,8 +93,8 @@ const StyledMenu = styled.div<{ open: boolean }>`
     text-transform: capitalize;
     white-space: nowrap;
     &:not(.button)[aria-current] {
-      /* border-bottom: 4px solid var(--mint); */
-      background: linear-gradient(var(--mint), var(--mint)) 0 calc(100% - 3px) / 100% 7px no-repeat;
+      /* border-bottom: 0.25rem solid var(--mint); */
+      background: linear-gradient(var(--mint), var(--mint)) 0 calc(100% - 0.1875rem) / 100% 0.4375rem no-repeat;
     }
     &:hover {
       color: var(--blue);
@@ -121,8 +121,8 @@ const StyledMenu = styled.div<{ open: boolean }>`
       background: #fff;
       top: 3rem;
       left: 1rem;
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      border-radius: 5px;
+      border: 0.0625rem solid rgba(0, 0, 0, 0.2);
+      border-radius: var(--border-radius);
 
       a {
         width: fit-content;
@@ -138,11 +138,11 @@ const StyledMenu = styled.div<{ open: boolean }>`
   }
   .button {
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 0.25rem;
     padding: 0.5rem 1.5rem;
     text-align: center;
     margin-left: 0.5rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem;
     background: var(--blue);
     color: #fff;
     &:hover {
@@ -160,16 +160,16 @@ const StyledMenu = styled.div<{ open: boolean }>`
   /* .external:after {
     content: '◥';
     position: relative;
-    right: -3px;
-    top: -7px;
+    right: -0.1875rem;
+    top: -0.4375rem;
     font-size: 0.65rem;
   } */
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 64rem) {
     a {
       margin: 0.6rem;
     }
   }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 56.25rem) {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -178,12 +178,12 @@ const StyledMenu = styled.div<{ open: boolean }>`
     top: 0;
     right: 0;
     background: #fff;
-    width: 250px;
+    width: 15.625rem;
     height: 100vh;
     padding-left: 1rem;
     padding-top: 3rem;
     box-shadow: var(--shadow);
-    transform-origin: 1px;
+    transform-origin: 0.0625rem;
     transition: all 0.3s ease-out;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     opacity: ${({ open }) => (open ? 1 : 0)};
@@ -197,7 +197,7 @@ const StyledMenu = styled.div<{ open: boolean }>`
     }
     .orange {
       margin-top: 1rem;
-      width: 150px;
+      width: 9.5rem;
     }
   }
 `;

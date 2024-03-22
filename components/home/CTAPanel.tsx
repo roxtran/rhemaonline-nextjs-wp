@@ -7,9 +7,9 @@ import { slideLeft, slideRight, slideUp } from "styles/animation";
 
 const items = {
   show: {
-    // boxShadow: '0px 7px 10px 0 rgba(122, 207, 255, 0.3)',
-    // border: '4px solid rgb(16, 97, 162)',
-    borderRadius: "10px",
+    // boxShadow: '0 0.4375rem 0.625rem 0 rgba(122, 207, 255, 0.3)',
+    // border: '0.25rem solid rgb(16, 97, 162)',
+    borderRadius: "0.625rem",
     overflow: "hidden",
     transition: { duration: 0.01, type: "spring", when: "afterChildren" }
   }
@@ -73,19 +73,19 @@ const CTAPanel = styled.div`
   position: relative;
   z-index: 1;
   display: flex;
-  margin: 2rem 0 4rem;
+  margin: 2rem 0;
 
   .items {
     position: relative;
     margin: auto;
-    width: 1200px;
+    width: 75rem;
     max-width: 90vw;
     display: flex;
     flex-flow: row wrap;
   }
   .item {
     background: rgba(255, 255, 255, 1);
-    min-width: 200px;
+    min-width: 12.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -94,7 +94,7 @@ const CTAPanel = styled.div`
     padding: 0.5rem;
     flex: 1;
     &:not(:last-child) {
-      border-right: 1px dashed var(--shadow-color);
+      border-right: 0.0625rem dashed var(--shadow-color);
     }
     a {
       color: var(--heading-color);
@@ -106,30 +106,30 @@ const CTAPanel = styled.div`
     }
     .line {
       background-color: var(--blue);
-      width: 200px;
-      height: 3px;
+      width: 12.5rem;
+      height: 0.25rem;
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 64rem) {
     .item {
-      min-width: 320px;
+      min-width: 20rem;
     }
     .item:nth-child(1),
     .item:nth-child(2) {
-      border-bottom: 1px dashed var(--shadow-color);
+      border-bottom: 0.0625rem dashed var(--shadow-color);
     }
     .item:nth-child(2) {
       border-right: none;
     }
   }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 40rem) {
     .item:nth-child(1),
     .item:nth-child(3) {
       border-right: none;
     }
     .item:nth-child(3) {
-      border-bottom: 1px dashed var(--shadow-color);
+      border-bottom: 0.0625rem dashed var(--shadow-color);
     }
   }
 `;

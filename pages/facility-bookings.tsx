@@ -7,7 +7,7 @@ export default function facilityBookings() {
   return (
     <>
       <Meta title="Facility Bookings - Rhema - Changing & Affecting Lives!" />
-      <HeadLine imgUrl="/img/facility-bookings-img.jpg" title="Facility Bookings" blur="blur(4px)" />
+      <HeadLine imgUrl="/img/facility-bookings-img.jpg" title="Facility Bookings" blur="blur(0.25rem)" />
       <BookingsContainer>
         <div className="wrapper">
           <div className="content-wrapper">
@@ -69,7 +69,7 @@ const BookingsContainer = styled(Container)`
     flex-wrap: wrap;
   }
   .content-wrapper {
-    width: 700px;
+    width: 43.75rem;
 
     ul {
       margin-left: 2rem;
@@ -89,15 +89,15 @@ const BookingsContainer = styled(Container)`
       margin-top: 0.5rem;
     }
   }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 64rem) {
     .content-wrapper {
-      width: 550px;
+      width: 34.375rem;
     }
     .btn-wrapper {
       padding: 5rem 1rem;
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 48rem) {
     .btn-wrapper {
       padding: 2rem 0;
     }

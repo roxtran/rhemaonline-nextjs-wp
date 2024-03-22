@@ -24,7 +24,7 @@ export default function SermonNote({ note, list }: Props) {
   return (
     <>
       <Meta title={note.title + " - Rhema - Changing & Affecting Lives!"} />
-      <HeadLine imgUrl={note.featuredImage.node.sourceUrl} title={note.title} blur="blur(30px)" />
+      <HeadLine imgUrl={note.featuredImage.node.sourceUrl} title={note.title} blur="blur(1.875rem)" />
       <NoteContainer>
         <div className="note-wrapper">
           {/* <p className="date">{formatDate(note.date)}</p> */}

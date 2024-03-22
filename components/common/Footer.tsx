@@ -265,7 +265,7 @@ const FooterWrapper = styled.div`
     justify-content: space-around;
     h4 {
       margin-bottom: 0.75rem;
-      margin-left: -20px;
+      margin-left: -1rem;
     }
     ul {
       margin-bottom: 1.5rem;
@@ -280,7 +280,7 @@ const FooterWrapper = styled.div`
     text-align: center;
   }
 
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 40rem) {
     height: 100%;
     padding: 3rem;
     .links {
@@ -302,7 +302,7 @@ const SocialIconsWrapper = styled.div`
     cursor: pointer;
     margin: 0.75rem;
     &:hover {
-      transform: translateY(-5px);
+      transform: translateY(-0.3125rem);
     }
   }
 `;

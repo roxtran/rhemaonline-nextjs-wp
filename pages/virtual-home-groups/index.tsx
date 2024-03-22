@@ -14,9 +14,9 @@ export default function VHG() {
       <HeadLine
         imgUrl="/img/VirtualHomeGroups.png"
         title=""
-        height="600px"
-        mbHeight="240px"
-        // blur='blur(15px)'
+        height="37.5rem"
+        mbHeight="15rem"
+        // blur='blur(0.9375rem)'
       />
       <VHGContainer>
         <div className="content-wrapper">

@@ -56,7 +56,7 @@ export const EventContainer = styled(EventsContainer)`
     .line {
       margin: 0.5rem 0;
       width: 100%;
-      height: 1px;
+      height: 0.0625rem;
       background: rgba(0, 0, 0, 0.2);
     }
     ${ImgWrapper} {
@@ -67,7 +67,7 @@ export const EventContainer = styled(EventsContainer)`
       margin: 2rem 0;
       overflow: hidden;
       ul {
-        padding-left: 40px;
+        padding-left: 2.5rem;
       }
     }
     .btn-wrapper {
@@ -76,12 +76,12 @@ export const EventContainer = styled(EventsContainer)`
       &:before {
         content: "";
         position: absolute;
-        top: -1px;
+        top: -0.0625rem;
         left: 20%;
         right: 20%;
-        height: 15px;
+        height: 1rem;
         border-radius: 50%;
-        box-shadow: 0 0 12px rgb(0 0 0 / 15%);
+        box-shadow: 0 0 0.75rem rgb(0 0 0 / 15%);
         z-index: -1;
       }
       .btn-bg {
@@ -94,15 +94,15 @@ export const EventContainer = styled(EventsContainer)`
       }
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 48rem) {
     .note-wrapper {
       padding: 3rem 0 0;
     }
   }
 
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 40rem) {
     ${ImgWrapper} {
-      height: 240px;
+      height: 15rem;
     }
   }
 `;

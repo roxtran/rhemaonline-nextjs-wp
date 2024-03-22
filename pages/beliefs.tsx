@@ -1,17 +1,17 @@
-import HeadLine from 'components/common/HeadLine'
-import styled from 'styled-components'
-import { Container, def } from 'styles/GlobalStyle'
-import beliefs from 'data/beliefs'
-import Meta from 'components/common/meta'
+import HeadLine from "components/common/HeadLine";
+import styled from "styled-components";
+import { Container, def } from "styles/GlobalStyle";
+import beliefs from "data/beliefs";
+import Meta from "components/common/meta";
 
 export default function Beliefs() {
   return (
     <>
-      <Meta title='Beliefs - Rhema - Changing & Affecting Lives!' />
-      <HeadLine imgUrl='/img/beliefs-img.jpg' title='Beliefs' blur='blur(5px)' />
+      <Meta title="Beliefs - Rhema - Changing & Affecting Lives!" />
+      <HeadLine imgUrl="/img/beliefs-img.jpg" title="Beliefs" blur="blur(0.3125rem)" />
       <BeliefsContainer>
-        <div className='content-wrapper'>
-          <div className='desc'>
+        <div className="content-wrapper">
+          <div className="desc">
             <h2>Statement of faith</h2>
             <p>
               We put forth the following statement of faith not for theological argumentation nor for denominational
@@ -20,9 +20,9 @@ export default function Beliefs() {
               whom we believe.
             </p>
           </div>
-          <div className='beliefs'>
+          <div className="beliefs">
             {beliefs.map((belief) => (
-              <div className='belief' key={belief.title}>
+              <div className="belief" key={belief.title}>
                 <h4>{belief.title}</h4>
                 <p>{belief.text}</p>
               </div>
@@ -32,7 +32,7 @@ export default function Beliefs() {
         </div>
       </BeliefsContainer>
     </>
-  )
+  );
 }
 const BeliefsContainer = styled(Container)`
   .content-wrapper {
@@ -41,7 +41,7 @@ const BeliefsContainer = styled(Container)`
     .desc {
       p {
         padding-bottom: 3rem;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.2);
       }
     }
     .beliefs {
@@ -53,14 +53,14 @@ const BeliefsContainer = styled(Container)`
       }
     }
     h3 {
-      border-top: 1px solid rgba(0, 0, 0, 0.2);
+      border-top: 0.0625rem solid rgba(0, 0, 0, 0.2);
       padding: 3rem;
       text-align: center;
     }
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 40rem) {
       .beliefs {
         padding: 1rem 0;
       }
     }
   }
-`
+`;

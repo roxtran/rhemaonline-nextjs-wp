@@ -15,16 +15,16 @@ export default function LiveStream() {
         imgUrl="/img/live-stream.jpg"
         title="Live Stream"
         desc="Sundays - 11am"
-        height="480px"
-        top="50px"
-        blur="blur(4px)"
+        height="30rem"
+        top="3.125rem"
+        blur="blur(0.25rem)"
       />
       <LiveStreamWrapper>
         {width && (
           <IframeVideo
             src="https://www.youtube.com/embed/FE4p8e6JvZo?modestbranding=1&autoplay=1&controls=0&rel=0"
             width={width >= 1024 ? "50vw" : "80vw"}
-            height={width >= 768 ? "520px" : "320px"}
+            height={width >= 768 ? "32.5rem" : "20rem"}
           />
         )}
       </LiveStreamWrapper>
@@ -50,12 +50,12 @@ const LiveStreamWrapper = styled.div`
   > div {
     z-index: 1;
     border: 0.5rem solid white;
-    box-shadow: -1px 4px 12px 0 rgb(181 217 238);
+    box-shadow: -0.0625rem 0.25rem 0.75rem 0 rgb(181 217 238);
   }
 `;
 
 const ExperienceWrapper = styled.div`
-  margin: 2rem 0 4rem;
+  margin: 2rem 0;
   text-align: center;
   h2 {
     text-transform: uppercase;

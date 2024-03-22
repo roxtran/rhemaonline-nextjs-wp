@@ -88,7 +88,7 @@ const YouthContainer = styled(Container)`
     .icon {
       margin: 0.5rem;
       &:hover {
-        transform: translateY(-5px);
+        transform: translateY(-0.3125rem);
       }
     }
   }
@@ -99,13 +99,13 @@ const YouthContainer = styled(Container)`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     overflow: hidden;
   }
   p {
     margin: 1.5rem 0;
   }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 64rem) {
     flex-flow: column;
     .content-wrapper,
     .video-wrapper {

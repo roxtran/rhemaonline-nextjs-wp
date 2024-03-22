@@ -40,7 +40,7 @@ export default function Welcome() {
 
 export const WelcomeWrapper = styled(motion.div)`
   position: relative;
-  width: 1200px;
+  width: 75rem;
   max-width: 80vw;
   margin: 0 auto 5rem;
   padding-top: 2.5rem;
@@ -50,15 +50,15 @@ export const WelcomeWrapper = styled(motion.div)`
   flex-wrap: wrap;
   ${ImgWrapper} {
     flex: 1;
-    height: 380px;
-    box-shadow: -35px 35px 0 0 rgba(122, 207, 255, 0.3);
+    height: 25rem;
+    box-shadow: -2.5rem 2.5rem 0 0 rgba(122, 207, 255, 0.3);
     &:hover {
       box-shadow: none;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 48rem) {
       flex: none;
       width: 75vw;
-      height: 300px;
+      height: 25rem;
       margin-bottom: 1rem;
     }
   }
@@ -78,11 +78,11 @@ export const WelcomeWrapper = styled(motion.div)`
       font-weight: bold;
     }
     a {
-      width: 170px;
+      min-width: 11rem;
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 64rem) {
     .image {
       box-shadow: 0 0 0 0 rgba(122, 207, 255, 0.3);
     }
@@ -93,7 +93,7 @@ export const WelcomeWrapper = styled(motion.div)`
       font-size: 1.75rem;
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 48rem) {
     justify-content: flex-start;
     flex-direction: column;
     .text {

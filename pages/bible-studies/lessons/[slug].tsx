@@ -28,7 +28,7 @@ export default function BibleStudy({ note, list }: Props) {
       <HeadLine
         imgUrl={note.featuredImage !== null ? note.featuredImage.node.sourceUrl : "/img/beliefs-img.jpg"}
         title={note.title}
-        blur="blur(30px)"
+        blur="blur(1.875rem)"
       />
       <NoteContainer>
         <div className="note-wrapper">

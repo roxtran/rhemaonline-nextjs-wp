@@ -9,7 +9,7 @@ const grow = () => {
   return (
     <>
       <Meta title="Grow - Rhema - Changing & Affecting Lives!" />
-      <HeadLine imgUrl="/img/grow-img.jpg" title="Grow" height="550px" />
+      <HeadLine imgUrl="/img/grow-img.jpg" title="Grow" height="34.375rem" />
       <GrowContainer>
         <div className="desc">
           <h2>Go Deeper</h2>
@@ -80,11 +80,11 @@ const GrowContainer = styled(Container)`
   }
   ${ImgWrapper} {
     width: 100%;
-    min-width: 300px;
-    height: 600px;
+    min-width: 18.75rem;
+    height: 37.5rem;
     flex: 1;
     /* &:hover {
-      box-shadow: 0 0 20px 0 var(--mint);
+      box-shadow: 0 0 1.25rem 0 var(--mint);
     } */
   }
   .content-wrapper {
@@ -106,7 +106,7 @@ const GrowContainer = styled(Container)`
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      min-width: 500px;
+      min-width: 31.25rem;
       p {
         max-width: 90vw;
         text-align: center;
@@ -120,7 +120,7 @@ const GrowContainer = styled(Container)`
       }
     }
   }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 64rem) {
     .content-wrapper {
       .text {
         ul {
@@ -129,9 +129,9 @@ const GrowContainer = styled(Container)`
       }
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 48rem) {
     ${ImgWrapper} {
-      height: 400px;
+      height: 25rem;
     }
     .content-wrapper {
       h3 {

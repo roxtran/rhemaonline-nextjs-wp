@@ -26,7 +26,7 @@ export default function HeadLine({
   top
 }: HeadLineProps) {
   return (
-    <HeadLineWrapper height={height || "450px"} mbHeight={mbHeight || `${height}`} top={top || "0px"}>
+    <HeadLineWrapper height={height || "28.125rem"} mbHeight={mbHeight || `${height}`} top={top || "0"}>
       <Image
         src={imgUrl}
         alt="headline image"
@@ -66,7 +66,7 @@ const HeadLineWrapper = styled.div<{ height: string; mbHeight: string; top: stri
     position: absolute;
     text-align: center;
     color: #fff;
-    top: calc(50% + 50px - ${(props) => props.top});
+    top: calc(50% + 3.125rem - ${(props) => props.top});
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -76,7 +76,7 @@ const HeadLineWrapper = styled.div<{ height: string; mbHeight: string; top: stri
     font-weight: bold;
     text-shadow: var(--text-shadow);
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 48rem) {
     height: ${(props) => props.mbHeight};
     h1 {
       font-size: 2.5rem;
@@ -97,7 +97,7 @@ const Blur = styled.div<{ blur: string }>`
 `;
 const HeadLineBtn = styled(Button)`
   font-weight: bold;
-  border-radius: 50px;
+  border-radius: 3rem;
   font-size: 1.1rem;
   padding: 0.75rem 2.75rem;
 `;

@@ -20,9 +20,9 @@ export default function Lessons({ notes, list }: Props) {
       <HeadLine
         imgUrl="/img/VirtualHomeGroups.png"
         title=""
-        height="600px"
-        mbHeight="240px"
-        // blur='blur(15px)'
+        height="37.5rem"
+        mbHeight="15rem"
+        // blur='blur(0.9375rem)'
       />
       <NotesContainer>
         <ItemList title="Recent Discussions" items={notes} url={paths.virtualHomeGroupsDiscussions} />

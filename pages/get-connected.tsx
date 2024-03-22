@@ -15,7 +15,7 @@ const getConnected = () => {
         desc="That's changing and affecting lives."
         btnText="Join Us"
         btnLink="https://rhema.ccbchurch.com/goto/forms/15/responses/new"
-        height="550px"
+        height="34.375rem"
       />
       <ConnectedContainer>
         <div className="items">
@@ -66,8 +66,8 @@ const ConnectedContainer = styled(Container)`
   }
   ${ImgWrapper} {
     width: 50%;
-    min-width: 300px;
-    height: 600px;
+    min-width: 18.75rem;
+    height: 37.5rem;
   }
   .content-wrapper {
     display: flex;
@@ -89,12 +89,12 @@ const ConnectedContainer = styled(Container)`
       margin-bottom: 1.5rem;
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 48rem) {
     .item {
       flex-direction: column;
     }
     ${ImgWrapper} {
-      height: 400px;
+      height: 25rem;
       width: 100%;
     }
     .content-wrapper {
@@ -104,7 +104,7 @@ const ConnectedContainer = styled(Container)`
       }
     }
   }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 40rem) {
     .content-wrapper {
       padding: 2rem;
     }

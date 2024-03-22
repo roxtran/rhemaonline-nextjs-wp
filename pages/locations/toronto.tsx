@@ -136,7 +136,7 @@ export default function Toronto() {
 export const LocationContainer = styled(Container)`
   position: relative;
   background: #fff;
-  margin-top: -100px;
+  margin-top: -6.25rem;
   .content-wrapper {
     width: ${def.wrapper.width};
     max-width: 90vw;
@@ -150,7 +150,7 @@ export const LocationContainer = styled(Container)`
   .line {
     margin: 1rem auto;
     width: 10vw;
-    height: 2px;
+    height: 0.125rem;
     background: rgba(0, 0, 0, 0.2);
   }
   .icon-info {
@@ -173,10 +173,10 @@ export const LocationContainer = styled(Container)`
     margin: 1rem 2.5rem;
   }
   .icon {
-    width: 125px;
-    height: 125px;
-    box-shadow: 0 0 28px 10px rgba(122, 207, 255, 0.4);
-    border-radius: 90px;
+    width: 7.8125rem;
+    height: 7.8125rem;
+    box-shadow: 0 0 1.75rem 0.625rem rgba(122, 207, 255, 0.4);
+    border-radius: 5.625rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,19 +185,19 @@ export const LocationContainer = styled(Container)`
   }
   .map-group {
     display: flex;
-    margin: 2rem 0 4rem 0;
+    margin: 2rem 0;
     justify-content: space-between;
   }
   .text-wrapper {
     background: var(--blue);
     color: #fff;
     padding: 3rem 3.5rem 3.5rem 3.5rem;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     height: 100%;
-    width: 650px;
+    width: 40.625rem;
     z-index: 1;
     .text-border {
-      width: 480px;
+      width: 30rem;
       max-width: 28vw;
     }
     span {
@@ -209,40 +209,40 @@ export const LocationContainer = styled(Container)`
   }
   .map-wrapper {
     z-index: 2;
-    width: 700px;
+    width: 43.75rem;
     height: 100%;
-    margin-left: -100px;
-    margin-top: 90px;
+    margin-left: -6.25rem;
+    margin-top: 5.625rem;
     box-shadow: var(--shadow);
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     overflow: hidden;
     flex-wrap: wrap;
   }
   .btn-wrapper {
-    margin-top: 84px;
+    margin-top: 5.25rem;
     position: relative;
     z-index: 1;
     &:before {
       content: "";
       position: absolute;
-      top: -1px;
+      top: -0.0625rem;
       left: 20%;
       right: 20%;
-      height: 15px;
+      height: 1rem;
       border-radius: 50%;
-      box-shadow: 0 0 12px rgb(0 0 0 / 15%);
+      box-shadow: 0 0 0.75rem rgb(0 0 0 / 15%);
       z-index: -1;
     }
     .btn-bg {
       background: #fff;
       display: flex;
-      padding: 48px;
+      padding: 3rem;
     }
     .btn {
       margin: auto;
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 48rem) {
     .icon-info {
       justify-content: center;
     }
@@ -265,7 +265,7 @@ export const LocationContainer = styled(Container)`
     }
   }
 
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 40rem) {
     .text-wrapper {
       padding: 2.75rem;
     }
@@ -278,7 +278,7 @@ export const LocationContainer = styled(Container)`
   }
 `;
 export const VideoWrapper = styled.div`
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 40rem) {
     video {
       height: 60vh;
     }

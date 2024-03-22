@@ -7,7 +7,7 @@ export default function NYEService() {
   return (
     <>
       <Meta title="New Year's Eve Service - Rhema - Changing & Affecting Lives!" />
-      <HeadLine imgUrl="/img/nye-service.png" title="" height="480px" mbHeight="320px" blur="blur(0)" />
+      <HeadLine imgUrl="/img/nye-service.png" title="" height="30rem" mbHeight="20rem" blur="blur(0)" />
       <NYEContainer>
         <div className="content-wrapper">
           <h2>

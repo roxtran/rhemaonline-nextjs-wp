@@ -37,7 +37,7 @@ export const EventsContainer = styled.div`
   align-items: flex-start;
   flex-wrap: wrap;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 48rem) {
     justify-content: center;
   }
 `;

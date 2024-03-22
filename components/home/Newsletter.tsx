@@ -50,27 +50,27 @@ const Newsletter = ({ newsletters }: Props) => {
 export default Newsletter;
 
 const NewsletterWrapper = styled(Container)`
-  width: 1200px;
+  width: 75rem;
   max-width: 80vw;
   margin: auto;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
   .text {
-    width: 740px;
+    width: 45rem;
     margin-right: 3rem;
     .btn {
       margin: 0.55rem 0 3.25rem;
     }
   }
   .newsletters {
-    width: 400px;
-    /* height: 400px; */
+    width: 25rem;
+    /* height: 45rem; */
     display: flex;
     flex-flow: row wrap;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     overflow: hidden;
-    box-shadow: 0px 12px 36px 0px rgb(181 217 238 / 25%);
+    box-shadow: 0 0.75rem 2.25rem 0 rgb(181 217 238 / 25%);
     /* gap: 0.15rem; */
   }
   .newsletter {
@@ -82,21 +82,21 @@ const NewsletterWrapper = styled(Container)`
   ${ImgWrapper} {
     border-radius: 0;
     cursor: pointer;
-    min-width: calc(400px / 3);
-    min-height: calc(400px / 3);
+    min-width: calc(25rem / 3);
+    min-height: calc(25rem / 3);
     transition-duration: 0.2s;
     &:hover {
       opacity: 0.75;
     }
   }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 40rem) {
     padding-bottom: 0;
     .text {
       margin-right: 0;
     }
     ${ImgWrapper} {
-      min-width: calc(300px / 3);
-      min-height: calc(300px / 3);
+      min-width: calc(18.75rem / 3);
+      min-height: calc(18.75rem / 3);
     }
   }
 `;

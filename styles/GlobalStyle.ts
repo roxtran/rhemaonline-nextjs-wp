@@ -74,22 +74,22 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .slick-prev {
-    left: 20px;
+    left: 1.25rem;
     z-index: 1;
   }
 
   .slick-next {
-    right: 20px;
+    right: 1.25rem;
   }
 
   .slick-prev, .slick-next {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   .slick-prev:before, .slick-next:before {
     font-size: 2rem;
-    text-shadow: 0 0 12px rgba(0 0 0 / 0.2);
+    text-shadow: 0 0 0.75rem rgba(0 0 0 / 0.2);
   }
 `;
 
@@ -105,9 +105,9 @@ export const Button = styled(motion.a)`
   display: inline-block;
   cursor: pointer;
   background: var(--blue);
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   color: #fff;
-  padding: 10px 25px;
+  padding: 0.625rem 1.5625rem;
   text-align: center;
   text-transform: capitalize;
   white-space: nowrap;
@@ -135,7 +135,7 @@ export const Button = styled(motion.a)`
 
 export const ImgWrapper = styled(motion.div)`
   position: relative;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   overflow: hidden;
 `;
 

@@ -10,7 +10,7 @@ const ministries = () => {
   return (
     <>
       <Meta title="Family Ministries - Rhema - Changing & Affecting Lives!" />
-      <HeadLine imgUrl="/img/ministries-img.jpg" title="Ministries" height="550px" />
+      <HeadLine imgUrl="/img/ministries-img.jpg" title="Ministries" height="34.375rem" />
       <MinistriesContainer>
         <div className="desc">
           <h2>The Family Ministries</h2>
@@ -82,11 +82,11 @@ export const MinistriesContainer = styled(Container)`
   }
   ${ImgWrapper} {
     width: 100%;
-    min-width: 300px;
-    height: 600px;
+    min-width: 18.75rem;
+    height: 37.5rem;
     flex: 1;
     /* &:hover {
-      box-shadow: 0 0 20px 0 var(--mint);
+      box-shadow: 0 0 1.25rem 0 var(--mint);
     } */
   }
   .content-wrapper {
@@ -95,7 +95,7 @@ export const MinistriesContainer = styled(Container)`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 400px;
+    min-height: 25rem;
     h3 {
       text-align: center;
       font-size: 2.5rem;
@@ -103,9 +103,9 @@ export const MinistriesContainer = styled(Container)`
       padding: 1rem;
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 48rem) {
     ${ImgWrapper} {
-      height: 400px;
+      height: 25rem;
     }
     .content-wrapper {
       h3 {

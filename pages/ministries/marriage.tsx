@@ -9,7 +9,7 @@ const marriage = () => {
   return (
     <>
       <Meta title="Marriage's Ministry - Rhema - Changing & Affecting Lives!" />
-      <HeadLine imgUrl="/img/marriage-img.jpg" title="Marriage's Ministry" blur="blur(4px)" />
+      <HeadLine imgUrl="/img/marriage-img.jpg" title="Marriage's Ministry" blur="blur(0.25rem)" />
       <MarriageContainer>
         <div className="wrapper">
           <div className="content-wrapper">

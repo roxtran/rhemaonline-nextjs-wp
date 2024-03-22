@@ -13,7 +13,7 @@ export default function Ottawa() {
       <Head>
         <script src="https://js.churchcenter.com/modal/v1"></script>
       </Head>
-      <HeadLine imgUrl="/img/ottawa.jpg" title="Ottawa" blur="blur(10px)" />
+      <HeadLine imgUrl="/img/ottawa.jpg" title="Ottawa" blur="blur(0.625rem)" />
       <LocationContainer>
         <div className="content-wrapper">
           <h1>Ottawa Campus</h1>

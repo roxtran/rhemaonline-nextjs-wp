@@ -17,7 +17,7 @@ const SubscribeWrapper = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 500px;
+  height: 30rem;
   position: relative;
   margin: 0 auto;
   color: #fff;
@@ -33,7 +33,7 @@ const SubscribeWrapper = styled.div`
     text-align: center;
     max-width: 90vw;
     color: #fff;
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 40rem) {
       font-size: 2.5rem;
     }
   }

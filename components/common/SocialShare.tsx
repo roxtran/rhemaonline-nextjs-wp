@@ -94,7 +94,7 @@ const SocialIconsWrapper = styled.div`
     cursor: pointer;
     margin: 0.75rem;
     &:hover {
-      transform: translateY(-5px);
+      transform: translateY(-0.25rem);
     }
   }
 `;

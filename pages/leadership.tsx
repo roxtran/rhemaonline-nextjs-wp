@@ -23,8 +23,8 @@ export default function Leadership({ leaders }: Props) {
       <HeadLine
         imgUrl="/img/leadership-pastor-meikle-img.webp"
         title="Leadership"
-        height="550px"
-        // blur='blur(5px)'
+        height="34.375rem"
+        // blur='blur(0.3125rem)'
       />
       <LeaderModal openModal={openModal} setOpenModal={setOpenModal} leader={selectedLeader} />
       <LeadershipContainer>
@@ -85,7 +85,7 @@ const LeadershipContainer = styled(Container)`
     p {
       margin-top: 1rem;
       text-align: center;
-      width: 720px;
+      width: 45rem;
       max-width: 90vw;
     }
   }
@@ -100,10 +100,10 @@ const LeadershipContainer = styled(Container)`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 0.0625rem solid rgba(0, 0, 0, 0.1);
     padding: 2rem;
     margin: 1.5rem;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     cursor: pointer;
     ${ImgWrapper} {
       border-radius: 50%;
@@ -114,7 +114,7 @@ const LeadershipContainer = styled(Container)`
     h3 {
       padding-top: 1rem;
       font-size: 1.25rem;
-      max-width: 280px;
+      max-width: 17.5rem;
       text-align: center;
     }
   }

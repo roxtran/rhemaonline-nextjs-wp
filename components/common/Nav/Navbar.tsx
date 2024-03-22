@@ -46,12 +46,12 @@ const Nav = styled(motion.nav)`
   position: fixed;
   background: rgba(255, 255, 255, 0.97);
   width: 100vw;
-  height: 80px;
+  height: 5rem;
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  /* box-shadow: 0 7px 10px 0 rgba(122, 207, 255, 0.3); */
+  border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0.4375rem 0.625rem 0 rgba(122, 207, 255, 0.3); */
   align-items: center;
   z-index: 3;
 `;

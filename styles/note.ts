@@ -16,13 +16,13 @@ export const ListWrapper = styled.div`
   padding: 1rem 0;
   h2 {
     padding-bottom: 1rem;
-    border-bottom: 4px dashed var(--mint);
+    border-bottom: 0.25rem dashed var(--mint);
     margin-bottom: 0;
   }
   .item-detail:not(:last-child) {
-    border-bottom: 1px double var(--mint);
+    border-bottom: 0.0625rem double var(--mint);
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 48rem) {
     padding-bottom: 0;
   }
 `;
@@ -78,7 +78,7 @@ export const NotesContainer = styled.div`
   align-items: flex-start;
   flex-wrap: wrap;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 48rem) {
     justify-content: center;
   }
 `;
@@ -96,7 +96,7 @@ export const NoteContainer = styled(NotesContainer)`
     .line {
       margin: 0.5rem 0;
       width: 100%;
-      height: 1px;
+      height: 0.0625rem;
       background: rgba(0, 0, 0, 0.2);
     }
     ${ImgWrapper} {
@@ -110,7 +110,7 @@ export const NoteContainer = styled(NotesContainer)`
       }
       ul {
         margin-top: 0.5rem;
-        padding-left: 40px;
+        padding-left: 2.5rem;
       }
       ul > li {
         margin-bottom: 0.5rem !important;
@@ -122,12 +122,12 @@ export const NoteContainer = styled(NotesContainer)`
       &:before {
         content: "";
         position: absolute;
-        top: -1px;
+        top: -0.0625rem;
         left: 20%;
         right: 20%;
-        height: 15px;
+        height: 1rem;
         border-radius: 50%;
-        box-shadow: 0 0 12px rgb(0 0 0 / 15%);
+        box-shadow: 0 0 0.75rem rgb(0 0 0 / 15%);
         z-index: -1;
       }
       .btn-bg {
@@ -140,15 +140,15 @@ export const NoteContainer = styled(NotesContainer)`
       }
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 48rem) {
     .note-wrapper {
       padding: 3rem 0 0;
     }
   }
 
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 40rem) {
     ${ImgWrapper} {
-      height: 240px;
+      height: 15rem;
     }
   }
 `;
@@ -161,7 +161,7 @@ export const SidebarWrapper = styled.div`
   padding: 2rem 1rem 0;
   h3 {
     padding-bottom: 1rem;
-    border-bottom: 4px dashed var(--mint);
+    border-bottom: 0.25rem dashed var(--mint);
     margin-bottom: 0;
   }
   ul {

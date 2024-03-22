@@ -120,7 +120,7 @@ const VideoContainer = styled(Container)`
   }
 
   .text-wrapper {
-    max-width: 800px;
+    max-width: 50rem;
   }
 
   .title {

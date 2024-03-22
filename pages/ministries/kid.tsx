@@ -321,7 +321,7 @@ export const KidContainer = styled(Container)`
     .icon {
       margin: 0.5rem;
       &:hover {
-        transform: translateY(-5px);
+        transform: translateY(-0.3125rem);
       }
     }
   }
@@ -330,11 +330,11 @@ export const KidContainer = styled(Container)`
   }
   ${ImgWrapper} {
     width: 100%;
-    min-width: 400px;
-    height: 600px;
+    min-width: 25rem;
+    height: 37.5rem;
     flex: 1;
     /* &:hover {
-      box-shadow: 0 0 20px 0 var(--mint);
+      box-shadow: 0 0 1.25rem 0 var(--mint);
     } */
   }
   .content-wrapper {
@@ -343,9 +343,9 @@ export const KidContainer = styled(Container)`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 400px;
+    min-height: 25rem;
     .text-wrapper {
-      width: 700px;
+      width: 43.75rem;
       max-width: 90vw;
       padding: 2rem;
     }
@@ -354,20 +354,20 @@ export const KidContainer = styled(Container)`
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 64rem) {
     .content-wrapper {
       .text-wrapper {
-        width: 400px;
+        width: 25rem;
       }
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 48rem) {
     ${ImgWrapper} {
-      height: 400px;
+      height: 25rem;
     }
     .content-wrapper {
       .text-wrapper {
-        width: 700px;
+        width: 43.75rem;
         margin: 2rem 0;
       }
       h2 {

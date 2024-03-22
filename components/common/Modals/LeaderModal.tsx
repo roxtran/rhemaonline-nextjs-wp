@@ -78,7 +78,7 @@ const StyledModal = styled(ModalContainer)`
     position: relative;
     width: ${def.wrapper.width};
     max-width: 90vw;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
   }
 
   .modal-body {
@@ -88,7 +88,7 @@ const StyledModal = styled(ModalContainer)`
     justify-content: flex-start;
     align-items: flex-start;
     padding: 5% 0 5% 5%;
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 40rem) {
       padding-top: 5% !important;
       flex-direction: column;
       padding-top: 3rem;
@@ -103,7 +103,7 @@ const StyledModal = styled(ModalContainer)`
     margin-right: 3rem;
     .line {
       background: var(--grey-line);
-      height: 1px;
+      height: 0.0625rem;
       width: 50%;
       margin: 0.5rem 0;
     }
@@ -111,7 +111,7 @@ const StyledModal = styled(ModalContainer)`
       color: var(--blue);
       font-size: 2rem;
     }
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 40rem) {
       margin-right: 0;
       width: 100%;
       padding-right: 5%;
@@ -128,12 +128,12 @@ const StyledModal = styled(ModalContainer)`
   }
   ${ImgWrapper} {
     width: 100%;
-    height: 500px;
+    height: 31.25rem;
     margin-bottom: 0.5rem;
-    box-shadow: -4px 5px 15px -10px rgb(0 0 0 / 0.5);
-    @media screen and (max-width: 640px) {
-      height: 200px;
-      width: 200px;
+    box-shadow: -0.25rem 0.3125rem 0.9375rem -0.625rem rgb(0 0 0 / 0.5);
+    @media screen and (max-width: 40rem) {
+      height: 12.5rem;
+      width: 12.5rem;
     }
   }
   .modal-right {
@@ -141,7 +141,7 @@ const StyledModal = styled(ModalContainer)`
     padding-right: 5%;
     overflow: hidden;
     overflow-y: auto;
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 40rem) {
       overflow: visible;
     }
   }

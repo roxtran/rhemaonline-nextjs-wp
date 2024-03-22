@@ -199,7 +199,7 @@ export default function Location() {
 export const LocationContainer = styled(Container)`
   position: relative;
   background: #fff;
-  margin-top: -100px;
+  margin-top: -6.25rem;
 
   .content-wrapper {
     width: ${def.wrapper.width};
@@ -213,7 +213,7 @@ export const LocationContainer = styled(Container)`
   .line {
     margin: 1rem auto;
     width: 10vw;
-    height: 2px;
+    height: 0.125rem;
     background: rgba(0, 0, 0, 0.2);
   }
   .two-ways-wrapper {
@@ -293,10 +293,10 @@ export const LocationContainer = styled(Container)`
       text-align: center;
       margin: 0 2.5rem;
       .icon {
-        width: 125px;
-        height: 125px;
-        box-shadow: 0 0 28px 10px rgba(122, 207, 255, 0.4);
-        border-radius: 90px;
+        width: 7.8125rem;
+        height: 7.8125rem;
+        box-shadow: 0 0 1.75rem 0.625rem rgba(122, 207, 255, 0.4);
+        border-radius: 5.625rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -305,12 +305,12 @@ export const LocationContainer = styled(Container)`
       }
     }
   }
-  @media screen and (max-width: 1280px) {
+  @media screen and (max-width: 80rem) {
     /* .two-ways-wrapper {
       gap: 1rem;
     } */
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 48rem) {
     .icon-info {
       justify-content: center;
     }
@@ -331,7 +331,7 @@ export const LocationContainer = styled(Container)`
     }
   }
 
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 40rem) {
     .text-wrapper {
       padding: 2.75rem;
     }
@@ -344,7 +344,7 @@ export const LocationContainer = styled(Container)`
   }
 `;
 export const VideoWrapper = styled.div`
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 40rem) {
     video {
       height: 60vh;
     }

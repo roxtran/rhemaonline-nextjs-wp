@@ -27,7 +27,7 @@ export default function Connect({ services }: Props) {
         desc="We are here for you."
         btnText="Contact Us"
         btnLink={paths.formLinks.contactUs}
-        height="450px"
+        height="28.125rem"
       />
       <ConnectContainer>
         <div className="desc">
@@ -95,14 +95,14 @@ const ConnectContainer = styled(Container)`
     flex-wrap: wrap;
   }
   .service {
-    width: 520px;
+    width: 32.5rem;
     max-width: 90vw;
     margin: 1rem 2rem 2rem;
     position: relative;
     ${ImgWrapper} {
-      height: 250px;
-      @media screen and (max-width: 640px) {
-        height: 600px;
+      height: 15.63rem;
+      @media screen and (max-width: 40rem) {
+        height: 37.5rem;
       }
     }
     h3 {

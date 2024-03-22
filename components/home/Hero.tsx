@@ -101,8 +101,8 @@ const StyledHero = styled(motion.section).attrs(() => ({
   variants: ""
 }))`
   position: relative;
-  top: 80px;
-  margin-bottom: 80px;
+  top: 5rem;
+  margin-bottom: 5rem;
   z-index: 0;
   overflow: hidden;
   width: 100vw;
@@ -134,24 +134,24 @@ const StyledHero = styled(motion.section).attrs(() => ({
     }
   }
   .arrow-left {
-    left: 32px;
+    left: 2rem;
   }
   .arrow-right {
-    right: 32px;
+    right: 2rem;
   }
   .text-wrapper {
     /* background-color: rgba(255 255 255 / 25%); */
     /* padding: 2rem;
-    border-radius: 10px;
-    backdrop-filter: blur(5px); */
+    border-radius: .5rem;
+    backdrop-filter: blur(0.3125rem); */
     height: 100%;
     position: absolute;
-    width: 590px;
+    width: 36.875rem;
     max-width: 90vw;
     bottom: -45%;
     left: 10%;
     z-index: 4;
-    text-shadow: 0 0 24px rgb(0 0 0 / 15%);
+    text-shadow: 0 0 1.5rem rgb(0 0 0 / 15%);
     h1 {
       font-size: 2.5rem;
     }
@@ -164,7 +164,7 @@ const StyledHero = styled(motion.section).attrs(() => ({
       color: #fff;
     }
   }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 40rem) {
     .text-wrapper {
       left: 5%;
       bottom: -35%;
@@ -173,7 +173,7 @@ const StyledHero = styled(motion.section).attrs(() => ({
       }
     }
   }
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 20rem) {
     .text-wrapper {
       bottom: -25%;
     }

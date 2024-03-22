@@ -1,46 +1,46 @@
-import { Dispatch, SetStateAction, MouseEvent, useRef } from 'react'
-import { IoClose } from 'react-icons/io5'
-import styled from 'styled-components'
-import { motion, AnimatePresence } from 'framer-motion'
-import { fade, slideDown } from 'styles/animation'
-import { def } from 'styles/GlobalStyle'
+import { Dispatch, SetStateAction, MouseEvent, useRef } from "react";
+import { IoClose } from "react-icons/io5";
+import styled from "styled-components";
+import { motion, AnimatePresence } from "framer-motion";
+import { fade, slideDown } from "styles/animation";
+import { def } from "styles/GlobalStyle";
 
 interface HomeModalProps {
-  openModal: boolean
-  setOpenModal: Dispatch<SetStateAction<boolean>>
+  openModal: boolean;
+  setOpenModal: Dispatch<SetStateAction<boolean>>;
 }
 
 const HomeModal = ({ openModal, setOpenModal }: HomeModalProps) => {
-  const modalRef = useRef<HTMLDivElement>(null)
+  const modalRef = useRef<HTMLDivElement>(null);
 
   const closeModal = (e: MouseEvent<HTMLDivElement>) => {
-    if (modalRef.current === e.target) setOpenModal(false)
-  }
+    if (modalRef.current === e.target) setOpenModal(false);
+  };
 
   return (
     <AnimatePresence exitBeforeEnter>
       {openModal && (
-        <ModalContainer ref={modalRef} onClick={closeModal} variants={fade} initial='hidden' animate='show' exit='exit'>
-          <motion.div className='modal-dialog' variants={slideDown} initial='hidden' animate='show' exit='exit'>
-            <div className='modal-content'>
-              <div className='modal-header'>
-                <a onClick={() => setOpenModal(false)} className='closeBtn'>
+        <ModalContainer ref={modalRef} onClick={closeModal} variants={fade} initial="hidden" animate="show" exit="exit">
+          <motion.div className="modal-dialog" variants={slideDown} initial="hidden" animate="show" exit="exit">
+            <div className="modal-content">
+              <div className="modal-header">
+                <a onClick={() => setOpenModal(false)} className="closeBtn">
                   <IoClose />
                 </a>
               </div>
               <iframe
-                className='modal-body'
-                src='https://rhemaonline.surveysparrow.com/s/Feedback-Survey-for-Management-Stakeholders-/tt-e016f9'
-                width='100%'
-                height='100%'
+                className="modal-body"
+                src="https://rhemaonline.surveysparrow.com/s/Feedback-Survey-for-Management-Stakeholders-/tt-e016f9"
+                width="100%"
+                height="100%"
               ></iframe>
             </div>
           </motion.div>
         </ModalContainer>
       )}
     </AnimatePresence>
-  )
-}
+  );
+};
 
 export const ModalContainer = styled(motion.div)`
   background: rgba(0, 0, 0, 0.7);
@@ -60,7 +60,7 @@ export const ModalContainer = styled(motion.div)`
     width: ${def.wrapper.width};
     max-width: 90vw;
     height: 80vh;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     overflow: hidden;
   }
   .modal-content {
@@ -68,11 +68,11 @@ export const ModalContainer = styled(motion.div)`
   }
   .modal-header {
     padding: 1.5rem 2.5rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.2);
     .closeBtn {
       position: absolute;
-      top: -5px;
-      right: 2px;
+      top: -0.25rem;
+      right: 0.125rem;
       font-size: 2rem;
       &:hover {
         transform: scale(1.2);
@@ -88,7 +88,7 @@ export const ModalContainer = styled(motion.div)`
     overflow-y: auto;
     padding: 0;
   }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 40rem) {
     .modal-dialog {
       height: 90vh;
     }
@@ -102,6 +102,6 @@ export const ModalContainer = styled(motion.div)`
       height: 75vh;
     }
   }
-`
+`;
 
-export default HomeModal
+export default HomeModal;

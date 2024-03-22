@@ -1,60 +1,55 @@
-import { useState } from 'react'
-import ChatBot from 'react-simple-chatbot'
-import styled from 'styled-components'
-import { IoChatbubbleEllipses } from 'react-icons/io5'
-import { motion } from 'framer-motion'
-import { fade, slideDown, slideUp } from 'styles/animation'
+import { useState } from "react";
+import ChatBot from "react-simple-chatbot";
+import styled from "styled-components";
+import { IoChatbubbleEllipses } from "react-icons/io5";
+import { motion } from "framer-motion";
+import { fade, slideDown, slideUp } from "styles/animation";
 
 function Chatbot() {
-  const [showBot, setShowBot] = useState(false)
+  const [showBot, setShowBot] = useState(false);
 
   return (
     <StyledChat>
-      <div className='wrapper'>
+      <div className="wrapper">
         {showBot && (
-          <motion.div
-            variants={fade}
-            initial='hidden'
-            animate='show'
-            className='bot-wrapper'
-          >
+          <motion.div variants={fade} initial="hidden" animate="show" className="bot-wrapper">
             <ChatBot
-              headerTitle='Chatbot'
+              headerTitle="Chatbot"
               steps={[
                 {
-                  id: '1',
-                  message: 'What is your name?',
-                  trigger: '2',
+                  id: "1",
+                  message: "What is your name?",
+                  trigger: "2"
                 },
                 {
-                  id: '2',
+                  id: "2",
                   user: true,
-                  trigger: '3',
+                  trigger: "3"
                 },
                 {
-                  id: '3',
-                  message: 'Hi {previousValue}, nice to meet you!',
-                  end: true,
-                },
+                  id: "3",
+                  message: "Hi {previousValue}, nice to meet you!",
+                  end: true
+                }
               ]}
             />
           </motion.div>
         )}
         <motion.a
           variants={fade}
-          initial='hidden'
-          animate='show'
-          className='btn-chat'
+          initial="hidden"
+          animate="show"
+          className="btn-chat"
           onClick={() => setShowBot(!showBot)}
         >
           <IoChatbubbleEllipses />
         </motion.a>
       </div>
     </StyledChat>
-  )
+  );
 }
 
-export default Chatbot
+export default Chatbot;
 
 const StyledChat = styled.div`
   display: block;
@@ -82,7 +77,7 @@ const StyledChat = styled.div`
     border-radius: 50%;
     color: #fff;
     &:hover {
-      box-shadow: -5px 4px 12px 0 rgb(181 217 238);
+      box-shadow: -0.3125rem 0.25rem 0.75rem 0 rgb(181 217 238);
     }
   }
   .rsc-header,
@@ -95,17 +90,17 @@ const StyledChat = styled.div`
     color: #fff;
     padding-top: 0;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 48rem) {
     /* display: none; */
     .wrapper {
       bottom: 1.5rem;
       right: 1.5rem;
     }
   }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 40rem) {
     /* display: none; */
     .bot-wrapper {
       width: 85vw;
     }
   }
-`
+`;

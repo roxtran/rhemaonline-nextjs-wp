@@ -1,28 +1,28 @@
-import HeadLine from 'components/common/HeadLine'
-import styled from 'styled-components'
-import { Container, def } from 'styles/GlobalStyle'
-import Meta from 'components/common/meta'
+import HeadLine from "components/common/HeadLine";
+import styled from "styled-components";
+import { Container, def } from "styles/GlobalStyle";
+import Meta from "components/common/meta";
 
 export default function Giving() {
   return (
     <>
-      <Meta title='Giving - Rhema - Changing & Affecting Lives!' />
-      <HeadLine imgUrl='/img/giving-img.jpg' title='Make A Difference' />
+      <Meta title="Giving - Rhema - Changing & Affecting Lives!" />
+      <HeadLine imgUrl="/img/giving-img.jpg" title="Make A Difference" />
       <GivingContainer>
-        <div className='content-wrapper'>
-          <div id='thank'>
+        <div className="content-wrapper">
+          <div id="thank">
             <p>
               Thank you everyone for your continued support in these times. We know that this too shall pass for our God
               is able to do more than we can ask think or imagine and he will bring us through unscathed in Jesus name.
             </p>
             <p>Here are a few ways you can continue to support the ministry whether we gather in person or online.</p>
           </div>
-          <div className='items'>
-            <div className='item'>
-              <div className='type'>
+          <div className="items">
+            <div className="item">
+              <div className="type">
                 <h5>TELEPHONE / INTERNET BANKING:</h5>
               </div>
-              <div className='desc'>
+              <div className="desc">
                 <ul>
                   <li>Log into your bank account as you usually do</li>
                   <li>Select bill payment, and then choose “add new payee”</li>
@@ -31,27 +31,27 @@ export default function Giving() {
                 </ul>
               </div>
             </div>
-            <div className='item'>
-              <div className='type'>
+            <div className="item">
+              <div className="type">
                 <h5>E-TRANSFER:</h5>
               </div>
-              <div className='desc'>
+              <div className="desc">
                 <ul>
                   <li>
-                    Send an E-Transfer to: <a href='mailto:treasury@rhemaonline.ca'>treasury@rhemaonline.ca</a>
+                    Send an E-Transfer to: <a href="mailto:treasury@rhemaonline.ca">treasury@rhemaonline.ca</a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div className='item'>
-              <div className='type'>
+            <div className="item">
+              <div className="type">
                 <h5>TITHE.LY</h5>
               </div>
-              <div className='desc'>
+              <div className="desc">
                 <ul>
                   <li>
-                    Go to{' '}
-                    <a href='https://get.tithe.ly' target='_blank'>
+                    Go to{" "}
+                    <a href="https://get.tithe.ly" target="_blank">
                       https://get.tithe.ly
                     </a>
                   </li>
@@ -61,7 +61,7 @@ export default function Giving() {
                   <li>
                     Click on the Tithe.ly link below:
                     <span>
-                      <a href='https://tithe.ly/give_new/www/#/tithely/give-one-time/645887?kiosk=1'>
+                      <a href="https://tithe.ly/give_new/www/#/tithely/give-one-time/645887?kiosk=1">
                         https://tithe.ly/give_new/www/#/tithely/give-one-time/645887?kiosk=1
                       </a>
                     </span>
@@ -70,11 +70,11 @@ export default function Giving() {
                 </ul>
               </div>
             </div>
-            <div className='item'>
-              <div className='type'>
+            <div className="item">
+              <div className="type">
                 <h5>TEXT GIVING</h5>
               </div>
-              <div className='desc'>
+              <div className="desc">
                 <ul>
                   <li>
                     Text the word <span>“Give”</span> to 1-844-542-0003.
@@ -87,15 +87,15 @@ export default function Giving() {
                 </ul>
               </div>
             </div>
-            <div className='item'>
-              <div className='type'>
+            <div className="item">
+              <div className="type">
                 <h5>PAYPAL</h5>
               </div>
-              <div className='desc'>
+              <div className="desc">
                 <ul>
                   <li>
-                    Go to{' '}
-                    <a href='https://www.paypal.com' target='_blank'>
+                    Go to{" "}
+                    <a href="https://www.paypal.com" target="_blank">
                       https://www.paypal.com
                     </a>
                   </li>
@@ -107,8 +107,8 @@ export default function Giving() {
                     Click on the Paypal link below:
                     <span>
                       <a
-                        href='https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZDLQA7QHSMMEC&source=url'
-                        target='_blank'
+                        href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZDLQA7QHSMMEC&source=url"
+                        target="_blank"
                       >
                         https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZDLQA7QHSMMEC&source=url
                       </a>
@@ -123,7 +123,7 @@ export default function Giving() {
         </div>
       </GivingContainer>
     </>
-  )
+  );
 }
 const GivingContainer = styled(Container)`
   .content-wrapper {
@@ -139,9 +139,9 @@ const GivingContainer = styled(Container)`
     grid-template-columns: 1fr 2fr;
     grid-gap: 2rem;
     padding: 3rem 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 0.0625rem solid rgba(0, 0, 0, 0.3);
     h5 {
-      letter-spacing: 1px;
+      letter-spacing: 0.0625rem;
     }
     li {
       line-height: 1.75;
@@ -153,22 +153,22 @@ const GivingContainer = styled(Container)`
     span {
       display: block;
     }
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 40rem) {
       grid-template-columns: 1fr;
 
       li {
-        margin-left: 20px;
+        margin-left: 1rem;
       }
     }
   }
   .item:last-child {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.3);
   }
   h3 {
     padding: 6rem;
     text-align: center;
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 40rem) {
       padding: 3rem 1rem;
     }
   }
-`
+`;

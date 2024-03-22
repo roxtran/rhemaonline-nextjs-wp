@@ -1,15 +1,15 @@
-import styled from 'styled-components'
-import HeadLine from 'components/common/HeadLine'
-import Meta from 'components/common/meta'
-import { Container, def } from 'styles/GlobalStyle'
+import styled from "styled-components";
+import HeadLine from "components/common/HeadLine";
+import Meta from "components/common/meta";
+import { Container, def } from "styles/GlobalStyle";
 
 const legalTerms = () => {
   return (
     <>
-      <Meta title='Legal Terms - Rhema - Changing & Affecting Lives!' />
-      <HeadLine imgUrl='/img/legal-terms-img.jpg' title='Legal Terms' height='450px' />
+      <Meta title="Legal Terms - Rhema - Changing & Affecting Lives!" />
+      <HeadLine imgUrl="/img/legal-terms-img.jpg" title="Legal Terms" height="28.125rem" />
       <TermsContainer>
-        <div className='content-wrapper'>
+        <div className="content-wrapper">
           <h2>Legal Statement</h2>
           <h3>YOU SHOULD READ THIS LEGAL BEFORE USING THIS WEBSITE.</h3>
           <p>
@@ -27,13 +27,13 @@ const legalTerms = () => {
             contained within the website other than the limited right to use the website in accordance with this Legal
             Statement. Any sale, transmission or redistribution of this website or its content, and any copying,
             modification or other use of this website or its content for any purposes other than your own internal
-            business purposes, are strictly prohibited.{' '}
+            business purposes, are strictly prohibited.{" "}
             <b>
               All present and future rights in and to trade secrets, trademarks, service marks, copyrights and other
               proprietary rights under the laws of any domestic or foreign governmental authority (the “Intellectual
               Property Rights”) shall at all times be and remain the sole and exclusive property of Rhema as between you
               and Rhema.
-            </b>{' '}
+            </b>{" "}
             Except as specifically permitted by the terms of this Legal Statement, you shall not use the Intellectual
             Property Rights or the website, or any derivations thereof, for any purpose, without Rhema’s prior written
             approval. You agree to protect the proprietary rights of Rhema and all others having rights in the website
@@ -174,14 +174,14 @@ const legalTerms = () => {
         </div>
       </TermsContainer>
     </>
-  )
-}
+  );
+};
 
 const TermsContainer = styled(Container)`
   .content-wrapper {
     width: ${def.wrapper.width};
     max-width: 90vw;
   }
-`
+`;
 
-export default legalTerms
+export default legalTerms;
