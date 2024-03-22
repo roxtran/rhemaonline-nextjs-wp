@@ -105,11 +105,15 @@ export const NoteContainer = styled(NotesContainer)`
     }
     article {
       margin: 2rem 0;
+      ol > li {
+        margin-bottom: 1rem;
+      }
       ul {
+        margin-top: 0.5rem;
         padding-left: 40px;
       }
-      ol li {
-        margin-bottom: 1rem;
+      ul > li {
+        margin-bottom: 0.5rem !important;
       }
     }
     .btn-wrapper {
