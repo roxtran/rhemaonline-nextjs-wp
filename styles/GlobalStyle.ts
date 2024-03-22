@@ -99,7 +99,7 @@ export const Container = styled(motion.section)`
   justify-content: center;
   align-items: center;
   width: 100vw;
-  padding: 2rem 0 3rem;
+  padding: 2rem 0;
 `;
 export const Button = styled(motion.a)`
   display: inline-block;
