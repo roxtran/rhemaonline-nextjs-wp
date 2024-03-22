@@ -78,15 +78,11 @@ const ConnectedContainer = styled(Container)`
     h3 {
       font-size: 2.5rem;
     }
-    p {
-      margin-bottom: 1rem;
-    }
     .text {
       display: flex;
       flex-direction: column;
       width: 100%;
       max-width: 90vw;
-      margin-bottom: 1rem;
     }
     .btn {
       width: 10rem;

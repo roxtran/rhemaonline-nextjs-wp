@@ -1,8 +1,5 @@
 import styled from "styled-components";
-import paths from "paths";
-import { Button } from "styles/GlobalStyle";
 import SocialShare from "components/common/SocialShare";
-import Image from "next/image";
 
 export default function Subscribe() {
   return (
@@ -36,21 +33,7 @@ const SubscribeWrapper = styled.div`
     text-align: center;
     max-width: 90vw;
     color: #fff;
-  }
-
-  .white {
-    width: 200px;
-    height: 50px;
-    padding: 0.75rem 1.375rem;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-  }
-  @media screen and (max-width: 640px) {
-    h2 {
+    @media screen and (max-width: 640px) {
       font-size: 2.5rem;
     }
   }

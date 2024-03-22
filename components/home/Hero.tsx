@@ -154,7 +154,6 @@ const StyledHero = styled(motion.section).attrs(() => ({
     text-shadow: 0 0 24px rgb(0 0 0 / 15%);
     h1 {
       font-size: 2.5rem;
-      /* margin-bottom: 0.15rem; */
     }
     p {
       font-size: 1.2rem;
@@ -169,9 +168,6 @@ const StyledHero = styled(motion.section).attrs(() => ({
     .text-wrapper {
       left: 5%;
       bottom: -35%;
-      h1 {
-        margin-bottom: 1rem;
-      }
       p {
         font-size: 1rem;
       }

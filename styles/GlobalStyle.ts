@@ -57,7 +57,7 @@ const GlobalStyle = createGlobalStyle`
   }
   p {
     line-height: 1.5;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
   .accordion-button {
     text-align: left;

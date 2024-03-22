@@ -141,9 +141,6 @@ const StyledModal = styled(ModalContainer)`
     padding-right: 5%;
     overflow: hidden;
     overflow-y: auto;
-    p {
-      margin-bottom: 1rem;
-    }
     @media screen and (max-width: 640px) {
       overflow: visible;
     }
