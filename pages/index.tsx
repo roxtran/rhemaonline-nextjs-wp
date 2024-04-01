@@ -25,7 +25,7 @@ const Home = ({ slides, newsletters }: Props) => {
         <script src="https://js.churchcenter.com/modal/v1"></script>
       </Head>
       {/* <Video src='/video/RCM-Homepage-Teaser2.mp4' width='100%' height='80vh' /> */}
-      <VideoWrapper>
+      {/* <VideoWrapper>
         <video loop muted autoPlay>
           <source
             src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2024/03/easter-video.mp4"
@@ -33,8 +33,8 @@ const Home = ({ slides, newsletters }: Props) => {
           />
           Your browser does not support the video tag.
         </video>
-      </VideoWrapper>
-      {/* <Hero slides={slides} /> */}
+      </VideoWrapper> */}
+      <Hero slides={slides} />
       <Welcome />
       <CTAPanel />
       <Subscribe />
