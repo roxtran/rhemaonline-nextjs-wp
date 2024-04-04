@@ -24,7 +24,11 @@ export default function SermonNote({ note, list }: Props) {
   return (
     <>
       <Meta title={note.title + " - Rhema - Changing & Affecting Lives!"} />
-      <HeadLine imgUrl={note.featuredImage.node.sourceUrl} title={note.title} blur="blur(1.875rem)" />
+      <HeadLine
+        imgUrl={note.featuredImage?.node?.sourceUrl ?? "/img/sermons-img.jpg"}
+        title={note.title}
+        blur="blur(1.875rem)"
+      />
       <NoteContainer>
         <div className="note-wrapper">
           {/* <p className="date">{formatDate(note.date)}</p> */}
@@ -34,17 +38,19 @@ export default function SermonNote({ note, list }: Props) {
             </i>
           </p>
           <div className="line" />
-          <ImgWrapper>
-            <Image
-              src={note.featuredImage.node.sourceUrl}
-              alt={note.title}
-              fill
-              sizes="100vw"
-              style={{
-                objectFit: "cover"
-              }}
-            />
-          </ImgWrapper>
+          {note.featuredImage?.node?.sourceUrl && (
+            <ImgWrapper>
+              <Image
+                src={note.featuredImage?.node?.sourceUrl}
+                alt={note.title}
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover"
+                }}
+              />
+            </ImgWrapper>
+          )}
           <article dangerouslySetInnerHTML={{ __html: note.content }}></article>
           {note.docFile.docFile !== null && (
             <div className="btn-wrapper">
