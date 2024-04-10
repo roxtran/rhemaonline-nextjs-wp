@@ -124,6 +124,14 @@ export default function Footer() {
               <li>
                 <Link href={paths.legalTerms}>Legal Terms</Link>
               </li>
+              <li>
+                <Link
+                  href="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2024/04/RC-Website-Privacy-Policy.pdf"
+                  target="_blank"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
