@@ -21,7 +21,31 @@ export default function Giving() {
         <div className="content-wrapper">
           <h2 className="title">Ways to give</h2>
           <div className="items">
-            <div className="item">
+            <div className="item e-transfer">
+              <div className="type">
+                <div className="icon-full">
+                  <Image
+                    src="/img/give/e-transfer.png"
+                    width={112}
+                    height={48}
+                    alt="telephone"
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                      objectFit: "cover"
+                    }}
+                  />
+                </div>
+              </div>
+              <div className="desc">
+                <ul>
+                  <li>
+                    Send an E-Transfer to: <Link href="treasury@rhemaonline.ca">treasury@rhemaonline.ca</Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="item telephone">
               <div className="type">
                 <div className="icon">
                   <Image
@@ -57,37 +81,7 @@ export default function Giving() {
                 </ul>
               </div>
             </div>
-            <div className="item">
-              <div className="type">
-                <div className="icon">
-                  <Image
-                    src="/img/give/telephone.png"
-                    width={48}
-                    height={48}
-                    alt="telephone"
-                    style={{
-                      maxWidth: "100%",
-                      height: "auto",
-                      objectFit: "cover"
-                    }}
-                  />
-                </div>
-                <h5 className="type-name">Text Giving</h5>
-              </div>
-              <div className="desc">
-                <ul>
-                  <li>
-                    Text the word <span className="bold">'Give'</span> to <span className="bold">1-844-542-0003</span>.
-                  </li>
-                  <li>You will receive a reply with a link.</li>
-                  <li>
-                    Click on the link which will allow you to provide the information required to complete the process.
-                  </li>
-                  <li>To send future gifts, text the dollar amount, and the category, ex. ($100 Tithes).</li>
-                </ul>
-              </div>
-            </div>
-            <div className="item">
+            <div className="item tithe-ly">
               <div className="type">
                 <div className="icon-full">
                   <Image
@@ -118,12 +112,12 @@ export default function Giving() {
                 </ul>
               </div>
             </div>
-            <div className="item">
+            <div className="item text-giving">
               <div className="type">
-                <div className="icon-full">
+                <div className="icon">
                   <Image
-                    src="/img/give/e-transfer.png"
-                    width={112}
+                    src="/img/give/telephone.png"
+                    width={48}
                     height={48}
                     alt="telephone"
                     style={{
@@ -133,16 +127,22 @@ export default function Giving() {
                     }}
                   />
                 </div>
+                <h5 className="type-name">Text Giving</h5>
               </div>
               <div className="desc">
                 <ul>
                   <li>
-                    Send an E-Transfer to: <Link href="treasury@rhemaonline.ca">treasury@rhemaonline.ca</Link>
+                    Text the word <span className="bold">'Give'</span> to <span className="bold">1-844-542-0003</span>.
                   </li>
+                  <li>You will receive a reply with a link.</li>
+                  <li>
+                    Click on the link which will allow you to provide the information required to complete the process.
+                  </li>
+                  <li>To send future gifts, text the dollar amount, and the category, ex. ($100 Tithes).</li>
                 </ul>
               </div>
             </div>
-            <div className="item">
+            <div className="item paypal">
               <div className="type">
                 <div className="icon-full">
                   <Image
