@@ -25,7 +25,6 @@ export default {
   facilityBookings: "/facility-bookings",
   // news: "/news",
   legalTerms: "/legal-terms",
-  privacyPolicy: "/privacy-policy",
 
   // external links
   subscribe:
