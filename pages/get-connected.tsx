@@ -1,18 +1,23 @@
-import Image from "next/image";
-import styled from "styled-components";
+import { Button, Container, ImgWrapper } from "styles/GlobalStyle";
+
 import HeadLine from "components/common/HeadLine";
 import Meta from "components/common/meta";
 import { default as getConnectedData } from "data/get-connected";
-import { Button, Container, ImgWrapper } from "styles/GlobalStyle";
+import Image from "next/image";
+import styled from "styled-components";
 
 const getConnected = () => {
+  const pageTitle = "Get Connected";
+  const pageImage = "/img/get-connected-img.jpg";
+  const pageDesc = "That's changing and affecting lives.";
+
   return (
     <>
-      <Meta title="Get Connected - Rhema - Changing & Affecting Lives!" />
+      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} desc={pageDesc} ogImage={pageImage} />
       <HeadLine
-        imgUrl="/img/get-connected-img.jpg"
-        title="Get Connected"
-        desc="That's changing and affecting lives."
+        imgUrl={pageImage}
+        title={pageTitle}
+        desc={pageDesc}
         btnText="Join Us"
         btnLink="https://rhema.ccbchurch.com/goto/forms/15/responses/new"
         height="34.375rem"
@@ -28,7 +33,7 @@ const getConnected = () => {
                   fill
                   sizes="100vw"
                   style={{
-                    objectFit: "cover"
+                    objectFit: "cover",
                   }}
                 />
               </ImgWrapper>

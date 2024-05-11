@@ -12,6 +12,7 @@ interface HeadLineProps {
   height?: string;
   mbHeight?: string;
   top?: string;
+  displayTitle?: boolean;
 }
 
 export default function HeadLine({
@@ -23,22 +24,28 @@ export default function HeadLine({
   btnLink,
   height,
   mbHeight,
-  top
+  top,
+  displayTitle = true,
 }: HeadLineProps) {
   return (
-    <HeadLineWrapper height={height || "28.125rem"} mbHeight={mbHeight || `${height}`} top={top || "0rem"}>
+    <HeadLineContainer
+      id="headline"
+      height={height || "28.125rem"}
+      mbHeight={mbHeight || `${height}`}
+      top={top || "0rem"}
+    >
       <Image
         src={imgUrl}
         alt="headline image"
         fill
         sizes="100vw"
         style={{
-          objectFit: "cover"
+          objectFit: "cover",
         }}
       />
       {blur && <Blur blur={blur}></Blur>}
       <div className="content-wrapper">
-        <h1>{title}</h1>
+        <h1>{displayTitle && title}</h1>
         {desc && <p>{desc}</p>}
         {btnText && (
           <HeadLineBtn className="white" href={btnLink} target="_blank" data-open-in-church-center-modal="true">
@@ -46,10 +53,10 @@ export default function HeadLine({
           </HeadLineBtn>
         )}
       </div>
-    </HeadLineWrapper>
+    </HeadLineContainer>
   );
 }
-const HeadLineWrapper = styled.div<{ height: string; mbHeight: string; top: string }>`
+export const HeadLineContainer = styled.div<{ height: string; mbHeight: string; top: string }>`
   position: relative;
   height: ${(props) => props.height};
   image {

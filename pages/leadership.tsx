@@ -1,13 +1,15 @@
-import React, { useState } from "react";
-import Image from "next/image";
-import styled from "styled-components";
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+import { useState } from "react";
+import { Container, ImgWrapper, def } from "styles/GlobalStyle";
+
 import HeadLine from "components/common/HeadLine";
 import LeaderModal from "components/common/Modals/LeaderModal";
-import { Container, ImgWrapper, def } from "styles/GlobalStyle";
-// import leaders from 'data/leaders'
 import Meta from "components/common/meta";
-import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+import Image from "next/image";
+import styled from "styled-components";
 import LeaderType from "types/leader";
+
+// import leaders from 'data/leaders'
 
 interface Props {
   leaders: LeaderType[];
@@ -17,12 +19,15 @@ export default function Leadership({ leaders }: Props) {
   const [openModal, setOpenModal] = useState(false);
   const [selectedLeader, setSelectedLeader] = useState<any | null>(null);
 
+  const pageTitle = "Leadership";
+  const pageImage = "/img/leadership-pastor-meikle-img.webp";
+
   return (
     <>
-      <Meta title="Leadership - Rhema - Changing & Affecting Lives!" />
+      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
       <HeadLine
-        imgUrl="/img/leadership-pastor-meikle-img.webp"
-        title="Leadership"
+        imgUrl={pageImage}
+        title={pageTitle}
         height="34.375rem"
         // blur='blur(0.3125rem)'
       />
@@ -55,7 +60,7 @@ export default function Leadership({ leaders }: Props) {
                     height={250}
                     style={{
                       maxWidth: "100%",
-                      height: "auto"
+                      height: "auto",
                     }}
                   />
                 </ImgWrapper>
@@ -123,7 +128,7 @@ const LeadershipContainer = styled(Container)`
 export async function getStaticProps() {
   const client = new ApolloClient({
     uri: process.env.WP_URL as string,
-    cache: new InMemoryCache()
+    cache: new InMemoryCache(),
   });
 
   const { data } = await client.query({
@@ -147,13 +152,13 @@ export async function getStaticProps() {
           }
         }
       }
-    `
+    `,
   });
 
   return {
     props: {
-      leaders: data?.leaders?.nodes
+      leaders: data?.leaders?.nodes,
     },
-    revalidate: 10
+    revalidate: 10,
   };
 }

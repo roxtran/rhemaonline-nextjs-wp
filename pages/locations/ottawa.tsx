@@ -1,18 +1,15 @@
+import { LocationContainer } from "./toronto";
+
 import HeadLine from "components/common/HeadLine";
-import Head from "next/head";
-import Image from "next/image";
 import Meta from "components/common/meta";
-import { Button } from "styles/GlobalStyle";
-import { LocationContainer, VideoWrapper } from "./toronto";
+import Image from "next/image";
 import paths from "paths";
+import { Button } from "styles/GlobalStyle";
 
 export default function Ottawa() {
   return (
     <>
       <Meta title="Ottawa Location - Rhema - Changing & Affecting Lives!" />
-      <Head>
-        <script src="https://js.churchcenter.com/modal/v1"></script>
-      </Head>
       <HeadLine imgUrl="/img/ottawa.jpg" title="Ottawa" blur="blur(0.625rem)" />
       <LocationContainer>
         <div className="content-wrapper">
@@ -28,7 +25,7 @@ export default function Ottawa() {
                   height={75}
                   style={{
                     maxWidth: "100%",
-                    height: "auto"
+                    height: "auto",
                   }}
                 />
               </div>
@@ -46,7 +43,7 @@ export default function Ottawa() {
                   height={75}
                   style={{
                     maxWidth: "100%",
-                    height: "auto"
+                    height: "auto",
                   }}
                 />
               </div>
@@ -64,7 +61,7 @@ export default function Ottawa() {
                   height={75}
                   style={{
                     maxWidth: "100%",
-                    height: "auto"
+                    height: "auto",
                   }}
                 />
               </div>
@@ -82,7 +79,7 @@ export default function Ottawa() {
                   height={60}
                   style={{
                     maxWidth: "100%",
-                    height: "auto"
+                    height: "auto",
                   }}
                 />
               </div>

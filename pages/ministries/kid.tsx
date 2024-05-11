@@ -1,14 +1,18 @@
+import { Button, Container, ImgWrapper, def } from "styles/GlobalStyle";
+
 import HeadLine from "components/common/HeadLine";
-import styled from "styled-components";
-import { Container, Button, ImgWrapper, def } from "styles/GlobalStyle";
-import Image from "next/image";
 import Meta from "components/common/meta";
+import Image from "next/image";
+import styled from "styled-components";
 
 const kid = () => {
+  const pageTitle = "Kid's World";
+  const pageImage = "/img/kid-img.jpg";
+
   return (
     <>
-      <Meta title="Kid's Ministry - Rhema - Changing & Affecting Lives!" />
-      <HeadLine imgUrl="/img/kid-img.jpg" title="Kid's World" />
+      <Meta title="Kid's Ministry - Rhema - Changing & Affecting Lives!" ogImage={pageImage} />
+      <HeadLine imgUrl={pageImage} title={pageTitle} />
       <KidContainer>
         <div className="desc">
           <p>
@@ -24,7 +28,7 @@ const kid = () => {
                 fill
                 sizes="100vw"
                 style={{
-                  objectFit: "cover"
+                  objectFit: "cover",
                 }}
               />
             </ImgWrapper>
@@ -53,7 +57,7 @@ const kid = () => {
                         height={42}
                         style={{
                           maxWidth: "100%",
-                          height: "auto"
+                          height: "auto",
                         }}
                       />
                     </div>
@@ -67,7 +71,7 @@ const kid = () => {
                         height={42}
                         style={{
                           maxWidth: "100%",
-                          height: "auto"
+                          height: "auto",
                         }}
                       />
                     </div>
@@ -81,7 +85,7 @@ const kid = () => {
                         height={42}
                         style={{
                           maxWidth: "100%",
-                          height: "auto"
+                          height: "auto",
                         }}
                       />
                     </div>
@@ -98,7 +102,7 @@ const kid = () => {
                 fill
                 sizes="100vw"
                 style={{
-                  objectFit: "cover"
+                  objectFit: "cover",
                 }}
               />
             </ImgWrapper>
@@ -128,7 +132,7 @@ const kid = () => {
                 fill
                 sizes="100vw"
                 style={{
-                  objectFit: "cover"
+                  objectFit: "cover",
                 }}
               />
             </ImgWrapper>
@@ -153,7 +157,7 @@ const kid = () => {
                 fill
                 sizes="100vw"
                 style={{
-                  objectFit: "cover"
+                  objectFit: "cover",
                 }}
               />
             </ImgWrapper>

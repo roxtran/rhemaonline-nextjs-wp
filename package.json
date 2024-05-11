@@ -10,6 +10,7 @@
   "dependencies": {
     "@apollo/client": "^3.10.3",
     "@types/json-schema": "^7.0.15",
+    "@types/react-dom": "^18.3.0",
     "chokidar": "^3.5.3",
     "framer-motion": "^4.1.17",
     "globals": "^15.2.0",

@@ -1,18 +1,18 @@
-import styled from "styled-components";
+import { Button, Container, def } from "styles/GlobalStyle";
+
 import HeadLine from "components/common/HeadLine";
 import Meta from "components/common/meta";
-import { Button, Container, def } from "styles/GlobalStyle";
-import Head from "next/head";
+import styled from "styled-components";
 
 export default function VHG() {
+  const pageTitle = "Virtual Home Groups";
+  const pageImage = "/img/VirtualHomeGroups.png";
+
   return (
     <>
-      <Meta title="Virtual Home Groups - Rhema - Changing & Affecting Lives!" />
-      <Head>
-        <script src="https://js.churchcenter.com/modal/v1"></script>
-      </Head>
+      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
       <HeadLine
-        imgUrl="/img/VirtualHomeGroups.png"
+        imgUrl={pageImage}
         title=""
         height="37.5rem"
         mbHeight="15rem"

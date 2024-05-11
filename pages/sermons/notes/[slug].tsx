@@ -1,17 +1,22 @@
-import NoteType from "types/note";
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+import { Button, ImgWrapper } from "styles/GlobalStyle";
+
+import HeadLine from "components/common/HeadLine";
+import Meta from "components/common/meta";
+import Sidebar from "components/items/Sidebar";
 import Image from "next/image";
 import Link from "next/link";
-import Meta from "components/common/meta";
-import HeadLine from "components/common/HeadLine";
-import { NoteContainer } from "styles/note";
-import Sidebar from "components/items/Sidebar";
-import { Button, ImgWrapper } from "styles/GlobalStyle";
-import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import paths from "paths";
+import { NoteContainer } from "styles/note";
+import NoteType from "types/note";
+import { shortenString } from "utils/formatter";
 
 interface Props {
   note: NoteType;
   list: NoteType[];
+  parentUrl: string;
+  parentName: string;
+  sidebarTitle: string;
 }
 
 type Params = {
@@ -20,49 +25,56 @@ type Params = {
   };
 };
 
-export default function SermonNote({ note, list }: Props) {
+export default function SermonNote({
+  note,
+  list,
+  parentUrl = paths.sermonNotes,
+  parentName = "Sermon Notes",
+  sidebarTitle = "Recent Notes",
+}: Props) {
+  const pageTitle = note.title || "";
+  const pageImage = note.featuredImage?.node?.sourceUrl || "/img/beliefs-img.jpg";
+  const pageContent = note.content || "";
+  const pageDesc = shortenString(note.excerpt.replace(/<[^>]*>/g, ""), 150) + "..." || "";
+
   return (
     <>
-      <Meta title={note.title + " - Rhema - Changing & Affecting Lives!"} />
-      <HeadLine
-        imgUrl={note.featuredImage?.node?.sourceUrl ?? "/img/sermons-img.jpg"}
-        title={note.title}
-        blur="blur(1.875rem)"
-      />
+      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} desc={pageDesc} />
+      <HeadLine imgUrl={pageImage} title={pageTitle} blur="blur(1.875rem)" />
       <NoteContainer>
         <div className="note-wrapper">
           {/* <p className="date">{formatDate(note.date)}</p> */}
           <p>
             <i>
-              in <Link href={paths.sermonNotes}>Sermon Notes</Link>
+              in <Link href={parentUrl}>{parentName}</Link>
             </i>
           </p>
           <div className="line" />
-          {note.featuredImage?.node?.sourceUrl && (
+          {parentName !== "Bible Studies" && pageImage && (
             <ImgWrapper>
               <Image
-                src={note.featuredImage?.node?.sourceUrl}
-                alt={note.title}
+                src={pageImage}
+                alt={pageTitle}
                 fill
                 sizes="100vw"
                 style={{
-                  objectFit: "cover"
+                  objectFit: "cover",
                 }}
               />
             </ImgWrapper>
           )}
-          <article dangerouslySetInnerHTML={{ __html: note.content }}></article>
+          <article dangerouslySetInnerHTML={{ __html: pageContent }}></article>
           {note.docFile.docFile !== null && (
             <div className="btn-wrapper">
               <div className="btn-bg">
-                <Button className="btn" href={note.docFile.docFile.mediaItemUrl} target="_blank">
+                <Button className="btn" href={note.docFile.docFile.mediaItemUrl || ""} target="_blank">
                   Download
                 </Button>
               </div>
             </div>
           )}
         </div>
-        <Sidebar title="Recent Notes" items={list} url={paths.sermonNotes} />
+        <Sidebar title={sidebarTitle} items={list || []} url={parentUrl} />
       </NoteContainer>
     </>
   );
@@ -70,7 +82,7 @@ export default function SermonNote({ note, list }: Props) {
 
 const client = new ApolloClient({
   uri: process.env.WP_URL as string,
-  cache: new InMemoryCache()
+  cache: new InMemoryCache(),
 });
 
 export const getStaticProps = async ({ params }: Params) => {
@@ -82,6 +94,7 @@ export const getStaticProps = async ({ params }: Params) => {
           title
           date
           content
+          excerpt
           featuredImage {
             node {
               sourceUrl
@@ -103,15 +116,15 @@ export const getStaticProps = async ({ params }: Params) => {
       }
     `,
     variables: {
-      id: slug
-    }
+      id: slug,
+    },
   });
   return {
     props: {
       note: data?.sermonNote,
-      list: data?.sermonNotes?.nodes
+      list: data?.sermonNotes?.nodes,
     },
-    revalidate: 30
+    revalidate: 30,
   };
 };
 
@@ -125,11 +138,11 @@ export const getStaticPaths = async () => {
           }
         }
       }
-    `
+    `,
   });
   const notes = data?.sermonNotes?.nodes;
   const paths = notes.map((note: { slug: string }) => ({
-    params: { slug: note.slug }
+    params: { slug: note.slug },
   }));
   return { paths, fallback: "blocking" };
 };

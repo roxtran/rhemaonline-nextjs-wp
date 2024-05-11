@@ -1,22 +1,24 @@
-import Link from "next/link";
-import Image from "next/image";
-import paths from "paths";
-
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+
+import { formatDate, shortenString } from "utils/formatter";
+
+import Image from "next/image";
+import Link from "next/link";
+import Slider from "react-slick";
+import { ImgWrapper } from "styles/GlobalStyle";
+import VideoType from "types/video";
 
 // import style
-import { ImgWrapper } from "styles/GlobalStyle";
+
 // import type
-import VideoType from "types/video";
-import { formatDate, shortenString } from "utils/formatter";
 
 interface propType {
   slides: VideoType[];
+  videoPath: string;
 }
 
-export default function PopularVideoSlider({ slides }: propType) {
+export default function PopularVideoSlider({ slides, videoPath }: propType) {
   const settings = {
     arrows: true,
     slidesToShow: 3,
@@ -28,33 +30,33 @@ export default function PopularVideoSlider({ slides }: propType) {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2.5
-        }
+          slidesToShow: 2.5,
+        },
       },
       {
         breakpoint: 900,
         settings: {
-          slidesToShow: 2
-        }
+          slidesToShow: 2,
+        },
       },
       {
         breakpoint: 700,
         settings: {
-          slidesToShow: 1.5
-        }
+          slidesToShow: 1.5,
+        },
       },
       {
         breakpoint: 520,
         settings: {
-          slidesToShow: 1
-        }
-      }
-    ]
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
   return (
     <Slider {...settings}>
       {slides?.map((slide) => (
-        <Link href={`${paths.sermons}/videos/popular/${slide.id.videoId}`} key={slide.id.videoId}>
+        <Link href={`${videoPath}/videos/popular/${slide.id.videoId}`} key={slide.id.videoId}>
           <div className="video-wrapper">
             <ImgWrapper className="img-wrapper">
               <Image
@@ -63,7 +65,7 @@ export default function PopularVideoSlider({ slides }: propType) {
                 fill
                 sizes="100vw"
                 style={{
-                  objectFit: "cover"
+                  objectFit: "cover",
                 }}
               />
             </ImgWrapper>

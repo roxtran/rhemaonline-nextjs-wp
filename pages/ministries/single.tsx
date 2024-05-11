@@ -1,15 +1,18 @@
 import HeadLine from "components/common/HeadLine";
-import styled from "styled-components";
-import { WomenContainer } from "./women";
-import Image from "next/image";
 import Meta from "components/common/meta";
+import Image from "next/image";
+import styled from "styled-components";
 import { ImgWrapper } from "styles/GlobalStyle";
+import { WomenContainer } from "./women";
 
 const single = () => {
+  const pageTitle = "Single's Ministry";
+  const pageImage = "/img/single-img.jpg";
+
   return (
     <>
-      <Meta title="Single's Ministry - Rhema - Changing & Affecting Lives!" />
-      <HeadLine imgUrl="/img/single-img.jpg" title="Single's Ministry" />
+      <Meta title={pageTitle + " - Rhema - Changing & Affecting Lives!"} ogImage={pageImage} />
+      <HeadLine imgUrl={pageImage} title={pageTitle} />
       <SingleContainer>
         <div className="wrapper">
           <div className="content-wrapper">
@@ -30,7 +33,7 @@ const single = () => {
                 fill
                 sizes="100vw"
                 style={{
-                  objectFit: "cover"
+                  objectFit: "cover",
                 }}
               />
             </ImgWrapper>

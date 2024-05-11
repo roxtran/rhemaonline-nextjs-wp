@@ -1,35 +1,33 @@
-import Meta from "components/common/meta";
-import NoteType from "types/note";
-import HeadLine from "components/common/HeadLine";
-import { NotesContainer } from "styles/note";
-import ItemList from "components/items/ItemList";
-import Sidebar from "components/items/Sidebar";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+
+import SermonNotes from "pages/sermons/notes";
 import paths from "paths";
+import NoteType from "types/note";
 
 interface Props {
   studies: NoteType[];
   list: NoteType[];
 }
 
-export default function Lessons({ studies, list }: Props) {
-  // console.log(studies.categories.nodes.name)
+const BibleStudies = ({ studies, list }: Props) => {
   return (
-    <>
-      <Meta title="Lessons - Rhema - Changing & Affecting Lives!" />
-      <HeadLine imgUrl="/img/sermons-img.jpg" title="Bible Studies" />
-      <NotesContainer>
-        <ItemList title="Lessons" items={studies} url={paths.bibleStudyLessons} />
-        <Sidebar title="Recent Studies" items={list} url={paths.bibleStudyLessons} />
-      </NotesContainer>
-    </>
+    <SermonNotes
+      notes={studies}
+      list={list}
+      pageTitle="Bible Studies"
+      url={paths.bibleStudyLessons}
+      subTitle="Lessons"
+      sidebarTitle="Recent Studies"
+    />
   );
-}
+};
+
+export default BibleStudies;
 
 export async function getStaticProps() {
   const client = new ApolloClient({
     uri: process.env.WP_URL as string,
-    cache: new InMemoryCache()
+    cache: new InMemoryCache(),
   });
 
   const { data } = await client.query({
@@ -59,15 +57,15 @@ export async function getStaticProps() {
     `,
     variables: {
       first: 3,
-      after: null
-    }
+      after: null,
+    },
   });
 
   return {
     props: {
       studies: data?.bibleStudies?.nodes,
-      list: data?.studiesList?.nodes
+      list: data?.studiesList?.nodes,
     },
-    revalidate: 30
+    revalidate: 30,
   };
 }

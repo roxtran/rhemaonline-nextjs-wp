@@ -1,17 +1,20 @@
-import Image from "next/image";
-import styled from "styled-components";
-import HeadLine from "components/common/HeadLine";
-import Meta from "components/common/meta";
 import { Button, Container, def } from "styles/GlobalStyle";
+
+import HeadLine from "components/common/HeadLine";
 import ImageSlider from "components/common/ImageSlider";
+import Meta from "components/common/meta";
 import slides from "data/foodbank-slides";
 import Link from "next/link";
+import styled from "styled-components";
 
 const foodbank = () => {
+  const pageTitle = "Foodbank";
+  const pageImage = "/img/foodbank/new/10.jpg";
+
   return (
     <>
-      <Meta title="Foodbank - Rhema - Changing & Affecting Lives!" />
-      <HeadLine imgUrl="/img/foodbank/new/10.jpg" title="Foodbank" />
+      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
+      <HeadLine imgUrl={pageImage} title={pageTitle} />
       <FoodbankContainer>
         <div className="content-wrapper">
           <ImageSlider slides={slides} />

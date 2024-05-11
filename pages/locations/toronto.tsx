@@ -1,18 +1,15 @@
-import Head from "next/head";
-import Image from "next/image";
-import styled from "styled-components";
-import Meta from "components/common/meta";
-import Video from "components/common/Video";
 import { Button, Container, def } from "styles/GlobalStyle";
+
+import Video from "components/common/Video";
+import Meta from "components/common/meta";
+import Image from "next/image";
 import paths from "paths";
+import styled from "styled-components";
 
 export default function Toronto() {
   return (
     <>
       <Meta title="Toronto Location - Rhema - Changing & Affecting Lives!" />
-      <Head>
-        <script src="https://js.churchcenter.com/modal/v1"></script>
-      </Head>
       <VideoWrapper>
         <Video src="/video/toronto_location (1080p).mp4" width="100%" height="75vh" />
       </VideoWrapper>
@@ -30,7 +27,7 @@ export default function Toronto() {
                   height={75}
                   style={{
                     maxWidth: "100%",
-                    height: "auto"
+                    height: "auto",
                   }}
                 />
               </div>
@@ -48,7 +45,7 @@ export default function Toronto() {
                   height={75}
                   style={{
                     maxWidth: "100%",
-                    height: "auto"
+                    height: "auto",
                   }}
                 />
               </div>
@@ -66,7 +63,7 @@ export default function Toronto() {
                   height={75}
                   style={{
                     maxWidth: "100%",
-                    height: "auto"
+                    height: "auto",
                   }}
                 />
               </div>
@@ -84,7 +81,7 @@ export default function Toronto() {
                   height={60}
                   style={{
                     maxWidth: "100%",
-                    height: "auto"
+                    height: "auto",
                   }}
                 />
               </div>

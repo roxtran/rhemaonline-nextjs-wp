@@ -1,16 +1,20 @@
-import styled from "styled-components";
-import HeadLine from "components/common/HeadLine";
-import Meta from "components/common/meta";
 import { Container, def } from "styles/GlobalStyle";
 
+import HeadLine from "components/common/HeadLine";
+import Meta from "components/common/meta";
+import styled from "styled-components";
+
 export default function About() {
+  const pageTitle = "About Us";
+  const pageImage = "/img/about-img.webp";
+
   return (
     <>
-      <Meta title="About Us - Rhema - Changing & Affecting Lives!" />
+      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
       <HeadLine
-        imgUrl="/img/about-img.webp"
-        title="About Us"
         height="31.25rem"
+        imgUrl={pageImage}
+        title={pageTitle}
         // blur='blur(0.9375rem)'
       />
       <StyledAbout>

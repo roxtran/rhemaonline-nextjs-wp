@@ -1,16 +1,14 @@
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+
 import Meta from "components/common/meta";
-import Video from "components/common/Video";
 import CTAPanel from "components/home/CTAPanel";
+import Hero from "components/home/Hero";
+import Newsletter from "components/home/Newsletter";
 import Subscribe from "components/home/Subscribe";
 import Welcome from "components/home/Welcome";
-import Newsletter from "components/home/Newsletter";
 import styled from "styled-components";
-import SlideType from "types/slide";
-
-import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
-import Hero from "components/home/Hero";
 import NewsletterType from "types/newsletter";
-import Head from "next/head";
+import SlideType from "types/slide";
 
 interface Props {
   slides: SlideType[];
@@ -21,9 +19,6 @@ const Home = ({ slides, newsletters }: Props) => {
   return (
     <>
       <Meta title="Home - Rhema - Changing & Affecting Lives!" />
-      <Head>
-        <script src="https://js.churchcenter.com/modal/v1"></script>
-      </Head>
       {/* <Video src='/video/RCM-Homepage-Teaser2.mp4' width='100%' height='80vh' /> */}
       {/* <VideoWrapper>
         <video loop muted autoPlay>
@@ -57,7 +52,7 @@ const VideoWrapper = styled.div`
 export async function getStaticProps() {
   const client = new ApolloClient({
     uri: process.env.WP_URL as string,
-    cache: new InMemoryCache()
+    cache: new InMemoryCache(),
   });
 
   const { data } = await client.query({
@@ -89,12 +84,12 @@ export async function getStaticProps() {
     `,
     variables: {
       numOfNewsletters: 5,
-      after: null
-    }
+      after: null,
+    },
   });
 
   return {
     props: { slides: data?.slides?.nodes, newsletters: data?.newsletters?.nodes },
-    revalidate: 10
+    revalidate: 10,
   };
 }
