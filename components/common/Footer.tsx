@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import paths from "paths";
 import { useState } from "react";
 import styled from "styled-components";
-import paths from "paths";
 import BibleModal from "./Modals/BibleModal";
 
 export default function Footer() {
@@ -125,12 +125,7 @@ export default function Footer() {
                 <Link href={paths.legalTerms}>Legal Terms</Link>
               </li>
               <li>
-                <Link
-                  href="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2024/04/RC-Website-Privacy-Policy.pdf"
-                  target="_blank"
-                >
-                  Privacy Policy
-                </Link>
+                <Link href={paths.privacyPolicy}>Privacy Policy</Link>
               </li>
             </ul>
           </div>
@@ -150,7 +145,7 @@ export default function Footer() {
                 height={30}
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
+                  height: "auto",
                 }}
               />
             </div>
@@ -164,7 +159,7 @@ export default function Footer() {
                 height={30}
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
+                  height: "auto",
                 }}
               />
             </div>
@@ -178,7 +173,7 @@ export default function Footer() {
                 height={35}
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
+                  height: "auto",
                 }}
               />
             </div>
@@ -192,7 +187,7 @@ export default function Footer() {
                 height={35}
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
+                  height: "auto",
                 }}
               />
             </div>
@@ -206,7 +201,7 @@ export default function Footer() {
                 height={30}
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
+                  height: "auto",
                 }}
               />
             </div>
@@ -220,7 +215,7 @@ export default function Footer() {
                 height={35}
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
+                  height: "auto",
                 }}
               />
             </div>
@@ -234,7 +229,7 @@ export default function Footer() {
                 height={35}
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
+                  height: "auto",
                 }}
               />
             </div>
@@ -248,7 +243,7 @@ export default function Footer() {
                 height={35}
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
+                  height: "auto",
                 }}
               />
             </div>
