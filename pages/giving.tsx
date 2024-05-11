@@ -1,15 +1,21 @@
+import { Container, def, rem } from "styles/GlobalStyle";
+
 import HeadLine from "components/common/HeadLine";
-import styled from "styled-components";
-import { Container, rem, def } from "styles/GlobalStyle";
 import Meta from "components/common/meta";
 import Image from "next/image";
 import Link from "next/link";
+import paths from "paths";
+import styled from "styled-components";
 
 export default function Giving() {
+  const pageTitle = "Giving";
+  const pageImage = "/img/giving-img.jpg";
+  const pageDesc = "Make A Difference!";
+
   return (
     <>
-      <Meta title="Giving - Rhema - Changing & Affecting Lives!" />
-      <HeadLine imgUrl="/img/giving-img.jpg" title="Make A Difference" />
+      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} desc={pageDesc} />
+      <HeadLine imgUrl={pageImage} title={pageDesc} />
       <GivingContainer>
         <div id="thank">
           <p>
@@ -32,7 +38,7 @@ export default function Giving() {
                     style={{
                       maxWidth: "100%",
                       height: "auto",
-                      objectFit: "cover"
+                      objectFit: "cover",
                     }}
                   />
                 </div>
@@ -40,7 +46,7 @@ export default function Giving() {
               <div className="desc">
                 <ul>
                   <li>
-                    Send an E-Transfer to: <Link href="treasury@rhemaonline.ca">treasury@rhemaonline.ca</Link>
+                    Send an E-Transfer to: <Link href={paths.givingLinks.eTransfer}>treasury@rhemaonline.ca</Link>
                   </li>
                 </ul>
               </div>
@@ -56,7 +62,7 @@ export default function Giving() {
                     style={{
                       maxWidth: "100%",
                       height: "auto",
-                      objectFit: "cover"
+                      objectFit: "cover",
                     }}
                   />
                 </div>
@@ -92,7 +98,7 @@ export default function Giving() {
                     style={{
                       maxWidth: "100%",
                       height: "auto",
-                      objectFit: "cover"
+                      objectFit: "cover",
                     }}
                   />
                 </div>
@@ -105,8 +111,7 @@ export default function Giving() {
                   <li>If you don’t have a Tithe.ly account, you can create one in a few easy steps.</li>
                   <li>Complete the requested information one time, and then you can start giving by Tithe.ly.</li>
                   <li>
-                    Or{" "}
-                    <Link href="https://tithe.ly/give_new/www/#/tithely/give-one-time/645887?kiosk=1">click here</Link>
+                    Or <Link href={paths.givingLinks.titheLy}>click here</Link>
                   </li>
                   <li>and follow the instructions to give by credit card or visa debit card.</li>
                 </ul>
@@ -123,7 +128,7 @@ export default function Giving() {
                     style={{
                       maxWidth: "100%",
                       height: "auto",
-                      objectFit: "cover"
+                      objectFit: "cover",
                     }}
                   />
                 </div>
@@ -153,7 +158,7 @@ export default function Giving() {
                     style={{
                       maxWidth: "100%",
                       height: "auto",
-                      objectFit: "cover"
+                      objectFit: "cover",
                     }}
                   />
                 </div>
@@ -170,7 +175,7 @@ export default function Giving() {
                   <li>Complete the requested information one time, and then you can start giving by Paypal.</li>
                   <li>
                     Or{" "}
-                    <Link href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZDLQA7QHSMMEC&source=url">
+                    <Link href={paths.givingLinks.paypal}>
                       click here
                     </Link>
                   </li>

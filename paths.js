@@ -39,6 +39,13 @@ export default {
   applePodcast: "https://podcasts.apple.com/ca/podcast/the-rhema-experience-online/id1540404429",
   office365Site: "https://login.microsoftonline.com/",
 
+  // giving links
+  givingLinks: {
+    titheLy: "https://tithe.ly/give_new/www/#/tithely/give-one-time/645887?kiosk=1",
+    paypal: "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZDLQA7QHSMMEC&source=url",
+    eTransfer: "treasury@rhemaonline.ca",
+  },
+
   // form links
   formLinks: {
     getInvolved: "https://rhema.ccbchurch.com/goto/forms/91/responses/new",
@@ -50,6 +57,6 @@ export default {
     waterBaptism: "https://rhema.ccbchurch.com/goto/forms/12/responses/new",
     marriageCounseling: "https://rhema.ccbchurch.com/goto/forms/16/responses/new",
     funerals: "https://rhema.ccbchurch.com/goto/forms/40/responses/new",
-    hospitalVisitation: "https://rhema.ccbchurch.com/goto/forms/91/responses/new"
-  }
+    hospitalVisitation: "https://rhema.ccbchurch.com/goto/forms/91/responses/new",
+  },
 };

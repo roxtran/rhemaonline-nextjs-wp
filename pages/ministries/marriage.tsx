@@ -1,15 +1,19 @@
+import { Button, ImgWrapper } from "styles/GlobalStyle";
+
 import HeadLine from "components/common/HeadLine";
+import Meta from "components/common/meta";
+import Image from "next/image";
 import styled from "styled-components";
 import { WomenContainer } from "./women";
-import Image from "next/image";
-import { Button, ImgWrapper } from "styles/GlobalStyle";
-import Meta from "components/common/meta";
 
 const marriage = () => {
+  const pageTitle = "Marriage's Ministry";
+  const pageImage = "/img/marriage-img.jpg";
+
   return (
     <>
-      <Meta title="Marriage's Ministry - Rhema - Changing & Affecting Lives!" />
-      <HeadLine imgUrl="/img/marriage-img.jpg" title="Marriage's Ministry" blur="blur(0.25rem)" />
+      <Meta title={pageTitle + " - Rhema - Changing & Affecting Lives!"} ogImage={pageImage} />
+      <HeadLine imgUrl={pageImage} title={pageTitle} blur="blur(0.25rem)" />
       <MarriageContainer>
         <div className="wrapper">
           <div className="content-wrapper">
@@ -36,7 +40,7 @@ const marriage = () => {
                 fill
                 sizes="100vw"
                 style={{
-                  objectFit: "cover"
+                  objectFit: "cover",
                 }}
               />
             </ImgWrapper>

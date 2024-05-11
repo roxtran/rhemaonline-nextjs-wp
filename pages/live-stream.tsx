@@ -1,19 +1,22 @@
 import HeadLine from "components/common/HeadLine";
 import IframeVideo from "components/common/IFrameVideo";
 import Meta from "components/common/meta";
+import SocialShare from "components/common/SocialShare";
 import styled from "styled-components";
 import useWindowDimensions from "utils/useWindowDimension";
-import SocialShare from "components/common/SocialShare";
 
 export default function LiveStream() {
   const { width } = useWindowDimensions();
 
+  const pageTitle = "Live Stream";
+  const pageImage = "/img/live-stream.jpg";
+
   return (
     <>
-      <Meta title="Live Stream - Rhema - Changing & Affecting Lives!" />{" "}
+      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
       <HeadLine
-        imgUrl="/img/live-stream.jpg"
-        title="Live Stream"
+        imgUrl={pageImage}
+        title={pageTitle}
         desc="Sundays - 11am"
         height="30rem"
         top="3.125rem"

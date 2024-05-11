@@ -1,22 +1,23 @@
-import Link from "next/link";
-import Image from "next/image";
-import paths from "paths";
-
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 
-// import style
+import Image from "next/image";
+import Link from "next/link";
+import Slider from "react-slick";
 import { ImgWrapper } from "styles/GlobalStyle";
-// import type
 import VideoType from "types/video";
 import { shortenString } from "utils/formatter";
 
+// import style
+
+// import type
+
 interface propType {
   slides: VideoType[];
+  videoPath: string;
 }
 
-export default function PopularVideoSlider({ slides }: propType) {
+export default function PopularVideoSlider({ slides, videoPath }: propType) {
   const settings = {
     arrows: true,
     slidesToShow: 3,
@@ -28,34 +29,34 @@ export default function PopularVideoSlider({ slides }: propType) {
       {
         breakpoint: 920,
         settings: {
-          slidesToShow: 2.4
-        }
+          slidesToShow: 2.4,
+        },
       },
       {
         breakpoint: 780,
         settings: {
-          slidesToShow: 2
-        }
+          slidesToShow: 2,
+        },
       },
       {
         breakpoint: 620,
         settings: {
-          slidesToShow: 1.5
-        }
+          slidesToShow: 1.5,
+        },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1
-        }
-      }
-    ]
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
   return (
     <Slider {...settings}>
       {slides?.map((slide) => (
         <Link
-          href={`${paths.sermons}/videos/recent/${slide.snippet.resourceId.videoId}`}
+          href={`${videoPath}/videos/recent/${slide.snippet.resourceId.videoId}`}
           key={slide.snippet.resourceId.videoId}
         >
           <div className="video-wrapper">
@@ -66,7 +67,7 @@ export default function PopularVideoSlider({ slides }: propType) {
                 fill
                 sizes="100vw"
                 style={{
-                  objectFit: "cover"
+                  objectFit: "cover",
                 }}
               />
             </ImgWrapper>

@@ -1,14 +1,18 @@
-import HeadLine from "components/common/HeadLine";
-import styled from "styled-components";
 import { Container, def } from "styles/GlobalStyle";
-import beliefs from "data/beliefs";
+
+import HeadLine from "components/common/HeadLine";
 import Meta from "components/common/meta";
+import beliefs from "data/beliefs";
+import styled from "styled-components";
 
 export default function Beliefs() {
+  const pageTitle = "Beliefs";
+  const pageImage = "/img/beliefs-img.jpg";
+
   return (
     <>
-      <Meta title="Beliefs - Rhema - Changing & Affecting Lives!" />
-      <HeadLine imgUrl="/img/beliefs-img.jpg" title="Beliefs" blur="blur(0.3125rem)" />
+      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
+      <HeadLine imgUrl={pageImage} title={pageTitle} blur="blur(0.3125rem)" />
       <BeliefsContainer>
         <div className="content-wrapper">
           <div className="desc">

@@ -1,26 +1,51 @@
-import Meta from "components/common/meta";
-import NoteType from "types/note";
+import { ApolloClient, DefaultOptions, InMemoryCache, gql } from "@apollo/client";
+
 import HeadLine from "components/common/HeadLine";
-import { NotesContainer } from "styles/note";
+import Meta from "components/common/meta";
 import ItemList from "components/items/ItemList";
 import Sidebar from "components/items/Sidebar";
-import { ApolloClient, InMemoryCache, gql, DefaultOptions } from "@apollo/client";
 import paths from "paths";
+import { NotesContainer } from "styles/note";
+import NoteType from "types/note";
 
 interface Props {
   notes: NoteType[];
   list: NoteType[];
+  pageTitle: string;
+  pageImage?: string;
+  headlineHeight?: string;
+  headlineHeightMb?: string;
+  displayHeadlineTitles?: boolean;
+  url: string;
+  subTitle: string;
+  sidebarTitle: string;
 }
 
-export default function Lessons({ notes, list }: Props) {
-  // console.log(notes.categories.nodes.name)
+export default function SermonNotes({
+  notes,
+  list,
+  pageTitle = "Sermon Notes",
+  pageImage = "/img/sermons-img.jpg",
+  headlineHeight = "",
+  headlineHeightMb = "",
+  displayHeadlineTitles = true,
+  url = paths.sermonNotes,
+  subTitle = "Lessons",
+  sidebarTitle = "Recent Notes",
+}: Props) {
   return (
     <>
-      <Meta title="Lessons - Rhema - Changing & Affecting Lives!" />
-      <HeadLine imgUrl="/img/sermons-img.jpg" title="Sermon Notes" />
+      <Meta title={pageTitle + " - Rhema - Changing & Affecting Lives!"} ogImage={pageImage} />
+      <HeadLine
+        imgUrl={pageImage}
+        title={pageTitle}
+        height={headlineHeight}
+        mbHeight={headlineHeightMb}
+        displayTitle={displayHeadlineTitles}
+      />
       <NotesContainer>
-        <ItemList title="Recent Sermons" items={notes} url={paths.sermonNotes} />
-        <Sidebar title="Sermon Notes" items={list} url={paths.sermonNotes} />
+        <ItemList title={subTitle} items={notes} url={url} />
+        <Sidebar title={sidebarTitle} items={list} url={url} />
       </NotesContainer>
     </>
   );
@@ -30,18 +55,18 @@ export async function getStaticProps() {
   const defaultOptions: DefaultOptions = {
     watchQuery: {
       fetchPolicy: "no-cache",
-      errorPolicy: "ignore"
+      errorPolicy: "ignore",
     },
     query: {
       fetchPolicy: "no-cache",
-      errorPolicy: "all"
-    }
+      errorPolicy: "all",
+    },
   };
 
   const client = new ApolloClient({
     uri: process.env.WP_URL as string,
     cache: new InMemoryCache(),
-    defaultOptions: defaultOptions
+    defaultOptions: defaultOptions,
   });
 
   const { data } = await client.query({
@@ -71,15 +96,15 @@ export async function getStaticProps() {
     `,
     variables: {
       first: 3,
-      after: null
-    }
+      after: null,
+    },
   });
 
   return {
     props: {
       notes: data?.sermonNotes?.nodes,
-      list: data?.sermonList?.nodes
+      list: data?.sermonList?.nodes,
     },
-    revalidate: 30
+    revalidate: 30,
   };
 }

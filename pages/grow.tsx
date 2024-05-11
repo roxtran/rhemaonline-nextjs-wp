@@ -1,15 +1,19 @@
-import Image from "next/image";
-import styled from "styled-components";
+import { Container, ImgWrapper, def } from "styles/GlobalStyle";
+
 import HeadLine from "components/common/HeadLine";
 import Meta from "components/common/meta";
 import { default as growData } from "data/grow";
-import { Container, ImgWrapper, def } from "styles/GlobalStyle";
+import Image from "next/image";
+import styled from "styled-components";
 
 const grow = () => {
+  const pageTitle = "Grow";
+  const pageImage = "/img/grow-img.jpg";
+
   return (
     <>
-      <Meta title="Grow - Rhema - Changing & Affecting Lives!" />
-      <HeadLine imgUrl="/img/grow-img.jpg" title="Grow" height="34.375rem" />
+      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
+      <HeadLine imgUrl={pageImage} title={pageTitle} height="34.375rem" />
       <GrowContainer>
         <div className="desc">
           <h2>Go Deeper</h2>
@@ -39,7 +43,7 @@ const grow = () => {
                   fill
                   sizes="100vw"
                   style={{
-                    objectFit: "cover"
+                    objectFit: "cover",
                   }}
                 />
               </ImgWrapper>

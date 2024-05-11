@@ -1,13 +1,17 @@
-import styled from "styled-components";
-import HeadLine from "components/common/HeadLine";
-import Meta from "components/common/meta";
 import { Container, def } from "styles/GlobalStyle";
 
+import HeadLine from "components/common/HeadLine";
+import Meta from "components/common/meta";
+import styled from "styled-components";
+
 const legalTerms = () => {
+  const pageTitle = "Legal Terms";
+  const pageImage = "/img/legal-terms-img.jpg";
+
   return (
     <>
-      <Meta title="Legal Terms - Rhema - Changing & Affecting Lives!" />
-      <HeadLine imgUrl="/img/legal-terms-img.jpg" title="Legal Terms" height="28.125rem" />
+      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
+      <HeadLine imgUrl={pageImage} title={pageTitle} height="28.125rem" />
       <TermsContainer>
         <div className="content-wrapper">
           <h2>Legal Statement</h2>

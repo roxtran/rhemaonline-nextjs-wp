@@ -1,13 +1,17 @@
+import { Button, Container, def } from "styles/GlobalStyle";
+
 import HeadLine from "components/common/HeadLine";
-import styled from "styled-components";
-import { Container, Button, def } from "styles/GlobalStyle";
 import Meta from "components/common/meta";
+import styled from "styled-components";
 
 export default function facilityBookings() {
+  const pageTitle = "Facility Bookings";
+  const pageImage = "/img/facility-bookings-img.jpg";
+
   return (
     <>
-      <Meta title="Facility Bookings - Rhema - Changing & Affecting Lives!" />
-      <HeadLine imgUrl="/img/facility-bookings-img.jpg" title="Facility Bookings" blur="blur(0.25rem)" />
+      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
+      <HeadLine imgUrl={pageImage} title={pageTitle} blur="blur(0.25rem)" />
       <BookingsContainer>
         <div className="wrapper">
           <div className="content-wrapper">

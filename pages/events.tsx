@@ -1,14 +1,18 @@
-import styled from "styled-components";
 import HeadLine from "components/common/HeadLine";
-// import PCOCalendar from 'components/common/PLOCalendar'
 import Meta from "components/common/meta";
+import styled from "styled-components";
 import { def } from "styles/GlobalStyle";
 
+// import PCOCalendar from 'components/common/PLOCalendar'
+
 export default function Events() {
+  const pageTitle = "Events";
+  const pageImage = "/img/events-img1.webp";
+
   return (
     <>
-      <Meta title="Events - Rhema - Changing & Affecting Lives!" />
-      <HeadLine imgUrl="/img/events-img1.webp" title="Events" height="18.75rem" />
+      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
+      <HeadLine imgUrl={pageImage} title={pageTitle} height="18.75rem" />
       <CalendarWrapper>
         <iframe
           src="https://rhema.ccbchurch.com/goto/events/public"

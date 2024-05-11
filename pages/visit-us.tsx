@@ -1,27 +1,24 @@
-import Head from "next/head";
-import Image from "next/image";
-import styled from "styled-components";
-import Meta from "components/common/meta";
-import Video from "components/common/Video";
 import { Button, Container, def } from "styles/GlobalStyle";
+
+import Video from "components/common/Video";
+import Meta from "components/common/meta";
+import Image from "next/image";
 import paths from "paths";
 import { useState } from "react";
+import styled from "styled-components";
 
 export default function Location() {
   const [displayServiceTime, setDisplayServiceTime] = useState(false);
 
+  const pageTitle = "Visit Us";
+  const pageImage =
+    "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2023/11/Rhema-Website-Video-No-Location.mp4";
+
   return (
     <>
-      <Meta title="Visit Us - Rhema - Changing & Affecting Lives!" />
-      <Head>
-        <script src="https://js.churchcenter.com/modal/v1"></script>
-      </Head>
+      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
       <VideoWrapper>
-        <Video
-          src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2023/11/Rhema-Website-Video-No-Location.mp4"
-          width="100%"
-          height="80vh"
-        />
+        <Video src={pageImage} width="100%" height="80vh" />
       </VideoWrapper>
       <LocationContainer>
         <div className="content-wrapper">
@@ -42,7 +39,7 @@ export default function Location() {
                   alt="In person photo"
                   style={{
                     maxWidth: "100%",
-                    height: "auto"
+                    height: "auto",
                   }}
                 />
                 <div className="text-wrapper">
@@ -60,7 +57,7 @@ export default function Location() {
                   alt="In person photo"
                   style={{
                     maxWidth: "100%",
-                    height: "auto"
+                    height: "auto",
                   }}
                 />
                 <div className="text-wrapper">
@@ -107,7 +104,7 @@ export default function Location() {
                   height={75}
                   style={{
                     maxWidth: "100%",
-                    height: "auto"
+                    height: "auto",
                   }}
                 />
               </div>
@@ -125,7 +122,7 @@ export default function Location() {
                   height={75}
                   style={{
                     maxWidth: "100%",
-                    height: "auto"
+                    height: "auto",
                   }}
                 />
               </div>
@@ -143,7 +140,7 @@ export default function Location() {
                   height={75}
                   style={{
                     maxWidth: "100%",
-                    height: "auto"
+                    height: "auto",
                   }}
                 />
               </div>
@@ -161,7 +158,7 @@ export default function Location() {
                   height={75}
                   style={{
                     maxWidth: "100%",
-                    height: "auto"
+                    height: "auto",
                   }}
                 />
               </div>
@@ -179,7 +176,7 @@ export default function Location() {
                   height={60}
                   style={{
                     maxWidth: "100%",
-                    height: "auto"
+                    height: "auto",
                   }}
                 />
               </div>

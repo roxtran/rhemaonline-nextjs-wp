@@ -1,30 +1,30 @@
-import Head from "next/head";
-import styled from "styled-components";
-import HeadLine from "components/common/HeadLine";
-import Link from "next/link";
-import Image from "next/image";
-import { Container, ImgWrapper, def } from "styles/GlobalStyle";
-// import services from 'data/services'
-import Meta from "components/common/meta";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
-import ServiceType from "types/service";
+import { Container, ImgWrapper, def } from "styles/GlobalStyle";
+
+import HeadLine from "components/common/HeadLine";
+import Meta from "components/common/meta";
+import Image from "next/image";
+import Link from "next/link";
 import paths from "paths";
+import styled from "styled-components";
+import ServiceType from "types/service";
 
 interface Props {
   services: ServiceType[];
 }
 
 export default function Connect({ services }: Props) {
+  const pageTitle = "The Care Centre";
+  const pageImage = "/img/connect-img.jpg";
+  const pageDesc = "We are here for you.";
+
   return (
     <>
-      <Meta title="Connect - Rhema - Changing & Affecting Lives!" />
-      <Head>
-        <script src="https://js.churchcenter.com/modal/v1"></script>
-      </Head>
+      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} desc={pageDesc} />
       <HeadLine
-        imgUrl="/img/connect-img.jpg"
-        title="The Care Centre"
-        desc="We are here for you."
+        imgUrl={pageImage}
+        title={pageTitle}
+        desc={pageDesc}
         btnText="Contact Us"
         btnLink={paths.formLinks.contactUs}
         height="28.125rem"
@@ -49,7 +49,7 @@ export default function Connect({ services }: Props) {
                   fill
                   sizes="100vw"
                   style={{
-                    objectFit: "cover"
+                    objectFit: "cover",
                   }}
                 />
               </ImgWrapper>
@@ -120,7 +120,7 @@ const ConnectContainer = styled(Container)`
 export async function getStaticProps() {
   const client = new ApolloClient({
     uri: process.env.WP_URL as string,
-    cache: new InMemoryCache()
+    cache: new InMemoryCache(),
   });
 
   const { data } = await client.query({
@@ -143,13 +143,13 @@ export async function getStaticProps() {
           }
         }
       }
-    `
+    `,
   });
 
   return {
     props: {
-      services: data?.services?.nodes
+      services: data?.services?.nodes,
     },
-    revalidate: 10
+    revalidate: 10,
   };
 }

@@ -1,16 +1,20 @@
+import { Button, Container, ImgWrapper, def } from "styles/GlobalStyle";
+
 import HeadLine from "components/common/HeadLine";
-import styled from "styled-components";
-import { Container, Button, ImgWrapper, def } from "styles/GlobalStyle";
 import Image from "next/image";
-import { default as ministriesData } from "data/ministies";
-import Meta from "components/common/meta";
 import Link from "next/link";
+import Meta from "components/common/meta";
+import { default as ministriesData } from "data/ministries";
+import styled from "styled-components";
 
 const ministries = () => {
+  const pageTitles = "Ministries";
+  const pageImage = "/img/ministries-img.jpg";
+
   return (
     <>
-      <Meta title="Family Ministries - Rhema - Changing & Affecting Lives!" />
-      <HeadLine imgUrl="/img/ministries-img.jpg" title="Ministries" height="34.375rem" />
+      <Meta title="Family Ministries - Rhema - Changing & Affecting Lives!" ogImage={pageImage} />
+      <HeadLine imgUrl={pageImage} title={pageTitles} height="34.375rem" />
       <MinistriesContainer>
         <div className="desc">
           <h2>The Family Ministries</h2>
@@ -36,7 +40,7 @@ const ministries = () => {
                   fill
                   sizes="100vw"
                   style={{
-                    objectFit: "cover"
+                    objectFit: "cover",
                   }}
                 />
               </ImgWrapper>

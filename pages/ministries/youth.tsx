@@ -1,15 +1,18 @@
 import HeadLine from "components/common/HeadLine";
+import Meta from "components/common/meta";
 import Image from "next/image";
+import ReactPlayer from "react-player";
 import styled from "styled-components";
 import { Container } from "styles/GlobalStyle";
-import ReactPlayer from "react-player";
-import Meta from "components/common/meta";
 
 const youth = () => {
+  const pageTitle = "Plugged In Youth";
+  const pageImage = "/img/youth-img.jpg";
+
   return (
     <>
-      <Meta title="Youth Ministry - Rhema - Changing & Affecting Lives!" />
-      <HeadLine imgUrl="/img/youth-img.jpg" title="Plugged In Youth" />
+      <Meta title={pageTitle + " - Rhema - Changing & Affecting Lives!"} ogImage={pageImage} />
+      <HeadLine imgUrl={pageImage} title={pageTitle} />
       <YouthContainer>
         <div className="wrapper">
           <div className="content-wrapper">
@@ -33,7 +36,7 @@ const youth = () => {
                     height={42}
                     style={{
                       maxWidth: "100%",
-                      height: "auto"
+                      height: "auto",
                     }}
                   />
                 </div>
@@ -48,7 +51,7 @@ const youth = () => {
                     height={42}
                     style={{
                       maxWidth: "100%",
-                      height: "auto"
+                      height: "auto",
                     }}
                   />
                 </div>
