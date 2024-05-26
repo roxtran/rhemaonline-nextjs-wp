@@ -4,6 +4,7 @@ import { VideoContainer, VideoWrapper } from "../../styles";
 import Meta from "components/common/meta";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import paths from "paths";
 import { IoArrowBackOutline } from "react-icons/io5";
 import VideoType from "types/video";
@@ -11,7 +12,6 @@ import { formatDate } from "utils/formatter";
 
 interface Props {
   video: VideoType;
-  goBackUrl: string;
 }
 
 type Params = {
@@ -20,7 +20,8 @@ type Params = {
   };
 };
 
-export default function PopularVideoId({ video, goBackUrl = paths.sermons || "" }: Props) {
+export default function PopularVideoId({ video }: Props) {
+  const router = useRouter();
   const pageTitle = video?.snippet?.title || "";
   const videoId = video?.id?.videoId || video?.snippet?.resourceId?.videoId || "";
   const pageImage = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
@@ -33,10 +34,10 @@ export default function PopularVideoId({ video, goBackUrl = paths.sermons || "" 
       <Meta title={pageTitle + " - Rhema - Changing & Affecting Lives!"} ogImage={pageImage} />
       <VideoContainer>
         <div className="wrapper">
-          <Link href={goBackUrl} className="btn-back">
+          <a className="btn-back" type="button" onClick={() => router.back()}>
             <IoArrowBackOutline className="icon-back" />
             Go back
-          </Link>
+          </a>
           <VideoWrapper>
             <iframe
               width="100%"

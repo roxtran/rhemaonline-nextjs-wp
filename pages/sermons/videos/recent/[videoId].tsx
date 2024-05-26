@@ -1,6 +1,5 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
-import paths from "paths";
 import VideoType from "types/video";
 import PopularVideoId from "../popular/[videoId]";
 
@@ -13,7 +12,7 @@ type Params = {
 };
 
 const RecentVideoId = ({ video }: Props) => {
-  return <PopularVideoId video={video} goBackUrl={paths.sermons} />;
+  return <PopularVideoId video={video} />;
 };
 
 export default RecentVideoId;
