@@ -1,9 +1,9 @@
 import HeadLine from "components/common/HeadLine";
-import Meta from "components/common/meta";
 import Image from "next/image";
-import styled from "styled-components";
 import { ImgWrapper } from "styles/GlobalStyle";
+import Meta from "components/common/meta";
 import { WomenContainer } from "./women";
+import styled from "styled-components";
 
 const men = () => {
   const pageTitle = "Men's Ministry";
@@ -16,9 +16,6 @@ const men = () => {
       <MenContainer>
         <div className="wrapper">
           <div className="content-wrapper">
-            <p>
-              <q>Jesus is the source. All youth must be plugged into the source.</q> ~ Plugged In Youth Adult Ministry
-            </p>
             <p>
               Men of Valor is a social network of men across Canada with a mandate to explore critical issues facing men
               of all ages in the 21st century and the role that God’s Kingdom plays in bringing solutions to these
