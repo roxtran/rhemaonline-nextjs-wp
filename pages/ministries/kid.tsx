@@ -308,6 +308,10 @@ export const KidContainer = styled(Container)`
     margin: 5rem 0;
     width: ${def.wrapper.width};
     max-width: 90vw;
+
+    .accordion-header {
+      padding: 0;
+    }
   }
   .items {
     margin-top: 5rem;
@@ -355,6 +359,7 @@ export const KidContainer = styled(Container)`
     }
     .btn-wrapper {
       margin-top: 2.5rem;
+      font-weight: 600;
     }
   }
 
