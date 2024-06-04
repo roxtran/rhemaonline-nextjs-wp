@@ -15,7 +15,7 @@ export default [
   // },
   {
     name: "Women's Ministry",
-    imgUrl: "/img/ministries/women.jpg",
+    imgUrl: "/img/ministries/women1.jpg",
     btnText: "Learn More",
     btnLink: "/ministries/women",
     social: {
