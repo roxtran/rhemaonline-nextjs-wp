@@ -49,15 +49,15 @@ export default {
 
   // form links
   formLinks: {
-    getInvolved: "https://rhema.ccbchurch.com/goto/forms/91/responses/new",
-    contactUs: "https://rhema.ccbchurch.com/goto/forms/91/responses/new",
-    prayerRequest: "https://rhema.ccbchurch.com/goto/forms/89/responses/new",
-    pastoralCare: "https://rhema.ccbchurch.com/goto/forms/90/responses/new",
-    becomeAMember: "https://rhema.ccbchurch.com/goto/forms/15/responses/new",
-    childDedication: "https://rhema.ccbchurch.com/goto/forms/14/responses/new",
-    waterBaptism: "https://rhema.ccbchurch.com/goto/forms/12/responses/new",
-    marriageCounseling: "https://rhema.ccbchurch.com/goto/forms/16/responses/new",
-    funerals: "https://rhema.ccbchurch.com/goto/forms/40/responses/new",
-    hospitalVisitation: "https://rhema.ccbchurch.com/goto/forms/91/responses/new",
+    getInvolved: "https://rhemachristianministries.churchcenter.com/people/forms/59260",
+    contactUs: "https://rhemachristianministries.churchcenter.com/people/forms/59260",
+    prayerRequest: "https://rhemachristianministries.churchcenter.com/people/forms/59213",
+    pastoralCare: "https://rhemachristianministries.churchcenter.com/people/forms/59211",
+    becomeAMember: "https://rhemachristianministries.churchcenter.com/people/forms/59215",
+    childDedication: "https://rhemachristianministries.churchcenter.com/people/forms/59217",
+    waterBaptism: "https://rhemachristianministries.churchcenter.com/people/forms/59264",
+    marriageCounseling: "https://rhemachristianministries.churchcenter.com/people/forms/59216",
+    funerals: "https://rhemachristianministries.churchcenter.com/people/forms/59219",
+    hospitalVisitation: "https://rhemachristianministries.churchcenter.com/people/forms/59260",
   },
 };
