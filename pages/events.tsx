@@ -15,8 +15,9 @@ export default function Events() {
       <HeadLine imgUrl={pageImage} title={pageTitle} height="18.75rem" />
       <CalendarWrapper>
         <iframe
-          src="https://rhema.ccbchurch.com/goto/events/public"
-          style={{ border: 0, width: "100%", height: "100%" }}
+          src="https://rhemachristianministries.churchcenter.com/calendar?embed=true&view=month&allowFiltering=true"
+          className="planning-center-calender-embed"
+          frameBorder="0"
         ></iframe>
       </CalendarWrapper>
     </>
@@ -28,6 +29,12 @@ const CalendarWrapper = styled.div`
   max-width: ${def.wrapper.width};
   margin: auto;
   height: 75vh;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
 
   @media screen and (max-width: 64rem) {
     max-width: 90vw;
