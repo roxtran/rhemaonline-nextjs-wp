@@ -1,8 +1,8 @@
 import { Button, Container, ImgWrapper, def } from "styles/GlobalStyle";
 
 import HeadLine from "components/common/HeadLine";
-import Meta from "components/common/meta";
 import Image from "next/image";
+import Meta from "components/common/meta";
 import styled from "styled-components";
 
 const kid = () => {
@@ -14,11 +14,7 @@ const kid = () => {
       <Meta title="Kid's Ministry - Rhema - Changing & Affecting Lives!" ogImage={pageImage} />
       <HeadLine imgUrl={pageImage} title={pageTitle} />
       <KidContainer>
-        <div className="desc">
-          <p>
-            <q>Our vision is to see Kid's grow in their love for God and for others.</q>
-          </p>
-        </div>
+        <q className="desc">Our vision is to see Kid's grow in their love for God and for others.</q>
         <div className="items">
           <div className="item">
             <ImgWrapper>
@@ -296,18 +292,16 @@ const kid = () => {
 export const KidContainer = styled(Container)`
   padding-bottom: 0;
   .desc {
-    width: ${def.wrapper.width};
-    max-width: 90vw;
-    q {
-      color: var(--blue);
-      font-size: 2rem;
-      font-style: italic;
-    }
+    max-width: ${def.wrapper.width};
+
+    color: var(--blue);
+    font-size: 2rem;
+    font-style: italic;
+    text-align: center;
   }
   .faq {
+    max-width: ${def.wrapper.width};
     margin: 5rem 0;
-    width: ${def.wrapper.width};
-    max-width: 90vw;
 
     .accordion-header {
       padding: 0;
@@ -338,7 +332,7 @@ export const KidContainer = styled(Container)`
   }
   ${ImgWrapper} {
     width: 100%;
-    min-width: 25rem;
+    min-width: 20rem;
     height: 37.5rem;
     flex: 1;
     /* &:hover {

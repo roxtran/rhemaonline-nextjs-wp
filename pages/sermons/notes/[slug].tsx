@@ -1,14 +1,14 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
-import { Button, ImgWrapper } from "styles/GlobalStyle";
+import { NoteContainer, NoteImage } from "styles/note";
 
+import { Button } from "styles/GlobalStyle";
 import HeadLine from "components/common/HeadLine";
-import Meta from "components/common/meta";
-import Sidebar from "components/items/Sidebar";
 import Image from "next/image";
 import Link from "next/link";
-import paths from "paths";
-import { NoteContainer } from "styles/note";
+import Meta from "components/common/meta";
 import NoteType from "types/note";
+import Sidebar from "components/items/Sidebar";
+import paths from "paths";
 import { shortenString } from "utils/formatter";
 
 interface Props {
@@ -40,18 +40,18 @@ export default function SermonNote({
   return (
     <>
       <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} desc={pageDesc} />
-      <HeadLine imgUrl={pageImage} title={pageTitle} blur="blur(1.875rem)" />
+      <HeadLine imgUrl={pageImage} title={pageTitle} blur="blur(1.875rem)" mbHeight="20rem" />
       <NoteContainer>
         <div className="note-wrapper">
           {/* <p className="date">{formatDate(note.date)}</p> */}
-          <p>
+          <div className="category-name">
             <i>
               in <Link href={parentUrl}>{parentName}</Link>
             </i>
-          </p>
+          </div>
           <div className="line" />
           {parentName !== "Bible Studies" && pageImage && (
-            <ImgWrapper>
+            <NoteImage>
               <Image
                 src={pageImage}
                 alt={pageTitle}
@@ -61,7 +61,7 @@ export default function SermonNote({
                   objectFit: "cover",
                 }}
               />
-            </ImgWrapper>
+            </NoteImage>
           )}
           <article dangerouslySetInnerHTML={{ __html: pageContent }}></article>
           {note.docFile.docFile !== null && (

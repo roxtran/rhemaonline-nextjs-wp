@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
+
 import { motion } from "framer-motion";
 
 export const rem = (px) => {
@@ -7,8 +8,8 @@ export const rem = (px) => {
 };
 export const def = {
   wrapper: {
-    width: "78rem"
-  }
+    width: "78rem",
+  },
 };
 
 const GlobalStyle = createGlobalStyle`
@@ -37,8 +38,8 @@ const GlobalStyle = createGlobalStyle`
   h1, h2, h3, h4 {
     font-weight: bold;
     color: var(--heading-color);
-    padding-top: 1rem;
-    margin-bottom: 1rem;
+    padding: 1rem 0;
+    margin: 0
   }
   h1 {
     font-size: 3.75rem;

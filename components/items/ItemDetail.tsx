@@ -1,8 +1,8 @@
+import { ItemWrapper, NoteImage, NoteImageHover } from "styles/note";
+
 import Image from "next/image";
 import Link from "next/link";
 import NoteType from "types/note";
-import { ItemWrapper } from "styles/note";
-import { ImgWrapper } from "styles/GlobalStyle";
 import { shortenString } from "utils/formatter";
 
 interface Props {
@@ -18,18 +18,18 @@ export default function ItemDetail({ item, url }: Props) {
       <Link href={`${url}/${item.slug}`}>
         {item.featuredImage !== null && (
           <div className="img-container">
-            <div className="hover"></div>
-            <ImgWrapper>
+            <NoteImage>
               <Image
                 src={item.featuredImage.node.sourceUrl}
                 alt={item.title}
                 fill
                 sizes="100vw"
                 style={{
-                  objectFit: "cover"
+                  objectFit: "cover",
                 }}
               />
-            </ImgWrapper>
+            </NoteImage>
+            <NoteImageHover />
           </div>
         )}
         <div className="text">
@@ -37,7 +37,7 @@ export default function ItemDetail({ item, url }: Props) {
           <h3>{item.title}</h3>
           <div
             dangerouslySetInnerHTML={{
-              __html: summary
+              __html: summary,
             }}
           ></div>
         </div>
