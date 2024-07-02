@@ -111,11 +111,6 @@ export default function Footer() {
               <li>
                 <Link href={paths.bibleStudyLessons}>Bible Studies</Link>
               </li>
-              {/* <li>
-              <Link href={paths.news}>
-                <a>News</a>
-              </Link>
-            </li> */}
               <li>
                 <a href={paths.memberLogin} target="_blank">
                   Member Login
@@ -126,6 +121,22 @@ export default function Footer() {
               </li>
               <li>
                 <Link href={paths.privacyPolicy}>Privacy Policy</Link>
+              </li>
+              <li>
+                <a
+                  href="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2024/07/RHEMA-CHRISTIAN-MINISTRIES-OF-CANADA-INC_CONSTITUTION_FINAL_20240130.pdf"
+                  target="_blank"
+                >
+                  Constitution
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2024/07/RHEMA-CHRISTIAN-MINISTRIES-OF-CANADA-INC_BY-LAWS_FINAL_20240130-Reviewed.pdf"
+                  target="_blank"
+                >
+                  By-laws
+                </a>
               </li>
             </ul>
           </div>
