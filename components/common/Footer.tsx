@@ -1,9 +1,9 @@
+import BibleModal from "./Modals/BibleModal";
 import Image from "next/image";
 import Link from "next/link";
 import paths from "paths";
-import { useState } from "react";
 import styled from "styled-components";
-import BibleModal from "./Modals/BibleModal";
+import { useState } from "react";
 
 export default function Footer() {
   const [openBible, setOpenBible] = useState(false);
@@ -124,7 +124,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2024/07/RHEMA-CHRISTIAN-MINISTRIES-OF-CANADA-INC_CONSTITUTION_FINAL_20240130.pdf"
+                  href="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2024/07/RHEMA-CHRISTIAN-MINISTRIES-OF-CANADA-INC_CONSTITUTION_FINAL_20240130-1.pdf"
                   target="_blank"
                 >
                   Constitution
@@ -132,7 +132,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2024/07/RHEMA-CHRISTIAN-MINISTRIES-OF-CANADA-INC_BY-LAWS_FINAL_20240130-Reviewed.pdf"
+                  href="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2024/07/RCM-of-Canada-Inc_By-Law_Final-20240718.pdf"
                   target="_blank"
                 >
                   By-laws
