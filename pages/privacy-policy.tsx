@@ -5,10 +5,13 @@ import Meta from "components/common/meta";
 import styled from "styled-components";
 
 const PrivacyPolicy = () => {
+  const pageTitle = "Privacy Policy";
+  const pageImage = "/img/legal-terms-img.jpg";
+
   return (
     <>
-      <Meta title="Privacy Policy - Rhema - Changing & Affecting Lives!" />
-      <HeadLine imgUrl="/img/legal-terms-img.jpg" title="Privacy Policy" height="28.125rem" />
+      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
+      <HeadLine imgUrl={pageImage} title={pageTitle} height="28.125rem" />
       <PrivacyContainer>
         <div className="content-wrapper">
           <p>
