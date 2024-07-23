@@ -26,6 +26,7 @@ export default {
   // news: "/news",
   legalTerms: "/legal-terms",
   privacyPolicy: "/privacy-policy",
+  RhemaCulture: "/rhema-culture",
 
   // external links
   subscribe:

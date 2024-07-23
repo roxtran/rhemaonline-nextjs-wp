@@ -1,9 +1,9 @@
-import BibleModal from "./Modals/BibleModal";
 import Image from "next/image";
 import Link from "next/link";
 import paths from "paths";
-import styled from "styled-components";
 import { useState } from "react";
+import styled from "styled-components";
+import BibleModal from "./Modals/BibleModal";
 
 export default function Footer() {
   const [openBible, setOpenBible] = useState(false);
@@ -31,13 +31,11 @@ export default function Footer() {
               <li>
                 <Link href={paths.location}>Location</Link>
               </li>
-              {/* <li>
-              <Link href={paths.ottawaLocation}>
-                <a>Ottawa Campus</a>
-              </Link>
-            </li> */}
               <li>
                 <Link href={paths.grow}>Grow</Link>
+              </li>
+              <li>
+                <Link href={paths.RhemaCulture}>Rhema Culture</Link>
               </li>
               <li>
                 <Link href={paths.virtualHomeGroups}>Virtual Home Groups</Link>
