@@ -1,9 +1,9 @@
-import BibleModal from "./Modals/BibleModal";
 import Image from "next/image";
 import Link from "next/link";
 import paths from "paths";
-import styled from "styled-components";
 import { useState } from "react";
+import styled from "styled-components";
+import BibleModal from "./Modals/BibleModal";
 
 export default function Footer() {
   const [openBible, setOpenBible] = useState(false);
@@ -91,7 +91,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2024/07/RCM-FS-2023.pdf"
+                  href="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2024/07/Rhema-Christian-Ministries-Inc.-FS-2023-Signed.pdf"
                   target="_blank"
                 >
                   2023 Financial Statement
