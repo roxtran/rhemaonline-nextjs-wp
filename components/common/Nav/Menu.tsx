@@ -1,6 +1,6 @@
-import styled from "styled-components";
 import NavLink from "./NavLink";
 import paths from "paths";
+import styled from "styled-components";
 
 interface Props {
   open: boolean;
@@ -70,12 +70,7 @@ export default function Menu({ open, setOpen }: Props) {
             Give
           </a>
         </NavLink>
-        <a
-          href="https://rhema.ccbchurch.com/goto/login"
-          target="_blank"
-          className="button external"
-          onClick={() => setOpen(!open)}
-        >
+        <a href={paths.memberLogin} target="_blank" className="button external" onClick={() => setOpen(!open)}>
           Login
         </a>
       </div>

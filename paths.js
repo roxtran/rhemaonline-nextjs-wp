@@ -31,7 +31,7 @@ export default {
   // external links
   subscribe:
     "https://visitor.r20.constantcontact.com/manage/optin?v=001BRl1GnvqHBSmpUgt0bWkn1MfFFgc1eWZnLBSjeq8hPkIyEhXoERcP_p-E94Tuo8i-n6WMjixEVWfoTusoH241Xry9A65AaaC8uzGvinLhOc%3D",
-  memberLogin: "https://rhema.ccbchurch.com/goto/login",
+  memberLogin: "https://rhemachristianministries.churchcenter.com/",
   bibleSite: "https://www.bible.com/",
   facebookPage: "https://www.facebook.com/Rhemachristianministries/",
   instagramAccount: "https://www.instagram.com/rhemacanada/",

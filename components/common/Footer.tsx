@@ -1,9 +1,9 @@
+import BibleModal from "./Modals/BibleModal";
 import Image from "next/image";
 import Link from "next/link";
 import paths from "paths";
-import { useState } from "react";
 import styled from "styled-components";
-import BibleModal from "./Modals/BibleModal";
+import { useState } from "react";
 
 export default function Footer() {
   const [openBible, setOpenBible] = useState(false);
@@ -167,7 +167,7 @@ export default function Footer() {
               />
             </div>
           </a>
-          <a title="Member Login" href="https://rhema.ccbchurch.com/goto/login/" target="_blank">
+          <a title="Member Login" href={paths.memberLogin} target="_blank">
             <div className="icon">
               <Image
                 src="/img/social/groups-icon.svg"
