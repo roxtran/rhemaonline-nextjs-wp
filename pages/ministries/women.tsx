@@ -1,8 +1,8 @@
 import { Container, ImgWrapper } from "styles/GlobalStyle";
 
 import HeadLine from "components/common/HeadLine";
-import Meta from "components/common/meta";
 import Image from "next/image";
+import Meta from "components/common/meta";
 import styled from "styled-components";
 
 const women = () => {
@@ -28,7 +28,7 @@ const women = () => {
               rest, redemption, and renewal in Christ through various activities and service opportunities.
             </p>
             <div className="icons">
-              <a title="wecare@rhemaonline.ca" href="mailto:wecare@rhemaonline.ca">
+              <a title="womensministry@rhemaonline.ca" href="mailto:womensministry@rhemaonline.ca">
                 <div className="icon">
                   <Image
                     src="/img/social/email-icon-blue.svg"
