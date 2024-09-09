@@ -1,7 +1,7 @@
 import { Button, Container, def } from "styles/GlobalStyle";
 
-import Video from "components/common/Video";
 import Meta from "components/common/meta";
+import Video from "components/common/Video";
 import Image from "next/image";
 import paths from "paths";
 import { useState } from "react";
@@ -79,7 +79,10 @@ export default function Location() {
                   {/* <p>
                     <span>Bible Study:</span> 1st, 2nd, & 3rd Wednesdays of every month - 7 PM
                   </p> */}
-                  <span>Bellvue Manor (The Library Hall) 8083 Jane Street, Concord ON L4K 2M7</span>
+                  <span>
+                    <b>Montecassino Hotel & Suites</b> <br />
+                    3710 Chesswood Drive, Toronto, ON, M3J 2W4, Canada
+                  </span>
                 </div>
               </div>
               <div className="map-wrapper">
