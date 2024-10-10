@@ -79,10 +79,7 @@ export default function Location() {
                   {/* <p>
                     <span>Bible Study:</span> 1st, 2nd, & 3rd Wednesdays of every month - 7 PM
                   </p> */}
-                  <span>
-                    <b>Montecassino Hotel & Suites</b> <br />
-                    3710 Chesswood Drive, Toronto, ON, M3J 2W4, Canada
-                  </span>
+                  <span>3858 Chesswood Drive, North York, ON, M3J 2W6</span>
                 </div>
               </div>
               <div className="map-wrapper">
