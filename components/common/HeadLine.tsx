@@ -11,8 +11,9 @@ interface HeadLineProps {
   btnLink?: string;
   height?: string;
   mbHeight?: string;
-  top?: string;
+  titlePosition?: string;
   displayTitle?: boolean;
+  isUnderMenu?: boolean;
 }
 
 export default function HeadLine({
@@ -22,17 +23,21 @@ export default function HeadLine({
   desc,
   btnText,
   btnLink,
-  height,
+  height = "28.125rem",
   mbHeight,
-  top,
+  titlePosition = "0rem",
   displayTitle = true,
+  isUnderMenu = true,
 }: HeadLineProps) {
+  const hasContent = displayTitle || desc || btnText;
+
   return (
     <HeadLineContainer
       id="headline"
-      height={height || "28.125rem"}
+      height={height}
       mbHeight={mbHeight || `${height}`}
-      top={top || "0rem"}
+      titlePosition={titlePosition}
+      isUnderMenu={isUnderMenu}
     >
       <Image
         src={imgUrl}
@@ -44,21 +49,30 @@ export default function HeadLine({
         }}
       />
       {blur && <Blur blur={blur}></Blur>}
-      <div className="content-wrapper">
-        <h1>{displayTitle && title}</h1>
-        {desc && <p>{desc}</p>}
-        {btnText && (
-          <HeadLineBtn className="white" href={btnLink} target="_blank" data-open-in-church-center-modal="true">
-            {btnText}
-          </HeadLineBtn>
-        )}
-      </div>
+      {hasContent && (
+        <div className="content-wrapper">
+          {displayTitle && <h1>{title}</h1>}
+          {desc && <p>{desc}</p>}
+          {btnText && (
+            <HeadLineBtn className="white" href={btnLink} target="_blank" data-open-in-church-center-modal="true">
+              {btnText}
+            </HeadLineBtn>
+          )}
+        </div>
+      )}
     </HeadLineContainer>
   );
 }
-export const HeadLineContainer = styled.div<{ height: string; mbHeight: string; top: string }>`
+export const HeadLineContainer = styled.div<{
+  height: string;
+  mbHeight: string;
+  titlePosition: string;
+  isUnderMenu: boolean;
+}>`
   position: relative;
   height: ${(props) => props.height};
+  top: ${(props) => (props.isUnderMenu ? "0" : "5rem")};
+  margin-bottom: ${(props) => (props.isUnderMenu ? "0" : "5rem")};
   image {
     z-index: 0;
   }
@@ -73,7 +87,7 @@ export const HeadLineContainer = styled.div<{ height: string; mbHeight: string; 
     position: absolute;
     text-align: center;
     color: #fff;
-    top: calc(50% + 3.125rem - ${(props) => props.top});
+    top: calc(50% + 3.125rem - ${(props) => props.titlePosition});
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;

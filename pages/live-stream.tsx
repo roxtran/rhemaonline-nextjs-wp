@@ -19,7 +19,7 @@ export default function LiveStream() {
         title={pageTitle}
         desc="Sundays - 11am"
         height="30rem"
-        top="3.125rem"
+        titlePosition="3.125rem"
         blur="blur(0.25rem)"
       />
       <LiveStreamWrapper>
