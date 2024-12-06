@@ -1,9 +1,10 @@
-import { Dispatch, SetStateAction, MouseEvent, useRef } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Dispatch, MouseEvent, SetStateAction, useRef } from "react";
+import { fade, slideDown } from "styles/animation";
+
 import { IoClose } from "react-icons/io5";
 import styled from "styled-components";
-import { motion, AnimatePresence } from "framer-motion";
-import { fade, slideDown } from "styles/animation";
-import { def } from "styles/GlobalStyle";
+import { Button } from "styles/GlobalStyle";
 
 interface HomeModalProps {
   openModal: boolean;
@@ -28,12 +29,12 @@ const HomeModal = ({ openModal, setOpenModal }: HomeModalProps) => {
                   <IoClose />
                 </a>
               </div>
-              <iframe
-                className="modal-body"
-                src="https://rhemaonline.surveysparrow.com/s/Feedback-Survey-for-Management-Stakeholders-/tt-e016f9"
-                width="100%"
-                height="100%"
-              ></iframe>
+              <div className="modal-body">
+                <h3>A Letter From Our Senior Pastor</h3>
+                <Button href="/letter">
+                  <div className="text-wrapper">Click to Read</div>
+                </Button>
+              </div>
             </div>
           </motion.div>
         </ModalContainer>
@@ -57,9 +58,6 @@ export const ModalContainer = styled(motion.div)`
   .modal-dialog {
     background: #fff;
     position: relative;
-    width: ${def.wrapper.width};
-    max-width: 90vw;
-    height: 80vh;
     border-radius: var(--border-radius);
     overflow: hidden;
   }
@@ -78,28 +76,25 @@ export const ModalContainer = styled(motion.div)`
         transform: scale(1.2);
       }
     }
-    h3 {
-      color: var(--blue);
-      margin-bottom: 0;
-    }
   }
   .modal-body {
-    height: 71vh;
     overflow-y: auto;
-    padding: 0;
+    padding: 1rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+      color: var(--blue);
+      text-align: center;
+      margin-bottom: 1rem;
+    }
   }
   @media screen and (max-width: 40rem) {
-    .modal-dialog {
-      height: 90vh;
-    }
     .modal-header {
       padding: 1.5rem;
     }
     h3 {
       line-height: 1.2;
-    }
-    .modal-body {
-      height: 75vh;
     }
   }
 `;

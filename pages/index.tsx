@@ -1,5 +1,7 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+import { useEffect, useState } from "react";
 
+import Letter from "components/common/Modals/HomeModal";
 import Meta from "components/common/meta";
 import CTAPanel from "components/home/CTAPanel";
 import Hero from "components/home/Hero";
@@ -16,6 +18,18 @@ interface Props {
 }
 
 const Home = ({ slides, newsletters }: Props) => {
+  const [openModal, setOpenModal] = useState(false);
+
+  useEffect(() => {
+    const showModal = setTimeout(() => {
+      setOpenModal(true);
+    }, 2000);
+
+    return () => {
+      clearTimeout(showModal);
+    };
+  }, []);
+
   return (
     <>
       <Meta title="Home - Rhema - Changing & Affecting Lives!" />
@@ -34,6 +48,7 @@ const Home = ({ slides, newsletters }: Props) => {
       <CTAPanel />
       <Subscribe />
       <Newsletter newsletters={newsletters} />
+      <Letter openModal={openModal} setOpenModal={setOpenModal} />
     </>
   );
 };
