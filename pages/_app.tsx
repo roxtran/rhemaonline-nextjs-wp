@@ -28,11 +28,10 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <Layout>
       <GlobalStyle />
-      <motion.div key={router.route} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.25 }}>
+      <motion.main key={router.route} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.25 }}>
         <AnyComponent {...pageProps} />
         {/* <Chatbot /> */}
-      </motion.div>
-      {/* <SurveyModal openModal={openModal} setOpenModal={setOpenModal} /> */}
+      </motion.main>
     </Layout>
   );
 }

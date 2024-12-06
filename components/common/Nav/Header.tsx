@@ -1,8 +1,8 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
 import Burger from "./Burger";
-import { motion } from "framer-motion";
 
 const navbar = {
   hidden: { opacity: 0, y: -90 },
@@ -12,20 +12,20 @@ const navbar = {
     transition: {
       duration: 0.25,
       when: "beforeChildren", // delayChildren: 0.5,
-      staggerChildren: 0.25
-    }
+      staggerChildren: 0.25,
+    },
   },
   exit: {
     opacity: 0,
     transition: {
-      duration: 0.25
-    }
-  }
+      duration: 0.25,
+    },
+  },
 };
 
-export default function Navbar() {
+export default function Header() {
   return (
-    <Nav initial={{ y: -90 }} animate={{ y: 0 }} transition={{ duration: 0.1 }}>
+    <StyledHeader initial={{ y: -90 }} animate={{ y: 0 }} transition={{ duration: 0.1 }}>
       <Link href="/">
         <Image
           width={230}
@@ -34,15 +34,15 @@ export default function Navbar() {
           alt="RCM-Logo"
           style={{
             maxWidth: "100%",
-            height: "auto"
+            height: "auto",
           }}
         />
       </Link>
       <Burger />
-    </Nav>
+    </StyledHeader>
   );
 }
-const Nav = styled(motion.nav)`
+const StyledHeader = styled(motion.header)`
   position: fixed;
   background: rgba(255, 255, 255, 0.97);
   width: 100vw;

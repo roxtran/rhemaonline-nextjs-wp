@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import SocialShare from "components/common/SocialShare";
+import styled from "styled-components";
 
 export default function Subscribe() {
   return (
@@ -10,7 +10,7 @@ export default function Subscribe() {
     </SubscribeWrapper>
   );
 }
-const SubscribeWrapper = styled.div`
+const SubscribeWrapper = styled.section`
   position: relative;
   width: 100%;
   background-image: url("/img/subscribe-bg.webp");

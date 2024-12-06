@@ -1,9 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
-import styled from "styled-components";
-import paths from "paths";
-import { motion } from "framer-motion";
 import { slideLeft, slideRight, slideUp } from "styles/animation";
+
+import { motion } from "framer-motion";
+import Link from "next/link";
+import paths from "paths";
+import styled from "styled-components";
 
 const items = {
   show: {
@@ -11,8 +11,8 @@ const items = {
     // border: '0.25rem solid rgb(16, 97, 162)',
     borderRadius: "0.625rem",
     overflow: "hidden",
-    transition: { duration: 0.01, type: "spring", when: "afterChildren" }
-  }
+    transition: { duration: 0.01, type: "spring", when: "afterChildren" },
+  },
 };
 
 export default function MiddleMenu() {
@@ -26,7 +26,7 @@ export default function MiddleMenu() {
             duration: 0.25,
             type: "spring",
             delay: 0.25,
-            damping: 8
+            damping: 8,
           }}
         >
           <Link href={paths.giving}>Giving</Link>
@@ -40,7 +40,7 @@ export default function MiddleMenu() {
             duration: 0.25,
             type: "spring",
             delay: 0.15,
-            damping: 8
+            damping: 8,
           }}
         >
           <Link href={paths.connect}>The Care Centre Services</Link>
@@ -56,7 +56,7 @@ export default function MiddleMenu() {
             duration: 0.25,
             type: "spring",
             delay: 0.15,
-            damping: 8
+            damping: 8,
           }}
         >
           <Link href={`${paths.getConnected}#get-involved`}>Get Involved</Link>
@@ -69,7 +69,7 @@ export default function MiddleMenu() {
     </CTAPanel>
   );
 }
-const CTAPanel = styled.div`
+const CTAPanel = styled.section`
   position: relative;
   z-index: 1;
   display: flex;

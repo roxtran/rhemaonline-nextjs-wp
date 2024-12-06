@@ -1,12 +1,12 @@
 import { ApolloClient, DefaultOptions, InMemoryCache, gql } from "@apollo/client";
 
 import HeadLine from "components/common/HeadLine";
-import ItemList from "components/items/ItemList";
 import Meta from "components/common/meta";
-import NoteType from "types/note";
-import { NotesContainer } from "styles/note";
+import ItemList from "components/items/ItemList";
 import Sidebar from "components/items/Sidebar";
 import paths from "paths";
+import { NotesContainer } from "styles/note";
+import NoteType from "types/note";
 
 interface Props {
   notes: NoteType[];

@@ -34,7 +34,7 @@ export default function HeadLine({
   return (
     <HeadLineContainer
       id="headline"
-      height={height}
+      height={height || "28.125rem"}
       mbHeight={mbHeight || `${height}`}
       titlePosition={titlePosition}
       isUnderMenu={isUnderMenu}
@@ -63,7 +63,7 @@ export default function HeadLine({
     </HeadLineContainer>
   );
 }
-export const HeadLineContainer = styled.div<{
+export const HeadLineContainer = styled.section<{
   height: string;
   mbHeight: string;
   titlePosition: string;

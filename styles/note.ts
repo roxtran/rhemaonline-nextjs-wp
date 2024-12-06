@@ -59,7 +59,7 @@ export const NoteImageHover = styled(NoteImage)`
   }
 `;
 
-export const NotesContainer = styled.div`
+export const NotesContainer = styled.section`
   max-width: ${def.wrapper.width};
   position: relative;
   margin: 0 auto;

@@ -1,9 +1,10 @@
+import { Button, ImgWrapper } from "styles/GlobalStyle";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import styled from "styled-components";
 import paths from "paths";
-import { Button, ImgWrapper } from "styles/GlobalStyle";
-import { motion } from "framer-motion";
+import styled from "styled-components";
 
 export default function Welcome() {
   return (
@@ -15,7 +16,7 @@ export default function Welcome() {
           fill
           sizes="100vw"
           style={{
-            objectFit: "cover"
+            objectFit: "cover",
           }}
         />
       </ImgWrapper>
@@ -38,7 +39,7 @@ export default function Welcome() {
   );
 }
 
-export const WelcomeWrapper = styled(motion.div)`
+export const WelcomeWrapper = styled(motion.section)`
   position: relative;
   width: 75rem;
   max-width: 80vw;

@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <>
       <BibleModal openBible={openBible} setOpenBible={setOpenBible} />
-      <FooterWrapper>
+      <StyledFooter>
         <div className="links">
           <div className="list">
             <h4>Home</h4>
@@ -267,12 +267,12 @@ export default function Footer() {
           </a>
         </SocialIconsWrapper>
         <div className="copyright">© {new Date().getFullYear()} Rhema Canada.</div>
-      </FooterWrapper>
+      </StyledFooter>
     </>
   );
 }
 
-const FooterWrapper = styled.div`
+const StyledFooter = styled.footer`
   position: relative;
   background: var(--light-grey-bg);
   height: 100%;
