@@ -150,6 +150,9 @@ export const SidebarWrapper = styled.div`
     &:not(:last-child) {
       border-bottom: 0.0625rem solid var(--mint);
     }
+    a {
+      text-decoration: none;
+    }
   }
   p {
     margin-bottom: 0;

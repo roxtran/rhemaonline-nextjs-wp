@@ -70,8 +70,5 @@ const StyledAbout = styled(Container)`
   .content-wrapper {
     width: ${def.wrapper.width};
     max-width: 90vw;
-    a {
-      font-weight: bold;
-    }
   }
 `;

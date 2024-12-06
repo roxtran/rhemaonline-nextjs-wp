@@ -548,8 +548,8 @@ const PrivacyContainer = styled(Container)`
     max-width: 90vw;
     word-wrap: break-word;
 
-    a {
-      color: var(--blue);
+    li a {
+      text-decoration: underline;
     }
   }
 `;

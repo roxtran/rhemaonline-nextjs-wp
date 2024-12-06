@@ -174,10 +174,7 @@ export default function Giving() {
                   </li>
                   <li>Complete the requested information one time, and then you can start giving by Paypal.</li>
                   <li>
-                    Or{" "}
-                    <Link href={paths.givingLinks.paypal}>
-                      click here
-                    </Link>
+                    Or <Link href={paths.givingLinks.paypal}>click here</Link>
                   </li>
                   <li>and follow the instructions to give by credit card or visa debit card.</li>
                 </ul>
@@ -193,7 +190,6 @@ export default function Giving() {
 const GivingContainer = styled(Container)`
   a {
     word-wrap: break-word;
-    font-weight: 600;
   }
   .bold {
     font-weight: 600;

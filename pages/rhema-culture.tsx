@@ -200,10 +200,6 @@ const CultureContainer = styled(Container)`
     width: ${def.wrapper.width};
     max-width: 90vw;
     word-wrap: break-word;
-
-    a {
-      color: var(--blue);
-    }
   }
 `;
 

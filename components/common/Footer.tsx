@@ -293,6 +293,10 @@ const StyledFooter = styled.footer`
     }
     li {
       margin: 0.25rem 0;
+
+      a {
+        text-decoration: none;
+      }
     }
   }
 

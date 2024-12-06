@@ -59,6 +59,10 @@ const GlobalStyle = createGlobalStyle`
   p {
     line-height: 1.5;
     margin-bottom: 1rem;
+
+  }
+  p a, li a {
+    text-decoration: underline;
   }
   .accordion-button {
     text-align: left;
