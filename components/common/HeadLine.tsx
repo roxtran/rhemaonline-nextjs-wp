@@ -52,7 +52,7 @@ export default function HeadLine({
       {hasContent && (
         <div className="content-wrapper">
           {displayTitle && <h1>{title}</h1>}
-          {desc && <p>{desc}</p>}
+          {desc && <p dangerouslySetInnerHTML={{ __html: desc }} />}
           {btnText && (
             <HeadLineBtn className="white" href={btnLink} target="_blank" data-open-in-church-center-modal="true">
               {btnText}
