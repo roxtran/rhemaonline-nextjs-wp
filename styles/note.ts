@@ -95,7 +95,7 @@ export const NoteContainer = styled(NotesContainer)`
     ${NoteImage} {
       margin-top: 2rem;
     }
-    article {
+    .note-content {
       margin: 2rem 0 3rem;
       ol > li {
         margin-bottom: 1rem;
@@ -130,7 +130,7 @@ export const NoteContainer = styled(NotesContainer)`
   }
 `;
 
-export const SidebarWrapper = styled.div`
+export const SidebarWrapper = styled.aside`
   position: sticky;
   align-self: start;
   top: 5rem;
