@@ -1,16 +1,16 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
-import { useEffect, useState } from "react";
 
-import Letter from "components/common/Modals/HomeModal";
-import Meta from "components/common/meta";
 import CTAPanel from "components/home/CTAPanel";
 import Hero from "components/home/Hero";
+import Meta from "components/common/meta";
 import Newsletter from "components/home/Newsletter";
+import NewsletterType from "types/newsletter";
+import SlideType from "types/slide";
 import Subscribe from "components/home/Subscribe";
 import Welcome from "components/home/Welcome";
 import styled from "styled-components";
-import NewsletterType from "types/newsletter";
-import SlideType from "types/slide";
+
+// import Letter from "components/common/Modals/HomeModal";
 
 interface Props {
   slides: SlideType[];
@@ -18,17 +18,17 @@ interface Props {
 }
 
 const Home = ({ slides, newsletters }: Props) => {
-  const [openModal, setOpenModal] = useState(false);
+  // const [openModal, setOpenModal] = useState(false);
 
-  useEffect(() => {
-    const showModal = setTimeout(() => {
-      setOpenModal(true);
-    }, 2000);
+  // useEffect(() => {
+  //   const showModal = setTimeout(() => {
+  //     setOpenModal(true);
+  //   }, 2000);
 
-    return () => {
-      clearTimeout(showModal);
-    };
-  }, []);
+  //   return () => {
+  //     clearTimeout(showModal);
+  //   };
+  // }, []);
 
   return (
     <>
@@ -48,7 +48,7 @@ const Home = ({ slides, newsletters }: Props) => {
       <CTAPanel />
       <Subscribe />
       <Newsletter newsletters={newsletters} />
-      <Letter openModal={openModal} setOpenModal={setOpenModal} />
+      {/* <Letter openModal={openModal} setOpenModal={setOpenModal} /> */}
     </>
   );
 };
