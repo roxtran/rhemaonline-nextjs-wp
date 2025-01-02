@@ -1,11 +1,11 @@
 import { Button, Container, def } from "styles/GlobalStyle";
 
+import Image from "next/image";
 import Meta from "components/common/meta";
 import Video from "components/common/Video";
-import Image from "next/image";
 import paths from "paths";
-import { useState } from "react";
 import styled from "styled-components";
+import { useState } from "react";
 
 export default function Location() {
   const [displayServiceTime, setDisplayServiceTime] = useState(false);
@@ -74,7 +74,7 @@ export default function Location() {
                 <div className="text-border">
                   <h3>Our Service Times</h3>
                   <p>
-                    <span>Worship Service:</span> Sundays – 11am
+                    <span>Worship Service:</span> Sundays – 10am
                   </p>
                   {/* <p>
                     <span>Bible Study:</span> 1st, 2nd, & 3rd Wednesdays of every month - 7 PM
