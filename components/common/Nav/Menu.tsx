@@ -1,6 +1,6 @@
-import NavLink from "./NavLink";
 import paths from "paths";
 import styled from "styled-components";
+import NavLink from "./NavLink";
 
 interface Props {
   open: boolean;
@@ -65,6 +65,11 @@ export default function Menu({ open, setOpen }: Props) {
         <a onClick={() => setOpen(!open)}>Events</a>
       </NavLink>
       <div className="btn-wrapper">
+        <NavLink href={paths.build}>
+          <a className="button build" onClick={() => setOpen(!open)}>
+            Build
+          </a>
+        </NavLink>
         <NavLink href={paths.giving}>
           <a className="button give" onClick={() => setOpen(!open)}>
             Give
@@ -151,6 +156,10 @@ const StyledMenu = styled.div<{ open: boolean }>`
   }
   .give {
     background-color: var(--highlight);
+  }
+  .build,
+  .build[aria-current] {
+    background-color: #9268e4;
   }
   /* .external:after {
     content: '◥';
