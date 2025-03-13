@@ -1,9 +1,9 @@
 import { Button, Container, ImgWrapper, def } from "styles/GlobalStyle";
 
 import HeadLine from "components/common/HeadLine";
+import Image from "next/image";
 import ImageSlider from "components/common/ImageSlider";
 import Meta from "components/common/meta";
-import Image from "next/image";
 import { VideoWrapper } from "pages/sermons/styles";
 import styled from "styled-components";
 
@@ -13,7 +13,7 @@ const slides = [
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/slide0.jpg",
+        sourceUrl: "/img/fund-raising/slide0.jpg",
       },
     },
     slideFields: {
@@ -25,7 +25,7 @@ const slides = [
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/slide1.jpg",
+        sourceUrl: "/img/fund-raising/slide1.jpg",
       },
     },
     slideFields: {
@@ -37,7 +37,7 @@ const slides = [
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/slide2.jpg",
+        sourceUrl: "/img/fund-raising/slide2.jpg",
       },
     },
     slideFields: {
@@ -48,7 +48,7 @@ const slides = [
 
 export default function Index() {
   const pageTitle = "Together we build to change lives";
-  const pageImage = "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/slide.jpg";
+  const pageImage = "/img/fund-raising/slide.jpg";
 
   const giveBtn = (
     <div className="button-wrapper give">
@@ -74,7 +74,7 @@ export default function Index() {
           <div className="left-wrapper flex-column">
             <ImgWrapper>
               <Image
-                src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/bricks.png"
+                src="/img/fund-raising/bricks.png"
                 alt="building"
                 fill
                 sizes="100vw"
@@ -85,30 +85,15 @@ export default function Index() {
             </ImgWrapper>
             <div className="item-list">
               <div className="item">
-                <img
-                  className="icon"
-                  width={32}
-                  src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/rhema-icon.jpeg"
-                  alt="Rhema Canada"
-                />
+                <img className="icon" width={32} src="/img/fund-raising/rhema-icon.jpeg" alt="Rhema Canada" />
                 <div className="text">Rhema Canada</div>
               </div>
               <div className="item">
-                <img
-                  className="icon"
-                  width={32}
-                  src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/funding-icon.png"
-                  alt="Location Funding"
-                />
+                <img className="icon" width={32} src="/img/fund-raising/funding-icon.png" alt="Location Funding" />
                 <div className="text">Location Funding</div>
               </div>
               <div className="item">
-                <img
-                  className="icon"
-                  width={32}
-                  src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/location-icon.png"
-                  alt="Toronto, Ontario, CA"
-                />
+                <img className="icon" width={32} src="/img/fund-raising/location-icon.png" alt="Toronto, Ontario, CA" />
                 <div className="text">Toronto, Ontario, CA</div>
               </div>
             </div>
@@ -124,22 +109,13 @@ export default function Index() {
               <p>Share with friends:</p>
               <div className="social-icons">
                 <a href="#">
-                  <img
-                    src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/facebook-icon.jpeg"
-                    alt="Facebook"
-                  />
+                  <img src="/img/fund-raising/facebook-icon.jpeg" alt="Facebook" />
                 </a>
                 <a href="#">
-                  <img
-                    src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/twitter-icon.jpeg"
-                    alt="Twitter"
-                  />
+                  <img src="/img/fund-raising/twitter-icon.jpeg" alt="Twitter" />
                 </a>
                 <a href="#">
-                  <img
-                    src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/email-icon.jpeg"
-                    alt="Email"
-                  />
+                  <img src="/img/fund-raising/email-icon.jpeg" alt="Email" />
                 </a>
               </div>
             </div>
@@ -265,7 +241,7 @@ export default function Index() {
           <div className="right-wrapper">
             <ImgWrapper>
               <Image
-                src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/introduction.jpeg"
+                src="/img/fund-raising/introduction.jpeg"
                 alt="introduction"
                 fill
                 sizes="100vw"
@@ -280,7 +256,7 @@ export default function Index() {
           <div className="right-wrapper">
             <ImgWrapper>
               <Image
-                src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/introduction1.jpeg"
+                src="/img/fund-raising/introduction1.jpeg"
                 alt="introduction1"
                 fill
                 sizes="100vw"
@@ -326,7 +302,7 @@ export default function Index() {
           {giveBtn}
           <ImgWrapper>
             <Image
-              src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/bottom-image.jpeg"
+              src="/img/fund-raising/bottom-image.jpeg"
               alt="introduction"
               fill
               sizes="100vw"
