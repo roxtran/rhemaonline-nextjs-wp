@@ -14,6 +14,7 @@ export default {
   gallery: "/gallery",
   liveStream: "/live-stream",
   events: "/events",
+  build: "/fund-raising",
   giving: "/giving",
   about: "/about",
   leadership: "/leadership",
