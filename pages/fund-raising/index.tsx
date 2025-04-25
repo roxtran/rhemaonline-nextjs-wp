@@ -138,7 +138,7 @@ export default function Index() {
       <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
       <HeadLine imgUrl={pageImage} title={pageTitle} blur="blur(0.0625rem)" height="46rem" mbHeight="22rem" />
       <PageContainer>
-        <h1 id="title">Together we build the house of God</h1>
+        <h1 id="title">Let's Build to Serve and Transform Together</h1>
         <p className="description highlight">
           Join us in building a house where worship, spiritual growth, and God’s presence thrive.
         </p>
