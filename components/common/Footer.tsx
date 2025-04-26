@@ -130,7 +130,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2024/07/RHEMA-CHRISTIAN-MINISTRIES-OF-CANADA-INC_CONSTITUTION_FINAL_20240130-1.pdf"
+                  href="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/04/RCM-of-Canada-Inc_Constitution_Final_20240130_V1.3-1.pdf"
                   target="_blank"
                 >
                   Constitution
@@ -138,7 +138,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2024/07/RCM-of-Canada-Inc_By-Law_Final-20240718.pdf"
+                  href="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/04/RCM-of-Canada-Inc_By-Law_Final-20240718_V1.6-1.pdf"
                   target="_blank"
                 >
                   By-laws
@@ -162,7 +162,7 @@ export default function Footer() {
                 height={30}
                 style={{
                   maxWidth: "100%",
-                  height: "auto",
+                  height: "auto"
                 }}
               />
             </div>
@@ -176,7 +176,7 @@ export default function Footer() {
                 height={30}
                 style={{
                   maxWidth: "100%",
-                  height: "auto",
+                  height: "auto"
                 }}
               />
             </div>
@@ -190,7 +190,7 @@ export default function Footer() {
                 height={35}
                 style={{
                   maxWidth: "100%",
-                  height: "auto",
+                  height: "auto"
                 }}
               />
             </div>
@@ -204,7 +204,7 @@ export default function Footer() {
                 height={35}
                 style={{
                   maxWidth: "100%",
-                  height: "auto",
+                  height: "auto"
                 }}
               />
             </div>
@@ -218,7 +218,7 @@ export default function Footer() {
                 height={30}
                 style={{
                   maxWidth: "100%",
-                  height: "auto",
+                  height: "auto"
                 }}
               />
             </div>
@@ -232,7 +232,7 @@ export default function Footer() {
                 height={35}
                 style={{
                   maxWidth: "100%",
-                  height: "auto",
+                  height: "auto"
                 }}
               />
             </div>
@@ -246,7 +246,7 @@ export default function Footer() {
                 height={35}
                 style={{
                   maxWidth: "100%",
-                  height: "auto",
+                  height: "auto"
                 }}
               />
             </div>
@@ -260,7 +260,7 @@ export default function Footer() {
                 height={35}
                 style={{
                   maxWidth: "100%",
-                  height: "auto",
+                  height: "auto"
                 }}
               />
             </div>
