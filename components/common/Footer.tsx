@@ -1,8 +1,9 @@
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import paths from "paths";
-import { useState } from "react";
 import styled from "styled-components";
+
 import BibleModal from "./Modals/BibleModal";
 
 export default function Footer() {
@@ -144,6 +145,9 @@ export default function Footer() {
                   By-laws
                 </a>
               </li>
+              <li>
+                <Link href={"/election-process"}>Election Process</Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -162,7 +166,7 @@ export default function Footer() {
                 height={30}
                 style={{
                   maxWidth: "100%",
-                  height: "auto",
+                  height: "auto"
                 }}
               />
             </div>
@@ -176,7 +180,7 @@ export default function Footer() {
                 height={30}
                 style={{
                   maxWidth: "100%",
-                  height: "auto",
+                  height: "auto"
                 }}
               />
             </div>
@@ -190,7 +194,7 @@ export default function Footer() {
                 height={35}
                 style={{
                   maxWidth: "100%",
-                  height: "auto",
+                  height: "auto"
                 }}
               />
             </div>
@@ -204,7 +208,7 @@ export default function Footer() {
                 height={35}
                 style={{
                   maxWidth: "100%",
-                  height: "auto",
+                  height: "auto"
                 }}
               />
             </div>
@@ -218,7 +222,7 @@ export default function Footer() {
                 height={30}
                 style={{
                   maxWidth: "100%",
-                  height: "auto",
+                  height: "auto"
                 }}
               />
             </div>
@@ -232,7 +236,7 @@ export default function Footer() {
                 height={35}
                 style={{
                   maxWidth: "100%",
-                  height: "auto",
+                  height: "auto"
                 }}
               />
             </div>
@@ -246,7 +250,7 @@ export default function Footer() {
                 height={35}
                 style={{
                   maxWidth: "100%",
-                  height: "auto",
+                  height: "auto"
                 }}
               />
             </div>
@@ -260,7 +264,7 @@ export default function Footer() {
                 height={35}
                 style={{
                   maxWidth: "100%",
-                  height: "auto",
+                  height: "auto"
                 }}
               />
             </div>

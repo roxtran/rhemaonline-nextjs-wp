@@ -1,6 +1,5 @@
-import styled, { createGlobalStyle } from "styled-components";
-
 import { motion } from "framer-motion";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const rem = (px) => {
   const remValue = px * 0.0625 + "rem";
@@ -8,8 +7,8 @@ export const rem = (px) => {
 };
 export const def = {
   wrapper: {
-    width: "78rem",
-  },
+    width: "78rem"
+  }
 };
 
 const GlobalStyle = createGlobalStyle`
@@ -42,7 +41,10 @@ const GlobalStyle = createGlobalStyle`
     margin: 0
   }
   h1 {
-    font-size: 3.75rem;
+    font-size: 2.75rem;
+    @media screen and (min-width) {
+      font-size: 3.75rem;
+    }
   }
   h2 {
     font-size: 2.25rem;
