@@ -1,14 +1,14 @@
-import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+import Meta from "components/common/meta";
 
 import CTAPanel from "components/home/CTAPanel";
 import Hero from "components/home/Hero";
-import Meta from "components/common/meta";
 import Newsletter from "components/home/Newsletter";
-import NewsletterType from "types/newsletter";
-import SlideType from "types/slide";
 import Subscribe from "components/home/Subscribe";
 import Welcome from "components/home/Welcome";
 import styled from "styled-components";
+import NewsletterType from "types/newsletter";
+import SlideType from "types/slide";
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
 // import Letter from "components/common/Modals/HomeModal";
 
@@ -67,13 +67,13 @@ const VideoWrapper = styled.div`
 export async function getStaticProps() {
   const client = new ApolloClient({
     uri: process.env.WP_URL as string,
-    cache: new InMemoryCache(),
+    cache: new InMemoryCache()
   });
 
   const { data } = await client.query({
     query: gql`
       query getData($numOfNewsletters: Int!, $after: String) {
-        slides(where: { orderby: { field: SLUG, order: ASC } }) {
+        slides(where: { tag: "home", orderby: { field: SLUG, order: ASC } }) {
           nodes {
             featuredImage {
               node {
@@ -99,12 +99,12 @@ export async function getStaticProps() {
     `,
     variables: {
       numOfNewsletters: 5,
-      after: null,
-    },
+      after: null
+    }
   });
 
   return {
     props: { slides: data?.slides?.nodes, newsletters: data?.newsletters?.nodes },
-    revalidate: 10,
+    revalidate: 10
   };
 }
