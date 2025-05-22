@@ -1,5 +1,6 @@
 import paths from "paths";
 import styled from "styled-components";
+
 import NavLink from "./NavLink";
 
 interface Props {
@@ -65,6 +66,11 @@ export default function Menu({ open, setOpen }: Props) {
         <a onClick={() => setOpen(!open)}>Events</a>
       </NavLink>
       <div className="btn-wrapper">
+        <NavLink href="/election-process">
+          <a className="button" onClick={() => setOpen(!open)}>
+            Election
+          </a>
+        </NavLink>
         <NavLink href={paths.build}>
           <a className="button build" onClick={() => setOpen(!open)}>
             Build
@@ -88,7 +94,7 @@ const StyledMenu = styled.div<{ open: boolean }>`
   align-items: center;
   a {
     color: var(--heading-color);
-    margin: 0.9rem;
+    margin: 0.5rem;
     font-weight: bold;
     text-transform: capitalize;
     white-space: nowrap;
@@ -135,11 +141,15 @@ const StyledMenu = styled.div<{ open: boolean }>`
   }
   .btn-wrapper {
     margin: 0;
+
+    > a {
+      margin: 0.5rem;
+    }
   }
   .button {
     cursor: pointer;
     border-radius: 0.25rem;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1.25rem;
     text-align: center;
     margin-left: 0.5rem;
     letter-spacing: 0.0625rem;

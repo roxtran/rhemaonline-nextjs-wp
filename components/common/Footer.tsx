@@ -146,7 +146,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <Link href={"/election-process"}>Election Process</Link>
+                <Link href={"/election-process"}>Board Members Election</Link>
               </li>
             </ul>
           </div>

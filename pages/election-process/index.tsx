@@ -587,6 +587,9 @@ const PageContainer = styled(Container)`
       border-radius: 1rem;
       min-width: 280px;
       max-width: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     p {
       margin-bottom: 0.5rem;
