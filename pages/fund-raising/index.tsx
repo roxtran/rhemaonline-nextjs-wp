@@ -1,123 +1,123 @@
-import HeadLine from "components/common/HeadLine";
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+import { Button, Container, ImgWrapper, def } from "styles/GlobalStyle";
+
 import ImageSlider from "components/common/ImageSlider";
 import Meta from "components/common/meta";
 import Hero from "components/home/Hero";
 import Image from "next/image";
 import { VideoWrapper } from "pages/sermons/styles";
 import styled from "styled-components";
-import { Button, Container, ImgWrapper, def } from "styles/GlobalStyle";
 import SlideType from "types/slide";
-import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
-const slides = [
+const goalSlides = [
   {
     title: "slide 1",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_3082-scaled.jpg"
-      }
+        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_3082-scaled.jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 2",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_3031-scaled.jpg"
-      }
+        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_3031-scaled.jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 3",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_2985-scaled.jpg"
-      }
+        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_2985-scaled.jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 4",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_2965-scaled.jpg"
-      }
+        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_2965-scaled.jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 5",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_2886-scaled.jpg"
-      }
+        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_2886-scaled.jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 6",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_2878-scaled.jpg"
-      }
+        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_2878-scaled.jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 7",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_2846-scaled.jpg"
-      }
+        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_2846-scaled.jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 8",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_2790-scaled.jpg"
-      }
+        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_2790-scaled.jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 9",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_2789-scaled.jpg"
-      }
+        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_2789-scaled.jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
-  }
+      ctaUrl: "",
+    },
+  },
 ];
 
 interface Props {
@@ -159,7 +159,7 @@ export default function Index({ slides }: Props) {
                 fill
                 sizes="100vw"
                 style={{
-                  objectFit: "cover"
+                  objectFit: "cover",
                 }}
               />
             </ImgWrapper>
@@ -342,7 +342,7 @@ export default function Index({ slides }: Props) {
                 fill
                 sizes="100vw"
                 style={{
-                  objectFit: "cover"
+                  objectFit: "cover",
                 }}
               />
             </ImgWrapper>
@@ -357,7 +357,7 @@ export default function Index({ slides }: Props) {
                 fill
                 sizes="100vw"
                 style={{
-                  objectFit: "cover"
+                  objectFit: "cover",
                 }}
               />
             </ImgWrapper>
@@ -388,7 +388,7 @@ export default function Index({ slides }: Props) {
             activities and events while continuing to engage church members through social media, email updates, and
             pledge drives.
           </p>
-          <ImageSlider slides={slides} />
+          <ImageSlider slides={goalSlides} />
         </div>
 
         <div className="divider"></div>
@@ -404,7 +404,7 @@ export default function Index({ slides }: Props) {
               fill
               sizes="100vw"
               style={{
-                objectFit: "contain"
+                objectFit: "contain",
               }}
             />
           </ImgWrapper>
@@ -726,7 +726,7 @@ const PageContainer = styled(Container)`
 export async function getStaticProps() {
   const client = new ApolloClient({
     uri: process.env.WP_URL as string,
-    cache: new InMemoryCache()
+    cache: new InMemoryCache(),
   });
 
   const { data } = await client.query({
@@ -747,11 +747,11 @@ export async function getStaticProps() {
           }
         }
       }
-    `
+    `,
   });
 
   return {
     props: { slides: data?.slides?.nodes },
-    revalidate: 10
+    revalidate: 10,
   };
 }
