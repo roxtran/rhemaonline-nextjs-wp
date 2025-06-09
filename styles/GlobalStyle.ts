@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
 import styled, { createGlobalStyle } from "styled-components";
+
+import { motion } from "framer-motion";
 
 export const rem = (px) => {
   const remValue = px * 0.0625 + "rem";
@@ -7,8 +8,8 @@ export const rem = (px) => {
 };
 export const def = {
   wrapper: {
-    width: "78rem"
-  }
+    width: "78rem",
+  },
 };
 
 const GlobalStyle = createGlobalStyle`
@@ -133,6 +134,7 @@ export const Button = styled(motion.a)`
   &.white {
     background: #fff;
     color: var(--text-color);
+    border: 0.0625rem solid var(--text-color);
     &:hover {
       background: var(--blue);
       color: #fff;

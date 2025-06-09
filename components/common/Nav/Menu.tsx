@@ -1,7 +1,6 @@
+import NavLink from "./NavLink";
 import paths from "paths";
 import styled from "styled-components";
-
-import NavLink from "./NavLink";
 
 interface Props {
   open: boolean;
@@ -62,8 +61,8 @@ export default function Menu({ open, setOpen }: Props) {
       <NavLink href={paths.liveStream}>
         <a onClick={() => setOpen(!open)}>Live Stream</a>
       </NavLink>
-      <NavLink href={paths.events}>
-        <a onClick={() => setOpen(!open)}>Events</a>
+      <NavLink href={paths.calendar}>
+        <a onClick={() => setOpen(!open)}>Calendar</a>
       </NavLink>
       <div className="btn-wrapper">
         <NavLink href="/election-process">
