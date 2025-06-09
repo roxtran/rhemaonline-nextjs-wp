@@ -13,7 +13,7 @@ export default {
   virtualHomeGroupsDiscussions: "/virtual-home-groups/discussions",
   gallery: "/gallery",
   liveStream: "/live-stream",
-  events: "/events",
+  calendar: "/calendar",
   build: "/fund-raising",
   giving: "/giving",
   about: "/about",

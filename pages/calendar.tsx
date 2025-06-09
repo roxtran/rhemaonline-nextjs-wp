@@ -1,12 +1,12 @@
 import HeadLine from "components/common/HeadLine";
 import Meta from "components/common/meta";
-import styled from "styled-components";
 import { def } from "styles/GlobalStyle";
+import styled from "styled-components";
 
 // import PCOCalendar from 'components/common/PLOCalendar'
 
-export default function Events() {
-  const pageTitle = "Events";
+export default function Calendar() {
+  const pageTitle = "Calendar";
   const pageImage = "/img/events-img1.webp";
 
   return (
