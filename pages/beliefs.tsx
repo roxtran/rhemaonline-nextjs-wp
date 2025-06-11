@@ -11,7 +11,7 @@ export default function Beliefs() {
 
   return (
     <>
-      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
+      <Meta title={pageTitle} ogImage={pageImage} />
       <HeadLine imgUrl={pageImage} title={pageTitle} blur="blur(0.3125rem)" />
       <BeliefsContainer>
         <div className="content-wrapper">

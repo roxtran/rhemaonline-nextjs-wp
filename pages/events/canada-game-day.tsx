@@ -7,13 +7,13 @@ import Meta from "components/common/meta";
 import styled from "styled-components";
 
 export default function Index() {
-  const pageTitle = "";
+  const pageTitle = "Canada Game Day";
   const pageImage =
     "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/06/canada-game-day-banner-scaled.jpg";
 
   return (
     <>
-      <Meta title={`${pageTitle} - Canada Game Day`} ogImage={pageImage} />
+      <Meta title={pageTitle} ogImage={pageImage} />
       <HeadLine
         imgUrl={pageImage}
         title={pageTitle}

@@ -1,9 +1,9 @@
 import { Container, def, rem } from "styles/GlobalStyle";
 
 import HeadLine from "components/common/HeadLine";
-import Meta from "components/common/meta";
 import Image from "next/image";
 import Link from "next/link";
+import Meta from "components/common/meta";
 import paths from "paths";
 import styled from "styled-components";
 
@@ -14,7 +14,7 @@ export default function Giving() {
 
   return (
     <>
-      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} desc={pageDesc} />
+      <Meta title={pageTitle} ogImage={pageImage} desc={pageDesc} />
       <HeadLine imgUrl={pageImage} title={pageDesc} />
       <GivingContainer>
         <div id="thank">

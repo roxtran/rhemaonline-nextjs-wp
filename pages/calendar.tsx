@@ -11,7 +11,7 @@ export default function Calendar() {
 
   return (
     <>
-      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
+      <Meta title={pageTitle} ogImage={pageImage} />
       <HeadLine imgUrl={pageImage} title={pageTitle} height="18.75rem" />
       <CalendarWrapper>
         <iframe

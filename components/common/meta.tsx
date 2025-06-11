@@ -17,7 +17,7 @@ const Meta = ({
     {/* Responsive meta tag */}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta property="og:title" content={title} />
+    <meta property="og:title" content={`${title} - Rhema - Changing & Affecting Lives!`} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage?.includes("http") ? ogImage : process.env.HOME_URL + ogImage} />

@@ -2,9 +2,9 @@ import { Button, Container, def } from "styles/GlobalStyle";
 
 import HeadLine from "components/common/HeadLine";
 import ImageSlider from "components/common/ImageSlider";
+import Link from "next/link";
 import Meta from "components/common/meta";
 import slides from "data/foodbank-slides";
-import Link from "next/link";
 import styled from "styled-components";
 
 const foodbank = () => {
@@ -13,7 +13,7 @@ const foodbank = () => {
 
   return (
     <>
-      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
+      <Meta title={pageTitle} ogImage={pageImage} />
       <HeadLine imgUrl={pageImage} title={pageTitle} />
       <FoodbankContainer>
         <div className="content-wrapper">

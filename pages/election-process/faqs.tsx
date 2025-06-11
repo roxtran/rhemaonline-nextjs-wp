@@ -1,14 +1,10 @@
-import HeadLine from "components/common/HeadLine";
-
-import ImageSlider from "components/common/ImageSlider";
-import Meta from "components/common/meta";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { VideoWrapper } from "pages/sermons/styles";
-import { IoArrowBackOutline } from "react-icons/io5";
-import styled from "styled-components";
 import { Button, Container, ImgWrapper, def } from "styles/GlobalStyle";
 
+import HeadLine from "components/common/HeadLine";
+import { IoArrowBackOutline } from "react-icons/io5";
+import Meta from "components/common/meta";
+import styled from "styled-components";
+import { useRouter } from "next/navigation";
 
 const slides = [
   {
@@ -16,25 +12,25 @@ const slides = [
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_3082-scaled.jpg"
-      }
+        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_3082-scaled.jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 2",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_3031-scaled.jpg"
-      }
+        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_3031-scaled.jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
-  }
+      ctaUrl: "",
+    },
+  },
 ];
 
 export default function Index() {
@@ -44,7 +40,7 @@ export default function Index() {
 
   return (
     <>
-      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
+      <Meta title={pageTitle} ogImage={pageImage} />
       <HeadLine
         imgUrl={pageImage}
         title=""

@@ -10,7 +10,7 @@ export default function VHG() {
 
   return (
     <>
-      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
+      <Meta title={pageTitle} ogImage={pageImage} />
       <HeadLine
         imgUrl={pageImage}
         title=""

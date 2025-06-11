@@ -40,13 +40,13 @@ export const participants = (
 );
 
 export default function Index() {
-  const pageTitle = "";
+  const pageTitle = "Walk-a-thon fundraising event";
   const pageImage =
     "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/06/walkathon-main-banner-scaled.jpg";
 
   return (
     <>
-      <Meta title={`${pageTitle} - Walk-a-thon fundraising event`} ogImage={pageImage} />
+      <Meta title={pageTitle} ogImage={pageImage} />
       <HeadLine imgUrl={pageImage} title={pageTitle} height="26rem" mbHeight="22rem" />
 
       <EventPageContainer>

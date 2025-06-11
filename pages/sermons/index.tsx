@@ -1,14 +1,14 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import SermonsContainer, { FeaturedWrapper, PopularVideoWrapper, RecentVideoWrapper } from "./styles";
 
-import FeatureVideo from "components/common/FeatureVideo";
-import Meta from "components/common/meta";
-import Link from "next/link";
-import paths from "paths";
-import { useState } from "react";
 import { BsPlayCircleFill } from "react-icons/bs";
+import FeatureVideo from "components/common/FeatureVideo";
+import Link from "next/link";
+import Meta from "components/common/meta";
 import PopularVideoSlider from "./videos/popular/PopularVideoSlider";
 import RecentVideoSlider from "./videos/recent/RecentVideoSlider";
+import paths from "paths";
+import { useState } from "react";
 
 // import popularVideos from "data/popular-videos";
 // import recentVideos from "data/recent-videos";
@@ -40,7 +40,7 @@ export default function SermonsVideos({
 
   return (
     <>
-      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
+      <Meta title={pageTitle} ogImage={pageImage} />
       <SermonsContainer>
         <div className="wrapper">
           <h2 className="title">Recent Sermon</h2>
@@ -73,7 +73,6 @@ export default function SermonsVideos({
     </>
   );
 }
-
 
 export async function getStaticProps() {
   const client = new ApolloClient({

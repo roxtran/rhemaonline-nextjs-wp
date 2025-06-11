@@ -1,13 +1,13 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import { Button, Container, ImgWrapper, def } from "styles/GlobalStyle";
 
-import ImageSlider from "components/common/ImageSlider";
-import Meta from "components/common/meta";
 import Hero from "components/home/Hero";
 import Image from "next/image";
+import ImageSlider from "components/common/ImageSlider";
+import Meta from "components/common/meta";
+import SlideType from "types/slide";
 import { VideoWrapper } from "pages/sermons/styles";
 import styled from "styled-components";
-import SlideType from "types/slide";
 
 const goalSlides = [
   {
@@ -141,7 +141,7 @@ export default function Index({ slides }: Props) {
 
   return (
     <>
-      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
+      <Meta title={pageTitle} ogImage={pageImage} />
       {/* <HeadLine imgUrl={pageImage} title={pageTitle} blur="blur(0.0625rem)" height="46rem" mbHeight="22rem" /> */}
       <Hero slides={slides} />
 

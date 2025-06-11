@@ -1,8 +1,8 @@
 import HeadLine from "components/common/HeadLine";
-import Meta from "components/common/meta";
 import Image from "next/image";
-import styled from "styled-components";
 import { ImgWrapper } from "styles/GlobalStyle";
+import Meta from "components/common/meta";
+import styled from "styled-components";
 import useWindowDimensions from "utils/useWindowDimension";
 
 // import IframeVideo from "components/common/IFrameVideo";
@@ -17,7 +17,7 @@ export default function LiveStream() {
 
   return (
     <>
-      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
+      <Meta title={pageTitle} ogImage={pageImage} />
       <HeadLine
         imgUrl={pageImage}
         title={pageTitle}

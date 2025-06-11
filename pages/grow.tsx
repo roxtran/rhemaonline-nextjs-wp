@@ -1,9 +1,9 @@
 import { Container, ImgWrapper, def } from "styles/GlobalStyle";
 
 import HeadLine from "components/common/HeadLine";
+import Image from "next/image";
 import Meta from "components/common/meta";
 import { default as growData } from "data/grow";
-import Image from "next/image";
 import styled from "styled-components";
 
 const grow = () => {
@@ -12,7 +12,7 @@ const grow = () => {
 
   return (
     <>
-      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
+      <Meta title={pageTitle} ogImage={pageImage} />
       <HeadLine imgUrl={pageImage} title={pageTitle} height="34.375rem" />
       <GrowContainer>
         <div className="desc">
