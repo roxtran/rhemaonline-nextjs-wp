@@ -1,6 +1,6 @@
+import { Button } from "styles/GlobalStyle";
 import Image from "next/image";
 import styled from "styled-components";
-import { Button } from "styles/GlobalStyle";
 
 interface HeadLineProps {
   imgUrl: string;
@@ -14,6 +14,8 @@ interface HeadLineProps {
   titlePosition?: string;
   displayTitle?: boolean;
   isUnderMenu?: boolean;
+  maxWidth?: string;
+  borderRadius?: string;
 }
 
 export default function HeadLine({
@@ -28,6 +30,8 @@ export default function HeadLine({
   titlePosition = "0rem",
   displayTitle = true,
   isUnderMenu = true,
+  maxWidth = "",
+  borderRadius = "",
 }: HeadLineProps) {
   const hasContent = displayTitle || desc || btnText;
 
@@ -38,6 +42,8 @@ export default function HeadLine({
       mbHeight={mbHeight || `${height}`}
       titlePosition={titlePosition}
       isUnderMenu={isUnderMenu}
+      maxWidth={maxWidth}
+      borderRadius={borderRadius}
     >
       <Image
         src={imgUrl}
@@ -68,11 +74,19 @@ export const HeadLineContainer = styled.section<{
   mbHeight: string;
   titlePosition: string;
   isUnderMenu: boolean;
+  maxWidth: string;
+  borderRadius: string;
 }>`
   position: relative;
   height: ${(props) => props.height};
   top: ${(props) => (props.isUnderMenu ? "0" : "5rem")};
   margin-bottom: ${(props) => (props.isUnderMenu ? "0" : "5rem")};
+  margin-left: auto;
+  margin-right: auto;
+  max-width: ${(props) => (props.maxWidth !== "" ? props.maxWidth : "unset")};
+  border-radius: ${(props) => (props.borderRadius !== "" ? props.borderRadius : "unset")};
+  overflow: hidden;
+
   image {
     z-index: 0;
   }
