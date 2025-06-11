@@ -2,12 +2,12 @@ import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import { Container, ImgWrapper, def } from "styles/GlobalStyle";
 
 import HeadLine from "components/common/HeadLine";
+import Meta from "components/common/meta";
 import Image from "next/image";
 import Link from "next/link";
-import Meta from "components/common/meta";
-import ServiceType from "types/service";
 import paths from "paths";
 import styled from "styled-components";
+import ServiceType from "types/service";
 
 interface Props {
   services: ServiceType[];
@@ -20,7 +20,7 @@ export default function Connect({ services }: Props) {
 
   return (
     <>
-      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} desc={pageDesc} />
+      <Meta title={pageTitle} ogImage={pageImage} desc={pageDesc} />
       <HeadLine
         imgUrl={pageImage}
         title={pageTitle}

@@ -1,9 +1,9 @@
 import { Button, Container, ImgWrapper } from "styles/GlobalStyle";
 
 import HeadLine from "components/common/HeadLine";
+import Image from "next/image";
 import Meta from "components/common/meta";
 import { default as getConnectedData } from "data/get-connected";
-import Image from "next/image";
 import styled from "styled-components";
 
 const getConnected = () => {
@@ -13,7 +13,7 @@ const getConnected = () => {
 
   return (
     <>
-      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} desc={pageDesc} ogImage={pageImage} />
+      <Meta title={pageTitle} desc={pageDesc} ogImage={pageImage} />
       <HeadLine
         imgUrl={pageImage}
         title={pageTitle}

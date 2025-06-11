@@ -10,7 +10,7 @@ export default function facilityBookings() {
 
   return (
     <>
-      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
+      <Meta title={pageTitle} ogImage={pageImage} />
       <HeadLine imgUrl={pageImage} title={pageTitle} blur="blur(0.25rem)" />
       <BookingsContainer>
         <div className="wrapper">

@@ -10,7 +10,7 @@ export default function About() {
 
   return (
     <>
-      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
+      <Meta title={pageTitle} ogImage={pageImage} />
       <HeadLine
         height="31.25rem"
         imgUrl={pageImage}

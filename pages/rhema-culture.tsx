@@ -10,7 +10,7 @@ const RhemaCulture = () => {
 
   return (
     <>
-      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
+      <Meta title={pageTitle} ogImage={pageImage} />
       <HeadLine imgUrl={pageImage} title={pageTitle} height="28.125rem" />
       <CultureContainer>
         <div className="content-wrapper">
