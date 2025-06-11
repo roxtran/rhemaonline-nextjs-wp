@@ -311,7 +311,7 @@ export const EventPageContainer = styled(Container)`
     gap: 2rem;
 
     @media screen and (min-width: 48rem) {
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: 1.75fr 1fr;
     }
 
     .side {
