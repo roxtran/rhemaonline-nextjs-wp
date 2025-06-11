@@ -53,7 +53,7 @@ export default function Index() {
               <div className="button-wrapper flex-column">
                 <Button
                   href="https://rhemachristianministries.churchcenter.com/registrations/events/2971266"
-                  data-open-in-church-center-modal="true"
+                  target="_blank"
                 >
                   Register Now
                 </Button>
