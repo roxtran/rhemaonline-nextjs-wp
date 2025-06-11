@@ -1,15 +1,14 @@
-import { useState } from "react";
-import HeadLine from "components/common/HeadLine";
-import ImageSlider from "components/common/ImageSlider";
-import Meta from "components/common/meta";
-import Image from "next/image";
-import styled from "styled-components";
-
 import { Button, Container, ImgWrapper, def } from "styles/GlobalStyle";
 
 import CandidateInfoModal from "./CandidateInfoModal";
 import EarlyVoterModal from "./EarlyVoterModal";
+import HeadLine from "components/common/HeadLine";
+import Image from "next/image";
+import ImageSlider from "components/common/ImageSlider";
+import Meta from "components/common/meta";
 import VotingGuideModal from "./VotingGuideModal";
+import styled from "styled-components";
+import { useState } from "react";
 
 const slides = [
   {
@@ -17,361 +16,361 @@ const slides = [
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (1).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (1).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 2",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (2).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (2).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 3",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (3).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (3).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 4",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (4).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (4).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 5",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (5).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (5).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 6",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (6).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (6).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 7",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (7).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (7).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 8",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (8).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (8).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 9",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (9).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (9).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 10",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (10).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (10).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 11",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (11).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (11).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 12",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (12).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (12).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 13",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (13).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (13).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 14",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (14).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (14).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 15",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (15).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (15).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 16",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (16).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (16).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 17",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (17).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (17).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 18",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (18).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (18).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 19",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (19).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (19).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 20",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (20).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (20).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 21",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (21).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (21).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 22",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (22).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (22).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 23",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (23).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (23).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 24",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (24).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (24).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 25",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (25).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (25).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 26",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (26).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (26).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 27",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (27).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (27).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 28",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (28).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (28).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 29",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (29).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (29).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
+      ctaUrl: "",
+    },
   },
   {
     title: "slide 30",
     content: "",
     featuredImage: {
       node: {
-        sourceUrl: "/img/election/slides/election-slide (30).jpg"
-      }
+        sourceUrl: "/img/election/slides/election-slide (30).jpg",
+      },
     },
     slideFields: {
-      ctaUrl: ""
-    }
-  }
+      ctaUrl: "",
+    },
+  },
 ];
 
 export default function Index() {
@@ -388,7 +387,7 @@ export default function Index() {
       <VotingGuideModal open={openVotingGuide} setOpen={setOpenVotingGuide} />
       <EarlyVoterModal open={openEarlyVoter} setOpen={setOpenEarlyVoter} />
 
-      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
+      <Meta title={pageTitle} ogImage={pageImage} />
       <HeadLine
         imgUrl={pageImage}
         title=""
@@ -492,7 +491,7 @@ export default function Index() {
               fill
               sizes="100vw"
               style={{
-                objectFit: "contain"
+                objectFit: "contain",
               }}
             />
           </ImgWrapper>
