@@ -24,7 +24,7 @@ export default function Index() {
       />
 
       <StyledContainer>
-        <div className="wrapper letter">
+        <div className="wrapper main">
           <div className="content">
             <div className="date">July 01, 2025</div>
             <h2 id="title">“Canada Day” Community Game Day 2025</h2>
