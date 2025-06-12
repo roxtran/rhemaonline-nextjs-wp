@@ -20,7 +20,7 @@ export default function Connect({ services }: Props) {
 
   return (
     <>
-      <Meta title={pageTitle}
+      <Meta title={pageTitle} ogImage={pageImage} />
       <HeadLine
         imgUrl={pageImage}
         title={pageTitle}
