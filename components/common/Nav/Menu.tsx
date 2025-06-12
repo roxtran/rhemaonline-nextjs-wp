@@ -97,6 +97,7 @@ const StyledMenu = styled.div<{ open: boolean }>`
     font-weight: bold;
     text-transform: capitalize;
     white-space: nowrap;
+    text-decoration: none;
     &:not(.button)[aria-current] {
       /* border-bottom: 0.25rem solid var(--mint); */
       background: linear-gradient(var(--mint), var(--mint)) 0 calc(100% - 0.1875rem) / 100% 0.4375rem no-repeat;
