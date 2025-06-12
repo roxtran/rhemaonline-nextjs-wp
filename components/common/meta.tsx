@@ -24,10 +24,10 @@ const Meta = ({
     <meta property="og:image:type" content="image/jpg" />
     <meta property="og:image:width" content="300" />
     <meta property="og:image:height" content="300" />
-    <meta property="og:image:alt" content={title} />
+    <meta property="og:image:alt" content={`${title} - Rhema - Changing & Affecting Lives!`} />
     <meta property="og:description" content={desc} />
     <meta property="og:site_name" content="Rhema - Changing & Affecting Lives!" />
-    <title>{title}</title>
+    <title>{`${title} - Rhema - Changing & Affecting Lives!`}</title>
   </Head>
 );
 export default Meta;
