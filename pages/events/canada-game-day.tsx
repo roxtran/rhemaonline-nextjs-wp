@@ -16,7 +16,7 @@ export default function Index() {
       <Meta title={pageTitle} ogImage={pageImage} />
       <HeadLine
         imgUrl={pageImage}
-        title={pageTitle}
+        title=""
         height="26rem"
         mbHeight="22rem"
         maxWidth={def.wrapper.width}
