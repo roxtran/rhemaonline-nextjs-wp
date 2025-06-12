@@ -47,7 +47,14 @@ export default function Index() {
   return (
     <>
       <Meta title={pageTitle} ogImage={pageImage} />
-      <HeadLine imgUrl={pageImage} title="" height="26rem" mbHeight="22rem" />
+      <HeadLine
+        imgUrl={pageImage}
+        title=""
+        height="26rem"
+        mbHeight="22rem"
+        maxWidth={def.wrapper.width}
+        borderRadius="0.5rem"
+      />
 
       <EventPageContainer>
         <div className="wrapper main">
