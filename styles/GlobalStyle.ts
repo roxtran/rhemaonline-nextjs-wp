@@ -29,7 +29,8 @@ const GlobalStyle = createGlobalStyle`
   a {
     cursor: pointer;
     color: var(--text-color);
-    text-decoration: none;
+    text-decoration: underline;
+    font-weight: bold;
     &:hover {
       color:var(--blue);
     }
@@ -119,6 +120,8 @@ export const Button = styled(motion.a)`
   text-align: center;
   text-transform: capitalize;
   white-space: nowrap;
+  text-decoration: none;
+  font-weight: unset;
   &:hover {
     background: var(--light-blue);
     color: #fff;
