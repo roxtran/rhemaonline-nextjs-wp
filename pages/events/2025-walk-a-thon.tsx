@@ -50,7 +50,7 @@ export default function Index() {
       <HeadLine imgUrl={pageImage} title={pageTitle} height="26rem" mbHeight="22rem" />
 
       <EventPageContainer>
-        <div className="wrapper letter">
+        <div className="wrapper main">
           <div className="content">
             <div className="date">August 9, 2025</div>
             <h2 id="title">
@@ -305,13 +305,14 @@ export const EventPageContainer = styled(Container)`
     flex-direction: column;
     gap: 1rem;
   }
-  .letter {
+  .main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
 
     @media screen and (min-width: 48rem) {
       grid-template-columns: 1.75fr 1fr;
+      align-items: start;
     }
 
     .side {
