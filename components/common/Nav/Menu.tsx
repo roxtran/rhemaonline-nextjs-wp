@@ -115,6 +115,7 @@ const StyledMenu = styled.div<{ open: boolean }>`
       opacity: 1;
       height: fit-content;
       z-index: 1;
+      padding: 0.25rem;
     }
     .dropdown-content {
       overflow: hidden;
@@ -125,7 +126,7 @@ const StyledMenu = styled.div<{ open: boolean }>`
       flex-direction: column;
       position: absolute;
       background: #fff;
-      top: 3rem;
+      top: 2.5rem;
       left: 1rem;
       border: 0.0625rem solid rgba(0, 0, 0, 0.2);
       border-radius: var(--border-radius);
