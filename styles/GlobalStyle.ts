@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
 import styled, { createGlobalStyle } from "styled-components";
+
+import { motion } from "framer-motion";
 
 export const rem = (px) => {
   const remValue = px * 0.0625 + "rem";
@@ -7,8 +8,8 @@ export const rem = (px) => {
 };
 export const def = {
   wrapper: {
-    width: "78rem"
-  }
+    width: "78rem",
+  },
 };
 
 const GlobalStyle = createGlobalStyle`
@@ -28,7 +29,8 @@ const GlobalStyle = createGlobalStyle`
   a {
     cursor: pointer;
     color: var(--text-color);
-    text-decoration: none;
+    text-decoration: underline;
+    font-weight: bold;
     &:hover {
       color:var(--blue);
     }
@@ -118,6 +120,8 @@ export const Button = styled(motion.a)`
   text-align: center;
   text-transform: capitalize;
   white-space: nowrap;
+  text-decoration: none;
+  font-weight: unset;
   &:hover {
     background: var(--light-blue);
     color: #fff;
@@ -133,6 +137,7 @@ export const Button = styled(motion.a)`
   &.white {
     background: #fff;
     color: var(--text-color);
+    border: 0.0625rem solid var(--text-color);
     &:hover {
       background: var(--blue);
       color: #fff;

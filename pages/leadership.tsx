@@ -1,13 +1,13 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
-import { useState } from "react";
 import { Container, ImgWrapper, def } from "styles/GlobalStyle";
 
 import HeadLine from "components/common/HeadLine";
-import LeaderModal from "components/common/Modals/LeaderModal";
-import Meta from "components/common/meta";
 import Image from "next/image";
-import styled from "styled-components";
+import LeaderModal from "components/common/Modals/LeaderModal";
 import LeaderType from "types/leader";
+import Meta from "components/common/meta";
+import styled from "styled-components";
+import { useState } from "react";
 
 // import leaders from 'data/leaders'
 
@@ -24,7 +24,7 @@ export default function Leadership({ leaders }: Props) {
 
   return (
     <>
-      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
+      <Meta title={pageTitle} ogImage={pageImage} />
       <HeadLine
         imgUrl={pageImage}
         title={pageTitle}

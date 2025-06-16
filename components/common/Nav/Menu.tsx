@@ -1,7 +1,6 @@
+import NavLink from "./NavLink";
 import paths from "paths";
 import styled from "styled-components";
-
-import NavLink from "./NavLink";
 
 interface Props {
   open: boolean;
@@ -62,8 +61,8 @@ export default function Menu({ open, setOpen }: Props) {
       <NavLink href={paths.liveStream}>
         <a onClick={() => setOpen(!open)}>Live Stream</a>
       </NavLink>
-      <NavLink href={paths.events}>
-        <a onClick={() => setOpen(!open)}>Events</a>
+      <NavLink href={paths.calendar}>
+        <a onClick={() => setOpen(!open)}>Calendar</a>
       </NavLink>
       <div className="btn-wrapper">
         <NavLink href="/election-process">
@@ -98,6 +97,7 @@ const StyledMenu = styled.div<{ open: boolean }>`
     font-weight: bold;
     text-transform: capitalize;
     white-space: nowrap;
+    text-decoration: none;
     &:not(.button)[aria-current] {
       /* border-bottom: 0.25rem solid var(--mint); */
       background: linear-gradient(var(--mint), var(--mint)) 0 calc(100% - 0.1875rem) / 100% 0.4375rem no-repeat;

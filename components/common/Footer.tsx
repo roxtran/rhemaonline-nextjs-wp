@@ -1,10 +1,9 @@
-import { useState } from "react";
+import BibleModal from "./Modals/BibleModal";
 import Image from "next/image";
 import Link from "next/link";
 import paths from "paths";
 import styled from "styled-components";
-
-import BibleModal from "./Modals/BibleModal";
+import { useState } from "react";
 
 export default function Footer() {
   const [openBible, setOpenBible] = useState(false);
@@ -166,7 +165,7 @@ export default function Footer() {
                 height={30}
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
+                  height: "auto",
                 }}
               />
             </div>
@@ -180,7 +179,7 @@ export default function Footer() {
                 height={30}
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
+                  height: "auto",
                 }}
               />
             </div>
@@ -194,7 +193,7 @@ export default function Footer() {
                 height={35}
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
+                  height: "auto",
                 }}
               />
             </div>
@@ -208,7 +207,7 @@ export default function Footer() {
                 height={35}
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
+                  height: "auto",
                 }}
               />
             </div>
@@ -222,7 +221,7 @@ export default function Footer() {
                 height={30}
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
+                  height: "auto",
                 }}
               />
             </div>
@@ -236,7 +235,7 @@ export default function Footer() {
                 height={35}
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
+                  height: "auto",
                 }}
               />
             </div>
@@ -250,7 +249,7 @@ export default function Footer() {
                 height={35}
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
+                  height: "auto",
                 }}
               />
             </div>
@@ -264,7 +263,7 @@ export default function Footer() {
                 height={35}
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
+                  height: "auto",
                 }}
               />
             </div>
@@ -300,6 +299,7 @@ const StyledFooter = styled.footer`
 
       a {
         text-decoration: none;
+        font-weight: unset;
       }
     }
   }

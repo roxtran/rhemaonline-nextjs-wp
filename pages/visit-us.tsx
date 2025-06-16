@@ -16,7 +16,7 @@ export default function Location() {
 
   return (
     <>
-      <Meta title={`${pageTitle} - Rhema - Changing & Affecting Lives!`} ogImage={pageImage} />
+      <Meta title={pageTitle} ogImage={pageImage} />
       <VideoWrapper>
         <Video src={pageImage} width="100%" height="80vh" />
       </VideoWrapper>
