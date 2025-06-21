@@ -1,14 +1,14 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import SermonsContainer, { FeaturedWrapper, PopularVideoWrapper, RecentVideoWrapper } from "./styles";
 
-import { BsPlayCircleFill } from "react-icons/bs";
 import FeatureVideo from "components/common/FeatureVideo";
-import Link from "next/link";
 import Meta from "components/common/meta";
-import PopularVideoSlider from "./videos/popular/PopularVideoSlider";
-import RecentVideoSlider from "./videos/recent/RecentVideoSlider";
+import Link from "next/link";
 import paths from "paths";
 import { useState } from "react";
+import { BsPlayCircleFill } from "react-icons/bs";
+import PopularVideoSlider from "./videos/popular/PopularVideoSlider";
+import RecentVideoSlider from "./videos/recent/RecentVideoSlider";
 
 // import popularVideos from "data/popular-videos";
 // import recentVideos from "data/recent-videos";
@@ -23,8 +23,8 @@ interface Props {
 export default function SermonsVideos({
   recentVideosData,
   popularVideosData,
-  pageTitle = "Sermon Videos" || "",
-  videoPath = paths.sermons || "",
+  pageTitle = "Sermon Videos",
+  videoPath = paths.sermons,
 }: Props) {
   const recentVideosString = recentVideosData[0].sermonVideoFields.items;
   const recentVideos = JSON.parse(recentVideosString);

@@ -23,6 +23,11 @@ export const ItemWrapper = styled.div`
     position: relative;
   }
 
+  a {
+    text-decoration: none;
+    font-weight: normal;
+  }
+
   p {
     margin: 1rem;
   }
@@ -152,6 +157,7 @@ export const SidebarWrapper = styled.aside`
     }
     a {
       text-decoration: none;
+      font-weight: normal;
     }
   }
   p {
