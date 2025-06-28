@@ -20,7 +20,7 @@ const participant = (
     </ImgWrapper>
     <div className="name">Elen Gene</div>
     <div className="raised">♡ $1,526 Raised</div>
-    <Button href="#" data-open-in-church-center-modal="true">
+    <Button href="#" target="_blank">
       Support
     </Button>
   </div>
@@ -79,27 +79,16 @@ export default function Index() {
               <b>Our goal for this initiative is to raise $15,000.</b> <br />
               However, you will determine the individual goal you will set for yourself.
             </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat.
-            </p>
-            <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-              laborum.
-            </p>
-            <p>Evel illum qui dolorem eum fugiat quo voluptas nulla pariatur!</p>
           </div>
           <div className="side flex-column">
             <div className="goal">
               <h3>Goal: $15,000</h3>
               <p>This fundraising initiative is organized by Rhema Christian Ministries.</p>
               <div className="button-wrapper flex-column">
-                <Button href="#" data-open-in-church-center-modal="true">
+                <Button href="https://myevent.com/rhemaonline/register" target="_blank">
                   Free Register
                 </Button>
-                <Button href="#" data-open-in-church-center-modal="true">
+                <Button href="https://myevent.com/rhemaonline/donate" target="_blank">
                   Donate Now
                 </Button>
               </div>
@@ -287,11 +276,11 @@ export default function Index() {
             videos and comments on social media using the hashtag <a href="#Change&AffectLives">#Change&AffectLives</a>.
           </p>
           <p>Have fun supporting a great cause!</p>
-          <Button href="#" data-open-in-church-center-modal="true">
+          <Button href="https://myevent.com/rhemaonline/register" target="_blank">
             Free Register
           </Button>
         </div>
-        {participants}
+        {/* {participants} */}
       </EventPageContainer>
     </>
   );
