@@ -204,7 +204,7 @@ export default function Index() {
         <div className="wrapper progress">
           <div className="color"></div>
           <div className="content">
-            <h4 className="goal">47% of Goal</h4>
+            <h4 className="goal">1% of Goal</h4>
             <h4 className="target">Target: $15,000</h4>
           </div>
           <ImgWrapper>
@@ -221,7 +221,7 @@ export default function Index() {
         </div>
         <div className="wrapper raised">
           <h3>
-            <u>$6,427</u> has been raised as of July 15
+            <u>$20</u> has been raised
           </h3>
         </div>
         <div className="wrapper help">
@@ -406,13 +406,14 @@ export const EventPageContainer = styled(Container)`
       border-radius: 1.5rem;
       position: absolute;
       z-index: 1;
+      display: none;
     }
     ${ImgWrapper} {
       width: 1.6875rem;
       height: 3.125rem;
       transform: scaleX(-1);
       position: absolute;
-      left: 46%;
+      left: 0%;
       bottom: 50%;
       z-index: 3;
     }
