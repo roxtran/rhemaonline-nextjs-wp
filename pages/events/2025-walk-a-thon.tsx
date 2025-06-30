@@ -62,7 +62,7 @@ export default function Index() {
           <div className="content">
             <div className="date">August 9, 2025</div>
             <h2 id="title">
-              Rhema Christian Ministries <br /> - 2025 Walkathon -
+              Rhema Christian Ministries - 2025 Walkathon - Church Picnic & Community Fun.
             </h2>
             <br />
             <p>Dear friends,</p>
@@ -86,7 +86,7 @@ export default function Index() {
               <p>This fundraising initiative is organized by Rhema Christian Ministries.</p>
               <div className="button-wrapper flex-column">
                 <Button href="https://myevent.com/rhemaonline/register" target="_blank">
-                  Free Register
+                  Register
                 </Button>
                 <Button href="https://myevent.com/rhemaonline/donate" target="_blank">
                   Donate Now
@@ -277,7 +277,7 @@ export default function Index() {
           </p>
           <p>Have fun supporting a great cause!</p>
           <Button href="https://myevent.com/rhemaonline/register" target="_blank">
-            Free Register
+            Register
           </Button>
         </div>
         {/* {participants} */}
