@@ -61,9 +61,7 @@ export default function Index() {
         <div className="wrapper main">
           <div className="content">
             <div className="date">August 9, 2025</div>
-            <h2 id="title">
-              Rhema Christian Ministries - 2025 Walkathon - Church Picnic & Community Fun.
-            </h2>
+            <h2 id="title">Rhema Christian Ministries - 2025 Walkathon - Church Picnic & Community Fun.</h2>
             <br />
             <p>Dear friends,</p>
             <p>
@@ -204,7 +202,7 @@ export default function Index() {
         <div className="wrapper progress">
           <div className="color"></div>
           <div className="content">
-            <h4 className="goal">1% of Goal</h4>
+            <h4 className="goal">11% of Goal</h4>
             <h4 className="target">Target: $15,000</h4>
           </div>
           <ImgWrapper>
@@ -221,7 +219,7 @@ export default function Index() {
         </div>
         <div className="wrapper raised">
           <h3>
-            <u>$20</u> has been raised
+            <u>$1,732</u> has been raised
           </h3>
         </div>
         <div className="wrapper help">
@@ -402,18 +400,18 @@ export const EventPageContainer = styled(Container)`
       background: #d0fcd9;
       background: linear-gradient(90deg, rgba(208, 252, 217, 1) 0%, rgba(155, 186, 254, 1) 80%);
       height: 100%;
-      width: 47%;
+      width: 11%;
       border-radius: 1.5rem;
       position: absolute;
       z-index: 1;
-      display: none;
+      /* display: none; */
     }
     ${ImgWrapper} {
       width: 1.6875rem;
       height: 3.125rem;
       transform: scaleX(-1);
       position: absolute;
-      left: 0%;
+      left: 11%;
       bottom: 50%;
       z-index: 3;
     }
