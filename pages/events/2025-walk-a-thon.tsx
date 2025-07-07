@@ -1,8 +1,8 @@
 import { Button, Container, ImgWrapper, def } from "styles/GlobalStyle";
 
 import HeadLine from "components/common/HeadLine";
-import Meta from "components/common/meta";
 import Image from "next/image";
+import Meta from "components/common/meta";
 import styled from "styled-components";
 
 const participant = (
@@ -39,6 +39,10 @@ export const participants = (
   </div>
 );
 
+const raised = "11,508";
+const raisedPercentage = "76";
+const targetAmount = "15,000";
+
 export default function Index() {
   const pageTitle = "2025 Walk-a-thon";
   const pageImage =
@@ -74,13 +78,13 @@ export default function Index() {
               your customized fundraising page.
             </p>
             <p>
-              <b>Our goal for this initiative is to raise $15,000.</b> <br />
+              <b>Our goal for this initiative is to raise ${targetAmount}.</b> <br />
               However, you will determine the individual goal you will set for yourself.
             </p>
           </div>
           <div className="side flex-column">
             <div className="goal">
-              <h3>Goal: $15,000</h3>
+              <h3>Goal: ${targetAmount}</h3>
               <p>This fundraising initiative is organized by Rhema Christian Ministries.</p>
               <div className="button-wrapper flex-column">
                 <Button href="https://myevent.com/rhemaonline/register" target="_blank">
@@ -196,14 +200,14 @@ export default function Index() {
               </ImgWrapper>
             </div>
             <div className="title">Goal</div>
-            <div className="text">$15,000 Each participant will set their own target</div>
+            <div className="text">${targetAmount} Each participant will set their own target</div>
           </div>
         </div>
         <div className="wrapper progress">
           <div className="color"></div>
           <div className="content">
-            <h4 className="goal">11% of Goal</h4>
-            <h4 className="target">Target: $15,000</h4>
+            <h4 className="goal">{raisedPercentage}% of Goal</h4>
+            <h4 className="target">Target: ${targetAmount}</h4>
           </div>
           <ImgWrapper>
             <Image
@@ -219,7 +223,7 @@ export default function Index() {
         </div>
         <div className="wrapper raised">
           <h3>
-            <u>$1,732</u> has been raised
+            $<u>{raised}</u> has been raised
           </h3>
         </div>
         <div className="wrapper help">
@@ -400,7 +404,7 @@ export const EventPageContainer = styled(Container)`
       background: #d0fcd9;
       background: linear-gradient(90deg, rgba(208, 252, 217, 1) 0%, rgba(155, 186, 254, 1) 80%);
       height: 100%;
-      width: 11%;
+      width: ${raisedPercentage}%;
       border-radius: 1.5rem;
       position: absolute;
       z-index: 1;
@@ -411,7 +415,7 @@ export const EventPageContainer = styled(Container)`
       height: 3.125rem;
       transform: scaleX(-1);
       position: absolute;
-      left: 11%;
+      left: ${raisedPercentage}%;
       bottom: 50%;
       z-index: 3;
     }
