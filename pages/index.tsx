@@ -1,5 +1,8 @@
-import Meta from "components/common/meta";
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+import { useEffect, useState } from "react";
 
+import Letter from "components/common/Modals/HomeModal";
+import Meta from "components/common/meta";
 import CTAPanel from "components/home/CTAPanel";
 import Hero from "components/home/Hero";
 import Newsletter from "components/home/Newsletter";
@@ -8,9 +11,6 @@ import Welcome from "components/home/Welcome";
 import styled from "styled-components";
 import NewsletterType from "types/newsletter";
 import SlideType from "types/slide";
-import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
-
-// import Letter from "components/common/Modals/HomeModal";
 
 interface Props {
   slides: SlideType[];
@@ -18,17 +18,17 @@ interface Props {
 }
 
 const Home = ({ slides, newsletters }: Props) => {
-  // const [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
-  // useEffect(() => {
-  //   const showModal = setTimeout(() => {
-  //     setOpenModal(true);
-  //   }, 2000);
+  useEffect(() => {
+    const showModal = setTimeout(() => {
+      setOpenModal(true);
+    }, 2000);
 
-  //   return () => {
-  //     clearTimeout(showModal);
-  //   };
-  // }, []);
+    return () => {
+      clearTimeout(showModal);
+    };
+  }, []);
 
   return (
     <>
@@ -48,7 +48,7 @@ const Home = ({ slides, newsletters }: Props) => {
       <CTAPanel />
       <Subscribe />
       <Newsletter newsletters={newsletters} />
-      {/* <Letter openModal={openModal} setOpenModal={setOpenModal} /> */}
+      <Letter openModal={openModal} setOpenModal={setOpenModal} />
     </>
   );
 };
@@ -67,7 +67,7 @@ const VideoWrapper = styled.div`
 export async function getStaticProps() {
   const client = new ApolloClient({
     uri: process.env.WP_URL as string,
-    cache: new InMemoryCache()
+    cache: new InMemoryCache(),
   });
 
   const { data } = await client.query({
@@ -99,12 +99,12 @@ export async function getStaticProps() {
     `,
     variables: {
       numOfNewsletters: 5,
-      after: null
-    }
+      after: null,
+    },
   });
 
   return {
     props: { slides: data?.slides?.nodes, newsletters: data?.newsletters?.nodes },
-    revalidate: 10
+    revalidate: 10,
   };
 }
