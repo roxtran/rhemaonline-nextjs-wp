@@ -39,8 +39,8 @@ export const participants = (
   </div>
 );
 
-const raised = "4,448";
-const raisedPercentage = "29";
+const raised = "5,058";
+const raisedPercentage = "33";
 const targetAmount = "15,000";
 
 export default function Index() {
