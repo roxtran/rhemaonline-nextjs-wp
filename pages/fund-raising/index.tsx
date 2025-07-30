@@ -397,17 +397,6 @@ export default function Index({ slides }: Props) {
           <p className="description">Help us move closer to creating a lasting legacy</p>
           <h2 className="">Together we build the house of God</h2>
           {giveBtn}
-          <ImgWrapper>
-            <Image
-              src="/img/fund-raising/bottom-image.jpeg"
-              alt="introduction"
-              fill
-              sizes="100vw"
-              style={{
-                objectFit: "contain",
-              }}
-            />
-          </ImgWrapper>
         </div>
       </PageContainer>
     </>
