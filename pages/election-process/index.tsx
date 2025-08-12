@@ -1,12 +1,5 @@
 import { Button, Container, ImgWrapper, def } from "styles/GlobalStyle";
 
-import CandidateInfoModal from "./CandidateInfoModal";
-import EarlyVoterModal from "./EarlyVoterModal";
-import HeadLine from "components/common/HeadLine";
-import Image from "next/image";
-import ImageSlider from "components/common/ImageSlider";
-import Meta from "components/common/meta";
-import VotingGuideModal from "./VotingGuideModal";
 import styled from "styled-components";
 import { useState } from "react";
 
@@ -381,142 +374,141 @@ export default function Index() {
   const pageTitle = "Election Process";
   const pageImage = "/img/election/board-members.jpg";
 
-  return (
-    <>
-      <CandidateInfoModal open={openCandidateInfo} setOpen={setOpenCandidateInfo} />
-      <VotingGuideModal open={openVotingGuide} setOpen={setOpenVotingGuide} />
-      <EarlyVoterModal open={openEarlyVoter} setOpen={setOpenEarlyVoter} />
+  return null;
+  // <>
+  //   <CandidateInfoModal open={openCandidateInfo} setOpen={setOpenCandidateInfo} />
+  //   <VotingGuideModal open={openVotingGuide} setOpen={setOpenVotingGuide} />
+  //   <EarlyVoterModal open={openEarlyVoter} setOpen={setOpenEarlyVoter} />
 
-      <Meta title={pageTitle} ogImage={pageImage} />
-      <HeadLine
-        imgUrl={pageImage}
-        title=""
-        blur="blur(0.0625rem)"
-        height="30rem"
-        mbHeight="12rem"
-        isUnderMenu={false}
-      />
-      <PageContainer>
-        <h1 id="title">Rhema Board Election</h1>
-        <div id="procedure" className="wrapper">
-          <div className="left-wrapper">
-            <h2>2025 Election Procedure</h2>
-            <p>
-              The election procedure is designed to uphold the integrity of our process, protect the rights of every
-              member to participate, and{" "}
-              <b>ensure that all candidates are given an equal opportunity to be considered</b>. It reflects our shared
-              commitment to good governance, member representation, and spiritual stewardship.
-            </p>
-          </div>
-          <div className="right-wrapper">
-            <h3>Important Dates</h3>
-            <p>
-              <b>Nomination:</b> April 17 - May 08
-            </p>
-            <p>
-              <b>Screening:</b> May 08 - May 28
-            </p>
-            <p>
-              <b>Campaigning:</b> - June 12 - July 12
-            </p>
-            <p>
-              <b>Voting Period</b> - July 13 - July 31
-            </p>
-          </div>
-        </div>
-        <div id="the-3-section" className="wrapper">
-          <div>
-            <h3>Candidate Info</h3>
-            <p>Check out the guideline if you intend to nominate any potential candidates.</p>
-            <div className="button-wrapper">
-              <Button
-                onClick={() => {
-                  setOpenCandidateInfo(true);
-                }}
-              >
-                Candidate Guide
-              </Button>
-            </div>
-          </div>
-          <div>
-            <h3>Voter Info</h3>
-            <p>Read the voter guide to learn about and understand your voting rights and procedures.</p>
-            <div className="button-wrapper">
-              <Button
-                onClick={() => {
-                  setOpenVotingGuide(true);
-                }}
-              >
-                Voting Guide
-              </Button>
-            </div>
-          </div>
-          <div>
-            <h3>Early Voters</h3>
-            <p>Here’s what you need to know if you have registered to vote early.</p>
-            <div className="button-wrapper">
-              <Button
-                onClick={() => {
-                  setOpenEarlyVoter(true);
-                }}
-              >
-                Important Details
-              </Button>
-            </div>
-          </div>
-        </div>
-        <div id="by-laws" className="wrapper">
-          <div className="divider" />
-          <h2>Read more about our constitution & by-laws</h2>
-          <div className="button-wrapper">
-            <Button href="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/04/RCM-of-Canada-Inc_Constitution_Final_20240130_V1.3-1.pdf">
-              Constitution
-            </Button>
-            <Button href="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/04/RCM-of-Canada-Inc_By-Law_Final-20240718_V1.6-1.pdf">
-              By-laws
-            </Button>
-          </div>
-          <div className="divider" />
-        </div>
-        <div id="information-session" className="wrapper">
-          <h2>Information session slides</h2>
-          <ImageSlider slides={slides} dots={false} autoplay={false} />
-        </div>
-        <div id="road-map" className="wrapper">
-          <h2>2025 Election Road Map</h2>
-          <ImgWrapper>
-            <Image
-              src="/img/election/road-map.jpeg"
-              alt="introduction1"
-              fill
-              sizes="100vw"
-              style={{
-                objectFit: "contain",
-              }}
-            />
-          </ImgWrapper>
-        </div>
-        {/* <div id="candidate-information" className="wrapper">
-          <h2>Candidate Information</h2>
-          <ImgWrapper>
-            <Image
-              src="/img/election/candidates.jpeg"
-              alt="introduction1"
-              fill
-              sizes="100vw"
-              style={{
-                objectFit: "contain"
-              }}
-            />
-          </ImgWrapper>
-        </div> */}
-        <div className="divider" />
-        <div className="button-wrapper faq">
-          <Button href="/election-process/faqs">Election FAQs</Button>
-        </div>
-      </PageContainer>
-    </>
-  );
+  //   <Meta title={pageTitle} ogImage={pageImage} />
+  //   <HeadLine
+  //     imgUrl={pageImage}
+  //     title=""
+  //     blur="blur(0.0625rem)"
+  //     height="30rem"
+  //     mbHeight="12rem"
+  //     isUnderMenu={false}
+  //   />
+  //   <PageContainer>
+  //     <h1 id="title">Rhema Board Election</h1>
+  //     <div id="procedure" className="wrapper">
+  //       <div className="left-wrapper">
+  //         <h2>2025 Election Procedure</h2>
+  //         <p>
+  //           The election procedure is designed to uphold the integrity of our process, protect the rights of every
+  //           member to participate, and{" "}
+  //           <b>ensure that all candidates are given an equal opportunity to be considered</b>. It reflects our shared
+  //           commitment to good governance, member representation, and spiritual stewardship.
+  //         </p>
+  //       </div>
+  //       <div className="right-wrapper">
+  //         <h3>Important Dates</h3>
+  //         <p>
+  //           <b>Nomination:</b> April 17 - May 08
+  //         </p>
+  //         <p>
+  //           <b>Screening:</b> May 08 - May 28
+  //         </p>
+  //         <p>
+  //           <b>Campaigning:</b> - June 12 - July 12
+  //         </p>
+  //         <p>
+  //           <b>Voting Period</b> - July 13 - July 31
+  //         </p>
+  //       </div>
+  //     </div>
+  //     <div id="the-3-section" className="wrapper">
+  //       <div>
+  //         <h3>Candidate Info</h3>
+  //         <p>Check out the guideline if you intend to nominate any potential candidates.</p>
+  //         <div className="button-wrapper">
+  //           <Button
+  //             onClick={() => {
+  //               setOpenCandidateInfo(true);
+  //             }}
+  //           >
+  //             Candidate Guide
+  //           </Button>
+  //         </div>
+  //       </div>
+  //       <div>
+  //         <h3>Voter Info</h3>
+  //         <p>Read the voter guide to learn about and understand your voting rights and procedures.</p>
+  //         <div className="button-wrapper">
+  //           <Button
+  //             onClick={() => {
+  //               setOpenVotingGuide(true);
+  //             }}
+  //           >
+  //             Voting Guide
+  //           </Button>
+  //         </div>
+  //       </div>
+  //       <div>
+  //         <h3>Early Voters</h3>
+  //         <p>Here’s what you need to know if you have registered to vote early.</p>
+  //         <div className="button-wrapper">
+  //           <Button
+  //             onClick={() => {
+  //               setOpenEarlyVoter(true);
+  //             }}
+  //           >
+  //             Important Details
+  //           </Button>
+  //         </div>
+  //       </div>
+  //     </div>
+  //     <div id="by-laws" className="wrapper">
+  //       <div className="divider" />
+  //       <h2>Read more about our constitution & by-laws</h2>
+  //       <div className="button-wrapper">
+  //         <Button href="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/04/RCM-of-Canada-Inc_Constitution_Final_20240130_V1.3-1.pdf">
+  //           Constitution
+  //         </Button>
+  //         <Button href="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/04/RCM-of-Canada-Inc_By-Law_Final-20240718_V1.6-1.pdf">
+  //           By-laws
+  //         </Button>
+  //       </div>
+  //       <div className="divider" />
+  //     </div>
+  //     <div id="information-session" className="wrapper">
+  //       <h2>Information session slides</h2>
+  //       <ImageSlider slides={slides} dots={false} autoplay={false} />
+  //     </div>
+  //     <div id="road-map" className="wrapper">
+  //       <h2>2025 Election Road Map</h2>
+  //       <ImgWrapper>
+  //         <Image
+  //           src="/img/election/road-map.jpeg"
+  //           alt="introduction1"
+  //           fill
+  //           sizes="100vw"
+  //           style={{
+  //             objectFit: "contain",
+  //           }}
+  //         />
+  //       </ImgWrapper>
+  //     </div>
+  //     {/* <div id="candidate-information" className="wrapper">
+  //       <h2>Candidate Information</h2>
+  //       <ImgWrapper>
+  //         <Image
+  //           src="/img/election/candidates.jpeg"
+  //           alt="introduction1"
+  //           fill
+  //           sizes="100vw"
+  //           style={{
+  //             objectFit: "contain"
+  //           }}
+  //         />
+  //       </ImgWrapper>
+  //     </div> */}
+  //     <div className="divider" />
+  //     <div className="button-wrapper faq">
+  //       <Button href="/election-process/faqs">Election FAQs</Button>
+  //     </div>
+  //   </PageContainer>
+  // </>
 }
 
 const PageContainer = styled(Container)`

@@ -65,11 +65,11 @@ export default function Menu({ open, setOpen }: Props) {
         <a onClick={() => setOpen(!open)}>Calendar</a>
       </NavLink>
       <div className="btn-wrapper">
-        <NavLink href="/election-process">
+        {/* <NavLink href="/election-process">
           <a className="button" onClick={() => setOpen(!open)}>
             Election
           </a>
-        </NavLink>
+        </NavLink> */}
         <NavLink href={paths.build}>
           <a className="button build" onClick={() => setOpen(!open)}>
             Build
