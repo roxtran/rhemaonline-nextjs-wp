@@ -24,7 +24,7 @@ export default function Location() {
         <div className="content-wrapper">
           <h1>Toronto Campus</h1>
           <div className="line"></div>
-          <h2>Two Ways To Join Us</h2>
+          {/* <h2>Two Ways To Join Us</h2> */}
           <div className="two-ways-wrapper">
             <div className="in-person-wrapper">
               <Button
@@ -48,7 +48,7 @@ export default function Location() {
                 </div>
               </Button>
             </div>
-            <div className="online-wrapper">
+            {/* <div className="online-wrapper">
               <Button href={paths.liveStream}>
                 <Image
                   width={550}
@@ -65,7 +65,7 @@ export default function Location() {
                   Live Stream
                 </div>
               </Button>
-            </div>
+            </div> */}
           </div>
 
           {displayServiceTime && (

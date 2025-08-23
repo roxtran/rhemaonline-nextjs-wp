@@ -33,17 +33,17 @@ export default function Menu({ open, setOpen }: Props) {
         <a onClick={() => setOpen(!open)}>Connect</a>
       </NavLink>
       <div className="dropdown">
-        <NavLink href={paths.sermons}>
+        <NavLink href={paths.sermonNotes}>
           <a>Sermons</a>
         </NavLink>
-        <div className="dropdown-content">
+        {/* <div className="dropdown-content">
           <NavLink href={paths.sermons}>
             <a onClick={() => setOpen(!open)}>Videos</a>
           </NavLink>
           <NavLink href={paths.sermonNotes}>
             <a onClick={() => setOpen(!open)}>Notes</a>
           </NavLink>
-        </div>
+        </div> */}
       </div>
       <div className="dropdown">
         <NavLink href={paths.virtualHomeGroups}>
@@ -58,9 +58,9 @@ export default function Menu({ open, setOpen }: Props) {
           </NavLink>
         </div>
       </div>
-      <NavLink href={paths.liveStream}>
+      {/* <NavLink href={paths.liveStream}>
         <a onClick={() => setOpen(!open)}>Live Stream</a>
-      </NavLink>
+      </NavLink> */}
       <NavLink href={paths.calendar}>
         <a onClick={() => setOpen(!open)}>Calendar</a>
       </NavLink>

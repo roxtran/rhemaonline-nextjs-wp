@@ -1,9 +1,9 @@
+import BibleModal from "./Modals/BibleModal";
 import Image from "next/image";
 import Link from "next/link";
 import paths from "paths";
-import { useState } from "react";
 import styled from "styled-components";
-import BibleModal from "./Modals/BibleModal";
+import { useState } from "react";
 
 export default function Footer() {
   const [openBible, setOpenBible] = useState(false);
@@ -110,9 +110,9 @@ export default function Footer() {
           <div className="list">
             <h4>Resources</h4>
             <ul>
-              <li>
+              {/* <li>
                 <Link href={paths.liveStream}>Live Stream</Link>
-              </li>
+              </li> */}
               {/* <li>
                 <Link href={paths.facilityBookings}>Facility Bookings</Link>
               </li> */}
@@ -151,9 +151,6 @@ export default function Footer() {
                 >
                   By-laws
                 </a>
-              </li>
-              <li>
-                <Link href={"/election-process"}>Board Members Election</Link>
               </li>
             </ul>
           </div>
