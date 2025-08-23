@@ -53,6 +53,16 @@ export default class MyDocument extends Document {
             crossOrigin="anonymous"
           ></script>
           <script src="https://js.churchcenter.com/modal/v1"></script>
+          {/* <!-- Google tag (gtag.js) --> */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-NFSF8Z7PX3"></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-NFSF8Z7PX3');`,
+            }}
+          ></script>
         </Head>
         <body>
           <Main />
