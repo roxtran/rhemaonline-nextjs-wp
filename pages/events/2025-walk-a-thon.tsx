@@ -1,8 +1,8 @@
 import { Button, Container, ImgWrapper, def } from "styles/GlobalStyle";
 
 import HeadLine from "components/common/HeadLine";
-import Image from "next/image";
 import Meta from "components/common/meta";
+import Image from "next/image";
 import styled from "styled-components";
 
 const participant = (
@@ -39,8 +39,8 @@ export const participants = (
   </div>
 );
 
-const raised = "11,763";
-const raisedPercentage = "78";
+const raised = "12,344";
+const raisedPercentage = "82";
 const targetAmount = "15,000";
 
 export default function Index() {
