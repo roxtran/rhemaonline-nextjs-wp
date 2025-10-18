@@ -81,6 +81,8 @@ export const NotesContainer = styled.section`
 
 export const NoteContainer = styled(NotesContainer)`
   .note-wrapper {
+    overflow: hidden;
+
     .date {
       font-style: italic;
       margin-bottom: 0;
