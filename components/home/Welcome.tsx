@@ -2,7 +2,6 @@ import { Button, ImgWrapper } from "styles/GlobalStyle";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import paths from "paths";
 import styled from "styled-components";
 
@@ -31,9 +30,7 @@ export default function Welcome() {
           we seek to Change and Affect Lives by equipping the whole person with sound biblical and spiritual truths and
           practical encouragement.
         </p>
-        <Link href={paths.about}>
-          <Button>More about us</Button>
-        </Link>
+        <Button href={paths.about}>More about us</Button>
       </motion.div>
     </WelcomeWrapper>
   );
@@ -49,6 +46,9 @@ export const WelcomeWrapper = styled(motion.section)`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  ${Button} {
+    width: fit-content;
+  }
   ${ImgWrapper} {
     flex: 1;
     height: 25rem;
@@ -103,8 +103,5 @@ export const WelcomeWrapper = styled(motion.section)`
     h2 {
       margin-top: 3rem;
     }
-  }
-
-  @media screen and (orientation: portrait) {
   }
 `;

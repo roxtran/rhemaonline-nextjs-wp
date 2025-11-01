@@ -2,7 +2,6 @@ import { Button, Container, def } from "styles/GlobalStyle";
 
 import HeadLine from "components/common/HeadLine";
 import ImageSlider from "components/common/ImageSlider";
-import Link from "next/link";
 import Meta from "components/common/meta";
 import slides from "data/foodbank-slides";
 import styled from "styled-components";
@@ -26,9 +25,7 @@ const foodbank = () => {
               pre-packaged grocery bags filled with everything a family requires. We are changing and affecting lives by
               ensuring that no family is hungry. Matt 25:34-36
             </p>
-            <Link href="/giving">
-              <Button>Make A Donation</Button>
-            </Link>
+            <Button href="/giving">Make A Donation</Button>
           </div>
         </div>
       </FoodbankContainer>

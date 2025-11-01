@@ -1,10 +1,9 @@
 import { Button, Container, ImgWrapper, def } from "styles/GlobalStyle";
 
 import HeadLine from "components/common/HeadLine";
-import Image from "next/image";
-import Link from "next/link";
 import Meta from "components/common/meta";
 import { default as ministriesData } from "data/ministries";
+import Image from "next/image";
 import styled from "styled-components";
 
 const ministries = () => {
@@ -46,11 +45,7 @@ const ministries = () => {
               </ImgWrapper>
               <div className="content-wrapper">
                 <h3>{ministry.name}</h3>
-                {ministry.btnText && (
-                  <Link href={ministry.btnLink}>
-                    <Button>{ministry.btnText}</Button>
-                  </Link>
-                )}
+                {ministry.btnText && <Button href={ministry.btnLink}>{ministry.btnText}</Button>}
               </div>
             </div>
           ))}

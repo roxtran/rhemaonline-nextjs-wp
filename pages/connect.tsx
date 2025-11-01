@@ -62,15 +62,13 @@ export default function Connect({ services }: Props) {
                   </a>
                 </div>
               ) : (
-                <Link href={service.formLink.formLink}>
-                  <div className="text-wrapper">
-                    <h3>{service.title}</h3>
-                    <div dangerouslySetInnerHTML={{ __html: service.content }}></div>
-                    <a>
-                      <span>{service.formLink.linkText}</span>
-                    </a>
-                  </div>
-                </Link>
+                <div className="text-wrapper">
+                  <h3>{service.title}</h3>
+                  <div dangerouslySetInnerHTML={{ __html: service.content }}></div>
+                  <Link href={service.formLink.formLink}>
+                    <span>{service.formLink.linkText}</span>
+                  </Link>
+                </div>
               )}
             </div>
           ))}
