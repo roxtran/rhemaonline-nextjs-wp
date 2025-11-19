@@ -1,11 +1,11 @@
 import { Button, ImgWrapper, def } from "styles/GlobalStyle";
 
-import HeadLine from "components/common/HeadLine";
-import Meta from "components/common/meta";
-import Image from "next/image";
-import { useEffect } from "react";
-import styled from "styled-components";
 import { EventPageContainer } from "./2025-walk-a-thon";
+import HeadLine from "components/common/HeadLine";
+import Image from "next/image";
+import Meta from "components/common/meta";
+import styled from "styled-components";
+import { useEffect } from "react";
 
 export default function Index() {
   const pageTitle = "2025 New Year’s Eve Gala - A Night of Elegance";
@@ -141,19 +141,25 @@ export default function Index() {
           <p>DIAMOND SPONSORS</p>
           <div className="cards diamond">
             <div className="card">
-              <img src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/10/company-name.jpeg" alt="" />
+              <img src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/11/Giguere_2025.jpg" alt="" />
               <div className="text">some company name</div>
             </div>
             <div className="card">
-              <img src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/10/company-name.jpeg" alt="" />
+              <img
+                src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/11/Ex-Stream-Filtration.jpg"
+                alt=""
+              />
               <div className="text">some company name</div>
             </div>
             <div className="card">
-              <img src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/10/company-name.jpeg" alt="" />
+              <img src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/11/Giguere_2025.jpg" alt="" />
               <div className="text">some company name</div>
             </div>
             <div className="card">
-              <img src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/10/company-name.jpeg" alt="" />
+              <img
+                src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/11/Ex-Stream-Filtration.jpg"
+                alt=""
+              />
               <div className="text">some company name</div>
             </div>
           </div>
@@ -162,19 +168,25 @@ export default function Index() {
           <p>GOLD SPONSORS</p>
           <div className="cards gold">
             <div className="card">
-              <img src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/10/company-name.jpeg" alt="" />
+              <img src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/11/Giguere_2025.jpg" alt="" />
               <div className="text">some company name</div>
             </div>
             <div className="card">
-              <img src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/10/company-name.jpeg" alt="" />
+              <img
+                src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/11/Ex-Stream-Filtration.jpg"
+                alt=""
+              />
               <div className="text">some company name</div>
             </div>
             <div className="card">
-              <img src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/10/company-name.jpeg" alt="" />
+              <img src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/11/Giguere_2025.jpg" alt="" />
               <div className="text">some company name</div>
             </div>
             <div className="card">
-              <img src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/10/company-name.jpeg" alt="" />
+              <img
+                src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/11/Ex-Stream-Filtration.jpg"
+                alt=""
+              />
               <div className="text">some company name</div>
             </div>
           </div>
@@ -183,19 +195,25 @@ export default function Index() {
           <p>SILVER SPONSORS</p>
           <div className="cards silver">
             <div className="card">
-              <img src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/10/company-name.jpeg" alt="" />
+              <img src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/11/Giguere_2025.jpg" alt="" />
               <div className="text">some company name</div>
             </div>
             <div className="card">
-              <img src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/10/company-name.jpeg" alt="" />
+              <img
+                src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/11/Ex-Stream-Filtration.jpg"
+                alt=""
+              />
               <div className="text">some company name</div>
             </div>
             <div className="card">
-              <img src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/10/company-name.jpeg" alt="" />
+              <img src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/11/Giguere_2025.jpg" alt="" />
               <div className="text">some company name</div>
             </div>
             <div className="card">
-              <img src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/10/company-name.jpeg" alt="" />
+              <img
+                src="https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/11/Ex-Stream-Filtration.jpg"
+                alt=""
+              />
               <div className="text">some company name</div>
             </div>
           </div>
@@ -293,7 +311,7 @@ export const Container = styled(EventPageContainer)`
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   /* back face: the text. pre-rotated so it becomes visible when parent rotates */
