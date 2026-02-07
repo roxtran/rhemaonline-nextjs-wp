@@ -1,13 +1,12 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import { Button, Container, ImgWrapper, def } from "styles/GlobalStyle";
 
+import Meta from "components/common/meta";
 import Hero from "components/home/Hero";
 import Image from "next/image";
-import ImageSlider from "components/common/ImageSlider";
-import Meta from "components/common/meta";
-import SlideType from "types/slide";
 import { VideoWrapper } from "pages/sermons/styles";
 import styled from "styled-components";
+import SlideType from "types/slide";
 
 const goalSlides = [
   {
@@ -148,7 +147,7 @@ export default function Index({ slides }: Props) {
       <PageContainer>
         <h1 id="title">Let's Build to Serve and Transform Together</h1>
         <p className="description highlight">
-          Join us in building a house where worship, spiritual growth, and God’s presence thrive.
+          Join us as we invest in initiatives that strengthen families, support our community, and advance our mission.
         </p>
         <div className="wrapper build">
           <div className="left-wrapper flex-column">
@@ -195,10 +194,10 @@ export default function Index({ slides }: Props) {
           </div>
           <div className="right-wrapper flex-column highlight-border-top">
             <div className="target">
-              <span className="number highlight">CA$ 2,000,000</span> - Target Goal
+              <span className="number highlight">CA$ 100,000</span> - 2026 Target Goal
             </div>
-            <p>funded amount as of today: $8,000</p>
-            <p className="gift">Every gift, big or small, brings us closer to funding our new home!</p>
+            <p>Funds Raised in 2025: $100,000</p>
+            <p className="gift">Every contribution advances the work we are called to do.</p>
             {giveBtn}
             <div className="share-wrapper">
               <p>Share with friends:</p>
@@ -220,8 +219,8 @@ export default function Index({ slides }: Props) {
           <div className="left-wrapper">
             <h2 className="highlight">From our senior pastor</h2>
             <p>
-              For over 25 years, we have been dedicated to changing and affecting lives, serving families, children, and
-              older adults in the Greater Toronto Area. Take a look at some of our work...
+              For over 2 decades, we have been dedicated to changing and affecting lives, serving families, children,
+              and older adults in the Greater Toronto Area. Take a look at some of our work...
             </p>
           </div>
 
@@ -246,47 +245,37 @@ export default function Index({ slides }: Props) {
           <div className="reason-wrapper">
             <h2>The reason for this fundraising</h2>
             <p>
-              Rhema Christian Ministries (RCM) is seeking the perfect place to call our home to expand our mission of
-              changing lives in the Greater Toronto Area. For the past 25 years, we’ve served families, children, and
-              older adults through vital programs like our food bank, that provides essential aid to those in need. This
-              new space will allow us to continue this work while creating a hub for community growth and
-              transformation.
+              Rhema Christian Ministries is committed to serving families, youth, and older adults throughout the
+              Greater Toronto Area. For over two decades, we have provided essential programs that strengthen lives,
+              uplift communities, and share God’s love in meaningful ways.
             </p>
             <p>
-              We invite you to partner with us on this exciting journey. Our goal is to raise $2 million, divided into
-              four manageable phases, allowing us to focus on each milestone as we progress. Your support will help us
-              reach these targets, ensuring we secure a space that reflects the heart of God through Rhema Christian
-              Ministries: building community, offering hope, and advancing God’s Kingdom. Let’s grow together as we
-              build together.
+              Our 2026 fundraising goal of $100,000 will empower us to expand these efforts, enhance our outreach, and
+              continue serving with excellence. Your support helps ensure that our ministry remains a source of hope,
+              care, and transformation.
             </p>
           </div>
         </div>
         <div id="the-numbers" className="wrapper numbers">
           <div className="expected-goal flex-column">
             <div className="number highlight">2026</div>
-            <div className="subtitle">
-              <b>Expected Goal Reached</b>
-              <br /> by the next 2 years
-            </div>
-            <div className="copy">
+            <div className="subtitle">Target Goal: $100,000</div>
+            {/* <div className="copy">
               2025 Goals: As our campaign gains momentum, we’ll unite our community through outreach events such as
               dinner gatherings, bus trips, and more.
-            </div>
+            </div> */}
             <div className="line"></div>
           </div>
           <div className="funded-amount flex-column">
-            <div className="number highlight">$25K</div>
-            <div className="subtitle">
-              <b>Funded Amount</b>
-              <br /> to be raised in Phase 1
-            </div>
-            <div className="copy">
+            <div className="number highlight">2025</div>
+            <div className="subtitle">Funds Raised: $100,000</div>
+            {/* <div className="copy">
               At the same time, we’ll keep our church members engaged and informed through social media, email updates,
               and pledge drives, ensuring everyone can participate in this exciting journey.
-            </div>
+            </div> */}
             <div className="line"></div>
           </div>
-          <div className="funded-raised flex-column">
+          {/* <div className="funded-raised flex-column">
             <div className="number highlight">$8K+</div>
             <div className="subtitle">
               <b>Fund Raised</b>
@@ -297,8 +286,9 @@ export default function Index({ slides }: Props) {
               purpose, reminding us that no gift is too small when it comes from the heart.
             </div>
             <div className="line"></div>
-          </div>
+          </div> */}
         </div>
+        <p>Your generosity makes this work possible. Every gift contributes to lasting impact.</p>
         {/* <div id="give" className="wrapper give">
           <iframe
             src="https://rhemachristianministries.churchcenter.com/giving/to/other-income-fundraisers"
@@ -312,7 +302,7 @@ export default function Index({ slides }: Props) {
           <div className="button-wrapper">
             <Button href="#introduction">Introduction</Button>
             <Button href="#message">Message from our Senior Pastor</Button>
-            <Button href="#goals">2025 Goals</Button>
+            <Button href="https://webte.my.canva.site/2025-year-in-review">2025 Year in Review</Button>
           </div>
         </div>
         <div id="introduction" className="wrapper introduction">
@@ -322,15 +312,14 @@ export default function Index({ slides }: Props) {
               <i>“We’re Building for the Future – Together We Build!”</i> – Rhema Christian Ministries
             </p>
             <p>
-              At Rhema Christian Ministries, we are on a journey to find the perfect place to call our home—a dwelling
-              that will allow us to expand our ministry and meet the needs of the communities we serve in the Greater
-              Toronto Area.
+              At Rhema Christian Ministries, our mission is to transform lives through the power of God’s love. We serve
+              children, youth, adults, and seniors through programs designed to uplift, equip, and support individuals
+              and families in our community.
             </p>
             <p>
-              For over 20 years, our mission has been to change and affect lives through the power of God’s love,
-              serving families—children, young and older adults alike—with care and compassion. A cornerstone of this
-              mission is our food bank, which provides essential support to individuals and families in need. This vital
-              service has been a lifeline for so many, and we are committed to continuing this work unhindered.
+              For over two decades, our food bank, seasonal outreach initiatives, youth programs, and family support
+              services have met critical needs. With your partnership, we continue this work and expand our reach to
+              those who need it most.
             </p>
           </div>
 
@@ -364,24 +353,19 @@ export default function Index({ slides }: Props) {
           </div>
           <div className="left-wrapper">
             <p>
-              We envision a space where we can do even more: a home that supports our ministry work, nurtures families,
-              provides resources for children and youth to thrive, ensures our older adults are cared for with dignity,
-              and sustains our food bank, Christmas community dinner and Christmas toy drive as a beacon of hope for our
-              local communities.
+              We envision a ministry that continues to grow, serve, and respond to the needs of our community. Through
+              your support, we are able to strengthen families, empower young people, care for older adults with
+              dignity, and offer practical help through our outreach and compassion programs.
             </p>
             <p>
-              This new home will be a hub of transformation, a place where lives are changed, and communities are
-              strengthened. Together, we will build a foundation for growth, hope, and impact—one brick at a time.
+              Your partnership helps us build a foundation for ongoing impact—one initiative, one act of service, and
+              one transformed life at a time.
             </p>
-            <p>
-              We invite you to partner with us in this exciting endeavor. Your support will help us secure and develop a
-              space that reflects the heart of God through Rhema Christian Ministries: changing lives, building
-              community, and advancing the Kingdom of God.
-            </p>
+
             <p>Let’s grow together as we build together!</p>
           </div>
         </div>
-        <div id="goals" className="wrapper goals">
+        {/* <div id="goals" className="wrapper goals">
           <h2 className="highlight">2025 Goals</h2>
           <p className="description">
             As the campaign gains momentum, we'll host community outreach events, including dinner gatherings and other
@@ -389,7 +373,9 @@ export default function Index({ slides }: Props) {
             pledge drives.
           </p>
           <ImageSlider slides={goalSlides} />
-        </div>
+        </div> */}
+
+        {/* <iframe src="https://webte.my.canva.site/2025-year-in-review/" frameborder={0}></iframe> */}
 
         <div className="divider"></div>
 
