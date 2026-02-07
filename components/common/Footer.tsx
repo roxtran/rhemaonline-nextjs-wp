@@ -54,17 +54,18 @@ export default function Footer() {
               <li>
                 <Link href={paths.connect + "#become-a-member"}>Become A Member</Link>
               </li>
+              <li>
+                <Link href={paths.giving}>Give</Link>
+              </li>
               {/* <li>
               <Link href={paths.getConnected + '#groups'}>
                 <a>Groups</a>
               </Link>
             </li> */}
             </ul>
-            <ul>
+            {/* <ul>
               <h4>Finance</h4>
-              <li>
-                <Link href={paths.giving}>Give</Link>
-              </li>
+
               <li>
                 <a
                   href="http://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2023/01/RCM-2020-Audited-Financial-Statements.pdf"
@@ -105,7 +106,7 @@ export default function Footer() {
                   2024 Financial Statement
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
           <div className="list">
             <h4>Resources</h4>
