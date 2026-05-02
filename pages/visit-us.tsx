@@ -1,11 +1,11 @@
 import { Button, Container, def } from "styles/GlobalStyle";
 
-import Image from "next/image";
 import Meta from "components/common/meta";
 import Video from "components/common/Video";
+import Image from "next/image";
 import paths from "paths";
-import styled from "styled-components";
 import { useState } from "react";
+import styled from "styled-components";
 
 export default function Location() {
   const [displayServiceTime, setDisplayServiceTime] = useState(false);
@@ -79,13 +79,13 @@ export default function Location() {
                   {/* <p>
                     <span>Bible Study:</span> 1st, 2nd, & 3rd Wednesdays of every month - 7 PM
                   </p> */}
-                  <h4>Montecassino Hotel & Suites</h4>
-                  <p>3710 Chesswood Drive, Toronto, ON, M3J 2W4, Canada</p>
+                  {/* <h4>Montecassino Hotel & Suites</h4> */}
+                  <p>300 Steeprock Drive, North York, ON M3J 2X1, Canada</p>
                 </div>
               </div>
               <div className="map-wrapper">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11527.263130265303!2d-79.4748031!3d43.7559221!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b31f914709215%3A0xa9775f99a52eb95a!2sMontecassino%20Hotel%20and%20Event%20Centre!5e0!3m2!1sen!2sca!4v1725892797281!5m2!1sen!2sca"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.640830846871!2d-79.47383732239607!3d43.759554771097235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b31ff9d007ce9%3A0xcd7be29f3c03339c!2s300%20Steeprock%20Dr%2C%20North%20York%2C%20ON%20M3J%202X1!5e0!3m2!1sen!2sca!4v1777694921621!5m2!1sen!2sca"
                   width="1000"
                   height="360"
                   style={{ border: 0 }}
