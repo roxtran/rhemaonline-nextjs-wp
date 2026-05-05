@@ -11,10 +11,15 @@ function generateCodeChallenge(verifier: string): string {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const clientId = process.env.PCO_CLIENT_ID;
-  const redirectUri = process.env.PCO_REDIRECT_URI;
 
-  if (!clientId || !redirectUri) {
-    return res.status(500).json({ error: "Planning Center OAuth is not configured." });
+  // Dynamically determine the base URL
+  const isLocalhost = req.headers.host?.includes("localhost");
+  const protocol = req.headers["x-forwarded-proto"] || (isLocalhost ? "http" : "https");
+  const baseUrl = isLocalhost ? `http://${req.headers.host}` : (process.env.HOME_URL || `${protocol}://${req.headers.host}`);
+  const redirectUri = `${baseUrl}/api/auth/pco-callback`;
+
+  if (!clientId) {
+    return res.status(500).json({ error: "Planning Center OAuth Client ID is not configured." });
   }
 
   // Generate PKCE code verifier and challenge

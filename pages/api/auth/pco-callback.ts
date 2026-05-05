@@ -69,9 +69,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const clientId = process.env.PCO_CLIENT_ID;
   const clientSecret = process.env.PCO_CLIENT_SECRET;
-  const redirectUri = process.env.PCO_REDIRECT_URI;
+  
+  // Dynamically determine the base URL
+  const isLocalhost = req.headers.host?.includes("localhost");
+  const protocol = req.headers["x-forwarded-proto"] || (isLocalhost ? "http" : "https");
+  const baseUrl = isLocalhost ? `http://${req.headers.host}` : (process.env.HOME_URL || `${protocol}://${req.headers.host}`);
+  const redirectUri = `${baseUrl}/api/auth/pco-callback`;
 
-  if (!clientId || !clientSecret || !redirectUri) {
+  if (!clientId || !clientSecret) {
     return res.redirect(302, "/prayer?auth_error=server_config");
   }
 
