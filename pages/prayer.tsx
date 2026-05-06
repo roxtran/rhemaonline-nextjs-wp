@@ -108,7 +108,7 @@ const UserIcon = () => <Glyph>👤</Glyph>;
 
 /* ── Styled Components ── */
 
-const Page = styled.div`min-height:100vh;background:#f8fafc;color:#0f172a; a:hover{color:#fff};`;
+const Page = styled.div`min-height:100vh;background:#f8fafc;color:#0f172a;`;
 const Container = styled.div`max-width:1280px;margin:0 auto;padding:32px 16px;@media(min-width:640px){padding:32px 24px;}`;
 const Header = styled.div`display:flex;flex-direction:column;gap:16px;margin-bottom:32px;@media(min-width:900px){flex-direction:row;align-items:flex-end;justify-content:space-between;}`;
 const Badge = styled.p`display:inline-flex;align-items:center;gap:8px;width:fit-content;margin:0 0 8px;padding:6px 12px;border-radius:999px;background:#fff;border:1px solid #e2e8f0;box-shadow:0 1px 2px rgba(15,23,42,.06);font-size:14px;`;
@@ -149,7 +149,7 @@ const PcoLoginButton = styled.a`
   text-decoration:none;cursor:pointer;transition:all .2s ease;
   background:linear-gradient(135deg,#4f46e5 0%,#7c3aed 50%,#6366f1 100%);
   color:#fff;border:none;box-shadow:0 4px 14px rgba(79,70,229,.35);
-  &:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(79,70,229,.45);}
+  &:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(79,70,229,.45);color:#fff}
   &:active{transform:translateY(0);}
 `;
 
