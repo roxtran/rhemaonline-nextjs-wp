@@ -4,120 +4,11 @@ import { Button, Container, ImgWrapper, def } from "styles/GlobalStyle";
 import Meta from "components/common/meta";
 import Hero from "components/home/Hero";
 import Image from "next/image";
+import Link from "next/link";
 import { VideoWrapper } from "pages/sermons/styles";
 import styled from "styled-components";
 import SlideType from "types/slide";
-
-const goalSlides = [
-  {
-    title: "slide 1",
-    content: "",
-    featuredImage: {
-      node: {
-        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_3082-scaled.jpg",
-      },
-    },
-    slideFields: {
-      ctaUrl: "",
-    },
-  },
-  {
-    title: "slide 2",
-    content: "",
-    featuredImage: {
-      node: {
-        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_3031-scaled.jpg",
-      },
-    },
-    slideFields: {
-      ctaUrl: "",
-    },
-  },
-  {
-    title: "slide 3",
-    content: "",
-    featuredImage: {
-      node: {
-        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_2985-scaled.jpg",
-      },
-    },
-    slideFields: {
-      ctaUrl: "",
-    },
-  },
-  {
-    title: "slide 4",
-    content: "",
-    featuredImage: {
-      node: {
-        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_2965-scaled.jpg",
-      },
-    },
-    slideFields: {
-      ctaUrl: "",
-    },
-  },
-  {
-    title: "slide 5",
-    content: "",
-    featuredImage: {
-      node: {
-        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_2886-scaled.jpg",
-      },
-    },
-    slideFields: {
-      ctaUrl: "",
-    },
-  },
-  {
-    title: "slide 6",
-    content: "",
-    featuredImage: {
-      node: {
-        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_2878-scaled.jpg",
-      },
-    },
-    slideFields: {
-      ctaUrl: "",
-    },
-  },
-  {
-    title: "slide 7",
-    content: "",
-    featuredImage: {
-      node: {
-        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_2846-scaled.jpg",
-      },
-    },
-    slideFields: {
-      ctaUrl: "",
-    },
-  },
-  {
-    title: "slide 8",
-    content: "",
-    featuredImage: {
-      node: {
-        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_2790-scaled.jpg",
-      },
-    },
-    slideFields: {
-      ctaUrl: "",
-    },
-  },
-  {
-    title: "slide 9",
-    content: "",
-    featuredImage: {
-      node: {
-        sourceUrl: "https://cms.rhemacanada.com/rhemaonline/wp-content/uploads/2025/03/NIK_2789-scaled.jpg",
-      },
-    },
-    slideFields: {
-      ctaUrl: "",
-    },
-  },
-];
+import { events } from "data/fundRaisingGallery";
 
 interface Props {
   slides: SlideType[];
@@ -147,7 +38,8 @@ export default function Index({ slides }: Props) {
       <PageContainer>
         <h1 id="title">Let's Build to Serve and Transform Together</h1>
         <p className="description highlight">
-          Join us as we invest in initiatives that strengthen families, support our community, and advance our mission.
+          Join us as we invest in initiatives that strengthen families, support
+          our community, and advance our mission.
         </p>
         <div className="wrapper build">
           <div className="left-wrapper flex-column">
@@ -165,22 +57,28 @@ export default function Index({ slides }: Props) {
             <div className="item-list">
               <div className="item">
                 <a href="https://rhemacanada.ca/" target="_blank">
-                  <img className="icon" width={32} src="/img/fund-raising/rhema-icon.jpeg" alt="Rhema Canada" />
+                  <img
+                    className="icon"
+                    width={32}
+                    src="/img/fund-raising/rhema-icon.jpeg"
+                    alt="Rhema Canada"
+                  />
                   <div className="text">Rhema Canada</div>
                 </a>
               </div>
               <div className="item">
                 <a href="#" target="_blank">
-                  <img className="icon" width={32} src="/img/fund-raising/funding-icon.png" alt="Location Funding" />
+                  <img
+                    className="icon"
+                    width={32}
+                    src="/img/fund-raising/funding-icon.png"
+                    alt="Location Funding"
+                  />
                   <div className="text">Location Funding</div>
                 </a>
               </div>
               <div className="item">
-                <a
-                  href="https://rhemaonline.ca/visit-us
-"
-                  target="_blank"
-                >
+                <a href="https://rhemaonline.ca/visit-us" target="_blank">
                   <img
                     className="icon"
                     width={32}
@@ -194,19 +92,34 @@ export default function Index({ slides }: Props) {
           </div>
           <div className="right-wrapper flex-column highlight-border-top">
             <div className="target">
-              <span className="number highlight">CA$ 100,000</span> - 2026 Target Goal
+              <span className="number highlight">CA$ 100,000</span> - 2026
+              Target Goal
             </div>
             <p>Funds Raised in 2025: $100,000</p>
-            <p className="gift">Every contribution advances the work we are called to do.</p>
+            <p className="gift">
+              Every contribution advances the work we are called to do.
+            </p>
             {giveBtn}
             <div className="share-wrapper">
               <p>Share with friends:</p>
               <div className="social-icons">
-                <a href="https://www.facebook.com/Rhemachristianministries/" target="_blank">
-                  <img src="/img/fund-raising/facebook-icon.jpeg" alt="Facebook" />
+                <a
+                  href="https://www.facebook.com/Rhemachristianministries/"
+                  target="_blank"
+                >
+                  <img
+                    src="/img/fund-raising/facebook-icon.jpeg"
+                    alt="Facebook"
+                  />
                 </a>
-                <a href="https://x.com/i/flow/login?redirect_after_login=%2Frhemacanada" target="_blank">
-                  <img src="/img/fund-raising/twitter-icon.jpeg" alt="Twitter" />
+                <a
+                  href="https://x.com/i/flow/login?redirect_after_login=%2Frhemacanada"
+                  target="_blank"
+                >
+                  <img
+                    src="/img/fund-raising/twitter-icon.jpeg"
+                    alt="Twitter"
+                  />
                 </a>
                 <a href="mailto:info@rhemaonline.ca">
                   <img src="/img/fund-raising/email-icon.jpeg" alt="Email" />
@@ -219,8 +132,9 @@ export default function Index({ slides }: Props) {
           <div className="left-wrapper">
             <h2 className="highlight">From our senior pastor</h2>
             <p>
-              For over 2 decades, we have been dedicated to changing and affecting lives, serving families, children,
-              and older adults in the Greater Toronto Area. Take a look at some of our work...
+              For over 2 decades, we have been dedicated to changing and
+              affecting lives, serving families, children, and older adults in
+              the Greater Toronto Area. Take a look at some of our work...
             </p>
           </div>
 
@@ -245,14 +159,17 @@ export default function Index({ slides }: Props) {
           <div className="reason-wrapper">
             <h2>The reason for this fundraising</h2>
             <p>
-              Rhema Christian Ministries is committed to serving families, youth, and older adults throughout the
-              Greater Toronto Area. For over two decades, we have provided essential programs that strengthen lives,
-              uplift communities, and share God’s love in meaningful ways.
+              Rhema Christian Ministries is committed to serving families,
+              youth, and older adults throughout the Greater Toronto Area. For
+              over two decades, we have provided essential programs that
+              strengthen lives, uplift communities, and share God’s love in
+              meaningful ways.
             </p>
             <p>
-              Our 2026 fundraising goal of $100,000 will empower us to expand these efforts, enhance our outreach, and
-              continue serving with excellence. Your support helps ensure that our ministry remains a source of hope,
-              care, and transformation.
+              Our 2026 fundraising goal of $100,000 will empower us to expand
+              these efforts, enhance our outreach, and continue serving with
+              excellence. Your support helps ensure that our ministry remains a
+              source of hope, care, and transformation.
             </p>
           </div>
         </div>
@@ -288,7 +205,10 @@ export default function Index({ slides }: Props) {
             <div className="line"></div>
           </div> */}
         </div>
-        <p>Your generosity makes this work possible. Every gift contributes to lasting impact.</p>
+        <p>
+          Your generosity makes this work possible. Every gift contributes to
+          lasting impact.
+        </p>
         {/* <div id="give" className="wrapper give">
           <iframe
             src="https://rhemachristianministries.churchcenter.com/giving/to/other-income-fundraisers"
@@ -302,24 +222,27 @@ export default function Index({ slides }: Props) {
           <div className="button-wrapper">
             <Button href="#introduction">Introduction</Button>
             <Button href="#message">Message from our Senior Pastor</Button>
-            <Button href="https://webte.my.canva.site/2025-year-in-review">2025 Year in Review</Button>
+            <Button href="/fund-raising/gallery">2025 Year in Review</Button>
           </div>
         </div>
         <div id="introduction" className="wrapper introduction">
           <div className="left-wrapper">
             <h2 className="highlight">Introduction</h2>
             <p>
-              <i>“We’re Building for the Future – Together We Build!”</i> – Rhema Christian Ministries
+              <i>“We’re Building for the Future – Together We Build!”</i> –
+              Rhema Christian Ministries
             </p>
             <p>
-              At Rhema Christian Ministries, our mission is to transform lives through the power of God’s love. We serve
-              children, youth, adults, and seniors through programs designed to uplift, equip, and support individuals
-              and families in our community.
+              At Rhema Christian Ministries, our mission is to transform lives
+              through the power of God’s love. We serve children, youth, adults,
+              and seniors through programs designed to uplift, equip, and
+              support individuals and families in our community.
             </p>
             <p>
-              For over two decades, our food bank, seasonal outreach initiatives, youth programs, and family support
-              services have met critical needs. With your partnership, we continue this work and expand our reach to
-              those who need it most.
+              For over two decades, our food bank, seasonal outreach
+              initiatives, youth programs, and family support services have met
+              critical needs. With your partnership, we continue this work and
+              expand our reach to those who need it most.
             </p>
           </div>
 
@@ -353,34 +276,60 @@ export default function Index({ slides }: Props) {
           </div>
           <div className="left-wrapper">
             <p>
-              We envision a ministry that continues to grow, serve, and respond to the needs of our community. Through
-              your support, we are able to strengthen families, empower young people, care for older adults with
-              dignity, and offer practical help through our outreach and compassion programs.
+              We envision a ministry that continues to grow, serve, and respond
+              to the needs of our community. Through your support, we are able
+              to strengthen families, empower young people, care for older
+              adults with dignity, and offer practical help through our outreach
+              and compassion programs.
             </p>
             <p>
-              Your partnership helps us build a foundation for ongoing impact—one initiative, one act of service, and
-              one transformed life at a time.
+              Your partnership helps us build a foundation for ongoing
+              impact—one initiative, one act of service, and one transformed
+              life at a time.
             </p>
 
             <p>Let’s grow together as we build together!</p>
           </div>
         </div>
-        {/* <div id="goals" className="wrapper goals">
-          <h2 className="highlight">2025 Goals</h2>
-          <p className="description">
-            As the campaign gains momentum, we'll host community outreach events, including dinner gatherings and other
-            activities and events while continuing to engage church members through social media, email updates, and
-            pledge drives.
-          </p>
-          <ImageSlider slides={goalSlides} />
-        </div> */}
-
-        {/* <iframe src="https://webte.my.canva.site/2025-year-in-review/" frameborder={0}></iframe> */}
+        <div id="year-in-review" className="wrapper year-in-review flex-column">
+          <div className="title-section">
+            <h2 className="highlight">2025 Year In-Review</h2>
+            <p>
+              Thank you for your generosity and partnership. Explore the
+              highlights, milestones, and impact of 2025 in our Year in Review.
+            </p>
+          </div>
+          <div className="gallery-grid">
+            {events.map((event, index) => (
+              <Link href={`/fund-raising/gallery?id=${event.id}`} key={event.id} passHref legacyBehavior>
+                <a className="gallery-card">
+                  <div className="image-wrapper">
+                    <Image
+                      src={event.images[0]}
+                      alt={event.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+                  <div className="overlay">
+                    <div className="card-title">{event.title}</div>
+                    <div className="pill-button">
+                      MORE PHOTOS
+                    </div>
+                  </div>
+                </a>
+              </Link>
+            ))}
+          </div>
+        </div>
 
         <div className="divider"></div>
 
         <div className="wrapper help-us flex-column">
-          <p className="description">Help us move closer to creating a lasting legacy</p>
+          <p className="description">
+            Help us move closer to creating a lasting legacy
+          </p>
           <h2 className="">Together we build the house of God</h2>
           {giveBtn}
         </div>
@@ -639,6 +588,131 @@ const PageContainer = styled(Container)`
     }
   }
 
+  .year-in-review {
+    width: 100%;
+    margin: 5rem auto;
+    display: flex;
+    align-items: center;
+    gap: 0;
+
+    .title-section {
+      text-align: center;
+      margin-bottom: 4rem;
+
+      h2 {
+        font-size: 4.5rem;
+        margin-bottom: 1rem;
+        line-height: 1.1;
+      }
+
+      h3 {
+        font-family: "League Spartan", sans-serif;
+        font-size: 3rem;
+        color: #ffffff;
+        margin-bottom: 1.5rem;
+        line-height: 1.1;
+      }
+
+      p {
+        font-size: 1.5rem;
+        max-width: 800px;
+        margin: 0 auto;
+        color: #cccccc;
+      }
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      width: 100%;
+
+      @media screen and (max-width: 64rem) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media screen and (max-width: 48rem) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .gallery-card {
+      position: relative;
+      display: block;
+      border-radius: 1rem;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      cursor: pointer;
+      text-decoration: none;
+
+      .image-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s ease;
+      }
+
+      &:hover .image-wrapper {
+        transform: scale(1.05);
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        text-align: center;
+        transition: background 0.3s ease;
+      }
+
+      &:hover .overlay {
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      .card-title {
+        font-family: "League Spartan", sans-serif;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #ffffff;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+      }
+
+      .card-subtitle {
+        font-size: 1.5rem;
+        color: #ffffff;
+        margin-bottom: 2rem;
+      }
+
+      .pill-button {
+        background-color: #ffffff;
+        color: #000000;
+        padding: 0.75rem 2rem;
+        border-radius: 50px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.875rem;
+        letter-spacing: 2px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background-color: #9168e4;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
   .wrapper.pastor {
     margin: 8rem 0 5rem;
 
@@ -707,7 +781,9 @@ export async function getStaticProps() {
   const { data } = await client.query({
     query: gql`
       query getData {
-        slides(where: { tag: "fund-raising", orderby: { field: SLUG, order: ASC } }) {
+        slides(
+          where: { tag: "fund-raising", orderby: { field: SLUG, order: ASC } }
+        ) {
           nodes {
             featuredImage {
               node {
