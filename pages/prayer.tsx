@@ -211,6 +211,10 @@ export default function BookingPortalPage() {
   const [successMessage, setSuccessMessage] = useState("");
   const [authLoading, setAuthLoading] = useState(true);
   const [authError, setAuthError] = useState("");
+  const [isRegistering, setIsRegistering] = useState(false);
+  const [registerForm, setRegisterForm] = useState({ firstName: "", lastName: "", email: "" });
+  const [registering, setRegistering] = useState(false);
+  const [registerSuccess, setRegisterSuccess] = useState(false);
 
   // Check for PCO session on mount
   useEffect(() => {
@@ -306,6 +310,39 @@ export default function BookingPortalPage() {
     setBookingForm(emptyBookingForm);
   }
 
+  async function handleRegister(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    clearMessages();
+    setRegisterSuccess(false);
+
+    if (!registerForm.firstName || !registerForm.lastName || !registerForm.email) {
+      setAuthError("Please fill in all fields.");
+      return;
+    }
+
+    setRegistering(true);
+    try {
+      const res = await fetch("/api/auth/pco-register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(registerForm),
+      });
+      const data = await res.json();
+
+      if (!res.ok) {
+        setAuthError(data.error || "Failed to register account.");
+      } else {
+        setRegisterSuccess(true);
+        setIsRegistering(false);
+        setRegisterForm({ firstName: "", lastName: "", email: "" });
+      }
+    } catch (err) {
+      setAuthError("An unexpected error occurred.");
+    } finally {
+      setRegistering(false);
+    }
+  }
+
   return (
     <Page>
       <HeadLine imgUrl="/img/sermons-img.jpg" title="Prayer Booking" mbHeight="20rem" />
@@ -333,19 +370,55 @@ export default function BookingPortalPage() {
         {/* Login screen */}
         {!authLoading && !pcoUser && (
           <CenterCard>
-            <div style={{ marginBottom: 24, textAlign: "center" }}>
-              <SectionTitle>Sign in to continue</SectionTitle>
-              <SectionDescription>Use your Planning Center account to access the prayer booking portal.</SectionDescription>
-            </div>
+            {!isRegistering ? (
+              <>
+                <div style={{ marginBottom: 24, textAlign: "center" }}>
+                  <SectionTitle>Sign in to continue</SectionTitle>
+                  <SectionDescription>Use your Planning Center account to access the prayer booking portal.</SectionDescription>
+                </div>
 
-            {authError && <Message tone="error">{authError}</Message>}
+                {authError && <Message tone="error">{authError}</Message>}
+                {registerSuccess && <Message tone="success">Your account has been created successfully! Please sign in using Planning Center below.</Message>}
 
-            <div style={{ marginTop: 20 }}>
-              <PcoLoginButton href="/api/auth/pco-login">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
-                Sign in with Planning Center
-              </PcoLoginButton>
-            </div>
+                <div style={{ marginTop: 20 }}>
+                  <PcoLoginButton href="/api/auth/pco-login">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    Sign in with Planning Center
+                  </PcoLoginButton>
+                </div>
+
+                <div style={{ marginTop: 24, textAlign: "center" }}>
+                  <p style={{ fontSize: 14, color: "#64748b" }}>
+                    Don't have an account?{" "}
+                    <button type="button" onClick={() => { setIsRegistering(true); clearMessages(); setRegisterSuccess(false); }} style={{ background: "none", border: "none", color: "#4f46e5", fontWeight: 600, cursor: "pointer", padding: 0 }}>
+                      Register now
+                    </button>
+                  </p>
+                </div>
+              </>
+            ) : (
+              <>
+                <div style={{ marginBottom: 24, textAlign: "center" }}>
+                  <SectionTitle>Create an account</SectionTitle>
+                  <SectionDescription>Register a new profile to access the portal.</SectionDescription>
+                </div>
+
+                {authError && <Message tone="error">{authError}</Message>}
+
+                <FormGrid onSubmit={handleRegister}>
+                  <InputField label="First Name" type="text" icon={<UserIcon />} value={registerForm.firstName} onChange={(e) => setRegisterForm((p) => ({ ...p, firstName: e.target.value }))} required />
+                  <InputField label="Last Name" type="text" icon={<UserIcon />} value={registerForm.lastName} onChange={(e) => setRegisterForm((p) => ({ ...p, lastName: e.target.value }))} required />
+                  <div style={{ gridColumn: "1 / -1" }}>
+                    <InputField label="Email Address" type="email" icon={<MailIcon />} value={registerForm.email} onChange={(e) => setRegisterForm((p) => ({ ...p, email: e.target.value }))} required />
+                  </div>
+                  
+                  <FormActions>
+                    <PrimaryButton type="submit" disabled={registering}>{registering ? "Registering..." : "Register"}</PrimaryButton>
+                    <SecondaryButton type="button" onClick={() => { setIsRegistering(false); clearMessages(); }} disabled={registering}>Back to login</SecondaryButton>
+                  </FormActions>
+                </FormGrid>
+              </>
+            )}
           </CenterCard>
         )}
 
