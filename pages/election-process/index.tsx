@@ -1,14 +1,13 @@
 import { Button, Container, ImgWrapper, def } from "styles/GlobalStyle";
 
+import HeadLine from "components/common/HeadLine";
+import Meta from "components/common/meta";
+import { Roadmap } from "components/election-process/Roadmap";
+import { useState } from "react";
+import styled from "styled-components";
 import CandidateInfoModal from "./CandidateInfoModal";
 import EarlyVoterModal from "./EarlyVoterModal";
-import HeadLine from "components/common/HeadLine";
-import Image from "next/image";
-import ImageSlider from "components/common/ImageSlider";
-import Meta from "components/common/meta";
 import VotingGuideModal from "./VotingGuideModal";
-import styled from "styled-components";
-import { useState } from "react";
 
 const slides = [
   {
@@ -400,7 +399,7 @@ export default function Index() {
         <h1 id="title">Rhema Board Election</h1>
         <div id="procedure" className="wrapper">
           <div className="left-wrapper">
-            <h2>2025 Election Procedure</h2>
+            <h2>Election Procedure</h2>
             <p>
               The election procedure is designed to uphold the integrity of our process, protect the rights of every
               member to participate, and{" "}
@@ -411,16 +410,13 @@ export default function Index() {
           <div className="right-wrapper">
             <h3>Important Dates</h3>
             <p>
-              <b>Nomination:</b> April 17 - May 08
+              <b>Nomination -</b> June 01 to 28
             </p>
             <p>
-              <b>Screening:</b> May 08 - May 28
+              <b>Screening -</b> June 29 to 30
             </p>
             <p>
-              <b>Campaigning:</b> - June 12 - July 12
-            </p>
-            <p>
-              <b>Voting Period</b> - July 13 - July 31
+              <b>Voting Period -</b> July 13 to 29
             </p>
           </div>
         </div>
@@ -451,7 +447,7 @@ export default function Index() {
               </Button>
             </div>
           </div>
-          <div>
+          {/* <div>
             <h3>Early Voters</h3>
             <p>Here’s what you need to know if you have registered to vote early.</p>
             <div className="button-wrapper">
@@ -463,7 +459,7 @@ export default function Index() {
                 Important Details
               </Button>
             </div>
-          </div>
+          </div> */}
         </div>
         <div id="by-laws" className="wrapper">
           <div className="divider" />
@@ -478,23 +474,8 @@ export default function Index() {
           </div>
           <div className="divider" />
         </div>
-        <div id="information-session" className="wrapper">
-          <h2>Information session slides</h2>
-          <ImageSlider slides={slides} dots={false} autoplay={false} />
-        </div>
         <div id="road-map" className="wrapper">
-          <h2>2025 Election Road Map</h2>
-          <ImgWrapper>
-            <Image
-              src="/img/election/road-map.jpeg"
-              alt="introduction1"
-              fill
-              sizes="100vw"
-              style={{
-                objectFit: "contain",
-              }}
-            />
-          </ImgWrapper>
+          <Roadmap />
         </div>
         {/* <div id="candidate-information" className="wrapper">
           <h2>Candidate Information</h2>
@@ -533,7 +514,7 @@ const PageContainer = styled(Container)`
   }
   ${ImgWrapper} {
     width: 100%;
-    height: 22rem;
+    height: 50rem;
   }
 
   .wrapper {
@@ -603,6 +584,8 @@ const PageContainer = styled(Container)`
     align-items: center;
     flex-direction: column;
     gap: 2rem;
+    margin-bottom: 0rem;
+
     .button-wrapper {
       display: flex;
       justify-content: center;
@@ -626,7 +609,6 @@ const PageContainer = styled(Container)`
     }
   }
   #road-map {
-    background-color: #f0f4f9;
     padding: 2rem 0;
   }
   .button-wrapper.faq {
