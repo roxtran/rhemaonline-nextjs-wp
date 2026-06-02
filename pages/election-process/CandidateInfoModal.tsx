@@ -1,9 +1,10 @@
-import { Dispatch, SetStateAction, useRef, MouseEvent } from "react";
-import { ModalContainer } from "components/common/Modals/HomeModal";
-import { motion, AnimatePresence } from "framer-motion";
-import { IoClose } from "react-icons/io5";
-import styled from "styled-components";
+import { AnimatePresence, motion } from "framer-motion";
+import { Dispatch, MouseEvent, SetStateAction, useRef } from "react";
 import { fade, slideDown } from "styles/animation";
+
+import { IoClose } from "react-icons/io5";
+import { ModalContainer } from "components/common/Modals/HomeModal";
+import styled from "styled-components";
 
 interface Props {
   open: boolean;
@@ -68,7 +69,7 @@ const CandidateInfoModal = ({ open, setOpen }: Props) => {
                 <p>
                   Once a nomination is received, the Electoral Subcommittee will screen the candidates against these
                   established criteria. Working alongside the Board, the subcommittee will ensure the process is
-                  transparent and free of bias.
+                  transparent and free of bias.{" "}
                   <b>
                     Only those who meet all requirements will be shortlisted and formally approved to move forward as
                     candidates in the election
@@ -89,7 +90,7 @@ const CandidateInfoModal = ({ open, setOpen }: Props) => {
                 </p>
                 <p>
                   Persons wishing to participate in this process may nominate themselves;{" "}
-                  <b>members may NOT submit the name of another member</b> they believe to be a suitable candidate. All
+                  <b>members may submit the name of another member</b> they believe to be a suitable candidate. All
                   nominations must be submitted using the official Candidate Nomination Form, which is to be completed
                   in full and returned by the specified nomination deadline. The form collects essential information and
                   affirms the nominee’s willingness and ability to serve.
@@ -154,9 +155,8 @@ const CandidateInfoModal = ({ open, setOpen }: Props) => {
                     governance responsibilities expected of Board members.
                   </li>
                   <li>
-                    <b>Assessing executive leadership and professional experience</b>, considering the nominee’s
-                    capacity to contribute meaningfully to Board-level decision-making, strategic planning, and
-                    oversight.
+                    <b>Assessing leadership and experience</b>, considering the nominee’s capacity to contribute
+                    meaningfully to Board-level decision-making, strategic planning, and oversight.
                   </li>
                 </ul>
                 <p>

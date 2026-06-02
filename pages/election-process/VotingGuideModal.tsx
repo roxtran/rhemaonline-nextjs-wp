@@ -1,9 +1,9 @@
-import { Dispatch, SetStateAction, useRef, MouseEvent } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { IoClose } from "react-icons/io5";
+import { AnimatePresence, motion } from "framer-motion";
+import { Dispatch, MouseEvent, SetStateAction, useRef } from "react";
 import { fade, slideDown } from "styles/animation";
 
 import { Container } from "./CandidateInfoModal";
+import { IoClose } from "react-icons/io5";
 
 interface Props {
   open: boolean;
@@ -49,67 +49,10 @@ const VotingGuideModal = ({ open, setOpen }: Props) => {
                   <b>on the Annual General Meeting (AGM) day</b>. Once a vote is cast, it is final and cannot be
                   duplicated or resubmitted.
                 </p>
-                <ol>
-                  <li>
-                    Early Voting
-                    <ul>
-                      <li>
-                        <b>Purpose:</b> The Early Voting process accommodates{" "}
-                        <b>members who may be unable to attend the AGM</b> but still wish to participate fully in the
-                        board election.
-                      </li>
-                      <li>
-                        <b>Eligibility and Access:</b> Only those who selected the early voting option during voter
-                        registration will receive a secure, single-use electronic voting token. This token is
-                        non-transferable and becomes inactive once used.
-                      </li>
-                      <li>
-                        <b>Voting Window and Method: The early voting period will open before the AGM</b>. Voters may
-                        cast their ballot at any time during this designated window using their device from a location
-                        of their choice.
-                      </li>
-                      <li>
-                        <b>Support for Assisted Voting:</b> To further support accessibility,{" "}
-                        <b>three (3) in-person opportunities</b> will be provided on designated Sundays leading up to
-                        the AGM. These sessions will allow individuals needing help with technology to access the voting
-                        portal with guided assistance from support staff. These opportunities will be held at the
-                        ministry site, and walk-in assistance will be available.
-                      </li>
-                      <li>
-                        <b>Integrity Note:</b> Once a voting token is used, it cannot be reused or reactivated. Voters
-                        who opt for early voting will be unable to vote again on the day of the AGM or at any other
-                        time.
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    Voting During the AGM
-                    <ul>
-                      <li>
-                        <b>Purpose:</b> This voting option is for <b>registered voters who plan to participate</b>{" "}
-                        during the Annual General Meeting.
-                      </li>
-                      <li>
-                        <b>Eligibility and Access:</b> Members who selected AGM Day Voting on their registration form
-                        will be issued a unique, single-use voting token for use <b>only during the AGM</b>. These
-                        tokens will be distributed digitally just before the voting segment of the meeting.
-                      </li>
-                      <li>
-                        <b>Technical Support:</b> An IT support team will be on-site and on standby throughout the AGM
-                        to assist any voter experiencing technical difficulties during the voting process.
-                      </li>
-                      <li>
-                        <b>Integrity Note:</b> AGM tokens are non-transferable and may only be used once. Voters who
-                        selected this option will not have access to the early voting portal and must cast their vote
-                        during the designated voting time on AGM Day.
-                      </li>
-                    </ul>
-                  </li>
-                </ol>
                 <p>
-                  <b>Note on Voting Finality:</b> In both cases—early voting or voting during the AGM—once a vote is
-                  submitted using a valid token, the token becomes inactive, and the vote is recorded. Duplicate
-                  submissions are impossible; no alternative or backup vote will be permitted.
+                  <b>Note on Voting Finality:</b> Once a vote is submitted using a valid token, the token becomes
+                  inactive, and the vote is recorded. Duplicate submissions are impossible; no alternative or backup
+                  vote will be permitted.
                 </p>
                 <h4>Voting Accessibility and Inclusivity</h4>
                 <p>

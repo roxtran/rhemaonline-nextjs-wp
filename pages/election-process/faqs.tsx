@@ -83,16 +83,7 @@ export default function Index() {
             <li>
               <strong>When will voting take place?</strong>
               <br />
-              The official voting period will be announced following the nomination process. There are two (2) voting
-              periods as follows:
-              <ul>
-                <li>
-                  <strong>Early Voting:</strong> Begins on July 13th at 12:00am and ends on July 27th at 11:59pm.
-                </li>
-                <li>
-                  <strong>Final Voting Day:</strong> July 31st during the AGM.
-                </li>
-              </ul>
+              The official voting opens July 13, runs through July 29, and closes at 7 pm.
             </li>
             <li>
               <strong>How can I cast my vote?</strong>
@@ -130,7 +121,7 @@ export default function Index() {
             <li>
               <strong>Can I nominate a candidate for the election?</strong>
               <br />
-              No, but you can encourage members you believe to be qualified to apply.
+              Yes, please be sure to select the appropriate portion of your intent on the nomination form.
             </li>
             <li>
               <strong>How does Gender Parity play a part in our election?</strong>
@@ -174,7 +165,8 @@ export default function Index() {
               <strong>Can I request assistance in casting my vote?</strong>
               <br />
               Yes, assistance will be available for those who need it, ensuring that every member can participate in the
-              election process.
+              election process. Moreover, the team will be available immediately after service on the last three (3)
+              Sundays before the election closing date.
             </li>
 
             <h4>Election Integrity & Transparency FAQs </h4>
@@ -216,8 +208,8 @@ export default function Index() {
             <li>
               <strong>Who can I contact if I have further questions?</strong>
               <br />
-              If you have additional questions, please reach out to the Election Committee through the contact details
-              provided on the election platform.
+              If you have additional questions, please send them to the designated email at{" "}
+              <a href="mailto:elections@rhemaonline.ca">elections@rhemaonline.ca</a>
             </li>
           </ol>
           <a className="btn-back" type="button" onClick={() => router.back()}>
