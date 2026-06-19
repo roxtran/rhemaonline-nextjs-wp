@@ -433,6 +433,12 @@ export default function Index() {
                 Candidate Guide
               </Button>
             </div>
+            <a
+              href="https://rhemachristianministries.churchcenter.com/people/forms/1238803"
+              data-open-in-church-center-modal="true"
+            >
+              Candidate Registration Form
+            </a>
           </div>
           <div>
             <h3>Voter Info</h3>
@@ -446,6 +452,12 @@ export default function Index() {
                 Voting Guide
               </Button>
             </div>
+            <a
+              href="https://rhemachristianministries.churchcenter.com/people/forms/1229634"
+              data-open-in-church-center-modal="true"
+            >
+              Voter Registration Form
+            </a>
           </div>
           {/* <div>
             <h3>Early Voters</h3>
