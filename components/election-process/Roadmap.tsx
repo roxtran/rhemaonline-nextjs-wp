@@ -14,37 +14,37 @@ const roadmapEvents: TimelineEvent[] = [
     description: "AGM date & election process announced to members",
   },
   {
-    date: "MAY 12-17",
+    date: "MAY 12 - 17",
     title: "Q&A Window",
     description: "Members submit questions to the current board",
   },
   {
-    date: "MAY 18-TBD",
+    date: "MAY 18 - TBD",
     title: "Voter Registration",
     description: "Eligible members register within the four-week window",
   },
   {
-    date: "JUN 01-28",
+    date: "JUN 1 - JUL 5",
     title: "Candidate Submission / Nomination",
     description: "Members submit their nominations for candidacy",
   },
   {
-    date: "JUN 29-30",
+    date: "JUL 6 - 10",
     title: "Candidate Screening / Shortlisting",
     description: "Applications reviewed; eligible candidates shortlisted",
   },
   {
-    date: "JUN 30-JUL 06",
+    date: "JUL 13 - 19",
     title: "Candidate Confirmation",
     description: "Approved candidates provide required details for publication",
   },
   {
-    date: "JUL 07",
+    date: "JUL 20",
     title: "Candidate Info. Published",
     description: "Review Candidate applications and select eligible candidates",
   },
   {
-    date: "JUL 13",
+    date: "JUL 20 - 29",
     title: "Voting Begins",
     description:
       "Portal opens at 12am — voting is open on three Sundays within this period and closes July 29 at 6:59 pm",

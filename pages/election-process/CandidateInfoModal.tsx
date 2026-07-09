@@ -34,24 +34,25 @@ const CandidateInfoModal = ({ open, setOpen }: Props) => {
                 <p>Candidates must:</p>
                 <ul>
                   <li>
-                    be members in <b>good standing for at least two (2) years</b> and
+                    be <b>members</b> in good standing <b>for at least two (2) years</b>
                   </li>
                   <li>
-                    have demonstrated <b>prior involvement in organizational activities</b>.
+                    have demonstrated <b>active ministry participation.</b>
                   </li>
                 </ul>
                 <p>
-                  They must also <b>submit a personal statement</b> outlining their vision and qualifications.
+                  They must also <b>submit their resume and a personal statement of intent</b>, a brief statement
+                  explaining why they would like to serve on the Executive Board and what contributions they hope to
+                  make.
                 </p>
                 <h4>Candidate Criteria </h4>
-                <p>All candidates must meet the eligibility requirements as defined in governing documents. </p>
+                <p>All candidates must meet the eligibility requirements as defined in the governing documents.</p>
                 <ul>
                   <li>
-                    Eligibility is determined by a candidate’s standing within the ministry, character, demonstrating
-                    alignment with the organization's mission and values, and professional and executive leadership
+                    Eligibility is determined by a candidate’s standing within the ministry, character, and leadership
                     experience. Specifically, any individual seeking nomination must be a member in good standing. This
-                    includes consistently supporting the ministry through active participation and verifiable financial
-                    giving over the preceding year. Membership standing will be assessed based on attendance records,
+                    includes consistently supporting the ministry’s mission through active participation and financial
+                    giving over the preceding year. Membership standing will be assessed based on attendance,
                     contribution reports, and active involvement in ministry life.
                   </li>
                   <li>
@@ -69,7 +70,7 @@ const CandidateInfoModal = ({ open, setOpen }: Props) => {
                 <p>
                   Once a nomination is received, the Electoral Subcommittee will screen the candidates against these
                   established criteria. Working alongside the Board, the subcommittee will ensure the process is
-                  transparent and free of bias.{" "}
+                  transparent and free of bias. {" "}
                   <b>
                     Only those who meet all requirements will be shortlisted and formally approved to move forward as
                     candidates in the election
@@ -100,24 +101,19 @@ const CandidateInfoModal = ({ open, setOpen }: Props) => {
                 <ul>
                   <li>
                     A <b>statement of intent</b>, outlining the nominee’s reasons for seeking election and their
-                    willingness to serve the ministry in achieving its mission.{" "}
+                    willingness to serve the ministry in achieving its mission.
                   </li>
                   <li>
-                    A <b>resume</b>, highlighting relevant qualifications, leadership experience, and the individual’s
-                    history of involvement and service within the ministry.{" "}
-                  </li>
-                  <li>
-                    The nominee’s <b>signed consent</b> to stand for election, confirming their awareness of the
-                    responsibilities associated with board service and their willingness to be considered.{" "}
+                    A <b>resume</b>, highlighting relevant qualifications and experience including ministry, volunteer
+                    and leadership experience.
                   </li>
                 </ul>
-                <p>
-                  Under the Constitution and By-laws, only members in good standing may self-nominate. This ensures that
-                  the nomination process reflects the values and discernment of committed members actively supporting
-                  the ministry's vision.
-                </p>
+                <h5>
+                  A nomination shall not be considered complete until all required documentation has been received.
+                </h5>
                 <p>
                   <b>
+                    {" "}
                     The Electoral Subcommittee, in partnership with the Board, will oversee the receipt and vetting of
                     all nomination forms
                   </b>
@@ -126,7 +122,7 @@ const CandidateInfoModal = ({ open, setOpen }: Props) => {
                 </p>
                 <p>
                   The nomination phase is crucial in upholding the values of transparency, accountability, and spiritual
-                  discernment as the ministry prepares to elect individuals to assume governance responsibilities.{" "}
+                  discernment as the ministry prepares to elect individuals to assume governance responsibilities.
                 </p>
                 <h4>Candidate Screening / Shortlisting </h4>
                 <p>
@@ -147,12 +143,8 @@ const CandidateInfoModal = ({ open, setOpen }: Props) => {
                     nomination.
                   </li>
                   <li>
-                    <b>Confirming a consistent history of financial support</b> to the ministry over the past year and
-                    active participation in church life and ministry activities.
-                  </li>
-                  <li>
-                    <b>Evaluating the nominee’s alignment</b> with the ministry’s mission, vision, and the spiritual and
-                    governance responsibilities expected of Board members.
+                    <b>Confirming</b> consistent <b>financial support</b> to the ministry over the past year and{" "}
+                    <b>active participation</b> in serving, church life and ministry activities.
                   </li>
                   <li>
                     <b>Assessing leadership and experience</b>, considering the nominee’s capacity to contribute
@@ -165,11 +157,11 @@ const CandidateInfoModal = ({ open, setOpen }: Props) => {
                 </p>
                 <p>
                   <b>
-                    When the number of qualified nominees significantly EXCEEDS the number of available positions on the
-                    Board, the Electoral Subcommittee reserves the right to implement a shortlisting process
-                  </b>
-                  . This process is conducted transparently and unbiasedly, focusing solely on the merits and readiness
-                  of each nominee to serve effectively.
+                    When the number of qualified nominees EXCEEDS the number of available positions on the Board, the
+                    Electoral Subcommittee may conduct a shortlisting process
+                  </b>{" "}
+                  in accordance with the approved evaluation criteria. This process is conducted transparently and
+                  unbiasedly, focusing solely on the merits and readiness of each nominee to serve effectively.
                 </p>
                 <p>
                   The goal of the shortlisting procedure is to present to the membership a slate of candidates who have
@@ -179,9 +171,9 @@ const CandidateInfoModal = ({ open, setOpen }: Props) => {
                 <h4>Candidate Acceptance </h4>
                 <p>
                   Once screening is complete and a candidate is deemed eligible,{" "}
-                  <b>the Electoral Officer will notify them of their formal acceptance</b>. At this point, the candidate
-                  will be invited to participate in the campaign process by submitting their biography and photograph
-                  for the official campaign materials.
+                  <b>the Electoral Officer will notify them of their formal acceptance</b>. Acceptance does not
+                  guarantee election. At this point, the candidate will be invited to participate in the campaign
+                  process by submitting their biography and photograph for the official campaign materials.
                 </p>
                 <p>
                   Candidates will also be briefed on the campaign code of conduct and expectations for ethical

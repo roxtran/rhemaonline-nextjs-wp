@@ -59,6 +59,7 @@ const GlobalStyle = createGlobalStyle`
   }
   h5 {
     font-size: 1rem;
+    font-weight: bold;
   }
   p {
     line-height: 1.5;
