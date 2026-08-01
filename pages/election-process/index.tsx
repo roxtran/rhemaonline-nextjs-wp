@@ -416,7 +416,7 @@ export default function Index() {
               <b>Screening -</b> June 29 to 30
             </p>
             <p>
-              <b>Voting Period -</b> July 13 to 29
+              <b>Voting Period -</b> August 05 - 12
             </p>
           </div>
         </div>

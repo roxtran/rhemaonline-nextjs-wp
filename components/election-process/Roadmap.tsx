@@ -29,28 +29,28 @@ const roadmapEvents: TimelineEvent[] = [
     description: "Members submit their nominations for candidacy",
   },
   {
-    date: "JUL 6 - 10",
+    date: "JUL 6 - 7",
     title: "Candidate Screening / Shortlisting",
     description: "Applications reviewed; eligible candidates shortlisted",
   },
   {
-    date: "JUL 13 - 19",
+    date: "AUG 02",
     title: "Candidate Confirmation",
     description: "Approved candidates provide required details for publication",
   },
   {
-    date: "JUL 20",
+    date: "AUG 03",
     title: "Candidate Info. Published",
     description: "Review Candidate applications and select eligible candidates",
   },
   {
-    date: "JUL 20 - 29",
+    date: "AUG 05",
     title: "Voting Begins",
     description:
       "Portal opens at 12am — voting is open on three Sundays within this period and closes July 29 at 6:59 pm",
   },
   {
-    date: "JUL 29",
+    date: "AUG 12",
     title: "AGM & Announcement",
     description: "Final election result announced at the AGM",
   },
