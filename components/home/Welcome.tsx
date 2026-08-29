@@ -22,13 +22,17 @@ export default function Welcome() {
       <motion.div className="text">
         <h2>Rhema Christian Ministries</h2>
         <p className="quote">
-          “We are a church that believes in Jesus Christ; a church that loves God and His people."
+          Welcome to Rhema Christian Ministries Canada Inc., a place where we <b>change & affect lives</b>. We are a
+          vibrant Spirit-filled community, with services and gatherings designed to connect people to Jesus and to each
+          other through authentic relationships. Our dynamic combination of worship and word, coupled with a wide array
+          of cutting-edge ministries enhance the spiritual development of our members and guest propelling each person
+          to Christian maturity. Here at Rhema there is a special place for you and your family, and I look forward to
+          welcoming you in person at your next visit.
+          <br /> With love,
         </p>
         <p>
-          <span>Rhema Christian Ministries</span> is a vibrant Spirit-filled church community designed to connect people
-          to Jesus and to each other through authentic relationships. Through a dynamic combination of worship and word,
-          we seek to Change and Affect Lives by equipping the whole person with sound biblical and spiritual truths and
-          practical encouragement.
+          Orim M. Meikle
+          <br /> Senior Pastor
         </p>
         <Button href={paths.about}>More about us</Button>
       </motion.div>
@@ -72,7 +76,6 @@ export const WelcomeWrapper = styled(motion.section)`
       color: var(--blue);
     }
     p.quote {
-      font-weight: bold;
       font-style: italic;
     }
     span {
