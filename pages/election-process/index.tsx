@@ -410,13 +410,22 @@ export default function Index() {
           <div className="right-wrapper">
             <h3>Important Dates</h3>
             <p>
-              <b>Nomination -</b> June 01 to 28
+              <b>Candidate Nomination -</b> September 23 to October 5
             </p>
             <p>
-              <b>Screening -</b> June 29 to 30
+              <b>Voter Registration -</b> September 23 to October 23
             </p>
             <p>
-              <b>Voting Period -</b> August 05 - 12
+              <b>Candidate Publication -</b> October 7
+            </p>
+            <p>
+              <b>Meet the Candidates -</b> October 11
+            </p>
+            <p>
+              <b>Early Voting -</b> October 14
+            </p>
+            <p>
+              <b>By-Election Day -</b> October 28
             </p>
           </div>
         </div>
