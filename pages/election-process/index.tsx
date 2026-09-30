@@ -2,7 +2,6 @@ import { Button, Container, ImgWrapper, def } from "styles/GlobalStyle";
 
 import HeadLine from "components/common/HeadLine";
 import Meta from "components/common/meta";
-import { Roadmap } from "components/election-process/Roadmap";
 import { useState } from "react";
 import styled from "styled-components";
 import CandidateInfoModal from "./CandidateInfoModal";
@@ -495,9 +494,9 @@ export default function Index() {
           </div>
           <div className="divider" />
         </div>
-        <div id="road-map" className="wrapper">
+        {/* <div id="road-map" className="wrapper">
           <Roadmap />
-        </div>
+        </div> */}
         {/* <div id="candidate-information" className="wrapper">
           <h2>Candidate Information</h2>
           <ImgWrapper>
@@ -512,7 +511,7 @@ export default function Index() {
             />
           </ImgWrapper>
         </div> */}
-        <div className="divider" />
+        {/* <div className="divider" /> */}
         <div className="button-wrapper faq">
           <Button href="/election-process/faqs">Election FAQs</Button>
         </div>
