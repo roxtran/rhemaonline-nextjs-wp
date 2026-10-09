@@ -1,6 +1,6 @@
-import NavLink from "./NavLink";
 import paths from "paths";
 import styled from "styled-components";
+import NavLink from "./NavLink";
 
 interface Props {
   open: boolean;
@@ -70,11 +70,11 @@ export default function Menu({ open, setOpen }: Props) {
             Election
           </a>
         </NavLink>
-        <NavLink href={paths.build}>
+        {/* <NavLink href={paths.build}>
           <a className="button build" onClick={() => setOpen(!open)}>
             Build
           </a>
-        </NavLink>
+        </NavLink> */}
         <NavLink href={paths.giving}>
           <a className="button give" onClick={() => setOpen(!open)}>
             Give
