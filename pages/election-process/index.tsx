@@ -1,12 +1,12 @@
 import { Button, Container, ImgWrapper, def } from "styles/GlobalStyle";
 
-import HeadLine from "components/common/HeadLine";
-import Meta from "components/common/meta";
-import { useState } from "react";
-import styled from "styled-components";
 import CandidateInfoModal from "./CandidateInfoModal";
 import EarlyVoterModal from "./EarlyVoterModal";
+import HeadLine from "components/common/HeadLine";
+import Meta from "components/common/meta";
 import VotingGuideModal from "./VotingGuideModal";
+import styled from "styled-components";
+import { useState } from "react";
 
 const slides = [
   {
@@ -409,22 +409,22 @@ export default function Index() {
           <div className="right-wrapper">
             <h3>Important Dates</h3>
             <p>
-              <b>Candidate Nomination -</b> September 23 to October 5
+              <b>Candidate Nomination -</b> September 23 to October 15
             </p>
             <p>
               <b>Voter Registration -</b> September 23 to October 23
             </p>
             <p>
-              <b>Candidate Publication -</b> October 7
+              <b>Candidate Publication -</b> October 16
             </p>
             <p>
-              <b>Meet the Candidates -</b> October 11
+              <b>Meet the Candidates -</b> October 18
             </p>
             <p>
-              <b>Early Voting -</b> October 14
+              <b>Early Voting -</b> October 19
             </p>
             <p>
-              <b>By-Election Day -</b> October 28
+              <b>By-Election Day -</b> October 30
             </p>
           </div>
         </div>
